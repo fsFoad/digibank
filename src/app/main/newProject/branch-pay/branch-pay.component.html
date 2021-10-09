@@ -1,0 +1,54 @@
+<p-panel header="ثبت دستور پرداخت" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap">
+        <div class=" p-md-3 ">
+            <input placeholder="کد مشتری ویژه ثبت نشده است" class="input-w-100" pInputText disabled>
+        </div>
+        <div class=" p-md-3">
+            <input placeholder="عنوان مشتری ویژه ثبت نشده است" class="input-w-100" pInputText disabled>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="کد شعبه متعهد" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="نام شعبه متعهد" class="input-w-100" pInputText disabled>
+        </div>
+        <div class=" p-md-3 ">
+            <p-dropdown placeholder="نوع مشتری" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="دریافت کننده" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="موبایل" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="کد ملی / کد اقتصادی" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="شماره حواله" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="کد پیوست" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 "></div>
+        <div class=" p-md-3 "></div>
+        <div class="p-md-3">
+            <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-3">
+            <p-persian-calendar placeholder="تاریخ انقضا" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-3">
+            <p-checkbox name="check" id="ny " value="val1"></p-checkbox>
+            <label> بدون تاریخ امضا </label>
+        </div>
+    </div>
+    <div class="p-col-12">
+        <br>
+        <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
+        <button id="btnSent" class="p-button-info" pButton
+                label="ارسال اطلاعات حواله توسط پیامک"></button>&nbsp;
+    </div>
+</p-panel>

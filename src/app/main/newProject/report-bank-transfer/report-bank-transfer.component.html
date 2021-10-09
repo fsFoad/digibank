@@ -1,0 +1,85 @@
+<p-panel header="گزارش حواله" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap Fs-mlf">
+        <div class="  Fs-p-md ">
+            <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
+            ></p-persian-calendar>
+        </div>
+        <div class="  Fs-p-md ">
+            <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-80" ></p-persian-calendar>
+        </div>
+        <div class="  Fs-p-md2 Fs-mr ">
+            <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class="  Fs-p-md2 Fs-mr ">
+            <p-dropdown class="p-dropdown-w80" placeholder="وضعیت حواله" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class="  Fs-p-md2 Fs-mr ">
+            <p-dropdown class="p-dropdown-w80" placeholder="نوع حواله" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="p-d-flex p-flex-wrap Fs-mlf">
+        <div class=" Fs-p-md ">
+            <input placeholder="دریافت کننده"  pInputText >
+        </div>
+        <div class="Fs-p-md ">
+            <amount-box class="input-w-80" placeholder="مبلغ" >
+            </amount-box>
+        </div>
+        <div class=" Fs-p-md2  Fs-mr2 ">
+            <amount-box class="input-w-80" placeholder="کداقتصادی / ملی" >
+            </amount-box>
+        </div>
+        <div class="Fs-p-md2 Fs-mr ">
+            <amount-box class="input-w-80" placeholder="شماره حواله">
+            </amount-box>
+        </div>
+        <div class="Fs-p-md2 Fs-mr ">
+            <input   placeholder="پیوست" pInputText/>
+        </div>
+    </div>
+    <div class="p-col-12">
+            <br>
+            <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+    </div>
+    <p-card  *ngIf=tableFlag>
+        <p-table [value]="fsList">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th translate>ردیف</th>
+                    <th translate>شماره حساب</th>
+                    <th translate>نوع حواله</th>
+                    <th translate>وضعیت حواله</th>
+                    <th translate>تاریخ ثبت</th>
+                    <th translate>تاریخ سر رسید</th>
+                    <th translate>ذینفع</th>
+                    <th translate>کدملی</th>
+                    <th translate>شماره حواله</th>
+                    <th translate>بسته حواله</th>
+                    <th translate>مبلغ</th>
+                    <th translate>شرح خطا</th>
+                </tr>
+            </ng-template>
+            <ng-template let-i="rowIndex" pTemplate="body" let-reportTransfer>
+                <tr>
+                    <td>{{i + 1}}</td>
+                    <td>{{reportTransfer.accountNumber}}</td>
+                    <td>{{reportTransfer.typeTranslate}}</td>
+                    <td>{{reportTransfer.statusTranslate}}</td>
+                    <td>{{reportTransfer.dateRegistration}}</td>
+                    <td>{{reportTransfer.dateDue}}</td>
+                    <td>{{reportTransfer.beneficiary}}</td>
+                    <td>{{reportTransfer.nationalCode}}</td>
+                    <td>{{reportTransfer.numberTranslate}}</td>
+                    <td>{{reportTransfer.boxTranslate}}</td>
+                    <td>{{reportTransfer.amount|addCommaSeparator}}</td>
+                    <td>{{reportTransfer.ErrDes}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+</p-panel>

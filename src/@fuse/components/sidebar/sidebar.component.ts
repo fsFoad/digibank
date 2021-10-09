@@ -148,12 +148,12 @@ export class FuseSidebarComponent implements OnInit, OnDestroy
         if ( this.position === 'left' )
         {
             sibling = this._elementRef.nativeElement.nextElementSibling;
-            styleRule = 'padding-left';
+            styleRule = 'padding-right';
         }
         else
         {
             sibling = this._elementRef.nativeElement.previousElementSibling;
-            styleRule = 'padding-right';
+            styleRule = 'padding-left';
         }
 
         // If there is no sibling, return...

@@ -1,21 +1,22 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
+import {navigation} from 'app/navigation/navigation';
+import {AppSetting} from '../../../main/shared/services/AppSetting';
 
-import { FuseConfigService } from '@fuse/services/config.service';
-import { navigation } from 'app/navigation/navigation';
+import {FuseConfigService} from '@fuse/services/config.service';
 
 @Component({
-    selector     : 'vertical-layout-1',
-    templateUrl  : './layout-1.component.html',
-    styleUrls    : ['./layout-1.component.scss'],
+    selector: 'vertical-layout-1',
+    templateUrl: './layout-1.component.html',
+    styleUrls: ['./layout-1.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class VerticalLayout1Component implements OnInit, OnDestroy
-{
+export class VerticalLayout1Component implements OnInit, OnDestroy {
     fuseConfig: any;
     navigation: any;
-
+    appSetting = AppSetting;
+    items: any;
     // Private
     private _unsubscribeAll: Subject<any>;
 
@@ -26,8 +27,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy
      */
     constructor(
         private _fuseConfigService: FuseConfigService
-    )
-    {
+    ) {
         // Set the defaults
         this.navigation = navigation;
 
@@ -42,23 +42,1182 @@ export class VerticalLayout1Component implements OnInit, OnDestroy
     /**
      * On init
      */
-    ngOnInit(): void
-    {
+    ngOnInit(): void {
         // Subscribe to config changes
         this._fuseConfigService.config
             .pipe(takeUntil(this._unsubscribeAll))
             .subscribe((config) => {
                 this.fuseConfig = config;
             });
+
+        this.items =
+            [
+                // {
+                //     id: 'dashboard',
+                //     label: 'صفحه اصلی',
+                //     translate: 'home',
+                //     type: 'item',
+                //     icon: 'home',
+                //     routerLink: '/dashboard',
+                // },
+                {
+                    id: 'issueWalletGroup',
+                    label: ' مدریت ذینفعان',
+                    translate: ' مدریت ذینفعان',
+                    type: 'collapsable',
+                    items: [
+                        {
+                            id: 'issuepersonalwallet2',
+                            label: 'ذینفع شخصی',
+                            translate: 'ذینفع شخصی',
+                            type: 'collapsable',
+                            icon: 'account_balance_wallet',
+                            items: [
+                                {
+                                    id: 'real',
+                                    label: 'اطلاعات هویتی',
+                                    translate: 'اطلاعات هویتی',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'اطلاعات تکمیلی',
+                                    translate: 'اطلاعات تکمیلی',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                            ]
+                        }, {
+                            id: 'issuepersonalwallet2',
+                            label: 'ذینفع سازمانی',
+                            translate: 'ذینفع سازمانی',
+                            type: 'collapsable',
+                            icon: 'account_balance_wallet',
+                            items: [
+                                {
+                                    id: 'real',
+                                    label: 'اطلاعات ثبتی / غیر ثبتی',
+                                    translate: 'اطلاعات ثبتی / غیر ثبتی',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'اطلاعات هیئت مدیره و سهامداران',
+                                    translate: 'اطلاعات هیئت مدیره و سهامداران',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                            ]
+                        },
+                        {
+                            id: 'real',
+                            label: 'امضاء',
+                            translate: 'امضاء',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'نقش ذینفع',
+                            translate: 'نقش ذینفع',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'اطلاعات تماس',
+                            translate: 'اطلاعات تماس',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'زمینه فعالیت',
+                            translate: 'زمینه فعالیت',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'مدیریت احراز هویت دیجیتال',
+                            translate: 'مدیریت احراز هویت دیجیتال',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'آپلود مستندات',
+                            translate: 'آپلود مستندات',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'گزارشات',
+                            translate: 'گزارشات',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                    ]
+                },
+                {
+                    id: 'managecommercialwallet',
+                    label: ' مدیریت حساب',
+                    translate: ' مدیریت حساب',
+                    type: 'collapsable',
+                   
+                    items: [
+                        {
+                            id: 'real',
+                            label: 'ایجاد',
+                            translate: 'ایجاد',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                           
+                        },
+                        {
+                            id: 'real',
+                            label: 'به روزرسانی ',
+                            translate: 'به روزرسانی ',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'گزارشات',
+                            translate: 'گزارشات',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                    ]
+                },
+
+                {
+                    id: 'walletactions',
+                    label: 'مدیریت پرداخت',
+                    translate: 'مدیریت پرداخت',
+                    type: 'collapsable',
+                    items: [
+                        {
+                            id: 'walletBuy',
+                            label: 'شارژ ',
+                            translate: 'شارژ ',
+                            type: 'collapsable',
+                            items: [
+                                {
+                                    id: 'bankpayaCharge',
+                                    label: 'ثبت دستور بانک پرداخت شارژ سیم کارت',
+                                    translate: 'ثبت دستور بانک پرداخت شارژ سیم کارت',
+                                    type: 'item',
+                                    routerLink: '/bankpayaCharge',
+                                },
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'قبض ',
+                            translate: 'قبض ',
+                            type: 'collapsable',
+                            items: [
+                                {
+                                    id: 'banckPayaGhabz',
+                                    label: 'ثبت دستور بانک پرداخت قبض',
+                                    translate: 'ثبت دستور بانک پرداخت قبض',
+                                    type: 'item',
+                                    routerLink: '/banckPayaGhabz',
+                                },
+                                {
+                                    id: 'registerGhabz',
+                                    label: 'ثبت حواله قبض',
+                                    translate: 'ثبت حواله قبض',
+                                    type: 'item',
+                                    routerLink: '/registerGhabz',
+                                },
+                                {
+                                    id: 'groupGhabz',
+                                    label: 'ثبت حواله قبوض گروهی',
+                                    translate: 'ثبت حواله قبوض گروهی',
+                                    type: 'item',
+                                    routerLink: '/groupGhabz',
+                                },
+                                {
+                                    id: 'reportGhabz',
+                                    label: 'گزارش پرداخت قبوض',
+                                    translate: 'گزارش پرداخت قبوض',
+                                    type: 'item',
+                                    routerLink: '/reportGhabz',
+                                },
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'حواله ',
+                            translate: 'حواله ',
+                            type: 'collapsable',
+
+                            items: [
+                                {
+                                    id: 'santaRegisterTransfer',
+                                    label: 'صدور حواله سانتا',
+                                    translate: 'صدور حواله سانتا',
+                                    type: 'item',
+                                    routerLink: '/santaRegisterTransfer',
+                                },
+                                {
+                                    id: 'registerPayaTransfer',
+                                    label: 'صدور حواله پایا',
+                                    translate: 'صدور حواله پایا',
+                                    type: 'item',
+                                    routerLink: '/registerPayaTransfer',
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'صدور حواله داخلی',
+                                    translate: 'صدور حواله داخلی',
+                                    type: 'item',
+
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'صدور حواله منظم داخلی',
+                                    translate: 'صدور حواله منظم داخلی',
+                                    type: 'item',
+
+                                    
+                                },
+                                {
+                                    id: 'regularPayaRegisterTransfer',
+                                    label: 'صدور حواله منظم پایا',
+                                    translate: 'صدور حواله منظم پایا',
+                                    type: 'item',
+                                    routerLink: '/regularPayaRegisterTransfer',
+                                },
+                                {
+                                    id: 'payaTakTransfer',
+                                    label: 'ثبت حواله پایا تک مرحله ای',
+                                    translate: 'ثبت حواله پایا تک مرحله ای',
+                                    type: 'item',
+                                    routerLink: '/payaTakTransfer',
+                                },
+                                {
+                                    id: 'reportBankTransfer',
+                                    label: 'گزارش حواله',
+                                    translate: 'گزارش حواله',
+                                    type: 'item',
+                                    routerLink: '/reportBankTransfer',
+                                },
+                                {
+                                    id: 'reportPayaBank',
+                                    label: 'گزارش وضعیت حواله های بانک پرداخت',
+                                    translate: 'گزارش وضعیت حواله های بانک پرداخت',
+                                    type: 'item',
+                                    routerLink: '/reportPayaBank',
+                                },
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'پرداخت ',
+                            translate: 'پرداخت ',
+                            type: 'collapsable',
+                           
+                            items: [
+                                {
+                                    id: 'purchase',
+                                    label: 'پرداخت های مستمر',
+                                    translate: 'پرداخت های مستمر',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'پرداخت قبوض',
+                                    translate: 'پرداخت قبوض',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'پرداخت اقساط',
+                                    translate: 'پرداخت اقساط',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'branchPay',
+                                    label: 'ثبت دستور پرداخت',
+                                    translate: 'ثبت دستور پرداخت',
+                                    type: 'item',
+                                    routerLink: '/branchPay',
+                                }
+                            ]
+                        },
+                        {
+                            id: 'walletCharge',
+                            label: 'واریز',
+                            translate: 'واریز',
+                            type: 'collapsable',
+
+                        },
+                        {
+                            id: 'reportYektaVarriz',
+                            label: 'گزارش واریز',
+                            translate: 'گزارش واریز',
+                            type: 'collapsable',
+                            routerLink: '/reportYektaVarriz',
+                        },
+                        {
+                            id: 'searchYekta',
+                            label: 'جستجو کد تراکنش یکتا',
+                            translate: 'جستجو کد تراکنش یکتا',
+                            type: 'collapsable',
+                            routerLink: '/searchYekta',
+                        },
+                        {
+                            id: 'yektaList',
+                            label: 'لیست کد تراکنش یکتا',
+                            translate: 'لیست کد تراکنش یکتا',
+                            type: 'collapsable',
+                            routerLink: '/yektaList',
+                        },
+                        {
+                            id: 'createYekta',
+                            label: 'تولید کد یکتا',
+                            translate: 'تولید کد یکتا',
+                            type: 'collapsable',
+                            routerLink: '/createYekta',
+                        },
+                    ]
+                },
+                {
+                id: 'walletBuy',
+                label: ' مدیریت تسهیلات ',
+                translate: 'مدیریت تسهیلات ',
+                type: 'collapsable',
+               
+                items: [
+                    {
+                        id: 'walletBuy',
+                        label: 'تسهیلات سازمان ',
+                        translate: 'تسهیلات سازمان ',
+                        type: 'collapsable',
+                       
+                        items: [
+                            {
+                                id: 'purchase',
+                                label: 'درخواست تسهیلات',
+                                translate: 'درخواست تسهیلات',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'اطلاعات تسهیلات دریافتی سازمان',
+                                translate: 'اطلاعات تسهیلات دریافتی سازمان',
+                                type: 'item',
+                                 
+                                
+                            },
+                        ]
+                    },
+                    {
+                        id: 'walletBuy',
+                        label: 'تسهیلات کارکنان ',
+                        translate: 'تسهیلات کارکنان ',
+                        type: 'collapsable',
+                       
+                        items: [
+                            {
+                                id: 'purchase',
+                                label: 'صدور مجوز مشاهده تسهیلات کارکنان',
+                                translate: 'صدور مجوز مشاهده تسهیلات کارکنان',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'اطلاعات تسهیلات دریافتی کارکنان',
+                                translate: 'اطلاعات تسهیلات دریافتی کارکنان',
+                                type: 'item',
+                                 
+                                
+                            },
+                        ]
+                    }
+                ]
+            }, {
+                id: 'walletBuy',
+                label: ' مدیریت اوراق بهادار ',
+                translate: 'مدیریت اوراق بهادار ',
+                type: 'collapsable',
+               
+                items: [
+                    {
+                        id: 'walletBuy',
+                        label: 'چک ',
+                        translate: 'چک ',
+                        type: 'collapsable',
+                       
+                        items: [
+                            {
+                                id: 'purchase',
+                                label: 'صدور چک',
+                                translate: 'صدور چک',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'چاپ چک',
+                                translate: 'چاپ چک',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'اطلاعات چک های صادره',
+                                translate: 'اطلاعات چک های صادره',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'inquiryCheck',
+                                label: 'استعلام وضعیت چک ',
+                                translate: 'استعلام وضعیت چک ',
+                                type: 'item',
+                                routerLink: '/inquiryCheck',
+                            },
+                            {
+                                id: 'reportCheckBardasht',
+                                label: 'گزارش برداشت چک ',
+                                translate: 'گزارش برداشت چک ',
+                                type: 'item',
+                                routerLink: '/reportCheckBardasht',
+                            },
+                            {
+                                id: 'submitCheck',
+                                label: 'تاییدیه الکترونیکی چک ',
+                                translate: 'تاییدیه الکترونیکی چک ',
+                                type: 'item',
+                                routerLink: '/submitCheck',
+                            },
+                        ]
+                    }, {
+                        id: 'walletBuy',
+                        label: 'چکاوک ',
+                        translate: 'چکاوک ',
+                        type: 'collapsable',
+                       
+                        items: [
+                            {
+                                id: 'purchase',
+                                label: 'واگذاری چک ',
+                                translate: 'واگذاری چک ',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'اسکن تصویر چک ',
+                                translate: 'اسکن تصویر چک ',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'ارسال  به چکاوک ',
+                                translate: 'ارسال  به چکاوک ',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'اطلاعات واگذاری اسناد ',
+                                translate: 'اطلاعات واگذاری اسناد ',
+                                type: 'item',
+                                 
+                                
+                            },
+                            {
+                                id: 'purchase',
+                                label: 'گزارش تجمیعی واگذاری اسناد کلر ',
+                                translate: 'گزارش تجمیعی واگذاری اسناد کلر ',
+                                type: 'item',
+                                 
+                                
+                            },
+                        ]
+                    },
+                    {
+                        id: 'purchase',
+                        label: 'صیاد ',
+                        translate: 'صیاد ',
+                        type: 'item',
+                         
+                        
+                    },
+                    {
+                        id: 'bills',
+                        label: 'صورت حساب ',
+                        translate: 'صورت حساب ',
+                        type: 'item',
+                        routerLink: '/bills',
+                    },
+                    {
+                        id: 'submitClear',
+                        label: 'اسناد واگذاری ',
+                        translate: 'اسناد واگذاری ',
+                        type: 'item',
+                        routerLink: '/submitClear',
+                    },
+                    {
+                        id: 'reportClear',
+                        label: 'گزارش اسناد واگذاری ',
+                        translate: 'گزارش اسناد واگذاری ',
+                        type: 'item',
+                        routerLink: '/reportClear',
+                    },
+                    {
+                        id: 'walletBuy',
+                        label: 'گواهی سپرده ',
+                        translate: 'گواهی سپرده ',
+                        type: 'collapsable',
+                       
+                        items: []
+                    },
+                    {
+                        id: 'walletBuy',
+                        label: 'اوراق مشارکت ',
+                        translate: 'اوراق مشارکت ',
+                        type: 'collapsable',
+                       
+                        items: []
+                    },
+                    {
+                        id: 'walletBuy',
+                        label: 'گزارشات ',
+                        translate: 'گزارشات ',
+                        type: 'collapsable',
+                       
+                        items: []
+                    },
+                ]
+            },
+                {
+                    id: 'walletBuy',
+                    label: ' مدیریت کارت و کیف پول ',
+                    translate: 'مدیریت کارت و کیف پول ',
+                    type: 'collapsable',
+                    items: [
+                        {
+                            id: 'walletBuy',
+                            label: ' کیف پول ',
+                            translate: 'کیف پول ',
+                            type: 'collapsable',
+                            items: [
+                                {
+                                    id: '/creatWallet',
+                                    label: 'تعریف کیف پول',
+                                    translate: ' تعریف کیف پول',
+                                    type: 'item',
+                                    routerLink: '//creatWallet',
+                                },
+                                {
+                                    id: 'chargAmountWallet',
+                                    label: 'شارژ کیف پول',
+                                    translate: ' شارژ کیف پول',
+                                    type: 'item',
+
+                                    routerLink: '/chargAmountWallet',
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: 'شارژ گروهی کیف پول',
+                                    translate: ' شارژ گروهی کیف پول',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'ensedadWallet',
+                                    label: 'انسداد کیف پول',
+                                    translate: ' انسداد کیف پول',
+                                    type: 'item',
+                                    routerLink: '/ensedadWallet',
+                                },
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: ' بن کارت ',
+                            translate: 'بن کارت ',
+                            type: 'collapsable',
+                           
+                            items: [
+                                {
+                                    id: 'registerBonCard',
+                                    label: 'صدور بن کارت ',
+                                    translate: 'صدور بن کارت ',
+                                    type: 'item',
+                                    routerLink: '/registerBonCard',
+                                },
+                                {
+                                    id: 'ensedadBonCard',
+                                    label: 'انسداد بن کارت ',
+                                    translate: 'انسداد بن کارت ',
+                                    type: 'item',
+                                     
+                                    routerLink: '/ensedadBonCard',
+                                },
+                                {
+                                    id: 'rafeEnsedadBonCard',
+                                    label: 'رفع انسداد بن کارت ',
+                                    translate: 'رفع انسداد بن کارت ',
+                                    type: 'item',
+                                     
+                                    routerLink: '/rafeEnsedadBonCard',
+                                },
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: ' هدیه کارت ',
+                            translate: 'هدیه کارت ',
+                            type: 'collapsable',
+                            items: [
+                                {
+                                    id: 'purchase',
+                                    label: 'صدور هدیه کارت بانام/ بی نام ',
+                                    translate: 'صدور هدیه کارت بانام/ بی نام ',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'انسداد هدیه کارت ',
+                                    translate: 'انسداد هدیه کارت ',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'رفع انسداد هدیه کارت ',
+                                    translate: 'رفع انسداد هدیه کارت ',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'شارژ هدیه کارت  ',
+                                    translate: 'شارژ هدیه کارت  ',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'شارژ گروهی هدیه کارت  ',
+                                    translate: 'شارژ گروهی هدیه کارت  ',
+                                    type: 'item',
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'ابطال گروهي هديه کارتهاي خام منقضي شده  ',
+                                    translate: 'ابطال گروهي هديه کارتهاي خام منقضي شده  ',
+                                    type: 'item',
+                                    
+                                },
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: ' صدور کارت حقوقی ',
+                            translate: 'صدور کارت حقوقی ',
+                            type: 'item',
+                             
+                            
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: ' صدور کارت مجازی ',
+                            translate: 'صدور کارت مجازی ',
+                            type: 'item',
+                             
+                            
+                        },
+
+                        {
+                            id: 'walletBuy',
+                            label: ' گزارشات ',
+                            translate: 'گزارشات ',
+                            type: 'collapsable',
+                           
+                            items: [
+                                {
+                                    id: '/reportStatusWallet',
+                                    label: 'وضعیت کیف پول',
+                                    translate: ' وضعیت کیف پول',
+                                    type: 'item',
+                                    routerLink: '//reportStatusWallet',
+                                },
+                                {
+                                    id: 'billsBonCard',
+                                    label: ' اطلاعات تراکنش بن کارت ',
+                                    translate: 'اطلاعات تراکنش بن کارت ',
+                                    type: 'item',
+                                    routerLink: '/billsBonCard',
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' اطلاعات بن کارت های صادره ',
+                                    translate: 'اطلاعات بن کارت های صادره ',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' اطلاعات تراکنس کارت ها ',
+                                    translate: ' اطلاعات تراکنس کارت ها',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletTransaction',
+                                    label: 'اطلاعات شارژ کیف پول به تفکیک واحد های تابعه',
+                                    translate: ' اطلاعات شارژ کیف پول به تفکیک واحد های تابعه',
+                                    type: 'item',
+
+                                    routerLink: '/walletTransaction',
+                                },
+                            ]
+                        }
+
+                    ]
+                },
+                {
+                    id: 'walletBuy',
+                    label: ' مدیریت مالی و حسابداری ',
+                    translate: 'مدیریت مالی و حسابداری ',
+                    type: 'collapsable',
+                   
+                    items: [
+                        {
+                            id: 'walletBuy',
+                            label: 'اسناد مالی متناظر با تراکنش‌های بانکی',
+                            translate: ' اسناد مالی متناظر با تراکنش‌های بانکی',
+                            type: 'item',
+                             
+                            
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'اطلاعات واریز های تجمیعی ',
+                            translate: ' اطلاعات واریز های تجمیعی ',
+                            type: 'item',
+                             
+                            
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'اطلاعات برداشت های تجمیعی ',
+                            translate: ' اطلاعات برداشت های تجمیعی ',
+                            type: 'item',
+                             
+                            
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'اطلاعات واریز های ذینفعان ',
+                            translate: ' اطلاعات واریز های ذینفعان ',
+                            type: 'item',
+                             
+                            
+                        },
+                    ]
+                },
+                {
+                    id: 'walletBuy',
+                    label: ' مدیریت پیکره بندی ',
+                    translate: 'مدیریت پیکره بندی ',
+                    type: 'collapsable',
+                   
+                    items: [
+                        {
+                            id: 'walletBuy',
+                            label: ' پارامتر ها ',
+                            translate: 'پارامتر ها ',
+                            type: 'collapsable',
+                           
+                            items: []
+                        },
+                    ]
+                },
+                {
+                    id: 'walletBuy',
+                    label: 'گزارشات مدیریتی ',
+                    translate: 'گزارشات مدیریتی ',
+                    type: 'collapsable',
+                   
+                    items: [
+                        {
+                            id: 'walletBuy',
+                            label: 'گزارشات ',
+                            translate: 'گزارشات ',
+                            type: 'collapsable',
+
+                            items: [
+                                {
+                                    id: 'purchase',
+                                    label: 'اطلاعات حواله های منظم صادره',
+                                    translate: 'اطلاعات حواله های منظم صادره',
+                                    type: 'item',
+
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'اطلاعات حواله های پایا صادره',
+                                    translate: 'اطلاعات حواله های پایا صادره',
+                                    type: 'item',
+
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'اطلاعات حواله های ساتنا صادره',
+                                    translate: 'اطلاعات حواله های ساتنا صادره',
+                                    type: 'item',
+
+                                    
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'اطلاعات پرداخت های مستمر',
+                                    translate: 'اطلاعات پرداخت های مستمر',
+                                    type: 'item',
+
+                                    
+                                },
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'دارایی ها ',
+                            translate: 'دارایی ها ',
+                            type: 'collapsable',
+                           
+                            items: [
+                                {
+                                    id: 'walletBuy',
+                                    label: ' مانده حساب',
+                                    translate: ' مانده حساب',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' صورتحساب',
+                                    translate: ' صورتحساب ',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: '  صورتحساب ارزی',
+                                    translate: '  صورتحساب ارزی',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' اطلاعات آماری مانده حساب',
+                                    translate: ' اطلاعات آماری مانده حساب',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' اطلاعات روند تغییر مانده ',
+                                    translate: ' اطلاعات روند تغییر مانده ',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' اطلاعات واریزی ها',
+                                    translate: ' اطلاعات واریزی ها',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
+                                    translate: ' اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
+                                    type: 'item',
+                                     
+                                    
+                                }
+                            ]
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'بدهی ها ',
+                            translate: 'بدهی ها ',
+                            type: 'collapsable',
+                           
+                            items: [
+                                {
+                                    id: 'walletBuy',
+                                    label: ' اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
+                                    translate: ' اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
+                                    type: 'item',
+                                     
+                                    
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id: 'walletBuy',
+                    label: 'تنظیمات ',
+                    translate: 'تنظیمات ',
+                    type: 'collapsable',
+                   
+                    items: [
+                        {
+                            id: 'walletBuy',
+                            label: 'بروزرسانی ها ',
+                            translate: 'بروزرسانی ها ',
+                            type: 'collapsable',
+
+                            items: [
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی اطلاعات حسابها',
+                                    translate: 'به روزرسانی اطلاعات حسابها ',
+                                    type: 'collapsable',
+
+                                    items: [
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی یکتای حساب ',
+                                            translate: ' به روزرسانی یکتای حساب ',
+                                            type: 'item',
+
+                                            
+                                        },
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی یکتای عمومی ',
+                                            translate: 'به روزرسانی یکتای عمومی ',
+                                            type: 'item',
+
+                                            
+                                        },
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی یکتای با تاریخ انقضاء',
+                                            translate: ' به روزرسانی یکتای با تاریخ انقضاء',
+                                            type: 'item',
+
+                                            
+                                        },
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی یکتای منبع دار ',
+                                            translate: ' به روزرسانی یکتای منبع دار ',
+                                            type: 'item',
+
+                                            
+                                        },
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی یکتای مبنا دار ',
+                                            translate: ' به روزرسانی یکتای مبنا دار ',
+                                            type: 'item',
+
+                                            
+                                        },
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی یکتای مستمر ',
+                                            translate: 'به روزرسانی یکتای مستمر ',
+                                            type: 'item',
+
+                                            
+                                        },
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی اطلاعات شناسه پرداخت ',
+                                            translate: 'به روزرسانی اطلاعات شناسه پرداخت ',
+                                            type: 'item',
+
+                                            
+                                        },
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روزرسانی اطلاعات پرداخت های مستمر ',
+                                            translate: 'به روزرسانی اطلاعات پرداخت های مستمر ',
+                                            type: 'item',
+
+                                            
+                                        }
+                                    ]
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی اطلاعات چک',
+                                    translate: 'به روزرسانی اطلاعات چک ',
+                                    type: 'collapsable',
+
+                                    items: [
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روز رسانی اطلاعات چک  ',
+                                            translate: 'به روز رسانی اطلاعات چک  ',
+                                            type: 'item',
+
+                                            
+                                        }
+                                    ]
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی اطلاعات چکاوک',
+                                    translate: 'به روزرسانی اطلاعات چکاوک ',
+                                    type: 'collapsable',
+
+                                    items: [
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روز رسانی اطلاعات چک های واگذار شده',
+                                            translate: 'به روز رسانی اطلاعات چک های واگذار شده',
+                                            type: 'item',
+
+                                            
+                                        }
+                                    ]
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی اطلاعات تراکنش ها',
+                                    translate: 'به روزرسانی اطلاعات تراکنش ها ',
+                                    type: 'collapsable',
+
+                                    items: []
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روز رسانی اطلاعات تسهیلات',
+                                    translate: 'به روز رسانی اطلاعات تسهیلات ',
+                                    type: 'collapsable',
+
+                                    items: [
+                                        {
+                                            id: 'walletBuy',
+                                            label: 'به روز رسانی اطلاعات پرداخت اقساط',
+                                            translate: 'به روز رسانی اطلاعات پرداخت اقساط',
+                                            type: 'item',
+
+                                            
+                                        }
+                                    ]
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزسانی اطلاعات تغییر رمز ',
+                                    translate: ' به روزسانی اطلاعات تغییر رمز ',
+                                    type: 'item',
+
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی اطلاعات کاربران سازمان',
+                                    translate: ' به روزرسانی اطلاعات کاربران سازمان',
+                                    type: 'item',
+
+                                    
+                                }
+                                ,
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی اطلاعات سطح دسترسی ',
+                                    translate: ' به روزرسانی اطلاعات سطح دسترسی ',
+                                    type: 'item',
+
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی سطح دسترسی کاربران ',
+                                    translate: ' به روزرسانی سطح دسترسی کاربران ',
+                                    type: 'item',
+
+                                    
+                                },
+                            ]
+                        },
+
+                        {
+                            id: 'walletBuy',
+                            label: 'مدیریت پیامک ',
+                            translate: 'مدیریت پیامک ',
+                            type: 'collapsable',
+                           
+                            items: [
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی سطح دسترسی کاربران ',
+                                    translate: ' به روزرسانی سطح دسترسی کاربران ',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                                {
+                                    id: 'walletBuy',
+                                    label: ' به روزرسانی سطح دسترسی کاربران ',
+                                    translate: ' به روزرسانی سطح دسترسی کاربران ',
+                                    type: 'item',
+                                     
+                                    
+                                },
+                            ]
+                        }
+                    ]
+                },
+
+            ];
+
     }
 
     /**
      * On destroy
      */
-    ngOnDestroy(): void
-    {
+    ngOnDestroy()
+        :
+        void {
         // Unsubscribe from all subscriptions
         this._unsubscribeAll.next();
         this._unsubscribeAll.complete();
-    }
+    };
 }

@@ -3,6 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+    version: '0.0.1' + '-dev',
+    defaultLanguage: 'fa',
+    supportedLanguages: ['fa-IR', 'en-US'],
     production: false,
     hmr       : false
 };

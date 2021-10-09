@@ -1,0 +1,72 @@
+<p-panel header="اسناد واگذاری" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap">
+        <div class="p-md-3">
+            <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class="p-md-3">
+            <p-dropdown placeholder="بانک متعهد" optionValue="value" optionLabel="label"></p-dropdown>
+
+        </div>
+        <div class="p-md-3">
+            <input placeholder="کد شعبه متعهد" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="سری عددی" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="سری حرفی" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="سریال" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="شماره حساب سند" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="مبلغ" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <p-dropdown placeholder="نوع سند" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="صاحب حساب سند" class="input-w-100" pInputText>
+        </div>
+
+        <div class="p-md-3">
+            <input placeholder="کد ملی" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="موبایل" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <p-persian-calendar placeholder="تاریخ صدور سند" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-3">
+            <p-persian-calendar placeholder="تاریخ واگذاری" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="کد تراکنش" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="اطلاعات پیوست مشتریان" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-6 ">
+            <input placeholder="توضیحات" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-6 ">
+            <p-fileUpload mode="basic"
+                          [auto]="true" [customUpload]="true"
+                          [showCancelButton]="false" [showUploadButton]="false"
+                          accept=".xlsx" chooseLabel="پیوست تصویر چک" multiple="false"
+            >
+            </p-fileUpload>
+        </div>
+    </div>
+    <div class="p-md-12 FS-height">
+        <button id="btnAssignment" class="p-button-info" pButton label="واگذاری"></button>&nbsp;
+        <button id="btnInquirySida" class="p-button-info" pButton label="استعلام سامانه صیاد"></button>&nbsp;
+    </div>
+
+</p-panel>

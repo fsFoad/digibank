@@ -1,4 +1,5 @@
 content {
+    font-family: 'iranyekan', sans-serif;
     position: relative;
     display: flex;
     z-index: 1;
@@ -10,4 +11,37 @@ content {
         width: 100%;
         min-width: 100%;
     }
+}
+
+.isFontIran label,
+.isFontIran div,
+.isFontIran span :not(.p-dropdown-trigger,.pi-calendar,.p-button-icon),
+.isFontIran table,
+.isFontIran input,
+.isFontIran h1,
+.isFontIran h2,
+.isFontIran h3,
+.isFontIran h4,
+.isFontIran h5,
+.isFontIran h6,
+.isFontIran .p-button-label,
+.isFontIran .p-dropdown-label,
+.isFontIran p{
+        font-family: 'iranyekan', sans-serif !important;
+}
+.isSansSerif label,
+.isSansSerif div,
+.isSansSerif span :not(.p-dropdown-trigger,.pi-calendar,.p-button-icon),
+.isSansSerif table,
+.isSansSerif input,
+.isSansSerif h1,
+.isSansSerif h2,
+.isSansSerif h3,
+.isSansSerif h4,
+.isSansSerif h5,
+.isSansSerif h6,
+.isSansSerif .p-button-label,
+.isSansSerif .p-dropdown-label,
+.isSansSerif p {
+    font-family: sans-serif !important;
 }

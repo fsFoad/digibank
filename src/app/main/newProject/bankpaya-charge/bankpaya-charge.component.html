@@ -1,0 +1,53 @@
+<p-panel header="ثبت دستور بانک پرداخت شارژ سیم کارت" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap">
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="شماره موبایل" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <p-dropdown class="p-dropdown-w80" placeholder="نوع شرکت" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3">
+            <p-dropdown class="p-dropdown-w80" placeholder="نوع دوره پرداخت" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="سقف مبلغ شارژ" pInputText>
+        </div>
+    </div>
+    <br>
+    <div class="p-d-flex p-flex-wrap">
+        <div class="p-md-3">
+            <input class="input-w-100" placeholder="کد شتابی بانکی" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input class="input-w-100" placeholder="کد پیوست" pInputText/>
+        </div>
+        <div class="p-md-3">
+        </div>
+        <div class="p-md-3"></div>
+        <div class="p-md-12 ">
+            <input class="input-w-100" placeholder="شرح / توضیحات" pInputText/>
+        </div>
+        <div class="p-md-3">
+            <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-3">
+            <p-persian-calendar placeholder="تاریخ انقضا" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-3">
+            <p-checkbox name="check" id="ny " value="val1"></p-checkbox>
+            <label> بدون تاریخ امضا </label>
+        </div>
+        <div class="p-md-3"></div>
+        <div class="p-md-3Fs"></div>
+        <div class="p-md-6Fs">
+            <br>
+            <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
+            <button id="btnBatchRegister" class="p-button-info" pButton label="ثبت گروهی"></button>&nbsp;
+        </div>
+        <div class="p-md-3Fs "></div>
+    </div>
+</p-panel>

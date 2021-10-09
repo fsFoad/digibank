@@ -1,0 +1,62 @@
+<p-panel header="صدور بن کارت" [ngStyle]="{'width':'100%'}">
+
+    <div class="p-d-flex p-flex-wrap">
+        <div class=" p-md-3">
+            <!--                <label>نوع حواله</label><br>-->
+            <p-dropdown class="p-dropdown-w80" placeholder="شماره حساب متصل به کارت" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="نام نام خانوادگی" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="شماره موبایل" pInputText>
+
+        </div>
+
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="مبلغ شارژ اولیه" pInputText>
+
+        </div>
+
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="کد ملی" pInputText>
+
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="نام پدر" pInputText>
+
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="شماره شناسنامه" pInputText>
+
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="تاریخ تولد" pInputText>
+
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="کد شعبه" pInputText>
+
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="نام شعبه" pInputText>
+
+        </div>
+        <div class=" p-md-3">
+            <!--                <label>نوع حواله</label><br>-->
+            <p-dropdown class="p-dropdown-w80" placeholder="نوع خدمات" optionValue="value"
+                        [options]="listDrop"
+                        optionLabel="label"></p-dropdown>
+        </div>
+
+
+    </div>
+
+    <div class="p-col-12">
+        <br>
+        <button id="btnRegister" class="p-button-info" pButton label="صدور"></button>&nbsp;
+        <button id="btnCertificationBonCard" class="p-button-info" pButton label="صدور گواهی بن کارت"></button>&nbsp;
+
+    </div>
+</p-panel>

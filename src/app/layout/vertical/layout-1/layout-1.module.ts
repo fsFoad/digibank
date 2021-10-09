@@ -11,12 +11,15 @@ import { QuickPanelModule } from 'app/layout/components/quick-panel/quick-panel.
 import { ToolbarModule } from 'app/layout/components/toolbar/toolbar.module';
 
 import { VerticalLayout1Component } from 'app/layout/vertical/layout-1/layout-1.component';
+import {MenubarModule} from "primeng/menubar";
+import {SharedModule} from "primeng/api";
+import {InputTextModule} from "primeng/inputtext";
 
 @NgModule({
     declarations: [
         VerticalLayout1Component
     ],
-    imports     : [
+    imports: [
         RouterModule,
 
         FuseSharedModule,
@@ -26,7 +29,10 @@ import { VerticalLayout1Component } from 'app/layout/vertical/layout-1/layout-1.
         FooterModule,
         NavbarModule,
         QuickPanelModule,
-        ToolbarModule
+        ToolbarModule,
+        MenubarModule,
+        SharedModule,
+        InputTextModule
     ],
     exports     : [
         VerticalLayout1Component

@@ -1,0 +1,83 @@
+<p-panel header="لیست کد تراکنش یکتا" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap ">
+        <div class=" p-md-3 ">
+            <input placeholder="کاربر ایجاد کننده" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <p-dropdown placeholder="سرفصل در آمدی" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="کد تراکنش یکتا" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="شماره حساب" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="مبلغ" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <p-dropdown class="p-dropdown-w80" placeholder="نوع الگوریتم" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="کد پیوست" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input placeholder="کد اقتصادی / کد ملی" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <p-dropdown class="p-dropdown-w80" placeholder="واحد مربوطه" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+    </div>
+    <div class="p-d-flex p-flex-wrap ">
+        <div class=" p-md-3 ">
+            <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
+            ></p-persian-calendar>
+        </div>
+        <div class=" p-md-3 ">
+            <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class=" p-md-3 ">
+            <p-persian-calendar placeholder="تاریخ انقضا" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+    </div>
+    <div class="p-col-12">
+        <br>
+        <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+    </div>
+    <p-card *ngIf=tableFlag>
+        <p-table [value]="fsList">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th translate>ردیف</th>
+                    <th translate id="thAccountNumber">شماره حساب</th>
+                    <th translate>کد یکتا</th>
+                    <th translate>تاریخ ایجاد</th>
+                    <th translate>کاربر ایجاد کننده</th>
+                    <th translate>واحد ایجاد کننده</th>
+                    <th translate>نوع الگوریتم</th>
+                    <th translate>مبلغ</th>
+                    <th translate>تاریخ انقضا</th>
+                    <th translate>کد مبنا</th>
+                </tr>
+            </ng-template>
+            <ng-template let-i="rowIndex" pTemplate="body" let-yektaList>
+                <tr>
+                    <td>{{i + 1}}</td>
+                    <td>{{yektaList.accountNumber}}</td>
+                    <td>{{yektaList.yektaCode}}</td>
+                    <td>{{yektaList.history}}</td>
+                    <td>{{yektaList.creatorUser}}</td>
+                    <td>{{yektaList.creatingUnit}}</td>
+                    <td>{{yektaList.algorithmType}}</td>
+                    <td>{{yektaList.amount|addCommaSeparator}}</td>
+                    <td>1400/06/01</td>
+                    <td>{{yektaList.baseCode}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+</p-panel>

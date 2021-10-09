@@ -1,0 +1,39 @@
+<!--<mat-form-field-->
+<!--    class="dynamic-form-field"-->
+<!--    *ngIf="formObject?.prefix === '' && formObject?.suffix === ''"-->
+<!--&gt;-->
+<!--    <mat-label [attr.for]="formObject.key">{{ formObject.label }}</mat-label>-->
+<!--    <input-->
+<!--        matInput-->
+<!--        [type]="formObject.type"-->
+<!--        [placeholder]="formObject.placeholder"-->
+<!--        [formControl]="formControl"-->
+<!--        (change)="handleChange($event)"-->
+<!--        (click)="onClick()"-->
+<!--        (focus)="onFocus()"-->
+<!--        [readonly]="formObject.disabled"-->
+<!--        [maxlength]="formObject.maxLength"-->
+<!--    />-->
+<!--    <mat-icon matSuffix>{{ formObject.icon }}</mat-icon>-->
+<!--    <mat-hint *ngIf="!dirty">{{ formObject.hint }}</mat-hint>-->
+<!--    <div *ngIf="dirty" class="error-message">-->
+<!--        {{ formObject.errors.length ? formObject.errors[0].message : '' }}-->
+<!--    </div>-->
+<!--</mat-form-field>-->
+<!--<mat-form-field-->
+<!--    class="dynamic-form-field"-->
+<!--    *ngIf="formObject.prefix !== '' || formObject.suffix !== ''"-->
+<!--&gt;-->
+<!--    <mat-label [attr.for]="formObject.key">{{ formObject.label }}</mat-label>-->
+<!--    <input-->
+<!--        matInput-->
+<!--        [type]="formObject.type"-->
+<!--        [placeholder]="formObject.placeholder"-->
+<!--        [formControl]="formControl"-->
+<!--        (change)="handleChange($event)"-->
+<!--        (click)="onClick()"-->
+<!--        (focus)="onFocus()"-->
+<!--        [readonly]="formObject.disabled"-->
+<!--        [maxlength]="formObject.maxLength"-->
+<!--    />-->
+<!--</mat-form-field>-->

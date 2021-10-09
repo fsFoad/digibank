@@ -1,0 +1,28 @@
+<p-panel header="رفع انسداد بن کارت" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap">
+        <div class=" p-md-2 FS-mr">
+            <p-dropdown placeholder="شماره کارت" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="صاحب کارت" class="input-w-100" pInputText disabled>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="مبلغ موجودی" class="input-w-100" pInputText disabled>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="مبلغ انسداد" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="شماره انسداد" class="input-w-100" pInputText>
+        </div>
+        <div class="FS-mr Fs-p-md-12">
+            <input class="input-w-96" placeholder="شرح / توضیحات" pInputText/>
+            <br>
+        </div>
+    </div>
+    <div class="p-col-12">
+        <br>
+        <button id="btnUnblocking" class="p-button-info" pButton label="رفع انسداد"></button>&nbsp;
+        <button id="btnUnblockingAll" class="p-button-info" pButton label="ابطال کلیه انسداد های کارت انتخابی"></button>&nbsp;
+    </div>
+</p-panel>

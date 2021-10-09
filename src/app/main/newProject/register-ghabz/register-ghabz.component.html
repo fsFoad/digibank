@@ -1,0 +1,38 @@
+<p-panel header="ثبت حواله قبض" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap">
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="شناسه قبض" pInputText>
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="شناسه پرداخت" pInputText>
+        </div>
+        <div class=" p-md-3">
+            <p-dropdown class="p-dropdown-w80" placeholder="نوع قبض" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="مبلغ قبض" pInputText disabled>
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="مهلت پرداخت" pInputText disabled>
+        </div>
+        <div class=" p-md-3">
+            <p-dropdown class="p-dropdown-w80" placeholder="سرفصل حسابداری" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3">
+            <p-dropdown class="p-dropdown-w80" placeholder="شماره حساب" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 ">
+            <input class="input-w-100" placeholder="شرح / توضیحات" pInputText disabled>
+        </div>
+        <div class="p-md-3Fs"></div>
+        <div class="p-md-6Fs">
+            <br>
+            <button id="btnRegister" class="p-button-info" pButton label="پرداخت"></button>&nbsp;
+            <button id="btnInquiryGhabz" class="p-button-info" pButton label="استعلام قبض"></button>&nbsp;
+        </div>
+        <div class="p-md-3Fs"></div>
+    </div>
+</p-panel>

@@ -1,0 +1,74 @@
+.setToCenter {
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#withLabel {
+    width: 50%;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: repeat;
+}
+
+:host {
+    width: 100%;
+    background-repeat: repeat;
+}
+
+#panelDiv {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background-position: 50%;
+}
+
+#userDiv {
+    width: 80%;
+    margin-right: 3%;
+    margin-top: 5%;
+}
+
+input {
+    background-color: #086976;
+}
+
+::-webkit-input-placeholder {
+    color: #FFFFFF;
+}
+
+#passDiv {
+    width: 80%;
+    margin-right: 3%;
+}
+
+#btnDiv {
+    margin-bottom: 5%;
+    height: 50%;
+}
+
+p-button#btnLog {
+    background-color: red;
+    width: 100%;
+    height: 25%;
+
+}
+
+.PanelLogin {
+    //justify-content: center;
+    //align-content: center;
+    //align-items: center;
+    //text-align: center;
+}
+.PanelLogin{
+}

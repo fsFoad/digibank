@@ -1,0 +1,109 @@
+<p-panel header="گزارش اسناد واگذاری" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap Fs-mlf">
+        <div class=" p-md-2 FS-mr">
+            <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="مبلغ" class="input-w-100" pInputText    >
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <p-dropdown placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <p-dropdown placeholder="نوع سند" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr">
+
+            <p-dropdown placeholder="بانک متعهد" optionValue="value" optionLabel="label"></p-dropdown>
+
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="شماره حساب سند" class="input-w-100" pInputText    >
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="ذینفع چک" class="input-w-100" pInputText    >
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="سریال چک" class="input-w-100" pInputText    >
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="سری حرفی" class="input-w-100" pInputText    >
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="سری عددی" class="input-w-100" pInputText    >
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <!--                <label>شماره حساب</label><br>-->
+            <p-dropdown class="p-dropdown-w-100" placeholder="وضعیت چک" optionValue="value" optionLabel="label"></p-dropdown>
+
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <!--                <label>شماره حساب</label><br>-->
+            <p-dropdown placeholder="سرفصل حسابداری" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+
+        <div class=" p-md-2 FS-mr">
+            <p-persian-calendar placeholder="واگذاری از تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100" ></p-persian-calendar>
+
+        </div>
+        <div class="p-md-2 FS-mr">
+            <p-persian-calendar placeholder="واگذاری تا تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100" ></p-persian-calendar>
+
+        </div>
+        <div class="p-md-2 FS-mr">
+            <p-persian-calendar placeholder="تاریخ سررسید" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100" ></p-persian-calendar>
+
+        </div>
+        <div class="p-md-2 FS-mr"></div>
+        <div class=" p-md-2 FS-mr">
+            <p-persian-calendar placeholder="وضعیت از تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100" ></p-persian-calendar>
+        </div>
+        <div class="p-md-2 FS-mr">
+            <p-persian-calendar placeholder="وضعیت تا تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100" ></p-persian-calendar>
+        </div>
+    </div>
+    <div class="p-md-12 FS-height">
+        <button id="btnReport"  class="p-button-info" pButton label="گزارش" (click)="tableFlag=true;"></button>&nbsp;
+    </div>
+    <p-card  *ngIf=tableFlag>
+        <p-table [value]="fsList">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th translate>ردیف</th>
+                    <th translate id="thAccountNumber">شماره حساب</th>
+                    <th translate>کد شعبه</th>
+                    <th translate>تاریخ واگذاری</th>
+                    <th translate>واریز کننده</th>
+                    <th translate>وضعیت</th>
+                    <th translate>چک / حواله</th>
+                    <th translate>شماره سند</th>
+                    <th translate>مبلغ</th>
+                    <th translate>بانک متعهد</th>
+                    <th translate>کد شعبه متعهد</th>
+                    <th translate>شماره حساب سند</th>
+                </tr>
+            </ng-template>
+            <ng-template let-i="rowIndex" pTemplate="body" let-service>
+                <tr>
+                    <td>{{i + 1}}</td>
+                    <td>{{service.accountNumber}}</td>
+                    <td>{{service.branchCode}}</td>
+                    <td>{{service.history}}</td>
+                    <td>{{service.personal}}</td>
+                    <td>{{service.status}}</td>
+                    <td>{{service.check}}</td>
+                    <td>{{service.docNumber}}</td>
+                    <td>{{service.amounts|addCommaSeparator}}</td>
+                    <td>{{service.committedBank}}</td>
+                    <td>{{service.committedBranchCode}}</td>
+                    <td>{{service.docAccountNumber}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+</p-panel>

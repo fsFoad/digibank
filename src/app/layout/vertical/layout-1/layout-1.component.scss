@@ -60,3 +60,25 @@ vertical-layout-1 {
         }
     }
 }
+
+.horizontal-menu {
+    background-color:#1f3f43;
+    height: 6rem;
+
+}
+#menu{
+
+    span{
+        font-size: 11px;
+    }
+}
+#menu{
+    a:hover{
+        background-color: #498795;
+        --text-color: #498795;
+    }
+    a.active {
+        background-color: #498795;
+    }
+
+}

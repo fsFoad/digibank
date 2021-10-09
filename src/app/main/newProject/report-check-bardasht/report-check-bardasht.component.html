@@ -1,0 +1,73 @@
+<p-panel header="گزارش برداشت چک" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap Fs-mlf">
+        <div class=" p-md-2 FS-mr">
+            <p-dropdown placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <p-dropdown placeholder="سرفصل حسابداری" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="شماره سند" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="مبلغ" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-2 FS-mr">
+            <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-2 FS-mr">
+            <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="کد پیوست" class="input-w-100" pInputText>
+        </div>
+        <div class=" p-md-2 FS-mr">
+            <input placeholder="کد اقتصادی / کد ملی" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-2 FS-mr">
+            <p-dropdown placeholder="نوع برداشت" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+    </div>
+    <div class="p-md-12 FS-height">
+
+        <button id="btnReport" class="p-button-info" pButton label="گزارش"
+                (click)="tableFlag=true;"></button>&nbsp;
+    </div>
+    <p-card *ngIf=tableFlag>
+        <p-table [value]="fsList">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th translate>ردیف</th>
+                    <th translate id="thAccountNumber">شماره حساب</th>
+                    <th translate>تاریخ</th>
+                    <th translate>کد شعبه</th>
+                    <th translate>کد یکتا</th>
+                    <th translate>شرح سند</th>
+                    <th translate>کد نوع تراکنش</th>
+                    <th translate>بدهکار</th>
+                    <th translate>بستانکار</th>
+                    <th translate>مانده</th>
+                </tr>
+            </ng-template>
+            <ng-template let-i="rowIndex" pTemplate="body" let-service>
+                <tr>
+                    <td>{{i + 1}}</td>
+                    <td>{{service.accountNumber}}</td>
+                    <td>{{service.history}}</td>
+                    <td>{{service.branchCode}}</td>
+                    <td>{{service.yektaCode}}</td>
+                    <td>{{service.docDes}}</td>
+                    <td>{{service.TransactionTypeCode}}</td>
+                    <td>0</td>
+                    <td>{{service.creditor|addCommaSeparator}}</td>
+                    <td>{{service.amount|addCommaSeparator}}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+</p-panel>

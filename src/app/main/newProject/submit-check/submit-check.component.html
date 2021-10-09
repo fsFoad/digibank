@@ -1,0 +1,54 @@
+<p-panel header="تاییدیه الکترونیکی چک" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap">
+        <div class="p-md-3">
+            <input placeholder="شماره حساب" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="مبلغ" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <p-persian-calendar placeholder="تاریخ سررسید" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100"></p-persian-calendar>
+        </div>
+        <div class="p-md-3">
+            <p-dropdown placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="مانده حساب" class="input-w-100" pInputText disabled>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="مانده دفتری" class="input-w-100" pInputText disabled>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="جمع چک های پاس نشده" class="input-w-100" pInputText disabled>
+        </div>
+        <div class="p-md-3">
+            <input placeholder="مانده حساب پشتیبان" class="input-w-100" pInputText disabled>
+        </div>
+        <div class="p-md-6">
+            <input placeholder="در وجه" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-6">
+            <input placeholder="بابت" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-6">
+            <input placeholder="شماره 16 رقمی صیاد" class="input-w-100" pInputText>
+        </div>
+        <div class="p-md-3">
+            <p-fileUpload mode="basic"
+                          [auto]="true" [customUpload]="true"
+                          [showCancelButton]="false" [showUploadButton]="false"
+                          accept=".xlsx" chooseLabel="پیوست تصویر چک" multiple="false"
+            >
+            </p-fileUpload>
+        </div>
+    </div>
+    <div class="p-md-12 FS-height">
+        <button id="btnRegister" class=" p-button-outlined p-button-success" pButton label="چاپ چک"></button>&nbsp;
+        <button id="4" class="btn-mr p-button-outlined p-button-secondary" pButton label="تاییدیه چک"></button>&nbsp;
+        <button id="3" class="btn-mr p-button-outlined" pButton label="استعلام وضعیت چک"></button>
+        <button id="f2" class="btn-mr p-button-outlined p-button-warning" pButton label="ابطال موقت"></button>&nbsp;
+        <button id="5" class="btn-mr  p-button-outlined p-button-danger" pButton label="ابطال کامل"></button>&nbsp;
+    </div>
+
+</p-panel>

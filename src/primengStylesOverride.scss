@@ -1,0 +1,276 @@
+a, span,label,div,input,textarea{
+    font-size: 14px;
+}
+
+//input,textarea,amount-box,p-inputNumber {
+//    min-width: 80%;
+//    max-width: 100%;
+//}
+input.input-w-100{
+    width: 100%;
+}
+input.input-w-20{
+    width: 20%;
+}
+input.input-w-80{
+    width: 80%;
+}
+input.input-w-92{
+    width: 92%;
+}
+input.input-w-95{
+    width: 95%;
+}
+input.input-w-96{
+    width: 95.5%;
+}
+input.input-w-70{
+    width: 70%;
+}
+input.input-w-65{
+    width: 65%;
+}
+input.input-w-85{
+    width: 80%;
+}
+input.input-w-40{
+    width: 40%;
+}
+p-persian-calendar.p-persian-calendar-w-80{
+    width: 80%;
+}
+p-persian-calendar.p-persian-calendar-w-100{
+    width: 100%;
+}
+p-dropdown.p-dropdown.p-dropdown-w80#drop80{
+    width: 80%;
+}
+p-dropdown.p-dropdown.p-dropdown-w-100{
+    width: 100%;
+}
+
+div.p-dropdown-panel.p-component{
+    right: 0 ;
+}
+.p-dropdown {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    border-radius: 4px;
+    min-width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+}
+.p-dropdown-panel{
+    right:0 !important;
+}
+.p-dropdown .p-dropdown-label {
+    background: transparent;
+    border: 0 none;
+    font-size: 15px;
+}
+.p-datatable .p-datatable-thead > tr > th {
+    text-align: center !important;
+    padding: 0.75rem 0.75rem;
+    border: 1px solid #e4e4e4;
+    border-width: 0 0 1px 0;
+    font-weight: 500;
+    color: #e4e4e4;
+    background: #5b8086;
+    transition: none;
+}
+
+.p-button.p-button-text.p-button-plain{
+    color: #ffffff;
+    background: #3a6286;
+}
+
+.p-panel .p-panel-header {
+    border: 1px solid #a19f9d;
+    padding: 1rem;
+    background: #67898f;
+    color: #e7e7e0;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+}
+
+.p-inputtext:disabled {
+    background-color: #f3f2f1;
+    border-color: #f3f2f1;
+    color: #13942fd1;
+    opacity: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.p-dropdown.p-disabled .p-dropdown-label, .p-dropdown.p-disabled .p-dropdown-trigger-icon, .p-multiselect.p-disabled .p-dropdown-label, .p-multiselect.p-disabled .p-dropdown-trigger-icon {
+    color: #13942fd1;
+}
+
+.p-datatable .p-datatable-tbody > tr > td {
+    text-align: center !important;
+    border: 1px solid #e4e4e4;
+    border-width: 0 0 1px 0;
+    padding: 0.75rem 0.75rem;
+}
+.pi-times:before {
+    content: "\e935" !important;
+}
+
+.p-inputtext {
+    font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+    font-size: 15px !important;
+    color: #000001;
+    background: #ffffff;
+    padding: 0.75rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 4px;
+}
+
+.ui-calendar.ui-calendar-w-btn .ui-inputtext {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0 none;
+}
+
+.ui-calendar.ui-calendar-w-btn input {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+body.theme-default {
+    .mat-snack-bar-container{
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+        color: #ffffff;
+
+        &.panel-snackbar-success{
+            // background-color: #489be5;
+            opacity: 0.8 !important;
+            background: #C8E6C9;
+            border: solid #439446;
+            border-width: 0 6px 0 0;
+            color: #224a23;
+        }
+        &.panel-snackbar-error{
+            // background-color: #f44336;
+            opacity: 0.8 !important;;
+            background: #FFCDD2;
+            border: solid #e60017;
+            border-width: 0 6px 0 0;
+            color: #73000c;
+        }
+        &.panel-snackbar-warning{
+            // background-color: #f44336;
+            opacity: 0.8 !important;;
+            background: #f5d991;
+            border: solid #f6c700;
+            border-width: 0 6px 0 0;
+            color: #181706;
+        }
+
+    }
+
+}
+.main-toolbar{
+    background-color: #eee !important;
+}
+//#0e2e33
+.page-container{
+    padding: 2rem;
+}
+
+//
+//.p-inputtext {
+//    font-family: 'iranyekan', serif !important;
+//}
+
+.p-dropdown-panel{
+    right:0;
+    left: unset !important;
+}
+
+.p-card{
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.8) 0px 0.3px 0.9px 0px;
+}
+
+.p-checkbox .p-checkbox-box.p-disabled{
+    background-color: #8cd5d6;
+    border-color: #8cd5d6;
+    color: #8cd5d6;
+}
+
+body.theme-default .accent{
+    background-color: #3a6286 !important
+}
+.btnConfirm{
+    width: 25%;
+}
+.btnClear{
+    width: 25%;
+}
+.btnGroupCharge{
+    width: 40%;
+}
+.btnClearSearch{
+    margin-right: 3%;
+    width: 60%;
+}
+.btnSearch{
+    width: 30%;
+}
+#btnExcel{
+    width: 10%;
+}
+#operationColumn {
+    width: 20%;
+}
+
+.p-menubar .p-submenu-list {
+    display: none;
+    position: absolute;
+    z-index: 1000 !important;
+}
+
+.p-component {
+    font-family: 'iranyekan',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: normal;
+
+}
+
+.p-menubar .p-menuitem {
+    position: relative;
+    direction: rtl;
+    background-color: #1f3f43;
+
+}
+.p-menubar .p-menuitem:hover{
+    background-color: #37666c;
+}
+
+.p-menubar .p-submenu-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
+    display: block;
+    left: -100% !important;
+    top: 0;
+    background-color: #1f3f43;
+
+}
+
+.pi-angle-right:before {
+    content: "\e931" !important;
+color: #ECDDCD;
+
+}
+::before{
+    color: #ECDDCD;
+}
+.p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+    margin-left: auto;
+    margin-right: auto;
+
+}

@@ -1,0 +1,74 @@
+<p-panel header="ثبت حواله سانتا" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap Fs-mlf">
+        <div class=" p-md-5 ">
+            <input placeholder="شماره شبا" dir="ltr" [(ngModel)]="ibon" pInputText>
+        </div>
+        <div class="FS-mr2 p-md-2 ">
+
+            <input placeholder="صاحب حساب" dir="rtl" disabled pInputText>
+        </div>
+        <div class="FS-mr2 p-md-2 ">
+            <input placeholder="متعلق به حساب" dir="rtl" disabled pInputText>
+        </div>
+        <div class="FS-mr2 p-md-2 ">
+            <amount-box class="input-w-100" placeholder="مبلغ">
+            </amount-box>
+        </div>
+
+        <br>
+    </div>
+    <br>
+    <p-card header="اشخاص حقیقی">
+        <div class="p-d-flex p-flex-wrap Fs-mlf3">
+            <div class="p-md-3">
+                <input placeholder="نام" pInputText>
+            </div>
+            <div class="p-md-3">
+                <input placeholder="نام خانوادگی" pInputText>
+            </div>
+            <div class="p-md-3">
+                <input placeholder="کد ملی" pInputText>
+            </div>
+            <div class="p-md-3">
+                <input placeholder="شناسنامه" pInputText>
+            </div>
+            <div class="p-md-3">
+                <input placeholder="نام پدر" pInputText>
+            </div>
+            <div class="p-md-3">
+                <input placeholder="کد شهاب" pInputText>
+            </div>
+            <div class="p-md-3">
+                <input placeholder="کد پستی" pInputText>
+            </div>
+            <div class="p-md-3">
+                <input placeholder="شماره تماس" pInputText>
+            </div>
+        </div>
+    </p-card>
+    <br>
+    <p-card header="اشخاص حقوقی">
+        <div class="p-d-flex p-flex-wrap Fs-mlf4">
+            <div class="Fs-p-md2 ">
+                <input placeholder="کد شهاب مبدا" pInputText>
+            </div>
+            <div class="Fs-p-md2 FS-mr3">
+                <input placeholder="اطلاعات پیوست مشتریان" pInputText>
+            </div>
+            <div class="Fs-p-md2  FS-mr3">
+                <p-dropdown class="p-dropdown-w80" placeholder=" در خواست پرداخت" optionValue="value"
+                            optionLabel="label"></p-dropdown>
+            </div>
+            <br>
+            <div class="FS-mr1 Fs-p-md-11-5 ">
+                <br>
+                <input placeholder="شرح / توضیحات" pInputText/>
+            </div>
+        </div>
+    </p-card>
+    <div class="p-col-12">
+        <br>
+        <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
+        <button id="btnCheckNationalCode" class="p-button-info" pButton label="برسی صحت کد ملی"></button>&nbsp;
+    </div>
+</p-panel>

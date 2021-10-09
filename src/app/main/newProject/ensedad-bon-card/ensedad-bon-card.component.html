@@ -1,0 +1,26 @@
+<p-panel header="انسداد بن کارت" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap Fs-mlf">
+        <div class=" p-md-3 FS-mr">
+            <p-dropdown placeholder="شماره کارت" optionValue="value" optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-3 FS-mr">
+            <input placeholder="صاحب کارت" class="input-w-100" pInputText disabled>
+        </div>
+        <div class=" p-md-3 FS-mr">
+            <input placeholder="مبلغ موجودی" class="input-w-100" pInputText disabled>
+        </div>
+        <div class=" p-md-3 FS-mr">
+            <input placeholder="مبلغ انسداد" class="input-w-100" pInputText>
+        </div>
+        <div class="FS-mr p-md-11">
+            <input class="input-w-92" placeholder="شرح / توضیحات" pInputText/>
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="p-col-12">
+        <br>
+        <button id="btnBlockAmount" class="p-button-info" pButton label="انسداد مبلغ"></button>&nbsp;
+        <button id="btnBlockCard" class="p-button-info" pButton label="انسداد کامل کارت"></button>&nbsp;
+    </div>
+</p-panel>
