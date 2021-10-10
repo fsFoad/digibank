@@ -87,6 +87,48 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     type: 'item',
                                     icon: 'account_balance_wallet',
                                 },
+                                {
+                                    id: 'real',
+                                    label: 'امضاء',
+                                    translate: 'امضاء',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'نقش ذینفع',
+                                    translate: 'نقش ذینفع',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'اطلاعات تماس',
+                                    translate: 'اطلاعات تماس',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'زمینه فعالیت',
+                                    translate: 'زمینه فعالیت',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'مدیریت احراز هویت دیجیتال',
+                                    translate: 'مدیریت احراز هویت دیجیتال',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'مدیریت مستندات',
+                                    translate: 'مدیریت مستندات',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
                             ]
                         }, {
                             id: 'issuepersonalwallet2',
@@ -97,8 +139,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             items: [
                                 {
                                     id: 'real',
-                                    label: 'اطلاعات ثبتی / غیر ثبتی',
-                                    translate: 'اطلاعات ثبتی / غیر ثبتی',
+                                    label: 'اطلاعات ثبتی',
+                                    translate: 'اطلاعات ثبتی',
                                     type: 'item',
                                     icon: 'account_balance_wallet',
                                 },
@@ -109,49 +151,49 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     type: 'item',
                                     icon: 'account_balance_wallet',
                                 },
+                                {
+                                    id: 'real',
+                                    label: 'امضاء',
+                                    translate: 'امضاء',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'نقش ذینفع',
+                                    translate: 'نقش ذینفع',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'اطلاعات تماس',
+                                    translate: 'اطلاعات تماس',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'زمینه فعالیت',
+                                    translate: 'زمینه فعالیت',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'مدیریت احراز هویت دیجیتال',
+                                    translate: 'مدیریت احراز هویت دیجیتال',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
+                                {
+                                    id: 'real',
+                                    label: 'مدیریت مستندات',
+                                    translate: 'مدیریت مستندات',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                },
                             ]
-                        },
-                        {
-                            id: 'real',
-                            label: 'امضاء',
-                            translate: 'امضاء',
-                            type: 'item',
-                            icon: 'account_balance_wallet',
-                        },
-                        {
-                            id: 'real',
-                            label: 'نقش ذینفع',
-                            translate: 'نقش ذینفع',
-                            type: 'item',
-                            icon: 'account_balance_wallet',
-                        },
-                        {
-                            id: 'real',
-                            label: 'اطلاعات تماس',
-                            translate: 'اطلاعات تماس',
-                            type: 'item',
-                            icon: 'account_balance_wallet',
-                        },
-                        {
-                            id: 'real',
-                            label: 'زمینه فعالیت',
-                            translate: 'زمینه فعالیت',
-                            type: 'item',
-                            icon: 'account_balance_wallet',
-                        },
-                        {
-                            id: 'real',
-                            label: 'مدیریت احراز هویت دیجیتال',
-                            translate: 'مدیریت احراز هویت دیجیتال',
-                            type: 'item',
-                            icon: 'account_balance_wallet',
-                        },
-                        {
-                            id: 'real',
-                            label: 'آپلود مستندات',
-                            translate: 'آپلود مستندات',
-                            type: 'item',
-                            icon: 'account_balance_wallet',
                         },
                         {
                             id: 'real',
@@ -167,22 +209,36 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     label: ' مدیریت حساب',
                     translate: ' مدیریت حساب',
                     type: 'collapsable',
-                   
+
                     items: [
                         {
                             id: 'real',
-                            label: 'ایجاد',
-                            translate: 'ایجاد',
+                            label: 'افتتاح حساب مجازی',
+                            translate: 'افتتاح حساب مجازی',
                             type: 'item',
                             icon: 'account_balance_wallet',
-                           
+
                         },
                         {
                             id: 'real',
-                            label: 'به روزرسانی ',
-                            translate: 'به روزرسانی ',
+                            label: 'به روزرسانی حساب مجازی',
+                            translate: 'به روزرسانی حساب مجازی',
                             type: 'item',
                             icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'real',
+                            label: 'مشاهده لیست حساب ها',
+                            translate: 'مشاهده لیست حساب ها',
+                            type: 'item',
+                            icon: 'account_balance_wallet',
+                        },
+                        {
+                            id: 'bills',
+                            label: 'صورت حساب ',
+                            translate: 'صورت حساب ',
+                            type: 'item',
+                            routerLink: '/bills',
                         },
                         {
                             id: 'real',
@@ -230,15 +286,15 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                 },
                                 {
                                     id: 'registerGhabz',
-                                    label: 'ثبت حواله قبض',
-                                    translate: 'ثبت حواله قبض',
+                                    label: 'ثبت قبض',
+                                    translate: 'ثبت قبض',
                                     type: 'item',
                                     routerLink: '/registerGhabz',
                                 },
                                 {
                                     id: 'groupGhabz',
-                                    label: 'ثبت حواله قبوض گروهی',
-                                    translate: 'ثبت حواله قبوض گروهی',
+                                    label: 'ثبت قبوض گروهی',
+                                    translate: 'ثبت قبوض گروهی',
                                     type: 'item',
                                     routerLink: '/groupGhabz',
                                 },
@@ -278,7 +334,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     translate: 'صدور حواله داخلی',
                                     type: 'item',
 
-                                    
+
                                 },
                                 {
                                     id: 'purchase',
@@ -286,7 +342,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     translate: 'صدور حواله منظم داخلی',
                                     type: 'item',
 
-                                    
+
                                 },
                                 {
                                     id: 'regularPayaRegisterTransfer',
@@ -303,190 +359,189 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     routerLink: '/payaTakTransfer',
                                 },
                                 {
-                                    id: 'reportBankTransfer',
-                                    label: 'گزارش حواله',
-                                    translate: 'گزارش حواله',
-                                    type: 'item',
-                                    routerLink: '/reportBankTransfer',
+                                    id: 'Real',
+                                    label: 'گزارشات',
+                                    translate: 'گزارشات',
+                                    type: 'collapsable',
+                                    items: [
+                                        {
+                                            id: 'reportBankTransfer',
+                                            label: 'گزارش حواله',
+                                            translate: 'گزارش حواله',
+                                            type: 'item',
+                                            routerLink: '/reportBankTransfer',
+                                        },
+                                        {
+                                            id: 'reportPayaBank',
+                                            label: 'گزارش وضعیت حواله های بانک پرداخت',
+                                            translate: 'گزارش وضعیت حواله های بانک پرداخت',
+                                            type: 'item',
+                                            routerLink: '/reportPayaBank',
+                                        },
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            id: 'Real',
+                            label: 'مدیریت شناسه',
+                            translate: 'مدیریت شناسه',
+                            type: 'collapsable',
+                            items: [
+                                {
+                                    id: 'searchYekta',
+                                    label: 'جستجو کد تراکنش یکتا',
+                                    translate: 'جستجو کد تراکنش یکتا',
+                                    type: 'collapsable',
+                                    routerLink: '/searchYekta',
                                 },
                                 {
-                                    id: 'reportPayaBank',
-                                    label: 'گزارش وضعیت حواله های بانک پرداخت',
-                                    translate: 'گزارش وضعیت حواله های بانک پرداخت',
+                                    id: 'yektaList',
+                                    label: 'لیست کد تراکنش یکتا',
+                                    translate: 'لیست کد تراکنش یکتا',
+                                    type: 'collapsable',
+                                    routerLink: '/yektaList',
+                                },
+                                {
+                                    id: 'createYekta',
+                                    label: 'تولید کد یکتا',
+                                    translate: 'تولید کد یکتا',
+                                    type: 'collapsable',
+                                    routerLink: '/createYekta',
+                                },
+                            ]
+                        },
+                        {
+                            id: 'Real',
+                            label: 'گزارشات',
+                            translate: 'گزارشات',
+                            type: 'collapsable',
+                            items: [
+                                {
+                                    id: 'reportYektaVarriz',
+                                    label: 'گزارش واریز',
+                                    translate: 'گزارش واریز',
+                                    type: 'collapsable',
+                                    routerLink: '/reportYektaVarriz',
+                                },
+                            ]
+                        },
+
+                    ]
+                },
+                {
+                    id: 'walletBuy',
+                    label: ' مدیریت تسهیلات ',
+                    translate: 'مدیریت تسهیلات ',
+                    type: 'collapsable',
+
+                    items: [
+                        {
+                            id: 'walletBuy',
+                            label: 'تسهیلات سازمان ',
+                            translate: 'تسهیلات سازمان ',
+                            type: 'collapsable',
+
+                            items: [
+                                {
+                                    id: 'purchase',
+                                    label: 'درخواست تسهیلات',
+                                    translate: 'درخواست تسهیلات',
                                     type: 'item',
-                                    routerLink: '/reportPayaBank',
+
+
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'اطلاعات تسهیلات دریافتی سازمان',
+                                    translate: 'اطلاعات تسهیلات دریافتی سازمان',
+                                    type: 'item',
+
+
                                 },
                             ]
                         },
                         {
                             id: 'walletBuy',
-                            label: 'پرداخت ',
-                            translate: 'پرداخت ',
+                            label: 'تسهیلات کارکنان ',
+                            translate: 'تسهیلات کارکنان ',
                             type: 'collapsable',
-                           
                             items: [
                                 {
                                     id: 'purchase',
-                                    label: 'پرداخت های مستمر',
-                                    translate: 'پرداخت های مستمر',
+                                    label: 'صدور مجوز مشاهده تسهیلات کارکنان',
+                                    translate: 'صدور مجوز مشاهده تسهیلات کارکنان',
                                     type: 'item',
-                                    
+
+
                                 },
                                 {
                                     id: 'purchase',
-                                    label: 'پرداخت قبوض',
-                                    translate: 'پرداخت قبوض',
+                                    label: 'اطلاعات تسهیلات دریافتی کارکنان',
+                                    translate: 'اطلاعات تسهیلات دریافتی کارکنان',
                                     type: 'item',
-                                    
+
+
                                 },
-                                {
-                                    id: 'purchase',
-                                    label: 'پرداخت اقساط',
-                                    translate: 'پرداخت اقساط',
-                                    type: 'item',
-                                    
-                                },
-                                {
-                                    id: 'branchPay',
-                                    label: 'ثبت دستور پرداخت',
-                                    translate: 'ثبت دستور پرداخت',
-                                    type: 'item',
-                                    routerLink: '/branchPay',
-                                }
                             ]
                         },
                         {
-                            id: 'walletCharge',
-                            label: 'واریز',
-                            translate: 'واریز',
+                            id: 'walletBuy',
+                            label: 'مدیریت اعتبار',
+                            translate: 'مدیریت اعتبار',
                             type: 'collapsable',
-
-                        },
-                        {
-                            id: 'reportYektaVarriz',
-                            label: 'گزارش واریز',
-                            translate: 'گزارش واریز',
-                            type: 'collapsable',
-                            routerLink: '/reportYektaVarriz',
-                        },
-                        {
-                            id: 'searchYekta',
-                            label: 'جستجو کد تراکنش یکتا',
-                            translate: 'جستجو کد تراکنش یکتا',
-                            type: 'collapsable',
-                            routerLink: '/searchYekta',
-                        },
-                        {
-                            id: 'yektaList',
-                            label: 'لیست کد تراکنش یکتا',
-                            translate: 'لیست کد تراکنش یکتا',
-                            type: 'collapsable',
-                            routerLink: '/yektaList',
-                        },
-                        {
-                            id: 'createYekta',
-                            label: 'تولید کد یکتا',
-                            translate: 'تولید کد یکتا',
-                            type: 'collapsable',
-                            routerLink: '/createYekta',
-                        },
+                            items: [
+                                {
+                                    id: 'purchase',
+                                    label: 'تعریف اعتبار',
+                                    translate: 'تعریف اعتبار',
+                                    type: 'item',
+                                },
+                                {
+                                    id: 'purchase',
+                                    label: 'تخصیص اعتبار',
+                                    translate: 'تخصیص اعتبار',
+                                    type: 'item',
+                                },
+                            ]
+                        }
                     ]
-                },
-                {
-                id: 'walletBuy',
-                label: ' مدیریت تسهیلات ',
-                translate: 'مدیریت تسهیلات ',
-                type: 'collapsable',
-               
-                items: [
-                    {
-                        id: 'walletBuy',
-                        label: 'تسهیلات سازمان ',
-                        translate: 'تسهیلات سازمان ',
-                        type: 'collapsable',
-                       
-                        items: [
-                            {
-                                id: 'purchase',
-                                label: 'درخواست تسهیلات',
-                                translate: 'درخواست تسهیلات',
-                                type: 'item',
-                                 
-                                
-                            },
-                            {
-                                id: 'purchase',
-                                label: 'اطلاعات تسهیلات دریافتی سازمان',
-                                translate: 'اطلاعات تسهیلات دریافتی سازمان',
-                                type: 'item',
-                                 
-                                
-                            },
-                        ]
-                    },
-                    {
-                        id: 'walletBuy',
-                        label: 'تسهیلات کارکنان ',
-                        translate: 'تسهیلات کارکنان ',
-                        type: 'collapsable',
-                       
-                        items: [
-                            {
-                                id: 'purchase',
-                                label: 'صدور مجوز مشاهده تسهیلات کارکنان',
-                                translate: 'صدور مجوز مشاهده تسهیلات کارکنان',
-                                type: 'item',
-                                 
-                                
-                            },
-                            {
-                                id: 'purchase',
-                                label: 'اطلاعات تسهیلات دریافتی کارکنان',
-                                translate: 'اطلاعات تسهیلات دریافتی کارکنان',
-                                type: 'item',
-                                 
-                                
-                            },
-                        ]
-                    }
-                ]
-            }, {
+                }, {
                 id: 'walletBuy',
                 label: ' مدیریت اوراق بهادار ',
                 translate: 'مدیریت اوراق بهادار ',
                 type: 'collapsable',
-               
+
                 items: [
                     {
                         id: 'walletBuy',
-                        label: 'چک ',
-                        translate: 'چک ',
+                        label: 'چک عادی / صیاد',
+                        translate: 'چک عادی / صیاد ',
                         type: 'collapsable',
-                       
                         items: [
                             {
                                 id: 'purchase',
                                 label: 'صدور چک',
                                 translate: 'صدور چک',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                             {
                                 id: 'purchase',
                                 label: 'چاپ چک',
                                 translate: 'چاپ چک',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                             {
                                 id: 'purchase',
                                 label: 'اطلاعات چک های صادره',
                                 translate: 'اطلاعات چک های صادره',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                             {
                                 id: 'inquiryCheck',
@@ -515,101 +570,107 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         label: 'چکاوک ',
                         translate: 'چکاوک ',
                         type: 'collapsable',
-                       
                         items: [
                             {
                                 id: 'purchase',
                                 label: 'واگذاری چک ',
                                 translate: 'واگذاری چک ',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                             {
                                 id: 'purchase',
                                 label: 'اسکن تصویر چک ',
                                 translate: 'اسکن تصویر چک ',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                             {
                                 id: 'purchase',
                                 label: 'ارسال  به چکاوک ',
                                 translate: 'ارسال  به چکاوک ',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                             {
                                 id: 'purchase',
                                 label: 'اطلاعات واگذاری اسناد ',
                                 translate: 'اطلاعات واگذاری اسناد ',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                             {
                                 id: 'purchase',
                                 label: 'گزارش تجمیعی واگذاری اسناد کلر ',
                                 translate: 'گزارش تجمیعی واگذاری اسناد کلر ',
                                 type: 'item',
-                                 
-                                
+
+
                             },
                         ]
                     },
                     {
-                        id: 'purchase',
-                        label: 'صیاد ',
-                        translate: 'صیاد ',
-                        type: 'item',
-                         
-                        
-                    },
-                    {
-                        id: 'bills',
-                        label: 'صورت حساب ',
-                        translate: 'صورت حساب ',
-                        type: 'item',
-                        routerLink: '/bills',
-                    },
-                    {
-                        id: 'submitClear',
-                        label: 'اسناد واگذاری ',
-                        translate: 'اسناد واگذاری ',
-                        type: 'item',
-                        routerLink: '/submitClear',
-                    },
-                    {
-                        id: 'reportClear',
-                        label: 'گزارش اسناد واگذاری ',
-                        translate: 'گزارش اسناد واگذاری ',
-                        type: 'item',
-                        routerLink: '/reportClear',
+                        id: 'walletBuy',
+                        label: 'کلرینگ ',
+                        translate: 'کلرینگ ',
+                        type: 'collapsable',
+                        items: [
+                            {
+                                id: 'submitClear',
+                                label: 'اسناد واگذاری ',
+                                translate: 'اسناد واگذاری ',
+                                type: 'item',
+                                routerLink: '/submitClear',
+                            },
+                            {
+                                id: 'reportClear',
+                                label: 'گزارش اسناد واگذاری ',
+                                translate: 'گزارش اسناد واگذاری ',
+                                type: 'item',
+                                routerLink: '/reportClear',
+                            },
+                        ]
                     },
                     {
                         id: 'walletBuy',
                         label: 'گواهی سپرده ',
                         translate: 'گواهی سپرده ',
                         type: 'collapsable',
-                       
-                        items: []
+                        items: [
+                            {
+                                id: 'reportClear',
+                                label: 'لیست گواهی سپرده ',
+                                translate: 'لیست گواهی سپرده ',
+                                type: 'item',
+                                routerLink: '/reportClear',
+                            },
+                        ]
                     },
                     {
                         id: 'walletBuy',
                         label: 'اوراق مشارکت ',
                         translate: 'اوراق مشارکت ',
                         type: 'collapsable',
-                       
-                        items: []
+                        items: [
+                            {
+                                id: 'reportClear',
+                                label: 'لیست اوراق مشارکت',
+                                translate: 'لیست اوراق مشارکت',
+                                type: 'item',
+                                routerLink: '/reportClear',
+                            },
+                        ]
                     },
                     {
                         id: 'walletBuy',
                         label: 'گزارشات ',
                         translate: 'گزارشات ',
                         type: 'collapsable',
-                       
+
                         items: []
                     },
                 ]
@@ -646,7 +707,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     label: 'شارژ گروهی کیف پول',
                                     translate: ' شارژ گروهی کیف پول',
                                     type: 'item',
-                                    
+
                                 },
                                 {
                                     id: 'ensedadWallet',
@@ -662,7 +723,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             label: ' بن کارت ',
                             translate: 'بن کارت ',
                             type: 'collapsable',
-                           
+
                             items: [
                                 {
                                     id: 'registerBonCard',
@@ -676,7 +737,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     label: 'انسداد بن کارت ',
                                     translate: 'انسداد بن کارت ',
                                     type: 'item',
-                                     
+
                                     routerLink: '/ensedadBonCard',
                                 },
                                 {
@@ -684,7 +745,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     label: 'رفع انسداد بن کارت ',
                                     translate: 'رفع انسداد بن کارت ',
                                     type: 'item',
-                                     
+
                                     routerLink: '/rafeEnsedadBonCard',
                                 },
                             ]
@@ -700,60 +761,60 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     label: 'صدور هدیه کارت بانام/ بی نام ',
                                     translate: 'صدور هدیه کارت بانام/ بی نام ',
                                     type: 'item',
-                                    
+
                                 },
                                 {
                                     id: 'purchase',
                                     label: 'انسداد هدیه کارت ',
                                     translate: 'انسداد هدیه کارت ',
                                     type: 'item',
-                                    
+
                                 },
                                 {
                                     id: 'purchase',
                                     label: 'رفع انسداد هدیه کارت ',
                                     translate: 'رفع انسداد هدیه کارت ',
                                     type: 'item',
-                                    
+
                                 },
                                 {
                                     id: 'purchase',
                                     label: 'شارژ هدیه کارت  ',
                                     translate: 'شارژ هدیه کارت  ',
                                     type: 'item',
-                                    
+
                                 },
                                 {
                                     id: 'purchase',
                                     label: 'شارژ گروهی هدیه کارت  ',
                                     translate: 'شارژ گروهی هدیه کارت  ',
                                     type: 'item',
-                                    
+
                                 },
                                 {
                                     id: 'purchase',
                                     label: 'ابطال گروهي هديه کارتهاي خام منقضي شده  ',
                                     translate: 'ابطال گروهي هديه کارتهاي خام منقضي شده  ',
                                     type: 'item',
-                                    
+
                                 },
                             ]
                         },
                         {
                             id: 'walletBuy',
-                            label: ' صدور کارت حقوقی ',
-                            translate: 'صدور کارت حقوقی ',
+                            label: ' درخواست صدور کارت حقوقی ',
+                            translate: 'درخواست صدور کارت حقوقی ',
                             type: 'item',
-                             
-                            
+
+
                         },
                         {
                             id: 'walletBuy',
-                            label: ' صدور کارت مجازی ',
-                            translate: 'صدور کارت مجازی ',
+                            label: ' درخواست صدور کارت مجازی ',
+                            translate: 'درخواست صدور کارت مجازی ',
                             type: 'item',
-                             
-                            
+
+
                         },
 
                         {
@@ -761,7 +822,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             label: ' گزارشات ',
                             translate: 'گزارشات ',
                             type: 'collapsable',
-                           
+
                             items: [
                                 {
                                     id: '/reportStatusWallet',
@@ -782,16 +843,16 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     label: ' اطلاعات بن کارت های صادره ',
                                     translate: 'اطلاعات بن کارت های صادره ',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' اطلاعات تراکنس کارت ها ',
                                     translate: ' اطلاعات تراکنس کارت ها',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletTransaction',
@@ -811,55 +872,61 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     label: ' مدیریت مالی و حسابداری ',
                     translate: 'مدیریت مالی و حسابداری ',
                     type: 'collapsable',
-                   
+
                     items: [
                         {
                             id: 'walletBuy',
                             label: 'اسناد مالی متناظر با تراکنش‌های بانکی',
                             translate: ' اسناد مالی متناظر با تراکنش‌های بانکی',
                             type: 'item',
-                             
-                            
+
+
                         },
                         {
                             id: 'walletBuy',
                             label: 'اطلاعات واریز های تجمیعی ',
                             translate: ' اطلاعات واریز های تجمیعی ',
                             type: 'item',
-                             
-                            
+
+
                         },
                         {
                             id: 'walletBuy',
                             label: 'اطلاعات برداشت های تجمیعی ',
                             translate: ' اطلاعات برداشت های تجمیعی ',
                             type: 'item',
-                             
-                            
+
+
                         },
                         {
                             id: 'walletBuy',
                             label: 'اطلاعات واریز های ذینفعان ',
                             translate: ' اطلاعات واریز های ذینفعان ',
                             type: 'item',
-                             
-                            
                         },
-                    ]
-                },
-                {
-                    id: 'walletBuy',
-                    label: ' مدیریت پیکره بندی ',
-                    translate: 'مدیریت پیکره بندی ',
-                    type: 'collapsable',
-                   
-                    items: [
                         {
                             id: 'walletBuy',
-                            label: ' پارامتر ها ',
-                            translate: 'پارامتر ها ',
+                            label: 'اطلاعات واریز های ذینفعان ',
+                            translate: ' اطلاعات واریز های ذینفعان ',
+                            type: 'item',
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'تعریف سرفصل های مالی ',
+                            translate: ' تعریف سرفصل های مالی ',
+                            type: 'item',
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: 'قالب اسناد مالی ',
+                            translate: ' قالب اسناد مالی ',
+                            type: 'item',
+                        },
+                        {
+                            id: 'walletBuy',
+                            label:  'گزارشات',
+                            translate: 'گزارشات ',
                             type: 'collapsable',
-                           
                             items: []
                         },
                     ]
@@ -869,111 +936,71 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     label: 'گزارشات مدیریتی ',
                     translate: 'گزارشات مدیریتی ',
                     type: 'collapsable',
-                   
+
                     items: [
-                        {
-                            id: 'walletBuy',
-                            label: 'گزارشات ',
-                            translate: 'گزارشات ',
-                            type: 'collapsable',
 
-                            items: [
-                                {
-                                    id: 'purchase',
-                                    label: 'اطلاعات حواله های منظم صادره',
-                                    translate: 'اطلاعات حواله های منظم صادره',
-                                    type: 'item',
-
-                                    
-                                },
-                                {
-                                    id: 'purchase',
-                                    label: 'اطلاعات حواله های پایا صادره',
-                                    translate: 'اطلاعات حواله های پایا صادره',
-                                    type: 'item',
-
-                                    
-                                },
-                                {
-                                    id: 'purchase',
-                                    label: 'اطلاعات حواله های ساتنا صادره',
-                                    translate: 'اطلاعات حواله های ساتنا صادره',
-                                    type: 'item',
-
-                                    
-                                },
-                                {
-                                    id: 'purchase',
-                                    label: 'اطلاعات پرداخت های مستمر',
-                                    translate: 'اطلاعات پرداخت های مستمر',
-                                    type: 'item',
-
-                                    
-                                },
-                            ]
-                        },
                         {
                             id: 'walletBuy',
                             label: 'دارایی ها ',
                             translate: 'دارایی ها ',
                             type: 'collapsable',
-                           
+
                             items: [
                                 {
                                     id: 'walletBuy',
                                     label: ' مانده حساب',
                                     translate: ' مانده حساب',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' صورتحساب',
                                     translate: ' صورتحساب ',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: '  صورتحساب ارزی',
                                     translate: '  صورتحساب ارزی',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' اطلاعات آماری مانده حساب',
                                     translate: ' اطلاعات آماری مانده حساب',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' اطلاعات روند تغییر مانده ',
                                     translate: ' اطلاعات روند تغییر مانده ',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' اطلاعات واریزی ها',
                                     translate: ' اطلاعات واریزی ها',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
                                     translate: ' اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
                                     type: 'item',
-                                     
-                                    
+
+
                                 }
                             ]
                         },
@@ -982,15 +1009,15 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             label: 'بدهی ها ',
                             translate: 'بدهی ها ',
                             type: 'collapsable',
-                           
+
                             items: [
                                 {
                                     id: 'walletBuy',
                                     label: ' اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
                                     translate: ' اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
                                     type: 'item',
-                                     
-                                    
+
+
                                 }
                             ]
                         }
@@ -1001,7 +1028,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     label: 'تنظیمات ',
                     translate: 'تنظیمات ',
                     type: 'collapsable',
-                   
+
                     items: [
                         {
                             id: 'walletBuy',
@@ -1012,169 +1039,42 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             items: [
                                 {
                                     id: 'walletBuy',
+                                    label: ' به روزرسانی اطلاعات مشتریان',
+                                    translate: ' به روزرسانی اطلاعات مشتریان',
+                                    type: 'item',
+                                },
+                                {
+                                    id: 'walletBuy',
                                     label: ' به روزرسانی اطلاعات حسابها',
                                     translate: 'به روزرسانی اطلاعات حسابها ',
-                                    type: 'collapsable',
+                                    type: 'item',
 
-                                    items: [
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی یکتای حساب ',
-                                            translate: ' به روزرسانی یکتای حساب ',
-                                            type: 'item',
 
-                                            
-                                        },
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی یکتای عمومی ',
-                                            translate: 'به روزرسانی یکتای عمومی ',
-                                            type: 'item',
-
-                                            
-                                        },
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی یکتای با تاریخ انقضاء',
-                                            translate: ' به روزرسانی یکتای با تاریخ انقضاء',
-                                            type: 'item',
-
-                                            
-                                        },
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی یکتای منبع دار ',
-                                            translate: ' به روزرسانی یکتای منبع دار ',
-                                            type: 'item',
-
-                                            
-                                        },
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی یکتای مبنا دار ',
-                                            translate: ' به روزرسانی یکتای مبنا دار ',
-                                            type: 'item',
-
-                                            
-                                        },
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی یکتای مستمر ',
-                                            translate: 'به روزرسانی یکتای مستمر ',
-                                            type: 'item',
-
-                                            
-                                        },
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی اطلاعات شناسه پرداخت ',
-                                            translate: 'به روزرسانی اطلاعات شناسه پرداخت ',
-                                            type: 'item',
-
-                                            
-                                        },
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روزرسانی اطلاعات پرداخت های مستمر ',
-                                            translate: 'به روزرسانی اطلاعات پرداخت های مستمر ',
-                                            type: 'item',
-
-                                            
-                                        }
-                                    ]
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' به روزرسانی اطلاعات چک',
                                     translate: 'به روزرسانی اطلاعات چک ',
-                                    type: 'collapsable',
-
-                                    items: [
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روز رسانی اطلاعات چک  ',
-                                            translate: 'به روز رسانی اطلاعات چک  ',
-                                            type: 'item',
-
-                                            
-                                        }
-                                    ]
-                                },
-                                {
-                                    id: 'walletBuy',
-                                    label: ' به روزرسانی اطلاعات چکاوک',
-                                    translate: 'به روزرسانی اطلاعات چکاوک ',
-                                    type: 'collapsable',
-
-                                    items: [
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روز رسانی اطلاعات چک های واگذار شده',
-                                            translate: 'به روز رسانی اطلاعات چک های واگذار شده',
-                                            type: 'item',
-
-                                            
-                                        }
-                                    ]
+                                    type: 'item',
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' به روزرسانی اطلاعات تراکنش ها',
                                     translate: 'به روزرسانی اطلاعات تراکنش ها ',
-                                    type: 'collapsable',
-
-                                    items: []
+                                    type: 'item',
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' به روز رسانی اطلاعات تسهیلات',
                                     translate: 'به روز رسانی اطلاعات تسهیلات ',
-                                    type: 'collapsable',
-
-                                    items: [
-                                        {
-                                            id: 'walletBuy',
-                                            label: 'به روز رسانی اطلاعات پرداخت اقساط',
-                                            translate: 'به روز رسانی اطلاعات پرداخت اقساط',
-                                            type: 'item',
-
-                                            
-                                        }
-                                    ]
+                                    type: 'item'
                                 },
                                 {
                                     id: 'walletBuy',
-                                    label: ' به روزسانی اطلاعات تغییر رمز ',
-                                    translate: ' به روزسانی اطلاعات تغییر رمز ',
+                                    label: ' به روزسانی اطلاعات اوراق بهادار ',
+                                    translate: 'به روزسانی اطلاعات اوراق بهادار',
                                     type: 'item',
-
-                                    
-                                },
-                                {
-                                    id: 'walletBuy',
-                                    label: ' به روزرسانی اطلاعات کاربران سازمان',
-                                    translate: ' به روزرسانی اطلاعات کاربران سازمان',
-                                    type: 'item',
-
-                                    
                                 }
-                                ,
-                                {
-                                    id: 'walletBuy',
-                                    label: ' به روزرسانی اطلاعات سطح دسترسی ',
-                                    translate: ' به روزرسانی اطلاعات سطح دسترسی ',
-                                    type: 'item',
-
-                                    
-                                },
-                                {
-                                    id: 'walletBuy',
-                                    label: ' به روزرسانی سطح دسترسی کاربران ',
-                                    translate: ' به روزرسانی سطح دسترسی کاربران ',
-                                    type: 'item',
-
-                                    
-                                },
                             ]
                         },
 
@@ -1183,26 +1083,43 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             label: 'مدیریت پیامک ',
                             translate: 'مدیریت پیامک ',
                             type: 'collapsable',
-                           
+
                             items: [
                                 {
                                     id: 'walletBuy',
                                     label: ' به روزرسانی سطح دسترسی کاربران ',
                                     translate: ' به روزرسانی سطح دسترسی کاربران ',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                                 {
                                     id: 'walletBuy',
                                     label: ' به روزرسانی سطح دسترسی کاربران ',
                                     translate: ' به روزرسانی سطح دسترسی کاربران ',
                                     type: 'item',
-                                     
-                                    
+
+
                                 },
                             ]
-                        }
+                        },
+                        {
+                            id: 'walletBuy',
+                            label: ' مدیریت پیکره بندی ',
+                            translate: 'مدیریت پیکره بندی ',
+                            type: 'collapsable',
+
+                            items: [
+                                {
+                                    id: 'walletBuy',
+                                    label: ' پارامتر ها ',
+                                    translate: 'پارامتر ها ',
+                                    type: 'collapsable',
+
+                                    items: []
+                                },
+                            ]
+                        },
                     ]
                 },
 
