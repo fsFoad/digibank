@@ -48,7 +48,11 @@
               "crossvent",
               "dom-plane",
               "dom-set",
-              "@mattlewis92/dom-autoscroller"
+              "@mattlewis92/dom-autoscroller",
+              "persian-tools2",
+              "moment-jalaali",
+              "jalali-moment",
+              "moment/locale/fa"
             ]
           },
           "configurations": {

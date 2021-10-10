@@ -10,7 +10,7 @@ export class KeysPipe implements PipeTransform
      * @param {string[]} args
      * @returns {any}
      */
-    transform(value: any, args: string[]): any
+    transform(value: any, args?: string[]): any
     {
         const keys: any[] = [];
 
