@@ -6,6 +6,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./yekta-list.component.scss']
 })
 export class YektaListComponent implements OnInit {
+    listDrop: { label: string, value: number }[] = [];
     tableFlag = false;
     fsList: {
         accountNumber: number, history: string, creatingUnit: string,
@@ -75,6 +76,12 @@ export class YektaListComponent implements OnInit {
     ];
 
     constructor() {
+        this.listDrop = [
+            {label: 'الگوریتم نوع اول ', value: 1},
+            {label: 'الگوریتم نوع دوم', value: 2},
+            {label: 'الگوریتم نوع سوم', value: 3},
+
+        ];
     }
 
     ngOnInit(): void {

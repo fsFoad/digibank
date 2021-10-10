@@ -38,15 +38,17 @@
         <div class="p-md-3">
             <input class="input-w-100" placeholder="آدرس" pInputText>
         </div>
+
+
         <div class="p-md-3">
             <p-dropdown class="p-dropdown-w80" placeholder="نوع الگوریتم" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+                        [options]="listDrop2"    optionLabel="label"></p-dropdown>
         </div>
         <div class="p-col-4">
-            <p-fileUpload mode="basic"
-                          [auto]="true" [customUpload]="true"
-                          [showCancelButton]="false" [showUploadButton]="false"
-                          accept=".xlsx" chooseLabel="اسناد مرتبط" multiple="false"
+            <p-fileUpload   mode="basic"
+                            [auto]="true" [customUpload]="true"
+                            [showCancelButton]="false" [showUploadButton]="false"
+                            accept=".xlsx" chooseLabel="اسناد مرتبط" multiple="false"
             >
             </p-fileUpload>
         </div>
