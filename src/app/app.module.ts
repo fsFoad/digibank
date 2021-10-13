@@ -60,7 +60,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
-        RouterModule.forRoot(appRoutes,{useHash: true}),
+        RouterModule.forRoot(appRoutes,{useHash: false}),
 
         TranslateModule.forRoot({
             loader: {

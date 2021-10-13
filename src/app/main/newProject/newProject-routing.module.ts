@@ -32,6 +32,7 @@ import {ReportClearComponent} from './report-clear/report-clear.component';
 import {ReportStatusWalletComponent} from './report-status-wallet/report-status-wallet.component';
 import {SubmitClearComponent} from './submit-clear/submit-clear.component';
 import {SubmitCheckComponent} from './submit-check/submit-check.component';
+import { OrganizationalEntityManagerComponent } from "./organizational-entity-manager/organizational-entity-manager.component";
 
 const routes = [
     {
@@ -189,6 +190,10 @@ const routes = [
         path: 'submitCheck',
         component: SubmitCheckComponent,
         //canActivate:[LoginGuard],
+    },
+    {
+        path: 'organizational-entity-manager',
+        component: OrganizationalEntityManagerComponent,
     },
 
 ]

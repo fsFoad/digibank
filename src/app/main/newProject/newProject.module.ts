@@ -1,26 +1,26 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {ReportBankTransferComponent} from './report-bank-transfer/report-bank-transfer.component';
-import {NewProjectRoutingModule} from './newProject-routing.module';
-import {ButtonModule} from 'primeng/button';
-import {PanelModule} from 'primeng/panel';
-import {CardModule} from 'primeng/card';
-import {CheckboxModule} from 'primeng/checkbox';
-import {DropdownModule} from 'primeng/dropdown';
-import {InputTextModule} from 'primeng/inputtext';
-import {ListboxModule} from 'primeng/listbox';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SharedModule} from '../shared/shared.module';
-import {TableModule} from 'primeng/table';
-import {PickListModule} from 'primeng/picklist';
-import {RippleModule} from 'primeng/ripple';
-import {KeyFilterModule} from 'primeng/keyfilter';
-import {TranslateModule} from '@ngx-translate/core';
-import {TooltipModule} from 'primeng/tooltip';
-import {PersianCalendarModule} from '../../../walletlibs/persian-calendar/persian-calendar.module';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
+import { NewProjectRoutingModule } from './newProject-routing.module';
+import { ButtonModule } from 'primeng/button';
+import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card';
+import { CheckboxModule } from 'primeng/checkbox';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
+import { ListboxModule } from 'primeng/listbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { TableModule } from 'primeng/table';
+import { PickListModule } from 'primeng/picklist';
+import { RippleModule } from 'primeng/ripple';
+import { KeyFilterModule } from 'primeng/keyfilter';
+import { TranslateModule } from '@ngx-translate/core';
+import { TooltipModule } from 'primeng/tooltip';
+import { PersianCalendarModule } from '../../../walletlibs/persian-calendar/persian-calendar.module';
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
-import {InputNumberModule} from 'primeng/inputnumber';
-import {InputMaskModule} from 'primeng/inputmask';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputMaskModule } from 'primeng/inputmask';
 import { SantaRegisterTransferComponent } from './santa-register-transfer/santa-register-transfer.component';
 import { RegularPayaRegisterTransferComponent } from './regular-paya-register-transfer/regular-paya-register-transfer.component';
 import { RegisterPayaTransferComponent } from './register-paya-transfer/register-paya-transfer.component';
@@ -43,7 +43,7 @@ import { RegisterGhabzComponent } from './register-ghabz/register-ghabz.componen
 import { RegisterBonCardComponent } from './register-bon-card/register-bon-card.component';
 import { CreatWalletComponent } from './creat-wallet/creat-wallet.component';
 import { CreateYektaComponent } from './create-yekta/create-yekta.component';
-import {FileUploadModule} from 'primeng/fileupload';
+import { FileUploadModule } from 'primeng/fileupload';
 import { GroupGhabzComponent } from './group-ghabz/group-ghabz.component';
 import { WalletTransactionComponent } from './wallet-transaction/wallet-transaction.component';
 import { YektaListComponent } from './yekta-list/yekta-list.component';
@@ -51,8 +51,15 @@ import { ReportClearComponent } from './report-clear/report-clear.component';
 import { ReportStatusWalletComponent } from './report-status-wallet/report-status-wallet.component';
 import { SubmitClearComponent } from './submit-clear/submit-clear.component';
 import { SubmitCheckComponent } from './submit-check/submit-check.component';
-
-
+import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
+import { OrganizationalEntityInfoEditorComponent } from './organizational-entity-manager/organizational-entity-info-editor/organizational-entity-info-editor.component';
+import { TabViewModule } from 'primeng/tabview';
+import { PasswordModule } from 'primeng/password';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CalendarModule } from 'primeng/calendar';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { ChipsModule } from 'primeng/chips';
 @NgModule({
     declarations: [
         ReportBankTransferComponent,
@@ -85,7 +92,9 @@ import { SubmitCheckComponent } from './submit-check/submit-check.component';
         ReportClearComponent,
         ReportStatusWalletComponent,
         SubmitClearComponent,
-        SubmitCheckComponent
+        SubmitCheckComponent,
+        OrganizationalEntityManagerComponent,
+        OrganizationalEntityInfoEditorComponent
     ],
     imports: [
         CommonModule,
@@ -110,6 +119,13 @@ import { SubmitCheckComponent } from './submit-check/submit-check.component';
         InputNumberModule,
         InputMaskModule,
         FileUploadModule,
+        TabViewModule,
+        PasswordModule,
+        AutoCompleteModule,
+        CalendarModule,
+        MultiSelectModule,
+        CascadeSelectModule,
+        ChipsModule,
     ],
     exports: [
         ReportBankTransferComponent
