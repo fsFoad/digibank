@@ -266,11 +266,29 @@ body.theme-default .accent{
 color: #ECDDCD;
 
 }
-::before{
+:not(.p-dropdown-trigger-icon)::before{
     color: #ECDDCD;
 }
 .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
     margin-left: auto;
     margin-right: auto;
 
+}
+
+// shs
+
+.p-float-label input:focus ~ label,
+.p-float-label input.p-filled ~ label,
+.p-float-label textarea:focus ~ label,
+.p-float-label textarea.p-filled ~ label,
+.p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .p-inputwrapper-filled ~ label {
+    top: 0rem;
+    background-color: white;
+    padding: 0 .3rem;
+}
+  
+.p-float-label > label {
+    left: revert;
+    right: 0.5rem;
 }

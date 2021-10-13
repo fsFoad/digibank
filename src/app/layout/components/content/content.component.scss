@@ -13,20 +13,20 @@ content {
     }
 }
 
-.isFontIran label,
-.isFontIran div,
-.isFontIran span :not(.p-dropdown-trigger,.pi-calendar,.p-button-icon),
-.isFontIran table,
-.isFontIran input,
-.isFontIran h1,
-.isFontIran h2,
-.isFontIran h3,
-.isFontIran h4,
-.isFontIran h5,
-.isFontIran h6,
-.isFontIran .p-button-label,
-.isFontIran .p-dropdown-label,
-.isFontIran p{
+.isFontIran label:not(.pi),
+.isFontIran div:not(.pi),
+.isFontIran span :not(.p-dropdown-trigger,.pi-calendar,.p-button-icon):not(.pi),
+.isFontIran table:not(.pi),
+.isFontIran input:not(.pi),
+.isFontIran h1:not(.pi),
+.isFontIran h2:not(.pi),
+.isFontIran h3:not(.pi),
+.isFontIran h4:not(.pi),
+.isFontIran h5:not(.pi),
+.isFontIran h6:not(.pi),
+.isFontIran .p-button-label:not(.pi),
+.isFontIran .p-dropdown-label:not(.pi),
+.isFontIran p:not(.pi){
         font-family: 'iranyekan', sans-serif !important;
 }
 .isSansSerif label,
