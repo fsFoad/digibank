@@ -266,7 +266,7 @@ body.theme-default .accent{
 color: #ECDDCD;
 
 }
-:not(.p-dropdown-trigger-icon):not(.p-divider)::before{
+:not(.p-dropdown-trigger-icon):not(.p-divider):not(.p-button-icon)::before{
     color: #ECDDCD;
 }
 .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
