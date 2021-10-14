@@ -61,6 +61,9 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { ChipsModule } from 'primeng/chips';
 import { DividerModule } from 'primeng/divider';
+import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
+import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
+import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
 
 @NgModule({
     declarations: [
@@ -96,7 +99,10 @@ import { DividerModule } from 'primeng/divider';
         SubmitClearComponent,
         SubmitCheckComponent,
         OrganizationalEntityManagerComponent,
-        OrganizationalEntityInfoEditorComponent
+        OrganizationalEntityInfoEditorComponent,
+        OrganizationalEntityInfoViewerComponent,
+        EditViewOtpProcessComponent,
+        BoardOfDirectorsEditorComponent
     ],
     imports: [
         CommonModule,
