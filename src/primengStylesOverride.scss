@@ -306,3 +306,10 @@ color: #ECDDCD;
         }
     }
 }
+
+// add a star to a label immediately after a required input
+input[required] + label::after {
+  content: '*';
+  color: red;
+  margin-inline-start: .22em;
+}
