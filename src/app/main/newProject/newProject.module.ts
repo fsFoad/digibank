@@ -60,6 +60,8 @@ import { CalendarModule } from 'primeng/calendar';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { ChipsModule } from 'primeng/chips';
+import { DividerModule } from 'primeng/divider';
+
 @NgModule({
     declarations: [
         ReportBankTransferComponent,
@@ -126,6 +128,7 @@ import { ChipsModule } from 'primeng/chips';
         MultiSelectModule,
         CascadeSelectModule,
         ChipsModule,
+        DividerModule,
     ],
     exports: [
         ReportBankTransferComponent

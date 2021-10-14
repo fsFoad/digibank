@@ -266,7 +266,7 @@ body.theme-default .accent{
 color: #ECDDCD;
 
 }
-:not(.p-dropdown-trigger-icon)::before{
+:not(.p-dropdown-trigger-icon):not(.p-divider)::before{
     color: #ECDDCD;
 }
 .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
@@ -291,4 +291,18 @@ color: #ECDDCD;
 .p-float-label > label {
     left: revert;
     right: 0.5rem;
+}
+
+
+.app-divider-h {
+    .p-divider-content {
+        background: white;
+        padding: 0 .2em;
+    }
+    .p-divider {
+        margin: 2em 0 1.5em;
+        &::before {
+            border-color: var(--surface-d);
+        }
+    }
 }
