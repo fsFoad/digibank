@@ -64,6 +64,7 @@ import { DividerModule } from 'primeng/divider';
 import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
+import { PartySignatureEditorComponent } from './party-signature-editor/party-signature-editor.component';
 
 @NgModule({
     declarations: [
@@ -102,7 +103,8 @@ import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/boa
         OrganizationalEntityInfoEditorComponent,
         OrganizationalEntityInfoViewerComponent,
         EditViewOtpProcessComponent,
-        BoardOfDirectorsEditorComponent
+        BoardOfDirectorsEditorComponent,
+        PartySignatureEditorComponent
     ],
     imports: [
         CommonModule,
