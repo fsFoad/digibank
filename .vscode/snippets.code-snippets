@@ -36,4 +36,16 @@
             "</div>",
         ]
     },
+    "PrimeNG float label drop down": {
+        "scope": "html",
+        "prefix": "primeng-float-label-drop-down",
+        "body": [
+            "<div class=\"p-field p-col$0\">",
+                "\t<span class=\"p-float-label\">",
+                    "\t\t<p-dropdown></p-dropdown>",
+                    "\t\t<label>$1</label>",
+                "\t</span>",
+            "</div>",
+        ]
+    },
 }
