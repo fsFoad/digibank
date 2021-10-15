@@ -261,11 +261,12 @@ body.theme-default .accent{
 
 }
 
-.pi-angle-right:before {
-    content: "\e931" !important;
-color: #ECDDCD;
+// either make it conditional or change it for all icons
+// .pi-angle-right:before {
+//     content: "\e931" !important;
+//     color: #ECDDCD;
+// }
 
-}
 :not(.p-dropdown-trigger-icon):not(.p-divider):not(.p-button-icon)::before{
     color: #ECDDCD;
 }
@@ -312,4 +313,12 @@ input[required] + label::after {
   content: '*';
   color: red;
   margin-inline-start: .22em;
+}
+
+.app-mirror-transfer-icons {
+  .p-picklist-transfer-buttons {
+    .p-button-icon {
+      transform: rotate(180deg);
+    }
+  }
 }
