@@ -68,7 +68,7 @@ import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/boa
 import { PartySignatureEditorComponent } from './party-signature-editor/party-signature-editor.component';
 import { OrganizationalRoleEditorComponent } from './organizational-role-editor/organizational-role-editor.component';
 import { OrganizationalContactInfoEditorComponent } from './organizational-contact-info-editor/organizational-contact-info-editor.component';
-
+import { OrganizationalEntityDocumentsEditorComponent } from './organizational-entity-documents-editor/organizational-entity-documents-editor.component';
 
 @NgModule({
     declarations: [
@@ -111,6 +111,7 @@ import { OrganizationalContactInfoEditorComponent } from './organizational-conta
         PartySignatureEditorComponent,
         OrganizationalRoleEditorComponent,
         OrganizationalContactInfoEditorComponent,
+        OrganizationalEntityDocumentsEditorComponent
     ],
     imports: [
         CommonModule,
