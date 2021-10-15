@@ -4932,3 +4932,7 @@ p-togglebutton.ng-dirty.ng-invalid > .p-togglebutton.p-button {
   outline: 1px solid #605e5c;
   outline-offset: 2px;
 }
+
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider:before {
+  transform: translateX(2rem);
+}
