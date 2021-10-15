@@ -1,0 +1,20 @@
+p-picklist ::ng-deep .p-picklist-list {
+  min-height: 10em;
+  max-height: 10em;
+}
+
+.app-custom-picklist-header {
+  & ::ng-deep .p-picklist-list-wrapper {
+    position: relative;
+    & ::ng-deep .p-picklist-header {
+      position: absolute;
+      top: -18px;
+      border: none;
+      background: white;
+      margin-right: 6px;
+    }
+    & ::ng-deep .p-picklist-list {
+      padding-top: 1em;
+    }
+  }
+}

@@ -65,6 +65,7 @@ import { OrganizationalEntityInfoViewerComponent } from './organizational-entity
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
 import { PartySignatureEditorComponent } from './party-signature-editor/party-signature-editor.component';
+import { OrganizationalRoleEditorComponent } from './organizational-role-editor/organizational-role-editor.component';
 
 @NgModule({
     declarations: [
@@ -104,7 +105,8 @@ import { PartySignatureEditorComponent } from './party-signature-editor/party-si
         OrganizationalEntityInfoViewerComponent,
         EditViewOtpProcessComponent,
         BoardOfDirectorsEditorComponent,
-        PartySignatureEditorComponent
+        PartySignatureEditorComponent,
+        OrganizationalRoleEditorComponent
     ],
     imports: [
         CommonModule,
