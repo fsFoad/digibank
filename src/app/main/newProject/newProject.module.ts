@@ -61,11 +61,14 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { ChipsModule } from 'primeng/chips';
 import { DividerModule } from 'primeng/divider';
+import { InputSwitchModule } from 'primeng/inputswitch';
 import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
 import { PartySignatureEditorComponent } from './party-signature-editor/party-signature-editor.component';
 import { OrganizationalRoleEditorComponent } from './organizational-role-editor/organizational-role-editor.component';
+import { OrganizationalContactInfoEditorComponent } from './organizational-contact-info-editor/organizational-contact-info-editor.component';
+
 
 @NgModule({
     declarations: [
@@ -106,7 +109,8 @@ import { OrganizationalRoleEditorComponent } from './organizational-role-editor/
         EditViewOtpProcessComponent,
         BoardOfDirectorsEditorComponent,
         PartySignatureEditorComponent,
-        OrganizationalRoleEditorComponent
+        OrganizationalRoleEditorComponent,
+        OrganizationalContactInfoEditorComponent,
     ],
     imports: [
         CommonModule,
@@ -139,6 +143,7 @@ import { OrganizationalRoleEditorComponent } from './organizational-role-editor/
         CascadeSelectModule,
         ChipsModule,
         DividerModule,
+        InputSwitchModule,
     ],
     exports: [
         ReportBankTransferComponent

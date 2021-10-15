@@ -1,0 +1,90 @@
+<div class="p-fluid p-formgrid p-grid">
+  <div class="p-field p-col-3">
+    <span class="p-float-label">
+      <input pInputText>
+      <label>کد ارجاع مشتری</label>
+    </span>
+  </div>
+  <div class="p-field p-col-3">
+    <span class="p-float-label">
+      <input pInputText>
+      <label>شناسه مشتری</label>
+    </span>
+  </div>
+  <div class="p-field p-col-6">
+    <span class="p-float-label">
+      <input required pInputText>
+      <label>عنوان</label>
+    </span>
+    <small>متن کمکی</small>
+  </div>
+</div>
+
+<p-divider class="app-divider-h">اطلاعات شماره تماس</p-divider>
+<p-table [value]="table1Rows">
+  <ng-template pTemplate="header">
+    <tr>
+      <th translate>ردیف</th>
+      <th translate>گروه نوع تماس</th>
+      <th translate>نوع تماس</th>
+      <th translate style="width:30%;">شماره تماس</th>
+      <th translate>تاریخ شروع</th>
+      <th translate>تاریخ پایان</th>
+      <th translate>پیش فرض</th>
+    </tr>
+  </ng-template>
+  <ng-template let-i="rowIndex" pTemplate="body" let-row>
+    <tr>
+      <td>{{i + 1}}</td>
+      <td>
+        <p-dropdown [options]="contactTypeGroups" optionLabel="name"></p-dropdown>
+      </td>
+      <td>
+        <p-dropdown [options]="contactTypes" optionLabel="name"></p-dropdown>
+      </td>
+      <td>{{row.phoneNumber}}</td>
+      <td>{{row.startDate}}</td>
+      <td>{{row.endDate}}</td>
+      <td>
+        <p-inputSwitch></p-inputSwitch>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+
+<p-divider class="app-divider-h">اطلاعات نشانی</p-divider>
+<p-table [value]="table2Rows">
+  <ng-template pTemplate="header">
+    <tr>
+      <th translate>ردیف</th>
+      <th translate>نوع نشانی</th>
+      <th translate>استان</th>
+      <th translate>شهر</th>
+      <th translate>منطقه</th>
+      <th translate>نحوه تصرف</th>
+      <th translate style="width:35%;">شرح نشانی</th>
+      <th translate>کد پستی</th>
+      <th translate>تاریخ شروع</th>
+      <th translate>تاریخ پایان</th>
+    </tr>
+  </ng-template>
+  <ng-template let-i="rowIndex" pTemplate="body" let-row>
+    <tr>
+      <td>{{i + 1}}</td>
+      <td>
+        <p-dropdown [options]="addressTypes" optionLabel="name"></p-dropdown>
+      </td>
+      <td>{{row.province}}</td>
+      <td>{{row.city}}</td>
+      <td>{{row.region}}</td>
+      <td>
+        <p-dropdown [options]="nahveTasarofs" optionLabel="name"></p-dropdown>
+      </td>
+      <td>{{row.addressDescription}}</td>
+      <td>{{row.postalCode}}</td>
+      <td>{{row.startDate}}</td>
+      <td>{{row.endDate}}</td>
+    </tr>
+  </ng-template>
+</p-table>
