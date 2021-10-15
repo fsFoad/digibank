@@ -261,11 +261,20 @@ body.theme-default .accent{
 
 }
 
-// either make it conditional or change it for all icons
-// .pi-angle-right:before {
-//     content: "\e931" !important;
-//     color: #ECDDCD;
-// }
+p-menubar .pi-angle-right::before {
+  content: "\e931";
+  color: #ECDDCD;
+}
+
+.p-submenu-list .p-submenu-icon {
+  margin-inline-start: auto !important;
+  margin-inline-end: revert !important;
+}
+
+.p-menuitem-link .p-submenu-icon {
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0 !important;
+}
 
 :not(.p-dropdown-trigger-icon):not(.p-divider):not(.p-button-icon)::before{
     color: #ECDDCD;
