@@ -69,6 +69,8 @@ import { PartySignatureEditorComponent } from './party-signature-editor/party-si
 import { OrganizationalRoleEditorComponent } from './organizational-role-editor/organizational-role-editor.component';
 import { OrganizationalContactInfoEditorComponent } from './organizational-contact-info-editor/organizational-contact-info-editor.component';
 import { OrganizationalEntityDocumentsEditorComponent } from './organizational-entity-documents-editor/organizational-entity-documents-editor.component';
+import { PersonEditorComponent } from './person-editor/person-editor.component';
+import { PersonIdentityInfoEditorComponent } from './person-editor/person-identity-info-editor/person-identity-info-editor.component';
 
 @NgModule({
     declarations: [
@@ -111,7 +113,9 @@ import { OrganizationalEntityDocumentsEditorComponent } from './organizational-e
         PartySignatureEditorComponent,
         OrganizationalRoleEditorComponent,
         OrganizationalContactInfoEditorComponent,
-        OrganizationalEntityDocumentsEditorComponent
+        OrganizationalEntityDocumentsEditorComponent,
+        PersonEditorComponent,
+        PersonIdentityInfoEditorComponent
     ],
     imports: [
         CommonModule,
