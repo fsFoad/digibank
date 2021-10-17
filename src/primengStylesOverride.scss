@@ -306,6 +306,10 @@ p-menubar .pi-angle-right::before {
 }
 
 p-persian-calendar.app-persian-calendar-style {
+    .ui-datepicker-buttonbar .p-button {
+        border-radius: 4px;
+        width: auto;
+    }
     & > .ui-calendar {
         display: flex !important;
         & > input {
@@ -313,14 +317,12 @@ p-persian-calendar.app-persian-calendar-style {
         }
         & > .p-button {
             border-radius: 4px 0 0 4px !important;
+            width: 2.357rem;
         }
         & > .ui-datepicker {
             border-radius: 4px;
             box-shadow: 0px 3px 8px -4px black;
         }
-    }
-    .p-button {
-        border-radius: 4px;
     }
 }
   
