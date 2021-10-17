@@ -71,6 +71,7 @@ import { OrganizationalContactInfoEditorComponent } from './organizational-conta
 import { OrganizationalEntityDocumentsEditorComponent } from './organizational-entity-documents-editor/organizational-entity-documents-editor.component';
 import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { PersonIdentityInfoEditorComponent } from './person-editor/person-identity-info-editor/person-identity-info-editor.component';
+import { PersonSupplementaryInfoEditorComponent } from './person-editor/person-supplementary-info-editor/person-supplementary-info-editor.component';
 
 @NgModule({
     declarations: [
@@ -115,7 +116,8 @@ import { PersonIdentityInfoEditorComponent } from './person-editor/person-identi
         OrganizationalContactInfoEditorComponent,
         OrganizationalEntityDocumentsEditorComponent,
         PersonEditorComponent,
-        PersonIdentityInfoEditorComponent
+        PersonIdentityInfoEditorComponent,
+        PersonSupplementaryInfoEditorComponent
     ],
     imports: [
         CommonModule,
