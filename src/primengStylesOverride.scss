@@ -292,10 +292,36 @@ p-menubar .pi-angle-right::before {
 .p-float-label textarea:focus ~ label,
 .p-float-label textarea.p-filled ~ label,
 .p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .ui-inputwrapper-focus ~ label, // p-persian-calendar
+.p-float-label .ui-inputwrapper-filled ~ label, // p-persian-calendar
 .p-float-label .p-inputwrapper-filled ~ label {
     top: 0rem;
     background-color: white;
     padding: 0 .3rem;
+}
+
+.p-float-label .ui-inputwrapper-focus ~ label, // p-persian-calendar
+.p-float-label .ui-inputwrapper-filled ~ label { // p-persian-calendar
+    font-size: 12px;
+}
+
+p-persian-calendar.app-persian-calendar-style {
+    & > .ui-calendar {
+        display: flex !important;
+        & > input {
+            border-radius: 0 4px 4px 0 !important;
+        }
+        & > .p-button {
+            border-radius: 4px 0 0 4px !important;
+        }
+        & > .ui-datepicker {
+            border-radius: 4px;
+            box-shadow: 0px 3px 8px -4px black;
+        }
+    }
+    .p-button {
+        border-radius: 4px;
+    }
 }
   
 .p-float-label > label {
