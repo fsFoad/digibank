@@ -75,6 +75,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             items: [
                                 {
                                     id: 'real',
+                                    label: 'تعریف',
+                                    translate: 'تعریف',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                    routerLink: '/person-editor',
+                                },
+                                {
+                                    id: 'real',
                                     label: 'اطلاعات هویتی',
                                     translate: 'اطلاعات هویتی',
                                     type: 'item',
@@ -137,6 +145,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             type: 'collapsable',
                             icon: 'account_balance_wallet',
                             items: [
+                                {
+                                    id: 'real',
+                                    label: 'تعریف',
+                                    translate: 'تعریف',
+                                    type: 'item',
+                                    icon: 'account_balance_wallet',
+                                    routerLink: '/organizational-entity-manager',
+                                },
                                 {
                                     id: 'real',
                                     label: 'اطلاعات ثبتی',

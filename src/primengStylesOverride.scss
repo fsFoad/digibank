@@ -261,16 +261,111 @@ body.theme-default .accent{
 
 }
 
-.pi-angle-right:before {
-    content: "\e931" !important;
-color: #ECDDCD;
-
+p-menubar .pi-angle-right::before {
+  content: "\e931";
+  color: #ECDDCD;
 }
-::before{
+
+.p-submenu-list .p-submenu-icon {
+  margin-inline-start: auto !important;
+  margin-inline-end: revert !important;
+}
+
+.p-menuitem-link .p-submenu-icon {
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0 !important;
+}
+
+:not(.p-dropdown-trigger-icon):not(.p-divider):not(.p-button-icon)::before{
     color: #ECDDCD;
 }
 .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
     margin-left: auto;
     margin-right: auto;
 
+}
+
+// shs
+
+.p-float-label input:focus ~ label,
+.p-float-label input.p-filled ~ label,
+.p-float-label textarea:focus ~ label,
+.p-float-label textarea.p-filled ~ label,
+.p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .ui-inputwrapper-focus ~ label, // p-persian-calendar
+.p-float-label .ui-inputwrapper-filled ~ label, // p-persian-calendar
+.p-float-label .p-inputwrapper-filled ~ label {
+    top: 0rem;
+    background-color: white;
+    padding: 0 .3rem;
+}
+
+.p-float-label .ui-inputwrapper-focus ~ label, // p-persian-calendar
+.p-float-label .ui-inputwrapper-filled ~ label { // p-persian-calendar
+    font-size: 12px;
+}
+
+p-persian-calendar.app-persian-calendar-style {
+    .ui-datepicker-buttonbar .p-button {
+        border-radius: 4px;
+        width: auto;
+    }
+    & > .ui-calendar {
+        display: flex !important;
+        & > input {
+            border-radius: 0 4px 4px 0 !important;
+        }
+        & > .p-button {
+            border-radius: 4px 0 0 4px !important;
+            width: 2.357rem;
+        }
+        & > .ui-datepicker {
+            border-radius: 4px;
+            box-shadow: 0px 3px 8px -4px black;
+        }
+    }
+}
+  
+.p-float-label > label {
+    left: revert;
+    right: 0.5rem;
+}
+
+
+.app-divider-h {
+    .p-divider-content {
+        background: white;
+        padding: 0 .2em;
+    }
+    .p-divider {
+        margin: 2em 0 1.5em;
+        &::before {
+            border-color: var(--surface-d);
+        }
+    }
+}
+
+// add a star to a label immediately after a required input
+input[required] + label::after {
+  content: '*';
+  color: red;
+  margin-inline-start: .22em;
+}
+
+.app-mirror-transfer-icons {
+  .p-picklist-transfer-buttons {
+    .p-button-icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.app-button-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  & > button {
+    width: auto !important;
+    padding: .5em 1em !important;
+  }
 }

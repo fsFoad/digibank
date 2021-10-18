@@ -33,6 +33,8 @@ import {ReportStatusWalletComponent} from './report-status-wallet/report-status-
 import {SubmitClearComponent} from './submit-clear/submit-clear.component';
 import {SubmitCheckComponent} from './submit-check/submit-check.component';
 import {TashilatListComponent} from './tashilat-list/tashilat-list.component';
+import { OrganizationalEntityManagerComponent } from "./organizational-entity-manager/organizational-entity-manager.component";
+import { PersonEditorComponent } from "./person-editor/person-editor.component";
 
 const routes = [
     {
@@ -196,7 +198,14 @@ const routes = [
         component: TashilatListComponent,
         //canActivate:[LoginGuard],
     },
-
+    {
+        path: 'organizational-entity-manager',
+        component: OrganizationalEntityManagerComponent,
+    },
+    {
+        path: 'person-editor',
+        component: PersonEditorComponent,
+    },
 
 ]
 

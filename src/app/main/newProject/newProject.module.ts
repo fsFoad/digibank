@@ -1,26 +1,26 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {ReportBankTransferComponent} from './report-bank-transfer/report-bank-transfer.component';
-import {NewProjectRoutingModule} from './newProject-routing.module';
-import {ButtonModule} from 'primeng/button';
-import {PanelModule} from 'primeng/panel';
-import {CardModule} from 'primeng/card';
-import {CheckboxModule} from 'primeng/checkbox';
-import {DropdownModule} from 'primeng/dropdown';
-import {InputTextModule} from 'primeng/inputtext';
-import {ListboxModule} from 'primeng/listbox';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SharedModule} from '../shared/shared.module';
-import {TableModule} from 'primeng/table';
-import {PickListModule} from 'primeng/picklist';
-import {RippleModule} from 'primeng/ripple';
-import {KeyFilterModule} from 'primeng/keyfilter';
-import {TranslateModule} from '@ngx-translate/core';
-import {TooltipModule} from 'primeng/tooltip';
-import {PersianCalendarModule} from '../../../walletlibs/persian-calendar/persian-calendar.module';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
+import { NewProjectRoutingModule } from './newProject-routing.module';
+import { ButtonModule } from 'primeng/button';
+import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card';
+import { CheckboxModule } from 'primeng/checkbox';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
+import { ListboxModule } from 'primeng/listbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { TableModule } from 'primeng/table';
+import { PickListModule } from 'primeng/picklist';
+import { RippleModule } from 'primeng/ripple';
+import { KeyFilterModule } from 'primeng/keyfilter';
+import { TranslateModule } from '@ngx-translate/core';
+import { TooltipModule } from 'primeng/tooltip';
+import { PersianCalendarModule } from '../../../walletlibs/persian-calendar/persian-calendar.module';
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
-import {InputNumberModule} from 'primeng/inputnumber';
-import {InputMaskModule} from 'primeng/inputmask';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputMaskModule } from 'primeng/inputmask';
 import { SantaRegisterTransferComponent } from './santa-register-transfer/santa-register-transfer.component';
 import { RegularPayaRegisterTransferComponent } from './regular-paya-register-transfer/regular-paya-register-transfer.component';
 import { RegisterPayaTransferComponent } from './register-paya-transfer/register-paya-transfer.component';
@@ -43,7 +43,7 @@ import { RegisterGhabzComponent } from './register-ghabz/register-ghabz.componen
 import { RegisterBonCardComponent } from './register-bon-card/register-bon-card.component';
 import { CreatWalletComponent } from './creat-wallet/creat-wallet.component';
 import { CreateYektaComponent } from './create-yekta/create-yekta.component';
-import {FileUploadModule} from 'primeng/fileupload';
+import { FileUploadModule } from 'primeng/fileupload';
 import { GroupGhabzComponent } from './group-ghabz/group-ghabz.component';
 import { WalletTransactionComponent } from './wallet-transaction/wallet-transaction.component';
 import { YektaListComponent } from './yekta-list/yekta-list.component';
@@ -54,6 +54,27 @@ import { SubmitCheckComponent } from './submit-check/submit-check.component';
 import { UpOrDownloadComponent } from './up-or-download/up-or-download.component';
 import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
 
+import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
+import { OrganizationalEntityInfoEditorComponent } from './organizational-entity-manager/organizational-entity-info-editor/organizational-entity-info-editor.component';
+import { TabViewModule } from 'primeng/tabview';
+import { PasswordModule } from 'primeng/password';
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CalendarModule } from 'primeng/calendar';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { CascadeSelectModule } from 'primeng/cascadeselect';
+import { ChipsModule } from 'primeng/chips';
+import { DividerModule } from 'primeng/divider';
+import { InputSwitchModule } from 'primeng/inputswitch';
+import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
+import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
+import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
+import { PartySignatureEditorComponent } from './party-signature-editor/party-signature-editor.component';
+import { OrganizationalRoleEditorComponent } from './organizational-role-editor/organizational-role-editor.component';
+import { OrganizationalContactInfoEditorComponent } from './organizational-contact-info-editor/organizational-contact-info-editor.component';
+import { OrganizationalEntityDocumentsEditorComponent } from './organizational-entity-documents-editor/organizational-entity-documents-editor.component';
+import { PersonEditorComponent } from './person-editor/person-editor.component';
+import { PersonIdentityInfoEditorComponent } from './person-editor/person-identity-info-editor/person-identity-info-editor.component';
+import { PersonSupplementaryInfoEditorComponent } from './person-editor/person-supplementary-info-editor/person-supplementary-info-editor.component';
 
 @NgModule({
     declarations: [
@@ -91,6 +112,18 @@ import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
         UpOrDownloadComponent,
         TashilatListComponent,
 
+        OrganizationalEntityManagerComponent,
+        OrganizationalEntityInfoEditorComponent,
+        OrganizationalEntityInfoViewerComponent,
+        EditViewOtpProcessComponent,
+        BoardOfDirectorsEditorComponent,
+        PartySignatureEditorComponent,
+        OrganizationalRoleEditorComponent,
+        OrganizationalContactInfoEditorComponent,
+        OrganizationalEntityDocumentsEditorComponent,
+        PersonEditorComponent,
+        PersonIdentityInfoEditorComponent,
+        PersonSupplementaryInfoEditorComponent
     ],
     imports: [
         CommonModule,
@@ -115,6 +148,15 @@ import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
         InputNumberModule,
         InputMaskModule,
         FileUploadModule,
+        TabViewModule,
+        PasswordModule,
+        AutoCompleteModule,
+        CalendarModule,
+        MultiSelectModule,
+        CascadeSelectModule,
+        ChipsModule,
+        DividerModule,
+        InputSwitchModule,
     ],
     exports: [
         ReportBankTransferComponent
