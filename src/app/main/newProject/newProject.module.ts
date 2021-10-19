@@ -51,6 +51,8 @@ import { ReportClearComponent } from './report-clear/report-clear.component';
 import { ReportStatusWalletComponent } from './report-status-wallet/report-status-wallet.component';
 import { SubmitClearComponent } from './submit-clear/submit-clear.component';
 import { SubmitCheckComponent } from './submit-check/submit-check.component';
+import { UpOrDownloadComponent } from './up-or-download/up-or-download.component';
+import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
 
 
 @NgModule({
@@ -85,7 +87,10 @@ import { SubmitCheckComponent } from './submit-check/submit-check.component';
         ReportClearComponent,
         ReportStatusWalletComponent,
         SubmitClearComponent,
-        SubmitCheckComponent
+        SubmitCheckComponent,
+        UpOrDownloadComponent,
+        TashilatListComponent,
+
     ],
     imports: [
         CommonModule,

@@ -206,8 +206,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
                 {
                     id: 'managecommercialwallet',
-                    label: ' مدیریت حساب',
-                    translate: ' مدیریت حساب',
+                    label: ' *مدیریت حساب',
+                    translate: ' *مدیریت حساب',
                     type: 'collapsable',
 
                     items: [
@@ -235,8 +235,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         },
                         {
                             id: 'bills',
-                            label: 'صورت حساب ',
-                            translate: 'صورت حساب ',
+                            label: '*صورت حساب ',
+                            translate: '*صورت حساب ',
                             type: 'item',
                             routerLink: '/bills',
                         },
@@ -252,20 +252,20 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
 
                 {
                     id: 'walletactions',
-                    label: 'مدیریت پرداخت',
-                    translate: 'مدیریت پرداخت',
+                    label: '*مدیریت پرداخت',
+                    translate: '*مدیریت پرداخت',
                     type: 'collapsable',
                     items: [
                         {
                             id: 'walletBuy',
-                            label: 'شارژ ',
-                            translate: 'شارژ ',
+                            label: '*شارژ ',
+                            translate: '*شارژ ',
                             type: 'collapsable',
                             items: [
                                 {
                                     id: 'bankpayaCharge',
-                                    label: 'ثبت دستور بانک پرداخت شارژ سیم کارت',
-                                    translate: 'ثبت دستور بانک پرداخت شارژ سیم کارت',
+                                    label: '*ثبت دستور بانک پرداخت شارژ سیم کارت',
+                                    translate: '*ثبت دستور بانک پرداخت شارژ سیم کارت',
                                     type: 'item',
                                     routerLink: '/bankpayaCharge',
                                 },
@@ -273,35 +273,35 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         },
                         {
                             id: 'walletBuy',
-                            label: 'قبض ',
-                            translate: 'قبض ',
+                            label: '*قبض ',
+                            translate: '*قبض ',
                             type: 'collapsable',
                             items: [
                                 {
                                     id: 'banckPayaGhabz',
-                                    label: 'ثبت دستور بانک پرداخت قبض',
-                                    translate: 'ثبت دستور بانک پرداخت قبض',
+                                    label: '*ثبت دستور بانک پرداخت قبض',
+                                    translate: '*ثبت دستور بانک پرداخت قبض',
                                     type: 'item',
                                     routerLink: '/banckPayaGhabz',
                                 },
                                 {
                                     id: 'registerGhabz',
-                                    label: 'ثبت قبض',
-                                    translate: 'ثبت قبض',
+                                    label: '*ثبت قبض',
+                                    translate: '*ثبت قبض',
                                     type: 'item',
                                     routerLink: '/registerGhabz',
                                 },
                                 {
                                     id: 'groupGhabz',
-                                    label: 'ثبت قبوض گروهی',
-                                    translate: 'ثبت قبوض گروهی',
+                                    label: '*ثبت قبوض گروهی',
+                                    translate: '*ثبت قبوض گروهی',
                                     type: 'item',
                                     routerLink: '/groupGhabz',
                                 },
                                 {
                                     id: 'reportGhabz',
-                                    label: 'گزارش پرداخت قبوض',
-                                    translate: 'گزارش پرداخت قبوض',
+                                    label: '*گزارش پرداخت قبوض',
+                                    translate: '*گزارش پرداخت قبوض',
                                     type: 'item',
                                     routerLink: '/reportGhabz',
                                 },
@@ -309,22 +309,22 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         },
                         {
                             id: 'walletBuy',
-                            label: 'حواله ',
-                            translate: 'حواله ',
+                            label: '*حواله ',
+                            translate: '*حواله ',
                             type: 'collapsable',
 
                             items: [
                                 {
                                     id: 'santaRegisterTransfer',
-                                    label: 'صدور حواله سانتا',
-                                    translate: 'صدور حواله سانتا',
+                                    label: '*صدور حواله سانتا',
+                                    translate: '*صدور حواله سانتا',
                                     type: 'item',
                                     routerLink: '/santaRegisterTransfer',
                                 },
                                 {
                                     id: 'registerPayaTransfer',
-                                    label: 'صدور حواله پایا',
-                                    translate: 'صدور حواله پایا',
+                                    label: '*صدور حواله پایا',
+                                    translate: '*صدور حواله پایا',
                                     type: 'item',
                                     routerLink: '/registerPayaTransfer',
                                 },
@@ -346,35 +346,35 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                 },
                                 {
                                     id: 'regularPayaRegisterTransfer',
-                                    label: 'صدور حواله منظم پایا',
-                                    translate: 'صدور حواله منظم پایا',
+                                    label: '*صدور حواله منظم پایا',
+                                    translate: '*صدور حواله منظم پایا',
                                     type: 'item',
                                     routerLink: '/regularPayaRegisterTransfer',
                                 },
                                 {
                                     id: 'payaTakTransfer',
-                                    label: 'ثبت حواله پایا تک مرحله ای',
-                                    translate: 'ثبت حواله پایا تک مرحله ای',
+                                    label: '*ثبت حواله پایا تک مرحله ای',
+                                    translate: '*ثبت حواله پایا تک مرحله ای',
                                     type: 'item',
                                     routerLink: '/payaTakTransfer',
                                 },
                                 {
                                     id: 'Real',
-                                    label: 'گزارشات',
-                                    translate: 'گزارشات',
+                                    label: '*گزارشات',
+                                    translate: '*گزارشات',
                                     type: 'collapsable',
                                     items: [
                                         {
                                             id: 'reportBankTransfer',
-                                            label: 'گزارش حواله',
-                                            translate: 'گزارش حواله',
+                                            label: '*گزارش حواله',
+                                            translate: '*گزارش حواله',
                                             type: 'item',
                                             routerLink: '/reportBankTransfer',
                                         },
                                         {
                                             id: 'reportPayaBank',
-                                            label: 'گزارش وضعیت حواله های بانک پرداخت',
-                                            translate: 'گزارش وضعیت حواله های بانک پرداخت',
+                                            label: '*گزارش وضعیت حواله های بانک پرداخت',
+                                            translate: '*گزارش وضعیت حواله های بانک پرداخت',
                                             type: 'item',
                                             routerLink: '/reportPayaBank',
                                         },
@@ -384,28 +384,28 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         },
                         {
                             id: 'Real',
-                            label: 'مدیریت شناسه',
-                            translate: 'مدیریت شناسه',
+                            label: '*مدیریت شناسه',
+                            translate: '*مدیریت شناسه',
                             type: 'collapsable',
                             items: [
                                 {
                                     id: 'searchYekta',
-                                    label: 'جستجو کد تراکنش یکتا',
-                                    translate: 'جستجو کد تراکنش یکتا',
+                                    label: '*جستجو کد تراکنش یکتا',
+                                    translate: '*جستجو کد تراکنش یکتا',
                                     type: 'collapsable',
                                     routerLink: '/searchYekta',
                                 },
                                 {
                                     id: 'yektaList',
-                                    label: 'لیست کد تراکنش یکتا',
-                                    translate: 'لیست کد تراکنش یکتا',
+                                    label: '*لیست کد تراکنش یکتا',
+                                    translate: '*لیست کد تراکنش یکتا',
                                     type: 'collapsable',
                                     routerLink: '/yektaList',
                                 },
                                 {
                                     id: 'createYekta',
-                                    label: 'تولید کد یکتا',
-                                    translate: 'تولید کد یکتا',
+                                    label: '*تولید کد یکتا',
+                                    translate: '*تولید کد یکتا',
                                     type: 'collapsable',
                                     routerLink: '/createYekta',
                                 },
@@ -413,14 +413,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         },
                         {
                             id: 'Real',
-                            label: 'گزارشات',
-                            translate: 'گزارشات',
+                            label: '*گزارشات',
+                            translate: '*گزارشات',
                             type: 'collapsable',
                             items: [
                                 {
                                     id: 'reportYektaVarriz',
-                                    label: 'گزارش واریز',
-                                    translate: 'گزارش واریز',
+                                    label: '*گزارش واریز',
+                                    translate: '*گزارش واریز',
                                     type: 'collapsable',
                                     routerLink: '/reportYektaVarriz',
                                 },
@@ -431,15 +431,15 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
                 {
                     id: 'walletBuy',
-                    label: ' مدیریت تسهیلات ',
-                    translate: 'مدیریت تسهیلات ',
+                    label: '* مدیریت تسهیلات ',
+                    translate: '*مدیریت تسهیلات ',
                     type: 'collapsable',
 
                     items: [
                         {
                             id: 'walletBuy',
-                            label: 'تسهیلات سازمان ',
-                            translate: 'تسهیلات سازمان ',
+                            label: '*تسهیلات سازمان ',
+                            translate: '*تسهیلات سازمان ',
                             type: 'collapsable',
 
                             items: [
@@ -452,11 +452,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
 
                                 },
                                 {
-                                    id: 'purchase',
-                                    label: 'اطلاعات تسهیلات دریافتی سازمان',
-                                    translate: 'اطلاعات تسهیلات دریافتی سازمان',
+                                    id: 'tashilatList',
+                                    label: '*اطلاعات تسهیلات دریافتی سازمان',
+                                    translate: '*اطلاعات تسهیلات دریافتی سازمان',
                                     type: 'item',
-
+                                    routerLink: '/tashilatList',
 
                                 },
                             ]
@@ -480,6 +480,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     label: 'اطلاعات تسهیلات دریافتی کارکنان',
                                     translate: 'اطلاعات تسهیلات دریافتی کارکنان',
                                     type: 'item',
+
+
 
 
                                 },
@@ -508,15 +510,15 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     ]
                 }, {
                 id: 'walletBuy',
-                label: ' مدیریت اوراق بهادار ',
-                translate: 'مدیریت اوراق بهادار ',
+                label: ' *مدیریت اوراق بهادار ',
+                translate: '*مدیریت اوراق بهادار ',
                 type: 'collapsable',
 
                 items: [
                     {
                         id: 'walletBuy',
-                        label: 'چک عادی / صیاد',
-                        translate: 'چک عادی / صیاد ',
+                        label: '*چک عادی / صیاد',
+                        translate: '*چک عادی / صیاد ',
                         type: 'collapsable',
                         items: [
                             {
@@ -545,22 +547,22 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             },
                             {
                                 id: 'inquiryCheck',
-                                label: 'استعلام وضعیت چک ',
-                                translate: 'استعلام وضعیت چک ',
+                                label: '*استعلام وضعیت چک ',
+                                translate: '*استعلام وضعیت چک ',
                                 type: 'item',
                                 routerLink: '/inquiryCheck',
                             },
                             {
                                 id: 'reportCheckBardasht',
-                                label: 'گزارش برداشت چک ',
-                                translate: 'گزارش برداشت چک ',
+                                label: '*گزارش برداشت چک ',
+                                translate: '*گزارش برداشت چک ',
                                 type: 'item',
                                 routerLink: '/reportCheckBardasht',
                             },
                             {
                                 id: 'submitCheck',
-                                label: 'تاییدیه الکترونیکی چک ',
-                                translate: 'تاییدیه الکترونیکی چک ',
+                                label: '*تاییدیه الکترونیکی چک ',
+                                translate: '*تاییدیه الکترونیکی چک ',
                                 type: 'item',
                                 routerLink: '/submitCheck',
                             },
@@ -615,21 +617,21 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     },
                     {
                         id: 'walletBuy',
-                        label: 'کلرینگ ',
-                        translate: 'کلرینگ ',
+                        label: '*کلرینگ ',
+                        translate: '*کلرینگ ',
                         type: 'collapsable',
                         items: [
                             {
                                 id: 'submitClear',
-                                label: 'اسناد واگذاری ',
-                                translate: 'اسناد واگذاری ',
+                                label: '*اسناد واگذاری ',
+                                translate: '*اسناد واگذاری ',
                                 type: 'item',
                                 routerLink: '/submitClear',
                             },
                             {
                                 id: 'reportClear',
-                                label: 'گزارش اسناد واگذاری ',
-                                translate: 'گزارش اسناد واگذاری ',
+                                label: '*گزارش اسناد واگذاری ',
+                                translate: '*گزارش اسناد واگذاری ',
                                 type: 'item',
                                 routerLink: '/reportClear',
                             },
@@ -637,14 +639,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     },
                     {
                         id: 'walletBuy',
-                        label: 'گواهی سپرده ',
-                        translate: 'گواهی سپرده ',
+                        label: '*گواهی سپرده ',
+                        translate: '*گواهی سپرده ',
                         type: 'collapsable',
                         items: [
                             {
                                 id: 'reportClear',
-                                label: 'لیست گواهی سپرده ',
-                                translate: 'لیست گواهی سپرده ',
+                                label: '*لیست گواهی سپرده ',
+                                translate: '*لیست گواهی سپرده ',
                                 type: 'item',
                                 routerLink: '/reportClear',
                             },
@@ -652,14 +654,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                     },
                     {
                         id: 'walletBuy',
-                        label: 'اوراق مشارکت ',
-                        translate: 'اوراق مشارکت ',
+                        label: '*وراق مشارکت ',
+                        translate: '*اوراق مشارکت ',
                         type: 'collapsable',
                         items: [
                             {
                                 id: 'reportClear',
-                                label: 'لیست اوراق مشارکت',
-                                translate: 'لیست اوراق مشارکت',
+                                label: '*لیست اوراق مشارکت',
+                                translate: '*لیست اوراق مشارکت',
                                 type: 'item',
                                 routerLink: '/reportClear',
                             },
@@ -677,27 +679,27 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             },
                 {
                     id: 'walletBuy',
-                    label: ' مدیریت کارت و کیف پول ',
-                    translate: 'مدیریت کارت و کیف پول ',
+                    label: '* مدیریت کارت و کیف پول ',
+                    translate: '*مدیریت کارت و کیف پول ',
                     type: 'collapsable',
                     items: [
                         {
                             id: 'walletBuy',
-                            label: ' کیف پول ',
-                            translate: 'کیف پول ',
+                            label: ' *کیف پول ',
+                            translate: '*کیف پول ',
                             type: 'collapsable',
                             items: [
                                 {
                                     id: '/creatWallet',
-                                    label: 'تعریف کیف پول',
-                                    translate: ' تعریف کیف پول',
+                                    label: '*تعریف کیف پول',
+                                    translate: ' *تعریف کیف پول',
                                     type: 'item',
                                     routerLink: '//creatWallet',
                                 },
                                 {
                                     id: 'chargAmountWallet',
-                                    label: 'شارژ کیف پول',
-                                    translate: ' شارژ کیف پول',
+                                    label: '*شارژ کیف پول',
+                                    translate: ' *شارژ کیف پول',
                                     type: 'item',
 
                                     routerLink: '/chargAmountWallet',
@@ -711,8 +713,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                 },
                                 {
                                     id: 'ensedadWallet',
-                                    label: 'انسداد کیف پول',
-                                    translate: ' انسداد کیف پول',
+                                    label: '*انسداد کیف پول',
+                                    translate: ' *انسداد کیف پول',
                                     type: 'item',
                                     routerLink: '/ensedadWallet',
                                 },
@@ -720,30 +722,30 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         },
                         {
                             id: 'walletBuy',
-                            label: ' بن کارت ',
-                            translate: 'بن کارت ',
+                            label: ' *بن کارت ',
+                            translate: '*بن کارت ',
                             type: 'collapsable',
 
                             items: [
                                 {
                                     id: 'registerBonCard',
-                                    label: 'صدور بن کارت ',
-                                    translate: 'صدور بن کارت ',
+                                    label: '*صدور بن کارت ',
+                                    translate: '*صدور بن کارت ',
                                     type: 'item',
                                     routerLink: '/registerBonCard',
                                 },
                                 {
                                     id: 'ensedadBonCard',
-                                    label: 'انسداد بن کارت ',
-                                    translate: 'انسداد بن کارت ',
+                                    label: '*انسداد بن کارت ',
+                                    translate: '*انسداد بن کارت ',
                                     type: 'item',
 
                                     routerLink: '/ensedadBonCard',
                                 },
                                 {
                                     id: 'rafeEnsedadBonCard',
-                                    label: 'رفع انسداد بن کارت ',
-                                    translate: 'رفع انسداد بن کارت ',
+                                    label: '*رفع انسداد بن کارت ',
+                                    translate: '*رفع انسداد بن کارت ',
                                     type: 'item',
 
                                     routerLink: '/rafeEnsedadBonCard',
@@ -819,22 +821,22 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
 
                         {
                             id: 'walletBuy',
-                            label: ' گزارشات ',
-                            translate: 'گزارشات ',
+                            label: ' *گزارشات ',
+                            translate: '*گزارشات ',
                             type: 'collapsable',
 
                             items: [
                                 {
                                     id: '/reportStatusWallet',
-                                    label: 'وضعیت کیف پول',
-                                    translate: ' وضعیت کیف پول',
+                                    label: '*وضعیت کیف پول',
+                                    translate: ' *وضعیت کیف پول',
                                     type: 'item',
                                     routerLink: '//reportStatusWallet',
                                 },
                                 {
                                     id: 'billsBonCard',
-                                    label: ' اطلاعات تراکنش بن کارت ',
-                                    translate: 'اطلاعات تراکنش بن کارت ',
+                                    label: ' *اطلاعات تراکنش بن کارت ',
+                                    translate: '*اطلاعات تراکنش بن کارت ',
                                     type: 'item',
                                     routerLink: '/billsBonCard',
                                 },
@@ -856,8 +858,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                 },
                                 {
                                     id: 'walletTransaction',
-                                    label: 'اطلاعات شارژ کیف پول به تفکیک واحد های تابعه',
-                                    translate: ' اطلاعات شارژ کیف پول به تفکیک واحد های تابعه',
+                                    label: '*اطلاعات شارژ کیف پول به تفکیک واحد های تابعه',
+                                    translate: ' *اطلاعات شارژ کیف پول به تفکیک واحد های تابعه',
                                     type: 'item',
 
                                     routerLink: '/walletTransaction',

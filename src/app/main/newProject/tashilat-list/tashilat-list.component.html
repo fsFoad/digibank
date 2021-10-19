@@ -1,0 +1,54 @@
+<p-panel header="اطلاعات تسهیلات دریافتی سازمان" [ngStyle]="{'width':'100%'}">
+    <div class="p-d-flex p-flex-wrap">
+        <div class="p-md-2 FS-mr2">
+            <p-dropdown class="p-dropdown-w80" placeholder="واحد مربوطه" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+        </div>
+        <div class="  p-md-3 FS-mr2">
+            <p-persian-calendar placeholder="تاریخ دریافت" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100" ></p-persian-calendar>
+        </div>
+        <div class="p-md-3  FS-mr">
+            <p-persian-calendar placeholder="تاریخ تسویه" yearRange="1300:1410"
+                                class=" p-persian-calendar-w-100" ></p-persian-calendar>
+        </div>
+        <div class=" p-md-5  FS-mr">
+        </div>
+    </div>
+    <div class="p-col-12">
+        <br>
+        <button id="btnBatchRegister" class="p-button-info" (click)="tableFlag=true" pButton label="گزارش"></button>&nbsp;&nbsp;
+    </div>
+        <p-card  *ngIf=tableFlag  >
+            <p-table [value]="fsList">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th translate>ردیف</th>
+                        <th translate id="thAccountNumber">واحد مربوطه</th>
+                        <th translate>شعبه</th>
+                        <th translate>نوع تسهیلات</th>
+                        <th translate>مبلغ اعطا شده</th>
+                        <th translate>جمع اقساط پرداختی</th>
+                        <th translate>تجمع وجه التزام پرداختی</th>
+                        <th translate>شماره پرونده</th>
+                        <th translate>مانده بدهی</th>
+
+                    </tr>
+                </ng-template>
+                <ng-template let-i="rowIndex" pTemplate="body" let-service>
+                    <tr>
+                        <td>{{i + 1}}</td>
+                        <td>{{service.relevantUnit}}</td>
+                        <td>{{service.branch}}</td>
+                        <td>{{service.tashilatType}}</td>
+                        <td>{{service.amount|addCommaSeparator}}</td>
+                        <td>{{service.installmentsPaid|addCommaSeparator}}</td>
+                        <td>{{service.accumulationPaymentObligation|addCommaSeparator}}</td>
+                        <td>{{service.fileNumber}}</td>
+                        <td>{{service.remaining|addCommaSeparator}}</td>
+
+                    </tr>
+                </ng-template>
+            </p-table>
+    </p-card>
+</p-panel>

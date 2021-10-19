@@ -32,6 +32,7 @@ import {ReportClearComponent} from './report-clear/report-clear.component';
 import {ReportStatusWalletComponent} from './report-status-wallet/report-status-wallet.component';
 import {SubmitClearComponent} from './submit-clear/submit-clear.component';
 import {SubmitCheckComponent} from './submit-check/submit-check.component';
+import {TashilatListComponent} from './tashilat-list/tashilat-list.component';
 
 const routes = [
     {
@@ -190,6 +191,12 @@ const routes = [
         component: SubmitCheckComponent,
         //canActivate:[LoginGuard],
     },
+    {
+        path: 'tashilatList',
+        component: TashilatListComponent,
+        //canActivate:[LoginGuard],
+    },
+
 
 ]
 

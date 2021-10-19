@@ -1,23 +1,37 @@
-.FS-mr {
+.FS-mr{
     margin-right: 10rem !important;
 }
-
-:host {
+.FS-mr3{
+    margin-right: 9.5rem !important;
+}
+:host{
     width: 100%;
     height: 100%;
 }
-
-#btnRecovery {
+#btnRecovery{
     width: 10%;
     height: 55%;
     //margin-left: 45%;
     margin-right: 45%;
 }
-
-.Fs-p-md {
+.Fs-p-md{
     width: 23%;
 }
-
-.FS-mr2 {
-    margin-right: 0.1rem !important;
+.FS-mr2{
+    margin-right:0.1rem !important;
+}
+.FS-mt{
+    margin-top: 0.3%;
+}
+.FS-mr4{
+    margin-right: 8.4rem !important;
+}
+.FS-mr5{
+    margin-right: 8.8rem !important;
+}
+#row{
+    width: 100%;
+}
+#headerTable{
+    width: 100%;
 }

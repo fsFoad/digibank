@@ -6,78 +6,111 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./bill.component.scss']
 })
 export class BillComponent implements OnInit {
+    upOrDownloadFlag=false;
+    organList: { label: string, value: number }[] = [];
+    representationList: { label: string, value: number }[] = [];
+    operationList: { label: string, value: number }[] = [];
+    bankList: { label: string, value: number }[] = [];
+    accountList: { label: string, value: number }[] = [];
+
+    tableList: {
+        bankId: number;
+        bankName: string;
+        accountInfo: {
+            transactionNumber: number;
+            accountNumber: number;
+            branchCode: number;
+            transactionDate: string;
+            yektaTransactionID: number;
+            docNumber: number;
+            typeOperation: string;
+            amount: number;
+            remaining: number;
+            desTransaction: string;
+            transactionInfo: {
+                organNumber: number,
+                transactionAgent: string,
+                terminalNumber: number,
+                dateAccounting: string,
+                accountingHeading: string,
+                desOrganTransaction: string,
+            }[]
+        }[]
+    }[]=[];
     tableFlag = false;
-    fsList: {
-        accountNumber: number, history: string, branchCode: string,
-        yektaCode: string, dateDue: string, depositor: string, check: string,
-        amounts: string, doc: string, amount: number, creditor: string
-    }[] = [
-        {
-            'accountNumber': 1574655249, 'history': '1400/05/01',
-            'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '423523452', 'depositor': 'علی محمدی', 'check': '2222589',
-            'amounts': ' 6785656566', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 7541589521, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '23423443', 'depositor': 'سینا کریمی', 'check': '2222589',
-            'amounts': ' 356676345', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 7548621548, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '4542234', 'depositor': 'سامان کاشانی', 'check': '2222589',
-            'amounts': ' 786745656', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 1548254962, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '456456345', 'depositor': 'عماد همتی', 'check': '2222589',
-            'amounts': '567678565', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 8465215749, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '34534624', 'depositor': 'فرید ترابی', 'check': '2222589',
-            'amounts': '5645765', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 3256157895, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '34556665', 'depositor': 'کامیار کاظمی', 'check': '2222589',
-            'amounts': '789677565', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 7416581213, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '35656735434', 'depositor': 'عرفان حشمتی', 'check': '2222589',
-            'amounts': '3545643467', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 8742154565, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '3453456567', 'depositor': 'رستم حبیبی', 'check': '2222589',
-            'amounts': ' 4323633', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 1525844572, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '34534535676', 'depositor': 'حبیب حسینی', 'check': '2222589',
-            'amounts': '346457658', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-        {
-            'accountNumber': 8754788621, 'history': '1400/05/01'
-            , 'branchCode': '  85456', 'yektaCode': '10000022',
-            'dateDue': '5645675656', 'depositor': 'کریم حسنی', 'check': '2222589',
-            'amounts': ' 24365768', 'doc': '5666', 'amount': 7000000, 'creditor': '10000'
-        },
-    ];
 
     constructor() {
     }
 
     ngOnInit(): void {
+        this.organList = [
+            {label: '-', value: 0},
+            {label: 'هلدینگ 1', value: 1},
+            {label: 'هلدینگ 2', value: 2},
+            {label: 'هلدینگ 3', value: 3},
+
+        ];
+        this.representationList = [
+            {label: '-', value: 0},
+            {label: 'نمایندگی 10001', value: 1},
+            {label: 'نمایندگی 10002', value: 2},
+            {label: 'نمایندگی 10003', value: 3},
+            {label: 'نمایندگی 10004', value: 4},
+
+        ];
+        this.operationList = [
+            {label: '-', value: 0},
+            {label: 'واریز', value: 1},
+            {label: 'برداشت', value: 2},
+
+        ];
+        this.accountList = [
+            {label: '-', value: 0},
+            {label: 'سپرده قرض الحسنه 10000122344', value: 1},
+            {label: 'سپرده کوتاه مدت 2000099998888', value: 2},
+
+        ];
+        this.bankList = [
+            {label: '-', value: 0},
+            {label: 'ملت', value: 1},
+            {label: 'سینا', value: 2},
+            {label: 'پاسارگاد', value: 2},
+            {label: 'صادرات', value: 2},
+            {label: 'تجارت', value: 2},
+            {label: 'ملی', value: 2},
+            {label: 'پارسیان', value: 2},
+
+        ];
+        this.tableList =  [{
+            bankId: 1,
+            bankName: "بانک ملت",
+            accountInfo:[ {
+                transactionNumber: 1009200361,
+                accountNumber: 100001223344,
+                branchCode: 65651,
+                transactionDate: "1400/05/02",
+                yektaTransactionID: 333300001111,
+                docNumber: 1112,
+                typeOperation: "واریز",
+                amount: 1000000,
+                remaining: 21000000,
+                desTransaction: "بابت ثبت نام حمید حمیدی",
+                transactionInfo: [{
+                    organNumber: 140000000078,
+                    transactionAgent: "پوز",
+                    terminalNumber: 333300001111,
+                    dateAccounting: "1400/05/10",
+                    accountingHeading: "تسویه اقلام باز- 5001",
+                    desOrganTransaction: "ثبت دفتر کل",
+
+                }]
+            }]
+        }];
+
+
+    }
+    onUpOrDownload(upBill){
+        this.upOrDownloadFlag = true;
     }
 
 }

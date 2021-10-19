@@ -1,62 +1,151 @@
 <p-panel header="صورت حساب" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-        <div class="Fs-p-md FS-mr">
+<div *ngIf="!upOrDownloadFlag">
+    <div class="p-d-flex p-flex-wrap"  >
+        <div class="Fs-p-md FS-mr FS-mt">
             <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
                                 class=" p-persian-calendar-w-100" ></p-persian-calendar>
+
         </div>
-        <div class="Fs-p-md FS-mr2">
+        <div class="Fs-p-md FS-mr2 FS-mt">
             <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
                                 class=" p-persian-calendar-w-100" ></p-persian-calendar>
+
         </div>
         <div class=" p-md-2 FS-mr2 ">
+
             <p-dropdown class="p-dropdown-w80" placeholder="واحد سازمانی" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+                        [options]="organList" optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr">
-            <p-dropdown class="p-dropdown-w80" placeholder="شماره حساب" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+
+            <p-dropdown class="p-dropdown-w80" placeholder="واحد های تابعه" optionValue="value"
+                        [options]="representationList" optionLabel="label"></p-dropdown>
         </div>
+        <div class=" p-md-2 FS-mr3">
+
+            <p-dropdown class="p-dropdown-w80" placeholder="نوع عملیات" optionValue="value"
+                        [options]="operationList"  optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr4">
+
+            <p-dropdown class="p-dropdown-w80" placeholder="بانک" optionValue="value"
+                        [options]="bankList"  optionLabel="label"></p-dropdown>
+        </div>
+        <div class=" p-md-2 FS-mr5">
+
+            <p-dropdown class="p-dropdown-w80" placeholder="شماره حساب" optionValue="value"
+                        [options]="accountList"  optionLabel="label"></p-dropdown>
+        </div>
+
     </div>
-    <div class="p-col-12">
+
+    <div class="p-col-12"  >
         <br>
         <button id="btnRecovery"  class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
     </div>
-    <p-card  *ngIf=tableFlag>
-        <p-table [value]="fsList">
-            <ng-template pTemplate="header">
+    <p-card  *ngIf=tableFlag header="صورتحساب / کارگزاری 11003 محمد امین الدوله "  >
+        <p-table [value]="tableList" dataKey="bankId">
+            <ng-template  pTemplate="header">
                 <tr>
-                    <th translate>ردیف</th>
-                    <th translate id="thAccountNumber">شماره حساب</th>
-                    <th translate>کد شعبه</th>
-                    <th translate>تاریخ اعمال</th>
-                    <th translate>واریز کننده</th>
-                    <th translate>کد یکتای تراکنش</th>
-                    <th translate>چک / حواله</th>
-                    <th translate>سند</th>
-                    <th translate>بدهکار</th>
-                    <th translate>بستانکار</th>
-                    <th translate>مانده</th>
-                    <th translate>تاریخ انجام</th>
-                    <th translate>کد نوع خدمات</th>
+                    <th>ردیف</th>
+                    <th style="width: 20%;direction: rtl" >بانک</th>
                 </tr>
             </ng-template>
-            <ng-template let-i="rowIndex" pTemplate="body" let-service>
+            <ng-template colspan="12" pTemplate="body" let-bills let-expanded="expanded" let-i="rowIndex">
                 <tr>
                     <td>{{i + 1}}</td>
-                    <td>{{service.accountNumber}}</td>
-                    <td>{{service.branchCode}}</td>
-                    <td>{{service.history}}</td>
-                    <td>{{service.depositor}}</td>
-                    <td>{{service.yektaCode}}</td>
-                    <td>{{service.check}}</td>
-                    <td>{{service.doc}}</td>
-                    <td>0</td>
-                    <td>{{service.creditor|addCommaSeparator}}</td>
-                    <td>{{service.amount|addCommaSeparator}}</td>
-                    <td>1400/06/01</td>
-                    <td>170</td>
+                    <td>{{bills.bankName}}</td>
+                    <td>
+                        <button type="button" pButton pRipple [pRowToggler]="bills"
+                                class="p-button-text p-button-rounded p-button-plain"
+                                [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="rowexpansion" let-bills>
+                <tr>
+                    <td colspan="12">
+                        <div class="p-p-3">
+                            <p-table [value]="bills.accountInfo" dataKey="id">
+                                <ng-template pTemplate="header" >
+                <tr>
+                    <th  >ردیف</th>
+                    <th  >شماره بانکی تراکنش</th>
+                    <th  >شماره حساب</th>
+                    <th  >کد شعبه</th>
+                    <th  >تاریخ تراکنش</th>
+                    <th  >شناسه یکتا تراکنش</th>
+                    <th  >شماره سند</th>
+                    <th  >نوع عملیات</th>
+                    <th  >مبلغ</th>
+                    <th  >مانده</th>
+                    <th  >شرح اصلی تراکنش</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-accountTrans let-j="rowIndex"  let-expanded="expanded" >
+                <tr id="row">
+                    <td>{{j+1}}</td>
+                    <td>{{accountTrans.transactionNumber}}</td>
+                    <td>{{accountTrans.accountNumber}}</td>
+                    <td>{{accountTrans.branchCode}}</td>
+                    <td>{{accountTrans.transactionDate}}</td>
+                    <td>{{accountTrans.yektaTransactionID}}</td>
+                    <td>{{accountTrans.docNumber}}</td>
+                    <td>{{accountTrans.typeOperation}}</td>
+                    <td>{{accountTrans.amount | addCommaSeparator }}</td>
+                    <td>{{accountTrans.remaining | addCommaSeparator}}</td>
+                    <td>{{accountTrans.desTransaction}}</td>
+                    <td>
+                        <button type="button" pButton pRipple [pRowToggler]="accountTrans"
+                                class="p-button-text p-button-rounded p-button-plain"
+                                [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+                    </td>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="rowexpansion" let-transaction>
+                <tr>
+                    <td colspan="11">
+                        <div class="p-p-3">
+                            <p-table [value]="transaction.transactionInfo" dataKey="id">
+                                <ng-template pTemplate="header" >
+                <tr id="headerTable">
+                    <th  >ردیف</th>
+                    <th  >شماره سازمانی تراکنش</th>
+                    <th  >کانال عامل تراکنش</th>
+                    <th  >شماره ترمینال</th>
+                    <th  >تاریخ اعمال حسابداری</th>
+                    <th  >سرفصل حسابداری</th>
+                    <th  >شرح سازمانی تراکنش</th>
+                    <th  >آپلود / دانلود مستندات</th>
+
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-transaction let-j="rowIndex"  let-expanded="expanded" >
+                <tr >
+                    <td>{{j+1}}</td>
+                    <td>{{transaction.organNumber}}</td>
+                    <td>{{transaction.transactionAgent}}</td>
+                    <td>{{transaction.terminalNumber}}</td>
+                    <td>{{transaction.dateAccounting}}</td>
+                    <td>{{transaction.accountingHeading}}</td>
+                    <td>{{transaction.desOrganTransaction}}</td>
+                    <td>
+                        <button type="submit" pButton  icon="pi pi-plus"></button>
+                    </td>
+
                 </tr>
             </ng-template>
         </p-table>
+        </div>
+        </td>
+        </tr>
+        </ng-template>
+        </p-table>
+        </div>
+        </td>
+        </tr>
+        </ng-template>
+        </p-table>
     </p-card>
+    </div>
 </p-panel>
