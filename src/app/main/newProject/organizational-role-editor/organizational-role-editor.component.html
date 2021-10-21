@@ -1,33 +1,35 @@
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>کد ارجاع مشتری</label>
-    </span>
+<div class="app-mx-5r">
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>کد ارجاع مشتری</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>شناسه ملی</label>
+      </span>
+    </div>
+    <div class="p-field p-col-6">
+      <span class="p-float-label">
+        <input pInputText required>
+        <label>عنوان</label>
+      </span>
+      <!-- <small>متن کمکی</small> -->
+    </div>
   </div>
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>شناسه ملی</label>
-    </span>
+  
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-col-2"></div>
+    <div class="p-col mt-20">
+      <p-pickList [source]="availableRoles" [target]="selectedRoles" [showSourceControls]="false"
+        [showTargetControls]="false" class="app-mirror-transfer-icons app-custom-picklist-header" sourceHeader="نقش‌های معتبر سازمان"
+        targetHeader="نقش ذینفع در سازمان">
+        <ng-template let-row pTemplate="item">{{row.name}}</ng-template>
+      </p-pickList>
+    </div>
+    <div class="p-col-2"></div>
   </div>
-  <div class="p-field p-col-6">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>عنوان</label>
-    </span>
-    <small>متن کمکی</small>
-  </div>
-</div>
-
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-col-2"></div>
-  <div class="p-col mt-20">
-    <p-pickList [source]="availableRoles" [target]="selectedRoles" [showSourceControls]="false"
-      [showTargetControls]="false" class="app-mirror-transfer-icons app-custom-picklist-header" sourceHeader="نقش‌های معتبر سازمان"
-      targetHeader="نقش ذینفع در سازمان">
-      <ng-template let-row pTemplate="item">{{row.name}}</ng-template>
-    </p-pickList>
-  </div>
-  <div class="p-col-2"></div>
 </div>

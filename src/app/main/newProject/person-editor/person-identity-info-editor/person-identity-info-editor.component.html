@@ -1,193 +1,196 @@
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>کد ملی</label>
-    </span>
+<div class="app-mx-5r">
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>کد ملی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>نقش سازمانی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>کد پرسنلی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [options]="banks" optionLabel="name" [autoDisplayFirst]="false"></p-dropdown>
+        <label>بانک</label>
+      </span>
+    </div>
   </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>نقش سازمانی</label>
-    </span>
+  
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input required pInputText>
+        <label>نام</label>
+      </span>
+      <!-- <small>متن کمکی</small> -->
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input required pInputText>
+        <label>نام خانوادگی</label>
+      </span>
+      <!-- <small>متن کمکی</small> -->
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input required pInputText>
+        <label>نام پدر</label>
+      </span>
+      <!-- <small>متن کمکی</small> -->
+    </div>
   </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>کد پرسنلی</label>
-    </span>
+  
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ صدور شناسنامه</label>
+      </span>
+      <!-- <small>ورودی به صورت تاریخ می باشد</small> -->
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
+        <label>شماره شناسنامه</label>
+      </span>
+      <!-- <small>ورودی به صورت عدد می باشد</small> -->
+    </div>
+    <div class="p-field p-col-1">
+      <span class="p-float-label">
+        <input pInputText>
+        <label style="font-size: 80%">حرف سری شناسنامه</label>
+      </span>
+      <!-- <small>متن کمکی</small> -->
+    </div>
+    <div class="p-field p-col-2">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
+        <label>عدد سری شناسنامه</label>
+      </span>
+      <!-- <small>ورودی به صورت عدد می باشد</small> -->
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
+        <label>سریال شناسنامه</label>
+      </span>
+      <!-- <small>ورودی به صورت عدد می باشد</small> -->
+    </div>
   </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-dropdown [options]="banks" optionLabel="name" [autoDisplayFirst]="false"></p-dropdown>
-      <label>بانک</label>
-    </span>
+  
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
+        <label>سریال کارت ملی</label>
+      </span>
+      <!-- <small>ورودی به صورت عدد می باشد</small> -->
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>نوع شناسنامه</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>شهر محل صدور شناسنامه</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>کد حوزه شناسنامه</label>
+      </span>
+    </div>
   </div>
-</div>
+  
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>جنسیت</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ تولد</label>
+      </span>
+      <!-- <small>ورودی به صورت تاریخ می باشد</small> -->
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>شهر محل تولد</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>کشور محل تولد</label>
+      </span>
+    </div>
+  </div>
+  
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>دین</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>مذهب</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown></p-dropdown>
+        <label>وضعیت اقامت</label>
+      </span>
+    </div>
+  </div>
+  
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-calendar></p-calendar>
+        <label>تاریخ تولد به میلادی</label>
+      </span>
+      <!-- <small>ورودی به صورت تاریخ می باشد</small> -->
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>نام انگلیسی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>نام خانوادگی انگلیسی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText>
+        <label>نام پدر انگلیسی</label>
+      </span>
+    </div>
 
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <input required pInputText>
-      <label>نام</label>
-    </span>
-    <small>متن کمکی</small>
-  </div>
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <input required pInputText>
-      <label>نام خانوادگی</label>
-    </span>
-    <small>متن کمکی</small>
-  </div>
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <input required pInputText>
-      <label>نام پدر</label>
-    </span>
-    <small>متن کمکی</small>
-  </div>
-</div>
-
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
-      <label>شماره شناسنامه</label>
-    </span>
-    <small>ورودی به صورت عدد می باشد</small>
-  </div>
-  <div class="p-field p-col-1">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>حرف سری شناسنامه</label>
-    </span>
-    <small>متن کمکی</small>
-  </div>
-  <div class="p-field p-col-2">
-    <span class="p-float-label">
-      <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
-      <label>عدد سری شناسنامه</label>
-    </span>
-    <small>ورودی به صورت عدد می باشد</small>
-  </div>
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
-      <label>سریال شناسنامه</label>
-    </span>
-    <small>ورودی به صورت عدد می باشد</small>
-  </div>
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
-      <label>تاریخ صدور شناسنامه</label>
-    </span>
-    <small>ورودی به صورت تاریخ می باشد</small>
-  </div>
-</div>
-
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-inputNumber mode="decimal" [useGrouping]="false"></p-inputNumber>
-      <label>سریال کارت ملی</label>
-    </span>
-    <small>ورودی به صورت عدد می باشد</small>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>نوع شناسنامه</label>
-    </span>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>شهر محل صدور شناسنامه</label>
-    </span>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>کد حوزه شناسنامه</label>
-    </span>
-  </div>
-</div>
-
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>جنسیت</label>
-    </span>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>تاریخ تولد</label>
-    </span>
-    <small>ورودی به صورت تاریخ می باشد</small>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>شهر محل تولد</label>
-    </span>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>کشور محل تولد</label>
-    </span>
-  </div>
-</div>
-
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>دین</label>
-    </span>
-  </div>
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>مذهب</label>
-    </span>
-  </div>
-  <div class="p-field p-col-3">
-    <span class="p-float-label">
-      <p-dropdown></p-dropdown>
-      <label>وضعیت اقامت</label>
-    </span>
-  </div>
-</div>
-
-<div class="p-fluid p-formgrid p-grid">
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>نام انگلیسی</label>
-    </span>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>نام خانوادگی انگلیسی</label>
-    </span>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <input pInputText>
-      <label>نام پدر انگلیسی</label>
-    </span>
-  </div>
-  <div class="p-field p-col">
-    <span class="p-float-label">
-      <p-calendar></p-calendar>
-      <label>تاریخ تولد به میلادی</label>
-    </span>
-    <small>ورودی به صورت تاریخ می باشد</small>
   </div>
 </div>
