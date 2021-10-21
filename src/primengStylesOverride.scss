@@ -369,3 +369,25 @@ input[required] + label::after {
     padding: .5em 1em !important;
   }
 }
+
+// set padding-x: 2rem on all p-col* children.
+.app-col-px-2r { 
+    // negative margins are required
+    // to prevent nested class usage to cause indented elements.
+    margin-left: -2rem;
+    margin-right: -2rem;
+    & > [class*=p-col] {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.app-mx-5r {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.app-mx-10r {
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
