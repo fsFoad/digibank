@@ -1,45 +1,43 @@
 <p-panel header="گزارش حواله" [ngStyle]="{'width':'100%'}">
     <div class="p-d-flex p-flex-wrap Fs-mlf">
         <div class="  Fs-p-md ">
-            <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
+            <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"
             ></p-persian-calendar>
         </div>
-        <div class="  Fs-p-md ">
+        <div class="  Fs-p-md Fs-mr">
             <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
-                                class=" p-persian-calendar-w-80" ></p-persian-calendar>
+                                class="app-persian-calendar-style" ></p-persian-calendar>
         </div>
-        <div class="  Fs-p-md2 Fs-mr ">
+        <div class="  Fs-p-md Fs-mr ">
             <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
-        <div class="  Fs-p-md2 Fs-mr ">
-            <p-dropdown class="p-dropdown-w80" placeholder="وضعیت حواله" optionValue="value"
+        <div class="  Fs-p-md Fs-mr ">
+            <p-dropdown class="p-dropdown-w100" placeholder="وضعیت حواله" optionValue="value"
                         optionLabel="label"></p-dropdown>
         </div>
-        <div class="  Fs-p-md2 Fs-mr ">
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع حواله" optionValue="value"
+        <div class="  Fs-p-md Fs-mr ">
+            <p-dropdown class="p-dropdown-w100" placeholder="نوع حواله" optionValue="value"
                         optionLabel="label"></p-dropdown>
         </div>
         <br>
     </div>
     <br>
     <div class="p-d-flex p-flex-wrap Fs-mlf">
-        <div class=" Fs-p-md ">
-            <input placeholder="دریافت کننده"  pInputText >
+        <div class=" Fs-p-md  ">
+            <input placeholder="دریافت کننده" class="input-w-100" pInputText >
         </div>
-        <div class="Fs-p-md ">
-            <amount-box class="input-w-80" placeholder="مبلغ" >
+        <div class="Fs-p-md Fs-mr">
+            <amount-box class="amount-box-100w" placeholder="مبلغ" >
             </amount-box>
         </div>
-        <div class=" Fs-p-md2  Fs-mr2 ">
-            <amount-box class="input-w-80" placeholder="کداقتصادی / ملی" >
-            </amount-box>
+        <div class=" Fs-p-md Fs-mr ">
+            <input class="input-w-100" placeholder="کداقتصادی / ملی" pInputText >
         </div>
-        <div class="Fs-p-md2 Fs-mr ">
-            <amount-box class="input-w-80" placeholder="شماره حواله">
-            </amount-box>
+        <div class="Fs-p-md Fs-mr ">
+            <input class="input-w-100" placeholder="شماره حواله" pInputText >
         </div>
-        <div class="Fs-p-md2 Fs-mr ">
-            <input   placeholder="پیوست" pInputText/>
+        <div class="Fs-p-md Fs-mr ">
+            <input   placeholder="پیوست" class="input-w-100" pInputText/>
         </div>
     </div>
     <div class="p-col-12">

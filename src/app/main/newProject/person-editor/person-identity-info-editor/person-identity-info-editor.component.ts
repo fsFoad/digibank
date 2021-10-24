@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonIdentityInfoEditorComponent implements OnInit {
   banks = [
+    { name: '-' },
     { name: 'ملت' },
     { name: 'پارسیان' },
     { name: 'زیر عنوان' },
