@@ -35,6 +35,7 @@ import {SubmitCheckComponent} from './submit-check/submit-check.component';
 import {TashilatListComponent} from './tashilat-list/tashilat-list.component';
 import { OrganizationalEntityManagerComponent } from "./organizational-entity-manager/organizational-entity-manager.component";
 import { PersonEditorComponent } from "./person-editor/person-editor.component";
+import {CardBoardComponent} from './card-board/card-board.component';
 
 const routes = [
     {
@@ -206,6 +207,10 @@ const routes = [
         path: 'person-editor',
         component: PersonEditorComponent,
     },
+  {
+    path: 'cardBoard',
+    component: CardBoardComponent,
+  },
 
 ]
 

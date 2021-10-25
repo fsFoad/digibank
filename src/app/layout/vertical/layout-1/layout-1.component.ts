@@ -62,21 +62,21 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 // },
                 {
                     id: 'issueWalletGroup',
-                    label: ' مدریت ذینفعان',
-                    translate: ' مدریت ذینفعان',
+                    label: ' *مدریت ذینفعان',
+                    translate: ' *مدریت ذینفعان',
                     type: 'collapsable',
                     items: [
                         {
                             id: 'issuepersonalwallet2',
-                            label: 'ذینفع شخصی',
-                            translate: 'ذینفع شخصی',
+                            label: '*ذینفع شخصی',
+                            translate: '*ذینفع شخصی',
                             type: 'collapsable',
                             icon: 'account_balance_wallet',
                             items: [
                                 {
                                     id: 'real',
-                                    label: 'تعریف',
-                                    translate: 'تعریف',
+                                    label: '*تعریف',
+                                    translate: '*تعریف',
                                     type: 'item',
                                     icon: 'account_balance_wallet',
                                     routerLink: '/person-editor',
@@ -140,15 +140,15 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                             ]
                         }, {
                             id: 'issuepersonalwallet2',
-                            label: 'ذینفع سازمانی',
-                            translate: 'ذینفع سازمانی',
+                            label: '*ذینفع سازمانی',
+                            translate: '*ذینفع سازمانی',
                             type: 'collapsable',
                             icon: 'account_balance_wallet',
                             items: [
                                 {
                                     id: 'real',
-                                    label: 'تعریف',
-                                    translate: 'تعریف',
+                                    label: '*تعریف',
+                                    translate: '*تعریف',
                                     type: 'item',
                                     icon: 'account_balance_wallet',
                                     routerLink: '/organizational-entity-manager',
@@ -1043,8 +1043,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
                 {
                     id: 'walletBuy',
-                    label: 'تنظیمات ',
-                    translate: 'تنظیمات ',
+                    label: '*تنظیمات ',
+                    translate: '*تنظیمات ',
                     type: 'collapsable',
 
                     items: [
@@ -1123,19 +1123,24 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                         },
                         {
                             id: 'walletBuy',
-                            label: ' مدیریت پیکره بندی ',
-                            translate: 'مدیریت پیکره بندی ',
+                            label: ' *مدیریت پیکره بندی ',
+                            translate: '*مدیریت پیکره بندی ',
                             type: 'collapsable',
-
                             items: [
                                 {
                                     id: 'walletBuy',
                                     label: ' پارامتر ها ',
                                     translate: 'پارامتر ها ',
                                     type: 'collapsable',
-
                                     items: []
                                 },
+                              {
+                                id: ' cardBoard',
+                                label: '*کارتابل ',
+                                translate: '*کارتابل ',
+                                type: 'item',
+                                routerLink: '/cardBoard',
+                              },
                             ]
                         },
                     ]
