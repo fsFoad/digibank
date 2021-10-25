@@ -130,7 +130,7 @@
                     <td>{{transaction.accountingHeading}}</td>
                     <td>{{transaction.desOrganTransaction}}</td>
                     <td>
-                        <button type="submit" pButton  icon="pi pi-plus"></button>
+                        <button type="submit" pButton  icon="pi pi-plus" (click)="upOrDownloadFlag=true;"></button>
                     </td>
 
                 </tr>
@@ -148,4 +148,5 @@
         </p-table>
     </p-card>
     </div>
+  <app-up-or-download *ngIf="upOrDownloadFlag"></app-up-or-download>
 </p-panel>
