@@ -76,6 +76,8 @@ import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { PersonIdentityInfoEditorComponent } from './person-editor/person-identity-info-editor/person-identity-info-editor.component';
 import { PersonSupplementaryInfoEditorComponent } from './person-editor/person-supplementary-info-editor/person-supplementary-info-editor.component';
 import { CardBoardComponent } from './card-board/card-board.component';
+import { CardBoardPayaComponent } from './card-board-paya/card-board-paya.component';
+import { DetailsReliableRemittanceRequestComponent } from './details-reliable-remittance-request/details-reliable-remittance-request.component';
 
 @NgModule({
     declarations: [
@@ -125,7 +127,9 @@ import { CardBoardComponent } from './card-board/card-board.component';
         PersonEditorComponent,
         PersonIdentityInfoEditorComponent,
         PersonSupplementaryInfoEditorComponent,
-        CardBoardComponent
+        CardBoardComponent,
+        CardBoardPayaComponent,
+        DetailsReliableRemittanceRequestComponent,
     ],
     imports: [
         CommonModule,

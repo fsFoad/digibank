@@ -343,6 +343,12 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                                     translate: '*صدور حواله پایا',
                                     type: 'item',
                                     routerLink: '/registerPayaTransfer',
+                                },  {
+                                    id: 'cardBoardPaya',
+                                    label: '*کارتابل حواله پایا',
+                                    translate: '*کارتابل حواله پایا',
+                                    type: 'item',
+                                    routerLink: '/cardBoardPaya',
                                 },
                                 {
                                     id: 'purchase',
