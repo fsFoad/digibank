@@ -25,13 +25,14 @@
           <td>{{service.registrar}}</td>
           <td>{{service.registrationDate|castToDate}}</td>
           <td>
-            <button pButton icon="pi pi-pencil" (click)="editServiceRow(service)" ></button>&nbsp;
+            <button pButton icon="pi pi-pencil" (click)="editServiceRow(service)"></button>&nbsp;
           </td>
         </tr>
       </ng-template>
     </p-table>
-  </p-card >
-  <app-details-reliable-remittance-request *ngIf="detailsFlag" [inputDetails]="fsList" (close)="onClose($event)"></app-details-reliable-remittance-request>
+  </p-card>
+  <app-details-reliable-remittance-request *ngIf="detailsFlag" [inputDetails]="fsList"
+                                           (close)="onClose($event)"></app-details-reliable-remittance-request>
   <div class="p-d-flex p-flex-wrap Fs-mlf" *ngIf="!detailsFlag">
     <div class="p-md-12 FS-mt">
       <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="tempTable=fsList;"></button>&nbsp;

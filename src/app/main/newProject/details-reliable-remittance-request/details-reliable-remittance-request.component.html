@@ -20,7 +20,7 @@
           <div class="p-col p-d-flex p-flex-column">
             <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
               <div class="p-text-right">
-                <label>شماره اقتصادی صاحب حساب مبدا : {{economicCode}}</label>
+                <label>شماره اقتصادی صاحب حساب مبدا : {{verificationCode}}</label>
                 <br>
                 <label>تعداد حواله : {{remittancesNumber}}</label>
                 <br>
@@ -34,12 +34,12 @@
   </div>
   <br>
   <p-card>
-    <p-table [value]="">
+    <p-table [value]="table1List">
       <ng-template pTemplate="header">
         <tr>
           <th translate>ردیف</th>
           <th translate>گیرنده حواله</th>
-          <th translate>کد شبا</th>
+          <th translate id="ibonCell">کد شبا</th>
           <th translate>بانک</th>
           <th translate>شناسه واریز کننده</th>
           <th translate>مبلغ</th>
@@ -54,14 +54,15 @@
       <ng-template let-i="rowIndex" pTemplate="body" let-service>
         <tr>
           <td>{{i + 1}}</td>
-          <td>{{service.table1RecipientRemittance}}</td>
-          <td>{{service.ibon}}</td>
+          <td>{{service.recipientRemittance}}</td>
+          <td >{{service.ibonRecipient}}</td>
           <td>{{service.bank}}</td>
           <td>{{service.depositorID}}</td>
           <td>{{service.amount|addCommaSeparator}}</td>
           <td>{{service.nationalCode}}</td>
           <td>{{service.About}}</td>
           <td>{{service.postalCode}}</td>
+          <td>{{service.shahabCode}}</td>
           <td>{{service.des}}</td>
           <td>{{service.resubmitLicense}}</td>
         </tr>
@@ -70,7 +71,7 @@
   </p-card>
   <br>
   <p-card header="فهرست تاییدکنندگان">
-    <p-table [value]="inputDetails">
+    <p-table [value]="table2List">
       <ng-template pTemplate="header">
         <tr>
           <th translate>ردیف</th>
@@ -79,17 +80,16 @@
           <th translate>وضعیت تایید</th>
           <th translate>تاریخ</th>
           <th translate>شرح</th>
-
         </tr>
       </ng-template>
       <ng-template let-i="rowIndex" pTemplate="body" let-service>
         <tr>
           <td>{{i + 1}}</td>
-          <td>{{service.TemporaryTransferNumber}}</td>
-          <td>{{service.SourceAccountNumber}}</td>
-          <td>{{service.amounts|addCommaSeparator}}</td>
-          <td>{{service.dateEffective|castToDate}}</td>
-          <td>{{service.status}}</td>
+          <td>{{service.fullName}}</td>
+          <td>{{service.verificationType}}</td>
+          <td>{{service.verificationStatus}}</td>
+          <td>{{service.history|castToDate}}</td>
+          <td>{{service.des}}</td>
        </tr>
       </ng-template>
     </p-table>
