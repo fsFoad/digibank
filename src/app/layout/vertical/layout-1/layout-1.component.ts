@@ -222,6 +222,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
               routerLink: '/bills',
             },
             {
+              id: 'oldBill',
+              label: '*صورت حساب قدیمی ',
+              translate: '*صورت حساب قدیمی ',
+              type: 'item',
+              routerLink: '/oldBill',
+            },
+            {
               id: 'real',
               label: 'گزارشات',
               translate: 'گزارشات',

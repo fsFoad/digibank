@@ -78,6 +78,7 @@ import { PersonSupplementaryInfoEditorComponent } from './person-editor/person-s
 import { CardBoardComponent } from './card-board/card-board.component';
 import { CardBoardPayaComponent } from './card-board-paya/card-board-paya.component';
 import { DetailsReliableRemittanceRequestComponent } from './details-reliable-remittance-request/details-reliable-remittance-request.component';
+import { Bill2Component } from './bill2/bill2.component';
 
 @NgModule({
     declarations: [
@@ -130,6 +131,7 @@ import { DetailsReliableRemittanceRequestComponent } from './details-reliable-re
         CardBoardComponent,
         CardBoardPayaComponent,
         DetailsReliableRemittanceRequestComponent,
+        Bill2Component,
     ],
     imports: [
         CommonModule,

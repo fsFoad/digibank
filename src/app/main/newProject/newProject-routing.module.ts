@@ -37,6 +37,7 @@ import { OrganizationalEntityManagerComponent } from "./organizational-entity-ma
 import { PersonEditorComponent } from "./person-editor/person-editor.component";
 import {CardBoardComponent} from './card-board/card-board.component';
 import {CardBoardPayaComponent} from "./card-board-paya/card-board-paya.component";
+import {Bill2Component} from "./bill2/bill2.component";
 
 const routes = [
     {
@@ -215,6 +216,10 @@ const routes = [
   {
     path: 'cardBoardPaya',
     component: CardBoardPayaComponent,
+  },
+  {
+    path: 'oldBill',
+    component: Bill2Component,
   },
 
 ]
