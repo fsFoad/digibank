@@ -1,0 +1,40 @@
+<p-panel header="کارتابل حواله پایا">
+  <p-card *ngIf="!detailsFlag">
+    <p-table [value]="tempTable">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>شماره حواله موقت</th>
+          <th translate>شماره حساب مبدا</th>
+          <th translate>مبلغ کل</th>
+          <th translate>تاریخ موثر</th>
+          <th translate>وضعیت</th>
+          <th translate>ثبت کننده</th>
+          <th translate>تاریخ ثبت</th>
+          <th translate>عملیات</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-service>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{service.TemporaryTransferNumber}}</td>
+          <td>{{service.SourceAccountNumber}}</td>
+          <td>{{service.amounts|addCommaSeparator}}</td>
+          <td>{{service.dateEffective|castToDate}}</td>
+          <td>{{service.status}}</td>
+          <td>{{service.registrar}}</td>
+          <td>{{service.registrationDate|castToDate}}</td>
+          <td>
+            <button pButton icon="pi pi-pencil" (click)="editServiceRow(service)" ></button>&nbsp;
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card >
+  <app-details-reliable-remittance-request *ngIf="detailsFlag" [inputDetails]="fsList" (close)="onClose($event)"></app-details-reliable-remittance-request>
+  <div class="p-d-flex p-flex-wrap Fs-mlf" *ngIf="!detailsFlag">
+    <div class="p-md-12 FS-mt">
+      <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="tempTable=fsList;"></button>&nbsp;
+    </div>
+  </div>
+</p-panel>
