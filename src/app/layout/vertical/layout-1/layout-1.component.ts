@@ -166,8 +166,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             },
             {
               id: 'real',
-              label: 'حواله بانکی',
-              translate: 'حواله بانکی',
+              label: '*حواله بانکی',
+              translate: '*حواله بانکی',
               type: 'collapsable',
               items: [
                 {
@@ -193,8 +193,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
                 {
                   id: 'reportBankTransfer',
-                  label: 'گزارش حواله های اینترنتی (مالی)',
-                  translate: 'گزارش حواله های اینترنتی (مالی)',
+                  label: '*گزارش حواله های اینترنتی (مالی)',
+                  translate: '*گزارش حواله های اینترنتی (مالی)',
                   type: 'item',
                   routerLink: '/reportBankTransfer',
                 },
@@ -207,13 +207,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
               ]
             },
-            {
-              id: 'real',
-              label: 'مشاهده لیست حساب ها',
-              translate: 'مشاهده لیست حساب ها',
-              type: 'item',
-              icon: 'account_balance_wallet',
-            },
+
             {
               id: 'bills',
               label: '*صورت حساب ',
@@ -227,14 +221,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
               translate: '*صورت حساب قدیمی ',
               type: 'item',
               routerLink: '/oldBill',
-            },
-            {
-              id: 'real',
-              label: 'گزارشات',
-              translate: 'گزارشات',
-              type: 'item',
-              icon: 'account_balance_wallet',
-            },
+            }
           ]
         },
 
@@ -252,8 +239,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
               items: [
                 {
                   id: 'groupGhabz',
-                  label: 'ثبت حواله ساتنا (مالی)',
-                  translate: 'ثبت حواله ساتنا (مالی)',
+                  label: '*ثبت حواله ساتنا (مالی)',
+                  translate: '*ثبت حواله ساتنا (مالی)',
                   type: 'item',
                   routerLink: '/santaRegisterTransfer',
                 },
@@ -307,11 +294,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                   routerLink: '/cardBoardPaya',
                 },
                 {
-                  id: 'bankpayaCharge',
-                  label: 'ثبت حواله پایا منظم',
-                  translate: 'ثبت حواله پایا منظم',
+                  id: 'regularPayaRegisterTransfer',
+                  label: '*ثبت حواله پایا منظم',
+                  translate: '*ثبت حواله پایا منظم',
                   type: 'item',
-                  // routerLink: '/bankpayaCharge',
+                  routerLink: '/regularPayaRegisterTransfer',
                 },
                 {
                   id: 'bankpayaCharge',
@@ -326,6 +313,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                   translate: 'ثبت حواله پایا گروهی',
                   type: 'item',
                   // routerLink: '/bankpayaCharge',
+                },
+                {
+                  id: 'payaTakTransfer',
+                  label: '*ثبت حواله پایا تک مرحله ای',
+                  translate: '*ثبت حواله پایا تک مرحله ای',
+                  type: 'item',
+                  routerLink: '/payaTakTransfer',
                 },
                 {
                   id: 'bankpayaCharge',
@@ -347,6 +341,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                   translate: 'گزارش حواله های گروهی',
                   type: 'item',
                   // routerLink: '/bankpayaCharge',
+                },
+                {
+                  id: 'reportPayaBank',
+                  label: '*گزارش وضعیت حواله های بانک پرداخت',
+                  translate: '*گزارش وضعیت حواله های بانک پرداخت',
+                  type: 'item',
+                  routerLink: '/reportPayaBank',
                 },
               ]
             },
@@ -424,63 +425,6 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             },
             {
               id: 'walletBuy',
-              label: 'مدیریت واریز ویژه',
-              translate: 'مدیریت واریز ویژه',
-              type: 'collapsable',
-              items: [
-                {
-                  id: 'bankpayaCharge',
-                  label: 'بارگذاری فایل ',
-                  translate: 'بارگذاری فایل ',
-                  type: 'item',
-                  // routerLink: '/bankpayaCharge',
-                },
-                {
-                  id: 'bankpayaCharge',
-                  label: 'ثبت اطلاعات',
-                  translate: 'ثبت اطلاعات',
-                  type: 'item',
-                  // routerLink: '/bankpayaCharge',
-                },
-                {
-                  id: 'bankpayaCharge',
-                  label: 'مشاهده و ویرایش اطلاعات',
-                  translate: 'مشاهده و ویرایش اطلاعات',
-                  type: 'item',
-                  // routerLink: '/bankpayaCharge',
-                },
-                {
-                  id: 'bankpayaCharge',
-                  label: 'کارتابل پرداخت ویژه',
-                  translate: 'کارتابل پرداخت ویژه',
-                  type: 'item',
-                  // routerLink: '/bankpayaCharge',
-                },
-                {
-                  id: 'bankpayaCharge',
-                  label: 'گزارش فایل های بارگذاری شده',
-                  translate: 'گزارش فایل های بارگذاری شده',
-                  type: 'item',
-                  // routerLink: '/bankpayaCharge',
-                },
-                {
-                  id: 'bankpayaCharge',
-                  label: 'گزارش صورتحساب ',
-                  translate: 'گزارش صورتحساب ',
-                  type: 'item',
-                  // routerLink: '/bankpayaCharge',
-                },
-                {
-                  id: 'bankpayaCharge',
-                  label: 'گزارش کارمزدهای دریافت شده',
-                  translate: 'گزارش کارمزدهای دریافت شده',
-                  type: 'item',
-                  // routerLink: '/bankpayaCharge',
-                },
-              ]
-            },
-            {
-              id: 'walletBuy',
               label: '*شارژ ',
               translate: '*شارژ ',
               type: 'collapsable',
@@ -492,87 +436,6 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                   type: 'item',
                   routerLink: '/bankpayaCharge',
                 },
-              ]
-            },
-            {
-              id: 'walletBuy',
-              label: '*قبض ',
-              translate: '*قبض ',
-              type: 'collapsable',
-              items: [
-
-                {
-                  id: 'registerGhabz',
-                  label: '*ثبت قبض',
-                  translate: '*ثبت قبض',
-                  type: 'item',
-                  routerLink: '/registerGhabz',
-                },
-                {
-                  id: 'groupGhabz',
-                  label: '*ثبت قبوض گروهی',
-                  translate: '*ثبت قبوض گروهی',
-                  type: 'item',
-                  routerLink: '/groupGhabz',
-                },
-
-              ]
-            },
-            {
-              id: 'walletBuy',
-              label: '*حواله ',
-              translate: '*حواله ',
-              type: 'collapsable',
-
-              items: [
-
-
-                {
-                  id: 'purchase',
-                  label: 'صدور حواله داخلی',
-                  translate: 'صدور حواله داخلی',
-                  type: 'item',
-
-
-                },
-                {
-                  id: 'purchase',
-                  label: 'صدور حواله منظم داخلی',
-                  translate: 'صدور حواله منظم داخلی',
-                  type: 'item',
-
-
-                },
-                {
-                  id: 'regularPayaRegisterTransfer',
-                  label: '*صدور حواله منظم پایا',
-                  translate: '*صدور حواله منظم پایا',
-                  type: 'item',
-                  routerLink: '/regularPayaRegisterTransfer',
-                },
-                {
-                  id: 'payaTakTransfer',
-                  label: '*ثبت حواله پایا تک مرحله ای',
-                  translate: '*ثبت حواله پایا تک مرحله ای',
-                  type: 'item',
-                  routerLink: '/payaTakTransfer',
-                },
-                {
-                  id: 'Real',
-                  label: '*گزارشات',
-                  translate: '*گزارشات',
-                  type: 'collapsable',
-                  items: [
-
-                    {
-                      id: 'reportPayaBank',
-                      label: '*گزارش وضعیت حواله های بانک پرداخت',
-                      translate: '*گزارش وضعیت حواله های بانک پرداخت',
-                      type: 'item',
-                      routerLink: '/reportPayaBank',
-                    },
-                  ]
-                }
               ]
             },
             {
@@ -619,7 +482,6 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
               ]
             },
-
           ]
         },
         {
