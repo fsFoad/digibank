@@ -233,8 +233,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           items: [
             {
               id: 'walletBuy',
-              label: 'مدیریت حواله ساتنا',
-              translate: ' مدیریت حواله ساتنا',
+              label: '*مدیریت حواله ساتنا',
+              translate: '*مدیریت حواله ساتنا',
               type: 'collapsable',
               items: [
                 {
@@ -268,14 +268,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
               ]
             }, {
               id: 'walletBuy',
-              label: 'مدیریت حواله پایا',
-              translate: 'مدیریت حواله پایا',
+              label: '*مدیریت حواله پایا',
+              translate: '*مدیریت حواله پایا',
               type: 'collapsable',
               items: [
                 {
                   id: 'registerPayaTransfer',
-                  label: 'ثبت حواله پایا (مالی)',
-                  translate: 'ثبت حواله پایا (مالی)',
+                  label: '*ثبت حواله پایا (مالی)',
+                  translate: '*ثبت حواله پایا (مالی)',
                   type: 'item',
                   routerLink: '/registerPayaTransfer',
                 },
@@ -288,8 +288,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
                 {
                   id: 'cardBoardPaya',
-                  label: 'کارتابل حواله پایا',
-                  translate: 'کارتابل حواله پایا',
+                  label: '*کارتابل حواله پایا',
+                  translate: '*کارتابل حواله پایا',
                   type: 'item',
                   routerLink: '/cardBoardPaya',
                 },
@@ -359,8 +359,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
               items: [
                 {
                   id: 'banckPayaGhabz',
-                  label: 'پرداخت قبوض',
-                  translate: 'پرداخت قبوض',
+                  label: '*پرداخت قبوض',
+                  translate: '*پرداخت قبوض',
                   type: 'item',
                   routerLink: '/banckPayaGhabz',
                 },
@@ -380,8 +380,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 },
                 {
                   id: 'reportGhabz',
-                  label: 'گزارش پرداخت قبوض',
-                  translate: 'گزارش پرداخت قبوض',
+                  label: '*گزارش پرداخت قبوض',
+                  translate: '*گزارش پرداخت قبوض',
                   type: 'item',
                   routerLink: '/reportGhabz',
                 },
