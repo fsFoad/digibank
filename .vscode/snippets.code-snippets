@@ -48,4 +48,22 @@
             "</div>",
         ]
     },
+    "PrimeNG static label input": {
+        "scope": "html",
+        "prefix": "primeng-static-label-input",
+        "body": [
+            "<div class=\"p-field p-col$0\">",
+                "\t<input pInputText placeholder=\"$1\">",
+            "</div>",
+        ]
+    },
+    "PrimeNG static label drop down": {
+        "scope": "html",
+        "prefix": "primeng-static-label-drop-down",
+        "body": [
+            "<div class=\"p-field p-col$0\">",
+                "\t<p-dropdown placeholder=\"$1\"></p-dropdown>",
+            "</div>",
+        ]
+    },
 }
