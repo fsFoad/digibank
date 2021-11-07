@@ -20,7 +20,7 @@
         "prefix": "primeng-fluid-form-grid",
         "body": [
             "<div class=\"p-fluid p-formgrid p-grid\">",
-                "\t$0",
+            "\t$0",
             "</div>",
         ]
     },
@@ -29,10 +29,10 @@
         "prefix": "primeng-float-label-input",
         "body": [
             "<div class=\"p-field p-col$0\">",
-                "\t<span class=\"p-float-label\">",
-                    "\t\t<input pInputText>",
-                    "\t\t<label>$1</label>",
-                "\t</span>",
+            "\t<span class=\"p-float-label\">",
+            "\t\t<input pInputText>",
+            "\t\t<label>$1</label>",
+            "\t</span>",
             "</div>",
         ]
     },
@@ -41,10 +41,10 @@
         "prefix": "primeng-float-label-drop-down",
         "body": [
             "<div class=\"p-field p-col$0\">",
-                "\t<span class=\"p-float-label\">",
-                    "\t\t<p-dropdown></p-dropdown>",
-                    "\t\t<label>$1</label>",
-                "\t</span>",
+            "\t<span class=\"p-float-label\">",
+            "\t\t<p-dropdown></p-dropdown>",
+            "\t\t<label>$1</label>",
+            "\t</span>",
             "</div>",
         ]
     },
@@ -53,7 +53,7 @@
         "prefix": "primeng-static-label-input",
         "body": [
             "<div class=\"p-field p-col$0\">",
-                "\t<input pInputText placeholder=\"$1\">",
+            "\t<input pInputText placeholder=\"$1\">",
             "</div>",
         ]
     },
@@ -62,8 +62,35 @@
         "prefix": "primeng-static-label-drop-down",
         "body": [
             "<div class=\"p-field p-col$0\">",
-                "\t<p-dropdown placeholder=\"$1\"></p-dropdown>",
+            "\t<p-dropdown placeholder=\"$1\"></p-dropdown>",
             "</div>",
+        ]
+    },
+    "PrimeNG page panel": {
+        "scope": "html",
+        "prefix": "primeng-page-panel",
+        "body": [
+            "<p-panel header=\"$1\">",
+            "\t<div class=\"app-mx-5r\">",
+            "\t\t<div class=\"p-fluid p-formgrid p-grid app-col-px-2r\">",
+            "\t\t\t$0" ,
+            "\t\t</div>",
+            "\t</div>",
+            "</p-panel>"
+        ]
+    },
+    "Persian Calendar": {
+        "scope": "html",
+        "prefix": "persian-calendar",
+        "body": [
+            "<p-persian-calendar placeholder=\"$0تاریخ\" yearRange=\"1300:1410\" class=\"app-persian-calendar-style\"></p-persian-calendar>"
+        ]
+    },
+    "Rial Input": {
+        "scope": "html",
+        "prefix": "rial-input",
+        "body": [
+            "<p-inputNumber mode=\"decimal\" [useGrouping]=\"true\" suffix=\" ریال\" [minFractionDigits]=\"0\" placeholder=\"مبلغ$0\"></p-inputNumber>"
         ]
     },
 }
