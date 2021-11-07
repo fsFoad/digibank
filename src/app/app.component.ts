@@ -51,7 +51,8 @@ export class AppComponent implements OnInit, OnDestroy
         private _fuseSidebarService: FuseSidebarService,
         private _fuseSplashScreenService: FuseSplashScreenService,
         private _fuseTranslationLoaderService: FuseTranslationLoaderService,
-        private _translateService: TranslateService,
+        // this line causes cyclic dependency error
+        // private _translateService: TranslateService,
         private _platform: Platform,
         primeNgConfig: PrimeNGConfig,
     )
@@ -69,13 +70,11 @@ export class AppComponent implements OnInit, OnDestroy
         this._fuseNavigationService.setCurrentNavigation('main');
 
         // Add languages
-        this._translateService.addLangs(['fa', 'en','ar']);
+        // this._translateService.addLangs(['fa', 'en','ar']);
 
         // Set the default language
-        // this._translateService.setDefaultLang('en');
-        // this._translateService.setDefaultLang('ar');
-        this._translateService.setDefaultLang(environment.defaultLanguage);
-        this._translateService.use(environment.defaultLanguage);
+        // this._translateService.setDefaultLang(environment.defaultLanguage);
+        // this._translateService.use(environment.defaultLanguage);
 
         // Set the navigation translations
         this._fuseTranslationLoaderService.loadTranslations(navigationEnglish, navigationTurkish);
