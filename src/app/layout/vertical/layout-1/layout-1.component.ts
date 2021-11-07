@@ -188,6 +188,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 translate: 'ثبت حواله های اینترنتی',
                 type: 'item',
                 icon: 'account_balance_wallet',
+                routerLink: 'internetRemittanceRegistration'
               },
               {
                 id: 'real',

@@ -47,6 +47,7 @@ import { DaryaftFileSoorathesabComponent } from "./daryaft-file-soorathesab/dary
 import { InternetRemittanceReportComponent } from "./internet-remittance-report/internet-remittance-report.component";
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { HomePageComponent } from "./home-page/home-page.component";
+import { InternetRemittanceRegisterationComponent } from "./internet-remittance-registeration/internet-remittance-registeration.component";
 
 
 const routes = [
@@ -260,11 +261,21 @@ const routes = [
         component: InternetRemittanceReportComponent,
     },
     {
+        path: 'internetRemittanceRegistration',
+        component: InternetRemittanceRegisterationComponent,
+    },
+
+
+
+
+
+
+    // these should be last
+    {
         path: '',
+        pathMatch: 'full',
         component: HomePageComponent,
     },
-    
-    // this one should be last
     {
         path: '**',
         component: NotFoundComponent,

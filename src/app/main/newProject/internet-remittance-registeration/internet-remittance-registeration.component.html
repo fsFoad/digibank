@@ -1,0 +1,41 @@
+<p-panel header="ثبت حواله اینترنتی">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span>جمع مبلغ حواله‌های روز جاری:</span>
+        <span></span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-4">
+        <p-dropdown [required]="true" placeholder="انتقال از" [options]="acItems"></p-dropdown>
+      </div>  
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <input required pInputText placeholder="انتقال به">
+      </div>
+      <div class="p-field p-col-3 p-d-flex p-ai-center">
+        <p-checkbox name="organizationalAccounts" [binary]="true" [(ngModel)]="organizationalAccount" label="حساب‌های شرکت/سازمان"></p-checkbox>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <input pInputText placeholder="شناسه واریز کننده">
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" placeholder="مبلغ حواله"></p-inputNumber>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <input pInputText placeholder="بابت">
+      </div>
+    </div>
+    <div class="p-d-flex p-jc-center app-child-px-4r">
+      <button pButton label="تائید"></button>
+    </div>
+  </div>
+</p-panel>

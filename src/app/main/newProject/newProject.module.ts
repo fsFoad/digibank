@@ -91,6 +91,7 @@ import { DaryaftFileSoorathesabComponent } from './daryaft-file-soorathesab/dary
 import { InternetRemittanceReportComponent } from './internet-remittance-report/internet-remittance-report.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { InternetRemittanceRegisterationComponent } from './internet-remittance-registeration/internet-remittance-registeration.component';
 
 @NgModule({
     declarations: [
@@ -154,6 +155,7 @@ import { HomePageComponent } from './home-page/home-page.component';
         InternetRemittanceReportComponent,
         NotFoundComponent,
         HomePageComponent,
+        InternetRemittanceRegisterationComponent,
     ],
     imports: [
         CommonModule,
