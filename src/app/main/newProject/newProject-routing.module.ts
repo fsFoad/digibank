@@ -1,43 +1,45 @@
-import {NgModule} from "@angular/core";
-import {CommonModule} from "@angular/common";
-import {RouterModule} from "@angular/router";
-import {ReportBankTransferComponent} from './report-bank-transfer/report-bank-transfer.component';
-import {PayaTakTransferComponent} from './paya-tak-transfer/paya-tak-transfer.component';
-import {SantaRegisterTransferComponent} from './santa-register-transfer/santa-register-transfer.component';
-import {RegularPayaRegisterTransferComponent} from './regular-paya-register-transfer/regular-paya-register-transfer.component';
-import {RegisterPayaTransferComponent} from './register-paya-transfer/register-paya-transfer.component';
-import {BankpayaChargeComponent} from './bankpaya-charge/bankpaya-charge.component';
-import {ReportPayaBankComponent} from './report-paya-bank/report-paya-bank.component';
-import {BanckPayaGhabzComponent} from './banck-paya-ghabz/banck-paya-ghabz.component';
-import {EnsedadBonCardComponent} from './ensedad-bon-card/ensedad-bon-card.component';
-import {RafeEnsedadBonCardComponent} from './rafe-ensedad-bon-card/rafe-ensedad-bon-card.component';
-import {EnsedadWalletComponent} from './ensedad-wallet/ensedad-wallet.component';
-import {ChargWalletComponent} from './charg-wallet/charg-wallet.component';
-import {ReportYektaVarrizComponent} from './report-yekta-varriz/report-yekta-varriz.component';
-import {ReportGhabzComponent} from './report-ghabz/report-ghabz.component';
-import {BillComponent} from './bill/bill.component';
-import {BillingBonCardComponent} from './billing-bon-card/billing-bon-card.component';
-import {ReportCheckBardashtComponent} from './report-check-bardasht/report-check-bardasht.component';
-import {InquiryCheckComponent} from './inquiry-check/inquiry-check.component';
-import {SearchYektaComponent} from './search-yekta/search-yekta.component';
-import {BranchPayComponent} from './branch-pay/branch-pay.component';
-import {RegisterGhabzComponent} from './register-ghabz/register-ghabz.component';
-import {RegisterBonCardComponent} from './register-bon-card/register-bon-card.component';
-import {CreatWalletComponent} from './creat-wallet/creat-wallet.component';
-import {CreateYektaComponent} from './create-yekta/create-yekta.component';
-import {GroupGhabzComponent} from './group-ghabz/group-ghabz.component';
-import {WalletTransactionComponent} from './wallet-transaction/wallet-transaction.component';
-import {YektaListComponent} from './yekta-list/yekta-list.component';
-import {ReportClearComponent} from './report-clear/report-clear.component';
-import {ReportStatusWalletComponent} from './report-status-wallet/report-status-wallet.component';
-import {SubmitClearComponent} from './submit-clear/submit-clear.component';
-import {SubmitCheckComponent} from './submit-check/submit-check.component';
-import {TashilatListComponent} from './tashilat-list/tashilat-list.component';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
+import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
+import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
+import { SantaRegisterTransferComponent } from './santa-register-transfer/santa-register-transfer.component';
+import { RegularPayaRegisterTransferComponent } from './regular-paya-register-transfer/regular-paya-register-transfer.component';
+import { RegisterPayaTransferComponent } from './register-paya-transfer/register-paya-transfer.component';
+import { BankpayaChargeComponent } from './bankpaya-charge/bankpaya-charge.component';
+import { ReportPayaBankComponent } from './report-paya-bank/report-paya-bank.component';
+import { BanckPayaGhabzComponent } from './banck-paya-ghabz/banck-paya-ghabz.component';
+import { EnsedadBonCardComponent } from './ensedad-bon-card/ensedad-bon-card.component';
+import { RafeEnsedadBonCardComponent } from './rafe-ensedad-bon-card/rafe-ensedad-bon-card.component';
+import { EnsedadWalletComponent } from './ensedad-wallet/ensedad-wallet.component';
+import { ChargWalletComponent } from './charg-wallet/charg-wallet.component';
+import { ReportYektaVarrizComponent } from './report-yekta-varriz/report-yekta-varriz.component';
+import { ReportGhabzComponent } from './report-ghabz/report-ghabz.component';
+import { BillComponent } from './bill/bill.component';
+import { BillingBonCardComponent } from './billing-bon-card/billing-bon-card.component';
+import { ReportCheckBardashtComponent } from './report-check-bardasht/report-check-bardasht.component';
+import { InquiryCheckComponent } from './inquiry-check/inquiry-check.component';
+import { SearchYektaComponent } from './search-yekta/search-yekta.component';
+import { BranchPayComponent } from './branch-pay/branch-pay.component';
+import { RegisterGhabzComponent } from './register-ghabz/register-ghabz.component';
+import { RegisterBonCardComponent } from './register-bon-card/register-bon-card.component';
+import { CreatWalletComponent } from './creat-wallet/creat-wallet.component';
+import { CreateYektaComponent } from './create-yekta/create-yekta.component';
+import { GroupGhabzComponent } from './group-ghabz/group-ghabz.component';
+import { WalletTransactionComponent } from './wallet-transaction/wallet-transaction.component';
+import { YektaListComponent } from './yekta-list/yekta-list.component';
+import { ReportClearComponent } from './report-clear/report-clear.component';
+import { ReportStatusWalletComponent } from './report-status-wallet/report-status-wallet.component';
+import { SubmitClearComponent } from './submit-clear/submit-clear.component';
+import { SubmitCheckComponent } from './submit-check/submit-check.component';
+import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
 import { OrganizationalEntityManagerComponent } from "./organizational-entity-manager/organizational-entity-manager.component";
 import { PersonEditorComponent } from "./person-editor/person-editor.component";
-import {CardBoardComponent} from './card-board/card-board.component';
-import {CardBoardPayaComponent} from "./card-board-paya/card-board-paya.component";
-import {Bill2Component} from "./bill2/bill2.component";
+import { CardBoardComponent } from './card-board/card-board.component';
+import { CardBoardPayaComponent } from "./card-board-paya/card-board-paya.component";
+import { Bill2Component } from "./bill2/bill2.component";
+import { YourRialAccountsComponent } from "./your-rial-accounts/your-rial-accounts.component";
+import { YourCurrencyAccountsComponent } from "./your-currency-accounts/your-currency-accounts.component";
 
 const routes = [
     {
@@ -209,18 +211,26 @@ const routes = [
         path: 'person-editor',
         component: PersonEditorComponent,
     },
-  {
-    path: 'cardBoard',
-    component: CardBoardComponent,
-  },
-  {
-    path: 'cardBoardPaya',
-    component: CardBoardPayaComponent,
-  },
-  {
-    path: 'oldBill',
-    component: Bill2Component,
-  },
+    {
+        path: 'cardBoard',
+        component: CardBoardComponent,
+    },
+    {
+        path: 'cardBoardPaya',
+        component: CardBoardPayaComponent,
+    },
+    {
+        path: 'oldBill',
+        component: Bill2Component,
+    },
+    {
+        path: 'yourRialAccounts',
+        component: YourRialAccountsComponent,
+    },
+    {
+        path: 'yourCurrencyAccounts',
+        component: YourCurrencyAccountsComponent,
+    },
 
 ]
 

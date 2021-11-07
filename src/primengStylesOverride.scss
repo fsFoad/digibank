@@ -288,6 +288,19 @@ p-menubar .pi-angle-right::before {
 
 }
 
+// fix incorrect margin in rtl context
+.p-button .p-button-icon-right {
+	margin-inline-start: 0.5rem;
+	margin-inline-end: 0rem;
+}
+
+// fix incorrect margin in rtl context
+.p-button .p-button-icon-left {
+	margin-inline-start: 0rem;
+	margin-inline-end: 0.5rem;
+}
+
+
 // shs
 
 .p-float-label input:focus ~ label,

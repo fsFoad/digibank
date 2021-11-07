@@ -126,6 +126,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                   translate: 'حسابهای ریالی شما',
                   type: 'item',
                   icon: 'account_balance_wallet',
+                  routerLink: 'yourRialAccounts'
                 },
                 {
                   id: 'real',
@@ -133,6 +134,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                   translate: 'حسابهای ارزی شما',
                   type: 'item',
                   icon: 'account_balance_wallet',
+                  routerLink: 'yourCurrencyAccounts'
                 },
                 {
                   id: 'real',

@@ -79,6 +79,8 @@ import { CardBoardComponent } from './card-board/card-board.component';
 import { CardBoardPayaComponent } from './card-board-paya/card-board-paya.component';
 import { DetailsReliableRemittanceRequestComponent } from './details-reliable-remittance-request/details-reliable-remittance-request.component';
 import { Bill2Component } from './bill2/bill2.component';
+import { YourRialAccountsComponent } from './your-rial-accounts/your-rial-accounts.component';
+import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-currency-accounts.component';
 
 @NgModule({
     declarations: [
@@ -132,6 +134,8 @@ import { Bill2Component } from './bill2/bill2.component';
         CardBoardPayaComponent,
         DetailsReliableRemittanceRequestComponent,
         Bill2Component,
+        YourRialAccountsComponent,
+        YourCurrencyAccountsComponent,
     ],
     imports: [
         CommonModule,
