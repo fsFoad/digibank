@@ -1,6 +1,6 @@
 <p-panel header="کارتابل حواله ساتنا">
   <p-card *ngIf="!detailsFlag">
-    <p-table [value]="tempTable">
+    <p-table [value]="satnaRows">
       <ng-template pTemplate="header">
         <tr>
           <th translate>ردیف</th>
@@ -15,29 +15,31 @@
           <th translate>عملیات</th>
         </tr>
       </ng-template>
-      <ng-template let-i="rowIndex" pTemplate="body" let-service>
+      <ng-template let-i="rowIndex" pTemplate="body" let-row>
         <tr>
           <td>{{i + 1}}</td>
-          <td>{{service.TemporaryTransferNumber}}</td>
-          <td>{{service.SourceAccountNumber}}</td>
-          <td>{{service.status}}</td>
-          <td>{{service.remittanceRecipientName}}</td>
-          <td>{{service.amounts|addCommaSeparator}}</td>
-          <td>{{service.des}}</td>
-          <td>{{service.registrar}}</td>
-          <td>{{service.registrationDate|castToDate}}</td>
+          <td>{{row.temporaryTransferNumber}}</td>
+          <td>{{row.sourceAccountNumber}}</td>
+          <td>{{row.status}}</td>
+          <td>{{row.remittanceRecipientName}}</td>
+          <td>{{row.amounts|addCommaSeparator}}</td>
+          <td>{{row.des}}</td>
+          <td>{{row.registrar}}</td>
+          <td>{{row.registrationDate|castToDate}}</td>
           <td>
-            <button pButton icon="pi pi-chevron-circle-right" (click)="editServiceRow(service)"></button>&nbsp;
+            <button pButton icon="pi pi-chevron-circle-right" (click)="selectRow(row)"></button>&nbsp;
           </td>
         </tr>
       </ng-template>
     </p-table>
   </p-card>
-  <app-specifications-request-satna *ngIf="detailsFlag" [inputDetails]="fsList"
-                                           (close)="onClose($event)"></app-specifications-request-satna>
+
+  <app-specifications-request-satna *ngIf="detailsFlag" [satnaRow]="selectedRow" (close)="onClose($event)">
+  </app-specifications-request-satna>
+  
   <div class="p-d-flex p-flex-wrap Fs-mlf" *ngIf="!detailsFlag">
     <div class="p-md-12 FS-mt">
-      <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="tempTable=fsList;"></button>&nbsp;
+      <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="getSatnaRows()"></button>&nbsp;
     </div>
   </div>
 </p-panel>
