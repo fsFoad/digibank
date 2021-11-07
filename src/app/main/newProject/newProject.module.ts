@@ -84,6 +84,7 @@ import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-cur
 import { CardBoardSatnaComponent } from './card-board-satna/card-board-satna.component';
 import { SpecificationsRequestSatnaComponent } from './specifications-request-satna/specifications-request-satna.component';
 import {ConfirmDialogModule} from "primeng/confirmdialog";
+import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
 
 @NgModule({
     declarations: [
@@ -141,6 +142,7 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
         YourCurrencyAccountsComponent,
         CardBoardSatnaComponent,
         SpecificationsRequestSatnaComponent,
+        SooratHesabComponent,
     ],
     imports: [
         CommonModule,

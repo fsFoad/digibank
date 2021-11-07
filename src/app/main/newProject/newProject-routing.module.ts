@@ -41,6 +41,7 @@ import { Bill2Component } from "./bill2/bill2.component";
 import { YourRialAccountsComponent } from "./your-rial-accounts/your-rial-accounts.component";
 import { YourCurrencyAccountsComponent } from "./your-currency-accounts/your-currency-accounts.component";
 import {CardBoardSatnaComponent} from "./card-board-satna/card-board-satna.component";
+import { SooratHesabComponent } from "./soorat-hesab/soorat-hesab.component";
 
 const routes = [
     {
@@ -236,6 +237,10 @@ const routes = [
     path: 'cardBoardSatna',
     component: CardBoardSatnaComponent,
   },
+    {
+        path: 'sooratHesab',
+        component: SooratHesabComponent,
+    },
 
 ]
 

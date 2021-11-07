@@ -149,6 +149,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 translate: 'گردش حسابهای ',
                 type: 'item',
                 icon: 'account_balance_wallet',
+                routerLink: 'sooratHesab'
               },
               {
                 id: 'real',
