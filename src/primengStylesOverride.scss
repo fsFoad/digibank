@@ -308,6 +308,11 @@ p-menubar .pi-angle-right::before {
     margin-inline-end: 0rem;
 }
 
+.p-checkbox-label {
+	margin-inline-start: .5rem;
+    margin-inline-end: 0rem;
+}
+
 .p-float-label input:focus ~ label,
 .p-float-label input.p-filled ~ label,
 .p-float-label textarea:focus ~ label,
