@@ -1,0 +1,43 @@
+<p-panel header="گزارش حواله‌های اینترنتی">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <p-dropdown placeholder="شماره حساب" [options]="acItems"></p-dropdown>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style">
+        </p-persian-calendar>
+      </div>
+      <div class="p-field p-col-3">
+        <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410" class="app-persian-calendar-style">
+        </p-persian-calendar>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <p-dropdown placeholder="وضعیت حواله" [options]="statusItems"></p-dropdown>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" placeholder="مبلغ حواله از (ریال)"></p-inputNumber>
+      </div>
+      <div class="p-field p-col-3">
+        <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" placeholder="مبلغ حواله تا (ریال)"></p-inputNumber>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col p-d-flex app-gap-3r">
+        <p-checkbox [(ngModel)]="createReportFile" [binary]="true" label="تهیه گزارش به صورت دریافت فایل"></p-checkbox>
+        <p-radioButton name="format" [(ngModel)]="format" value="html" label="HTML" [disabled]="!createReportFile"></p-radioButton>
+        <p-radioButton name="format" [(ngModel)]="format" value="csv" label="CSV" [disabled]="!createReportFile"></p-radioButton>
+        <p-radioButton name="format" [(ngModel)]="format" value="pdf" label="PDF" [disabled]="!createReportFile"></p-radioButton>
+      </div>
+    </div>
+    <div class="p-d-flex p-jc-center app-child-px-4r">
+      <button pButton label="مشاهده"></button>
+    </div>
+  </div>
+</p-panel>

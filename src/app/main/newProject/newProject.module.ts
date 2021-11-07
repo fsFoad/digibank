@@ -88,6 +88,9 @@ import {ConfirmDialogModule} from "primeng/confirmdialog";
 import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
 import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component';
 import { DaryaftFileSoorathesabComponent } from './daryaft-file-soorathesab/daryaft-file-soorathesab.component';
+import { InternetRemittanceReportComponent } from './internet-remittance-report/internet-remittance-report.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
     declarations: [
@@ -148,6 +151,9 @@ import { DaryaftFileSoorathesabComponent } from './daryaft-file-soorathesab/dary
         SooratHesabComponent,
         GardeshRizEnteghalVojoohComponent,
         DaryaftFileSoorathesabComponent,
+        InternetRemittanceReportComponent,
+        NotFoundComponent,
+        HomePageComponent,
     ],
     imports: [
         CommonModule,

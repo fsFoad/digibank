@@ -44,6 +44,10 @@ import { CardBoardSatnaComponent } from "./card-board-satna/card-board-satna.com
 import { SooratHesabComponent } from "./soorat-hesab/soorat-hesab.component";
 import { GardeshRizEnteghalVojoohComponent } from "./gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component";
 import { DaryaftFileSoorathesabComponent } from "./daryaft-file-soorathesab/daryaft-file-soorathesab.component";
+import { InternetRemittanceReportComponent } from "./internet-remittance-report/internet-remittance-report.component";
+import { NotFoundComponent } from "./not-found/not-found.component";
+import { HomePageComponent } from "./home-page/home-page.component";
+
 
 const routes = [
     {
@@ -251,7 +255,20 @@ const routes = [
         path: 'daryaftFileSooratHesab',
         component: DaryaftFileSoorathesabComponent,
     },
-
+    {
+        path: 'internetRemittanceReport',
+        component: InternetRemittanceReportComponent,
+    },
+    {
+        path: '',
+        component: HomePageComponent,
+    },
+    
+    // this one should be last
+    {
+        path: '**',
+        component: NotFoundComponent,
+    },
 ]
 
 @NgModule({
