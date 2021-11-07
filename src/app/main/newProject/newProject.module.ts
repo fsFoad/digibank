@@ -82,6 +82,9 @@ import { DetailsReliableRemittanceRequestComponent } from './details-reliable-re
 import { Bill2Component } from './bill2/bill2.component';
 import { YourRialAccountsComponent } from './your-rial-accounts/your-rial-accounts.component';
 import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-currency-accounts.component';
+import { CardBoardSatnaComponent } from './card-board-satna/card-board-satna.component';
+import { SpecificationsRequestSatnaComponent } from './specifications-request-satna/specifications-request-satna.component';
+import {ConfirmDialogModule} from "primeng/confirmdialog";
 import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
 import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component';
 
@@ -139,6 +142,8 @@ import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh
         Bill2Component,
         YourRialAccountsComponent,
         YourCurrencyAccountsComponent,
+        CardBoardSatnaComponent,
+        SpecificationsRequestSatnaComponent,
         SooratHesabComponent,
         GardeshRizEnteghalVojoohComponent,
     ],
@@ -175,6 +180,7 @@ import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh
         DividerModule,
         InputSwitchModule,
         RadioButtonModule,
+        ConfirmDialogModule,
     ],
     exports: [
         ReportBankTransferComponent

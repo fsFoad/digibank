@@ -1,4 +1,4 @@
-<p-panel header="کارتابل حواله پایا">
+<p-panel header="کارتابل حواله ساتنا">
   <p-card *ngIf="!detailsFlag">
     <p-table [value]="tempTable">
       <ng-template pTemplate="header">
@@ -6,9 +6,10 @@
           <th translate>ردیف</th>
           <th translate>شماره حواله موقت</th>
           <th translate>شماره حساب مبدا</th>
-          <th translate>مبلغ کل</th>
-          <th translate>تاریخ موثر</th>
           <th translate>وضعیت</th>
+          <th translate>نام گیرنده حواله</th>
+          <th translate>مبلغ حواله (ریال)</th>
+          <th translate>شرح</th>
           <th translate>ثبت کننده</th>
           <th translate>تاریخ ثبت</th>
           <th translate>عملیات</th>
@@ -19,9 +20,10 @@
           <td>{{i + 1}}</td>
           <td>{{service.TemporaryTransferNumber}}</td>
           <td>{{service.SourceAccountNumber}}</td>
-          <td>{{service.amounts|addCommaSeparator}}</td>
-          <td>{{service.dateEffective|castToDate}}</td>
           <td>{{service.status}}</td>
+          <td>{{service.remittanceRecipientName}}</td>
+          <td>{{service.amounts|addCommaSeparator}}</td>
+          <td>{{service.des}}</td>
           <td>{{service.registrar}}</td>
           <td>{{service.registrationDate|castToDate}}</td>
           <td>
@@ -31,8 +33,8 @@
       </ng-template>
     </p-table>
   </p-card>
-  <app-details-reliable-remittance-request *ngIf="detailsFlag" [inputDetails]="fsList"
-                                           (close)="onClose($event)"></app-details-reliable-remittance-request>
+  <app-specifications-request-satna *ngIf="detailsFlag" [inputDetails]="fsList"
+                                           (close)="onClose($event)"></app-specifications-request-satna>
   <div class="p-d-flex p-flex-wrap Fs-mlf" *ngIf="!detailsFlag">
     <div class="p-md-12 FS-mt">
       <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="tempTable=fsList;"></button>&nbsp;
