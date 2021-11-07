@@ -95,8 +95,9 @@
     </p-table>
   </p-card>
   <div class="p-md-12 FS-mt">
-    <button id="btnConfirmation" class="p-button-info" pButton label="تایید" disabled></button>&nbsp;
-    <button id="btnCancel" class="p-button-info" pButton label="انصراف" disabled></button>&nbsp;
+    <button id="btnConfirmation" class="p-button-info" pButton label="تایید" (click)="confirm()"></button>&nbsp;
+    <button id="btnCancel" class="p-button-info" pButton label="انصراف" (click)="onClose()" ></button>&nbsp;
     <button id="btnBack" class="p-button-info" pButton label="بازگشت"  (click)="onClose()" ></button>&nbsp;
   </div>
 </p-card>
+<p-confirmDialog header="مشترک گرامی به اطلاع می رساند:" acceptLabel="تایید" [rejectVisible]="false" [closable]="false"></p-confirmDialog>

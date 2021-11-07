@@ -1,13 +1,14 @@
-import {Component, Input, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ConfirmationService} from "primeng/api";
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
 
 @Component({
-  selector: 'app-details-reliable-remittance-request',
-  templateUrl: './details-reliable-remittance-request.component.html',
-  styleUrls: ['./details-reliable-remittance-request.component.scss'],
+  selector: 'app-specifications-request-satna',
+  templateUrl: './specifications-request-satna.component.html',
+  styleUrls: ['./specifications-request-satna.component.scss'],
   providers: [ConfirmationService]
 })
-export class DetailsReliableRemittanceRequestComponent implements OnInit {
+export class SpecificationsRequestSatnaComponent implements OnInit {
   @Input() inputDetails
   @Output() close = new EventEmitter<string>();
   SourceAccountNumber;
@@ -15,10 +16,17 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
   registrar;
   dateEffective;
   registrationDate;
-  ibon;
+  ibonOrigin;
   verificationCode;
   remittancesNumber;
-
+  accountTypeOrigin;
+  accountTypeDestination;
+  nationalCode;
+  shahab;
+  ibonDestination;
+  des;
+  postalCode;
+  remittanceRecipientName;
   table1List: {
     recipientRemittance: string,
     ibonRecipient: string,
@@ -49,18 +57,28 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
 
     debugger
     this.SourceAccountNumber = this.inputDetails.SourceAccountNumber;
+    this.accountTypeOrigin = this.inputDetails.accountTypeOrigin;
+    this.accountTypeDestination = this.inputDetails.accountTypeDestination;
+    this.nationalCode = this.inputDetails.nationalCode;
+    this.shahab = this.inputDetails.shahab;
+    this.ibonOrigin = this.inputDetails.ibonOrigin;
+    this.ibonDestination = this.inputDetails.ibonDestination;
+    this.remittanceRecipientName = this.inputDetails.remittanceRecipientName;
+    this.des = this.inputDetails.des;
+    this.postalCode = this.inputDetails.postalCode;
     this.amounts = this.inputDetails.amounts;
     this.registrar = this.inputDetails.registrar;
     this.dateEffective = this.inputDetails.dateEffective;
     this.registrationDate = this.inputDetails.registrationDate;
-    this.ibon = this.inputDetails.ibon;
     this.verificationCode = this.inputDetails.verificationCode;
     this.remittancesNumber = this.inputDetails.remittancesNumber;
 
     debugger
 
     switch (this.registrar) {
-      case 'علی محمدی': {
+
+      case 'رامین کوهی': {
+        debugger
         this.table1List = [{
           recipientRemittance: "علی کمالی",
           ibonRecipient: 'IR370610000000100842541368',
@@ -76,7 +94,8 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
         }];
         break;
       }
-      case 'محمد سروری': {
+      case 'شهاب شکوری': {
+        debugger
         this.table1List = [{
           recipientRemittance: "محمد حسینی",
           ibonRecipient: 'IR956412000000100845246851',
@@ -92,7 +111,8 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
         }];
         break;
       }
-      case 'فرهاد کشوری': {
+      case 'شهاب شکوری': {
+        debugger
         this.table1List = [{
           recipientRemittance: 'عباس همایونی',
           ibonRecipient: 'IR956286000000195745286421',
@@ -111,7 +131,7 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
     }
     debugger
     switch (this.registrar) {
-      case 'علی محمدی': {
+      case 'رامین کوهی': {
         this.table2List = [{
           fullName: 'حسین بهجتی',
           verificationType: 'اختیاری',
@@ -121,7 +141,7 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
         }];
         break;
       }
-      case 'محمد سروری': {
+      case 'شهاب شکوری': {
         this.table2List = [{
           fullName: 'ایرج خداپرست',
           verificationType: 'اختیاری',
@@ -131,7 +151,7 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
         }];
         break;
       }
-      case 'فرهاد کشوری': {
+      case 'مهدی آل منصور': {
         this.table2List = [{
           fullName: 'سیاوش راسخی',
           verificationType: 'اختیاری',
@@ -151,8 +171,8 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
   }
   confirm(){
     this.confirmationService.confirm({
-      message: "مطابق ابلاغیه بانک مرکزی نحوه محاسبه کارمزد حواله پایا 0.01 درصد حواله با حداقل کارمزد2،000 ریال و حداکثر کارمزد 25،000 ریال می باشد که با تایید نهایی از حساب مبدا برداشت خواهد شد."
-      ,
+      message: "مطابق ابلاغیه بانک مرکزی نحوه محاسبه کارمزد ساتنا 0.02 درصد حواله با حداقل کارمزد 30،000 ریال و حداکثر کارمزد 250،000 ریال می باشد که با تایید نهایی از حساب مبدا برداشت خواهد شد."
+    ,
       accept: () => {
         this.onClose()
         //Actual logic to perform a confirmation

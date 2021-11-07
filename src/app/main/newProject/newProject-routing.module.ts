@@ -40,6 +40,7 @@ import { CardBoardPayaComponent } from "./card-board-paya/card-board-paya.compon
 import { Bill2Component } from "./bill2/bill2.component";
 import { YourRialAccountsComponent } from "./your-rial-accounts/your-rial-accounts.component";
 import { YourCurrencyAccountsComponent } from "./your-currency-accounts/your-currency-accounts.component";
+import {CardBoardSatnaComponent} from "./card-board-satna/card-board-satna.component";
 
 const routes = [
     {
@@ -231,6 +232,10 @@ const routes = [
         path: 'yourCurrencyAccounts',
         component: YourCurrencyAccountsComponent,
     },
+  {
+    path: 'cardBoardSatna',
+    component: CardBoardSatnaComponent,
+  },
 
 ]
 

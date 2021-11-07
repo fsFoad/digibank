@@ -1,0 +1,81 @@
+<p-card header="مشخصات درخواست حواله ساتنا">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-text-right">
+            <label>شماره حساب مبدا : {{SourceAccountNumber}}</label>
+            <br>
+            <label>نوع حساب مبدا : {{accountTypeOrigin}}</label>
+            <br>
+            <label>نوع حساب مقصد : {{accountTypeDestination}}</label>
+            <br>
+            <label>مبلغ حواله : {{amounts|addCommaSeparator}}ریال</label>
+            <br>
+            <label>کد ملی / شناسه ملی / شماره فراگیر ذینفع : {{nationalCode}}</label>
+            <br>
+            <label>کد شهاب ذینفع : {{shahab}}</label>
+            <br>
+            <label>تاریخ ثبت : {{registrationDate|castToDate}}</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="p-d-flex  p-ai-stretch">
+          <div class="p-col p-d-flex p-flex-column">
+            <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+              <div class="p-text-right">
+                <label>شماره شبا مبدا : {{ibonOrigin}}</label>
+                <br>
+                <label>شماره شبا مقصد : {{ibonDestination}}</label>
+                <br>
+                <label>گیرنده حواله : {{remittanceRecipientName}}</label>
+                <br>
+                <label>شرح : {{des}}</label>
+                <br>
+                <label>کدپستی ذینفع : {{postalCode}}</label>
+                <br>
+                <label>ثبت کننده : {{registrar}}</label>
+                <br>
+                <label>شناسه واریز کننده : {{""}}</label>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <p-card header="فهرست تاییدکنندگان">
+    <p-table [value]="table2List">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>نام و نام خانوادگی</th>
+          <th translate>نوع تایید</th>
+          <th translate>وضعیت تایید</th>
+          <th translate>تاریخ</th>
+          <th translate>شرح</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-service>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{service.fullName}}</td>
+          <td>{{service.verificationType}}</td>
+          <td>{{service.verificationStatus}}</td>
+          <td>{{service.history|castToDate}}</td>
+          <td>{{service.des}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+  <div class="p-md-12 FS-mt">
+    <button id="btnConfirmation" class="p-button-info" pButton label="تایید"(click)="confirm()" ></button>&nbsp;
+    <button id="btnCancel" class="p-button-info" pButton label="انصراف" (click)="onClose()"></button>&nbsp;
+    <button id="btnBack" class="p-button-info" pButton label="بازگشت" (click)="onClose()"></button>&nbsp;
+  </div>
+</p-card>
+<p-confirmDialog header="مشترک گرامی به اطلاع می رساند:" acceptLabel="تایید" [rejectVisible]="false" [closable]="false"></p-confirmDialog>

@@ -259,11 +259,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 // routerLink: '/groupGhabz',
               },
               {
-                id: 'groupGhabz',
+                id: 'cardBoardSatna',
                 label: 'کارتابل حواله ساتنا',
                 translate: 'کارتابل حواله ساتنا',
                 type: 'item',
-                // routerLink: '/groupGhabz',
+                routerLink: '/cardBoardSatna',
               },
               {
                 id: 'groupGhabz',

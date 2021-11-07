@@ -81,6 +81,9 @@ import { DetailsReliableRemittanceRequestComponent } from './details-reliable-re
 import { Bill2Component } from './bill2/bill2.component';
 import { YourRialAccountsComponent } from './your-rial-accounts/your-rial-accounts.component';
 import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-currency-accounts.component';
+import { CardBoardSatnaComponent } from './card-board-satna/card-board-satna.component';
+import { SpecificationsRequestSatnaComponent } from './specifications-request-satna/specifications-request-satna.component';
+import {ConfirmDialogModule} from "primeng/confirmdialog";
 
 @NgModule({
     declarations: [
@@ -136,6 +139,8 @@ import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-cur
         Bill2Component,
         YourRialAccountsComponent,
         YourCurrencyAccountsComponent,
+        CardBoardSatnaComponent,
+        SpecificationsRequestSatnaComponent,
     ],
     imports: [
         CommonModule,
@@ -169,6 +174,7 @@ import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-cur
         ChipsModule,
         DividerModule,
         InputSwitchModule,
+        ConfirmDialogModule,
     ],
     exports: [
         ReportBankTransferComponent
