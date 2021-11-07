@@ -165,6 +165,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 translate: 'دریافت فایل صورتحسابها',
                 type: 'item',
                 icon: 'account_balance_wallet',
+                routerLink: 'daryaftFileSooratHesab'
               },
               {
                 id: 'real',

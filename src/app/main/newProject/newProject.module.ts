@@ -87,6 +87,7 @@ import { SpecificationsRequestSatnaComponent } from './specifications-request-sa
 import {ConfirmDialogModule} from "primeng/confirmdialog";
 import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
 import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component';
+import { DaryaftFileSoorathesabComponent } from './daryaft-file-soorathesab/daryaft-file-soorathesab.component';
 
 @NgModule({
     declarations: [
@@ -146,6 +147,7 @@ import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh
         SpecificationsRequestSatnaComponent,
         SooratHesabComponent,
         GardeshRizEnteghalVojoohComponent,
+        DaryaftFileSoorathesabComponent,
     ],
     imports: [
         CommonModule,

@@ -40,9 +40,10 @@ import { CardBoardPayaComponent } from "./card-board-paya/card-board-paya.compon
 import { Bill2Component } from "./bill2/bill2.component";
 import { YourRialAccountsComponent } from "./your-rial-accounts/your-rial-accounts.component";
 import { YourCurrencyAccountsComponent } from "./your-currency-accounts/your-currency-accounts.component";
-import {CardBoardSatnaComponent} from "./card-board-satna/card-board-satna.component";
+import { CardBoardSatnaComponent } from "./card-board-satna/card-board-satna.component";
 import { SooratHesabComponent } from "./soorat-hesab/soorat-hesab.component";
 import { GardeshRizEnteghalVojoohComponent } from "./gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component";
+import { DaryaftFileSoorathesabComponent } from "./daryaft-file-soorathesab/daryaft-file-soorathesab.component";
 
 const routes = [
     {
@@ -234,10 +235,10 @@ const routes = [
         path: 'yourCurrencyAccounts',
         component: YourCurrencyAccountsComponent,
     },
-  {
-    path: 'cardBoardSatna',
-    component: CardBoardSatnaComponent,
-  },
+    {
+        path: 'cardBoardSatna',
+        component: CardBoardSatnaComponent,
+    },
     {
         path: 'sooratHesab',
         component: SooratHesabComponent,
@@ -245,6 +246,10 @@ const routes = [
     {
         path: 'gardeshRizEnteghalVojooh',
         component: GardeshRizEnteghalVojoohComponent,
+    },
+    {
+        path: 'daryaftFileSooratHesab',
+        component: DaryaftFileSoorathesabComponent,
     },
 
 ]
