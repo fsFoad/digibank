@@ -81,6 +81,7 @@ import { DetailsReliableRemittanceRequestComponent } from './details-reliable-re
 import { Bill2Component } from './bill2/bill2.component';
 import { YourRialAccountsComponent } from './your-rial-accounts/your-rial-accounts.component';
 import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-currency-accounts.component';
+import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
 
 @NgModule({
     declarations: [
@@ -136,6 +137,7 @@ import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-cur
         Bill2Component,
         YourRialAccountsComponent,
         YourCurrencyAccountsComponent,
+        SooratHesabComponent,
     ],
     imports: [
         CommonModule,
