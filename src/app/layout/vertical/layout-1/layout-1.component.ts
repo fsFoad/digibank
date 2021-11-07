@@ -5,6 +5,14 @@ import { navigation } from 'app/navigation/navigation';
 import { AppSetting } from '../../../main/shared/services/AppSetting';
 
 import { FuseConfigService } from '@fuse/services/config.service';
+import { MenuItem } from 'primeng/api';
+
+// our menu item structure differs from primeng MenuItem
+interface AppMenuItem extends MenuItem {
+  items?: AppMenuItem[];
+  translate: string;
+  type: 'item' | 'collapsable';
+}
 
 @Component({
   selector: 'vertical-layout-1',
@@ -16,7 +24,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
   fuseConfig: any;
   navigation: any;
   appSetting = AppSetting;
-  items: MenuItem[] = [];
+  items: AppMenuItem[] = [];
   // Private
   private _unsubscribeAll: Subject<any>;
 
@@ -1111,17 +1119,6 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
     this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
   };
-}
-
-
-interface MenuItem {
-  id: string;
-  label: string;
-  translate: string;
-  type: string;
-  icon?: string;
-  routerLink?: string;
-  items?: MenuItem[];
 }
 
 function addStar(item: MenuItem): boolean {
