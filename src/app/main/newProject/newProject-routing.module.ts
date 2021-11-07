@@ -41,6 +41,7 @@ import { Bill2Component } from "./bill2/bill2.component";
 import { YourRialAccountsComponent } from "./your-rial-accounts/your-rial-accounts.component";
 import { YourCurrencyAccountsComponent } from "./your-currency-accounts/your-currency-accounts.component";
 import { SooratHesabComponent } from "./soorat-hesab/soorat-hesab.component";
+import { GardeshRizEnteghalVojoohComponent } from "./gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component";
 
 const routes = [
     {
@@ -235,6 +236,10 @@ const routes = [
     {
         path: 'sooratHesab',
         component: SooratHesabComponent,
+    },
+    {
+        path: 'gardeshRizEnteghalVojooh',
+        component: GardeshRizEnteghalVojoohComponent,
     },
 
 ]

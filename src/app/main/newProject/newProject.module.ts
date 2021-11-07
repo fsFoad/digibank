@@ -65,6 +65,7 @@ import { CascadeSelectModule } from 'primeng/cascadeselect';
 import { ChipsModule } from 'primeng/chips';
 import { DividerModule } from 'primeng/divider';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { RadioButtonModule } from 'primeng/radiobutton';
 import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
@@ -82,6 +83,7 @@ import { Bill2Component } from './bill2/bill2.component';
 import { YourRialAccountsComponent } from './your-rial-accounts/your-rial-accounts.component';
 import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-currency-accounts.component';
 import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
+import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component';
 
 @NgModule({
     declarations: [
@@ -138,6 +140,7 @@ import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
         YourRialAccountsComponent,
         YourCurrencyAccountsComponent,
         SooratHesabComponent,
+        GardeshRizEnteghalVojoohComponent,
     ],
     imports: [
         CommonModule,
@@ -171,6 +174,7 @@ import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
         ChipsModule,
         DividerModule,
         InputSwitchModule,
+        RadioButtonModule,
     ],
     exports: [
         ReportBankTransferComponent

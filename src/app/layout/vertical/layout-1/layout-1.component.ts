@@ -157,6 +157,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 translate: 'گردش ریز انتقال وجوه ',
                 type: 'item',
                 icon: 'account_balance_wallet',
+                routerLink: 'gardeshRizEnteghalVojooh',
               },
               {
                 id: 'real',
