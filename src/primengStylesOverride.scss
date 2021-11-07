@@ -303,6 +303,11 @@ p-menubar .pi-angle-right::before {
 
 // shs
 
+.p-radiobutton-label {
+    margin-inline-start: .5rem;
+    margin-inline-end: 0rem;
+}
+
 .p-float-label input:focus ~ label,
 .p-float-label input.p-filled ~ label,
 .p-float-label textarea:focus ~ label,
@@ -379,12 +384,38 @@ input[required] + label::after {
 .app-button-bar {
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  gap: 1rem;
   & > button {
     width: auto !important;
-    padding: .5em 1em !important;
+    padding: .5rem 2rem !important;
   }
 }
+
+.app-child-px-1r > * {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+.app-child-px-2r > * {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+}
+.app-child-px-3r > * {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+}
+.app-child-px-4r > * {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+}
+.app-child-px-5r > * {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+}
+.app-child-px-6r > * {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+}
+
 
 // set padding-x: 2rem on all p-col* children.
 .app-col-px-2r { 
@@ -406,4 +437,31 @@ input[required] + label::after {
 .app-mx-10r {
     margin-left: 10rem;
     margin-right: 10rem;
+}
+
+.app-flex-grow-1 {
+    flex-grow: 1;
+}
+.app-flex-grow-2 {
+    flex-grow: 2;
+}
+.app-flex-grow-3 {
+    flex-grow: 3;
+}
+.app-flex-grow-4 {
+    flex-grow: 4;
+}
+.app-flex-grow-5 {
+    flex-grow: 5;
+}
+.app-flex-grow-6 {
+    flex-grow: 6;
+}
+
+.app-gap-1r {
+    gap: 1rem;
+}
+
+.app-gap-2r {
+    gap: 2rem;
 }
