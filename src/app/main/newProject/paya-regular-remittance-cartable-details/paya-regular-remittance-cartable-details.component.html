@@ -1,0 +1,97 @@
+<p-panel header="کارتابل حواله منظم پایا">
+  <div class="p-d-flex p-flex-column app-gap-1r">
+    <p-card header="جزئیات درخواست حواله پایا" class="app-mx-30r">
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-field p-col">
+          شماره شبای مبدا: {{regularPayaRow.sourceAccountNumber}}
+          <br>
+          مبلغ حواله: {{regularPayaRow.amount|addCommaSeparator}} ریال
+          <br>
+          ثبت کننده: {{regularPayaRow.registrar}}
+          <br>
+          تاریخ انجام حواله (تاریخ موثر): {{regularPayaRow.startDate|castToDate}}
+        </div>
+        <div class="p-field p-col">
+          شماره اقتصادی صاحب حساب مبدا:
+          <br>
+          تعداد حواله: ۱
+          <br>
+          تاریخ ثبت: {{regularPayaRow.dateOfRegistration|castToDate}}
+        </div>
+      </div>
+    </p-card>
+
+    <p-card>
+      <p-table [value]="table1Rows" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate>گیرنده حواله</th>
+            <th translate>کد شبا</th>
+            <th translate>بانک</th>
+            <th translate>شناسه واریز کننده</th>
+            <th translate>مبلغ</th>
+            <th translate>کد ملی / شناسه ملی / شماره فراگیر</th>
+            <th translate>بابت</th>
+            <th translate>کد پستی</th>
+            <th translate>کد شهاب</th>
+            <th translate>شرح</th>
+            <th translate>مجوز ارسال مجدد</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{row.remittanceRecipient}}</td>
+            <td>{{row.shabaCode}}</td>
+            <td>{{row.bank}}</td>
+            <td>{{row.depositorId}}</td>
+            <td>{{row.amount}}</td>
+            <td>{{row.nationalCode}}</td>
+            <td>{{row.about}}</td>
+            <td>{{row.postalCode}}</td>
+            <td>{{row.shahabCode}}</td>
+            <td>{{row.description}}</td>
+            <td>{{row.allowResubmit}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+
+    <p-card header="فهرست تائید کنندگان">
+      <p-table [value]="table2Rows" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate>نام و نام خانوادگی</th>
+            <th translate>نوع تائید</th>
+            <th translate>وضعیت تائید</th>
+            <th translate>تاریخ</th>
+            <th translate>شرح</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{row.fullName}}</td>
+            <td>{{row.confirmationType}}</td>
+            <td>{{row.confirmationStatus}}</td>
+            <td>{{row.date}}</td>
+            <td>{{row.description}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+
+    <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
+      <button pButton label="تائید" (click)="showConfirmation()"></button>
+      <button pButton label="لغو" (click)="confirm.emit(false)"></button>
+      <button pButton label="بازگشت" (click)="confirm.emit(false)"></button>
+    </div>
+  </div>
+</p-panel>
+
+<p-confirmDialog header="مشترک گرامی به اطلاع می رساند:" acceptLabel="تایید" [rejectVisible]="false" [closable]="false">
+</p-confirmDialog>
