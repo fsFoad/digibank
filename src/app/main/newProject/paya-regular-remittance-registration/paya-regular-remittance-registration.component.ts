@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfirmationService } from "primeng/api";
 
 @Component({
   selector: 'app-paya-regular-remittance-registration',
   templateUrl: './paya-regular-remittance-registration.component.html',
-  styleUrls: ['./paya-regular-remittance-registration.component.scss']
+  styleUrls: ['./paya-regular-remittance-registration.component.scss'],
+  providers: [ConfirmationService]
 })
 export class PayaRegularRemittanceRegistrationComponent implements OnInit {
   showConfirmationComponent = false;
@@ -23,13 +25,28 @@ export class PayaRegularRemittanceRegistrationComponent implements OnInit {
     { value: '2', label: 'دوره دو' },
     { value: '3', label: 'دوره سه' },
   ]
-  constructor() { }
+  constructor(private confirmationService: ConfirmationService) { }
 
   ngOnInit(): void {
   }
 
   showConfirmation(show: boolean): void {
-    this.showConfirmationComponent = show;
+    if (show) {
+      const message = `
+      مطابق ابلاغیه بانک مرکزی نحوه محاسبه کارمزد حواله پایا
+      ۰.۰۱ درصد حواله با حداقل
+      ۲٬۰۰۰ ریال و حداکثر کارمزد
+      ۲۵٬۰۰۰ ریال می‌باشد که با تائید نهایی از حساب مبداء برداشت خواهد شد.
+`
+      this.confirmationService.confirm({
+        message,
+        accept: () => {
+          this.showConfirmationComponent = true;
+        }
+      });
+    } else {
+      this.showConfirmationComponent = false;
+    }
   }
 
 }
