@@ -1,4 +1,4 @@
-<p-panel header="ثبت حواله ساتنا">
+<p-panel header="ثبت حواله ساتنا" *ngIf="!showConfirmationComponent">
   <div class="app-mx-5r p-d-flex p-flex-column app-gap-1r">
     <div>
       <span class="pi pi-info-circle"></span>
@@ -78,7 +78,9 @@
     </p-card>
 
     <div class="p-d-flex p-jc-center app-child-px-6r">
-      <button pButton label="تائید"></button>
+      <button pButton label="تائید" (click)="showConfirmation()"></button>
     </div>
   </div>
 </p-panel>
+
+<app-satna-remittance-registration-confirmation *ngIf="showConfirmationComponent" (confirm)="closeConfirmation()"></app-satna-remittance-registration-confirmation>

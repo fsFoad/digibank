@@ -23,10 +23,18 @@ export class SatnaRemittanceRegistrationComponent implements OnInit {
     { value: '1', label: 'حقیقی' },
     { value: '2', label: 'حقوقی' },
   ]
+  showConfirmationComponent = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showConfirmation(): void {
+    this.showConfirmationComponent = true;
+  }
+
+  closeConfirmation(): void {
+    this.showConfirmationComponent = false;
+  }
 }
