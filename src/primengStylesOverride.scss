@@ -303,6 +303,13 @@ p-menubar .pi-angle-right::before {
 
 // shs
 
+.p-paginator-icon {
+    transform: rotate(180deg);
+    &::before {
+        color: black !important;
+    }
+}
+
 .p-radiobutton-label {
     margin-inline-start: .5rem;
     margin-inline-end: 0rem;
