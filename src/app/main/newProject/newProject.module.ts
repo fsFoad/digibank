@@ -1,26 +1,26 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {ReportBankTransferComponent} from './report-bank-transfer/report-bank-transfer.component';
-import {NewProjectRoutingModule} from './newProject-routing.module';
-import {ButtonModule} from 'primeng/button';
-import {PanelModule} from 'primeng/panel';
-import {CardModule} from 'primeng/card';
-import {CheckboxModule} from 'primeng/checkbox';
-import {DropdownModule} from 'primeng/dropdown';
-import {InputTextModule} from 'primeng/inputtext';
-import {ListboxModule} from 'primeng/listbox';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SharedModule} from '../shared/shared.module';
-import {TableModule} from 'primeng/table';
-import {PickListModule} from 'primeng/picklist';
-import {RippleModule} from 'primeng/ripple';
-import {KeyFilterModule} from 'primeng/keyfilter';
-import {TranslateModule} from '@ngx-translate/core';
-import {TooltipModule} from 'primeng/tooltip';
-import {PersianCalendarModule} from '../../../walletlibs/persian-calendar/persian-calendar.module';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
+import { NewProjectRoutingModule } from './newProject-routing.module';
+import { ButtonModule } from 'primeng/button';
+import { PanelModule } from 'primeng/panel';
+import { CardModule } from 'primeng/card';
+import { CheckboxModule } from 'primeng/checkbox';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputTextModule } from 'primeng/inputtext';
+import { ListboxModule } from 'primeng/listbox';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { TableModule } from 'primeng/table';
+import { PickListModule } from 'primeng/picklist';
+import { RippleModule } from 'primeng/ripple';
+import { KeyFilterModule } from 'primeng/keyfilter';
+import { TranslateModule } from '@ngx-translate/core';
+import { TooltipModule } from 'primeng/tooltip';
+import { PersianCalendarModule } from '../../../walletlibs/persian-calendar/persian-calendar.module';
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
-import {InputNumberModule} from 'primeng/inputnumber';
-import {InputMaskModule} from 'primeng/inputmask';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputMaskModule } from 'primeng/inputmask';
 import { SantaRegisterTransferComponent } from './santa-register-transfer/santa-register-transfer.component';
 import { RegularPayaRegisterTransferComponent } from './regular-paya-register-transfer/regular-paya-register-transfer.component';
 import { RegisterPayaTransferComponent } from './register-paya-transfer/register-paya-transfer.component';
@@ -43,7 +43,7 @@ import { RegisterGhabzComponent } from './register-ghabz/register-ghabz.componen
 import { RegisterBonCardComponent } from './register-bon-card/register-bon-card.component';
 import { CreatWalletComponent } from './creat-wallet/creat-wallet.component';
 import { CreateYektaComponent } from './create-yekta/create-yekta.component';
-import {FileUploadModule} from 'primeng/fileupload';
+import { FileUploadModule } from 'primeng/fileupload';
 import { GroupGhabzComponent } from './group-ghabz/group-ghabz.component';
 import { WalletTransactionComponent } from './wallet-transaction/wallet-transaction.component';
 import { YektaListComponent } from './yekta-list/yekta-list.component';
@@ -66,6 +66,7 @@ import { ChipsModule } from 'primeng/chips';
 import { DividerModule } from 'primeng/divider';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
+import { PaginatorModule } from 'primeng/paginator';
 import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
@@ -84,7 +85,7 @@ import { YourRialAccountsComponent } from './your-rial-accounts/your-rial-accoun
 import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-currency-accounts.component';
 import { CardBoardSatnaComponent } from './card-board-satna/card-board-satna.component';
 import { SpecificationsRequestSatnaComponent } from './specifications-request-satna/specifications-request-satna.component';
-import {ConfirmDialogModule} from "primeng/confirmdialog";
+import { ConfirmDialogModule } from "primeng/confirmdialog";
 import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
 import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component';
 import { DaryaftFileSoorathesabComponent } from './daryaft-file-soorathesab/daryaft-file-soorathesab.component';
@@ -92,6 +93,7 @@ import { InternetRemittanceReportComponent } from './internet-remittance-report/
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { InternetRemittanceRegisterationComponent } from './internet-remittance-registeration/internet-remittance-registeration.component';
+import { InternetRemittanceCartableComponent } from './internet-remittance-cartable/internet-remittance-cartable.component';
 
 @NgModule({
     declarations: [
@@ -156,6 +158,7 @@ import { InternetRemittanceRegisterationComponent } from './internet-remittance-
         NotFoundComponent,
         HomePageComponent,
         InternetRemittanceRegisterationComponent,
+        InternetRemittanceCartableComponent,
     ],
     imports: [
         CommonModule,
@@ -191,6 +194,7 @@ import { InternetRemittanceRegisterationComponent } from './internet-remittance-
         InputSwitchModule,
         RadioButtonModule,
         ConfirmDialogModule,
+        PaginatorModule,
     ],
     exports: [
         ReportBankTransferComponent

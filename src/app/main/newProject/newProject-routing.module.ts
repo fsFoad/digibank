@@ -48,6 +48,7 @@ import { InternetRemittanceReportComponent } from "./internet-remittance-report/
 import { NotFoundComponent } from "./not-found/not-found.component";
 import { HomePageComponent } from "./home-page/home-page.component";
 import { InternetRemittanceRegisterationComponent } from "./internet-remittance-registeration/internet-remittance-registeration.component";
+import { InternetRemittanceCartableComponent } from "./internet-remittance-cartable/internet-remittance-cartable.component";
 
 
 const routes = [
@@ -263,6 +264,10 @@ const routes = [
     {
         path: 'internetRemittanceRegistration',
         component: InternetRemittanceRegisterationComponent,
+    },
+    {
+        path: 'internetRemittanceCartable',
+        component: InternetRemittanceCartableComponent,
     },
 
 

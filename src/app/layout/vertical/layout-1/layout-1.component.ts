@@ -196,6 +196,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 translate: 'کارتابل حواله های اینترنتی',
                 type: 'item',
                 icon: 'account_balance_wallet',
+                routerLink: 'internetRemittanceCartable',
               },
               {
                 id: 'real',
