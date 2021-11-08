@@ -279,7 +279,10 @@ p-menubar .pi-angle-right::before {
   margin-inline-end: 0 !important;
 }
 
-:not(.p-dropdown-trigger-icon):not(.p-divider):not(.p-button-icon)::before{
+// :not(.p-dropdown-trigger-icon):not(.p-divider):not(.p-button-icon)::before{
+//     color: #ECDDCD;
+// }
+p-menubar .pi::before{
     color: #ECDDCD;
 }
 .p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {

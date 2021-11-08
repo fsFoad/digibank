@@ -262,7 +262,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 label: 'ثبت حواله ساتنا',
                 translate: 'ثبت حواله ساتنا',
                 type: 'item',
-                // routerLink: '/groupGhabz',
+                routerLink: '/satnaRemittanceRegistration',
               },
               {
                 id: 'cardBoardSatna',
