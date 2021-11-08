@@ -1,0 +1,53 @@
+<p-panel header="کارتابل حواله منظم پایا" *ngIf="!showDetailsComponent">
+  <p-card *ngIf="showTable" class="p-d-flex p-my-5">
+    <p-table [value]="tableData" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+      currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>شماره حواله موقت</th>
+          <th translate>شماره حساب مبدا</th>
+          <th translate>شماره شبا مقصد</th>
+          <th translate>مبلغ</th>
+          <th translate>تاریخ شروع</th>
+          <th translate>تاریخ پایان</th>
+          <th translate>دوره</th>
+          <th translate>ثبت کننده</th>
+          <th translate>تاریخ ثبت</th>
+          <th translate>بابت</th>
+          <th translate>کد ملی / شناسه ملی / شماره فراگیر</th>
+          <th translate>کد پستی ذینفع</th>
+          <th translate>کد شهاب ذینفع</th>
+          <th translate>عملیات</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-row>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{row.temporaryRemittanceNumber}}</td>
+          <td>{{row.sourceAccountNumber}}</td>
+          <td>{{row.destinationShabaNumber}}</td>
+          <td>{{row.amount|addCommaSeparator}}</td>
+          <td>{{row.startDate|castToDate}}</td>
+          <td>{{row.endDate|castToDate}}</td>
+          <td>{{row.period}}</td>
+          <td>{{row.registrar}}</td>
+          <td>{{row.dateOfRegistration|castToDate}}</td>
+          <td>{{row.about}}</td>
+          <td>{{row.nationalCode}}</td>
+          <td>{{row.beneficiaryZipCode}}</td>
+          <td>{{row.beneficiaryShahabCode}}</td>
+          <td>
+            <button pButton icon="pi pi-chevron-circle-right" (click)="selectRow(row)"></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+  <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
+    <button pButton label="به‌روزرسانی"></button>
+  </div>
+</p-panel>
+
+<app-paya-regular-remittance-cartable-details *ngIf="showDetailsComponent" [regularPayaRow]="selectedRow"
+  (confirm)="confirm($event)"></app-paya-regular-remittance-cartable-details>

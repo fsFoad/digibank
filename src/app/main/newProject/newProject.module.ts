@@ -98,6 +98,8 @@ import { SatnaRemittanceRegistrationComponent } from './satna-remittance-registr
 import { SatnaRemittanceRegistrationConfirmationComponent } from './satna-remittance-registration-confirmation/satna-remittance-registration-confirmation.component';
 import { PayaRegularRemittanceRegistrationConfirmationComponent } from './paya-regular-remittance-registration-confirmation/paya-regular-remittance-registration-confirmation.component';
 import { PayaRegularRemittanceRegistrationComponent } from './paya-regular-remittance-registration/paya-regular-remittance-registration.component';
+import { PayaRegularRemittanceCartableComponent } from './paya-regular-remittance-cartable/paya-regular-remittance-cartable.component';
+import { PayaRegularRemittanceCartableDetailsComponent } from './paya-regular-remittance-cartable-details/paya-regular-remittance-cartable-details.component';
 
 @NgModule({
     declarations: [
@@ -167,6 +169,8 @@ import { PayaRegularRemittanceRegistrationComponent } from './paya-regular-remit
         SatnaRemittanceRegistrationConfirmationComponent,
         PayaRegularRemittanceRegistrationConfirmationComponent,
         PayaRegularRemittanceRegistrationComponent,
+        PayaRegularRemittanceCartableComponent,
+        PayaRegularRemittanceCartableDetailsComponent,
     ],
     imports: [
         CommonModule,
