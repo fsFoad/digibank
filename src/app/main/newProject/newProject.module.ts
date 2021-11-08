@@ -95,6 +95,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { InternetRemittanceRegisterationComponent } from './internet-remittance-registeration/internet-remittance-registeration.component';
 import { InternetRemittanceCartableComponent } from './internet-remittance-cartable/internet-remittance-cartable.component';
 import { SatnaRemittanceRegistrationComponent } from './satna-remittance-registration/satna-remittance-registration.component';
+import { SatnaRemittanceRegistrationConfirmationComponent } from './satna-remittance-registration-confirmation/satna-remittance-registration-confirmation.component';
 
 @NgModule({
     declarations: [
@@ -161,6 +162,7 @@ import { SatnaRemittanceRegistrationComponent } from './satna-remittance-registr
         InternetRemittanceRegisterationComponent,
         InternetRemittanceCartableComponent,
         SatnaRemittanceRegistrationComponent,
+        SatnaRemittanceRegistrationConfirmationComponent,
     ],
     imports: [
         CommonModule,
