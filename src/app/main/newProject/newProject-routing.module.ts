@@ -50,6 +50,7 @@ import { HomePageComponent } from "./home-page/home-page.component";
 import { InternetRemittanceRegisterationComponent } from "./internet-remittance-registeration/internet-remittance-registeration.component";
 import { InternetRemittanceCartableComponent } from "./internet-remittance-cartable/internet-remittance-cartable.component";
 import { SatnaRemittanceRegistrationComponent } from "./satna-remittance-registration/satna-remittance-registration.component";
+import { PayaRegularRemittanceRegistrationComponent } from "./paya-regular-remittance-registration/paya-regular-remittance-registration.component";
 
 
 const routes = [
@@ -273,6 +274,10 @@ const routes = [
     {
         path: 'satnaRemittanceRegistration',
         component: SatnaRemittanceRegistrationComponent,
+    },
+    {
+        path: 'payaRegularRemittanceRegistration',
+        component: PayaRegularRemittanceRegistrationComponent,
     },
 
 
