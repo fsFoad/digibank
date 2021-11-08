@@ -85,3 +85,6 @@
 </p-panel>
 
 <app-paya-regular-remittance-registration-confirmation *ngIf="showConfirmationComponent" (confirm)="showConfirmation(false)"></app-paya-regular-remittance-registration-confirmation>
+
+<p-confirmDialog header="مشترک گرامی به اطلاع می رساند:" acceptLabel="تایید" [rejectVisible]="false" [closable]="false">
+</p-confirmDialog>
