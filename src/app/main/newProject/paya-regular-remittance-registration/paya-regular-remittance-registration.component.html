@@ -1,0 +1,87 @@
+<p-panel header="حواله منظم پایا" *ngIf="!showConfirmationComponent">
+  <div class="p-d-flex p-flex-column app-gap-1r">
+    <p-card>
+      <div class="app-mx-5r">
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <p-dropdown placeholder="شماره حساب" [options]="acItems"></p-dropdown>
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="شماره حساب شبا مبدا" disabled>
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد ملی/شناسه ملی/شماره فراگیر صاحب حساب مبدا" disabled>
+          </div>
+        </div>
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <input pInputText placeholder="نام صاحب / صاحبان حساب" disabled>
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد شهاب صاحب حساب مبدا" disabled>
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد پستی صاحب حساب مبدا" disabled>
+          </div>
+        </div>
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410" class="app-persian-calendar-style">
+            </p-persian-calendar>
+          </div>
+          <div class="p-field p-col">
+            <p-persian-calendar placeholder="تاریخ پایان" yearRange="1300:1410" class="app-persian-calendar-style">
+            </p-persian-calendar>
+          </div>
+          <div class="p-field p-col">
+            <p-dropdown placeholder="دوره" [options]="periodItems"></p-dropdown>
+          </div>
+        </div>
+      </div>
+    </p-card>
+    <p-card header="مشخصات گیرنده حواله">
+      <div class="app-mx-5r">
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <input pInputText placeholder="شماره شبا مقصد">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="نام بانک مقصد" disabled>
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="شناسه واریز کننده">
+          </div>
+        </div>
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+              placeholder="مبلغ (ریال)"></p-inputNumber>
+          </div>
+          <div class="p-field p-col">
+            <p-dropdown placeholder="بابت" [options]="forItems"></p-dropdown>
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد پستی">
+          </div>
+        </div>
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد پستی/شماره ملی/شناسه فراگیر">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="شرح">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد شهاب">
+          </div>
+        </div>
+      </div>
+    </p-card>
+    <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
+      <button pButton label="ثبت درخواست" (click)="showConfirmation(true)"></button>
+      <button pButton label="انصراف"></button>
+    </div>
+  </div>
+</p-panel>
+
+<app-paya-regular-remittance-registration-confirmation *ngIf="showConfirmationComponent" (confirm)="showConfirmation(false)"></app-paya-regular-remittance-registration-confirmation>

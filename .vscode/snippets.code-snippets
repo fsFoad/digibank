@@ -93,4 +93,13 @@
             "<p-inputNumber mode=\"decimal\" [useGrouping]=\"true\" suffix=\" ریال\" [minFractionDigits]=\"0\" placeholder=\"مبلغ$0\"></p-inputNumber>"
         ]
     },
+    "Button Bar": {
+        "scope": "html",
+        "prefix": "button-bar",
+        "body": [
+            "<div class=\"p-d-flex p-jc-center app-child-px-6r app-gap-1r\">",
+            "\t<button pButton label=\"تائید$0\"></button>",
+            "</div>",
+        ]
+    },
 }
