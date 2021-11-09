@@ -107,6 +107,7 @@ import { ReliableRemittanceReportComponent } from './reliable-remittance-report/
 import { ReportGroupRemittanceComponent } from './report-group-remittance/report-group-remittance.component';
 import { GhobozUploadFileComponent } from './ghoboz-upload-file/ghoboz-upload-file.component';
 import { SubmitInformationVarizComponent } from './submit-information-variz/submit-information-variz.component';
+import { ReportUploadedFilesComponent } from './report-uploaded-files/report-uploaded-files.component';
 
 @NgModule({
     declarations: [
@@ -185,6 +186,7 @@ import { SubmitInformationVarizComponent } from './submit-information-variz/subm
         ReportGroupRemittanceComponent,
         GhobozUploadFileComponent,
         SubmitInformationVarizComponent,
+        ReportUploadedFilesComponent,
 
     ],
     imports: [

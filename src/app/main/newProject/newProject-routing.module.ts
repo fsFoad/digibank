@@ -58,6 +58,7 @@ import {ReliableRemittanceReportComponent} from "./reliable-remittance-report/re
 import {ReportGroupRemittanceComponent} from "./report-group-remittance/report-group-remittance.component";
 import {GhobozUploadFileComponent} from "./ghoboz-upload-file/ghoboz-upload-file.component";
 import {SubmitInformationVarizComponent} from "./submit-information-variz/submit-information-variz.component";
+import {ReportUploadedFilesComponent} from "./report-uploaded-files/report-uploaded-files.component";
 
 
 const routes = [
@@ -313,6 +314,10 @@ const routes = [
   {
     path: 'submitInformationVariz',
     component: SubmitInformationVarizComponent,
+  },
+  {
+    path: 'reportUploadedFiles',
+    component: ReportUploadedFilesComponent,
   },
 
   // these should be last
