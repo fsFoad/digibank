@@ -102,6 +102,7 @@ import { PayaRegularRemittanceCartableComponent } from './paya-regular-remittanc
 import { PayaRegularRemittanceCartableDetailsComponent } from './paya-regular-remittance-cartable-details/paya-regular-remittance-cartable-details.component';
 import { PayaGroupRemittanceCartableComponent } from './paya-group-remittance-cartable/paya-group-remittance-cartable.component';
 import { PayaGroupRemittanceCartableDetailsComponent } from './paya-group-remittance-cartable-details/paya-group-remittance-cartable-details.component';
+import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-upload-file/paya-group-remittance-upload-file.component';
 
 @NgModule({
     declarations: [
@@ -175,6 +176,7 @@ import { PayaGroupRemittanceCartableDetailsComponent } from './paya-group-remitt
         PayaRegularRemittanceCartableDetailsComponent,
         PayaGroupRemittanceCartableComponent,
         PayaGroupRemittanceCartableDetailsComponent,
+        PayaGroupRemittanceUploadFileComponent,
     ],
     imports: [
         CommonModule,
