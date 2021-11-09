@@ -409,8 +409,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           },
           {
             id: 'walletBuy',
-            label: 'مدیریت پرداخت ویژه',
-            translate: 'مدیریت پرداخت ویژه',
+            label: 'مدیریت واریز ویژه',
+            translate: 'مدیریت واریز ویژه',
             type: 'collapsable',
             items: [
               {
@@ -438,6 +438,63 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 id: 'bankpayaCharge',
                 label: 'گزارش فایل های بارگذاری شده',
                 translate: 'گزارش فایل های بارگذاری شده',
+                type: 'item',
+                // routerLink: '/bankpayaCharge',
+              },
+            ]
+          },
+          {
+            id: 'walletBuy',
+            label: 'مدیریت پرداخت ویژه',
+            translate: 'مدیریت پرداخت ویژه',
+            type: 'collapsable',
+            items: [
+              {
+                id: 'bankpayaCharge',
+                label: 'بارگذاری فایل ',
+                translate: 'بارگذاری فایل ',
+                type: 'item',
+                // routerLink: '/bankpayaCharge',
+              },
+              {
+                id: 'bankpayaCharge',
+                label: 'ثبت اطلاعات  ',
+                translate: 'ثبت اطلاعات  ',
+                type: 'item',
+                // routerLink: '/bankpayaCharge',
+              },
+              {
+                id: 'bankpayaCharge',
+                label: 'مشاهده و ویرایش اطلاعات',
+                translate: 'مشاهده و ویرایش اطلاعات',
+                type: 'item',
+                // routerLink: '/bankpayaCharge',
+              },
+              {
+                id: 'bankpayaCharge',
+                label: 'کارتابل پرداخت ویژه',
+                translate: 'کارتابل پرداخت ویژه',
+                type: 'item',
+                // routerLink: '/bankpayaCharge',
+              },
+              {
+                id: 'bankpayaCharge',
+                label: 'گزارش فایل های بارگذاری شده',
+                translate: 'گزارش فایل های بارگذاری شده',
+                type: 'item',
+                // routerLink: '/bankpayaCharge',
+              },
+              {
+                id: 'bankpayaCharge',
+                label: 'گزارش صورتحساب ',
+                translate: 'گزارش صورتحساب ',
+                type: 'item',
+                // routerLink: '/bankpayaCharge',
+              },
+              {
+                id: 'bankpayaCharge',
+                label: 'گزارش کارمزدهای دریافت شده',
+                translate: 'گزارش کارمزدهای دریافت شده',
                 type: 'item',
                 // routerLink: '/bankpayaCharge',
               },
