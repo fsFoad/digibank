@@ -409,16 +409,16 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           },
           {
             id: 'walletBuy',
-            label: 'مدیریت واریز ویژه',
-            translate: 'مدیریت واریز ویژه',
+            label: 'مدیریت پرداخت ویژه',
+            translate: 'مدیریت پرداخت ویژه',
             type: 'collapsable',
             items: [
               {
-                id: 'bankpayaCharge',
+                id: 'ghobozUploadFile',
                 label: 'بارگذاری فایل',
                 translate: 'بارگذاری فایل',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/ghobozUploadFile',
               },
               {
                 id: 'bankpayaCharge',

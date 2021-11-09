@@ -105,6 +105,7 @@ import { PayaGroupRemittanceCartableDetailsComponent } from './paya-group-remitt
 import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-upload-file/paya-group-remittance-upload-file.component';
 import { ReliableRemittanceReportComponent } from './reliable-remittance-report/reliable-remittance-report.component';
 import { ReportGroupRemittanceComponent } from './report-group-remittance/report-group-remittance.component';
+import { GhobozUploadFileComponent } from './ghoboz-upload-file/ghoboz-upload-file.component';
 
 @NgModule({
     declarations: [
@@ -181,6 +182,7 @@ import { ReportGroupRemittanceComponent } from './report-group-remittance/report
         PayaGroupRemittanceUploadFileComponent,
         ReliableRemittanceReportComponent,
         ReportGroupRemittanceComponent,
+        GhobozUploadFileComponent,
 
     ],
     imports: [

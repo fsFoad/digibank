@@ -56,6 +56,7 @@ import {PayaGroupRemittanceCartableComponent} from "./paya-group-remittance-cart
 import {PayaGroupRemittanceUploadFileComponent} from "./paya-group-remittance-upload-file/paya-group-remittance-upload-file.component";
 import {ReliableRemittanceReportComponent} from "./reliable-remittance-report/reliable-remittance-report.component";
 import {ReportGroupRemittanceComponent} from "./report-group-remittance/report-group-remittance.component";
+import {GhobozUploadFileComponent} from "./ghoboz-upload-file/ghoboz-upload-file.component";
 
 
 const routes = [
@@ -304,7 +305,10 @@ const routes = [
     path: 'reportGroupRemittance',
     component: ReportGroupRemittanceComponent,
   },
-
+  {
+    path: 'ghobozUploadFile',
+    component: GhobozUploadFileComponent,
+  },
 
   // these should be last
   {

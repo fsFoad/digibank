@@ -1,0 +1,26 @@
+<p-panel header="درخواست حواله گروهی پایا">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-mx-35r">
+      <div class="p-field p-col">
+        <label>شماره مشتری ویژه : {{customerNumber}}</label>
+      </div>
+
+      <div class="p-field p-col">
+        <p-fileUpload mode="basic" [auto]="true" [customUpload]="true"
+                      [showCancelButton]="false" [showUploadButton]="false"
+                      accept=".xlsx" chooseLabel="بارگذاری فایل"  >
+          <ng-template pTemplate="content">
+          </ng-template>
+        </p-fileUpload>
+      </div>
+      <div class="p-field p-col">
+        <input placeholder="شرح" pInputText>
+      </div>
+    </div>
+    <div class="p-grid p-formgrid p-fluid app-mx-50r">
+      <div class="p-col-12 p-lg-4">
+        <button pButton pRipple type="button" label="بارگذاری" style="width:10rem" class="p-mr-2 p-mb-2"></button>
+      </div>
+    </div>
+  </div>
+</p-panel>
