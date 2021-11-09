@@ -57,6 +57,7 @@ import {PayaGroupRemittanceUploadFileComponent} from "./paya-group-remittance-up
 import {ReliableRemittanceReportComponent} from "./reliable-remittance-report/reliable-remittance-report.component";
 import {ReportGroupRemittanceComponent} from "./report-group-remittance/report-group-remittance.component";
 import {GhobozUploadFileComponent} from "./ghoboz-upload-file/ghoboz-upload-file.component";
+import {SubmitInformationVarizComponent} from "./submit-information-variz/submit-information-variz.component";
 
 
 const routes = [
@@ -308,6 +309,10 @@ const routes = [
   {
     path: 'ghobozUploadFile',
     component: GhobozUploadFileComponent,
+  },
+  {
+    path: 'submitInformationVariz',
+    component: SubmitInformationVarizComponent,
   },
 
   // these should be last

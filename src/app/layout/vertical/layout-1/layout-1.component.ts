@@ -421,11 +421,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '/ghobozUploadFile',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'submitInformationVariz',
                 label: 'ثبت اطلاعات',
                 translate: 'ثبت اطلاعات',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/submitInformationVariz',
               },
               {
                 id: 'bankpayaCharge',

@@ -106,6 +106,7 @@ import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-
 import { ReliableRemittanceReportComponent } from './reliable-remittance-report/reliable-remittance-report.component';
 import { ReportGroupRemittanceComponent } from './report-group-remittance/report-group-remittance.component';
 import { GhobozUploadFileComponent } from './ghoboz-upload-file/ghoboz-upload-file.component';
+import { SubmitInformationVarizComponent } from './submit-information-variz/submit-information-variz.component';
 
 @NgModule({
     declarations: [
@@ -183,6 +184,7 @@ import { GhobozUploadFileComponent } from './ghoboz-upload-file/ghoboz-upload-fi
         ReliableRemittanceReportComponent,
         ReportGroupRemittanceComponent,
         GhobozUploadFileComponent,
+        SubmitInformationVarizComponent,
 
     ],
     imports: [
