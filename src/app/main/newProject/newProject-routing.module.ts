@@ -3,7 +3,7 @@ import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
-import { SantaRegisterTransferComponent } from './santa-register-transfer/santa-register-transfer.component';
+import { SantaRegisterTransferComponent } from './satna-register-transfer/santa-register-transfer.component';
 import { RegularPayaRegisterTransferComponent } from './regular-paya-register-transfer/regular-paya-register-transfer.component';
 import { RegisterPayaTransferComponent } from './register-paya-transfer/register-paya-transfer.component';
 import { BankpayaChargeComponent } from './bankpaya-charge/bankpaya-charge.component';
@@ -54,6 +54,7 @@ import { PayaRegularRemittanceRegistrationComponent } from "./paya-regular-remit
 import { PayaRegularRemittanceCartableComponent } from "./paya-regular-remittance-cartable/paya-regular-remittance-cartable.component";
 import { PayaGroupRemittanceCartableComponent } from "./paya-group-remittance-cartable/paya-group-remittance-cartable.component";
 import { PayaGroupRemittanceUploadFileComponent } from "./paya-group-remittance-upload-file/paya-group-remittance-upload-file.component";
+import {ReliableRemittanceReportComponent} from "./reliable-remittance-report/reliable-remittance-report.component";
 
 
 const routes = [
@@ -294,6 +295,10 @@ const routes = [
         path: 'payaGroupRemittanceUploadFile',
         component: PayaGroupRemittanceUploadFileComponent,
     },
+  {
+    path: 'reliableRemittanceReport',
+    component: ReliableRemittanceReportComponent,
+  },
 
 
 

@@ -21,7 +21,7 @@ import { PersianCalendarModule } from '../../../walletlibs/persian-calendar/pers
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
-import { SantaRegisterTransferComponent } from './santa-register-transfer/santa-register-transfer.component';
+import { SantaRegisterTransferComponent } from './satna-register-transfer/santa-register-transfer.component';
 import { RegularPayaRegisterTransferComponent } from './regular-paya-register-transfer/regular-paya-register-transfer.component';
 import { RegisterPayaTransferComponent } from './register-paya-transfer/register-paya-transfer.component';
 import { BankpayaChargeComponent } from './bankpaya-charge/bankpaya-charge.component';
@@ -103,6 +103,7 @@ import { PayaRegularRemittanceCartableDetailsComponent } from './paya-regular-re
 import { PayaGroupRemittanceCartableComponent } from './paya-group-remittance-cartable/paya-group-remittance-cartable.component';
 import { PayaGroupRemittanceCartableDetailsComponent } from './paya-group-remittance-cartable-details/paya-group-remittance-cartable-details.component';
 import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-upload-file/paya-group-remittance-upload-file.component';
+import { ReliableRemittanceReportComponent } from './reliable-remittance-report/reliable-remittance-report.component';
 
 @NgModule({
     declarations: [
@@ -177,6 +178,7 @@ import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-
         PayaGroupRemittanceCartableComponent,
         PayaGroupRemittanceCartableDetailsComponent,
         PayaGroupRemittanceUploadFileComponent,
+        ReliableRemittanceReportComponent,
     ],
     imports: [
         CommonModule,
