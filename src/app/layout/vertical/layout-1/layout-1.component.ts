@@ -356,11 +356,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '/reliableRemittanceReport',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'reportGroupRemittance',
                 label: 'گزارش حواله های گروهی',
                 translate: 'گزارش حواله های گروهی',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/reportGroupRemittance',
               },
               {
                 id: 'reportPayaBank',
