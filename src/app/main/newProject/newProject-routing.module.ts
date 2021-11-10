@@ -60,6 +60,8 @@ import {GhobozUploadFileComponent} from "./ghoboz-upload-file/ghoboz-upload-file
 import {SubmitInformationVarizComponent} from "./submit-information-variz/submit-information-variz.component";
 import {ReportUploadedFilesComponent} from "./report-uploaded-files/report-uploaded-files.component";
 import {ViewEditInformationDepositManagementComponent} from "./view-edit-information-deposit-management/view-edit-information-deposit-management.component";
+import {UploadPaymentManagementFileComponent} from "./upload-payment-management-file/upload-payment-management-file.component";
+import {SubmitInformationPymentMnagementComponent} from "./submit-information-pyment-mnagement/submit-information-pyment-mnagement.component";
 
 
 const routes = [
@@ -323,6 +325,14 @@ const routes = [
   {
     path: 'viewEditInformationDepositManagement',
     component: ViewEditInformationDepositManagementComponent,
+  },
+  {
+    path: 'uploadPaymentManagementFile',
+    component: UploadPaymentManagementFileComponent,
+  },
+  {
+    path: 'submitInformationPymentMnagement',
+    component: SubmitInformationPymentMnagementComponent,
   },
   // these should be last
   {

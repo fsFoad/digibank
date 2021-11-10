@@ -450,18 +450,18 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             type: 'collapsable',
             items: [
               {
-                id: 'bankpayaCharge',
+                id: 'uploadPaymentManagementFile',
                 label: 'بارگذاری فایل ',
                 translate: 'بارگذاری فایل ',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/uploadPaymentManagementFile',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'submitInformationPymentMnagement',
                 label: 'ثبت اطلاعات  ',
                 translate: 'ثبت اطلاعات  ',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/submitInformationPymentMnagement',
               },
               {
                 id: 'bankpayaCharge',
