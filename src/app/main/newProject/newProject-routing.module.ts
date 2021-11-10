@@ -64,6 +64,8 @@ import {UploadPaymentManagementFileComponent} from "./upload-payment-management-
 import {SubmitInformationPymentMnagementComponent} from "./submit-information-pyment-mnagement/submit-information-pyment-mnagement.component";
 import {ViewEditInformationPaymentManagementComponent} from "./view-edit-information-payment-management/view-edit-information-payment-management.component";
 import {ReportUploadedFilesPaymentManagmentComponent} from "./report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component";
+import {BillingReportComponent} from "./billing-report/billing-report.component";
+import {ReportFeePaymentManagmentComponent} from "./report-fee-payment-managment/report-fee-payment-managment.component";
 
 
 const routes = [
@@ -343,6 +345,14 @@ const routes = [
   {
     path: 'reportUploadedFilesPaymentManagment',
     component: ReportUploadedFilesPaymentManagmentComponent,
+  },
+  {
+    path: 'billingReport',
+    component: BillingReportComponent,
+  },
+  {
+    path: 'reportFeePaymentManagment',
+    component: ReportFeePaymentManagmentComponent,
   },
   // these should be last
   {
