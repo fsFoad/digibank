@@ -1,4 +1,4 @@
-import {NgModule} from "@angular/core";
+import {NgModule, ViewChild} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {RouterModule} from "@angular/router";
 import {ReportBankTransferComponent} from './report-bank-transfer/report-bank-transfer.component';
@@ -59,6 +59,7 @@ import {ReportGroupRemittanceComponent} from "./report-group-remittance/report-g
 import {GhobozUploadFileComponent} from "./ghoboz-upload-file/ghoboz-upload-file.component";
 import {SubmitInformationVarizComponent} from "./submit-information-variz/submit-information-variz.component";
 import {ReportUploadedFilesComponent} from "./report-uploaded-files/report-uploaded-files.component";
+import {ViewEditInformationDepositManagementComponent} from "./view-edit-information-deposit-management/view-edit-information-deposit-management.component";
 
 
 const routes = [
@@ -319,7 +320,10 @@ const routes = [
     path: 'reportUploadedFiles',
     component: ReportUploadedFilesComponent,
   },
-
+  {
+    path: 'viewEditInformationDepositManagement',
+    component: ViewEditInformationDepositManagementComponent,
+  },
   // these should be last
   {
     path: '',

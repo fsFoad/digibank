@@ -428,11 +428,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '/submitInformationVariz',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'viewEditInformationDepositManagement',
                 label: 'مشاهده و ویرایش اطلاعات',
                 translate: 'مشاهده و ویرایش اطلاعات',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/viewEditInformationDepositManagement',
               },
               {
                 id: 'reportUploadedFiles',
