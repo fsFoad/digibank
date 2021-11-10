@@ -70,6 +70,7 @@ import { CardBoardGhobozComponent } from "./card-board-ghoboz/card-board-ghoboz.
 import { SpecialPaymentCartableComponent } from "./special-payment-cartable/special-payment-cartable.component";
 
 
+
 const routes = [
   {
     path: 'registerPayaTransfer',
