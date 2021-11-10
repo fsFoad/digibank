@@ -464,11 +464,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '/submitInformationPymentMnagement',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'viewEditInformationPaymentManagement',
                 label: 'مشاهده و ویرایش اطلاعات',
                 translate: 'مشاهده و ویرایش اطلاعات',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/viewEditInformationPaymentManagement',
               },
               {
                 id: 'bankpayaCharge',
@@ -478,11 +478,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 // routerLink: '/bankpayaCharge',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'reportUploadedFilesPaymentManagment',
                 label: 'گزارش فایل های بارگذاری شده',
                 translate: 'گزارش فایل های بارگذاری شده',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/reportUploadedFilesPaymentManagment',
               },
               {
                 id: 'bankpayaCharge',

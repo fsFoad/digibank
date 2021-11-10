@@ -111,6 +111,8 @@ import { ReportUploadedFilesComponent } from './report-uploaded-files/report-upl
 import { ViewEditInformationDepositManagementComponent } from './view-edit-information-deposit-management/view-edit-information-deposit-management.component';
 import { UploadPaymentManagementFileComponent } from './upload-payment-management-file/upload-payment-management-file.component';
 import { SubmitInformationPymentMnagementComponent } from './submit-information-pyment-mnagement/submit-information-pyment-mnagement.component';
+import { ViewEditInformationPaymentManagementComponent } from './view-edit-information-payment-management/view-edit-information-payment-management.component';
+import { ReportUploadedFilesPaymentManagmentComponent } from './report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component';
 
 @NgModule({
     declarations: [
@@ -193,6 +195,8 @@ import { SubmitInformationPymentMnagementComponent } from './submit-information-
         ViewEditInformationDepositManagementComponent,
         UploadPaymentManagementFileComponent,
         SubmitInformationPymentMnagementComponent,
+        ViewEditInformationPaymentManagementComponent,
+        ReportUploadedFilesPaymentManagmentComponent,
 
     ],
     imports: [
