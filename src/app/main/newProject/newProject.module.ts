@@ -115,6 +115,10 @@ import { ViewEditInformationPaymentManagementComponent } from './view-edit-infor
 import { ReportUploadedFilesPaymentManagmentComponent } from './report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component';
 import { BillingReportComponent } from './billing-report/billing-report.component';
 import { ReportFeePaymentManagmentComponent } from './report-fee-payment-managment/report-fee-payment-managment.component';
+import { SpecialPaymentCartableComponent } from './special-payment-cartable/special-payment-cartable.component';
+import { SpecialPaymentCartableDetailsComponent } from './special-payment-cartable-details/special-payment-cartable-details.component';
+import { CardBoardGhobozComponent } from './card-board-ghoboz/card-board-ghoboz.component';
+import { RequestGhobozComponent } from './request-ghoboz/request-ghoboz.component';
 
 @NgModule({
     declarations: [
@@ -201,7 +205,10 @@ import { ReportFeePaymentManagmentComponent } from './report-fee-payment-managme
         ReportUploadedFilesPaymentManagmentComponent,
         BillingReportComponent,
         ReportFeePaymentManagmentComponent,
-
+        SpecialPaymentCartableComponent,
+        SpecialPaymentCartableDetailsComponent,
+        CardBoardGhobozComponent,
+        RequestGhobozComponent,
     ],
     imports: [
         CommonModule,

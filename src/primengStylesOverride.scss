@@ -527,3 +527,27 @@ input[required] + label::after {
 .app-gap-6r {
     gap: 6rem;
 }
+
+// width needs to be set appropriately
+.app-property-value-list {
+    dt, dd {
+        float: inline-start;
+        font-size: 1.4rem;
+        line-height: 1;
+        padding: 0;
+        margin: 0 0 1.25rem;
+    }
+    dd {
+        text-align: start;
+    }
+    dt {
+        clear: both;
+        width: 20rem; // set appropriately
+        text-align: end;
+        &::after {
+            content: ':';
+            margin-inline-end: 1rem;
+        }
+    }
+}
+

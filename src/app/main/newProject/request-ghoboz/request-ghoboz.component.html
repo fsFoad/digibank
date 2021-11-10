@@ -1,0 +1,85 @@
+<p-card header="تایید درخواست قبض">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-text-right">
+            <label>نوع قبض : {{ghabzType}}</label>
+            <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="p-d-flex  p-ai-stretch">
+          <div class="p-col p-d-flex p-flex-column">
+            <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+              <div class="p-text-right">
+                <label>تعداد کل : 1</label>
+                <br>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="p-d-flex  p-ai-stretch">
+          <div class="p-col p-d-flex p-flex-column">
+            <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+              <div class="p-text-right">
+                <label>مبلغ کل : {{amounts}}</label>
+                <br>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="p-d-flex  p-ai-stretch">
+          <div class="p-col p-d-flex p-flex-column">
+            <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+              <div class="p-text-right">
+                <label>شماره حساب تامین کننده وجه : {{accountnNumberdeterminesAmount}}</label>
+                <br>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <p-card header="فهرست تاییدکنندگان">
+    <p-table [value]="table2List">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>نام و نام خانوادگی</th>
+          <th translate>نوع تایید</th>
+          <th translate>وضعیت تایید</th>
+          <th translate>تاریخ</th>
+          <th translate>شرح</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-service>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{service.fullName}}</td>
+          <td>{{service.verificationType}}</td>
+          <td>{{service.verificationStatus}}</td>
+          <td>{{service.history|castToDate}}</td>
+          <td>{{service.des}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+  <br>
+  <div class="p-d-flex p-jc-center" >
+    <button id="btnConfirmation" class="p-button-info" pButton label="تایید"  (click)="onClose()" ></button>&nbsp;
+    <button id="btnCancel" class="p-button-info" pButton label="انصراف" (click)="onClose()" ></button>&nbsp;
+    <button id="btnBack" class="p-button-info" pButton label="بازگشت"  (click)="onClose()" ></button>&nbsp;
+  </div>
+</p-card>
