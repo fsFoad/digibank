@@ -385,11 +385,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '/banckPayaGhabz',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'cardBoardGhoboz',
                 label: 'کارتابل پرداخت قبوض',
                 translate: 'کارتابل پرداخت قبوض',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/cardBoardGhoboz',
               },
               {
                 id: 'bankpayaCharge',

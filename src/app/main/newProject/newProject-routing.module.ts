@@ -66,6 +66,7 @@ import {ViewEditInformationPaymentManagementComponent} from "./view-edit-informa
 import {ReportUploadedFilesPaymentManagmentComponent} from "./report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component";
 import {BillingReportComponent} from "./billing-report/billing-report.component";
 import {ReportFeePaymentManagmentComponent} from "./report-fee-payment-managment/report-fee-payment-managment.component";
+import {CardBoardGhobozComponent} from "./card-board-ghoboz/card-board-ghoboz.component";
 
 
 const routes = [
@@ -353,6 +354,10 @@ const routes = [
   {
     path: 'reportFeePaymentManagment',
     component: ReportFeePaymentManagmentComponent,
+  },
+  {
+    path: 'cardBoardGhoboz',
+    component: CardBoardGhobozComponent,
   },
   // these should be last
   {
