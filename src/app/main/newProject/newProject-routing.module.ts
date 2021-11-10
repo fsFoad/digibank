@@ -1,4 +1,4 @@
-import { NgModule, ViewChild } from "@angular/core";
+import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { RouterModule } from "@angular/router";
 import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
@@ -66,6 +66,7 @@ import { ViewEditInformationPaymentManagementComponent } from "./view-edit-infor
 import { ReportUploadedFilesPaymentManagmentComponent } from "./report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component";
 import { BillingReportComponent } from "./billing-report/billing-report.component";
 import { ReportFeePaymentManagmentComponent } from "./report-fee-payment-managment/report-fee-payment-managment.component";
+import { CardBoardGhobozComponent } from "./card-board-ghoboz/card-board-ghoboz.component";
 import { SpecialPaymentCartableComponent } from "./special-payment-cartable/special-payment-cartable.component";
 
 
@@ -358,6 +359,10 @@ const routes = [
   {
     path: 'specialPaymentCartable',
     component: SpecialPaymentCartableComponent,
+  },
+  {
+    path: 'cardBoardGhoboz',
+    component: CardBoardGhobozComponent,
   },
   // these should be last
   {
