@@ -1,0 +1,31 @@
+<p-panel header="گزارش کارمزدهای دریافت شده">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-mx-30r">
+      <div class="p-field p-col">
+        <p-dropdown class="p-dropdown-w100" placeholder="مشتری ویژه" optionValue="value"
+                    optionLabel="label"></p-dropdown>
+      </div>
+      <div class="p-field p-col">
+        <input placeholder="کد دوره پرداخت" class="input-w-100" pInputText>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-30r">
+      <div class="p-field p-col">
+        <p-persian-calendar placeholder="تاریخ پرداخت از" yearRange="1300:1410" class="app-persian-calendar-style"
+        ></p-persian-calendar>
+
+      </div>
+      <div class="p-field p-col">
+        <p-persian-calendar placeholder="تاریخ پرداخت تا" yearRange="1300:1410" class="app-persian-calendar-style"
+        ></p-persian-calendar>
+      </div>
+    </div>
+    <div class="p-d-flex p-jc-center">
+
+      <button pButton class="p-button-info btnWidth btn-ml " label="دریافت فایل"></button>
+      <button pButton class="p-button-info btnWidth" label="پاک کردن شرایط جستجو"></button>
+    </div>
+  </div>
+</p-panel>
+
+

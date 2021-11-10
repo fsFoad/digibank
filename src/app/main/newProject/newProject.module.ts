@@ -21,7 +21,7 @@ import { PersianCalendarModule } from '../../../walletlibs/persian-calendar/pers
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { InputMaskModule } from 'primeng/inputmask';
-import { SantaRegisterTransferComponent } from './santa-register-transfer/santa-register-transfer.component';
+import { SantaRegisterTransferComponent } from './satna-register-transfer/santa-register-transfer.component';
 import { RegularPayaRegisterTransferComponent } from './regular-paya-register-transfer/regular-paya-register-transfer.component';
 import { RegisterPayaTransferComponent } from './register-paya-transfer/register-paya-transfer.component';
 import { BankpayaChargeComponent } from './bankpaya-charge/bankpaya-charge.component';
@@ -103,6 +103,18 @@ import { PayaRegularRemittanceCartableDetailsComponent } from './paya-regular-re
 import { PayaGroupRemittanceCartableComponent } from './paya-group-remittance-cartable/paya-group-remittance-cartable.component';
 import { PayaGroupRemittanceCartableDetailsComponent } from './paya-group-remittance-cartable-details/paya-group-remittance-cartable-details.component';
 import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-upload-file/paya-group-remittance-upload-file.component';
+import { ReliableRemittanceReportComponent } from './reliable-remittance-report/reliable-remittance-report.component';
+import { ReportGroupRemittanceComponent } from './report-group-remittance/report-group-remittance.component';
+import { GhobozUploadFileComponent } from './ghoboz-upload-file/ghoboz-upload-file.component';
+import { SubmitInformationVarizComponent } from './submit-information-variz/submit-information-variz.component';
+import { ReportUploadedFilesComponent } from './report-uploaded-files/report-uploaded-files.component';
+import { ViewEditInformationDepositManagementComponent } from './view-edit-information-deposit-management/view-edit-information-deposit-management.component';
+import { UploadPaymentManagementFileComponent } from './upload-payment-management-file/upload-payment-management-file.component';
+import { SubmitInformationPymentMnagementComponent } from './submit-information-pyment-mnagement/submit-information-pyment-mnagement.component';
+import { ViewEditInformationPaymentManagementComponent } from './view-edit-information-payment-management/view-edit-information-payment-management.component';
+import { ReportUploadedFilesPaymentManagmentComponent } from './report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component';
+import { BillingReportComponent } from './billing-report/billing-report.component';
+import { ReportFeePaymentManagmentComponent } from './report-fee-payment-managment/report-fee-payment-managment.component';
 
 @NgModule({
     declarations: [
@@ -177,6 +189,19 @@ import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-
         PayaGroupRemittanceCartableComponent,
         PayaGroupRemittanceCartableDetailsComponent,
         PayaGroupRemittanceUploadFileComponent,
+        ReliableRemittanceReportComponent,
+        ReportGroupRemittanceComponent,
+        GhobozUploadFileComponent,
+        SubmitInformationVarizComponent,
+        ReportUploadedFilesComponent,
+        ViewEditInformationDepositManagementComponent,
+        UploadPaymentManagementFileComponent,
+        SubmitInformationPymentMnagementComponent,
+        ViewEditInformationPaymentManagementComponent,
+        ReportUploadedFilesPaymentManagmentComponent,
+        BillingReportComponent,
+        ReportFeePaymentManagmentComponent,
+
     ],
     imports: [
         CommonModule,

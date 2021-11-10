@@ -1,0 +1,28 @@
+<p-panel header="گزارش فایل های بارگذاری شده">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-mx-30r">
+      <div class="p-field p-col">
+        <input placeholder="نام فایل" class="input-w-100" pInputText>
+      </div>
+      <div class="p-field p-col">
+        <p-dropdown  placeholder="وضعیت" optionValue="value"></p-dropdown>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-30r">
+        <div class="p-field p-col">
+          <p-persian-calendar placeholder="بارگذاری از" yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+      </div>
+        <div class="p-field p-col">
+          <p-persian-calendar placeholder="بارگذاری تا" yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+        </div>
+    </div>
+    <div class="p-grid p-formgrid p-fluid app-mx-49r">
+      <div class="p-field p-col">
+        <button pButton pRipple type="button" label="جستجو" style="width:10rem" class="p-mr-2 p-mb-2"></button>
+        <button pButton pRipple type="button" label="نمایش همه" style="width:10rem" class="p-mr-2 p-mb-2"></button>
+      </div>
+    </div>
+  </div>
+</p-panel>

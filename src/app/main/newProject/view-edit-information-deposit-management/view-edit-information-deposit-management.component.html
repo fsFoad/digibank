@@ -1,0 +1,51 @@
+<p-panel header="مشاهده و ویرایش اطلاعات">
+  <p-card>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="radibt">
+        <p-radioButton  name="A" value="s" [(ngModel)]="temp" inputId="temp1"></p-radioButton>
+      </div>
+      <div class="p-field p-col">
+        <input placeholder="دوره" class="input-w-100" pInputText>
+      </div>
+      <div class="p-field p-col">
+        <p-persian-calendar placeholder="مهلت پرداخت از" yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+      </div>
+      <div class="p-field p-col app-ml-20r">
+        <p-persian-calendar placeholder="مهلت پرداخت تا" yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+      </div>
+    </div>
+    <hr>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="radibt">
+        <p-radioButton  name="A" value="e" [(ngModel)]="temp" inputId="temp2"></p-radioButton>
+      </div>
+      <div class="p-field p-col app-ml-50r">
+        <input placeholder="نام واریز کننده" class="input-w-100" pInputText>
+      </div>
+    </div>
+    <hr>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="radibt">
+        <p-radioButton  name="A" value="L"  [(ngModel)]="temp" inputId="temp3"></p-radioButton>
+      </div>
+      <div class="p-field p-col ">
+        <input placeholder="شناسه واریز کننده" class="input-w-100" pInputText>
+      </div>
+      <div class="p-field p-col ">
+        <input placeholder="ردیف شناسه" class="input-w-100" pInputText>
+      </div>
+      <div class="p-field p-col app-ml-20r">
+        <p-dropdown class="p-dropdown-w100" placeholder=" گروه" optionValue="value"
+                    optionLabel="label"></p-dropdown>
+      </div>
+    </div>
+  </p-card>
+  <br>
+  <div class="p-d-flex p-jc-center">
+
+    <button pButton class="p-button-info  btn-ml"  label="جستجو" ></button>
+    <button pButton class="p-button-info "  label="پاک کردن فرم" ></button>
+  </div>
+</p-panel>
