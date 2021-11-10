@@ -471,11 +471,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '/viewEditInformationPaymentManagement',
               },
               {
-                id: 'bankpayaCharge',
+                id: 'specialPaymentCartable',
                 label: 'کارتابل پرداخت ویژه',
                 translate: 'کارتابل پرداخت ویژه',
                 type: 'item',
-                // routerLink: '/bankpayaCharge',
+                routerLink: '/specialPaymentCartable',
               },
               {
                 id: 'reportUploadedFilesPaymentManagment',
