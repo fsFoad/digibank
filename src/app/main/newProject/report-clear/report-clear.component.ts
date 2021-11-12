@@ -6,6 +6,8 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./report-clear.component.scss']
 })
 export class ReportClearComponent implements OnInit {
+  dropListAccountNumber:{ label: string, value: number }[] = [];
+  dropListBankNumber:{ label: string, value: number }[] = [];
     tableFlag = false;
     fsList: {
         accountNumber: number, history: string, personal: string, branchCode: string,
@@ -144,6 +146,19 @@ export class ReportClearComponent implements OnInit {
     }
 
     ngOnInit(): void {
+      this.dropListAccountNumber = [
+        {label: '-', value: 1},
+        {label: '7548621548', value: 2},
+        {label: '1548254962', value: 3},
+        {label: '8465215749', value: 4},
+      ];
+      this.dropListBankNumber = [
+        {label: '-', value: 1},
+        {label: 'ملی', value: 2},
+        {label: 'تجارت', value: 3},
+        {label: 'صادرات', value: 4},
+        {label: 'ملت', value: 5},
+      ];
     }
 
 }

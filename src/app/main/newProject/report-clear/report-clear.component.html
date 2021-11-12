@@ -1,72 +1,85 @@
-<p-panel header="گزارش اسناد واگذاری" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap Fs-mlf">
-        <div class=" p-md-2 FS-mr">
-            <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
+<p-panel header="گزارش اسناد واگذاری" >
+    <div class=" p-fluid p-formgrid p-grid app-mx-10r">
+        <div class=" p-field p-col ">
+            <p-dropdown [options]="dropListAccountNumber" placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <input placeholder="مبلغ" class="input-w-100" pInputText    >
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <p-dropdown placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <p-dropdown placeholder="نوع سند" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
-        <div class=" p-md-2 FS-mr">
+    </div>
+  <div class=" p-fluid p-formgrid p-grid app-mx-10r">
+        <div class=" p-field p-col ">
 
-            <p-dropdown placeholder="بانک متعهد" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [options]="dropListBankNumber" placeholder="بانک متعهد" optionValue="value" optionLabel="label"></p-dropdown>
 
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <input placeholder="شماره حساب سند" class="input-w-100" pInputText    >
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <input placeholder="ذینفع چک" class="input-w-100" pInputText    >
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <input placeholder="سریال چک" class="input-w-100" pInputText    >
         </div>
-        <div class=" p-md-2 FS-mr">
+  </div>
+  <div class=" p-fluid p-formgrid p-grid app-mx-10r">
+
+        <div class=" p-field p-col ">
             <input placeholder="سری حرفی" class="input-w-100" pInputText    >
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <input placeholder="سری عددی" class="input-w-100" pInputText    >
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <!--                <label>شماره حساب</label><br>-->
             <p-dropdown class="p-dropdown-w-100" placeholder="وضعیت چک" optionValue="value" optionLabel="label"></p-dropdown>
 
         </div>
-        <div class=" p-md-2 FS-mr">
+        <div class=" p-field p-col ">
             <!--                <label>شماره حساب</label><br>-->
             <p-dropdown placeholder="سرفصل حسابداری" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
-
-        <div class=" p-md-2 FS-mr">
+  </div>
+  <div class=" p-fluid p-formgrid p-grid app-mx-10r">
+        <div class=" p-field p-col ">
             <p-persian-calendar placeholder="واگذاری از تاریخ" yearRange="1300:1410"
                                 class="app-persian-calendar-style"></p-persian-calendar>
 
         </div>
-        <div class="p-md-2 FS-mr">
+        <div class="p-field p-col ">
             <p-persian-calendar placeholder="واگذاری تا تاریخ" yearRange="1300:1410"
                                 class="app-persian-calendar-style" ></p-persian-calendar>
 
         </div>
-        <div class="p-md-2 FS-mr">
+        <div class="p-field p-col ">
             <p-persian-calendar placeholder="تاریخ سررسید" yearRange="1300:1410"
                                 class="app-persian-calendar-style"></p-persian-calendar>
 
         </div>
-        <div class="p-md-2 FS-mr"></div>
-        <div class=" p-md-2 FS-mr">
+    <div class="p-field p-col ">
+    </div>
+  </div>
+  <div class=" p-fluid p-formgrid p-grid app-mx-10r">
+
+        <div class=" p-field p-col ">
             <p-persian-calendar placeholder="وضعیت از تاریخ" yearRange="1300:1410"
                                 class="app-persian-calendar-style" ></p-persian-calendar>
         </div>
-        <div class="p-md-2 FS-mr">
+        <div class="p-field p-col ">
             <p-persian-calendar placeholder="وضعیت تا تاریخ" yearRange="1300:1410"
                                 class="app-persian-calendar-style" ></p-persian-calendar>
         </div>
-    </div>
+    <div class="p-field p-col "></div>
+    <div class="p-field p-col "></div>
+  </div>
+
     <div class="p-md-12 FS-height">
         <button id="btnReport"  class="p-button-info" pButton label="گزارش" (click)="tableFlag=true;"></button>&nbsp;
     </div>
