@@ -575,11 +575,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             items: [
 
               {
-                id: 'bazpardakhtAghsat',
+                id: 'PardakhtAghsat',
                 label: 'بازپرداخت اقساط',
                 translate: 'بازپرداخت اقساط',
                 type: 'item',
-                // routerLink: '/bazpardakhtAghsat',
+                routerLink: '/PardakhtAghsat',
               },
               {
                 id: 'bazpardakhtAghsat',

@@ -69,6 +69,7 @@ import { ReportFeePaymentManagmentComponent } from "./report-fee-payment-managme
 import { CardBoardGhobozComponent } from "./card-board-ghoboz/card-board-ghoboz.component";
 import { SpecialPaymentCartableComponent } from "./special-payment-cartable/special-payment-cartable.component";
 import {SorathesabTashilatKarkonanComponent} from "./sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component";
+import {PardakhtAghsatComponent} from "./pardakht-aghsat/pardakht-aghsat.component";
 
 
 
@@ -369,6 +370,10 @@ const routes = [
   {
     path: 'sorathesabTashilatKarkonan',
     component: SorathesabTashilatKarkonanComponent,
+  },
+  {
+    path: 'PardakhtAghsat',
+    component: PardakhtAghsatComponent,
   },
   // these should be last
   {

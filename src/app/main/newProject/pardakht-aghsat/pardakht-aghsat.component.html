@@ -1,0 +1,95 @@
+<p-panel header="باز پرداخت اقساط">
+  <div class="p-fluid p-formgrid p-grid app-mx-30r" *ngIf="!detailsFlag">
+    <div class="p-field p-col">
+      <input class="input-w-100" placeholder="شماره قرار داد" pInputText>
+    </div>
+    <div class="p-field p-col">
+      <input class="input-w-100" placeholder="شماره حساب" pInputText>
+    </div>
+    <div class="p-field p-col">
+      <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+                     placeholder="مبلغ (ریال)"></p-inputNumber>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center" *ngIf="!detailsFlag">
+    <button pButton class="p-button-info  btn-ml" label="تائید" (click)="this.detailsFlag = true;"></button>
+
+  </div>
+
+  <p-card header="تایید اطلاعات" *ngIf="detailsFlag">
+    <div class="app-mx-5r">
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-col p-d-flex p-flex-column">
+          <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+            <div class="p-text-right">
+              <label>شماره قرار داد : 10000001</label>
+              <br>
+              <label>نام صاحب تسهیلات : سینا خدادادی</label>
+              <br>
+              <label>کل مانده بدهی قرارداد جهت تسویه کلی: 86,169,195ریال</label>
+              <br>
+              <label>مبلغ قسط : 9,025,000ریال</label>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="p-col p-d-flex p-flex-column">
+          <div class="p-d-flex  p-ai-stretch">
+            <div class="p-col p-d-flex p-flex-column">
+              <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+                <div class="p-text-right">
+                  <label>تاریخ سر رسید بدهی : 1400/09/01</label>
+                  <br>
+                  <label>مانده بدهی سررسید شده : 7,988,270ریال</label>
+                  <br>
+                  <label>شرح نوع تسهیلات : تسهیلات جعاله</label>
+                  <br>
+                  <label>کل مانده بدهی قرار داد : 89,213,270ریال</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="p-d-flex p-jc-center">
+      <button pButton class="p-button-info  btn-ml" label="تائید" (click)="showModalDialog()"></button>
+
+    </div>
+  </p-card>
+</p-panel>
+
+<p-dialog  header="عملیات موفقیت آمیز" [(visible)]="display"  [style]="{width: '25vw'}">
+  <div class="p-d-flex  p-ai-stretch">
+    <div class="p-col p-d-flex p-flex-column">
+      <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r p-jc-center">
+        <div class="p-text-right">
+          <label>نوع عملیات : بازپرداخت اقساط تسهیلات متمرکز</label>
+          <br>
+          <label>نام صاحب تسهیلات : سینا خدادادی</label>
+          <br>
+          <label>شماره قرار داد : 10000001</label>
+          <br>
+          <label>مبلغ پرداختی : 100,000ریال</label>
+          <br>
+          <label>شرح نوع تسهیلات : تسهیلات جعاله</label>
+          <br>
+          <label>تاریخ : {{history|castToDate}}</label>
+          <br>
+          <label dir="rtl">زمان :
+
+            {{  time | date:'shortTime' }}
+
+          </label>
+          <br>
+          <label>شماره پیگیری : 125875652385</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" p-fluid p-jc-center" >
+  <p-button (click)=" this.detailsFlag = false;this.display=false" label="تایید" styleClass="p-button-raised"></p-button>
+  </div>
+</p-dialog>
