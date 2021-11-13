@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-import { RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
 import { SantaRegisterTransferComponent } from './satna-register-transfer/santa-register-transfer.component';
@@ -33,43 +33,44 @@ import { ReportStatusWalletComponent } from './report-status-wallet/report-statu
 import { SubmitClearComponent } from './submit-clear/submit-clear.component';
 import { SubmitCheckComponent } from './submit-check/submit-check.component';
 import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
-import { OrganizationalEntityManagerComponent } from "./organizational-entity-manager/organizational-entity-manager.component";
-import { PersonEditorComponent } from "./person-editor/person-editor.component";
+import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
+import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { CardBoardComponent } from './card-board/card-board.component';
-import { CardBoardPayaComponent } from "./card-board-paya/card-board-paya.component";
-import { Bill2Component } from "./bill2/bill2.component";
-import { YourRialAccountsComponent } from "./your-rial-accounts/your-rial-accounts.component";
-import { YourCurrencyAccountsComponent } from "./your-currency-accounts/your-currency-accounts.component";
-import { CardBoardSatnaComponent } from "./card-board-satna/card-board-satna.component";
-import { SooratHesabComponent } from "./soorat-hesab/soorat-hesab.component";
-import { GardeshRizEnteghalVojoohComponent } from "./gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component";
-import { DaryaftFileSoorathesabComponent } from "./daryaft-file-soorathesab/daryaft-file-soorathesab.component";
-import { InternetRemittanceReportComponent } from "./internet-remittance-report/internet-remittance-report.component";
-import { NotFoundComponent } from "./not-found/not-found.component";
-import { HomePageComponent } from "./home-page/home-page.component";
-import { InternetRemittanceRegisterationComponent } from "./internet-remittance-registeration/internet-remittance-registeration.component";
-import { InternetRemittanceCartableComponent } from "./internet-remittance-cartable/internet-remittance-cartable.component";
-import { SatnaRemittanceRegistrationComponent } from "./satna-remittance-registration/satna-remittance-registration.component";
-import { PayaRegularRemittanceRegistrationComponent } from "./paya-regular-remittance-registration/paya-regular-remittance-registration.component";
-import { PayaRegularRemittanceCartableComponent } from "./paya-regular-remittance-cartable/paya-regular-remittance-cartable.component";
-import { PayaGroupRemittanceCartableComponent } from "./paya-group-remittance-cartable/paya-group-remittance-cartable.component";
-import { PayaGroupRemittanceUploadFileComponent } from "./paya-group-remittance-upload-file/paya-group-remittance-upload-file.component";
-import { ReliableRemittanceReportComponent } from "./reliable-remittance-report/reliable-remittance-report.component";
-import { ReportGroupRemittanceComponent } from "./report-group-remittance/report-group-remittance.component";
-import { GhobozUploadFileComponent } from "./ghoboz-upload-file/ghoboz-upload-file.component";
-import { SubmitInformationVarizComponent } from "./submit-information-variz/submit-information-variz.component";
-import { ReportUploadedFilesComponent } from "./report-uploaded-files/report-uploaded-files.component";
-import { ViewEditInformationDepositManagementComponent } from "./view-edit-information-deposit-management/view-edit-information-deposit-management.component";
-import { UploadPaymentManagementFileComponent } from "./upload-payment-management-file/upload-payment-management-file.component";
-import { SubmitInformationPymentMnagementComponent } from "./submit-information-pyment-mnagement/submit-information-pyment-mnagement.component";
-import { ViewEditInformationPaymentManagementComponent } from "./view-edit-information-payment-management/view-edit-information-payment-management.component";
-import { ReportUploadedFilesPaymentManagmentComponent } from "./report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component";
-import { BillingReportComponent } from "./billing-report/billing-report.component";
-import { ReportFeePaymentManagmentComponent } from "./report-fee-payment-managment/report-fee-payment-managment.component";
-import { CardBoardGhobozComponent } from "./card-board-ghoboz/card-board-ghoboz.component";
-import { SpecialPaymentCartableComponent } from "./special-payment-cartable/special-payment-cartable.component";
-import {SorathesabTashilatKarkonanComponent} from "./sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component";
-import {PardakhtAghsatComponent} from "./pardakht-aghsat/pardakht-aghsat.component";
+import { CardBoardPayaComponent } from './card-board-paya/card-board-paya.component';
+import { Bill2Component } from './bill2/bill2.component';
+import { YourRialAccountsComponent } from './your-rial-accounts/your-rial-accounts.component';
+import { YourCurrencyAccountsComponent } from './your-currency-accounts/your-currency-accounts.component';
+import { CardBoardSatnaComponent } from './card-board-satna/card-board-satna.component';
+import { SooratHesabComponent } from './soorat-hesab/soorat-hesab.component';
+import { GardeshRizEnteghalVojoohComponent } from './gardesh-riz-enteghal-vojooh/gardesh-riz-enteghal-vojooh.component';
+import { DaryaftFileSoorathesabComponent } from './daryaft-file-soorathesab/daryaft-file-soorathesab.component';
+import { InternetRemittanceReportComponent } from './internet-remittance-report/internet-remittance-report.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { InternetRemittanceRegisterationComponent } from './internet-remittance-registeration/internet-remittance-registeration.component';
+import { InternetRemittanceCartableComponent } from './internet-remittance-cartable/internet-remittance-cartable.component';
+import { SatnaRemittanceRegistrationComponent } from './satna-remittance-registration/satna-remittance-registration.component';
+import { PayaRegularRemittanceRegistrationComponent } from './paya-regular-remittance-registration/paya-regular-remittance-registration.component';
+import { PayaRegularRemittanceCartableComponent } from './paya-regular-remittance-cartable/paya-regular-remittance-cartable.component';
+import { PayaGroupRemittanceCartableComponent } from './paya-group-remittance-cartable/paya-group-remittance-cartable.component';
+import { PayaGroupRemittanceUploadFileComponent } from './paya-group-remittance-upload-file/paya-group-remittance-upload-file.component';
+import { ReliableRemittanceReportComponent } from './reliable-remittance-report/reliable-remittance-report.component';
+import { ReportGroupRemittanceComponent } from './report-group-remittance/report-group-remittance.component';
+import { GhobozUploadFileComponent } from './ghoboz-upload-file/ghoboz-upload-file.component';
+import { SubmitInformationVarizComponent } from './submit-information-variz/submit-information-variz.component';
+import { ReportUploadedFilesComponent } from './report-uploaded-files/report-uploaded-files.component';
+import { ViewEditInformationDepositManagementComponent } from './view-edit-information-deposit-management/view-edit-information-deposit-management.component';
+import { UploadPaymentManagementFileComponent } from './upload-payment-management-file/upload-payment-management-file.component';
+import { SubmitInformationPymentMnagementComponent } from './submit-information-pyment-mnagement/submit-information-pyment-mnagement.component';
+import { ViewEditInformationPaymentManagementComponent } from './view-edit-information-payment-management/view-edit-information-payment-management.component';
+import { ReportUploadedFilesPaymentManagmentComponent } from './report-uploaded-files-payment-managment/report-uploaded-files-payment-managment.component';
+import { BillingReportComponent } from './billing-report/billing-report.component';
+import { ReportFeePaymentManagmentComponent } from './report-fee-payment-managment/report-fee-payment-managment.component';
+import { CardBoardGhobozComponent } from './card-board-ghoboz/card-board-ghoboz.component';
+import { SpecialPaymentCartableComponent } from './special-payment-cartable/special-payment-cartable.component';
+import {SorathesabTashilatKarkonanComponent} from './sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component';
+import {PardakhtAghsatComponent} from './pardakht-aghsat/pardakht-aghsat.component';
+import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-reports/indirect-liabilities-reports.component';
 
 
 
@@ -77,163 +78,163 @@ const routes = [
   {
     path: 'registerPayaTransfer',
     component: RegisterPayaTransferComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'payaTakTransfer',
     component: PayaTakTransferComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'santaRegisterTransfer',
     component: SantaRegisterTransferComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'regularPayaRegisterTransfer',
     component: RegularPayaRegisterTransferComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'reportBankTransfer',
     component: ReportBankTransferComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'bankpayaCharge',
     component: BankpayaChargeComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'reportPayaBank',
     component: ReportPayaBankComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'banckPayaGhabz',
     component: BanckPayaGhabzComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'ensedadBonCard',
     component: EnsedadBonCardComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'rafeEnsedadBonCard',
     component: RafeEnsedadBonCardComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'ensedadWallet',
     component: EnsedadWalletComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
 
   {
     path: 'chargAmountWallet',
     component: ChargWalletComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'reportYektaVarriz',
     component: ReportYektaVarrizComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'reportGhabz',
     component: ReportGhabzComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'bills',
     component: BillComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'billsBonCard',
     component: BillingBonCardComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'reportCheckBardasht',
     component: ReportCheckBardashtComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'inquiryCheck',
     component: InquiryCheckComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'searchYekta',
     component: SearchYektaComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'branchPay',
     component: BranchPayComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'registerGhabz',
     component: RegisterGhabzComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'registerBonCard',
     component: RegisterBonCardComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'creatWallet',
     component: CreatWalletComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'createYekta',
     component: CreateYektaComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'groupGhabz',
     component: GroupGhabzComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'walletTransaction',
     component: WalletTransactionComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'yektaList',
     component: YektaListComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'reportClear',
     component: ReportClearComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'reportStatusWallet',
     component: ReportStatusWalletComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'submitClear',
     component: SubmitClearComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'submitCheck',
     component: SubmitCheckComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'tashilatList',
     component: TashilatListComponent,
-    //canActivate:[LoginGuard],
+    // canActivate:[LoginGuard],
   },
   {
     path: 'organizational-entity-manager',
@@ -375,6 +376,10 @@ const routes = [
     path: 'PardakhtAghsat',
     component: PardakhtAghsatComponent,
   },
+  {
+    path: 'indirectLiabilitiesReports',
+    component: IndirectLiabilitiesReportsComponent,
+  },
   // these should be last
   {
     path: '',
@@ -385,7 +390,7 @@ const routes = [
     path: '**',
     component: NotFoundComponent,
   },
-]
+];
 
 @NgModule({
   declarations: [],

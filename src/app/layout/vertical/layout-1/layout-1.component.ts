@@ -596,11 +596,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '/tashilatList',
               },
               {
-                id: 'bazpardakhtAghsat',
+                id: 'indirectLiabilitiesReports',
                 label: 'گزارشات تعهدات غیر مستقیم',
                 translate: 'گزارشات تعهدات غیر مستقیم',
                 type: 'item',
-                // routerLink: '/bazpardakhtAghsat',
+                routerLink: '/indirectLiabilitiesReports',
               },
             ]
           },
