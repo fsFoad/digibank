@@ -117,9 +117,12 @@ div.p-dropdown-panel.p-component{
     border-width: 0 0 1px 0;
     padding: 0.75rem 0.75rem;
 }
-.pi-times:before {
-    content: "\e935" !important;
-}
+
+// why change icon globally to something unrelated?
+// please narrow down the selector to your use case
+// .pi-times:before {
+//     content: "\e935" !important;
+// }
 
 .p-inputtext {
     font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
