@@ -48,6 +48,11 @@
     </div>
   </div>
   <br>
+  <div class="p-d-flex p-jc-center app-mx-54r">
+
+    <input class="input-w-100" placeholder="شرح تایید/لغو کننده" pInputText>
+  </div>
+  <br>
   <p-card header="فهرست تاییدکنندگان">
     <p-table [value]="table2List">
       <ng-template pTemplate="header">
@@ -73,9 +78,9 @@
     </p-table>
   </p-card>
   <br>
-  <div class="p-d-flex p-jc-center" >
-    <button id="btnConfirmation" class="p-button-info" pButton label="تایید"  (click)="onClose()" ></button>&nbsp;
-    <button id="btnCancel" class="p-button-info" pButton label="انصراف" (click)="onClose()" ></button>&nbsp;
-    <button id="btnBack" class="p-button-info" pButton label="بازگشت"  (click)="onClose()" ></button>&nbsp;
+  <div class="p-d-flex p-jc-center">
+    <button id="btnConfirmation" class="p-button-info" pButton label="تایید" (click)="onClose()"></button>&nbsp;
+    <button id="btnCancel" class="p-button-info" pButton label="انصراف" (click)="onClose()"></button>&nbsp;
+    <button id="btnBack" class="p-button-info" pButton label="بازگشت" (click)="onClose()"></button>&nbsp;
   </div>
 </p-card>

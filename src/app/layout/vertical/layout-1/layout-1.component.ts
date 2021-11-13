@@ -1,11 +1,11 @@
-import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
-import { navigation } from 'app/navigation/navigation';
-import { AppSetting } from '../../../main/shared/services/AppSetting';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
+import {navigation} from 'app/navigation/navigation';
+import {AppSetting} from '../../../main/shared/services/AppSetting';
 
-import { FuseConfigService } from '@fuse/services/config.service';
-import { MenuItem } from 'primeng/api';
+import {FuseConfigService} from '@fuse/services/config.service';
+import {MenuItem} from 'primeng/api';
 
 // our menu item structure differs from primeng MenuItem
 interface AppMenuItem extends MenuItem {
@@ -573,18 +573,34 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             translate: 'تسهیلات سازمان ',
             type: 'collapsable',
             items: [
+
               {
-                id: 'purchase',
-                label: 'درخواست تسهیلات',
-                translate: 'درخواست تسهیلات',
+                id: 'bazpardakhtAghsat',
+                label: 'بازپرداخت اقساط',
+                translate: 'بازپرداخت اقساط',
                 type: 'item',
+                // routerLink: '/bazpardakhtAghsat',
               },
               {
-                id: 'tashilatList',
-                label: 'اطلاعات تسهیلات دریافتی سازمان',
-                translate: 'اطلاعات تسهیلات دریافتی سازمان',
+                id: 'bazpardakhtAghsat',
+                label: 'مشاهده مانده بدهی',
+                translate: 'مشاهده مانده بدهی',
                 type: 'item',
-                routerLink: '/tashilatList',
+                // routerLink: '/bazpardakhtAghsat',
+              },
+              {
+                id: 'bazpardakhtAghsat',
+                label: 'صورتحساب تسهیلات',
+                translate: 'صورتحساب تسهیلات',
+                type: 'item',
+                // routerLink: '/bazpardakhtAghsat',
+              },
+              {
+                id: 'bazpardakhtAghsat',
+                label: 'گزارشات تعهدات غیر مستقیم',
+                translate: 'گزارشات تعهدات غیر مستقیم',
+                type: 'item',
+                // routerLink: '/bazpardakhtAghsat',
               },
             ]
           },
@@ -595,16 +611,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             type: 'collapsable',
             items: [
               {
-                id: 'purchase',
-                label: 'صدور مجوز مشاهده تسهیلات کارکنان',
-                translate: 'صدور مجوز مشاهده تسهیلات کارکنان',
+                id: 'tashilatList',
+                label: 'صورتحساب تسهیلات کارکنان',
+                translate: 'صورتحساب تسهیلات کارکنان',
                 type: 'item',
-              },
-              {
-                id: 'purchase',
-                label: 'اطلاعات تسهیلات دریافتی کارکنان',
-                translate: 'اطلاعات تسهیلات دریافتی کارکنان',
-                type: 'item',
+                routerLink: '/tashilatList',
               },
             ]
           },
@@ -613,20 +624,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             label: 'مدیریت اعتبار',
             translate: 'مدیریت اعتبار',
             type: 'collapsable',
-            items: [
-              {
-                id: 'purchase',
-                label: 'تعریف اعتبار',
-                translate: 'تعریف اعتبار',
-                type: 'item',
-              },
-              {
-                id: 'purchase',
-                label: 'تخصیص اعتبار',
-                translate: 'تخصیص اعتبار',
-                type: 'item',
-              },
-            ]
+            items: []
           }
         ]
       }, {
