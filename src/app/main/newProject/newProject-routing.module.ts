@@ -68,6 +68,7 @@ import { BillingReportComponent } from "./billing-report/billing-report.componen
 import { ReportFeePaymentManagmentComponent } from "./report-fee-payment-managment/report-fee-payment-managment.component";
 import { CardBoardGhobozComponent } from "./card-board-ghoboz/card-board-ghoboz.component";
 import { SpecialPaymentCartableComponent } from "./special-payment-cartable/special-payment-cartable.component";
+import {SorathesabTashilatKarkonanComponent} from "./sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component";
 
 
 
@@ -364,6 +365,10 @@ const routes = [
   {
     path: 'cardBoardGhoboz',
     component: CardBoardGhobozComponent,
+  },
+  {
+    path: 'sorathesabTashilatKarkonan',
+    component: SorathesabTashilatKarkonanComponent,
   },
   // these should be last
   {

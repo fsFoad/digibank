@@ -589,11 +589,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 // routerLink: '/bazpardakhtAghsat',
               },
               {
-                id: 'bazpardakhtAghsat',
+                id: 'tashilatList',
                 label: 'صورتحساب تسهیلات',
                 translate: 'صورتحساب تسهیلات',
                 type: 'item',
-                // routerLink: '/bazpardakhtAghsat',
+                routerLink: '/tashilatList',
               },
               {
                 id: 'bazpardakhtAghsat',
@@ -611,11 +611,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             type: 'collapsable',
             items: [
               {
-                id: 'tashilatList',
+                id: 'sorathesabTashilatKarkonan',
                 label: 'صورتحساب تسهیلات کارکنان',
                 translate: 'صورتحساب تسهیلات کارکنان',
                 type: 'item',
-                routerLink: '/tashilatList',
+                routerLink: '/sorathesabTashilatKarkonan',
               },
             ]
           },

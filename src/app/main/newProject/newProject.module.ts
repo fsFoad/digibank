@@ -119,6 +119,7 @@ import { SpecialPaymentCartableComponent } from './special-payment-cartable/spec
 import { SpecialPaymentCartableDetailsComponent } from './special-payment-cartable-details/special-payment-cartable-details.component';
 import { CardBoardGhobozComponent } from './card-board-ghoboz/card-board-ghoboz.component';
 import { RequestGhobozComponent } from './request-ghoboz/request-ghoboz.component';
+import { SorathesabTashilatKarkonanComponent } from './sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component';
 
 @NgModule({
     declarations: [
@@ -209,6 +210,7 @@ import { RequestGhobozComponent } from './request-ghoboz/request-ghoboz.componen
         SpecialPaymentCartableDetailsComponent,
         CardBoardGhobozComponent,
         RequestGhobozComponent,
+        SorathesabTashilatKarkonanComponent,
     ],
     imports: [
         CommonModule,
