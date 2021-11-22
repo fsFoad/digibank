@@ -555,11 +555,12 @@ input[required] + label::after {
 }
 
 .app-theme {
-  --app-primary-color: hsl(200, 100%, 35%);
-  --app-hover-background: hsl(200, 100%, 45%);
-  --app-primary-border: hsl(200, 100%, 25%);
+  --app-primary-color-hs: 200, 100%;
+  --app-primary-color: hsl(var(--app-primary-color-hs), 35%);
+  --app-hover-background: hsl(var(--app-primary-color-hs), 45%);
+  --app-primary-border: hsl(var(--app-primary-color-hs), 25%);
   --app-primary-text-color: #fff;
-  --app-focus-shadow: hsl(200, 100%, 80%);
+  --app-focus-shadow: hsl(var(--app-primary-color-hs), 55%);
   
   .horizontal-menu {
     background-color: var(--app-primary-color);
@@ -644,6 +645,10 @@ input[required] + label::after {
     background: var(--app-hover-background);
     border-color: var(--app-primary-border);
     color: var(--app-primary-text-color);
+  }
+
+  .p-button:focus {
+    box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
   }
 
   .p-button.p-button-info:enabled:active,
