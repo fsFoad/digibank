@@ -71,6 +71,7 @@ import { SpecialPaymentCartableComponent } from './special-payment-cartable/spec
 import {SorathesabTashilatKarkonanComponent} from './sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component';
 import {PardakhtAghsatComponent} from './pardakht-aghsat/pardakht-aghsat.component';
 import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-reports/indirect-liabilities-reports.component';
+import { ChartTestComponent } from './chart-test/chart-test.component';
 
 
 
@@ -379,6 +380,10 @@ const routes = [
   {
     path: 'indirectLiabilitiesReports',
     component: IndirectLiabilitiesReportsComponent,
+  },
+  {
+    path: 'chartTest',
+    component: ChartTestComponent,
   },
   // these should be last
   {
