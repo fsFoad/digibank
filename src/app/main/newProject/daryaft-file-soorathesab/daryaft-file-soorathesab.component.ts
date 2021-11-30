@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from "../../shared/constants/Constants";
 
 @Component({
   selector: 'app-daryaft-file-soorathesab',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./daryaft-file-soorathesab.component.scss']
 })
 export class DaryaftFileSoorathesabComponent implements OnInit {
+  constants:Constants;
   billingPeriod = 'previousMonth'
   customize = false;
   format = 'html';
