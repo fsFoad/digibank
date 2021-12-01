@@ -190,18 +190,18 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 icon: 'account_balance_wallet',
                 routerLink: 'internetRemittanceCartable',
               },
-              {
-                id: 'real',
-                label: 'گزارش حواله های اینترنتی ',
-                translate: 'گزارش حواله های اینترنتی ',
-                type: 'item',
-                icon: 'account_balance_wallet',
-                routerLink: '/internetRemittanceReport'
-              },
+              // {
+              //   id: 'real',
+              //   label: 'گزارش حواله های اینترنتی ',
+              //   translate: 'گزارش حواله های اینترنتی ',
+              //   type: 'item',
+              //   icon: 'account_balance_wallet',
+              //   routerLink: '/internetRemittanceReport'
+              // },
               {
                 id: 'reportBankTransfer',
-                label: 'گزارش حواله های اینترنتی (مالی)',
-                translate: 'گزارش حواله های اینترنتی (مالی)',
+                label: 'گزارش حواله های اینترنتی ',
+                translate: 'گزارش حواله های اینترنتی ',
                 type: 'item',
                 routerLink: '/reportBankTransfer',
               },

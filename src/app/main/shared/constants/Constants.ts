@@ -14,6 +14,21 @@ export class Constants {
     { value: '444', label: 'شرکت تابع2' },
     { value: '333', label: 'شرکت تابع3' },
   ]
+  static HavaleInternetiStatus = [
+    { value: '000', label: '-' },
+    { value: '111', label: 'ثبت اولیه' },
+    { value: '222', label: 'در انتظار تایید' },
+    { value: '333', label: 'ارسال شده به بانک' },
+    { value: '444', label: 'تایید نهایی' },
+    { value: '555', label: 'خطا دار' },
+    { value: '666', label: 'لغو شده' },
+  ]
+  static referralType = [
+    { value: '000', label: '-' },
+    { value: '111', label: 'عادی' },
+    { value: '222', label: 'دستور پرداخت' },
+
+  ]
   // --------------------------------------------------------------------------------------
   static postalPattern = '\\b(?!(\\d)\\1{3})[13-9]{4}[1346-9][013-9]{5}\\b';
   static phoneNumPattern = '^[0][0-9][0-9]([0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]*$)';
