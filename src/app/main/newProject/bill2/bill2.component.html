@@ -30,13 +30,14 @@
           <th translate>تاریخ اعمال</th>
           <th translate>واریز کننده</th>
           <th translate>کد یکتای تراکنش</th>
-          <th translate>چک / حواله</th>
-          <th translate>سند</th>
+          <th translate>شماره سند/چک / حواله</th>
+<!--          <th translate>شماره سند</th>-->
           <th translate>بدهکار</th>
           <th translate>بستانکار</th>
           <th translate>مانده</th>
           <th translate>تاریخ انجام</th>
           <th translate>کد نوع خدمات</th>
+          <th translate>کد نوع عملیات</th>
         </tr>
       </ng-template>
       <ng-template let-i="rowIndex" pTemplate="body" let-service>
@@ -48,12 +49,13 @@
           <td>{{service.depositor}}</td>
           <td>{{service.yektaCode}}</td>
           <td>{{service.check}}</td>
-          <td>{{service.doc}}</td>
+<!--          <td>{{service.doc}}</td>-->
           <td>0</td>
           <td>{{service.creditor|addCommaSeparator}}</td>
           <td>{{service.amount|addCommaSeparator}}</td>
           <td>1400/06/01</td>
           <td>170</td>
+          <td>250</td>
         </tr>
       </ng-template>
     </p-table>
