@@ -67,6 +67,7 @@ import { DividerModule } from 'primeng/divider';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { PaginatorModule } from 'primeng/paginator';
+import { ChartModule } from 'primeng/chart';
 import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
@@ -123,6 +124,7 @@ import { SorathesabTashilatKarkonanComponent } from './sorathesab-tashilat-karko
 import { PardakhtAghsatComponent } from './pardakht-aghsat/pardakht-aghsat.component';
 import { DialogModule } from 'primeng/dialog';
 import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-reports/indirect-liabilities-reports.component';
+import { ChartTestComponent } from './chart-test/chart-test.component';
 
 @NgModule({
   declarations: [
@@ -216,6 +218,7 @@ import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-repo
     SorathesabTashilatKarkonanComponent,
     PardakhtAghsatComponent,
     IndirectLiabilitiesReportsComponent,
+    ChartTestComponent,
   ],
   imports: [
     CommonModule,
@@ -253,6 +256,7 @@ import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-repo
     ConfirmDialogModule,
     PaginatorModule,
     DialogModule,
+    ChartModule,
   ],
   exports: [
     ReportBankTransferComponent
