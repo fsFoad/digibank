@@ -112,7 +112,7 @@
     </div>
     <div class="p-field p-col">
 <!--      <span class="p-float-label">-->
-        <p-dropdown formControlName="shenasnameIssueCityId" placeholder="شهر محل صدور شناسنامه" ></p-dropdown>
+        <p-dropdown  [options]="cityList" formControlName="shenasnameIssueCityId" placeholder="شهر محل صدور شناسنامه" ></p-dropdown>
 <!--        <label>شهر محل صدور شناسنامه</label>-->
 <!--      </span>-->
     </div>
@@ -127,7 +127,7 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
 <!--      <span class="p-float-label">-->
-        <p-dropdown formControlName="genderId" placeholder="جنسیت"></p-dropdown>
+        <p-dropdown [options]="genderTypes" formControlName="genderId" placeholder="جنسیت"></p-dropdown>
 <!--        <label>جنسیت</label>-->
 <!--      </span>-->
     </div>
@@ -140,13 +140,13 @@
     </div>
     <div class="p-field p-col">
 <!--      <span class="p-float-label">-->
-        <p-dropdown formControlName="birthCityId" placeholder="شهر محل تولد"></p-dropdown>
+        <p-dropdown [options]="cityList" formControlName="birthCityId" placeholder="شهر محل تولد"></p-dropdown>
 <!--        <label>شهر محل تولد</label>-->
 <!--      </span>-->
     </div>
     <div class="p-field p-col">
 <!--      <span class="p-float-label">-->
-        <p-dropdown formControlName="birthCountryId" placeholder="کشور محل تولد"></p-dropdown>
+        <p-dropdown [options]="countryList" formControlName="birthCountryId" placeholder="کشور محل تولد"></p-dropdown>
 <!--        <label>کشور محل تولد</label>-->
 <!--      </span>-->
     </div>
@@ -155,19 +155,19 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-3">
 <!--      <span class="p-float-label">-->
-        <p-dropdown formControlName="religionId" placeholder="دین"></p-dropdown>
+        <p-dropdown [options]="religion" formControlName="religionId" placeholder="دین"></p-dropdown>
 <!--        <label>دین</label>-->
 <!--      </span>-->
     </div>
     <div class="p-field p-col-3">
 <!--      <span class="p-float-label">-->
-        <p-dropdown  formControlName="faithId" placeholder="مذهب"></p-dropdown>
+        <p-dropdown [options]="sect" formControlName="faithId" placeholder="مذهب"></p-dropdown>
 <!--        <label>مذهب</label>-->
 <!--      </span>-->
     </div>
     <div class="p-field p-col-3">
 <!--      <span class="p-float-label">-->
-        <p-dropdown formControlName="eghamatStatusId" placeholder="وضعیت اقامت"></p-dropdown>
+        <p-dropdown [options]="residenceTypes" formControlName="eghamatStatusId" placeholder="وضعیت اقامت"></p-dropdown>
 <!--        <label>وضعیت اقامت</label>-->
 <!--      </span>-->
     </div>

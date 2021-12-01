@@ -1,4 +1,4 @@
-<div class="app-mx-5r">
+<div class="app-mx-5r" [formGroup]="form">
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-12 p-md-3">
 <!--      <span class="p-float-label">-->
@@ -47,7 +47,7 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="کشور محل تحصیل" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown [options]="countryList" placeholder="کشور محل تحصیل" [autoDisplayFirst]="false"></p-dropdown>
 <!--          <label>کشور محل تحصیل</label>-->
 <!--        </span>-->
       </div>
@@ -82,7 +82,7 @@
       </div>
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="شهر محل تحصیل" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown [options]="cityList" placeholder="شهر محل تحصیل" formControlName="city" ></p-dropdown>
 <!--          <label>شهر محل تحصیل</label>-->
 <!--        </span>-->
       </div>
