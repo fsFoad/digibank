@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-bill2',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bill2.component.scss']
 })
 export class Bill2Component implements OnInit {
+  acItems = Constants.acItems;
   tableFlag = false;
   fsList: {
     accountNumber: number, history: string, branchCode: string,

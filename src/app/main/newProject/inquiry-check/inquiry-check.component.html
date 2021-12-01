@@ -1,7 +1,7 @@
 <p-panel header="استعلام وضعیت چک" [ngStyle]="{'width':'100%'}">
     <div class="p-d-flex p-flex-wrap Fs-mlf">
         <div class=" p-md-2 FS-mr">
-            <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown editable="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr">
             <input placeholder="مبلغ" class="input-w-100" pInputText>

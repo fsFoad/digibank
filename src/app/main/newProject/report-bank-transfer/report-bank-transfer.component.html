@@ -9,11 +9,10 @@
                                 class="app-persian-calendar-style" ></p-persian-calendar>
         </div>
         <div class="  Fs-p-md Fs-mr ">
-            <p-dropdown placeholder="شماره حساب" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown editable="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
         </div>
         <div class="  Fs-p-md Fs-mr ">
-            <p-dropdown class="p-dropdown-w100" placeholder="وضعیت حواله" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+            <p-dropdown class="p-dropdown-w100" placeholder="وضعیت حواله"  ></p-dropdown>
         </div>
         <div class="  Fs-p-md Fs-mr ">
             <p-dropdown class="p-dropdown-w100" placeholder="نوع حواله" optionValue="value"

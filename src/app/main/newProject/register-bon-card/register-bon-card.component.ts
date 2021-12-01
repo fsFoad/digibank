@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-register-bon-card',
@@ -7,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RegisterBonCardComponent implements OnInit {
     listDrop: { label: string, value: number }[] = [];
-
+  acItems = Constants.acItems;
     constructor() {
     }
 

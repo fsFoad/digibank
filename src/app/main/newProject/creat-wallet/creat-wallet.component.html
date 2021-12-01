@@ -1,8 +1,7 @@
 <p-panel header="تعریف کیف پول" [ngStyle]="{'width':'100%'}">
     <div class="p-d-flex p-flex-wrap Fs-mlf">
         <div class="  p-md-3 FS-mr">
-            <p-dropdown class="p-dropdown-w80" placeholder="شماره حساب متصل" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+            <p-dropdown class="p-dropdown-w80" placeholder="شماره حساب متصل"  [options]="acItems"></p-dropdown>
         </div>
         <div class="p-md-3  FS-mr">
             <input class="input-w-100" placeholder="شماره موبایل" pInputText>

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-report-yekta-varriz',
@@ -6,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./report-yekta-varriz.component.scss']
 })
 export class ReportYektaVarrizComponent implements OnInit {
+  acItems = Constants.acItems;
     tableFlag = false;
     fsList: {
         accountNumber: number, history: string, branchCode: string,

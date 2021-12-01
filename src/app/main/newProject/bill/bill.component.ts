@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-bill',
@@ -7,11 +8,12 @@ import {Component, OnInit} from '@angular/core';
 })
 export class BillComponent implements OnInit {
     upOrDownloadFlag=false;
+  acItems = Constants.acItems;
     organList: { label: string, value: number }[] = [];
     representationList: { label: string, value: number }[] = [];
     operationList: { label: string, value: number }[] = [];
     bankList: { label: string, value: number }[] = [];
-    accountList: { label: string, value: number }[] = [];
+    // accountList: { label: string, value: number }[] = [];
 
     tableList: {
         bankId: number;
@@ -64,12 +66,12 @@ export class BillComponent implements OnInit {
             {label: 'برداشت', value: 2},
 
         ];
-        this.accountList = [
-            {label: '-', value: 0},
-            {label: 'سپرده قرض الحسنه 10000122344', value: 1},
-            {label: 'سپرده کوتاه مدت 2000099998888', value: 2},
-
-        ];
+        // this.accountList = [
+        //     {label: '-', value: 0},
+        //     {label: 'سپرده قرض الحسنه 10000122344', value: 1},
+        //     {label: 'سپرده کوتاه مدت 2000099998888', value: 2},
+        //
+        // ];
         this.bankList = [
             {label: '-', value: 0},
             {label: 'ملت', value: 1},

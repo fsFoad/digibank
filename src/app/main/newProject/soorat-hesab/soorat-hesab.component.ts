@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-soorat-hesab',
@@ -7,16 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SooratHesabComponent implements OnInit {
   showTable = false;
+  acItems=Constants.acItems;
   tableData = getSampleTableData();
   ouItems = [
     { value: '', label: 'واحد یک' },
     { value: '', label: 'واحد دو' },
   ]
-  acItems = [
-    { value: '', label: '54654687' },
-    { value: '', label: '32454465' },
-    { value: '', label: '97897978' },
-  ]
+  // acItems = [
+  //   { value: '', label: '54654687' },
+  //   { value: '', label: '32454465' },
+  //   { value: '', label: '97897978' },
+  // ]
   constructor() { }
 
   ngOnInit(): void {

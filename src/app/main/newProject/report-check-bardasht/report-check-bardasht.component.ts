@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-report-check-bardasht',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportCheckBardashtComponent implements OnInit {
     tableFlag = false;
+  acItems = Constants.acItems;
     fsList: {
         accountNumber: number, history: string, branchCode: string,
         yektaCode: string, dateDue: string, beneficiary: string, TransactionTypeCode: string,

@@ -12,7 +12,7 @@
             <input placeholder="موجودی فعلی" class="input-w-100" pInputText disabled>
         </div>
         <div class=" p-md-3 FS-mr">
-            <p-dropdown placeholder="شماره حساب متصل" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown editable="true" placeholder="شماره حساب متصل"  [options]="acItems"></p-dropdown>
         </div>
         <div class=" p-md-3 FS-mr">
             <input placeholder="مبلغ شارژ" class="input-w-96" pInputText>

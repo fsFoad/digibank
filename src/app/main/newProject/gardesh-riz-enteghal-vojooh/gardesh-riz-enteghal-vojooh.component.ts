@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-gardesh-riz-enteghal-vojooh',
@@ -8,12 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class GardeshRizEnteghalVojoohComponent implements OnInit {
   accountType = 'sourceAccount'
   remittancePortal = 'normal'
-  acItems = [
-    { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
-    { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
-    { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
-    { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
-  ]
+  acItems = Constants.acItems;
+  // acItems = [
+  //   { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
+  //   { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
+  //   { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
+  //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
+  // ]
   constructor() { }
 
   ngOnInit(): void {

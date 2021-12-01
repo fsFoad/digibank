@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService } from "primeng/api";
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-paya-regular-remittance-registration',
@@ -9,12 +10,13 @@ import { ConfirmationService } from "primeng/api";
 })
 export class PayaRegularRemittanceRegistrationComponent implements OnInit {
   showConfirmationComponent = false;
-  acItems = [
-    { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
-    { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
-    { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
-    { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
-  ]
+  acItems = Constants.acItems;
+  // acItems = [
+  //   { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
+  //   { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
+  //   { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
+  //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
+  // ]
   forItems = [
     { value: '1', label: 'بابت یک' },
     { value: '2', label: 'بابت دو' },

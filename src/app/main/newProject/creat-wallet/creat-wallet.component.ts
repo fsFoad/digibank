@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-creat-wallet',
@@ -7,7 +8,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class CreatWalletComponent implements OnInit {
     listDrop: { label: string, value: number }[] = [];
-
+  acItems = Constants.acItems;
     constructor() {
     }
 

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-report-status-wallet',
@@ -7,7 +8,8 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ReportStatusWalletComponent implements OnInit {
     tableFlag = false;
-  dropList:{ label: string, value: number }[] = [];
+  acItems = Constants.acItems;
+  // dropList:{ label: string, value: number }[] = [];
     fsList: {
         accountNumber: number, history: string, personal: string, mobile: string,
         yektaCode: string, walletId: string, beneficiary: string, status: string,
@@ -67,12 +69,13 @@ export class ReportStatusWalletComponent implements OnInit {
     }
 
     ngOnInit(): void {
-      this.dropList = [
-        {label: '-', value: 1},
-        {label: '7548621548', value: 2},
-        {label: '1548254962', value: 3},
-        {label: '8465215749', value:4 },
-      ];
+
+      // this.dropList = [
+      //   {label: '-', value: 1},
+      //   {label: '7548621548', value: 2},
+      //   {label: '1548254962', value: 3},
+      //   {label: '8465215749', value:4 },
+      // ];
     }
 
 }

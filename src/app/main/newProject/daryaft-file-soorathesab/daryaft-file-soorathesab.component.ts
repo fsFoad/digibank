@@ -7,17 +7,22 @@ import {Constants} from "../../shared/constants/Constants";
   styleUrls: ['./daryaft-file-soorathesab.component.scss']
 })
 export class DaryaftFileSoorathesabComponent implements OnInit {
-  constants:Constants;
+  constants:Constants
+  acItems = Constants.acItems;
   billingPeriod = 'previousMonth'
   customize = false;
   format = 'html';
-  acItems = [
-    { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
-    { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
-    { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
-    { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
-  ]
-  constructor() { }
+  // acItems = [
+  //   { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
+  //   { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
+  //   { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
+  //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
+  // ]
+  constructor(
+
+  ) {
+
+  }
 
   ngOnInit(): void {
   }

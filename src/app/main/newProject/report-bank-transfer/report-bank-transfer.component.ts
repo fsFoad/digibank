@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {numericIndexGetter} from '@swimlane/ngx-datatable';
 import {coerceNumberProperty} from '@angular/cdk/coercion';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-report-bank-transfer',
@@ -8,6 +9,7 @@ import {coerceNumberProperty} from '@angular/cdk/coercion';
   styleUrls: ['./report-bank-transfer.component.scss']
 })
 export class ReportBankTransferComponent implements OnInit {
+  acItems = Constants.acItems;
     tableFlag=false;
     fsList: { accountNumber: number, typeTranslate: string,statusTranslate:string ,
         dateRegistration:string,dateDue:string,beneficiary:string,nationalCode:number,

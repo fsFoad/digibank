@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-inquiry-check',
@@ -6,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./inquiry-check.component.scss']
 })
 export class InquiryCheckComponent implements OnInit {
+  acItems = Constants.acItems;
     tableFlag = false;
     fsList: {
         accountNumber: number, history: string, branchCode: string,
