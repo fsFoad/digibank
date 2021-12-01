@@ -8,6 +8,7 @@ import {Constants} from '../../shared/constants/Constants';
 })
 export class Bill2Component implements OnInit {
   acItems = Constants.acItems;
+  organizationalUnit = Constants.organizationalUnit;
   tableFlag = false;
   fsList: {
     accountNumber: number, history: string, branchCode: string,

@@ -9,11 +9,9 @@ import {Constants} from '../../shared/constants/Constants';
 export class SooratHesabComponent implements OnInit {
   showTable = false;
   acItems=Constants.acItems;
+  organizationalUnit=Constants.organizationalUnit;
   tableData = getSampleTableData();
-  ouItems = [
-    { value: '', label: 'واحد یک' },
-    { value: '', label: 'واحد دو' },
-  ]
+
   // acItems = [
   //   { value: '', label: '54654687' },
   //   { value: '', label: '32454465' },
