@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControlOptions, AsyncValidatorFn, FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
-import {Constants} from '../../../shared/constants/Constants';
+import { Constants } from '../../../shared/constants/Constants';
 
 @Component({
   selector: 'app-person-identity-info-editor',
@@ -8,12 +8,12 @@ import {Constants} from '../../../shared/constants/Constants';
   styleUrls: ['./person-identity-info-editor.component.scss']
 })
 export class PersonIdentityInfoEditorComponent implements OnInit {
-  genderTypes=Constants.genderTypes;
-  countryList=Constants.countryList;
-  cityList=Constants.cityList;
-  religion=Constants.religion;
-  sect=Constants.sect;
-  residenceTypes=Constants.residenceTypes;
+  genderTypes = Constants.genderTypes;
+  countryList = Constants.countryList;
+  cityList = Constants.cityList;
+  religion = Constants.religion;
+  sect = Constants.sect;
+  residenceTypes = Constants.residenceTypes;
   banks = [
     { name: '-' },
     { name: 'ملت' },
@@ -31,11 +31,11 @@ export class PersonIdentityInfoEditorComponent implements OnInit {
       lastName: [''],
       fatherName: [''],
       shenasnameIssueDate: [''],
-      shenasnameNumber: [''],
+      shenasnameNumber: [null],
       shenasnameSeriesLetter: [''],
-      shenasnameSeriesNumber: [''],
-      shenasnameSerial: [''],
-      cartMelliSerial: [''],
+      shenasnameSeriesNumber: [null],
+      shenasnameSerial: [null],
+      cartMelliSerial: [null],
       shenasnameTypeId: [''],
       shenasnameIssueCityId: [''],
       shenasnameHozeCodeId: [''],
