@@ -9,7 +9,7 @@ export class Constants {
   ]
   static organizationalUnit = [
     { value: '000', label: '-' },
-    { value: '111', label: 'شرکت هولدینگ' },
+    { value: '111', label: 'شرکت هلدینگ' },
     { value: '222', label: 'شرکت تابع1' },
     { value: '444', label: 'شرکت تابع2' },
     { value: '333', label: 'شرکت تابع3' },
