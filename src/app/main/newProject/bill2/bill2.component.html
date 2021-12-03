@@ -1,24 +1,22 @@
 <p-panel header="صورت حساب" [ngStyle]="{'width':'100%'}">
-  <div class="p-d-flex p-flex-wrap">
-    <div class="Fs-p-md FS-mr">
-      <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
-                          class="app-persian-calendar-style" ></p-persian-calendar>
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <p-dropdown   placeholder="واحد سازمانی" [options]="organizationalUnit"></p-dropdown>
+      </div>
+      <div class="p-field p-col-3">
+        <p-dropdown [editable]="true" placeholder="شماره حساب" [options]="acItems"></p-dropdown>
+      </div>
+      <div class="p-field p-col-3">
+        <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+      </div>
+      <div class="p-field p-col-3">
+        <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+      </div>
     </div>
-    <div class="Fs-p-md FS-mr2">
-      <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
-                          class="app-persian-calendar-style" ></p-persian-calendar>
+    <div class="p-d-flex p-jc-center">
+      <button  id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
     </div>
-    <div class=" p-md-2 FS-mr2 ">
-      <p-dropdown [options]="organizationalUnit" class="p-dropdown-w80" placeholder="واحد سازمانی" optionValue="value"
-                  optionLabel="label"></p-dropdown>
-    </div>
-    <div class=" p-md-2 FS-mr">
-      <p-dropdown [editable]="true" class="p-dropdown-w80" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
-    </div>
-  </div>
-  <div class="p-col-12">
-    <br>
-    <button id="btnRecovery"  class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
   </div>
   <p-card  *ngIf=tableFlag>
     <p-table [value]="fsList">

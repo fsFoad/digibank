@@ -208,14 +208,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
 
             ]
           },
-          {
-            id: 'real',
-            label: 'صورت حساب ',
-            translate: 'صورت حساب ',
-            type: 'item',
-            icon: 'account_balance_wallet',
-            routerLink: 'sooratHesab'
-          },
+          // {
+          //   id: 'real',
+          //   label: 'صورت حساب ',
+          //   translate: 'صورت حساب ',
+          //   type: 'item',
+          //   icon: 'account_balance_wallet',
+          //   routerLink: 'sooratHesab'
+          // },
           {
             id: 'bills',
             label: 'صورت حساب چند بانکی',
@@ -225,8 +225,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           },
           {
             id: 'oldBill',
-            label: 'صورت حساب قدیمی ',
-            translate: 'صورت حساب قدیمی ',
+            label: 'صورت حساب  ',
+            translate: 'صورت حساب  ',
             type: 'item',
             routerLink: '/oldBill',
           },
