@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-satna-remittance-registration',
@@ -6,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./satna-remittance-registration.component.scss']
 })
 export class SatnaRemittanceRegistrationComponent implements OnInit {
-  acItems = [
-    { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
-    { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
-    { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
-    { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
-  ]
+  acItems=Constants.acItems;
+  // acItems = [
+  //   { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
+  //   { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
+  //   { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
+  //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
+  // ]
   
   forItems = [
     { value: '1', label: 'بابت یک' },

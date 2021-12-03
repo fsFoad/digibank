@@ -1,78 +1,88 @@
 <p-panel header="ثبت حواله ساتنا" *ngIf="!showConfirmationComponent">
-  <div class="app-mx-5r p-d-flex p-flex-column app-gap-1r">
-    <div>
+  <div class=" p-d-flex p-flex-column app-gap-1r">
+    <div class="text">
       <span class="pi pi-info-circle"></span>
       مشتری گرامی، لطفا در فیلد شماره شبا، شماره کارت وارد ننمایید
       <br>
-      حداقل مبلغ قابل انتقال از طریق حواله ساتنا، صد و پنجاه میلیون ریال می‌باشد، جهت ارسال حواله بین بانکی کمتر از مبلغ یاد شده، می‌توانید از حواله پایا استفاده کنید
+      حداقل مبلغ قابل انتقال از طریق حواله ساتنا، صد و پنجاه میلیون ریال می‌باشد، جهت ارسال حواله بین بانکی کمتر از مبلغ
+      یاد شده، می‌توانید از حواله پایا استفاده کنید
       <br>
-      امکان ارسال حواله ساتنا با مبلغ کمتر از صد و پنجاه میلیون ریال، تنها برای بانکهای مقصدی که از حواله پایا پشتیبانی نمی‌کنند فراهم می‌باشد
+      امکان ارسال حواله ساتنا با مبلغ کمتر از صد و پنجاه میلیون ریال، تنها برای بانکهای مقصدی که از حواله پایا پشتیبانی
+      نمی‌کنند فراهم می‌باشد
     </div>
 
     <p-card header="مشخصات فرستنده حواله">
-      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-        <div class="p-field p-col">
-          <input pInputText placeholder="کد ملی">
+      <div class="app-mx-20r">
+        <div class="p-fluid p-formgrid p-grid ">
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد ملی">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد شهاب">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد پستی">
+          </div>
         </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="کد شهاب">
-        </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="کد پستی">
-        </div>
-      </div>
-      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-        <div class="p-field p-col">
-          <p-dropdown placeholder="انتقال از" [options]="acItems"></p-dropdown>
-        </div>
-        <div class="p-field p-col p-d-flex p-ai-center">
-          نام شخص/شرکت
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <p-dropdown placeholder="انتقال از" [options]="acItems"></p-dropdown>
+          </div>
+          <div class="p-field p-col p-d-flex p-ai-center">
+            نام شخص/شرکت
+          </div>
         </div>
       </div>
     </p-card>
 
     <p-card header="مشخصات حواله">
-      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-        <div class="p-field p-col">
-          <input pInputText placeholder="شناسه واریز کننده">
-        </div>
-        <div class="p-field p-col">
-          <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" placeholder="مبلغ حواله"></p-inputNumber>
-        </div>
-        <div class="p-field p-col">
-          <p-dropdown placeholder="بابت" [options]="forItems"></p-dropdown>
+      <div class="app-mx-20r">
+        <div class="p-fluid p-formgrid p-grid ">
+          <div class="p-field p-col">
+            <input pInputText placeholder="شناسه واریز کننده">
+          </div>
+          <div class="p-field p-col">
+            <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+                           placeholder="مبلغ حواله"></p-inputNumber>
+          </div>
+          <div class="p-field p-col">
+            <p-dropdown placeholder="بابت" [options]="forItems"></p-dropdown>
+          </div>
         </div>
       </div>
     </p-card>
 
     <p-card header="مشخصات گیرنده حواله">
-      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-        <div class="p-field p-col">
-          <p-dropdown placeholder="نوع گیرنده حواله" [options]="receiverItems"></p-dropdown>
+      <div class="app-mx-10r">
+        <div class="p-fluid p-formgrid p-grid ">
+          <div class="p-field p-col">
+            <p-dropdown placeholder="نوع گیرنده حواله" [options]="receiverItems"></p-dropdown>
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="به شماره شبای">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="نوع حساب">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="نام بانک مقصد">
+          </div>
         </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="به شماره شبای">
-        </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="نوع حساب">
-        </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="نام بانک مقصد">
-        </div>
-      </div>
 
-      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-        <div class="p-field p-col">
-          <input pInputText placeholder="کد ملی/شماره ملی/شماره فراگیر">
-        </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="کد شهاب">
-        </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="کد پستی">
-        </div>
-        <div class="p-field p-col">
-          <input pInputText placeholder="شرح">
+
+        <div class="p-fluid p-formgrid p-grid ">
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد ملی/شماره ملی/شماره فراگیر">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد شهاب">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="کد پستی">
+          </div>
+          <div class="p-field p-col">
+            <input pInputText placeholder="شرح">
+          </div>
         </div>
       </div>
     </p-card>
@@ -83,4 +93,5 @@
   </div>
 </p-panel>
 
-<app-satna-remittance-registration-confirmation *ngIf="showConfirmationComponent" (confirm)="closeConfirmation()"></app-satna-remittance-registration-confirmation>
+<app-satna-remittance-registration-confirmation *ngIf="showConfirmationComponent"
+                                                (confirm)="closeConfirmation()"></app-satna-remittance-registration-confirmation>
