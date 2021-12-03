@@ -8,6 +8,7 @@ import {Constants} from '../../shared/constants/Constants';
 })
 export class SatnaRemittanceRegistrationComponent implements OnInit {
   acItems=Constants.acItems;
+  forItems=Constants.forItems;
   // acItems = [
   //   { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
   //   { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
@@ -15,11 +16,11 @@ export class SatnaRemittanceRegistrationComponent implements OnInit {
   //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
   // ]
   
-  forItems = [
-    { value: '1', label: 'بابت یک' },
-    { value: '2', label: 'بابت دو' },
-    { value: '3', label: 'بابت سه' },
-  ]
+  // forItems = [
+  //   { value: '1', label: 'بابت یک' },
+  //   { value: '2', label: 'بابت دو' },
+  //   { value: '3', label: 'بابت سه' },
+  // ]
   
   receiverItems = [
     { value: '1', label: 'حقیقی' },
