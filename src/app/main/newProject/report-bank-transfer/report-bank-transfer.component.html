@@ -1,46 +1,45 @@
 <p-panel header="گزارش حواله های اینترنتی " [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap Fs-mlf">
-        <div class="  Fs-p-md ">
+  <div class="p-fluid p-formgrid p-grid app-mx-10r ">
+    <div class="p-field p-col-3">
             <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"
             ></p-persian-calendar>
         </div>
-        <div class="  Fs-p-md Fs-mr">
+    <div class="p-field p-col-3">
             <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
                                 class="app-persian-calendar-style" ></p-persian-calendar>
         </div>
-        <div class="  Fs-p-md Fs-mr ">
+    <div class="p-field p-col-3">
             <p-dropdown [editable]="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
         </div>
-        <div class="  Fs-p-md Fs-mr ">
+    <div class="p-field p-col-3">
             <p-dropdown [options]="HavaleInternetiStatus"  class="p-dropdown-w100" placeholder="وضعیت حواله"  ></p-dropdown>
         </div>
-        <div class="  Fs-p-md Fs-mr ">
+    <div class="p-field p-col-3">
             <p-dropdown [options]="referralType" class="p-dropdown-w100" placeholder="نوع حواله" optionValue="value"
                         optionLabel="label"></p-dropdown>
         </div>
         <br>
-    </div>
-    <br>
-    <div class="p-d-flex p-flex-wrap Fs-mlf">
-        <div class=" Fs-p-md  ">
+
+
+      <div class="p-field p-col-3">
 <!--            <input placeholder="دریافت کننده" class="input-w-100" pInputText >-->
           <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" placeholder="مبلغ حواله از (ریال)"></p-inputNumber>
         </div>
-        <div class="Fs-p-md Fs-mr">
+      <div class="p-field p-col-3">
           <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" placeholder="مبلغ حواله تا (ریال)"></p-inputNumber>
 
           <!--            <amount-box class="amount-box-100w" placeholder="مبلغ" >-->
 <!--            </amount-box>-->
         </div>
-        <div class=" Fs-p-md Fs-mr ">
+      <div class="p-field p-col-3">
             <input class="input-w-100" placeholder="کدملی / شناسه ملی" pInputText >
         </div>
-        <div class="Fs-p-md Fs-mr ">
+      <div class="p-field p-col-3">
             <input class="input-w-100" placeholder="شماره حواله" pInputText >
         </div>
-        <div class="Fs-p-md Fs-mr ">
+      <div class="p-field p-col-3">
         </div>
-    </div>
+  </div>
     <div class="p-col-12">
             <br>
             <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
