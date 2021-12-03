@@ -1,11 +1,10 @@
 <p-panel header="کارتابل حواله منظم پایا" *ngIf="!showDetailsComponent">
   <p-card *ngIf="showTable" class="p-d-flex p-my-5">
-    <p-table [value]="tableData" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-      currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+    <p-table [value]="tableData" >
       <ng-template pTemplate="header">
         <tr>
           <th translate>ردیف</th>
-          <th translate>شماره حواله موقت</th>
+          <th translate>شماره حواله</th>
           <th translate>شماره حساب مبدا</th>
           <th translate>شماره شبا مقصد</th>
           <th translate>مبلغ</th>
