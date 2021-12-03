@@ -1,7 +1,13 @@
 <div class="setToCenter">
 
-    <p-panel header="{{'title.login.form' | translate }}" class="PanelLogin">
+    <p-panel header="ورود" class="PanelLogin">
         <div class="p-grid" id="panelDiv">
+            <div>
+                user1/pass1
+            </div>
+            <div *ngIf="errorMessage" style="color: red;">
+                {{errorMessage}}
+            </div>
             <div class="p-col-12" id="userDiv">
                 <!--                <label for="username">{{'label.username' | translate}}:</label>-->
                 <input placeholder="نام کاربری" [(ngModel)]="userName" id="username" pInputText>
@@ -14,7 +20,7 @@
             </div>
             <div class="p-col-12" id="btnDiv">
 
-                <p-button id="btnLog" (click)="login()" label="{{'label.enter' | translate}}"></p-button>
+                <p-button id="btnLog" (click)="login()" label="ورود"></p-button>
             </div>
             <!--            <div class="p-col-6" id="dropDiv" >-->
             <!--                <label>{{'شیوه ورود' | translate}}</label>-->

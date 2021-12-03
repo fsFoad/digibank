@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
 import { PayaTakTransferComponent } from './paya-tak-transfer/paya-tak-transfer.component';
 import { SantaRegisterTransferComponent } from './satna-register-transfer/santa-register-transfer.component';
@@ -68,332 +68,309 @@ import { BillingReportComponent } from './billing-report/billing-report.componen
 import { ReportFeePaymentManagmentComponent } from './report-fee-payment-managment/report-fee-payment-managment.component';
 import { CardBoardGhobozComponent } from './card-board-ghoboz/card-board-ghoboz.component';
 import { SpecialPaymentCartableComponent } from './special-payment-cartable/special-payment-cartable.component';
-import {SorathesabTashilatKarkonanComponent} from './sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component';
-import {PardakhtAghsatComponent} from './pardakht-aghsat/pardakht-aghsat.component';
+import { SorathesabTashilatKarkonanComponent } from './sorathesab-tashilat-karkonan/sorathesab-tashilat-karkonan.component';
+import { PardakhtAghsatComponent } from './pardakht-aghsat/pardakht-aghsat.component';
 import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-reports/indirect-liabilities-reports.component';
 import { ChartTestComponent } from './chart-test/chart-test.component';
+import { LoginGuard } from '../../auth/guard/login.guard';
+import { LoginComponent } from 'app/auth/login/login.component';
 
 
+const routes: Routes = [
+  { path: 'login', component: LoginComponent },
+  {
+    path: '', canActivate: [LoginGuard], children: [
 
-const routes = [
-  {
-    path: 'registerPayaTransfer',
-    component: RegisterPayaTransferComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'payaTakTransfer',
-    component: PayaTakTransferComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'santaRegisterTransfer',
-    component: SantaRegisterTransferComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'regularPayaRegisterTransfer',
-    component: RegularPayaRegisterTransferComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'reportBankTransfer',
-    component: ReportBankTransferComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'bankpayaCharge',
-    component: BankpayaChargeComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'reportPayaBank',
-    component: ReportPayaBankComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'banckPayaGhabz',
-    component: BanckPayaGhabzComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'ensedadBonCard',
-    component: EnsedadBonCardComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'rafeEnsedadBonCard',
-    component: RafeEnsedadBonCardComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'ensedadWallet',
-    component: EnsedadWalletComponent,
-    // canActivate:[LoginGuard],
-  },
+      {
+        path: 'registerPayaTransfer',
+        component: RegisterPayaTransferComponent,
+      },
+      {
+        path: 'payaTakTransfer',
+        component: PayaTakTransferComponent,
+      },
+      {
+        path: 'santaRegisterTransfer',
+        component: SantaRegisterTransferComponent,
+      },
+      {
+        path: 'regularPayaRegisterTransfer',
+        component: RegularPayaRegisterTransferComponent,
+      },
+      {
+        path: 'reportBankTransfer',
+        component: ReportBankTransferComponent,
+      },
+      {
+        path: 'bankpayaCharge',
+        component: BankpayaChargeComponent,
+      },
+      {
+        path: 'reportPayaBank',
+        component: ReportPayaBankComponent,
+      },
+      {
+        path: 'banckPayaGhabz',
+        component: BanckPayaGhabzComponent,
+      },
+      {
+        path: 'ensedadBonCard',
+        component: EnsedadBonCardComponent,
+      },
+      {
+        path: 'rafeEnsedadBonCard',
+        component: RafeEnsedadBonCardComponent,
+      },
+      {
+        path: 'ensedadWallet',
+        component: EnsedadWalletComponent,
+      },
 
-  {
-    path: 'chargAmountWallet',
-    component: ChargWalletComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'reportYektaVarriz',
-    component: ReportYektaVarrizComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'reportGhabz',
-    component: ReportGhabzComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'bills',
-    component: BillComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'billsBonCard',
-    component: BillingBonCardComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'reportCheckBardasht',
-    component: ReportCheckBardashtComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'inquiryCheck',
-    component: InquiryCheckComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'searchYekta',
-    component: SearchYektaComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'branchPay',
-    component: BranchPayComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'registerGhabz',
-    component: RegisterGhabzComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'registerBonCard',
-    component: RegisterBonCardComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'creatWallet',
-    component: CreatWalletComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'createYekta',
-    component: CreateYektaComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'groupGhabz',
-    component: GroupGhabzComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'walletTransaction',
-    component: WalletTransactionComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'yektaList',
-    component: YektaListComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'reportClear',
-    component: ReportClearComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'reportStatusWallet',
-    component: ReportStatusWalletComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'submitClear',
-    component: SubmitClearComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'submitCheck',
-    component: SubmitCheckComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'tashilatList',
-    component: TashilatListComponent,
-    // canActivate:[LoginGuard],
-  },
-  {
-    path: 'organizational-entity-manager',
-    component: OrganizationalEntityManagerComponent,
-  },
-  {
-    path: 'person-editor',
-    component: PersonEditorComponent,
-  },
-  {
-    path: 'cardBoard',
-    component: CardBoardComponent,
-  },
-  {
-    path: 'cardBoardPaya',
-    component: CardBoardPayaComponent,
-  },
-  {
-    path: 'oldBill',
-    component: Bill2Component,
-  },
-  {
-    path: 'yourRialAccounts',
-    component: YourRialAccountsComponent,
-  },
-  {
-    path: 'yourCurrencyAccounts',
-    component: YourCurrencyAccountsComponent,
-  },
-  {
-    path: 'cardBoardSatna',
-    component: CardBoardSatnaComponent,
-  },
-  {
-    path: 'sooratHesab',
-    component: SooratHesabComponent,
-  },
-  {
-    path: 'gardeshRizEnteghalVojooh',
-    component: GardeshRizEnteghalVojoohComponent,
-  },
-  {
-    path: 'daryaftFileSooratHesab',
-    component: DaryaftFileSoorathesabComponent,
-  },
-  {
-    path: 'internetRemittanceReport',
-    component: InternetRemittanceReportComponent,
-  },
-  {
-    path: 'internetRemittanceRegistration',
-    component: InternetRemittanceRegisterationComponent,
-  },
-  {
-    path: 'internetRemittanceCartable',
-    component: InternetRemittanceCartableComponent,
-  },
-  {
-    path: 'satnaRemittanceRegistration',
-    component: SatnaRemittanceRegistrationComponent,
-  },
-  {
-    path: 'payaRegularRemittanceRegistration',
-    component: PayaRegularRemittanceRegistrationComponent,
-  },
-  {
-    path: 'payaRegularRemittanceCartable',
-    component: PayaRegularRemittanceCartableComponent,
-  },
-  {
-    path: 'payaGroupRemittanceCartable',
-    component: PayaGroupRemittanceCartableComponent,
-  },
-  {
-    path: 'payaGroupRemittanceUploadFile',
-    component: PayaGroupRemittanceUploadFileComponent,
-  },
-  {
-    path: 'reliableRemittanceReport',
-    component: ReliableRemittanceReportComponent,
-  },
-  {
-    path: 'reportGroupRemittance',
-    component: ReportGroupRemittanceComponent,
-  },
-  {
-    path: 'ghobozUploadFile',
-    component: GhobozUploadFileComponent,
-  },
-  {
-    path: 'submitInformationVariz',
-    component: SubmitInformationVarizComponent,
-  },
-  {
-    path: 'reportUploadedFiles',
-    component: ReportUploadedFilesComponent,
-  },
-  {
-    path: 'viewEditInformationDepositManagement',
-    component: ViewEditInformationDepositManagementComponent,
-  },
-  {
-    path: 'uploadPaymentManagementFile',
-    component: UploadPaymentManagementFileComponent,
-  },
-  {
-    path: 'submitInformationPymentMnagement',
-    component: SubmitInformationPymentMnagementComponent,
-  },
-  {
-    path: 'viewEditInformationPaymentManagement',
-    component: ViewEditInformationPaymentManagementComponent,
-  },
-  {
-    path: 'reportUploadedFilesPaymentManagment',
-    component: ReportUploadedFilesPaymentManagmentComponent,
-  },
-  {
-    path: 'billingReport',
-    component: BillingReportComponent,
-  },
-  {
-    path: 'reportFeePaymentManagment',
-    component: ReportFeePaymentManagmentComponent,
-  },
-  {
-    path: 'specialPaymentCartable',
-    component: SpecialPaymentCartableComponent,
-  },
-  {
-    path: 'cardBoardGhoboz',
-    component: CardBoardGhobozComponent,
-  },
-  {
-    path: 'sorathesabTashilatKarkonan',
-    component: SorathesabTashilatKarkonanComponent,
-  },
-  {
-    path: 'PardakhtAghsat',
-    component: PardakhtAghsatComponent,
-  },
-  {
-    path: 'indirectLiabilitiesReports',
-    component: IndirectLiabilitiesReportsComponent,
-  },
-  {
-    path: 'chartTest',
-    component: ChartTestComponent,
-  },
-  // these should be last
-  {
-    path: '',
-    pathMatch: 'full',
-    component: HomePageComponent,
-  },
-  {
-    path: '**',
-    component: NotFoundComponent,
+      {
+        path: 'chargAmountWallet',
+        component: ChargWalletComponent,
+      },
+      {
+        path: 'reportYektaVarriz',
+        component: ReportYektaVarrizComponent,
+      },
+      {
+        path: 'reportGhabz',
+        component: ReportGhabzComponent,
+      },
+      {
+        path: 'bills',
+        component: BillComponent,
+      },
+      {
+        path: 'billsBonCard',
+        component: BillingBonCardComponent,
+      },
+      {
+        path: 'reportCheckBardasht',
+        component: ReportCheckBardashtComponent,
+      },
+      {
+        path: 'inquiryCheck',
+        component: InquiryCheckComponent,
+      },
+      {
+        path: 'searchYekta',
+        component: SearchYektaComponent,
+      },
+      {
+        path: 'branchPay',
+        component: BranchPayComponent,
+      },
+      {
+        path: 'registerGhabz',
+        component: RegisterGhabzComponent,
+      },
+      {
+        path: 'registerBonCard',
+        component: RegisterBonCardComponent,
+      },
+      {
+        path: 'creatWallet',
+        component: CreatWalletComponent,
+      },
+      {
+        path: 'createYekta',
+        component: CreateYektaComponent,
+      },
+      {
+        path: 'groupGhabz',
+        component: GroupGhabzComponent,
+      },
+      {
+        path: 'walletTransaction',
+        component: WalletTransactionComponent,
+      },
+      {
+        path: 'yektaList',
+        component: YektaListComponent,
+      },
+      {
+        path: 'reportClear',
+        component: ReportClearComponent,
+      },
+      {
+        path: 'reportStatusWallet',
+        component: ReportStatusWalletComponent,
+      },
+      {
+        path: 'submitClear',
+        component: SubmitClearComponent,
+      },
+      {
+        path: 'submitCheck',
+        component: SubmitCheckComponent,
+      },
+      {
+        path: 'tashilatList',
+        component: TashilatListComponent,
+      },
+      {
+        path: 'organizational-entity-manager',
+        component: OrganizationalEntityManagerComponent,
+      },
+      {
+        path: 'person-editor',
+        component: PersonEditorComponent,
+      },
+      {
+        path: 'cardBoard',
+        component: CardBoardComponent,
+      },
+      {
+        path: 'cardBoardPaya',
+        component: CardBoardPayaComponent,
+      },
+      {
+        path: 'oldBill',
+        component: Bill2Component,
+      },
+      {
+        path: 'yourRialAccounts',
+        component: YourRialAccountsComponent,
+      },
+      {
+        path: 'yourCurrencyAccounts',
+        component: YourCurrencyAccountsComponent,
+      },
+      {
+        path: 'cardBoardSatna',
+        component: CardBoardSatnaComponent,
+      },
+      {
+        path: 'sooratHesab',
+        component: SooratHesabComponent,
+      },
+      {
+        path: 'gardeshRizEnteghalVojooh',
+        component: GardeshRizEnteghalVojoohComponent,
+      },
+      {
+        path: 'daryaftFileSooratHesab',
+        component: DaryaftFileSoorathesabComponent,
+      },
+      {
+        path: 'internetRemittanceReport',
+        component: InternetRemittanceReportComponent,
+      },
+      {
+        path: 'internetRemittanceRegistration',
+        component: InternetRemittanceRegisterationComponent,
+      },
+      {
+        path: 'internetRemittanceCartable',
+        component: InternetRemittanceCartableComponent,
+      },
+      {
+        path: 'satnaRemittanceRegistration',
+        component: SatnaRemittanceRegistrationComponent,
+      },
+      {
+        path: 'payaRegularRemittanceRegistration',
+        component: PayaRegularRemittanceRegistrationComponent,
+      },
+      {
+        path: 'payaRegularRemittanceCartable',
+        component: PayaRegularRemittanceCartableComponent,
+      },
+      {
+        path: 'payaGroupRemittanceCartable',
+        component: PayaGroupRemittanceCartableComponent,
+      },
+      {
+        path: 'payaGroupRemittanceUploadFile',
+        component: PayaGroupRemittanceUploadFileComponent,
+      },
+      {
+        path: 'reliableRemittanceReport',
+        component: ReliableRemittanceReportComponent,
+      },
+      {
+        path: 'reportGroupRemittance',
+        component: ReportGroupRemittanceComponent,
+      },
+      {
+        path: 'ghobozUploadFile',
+        component: GhobozUploadFileComponent,
+      },
+      {
+        path: 'submitInformationVariz',
+        component: SubmitInformationVarizComponent,
+      },
+      {
+        path: 'reportUploadedFiles',
+        component: ReportUploadedFilesComponent,
+      },
+      {
+        path: 'viewEditInformationDepositManagement',
+        component: ViewEditInformationDepositManagementComponent,
+      },
+      {
+        path: 'uploadPaymentManagementFile',
+        component: UploadPaymentManagementFileComponent,
+      },
+      {
+        path: 'submitInformationPymentMnagement',
+        component: SubmitInformationPymentMnagementComponent,
+      },
+      {
+        path: 'viewEditInformationPaymentManagement',
+        component: ViewEditInformationPaymentManagementComponent,
+      },
+      {
+        path: 'reportUploadedFilesPaymentManagment',
+        component: ReportUploadedFilesPaymentManagmentComponent,
+      },
+      {
+        path: 'billingReport',
+        component: BillingReportComponent,
+      },
+      {
+        path: 'reportFeePaymentManagment',
+        component: ReportFeePaymentManagmentComponent,
+      },
+      {
+        path: 'specialPaymentCartable',
+        component: SpecialPaymentCartableComponent,
+      },
+      {
+        path: 'cardBoardGhoboz',
+        component: CardBoardGhobozComponent,
+      },
+      {
+        path: 'sorathesabTashilatKarkonan',
+        component: SorathesabTashilatKarkonanComponent,
+      },
+      {
+        path: 'PardakhtAghsat',
+        component: PardakhtAghsatComponent,
+      },
+      {
+        path: 'indirectLiabilitiesReports',
+        component: IndirectLiabilitiesReportsComponent,
+      },
+      {
+        path: 'chartTest',
+        component: ChartTestComponent,
+      },
+
+
+      // add new components above
+      {
+        path: '',
+        pathMatch: 'full',
+        component: HomePageComponent,
+      },
+      {
+        path: '**',
+        component: NotFoundComponent,
+      },
+    ]
   },
 ];
 
