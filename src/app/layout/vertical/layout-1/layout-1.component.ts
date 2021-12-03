@@ -205,13 +205,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 type: 'item',
                 routerLink: '/reportBankTransfer',
               },
-              {
-                id: 'real',
-                label: 'گزارش حسابهای ذینعان',
-                translate: 'گزارش حسابهای ذینعان',
-                type: 'item',
-                icon: 'account_balance_wallet',
-              },
+
             ]
           },
           {
@@ -235,7 +229,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             translate: 'صورت حساب قدیمی ',
             type: 'item',
             routerLink: '/oldBill',
-          }
+          },
+          {
+            id: 'real',
+            label: 'گزارش حسابهای ذینعان',
+            translate: 'گزارش حسابهای ذینعان',
+            type: 'item',
+            icon: 'account_balance_wallet',
+          },
         ]
       },
       {
