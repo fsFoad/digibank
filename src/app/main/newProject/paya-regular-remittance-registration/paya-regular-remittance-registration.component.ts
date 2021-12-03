@@ -11,17 +11,18 @@ import {Constants} from '../../shared/constants/Constants';
 export class PayaRegularRemittanceRegistrationComponent implements OnInit {
   showConfirmationComponent = false;
   acItems = Constants.acItems;
+  forItems = Constants.forItems;
   // acItems = [
   //   { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
   //   { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
   //   { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
   //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
   // ]
-  forItems = [
-    { value: '1', label: 'بابت یک' },
-    { value: '2', label: 'بابت دو' },
-    { value: '3', label: 'بابت سه' },
-  ]
+  // forItems = [
+  //   { value: '1', label: 'بابت یک' },
+  //   { value: '2', label: 'بابت دو' },
+  //   { value: '3', label: 'بابت سه' },
+  // ]
   periodItems = [
     { value: '1', label: 'دوره یک' },
     { value: '2', label: 'دوره دو' },
