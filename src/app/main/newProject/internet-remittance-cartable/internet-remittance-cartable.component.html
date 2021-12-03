@@ -1,46 +1,44 @@
 <p-panel header="کارتابل تائید حواله اینترنتی">
-  <div class="app-mx-5r p-mb-4">
-    جهت تائید حواله می‌بایست بر روی شماره حواله کلیک نمائید.
-  </div>
-  <p-card>
-    <p-paginator [rows]="3" [totalRecords]="9" [pageLinkSize]="3" [showCurrentPageReport]="true"
-      currentPageReportTemplate="شماره {first} تا {last} از {totalRecords}" (onPageChange)="setPage($event)"></p-paginator>
-    <p-table [value]="allRows">
-      <ng-template pTemplate="header">
-        <tr>
-          <th translate>ردیف</th>
-          <th translate>شماره حواله موقت</th>
-          <th translate>نوع حواله</th>
-          <th translate>گیرنده حواله</th>
-          <th translate>وضعیت</th>
-          <th translate>شماره حساب مبدا</th>
-          <th translate>شماره حساب مقصد</th>
-          <th translate>مبلغ</th>
-          <th translate>ثبت کننده</th>
-          <th translate>تاریخ ثبت</th>
-        </tr>
-      </ng-template>
-      <ng-template let-i="rowIndex" pTemplate="body" let-row>
-        <tr>
-          <td>{{i + 1}}</td>
-          <td>
-            <a href="#" (click)="false">
-              {{row.temporaryTransferNumber}}
-            </a>
-          </td>
-          <td>{{row.remittanceType}}</td>
-          <td>{{row.remittanceRecipient}}</td>
-          <td>{{row.status}}</td>
-          <td>{{row.sourceAccountNumber}}</td>
-          <td>{{row.destinationAccountNumber}}</td>
-          <td>{{row.amount|addCommaSeparator}}</td>
-          <td>{{row.registrar}}</td>
-          <td>{{row.registrationDate|castToDate}}</td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </p-card>
-  <div class="p-d-flex p-jc-center p-mt-4 app-child-px-6r">
-    <button pButton label="بروز رسانی"></button>
-  </div>
+    <div class="app-mx-5r p-mb-4">
+        جهت تائید حواله می‌بایست بر روی شماره حواله کلیک نمائید.
+    </div>
+    <p-card>
+        <p-table [value]="rows">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th translate>ردیف</th>
+                    <th translate>شماره حواله</th>
+                    <th translate>نوع حواله</th>
+                    <th translate>گیرنده حواله</th>
+                    <th translate>وضعیت</th>
+                    <th translate>شماره حساب مبدا</th>
+                    <th translate>شماره حساب مقصد</th>
+                    <th translate>مبلغ</th>
+                    <th translate>ثبت کننده</th>
+                    <th translate>تاریخ ثبت</th>
+                    <th translate>عملیات</th>
+                </tr>
+            </ng-template>
+            <ng-template let-i="rowIndex" pTemplate="body" let-row>
+                <tr>
+                    <td>{{i + 1}}</td>
+                    <td>{{row.temporaryTransferNumber}}</td>
+                    <td>{{row.remittanceType}}</td>
+                    <td>{{row.remittanceRecipient}}</td>
+                    <td>{{row.status}}</td>
+                    <td>{{row.sourceAccountNumber}}</td>
+                    <td>{{row.destinationAccountNumber}}</td>
+                    <td>{{row.amount|addCommaSeparator}}</td>
+                    <td>{{row.registrar}}</td>
+                    <td>{{row.registrationDate|castToDate}}</td>
+                    <td>
+                        <button pButton icon="pi pi-chevron-circle-right" (click)="selectRow(row)"></button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </p-card>
+    <div class="p-d-flex p-jc-center p-mt-4 app-child-px-6r">
+        <button pButton label="بازیابی" (click)="updateRows()"></button>
+    </div>
 </p-panel>

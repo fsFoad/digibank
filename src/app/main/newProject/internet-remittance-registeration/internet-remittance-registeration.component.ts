@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Constants } from 'app/main/shared/constants/Constants';
 
 @Component({
   selector: 'app-internet-remittance-registeration',
@@ -6,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./internet-remittance-registeration.component.scss']
 })
 export class InternetRemittanceRegisterationComponent implements OnInit {
-  acItems = [
-    { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
-    { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
-    { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
-    { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
-  ]
+  acItems = Constants.acItems;
   organizationalAccount = false;
   constructor() { }
 

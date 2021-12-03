@@ -13,20 +13,18 @@ interface Page {
   styleUrls: ['./internet-remittance-cartable.component.scss']
 })
 export class InternetRemittanceCartableComponent implements OnInit {
-  allRows: RowType[] = createSampleRows();
-  currentRows: RowType[] = [];
-  currentPage: Page = { first: 0, rows: 3, pageCount: 3, page: 0 };
+  rows: RowType[] = [];
   constructor() {
-    this.setPage(this.currentPage);
   }
 
   ngOnInit(): void {
   }
 
-  setPage(page: any): void {
-    console.log('setPage', page);
-    this.currentPage = page;
-    this.currentRows = this.allRows.slice(page.first, page.rows * page.page)
+  updateRows(): void {
+    this.rows = this.rows.length ? this.rows : createSampleRows();
+  }
+
+  selectRow(row: RowType): void {
   }
 }
 
@@ -35,19 +33,19 @@ interface RowType {
   remittanceType: string;
   remittanceRecipient: string;
   status: string;
-  sourceAccountNumber: number;
-  destinationAccountNumber: number;
+  sourceAccountNumber: string;
+  destinationAccountNumber: string;
   amount: number;
   registrar: string;
   registrationDate: number;
 }
 
-const firstNames = ['علی رضا', 'محمد', 'مصطفی', 'رامین', 'شهاب', 'مهدی', 'حسین', 'ایرج', 'سیاوش']
-const lastNames = ['رضایی', 'سروستانی', 'کاویانی', 'کوهی', 'شکوری', 'آل منصور', 'بهجتی', 'خداپرست', 'راسخی']
-const choose = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)]
-const randomName = () => choose(firstNames) + ' ' + choose(lastNames)
-const randomRange = (a: number, b: number) => a + Math.floor((b - a) * Math.random())
-const randomNdigit = (n: number) => randomRange(Math.pow(10, n - 1), Math.pow(10, n))
+const firstNames = ['علی رضا', 'محمد', 'مصطفی', 'رامین', 'شهاب', 'مهدی', 'حسین', 'ایرج', 'سیاوش'];
+const lastNames = ['رضایی', 'سروستانی', 'کاویانی', 'کوهی', 'شکوری', 'آل منصور', 'بهجتی', 'خداپرست', 'راسخی'];
+const choose = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)];
+const randomName = () => choose(firstNames) + ' ' + choose(lastNames);
+const randomRange = (a: number, b: number) => a + Math.floor((b - a) * Math.random());
+const randomNdigit = (n: number) => randomRange(Math.pow(10, n - 1), Math.pow(10, n));
 
 function createSampleRows(): RowType[] {
   return [1, 2, 3].map(x => ({
@@ -55,10 +53,10 @@ function createSampleRows(): RowType[] {
     remittanceType: 'حواله اینترنتی',
     remittanceRecipient: randomName(),
     status: 'بررسی نشده',
-    sourceAccountNumber: randomNdigit(10),
-    destinationAccountNumber: randomNdigit(10),
-    amount: 1,
+    sourceAccountNumber: `${choose(['020', '030', '040'])}-${randomNdigit(10)}-${randomNdigit(3)}`,
+    destinationAccountNumber: `${choose(['020', '030', '040'])}-${randomNdigit(10)}-${randomNdigit(3)}`,
+    amount: randomNdigit(3) * (10 ** randomRange(4, 6)),
     registrar: randomName(),
-    registrationDate: 14000805,
-  }))
+    registrationDate: 14000900 + randomRange(1, 30),
+  }));
 }
