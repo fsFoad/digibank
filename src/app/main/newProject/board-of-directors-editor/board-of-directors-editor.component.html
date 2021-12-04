@@ -62,11 +62,8 @@
       <!-- </span> -->
       <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
     </div>
-    <div class="p-field p-as-center" style="width: auto;">
-      <button class="p-button-raised" pButton icon="pi pi-plus" title="افزودن" label="&zwj;">
-        <!--label req. for alignment-->
-      </button>
-      <small>&nbsp;</small><!-- for alignment -->
+    <div class="p-field p-col-3">
+      <p-button class="p-button-raised" icon="pi pi-plus" style="width: auto;" title="افزودن"></p-button>
     </div>
   </div>
 </div>
@@ -96,10 +93,10 @@
         <td>{{row.codeMelli}}</td>
         <td>{{row.hododeEkhtiarat}}</td>
         <td>{{row.codeErjaZinafShakhsi}}</td>
-        <td>{{row.startDate}}</td>
-        <td>{{row.endDate}}</td>
+        <td>{{row.startDate|castToDate}}</td>
+        <td>{{row.endDate|castToDate}}</td>
         <td>
-          <button pButton icon="pi pi-trash" class="p-button-danger" title="حذف"></button>
+          <p-button class="p-button-danger" icon="pi pi-trash" title="حذف" (click)="removeRow(row)"></p-button>
         </td>
       </tr>
     </ng-template>
