@@ -128,8 +128,12 @@ import { ChartTestComponent } from './chart-test/chart-test.component';
 import { AccountSummaryCardComponent } from './account-summary-card/account-summary-card.component';
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 import { InternetRemittanceCartableDetailsComponent } from './internet-remittance-cartable-details/internet-remittance-cartable-details.component';
+import { ConfirmationService } from 'primeng/api';
 
 @NgModule({
+  providers: [
+    ConfirmationService,
+  ],
   declarations: [
     ReportBankTransferComponent,
     PayaTakTransferComponent,

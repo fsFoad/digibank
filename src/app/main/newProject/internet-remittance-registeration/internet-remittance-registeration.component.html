@@ -1,5 +1,5 @@
 <p-panel header="ثبت حواله اینترنتی">
-    <div class="app-mx-5r">
+    <div class="app-mx-20r">
         <div class="p-fluid p-formgrid p-grid app-col-px-2r">
             <div class="p-field p-col">
                 <span>جمع مبلغ حواله‌های روز جاری:</span>
@@ -33,7 +33,10 @@
             </div>
         </div>
         <div class="p-d-flex p-jc-center app-child-px-4r">
-            <button pButton label="تائید"></button>
+            <button pButton label="تائید" (click)="confirmDlg.visible = true"></button>
         </div>
     </div>
 </p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>
