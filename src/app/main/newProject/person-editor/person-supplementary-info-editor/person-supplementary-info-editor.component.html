@@ -1,4 +1,4 @@
-<div class="app-mx-5r" [formGroup]="form">
+<div class="app-mx-5r">
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-12 p-md-3">
 <!--      <span class="p-float-label">-->
@@ -82,7 +82,7 @@
       </div>
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown [options]="cityList" placeholder="شهر محل تحصیل" formControlName="city" ></p-dropdown>
+          <p-dropdown [options]="cityList" placeholder="شهر محل تحصیل"></p-dropdown>
 <!--          <label>شهر محل تحصیل</label>-->
 <!--        </span>-->
       </div>
@@ -124,22 +124,20 @@
 <!--          <label>نوع سهمیه</label>-->
 <!--        </span>-->
       </div>
-      <div class="p-fluid p-formgrid p-grid app-col-px-2r p-col-12 p-md-3 p-px-0">
-        <div class="p-field p-col-12 p-md-8">
+        <div class="p-field p-col-12 p-md-3">
 <!--          <span class="p-float-label">-->
             <p-inputNumber placeholder="تعداد افراد خانواده"></p-inputNumber>
 <!--            <label>تعداد افراد خانواده</label>-->
 <!--          </span>-->
           <!-- <small>ورودی به صورت عدد می‌باشد</small> -->
         </div>
-        <div class="p-field p-col-12 p-md-4">
+        <div class="p-field p-col-12 p-md-3">
 <!--          <span class="p-float-label">-->
             <p-inputNumber placeholder="تعداد فرزندان"></p-inputNumber>
 <!--            <label>تعداد فرزندان</label>-->
 <!--          </span>-->
           <!-- <small>ورودی به صورت عدد می‌باشد</small> -->
         </div>
-      </div>
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
           <p-inputNumber placeholder="تعداد افراد تحت تکفل"></p-inputNumber>

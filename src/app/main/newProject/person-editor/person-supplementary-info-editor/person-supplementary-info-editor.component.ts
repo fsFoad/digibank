@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Constants} from '../../../shared/constants/Constants';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Constants } from '../../../shared/constants/Constants';
 
 @Component({
   selector: 'app-person-supplementary-info-editor',
@@ -8,13 +7,9 @@ import {FormBuilder, FormGroup} from '@angular/forms';
   styleUrls: ['./person-supplementary-info-editor.component.scss']
 })
 export class PersonSupplementaryInfoEditorComponent implements OnInit {
-  cityList=Constants.cityList;
-  countryList=Constants.countryList;
-  public form: FormGroup;
-  constructor(fb: FormBuilder) {
-    this.form = fb.group({
-      city: [" "],
-    });
+  cityList = Constants.cityList.filter(x => x.value !== null);
+  countryList = Constants.countryList.filter(x => x.value !== null);
+  constructor() {
   }
   ngOnInit(): void {
   }
