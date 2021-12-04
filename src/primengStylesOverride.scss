@@ -693,7 +693,7 @@ input[required] + label::after {
 
   .p-datatable .p-datatable-thead > tr > th {
     background: var(--app-primary-color);
-    border: 1px solid var(--app-primary-border);
+    // border: 1px solid var(--app-primary-border);
     color: var(--app-primary-text-color);
   }
 
