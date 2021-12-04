@@ -1,4 +1,4 @@
-<p-panel header="کارتابل تائید حواله اینترنتی">
+<p-panel header="کارتابل تائید حواله اینترنتی" *ngIf="!showDetailsComponent">
     <div class="app-mx-5r p-mb-4">
         جهت تائید حواله می‌بایست بر روی شماره حواله کلیک نمائید.
     </div>
@@ -42,3 +42,9 @@
         <button pButton label="بازیابی" (click)="updateRows()"></button>
     </div>
 </p-panel>
+
+<app-internet-remittance-cartable-details *ngIf="showDetailsComponent" [info]="selectedRow" (confirm)="confirm($event)">
+</app-internet-remittance-cartable-details>
+
+<p-confirmDialog header="توجه" acceptLabel="تایید" [rejectVisible]="false" [closable]="false">
+</p-confirmDialog>

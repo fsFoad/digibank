@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfirmationService } from 'primeng/api';
 
 interface Page {
   page: number;
@@ -10,11 +11,14 @@ interface Page {
 @Component({
   selector: 'app-internet-remittance-cartable',
   templateUrl: './internet-remittance-cartable.component.html',
-  styleUrls: ['./internet-remittance-cartable.component.scss']
+  styleUrls: ['./internet-remittance-cartable.component.scss'],
+  providers: [ConfirmationService]
 })
 export class InternetRemittanceCartableComponent implements OnInit {
-  rows: RowType[] = [];
-  constructor() {
+  rows: InternetRemittanceRow[] = [];
+  showDetailsComponent = false;
+  selectedRow: InternetRemittanceRow;
+  constructor(private confirmationService: ConfirmationService) {
   }
 
   ngOnInit(): void {
@@ -24,11 +28,38 @@ export class InternetRemittanceCartableComponent implements OnInit {
     this.rows = this.rows.length ? this.rows : createSampleRows();
   }
 
-  selectRow(row: RowType): void {
+  selectRow(row: InternetRemittanceRow): void {
+    this.selectedRow = row;
+    this.showDetailsComponent = true;
   }
+
+  confirm(value: boolean | null): void {
+    if (value !== null) {
+      this.confirmationService.confirm({
+        message: `عملیات با موفقیت انجام شد‍‍‍‍`,
+        accept: () => {
+          this.showDetailsComponent = false;
+        }
+      });
+    } else {
+      this.showDetailsComponent = false;
+    }
+    this.selectedRow.status = getConfirmationStatusByFlag(value);
+  }
+
 }
 
-interface RowType {
+function getConfirmationStatusByFlag(value: boolean | null): string {
+  if (value === null) {
+    return 'بررسی نشده';
+  }
+  if (value) {
+    return 'تائید شده';
+  } else {
+    return 'تائید نشده';
+  }
+}
+export interface InternetRemittanceRow {
   temporaryTransferNumber: number;
   remittanceType: string;
   remittanceRecipient: string;
@@ -47,7 +78,7 @@ const randomName = () => choose(firstNames) + ' ' + choose(lastNames);
 const randomRange = (a: number, b: number) => a + Math.floor((b - a) * Math.random());
 const randomNdigit = (n: number) => randomRange(Math.pow(10, n - 1), Math.pow(10, n));
 
-function createSampleRows(): RowType[] {
+function createSampleRows(): InternetRemittanceRow[] {
   return [1, 2, 3].map(x => ({
     temporaryTransferNumber: randomNdigit(7),
     remittanceType: 'حواله اینترنتی',

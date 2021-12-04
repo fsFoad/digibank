@@ -127,6 +127,7 @@ import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-repo
 import { ChartTestComponent } from './chart-test/chart-test.component';
 import { AccountSummaryCardComponent } from './account-summary-card/account-summary-card.component';
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
+import { InternetRemittanceCartableDetailsComponent } from './internet-remittance-cartable-details/internet-remittance-cartable-details.component';
 
 @NgModule({
   declarations: [
@@ -223,6 +224,7 @@ import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-
     ChartTestComponent,
     AccountSummaryCardComponent,
     DepositSourcesReportComponent,
+    InternetRemittanceCartableDetailsComponent,
   ],
   imports: [
     CommonModule,

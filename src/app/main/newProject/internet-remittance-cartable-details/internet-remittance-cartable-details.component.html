@@ -1,0 +1,61 @@
+<p-panel header="کارتابل تائید حواله اینترنتی">
+  <div class="app-mx-5r p-d-flex p-flex-column app-gap-1r">
+    <p-card header="جزئیات درخواست حواله پایا">
+      <div class="p-fluid p-formgrid p-grid app-mx-10r">
+        <div class="p-field p-col">
+          شماره حواله: {{info.temporaryTransferNumber}}
+          <br>
+          نوع حواله: {{info.remittanceType}}
+          <br>
+          گیرنده حواله: {{info.remittanceRecipient}}
+          <br>
+          وضعیت: {{info.status}}
+          <br>
+          شماره حساب مبدا: {{info.sourceAccountNumber}}
+        </div>
+        <div class="p-field p-col">
+          <br>
+          شماره حساب مقصد: {{info.destinationAccountNumber}}
+          <br>
+          مبلغ: {{info.amount}}
+          <br>
+          ثبت کننده: {{info.registrar}}
+          <br>
+          تاریخ ثبت: {{info.registrationDate}}
+        </div>
+      </div>
+    </p-card>
+
+    <p-card header="فهرست تائید کنندگان">
+      <p-table [value]="table2Rows" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate>نام و نام خانوادگی</th>
+            <th translate>نوع تائید</th>
+            <th translate>وضعیت تائید</th>
+            <th translate>تاریخ</th>
+            <th translate>شرح</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{row.fullName}}</td>
+            <td>{{row.confirmationType}}</td>
+            <td>{{row.confirmationStatus}}</td>
+            <td>{{row.date}}</td>
+            <td>{{row.description}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+
+    <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
+      <button pButton label="تائید" (click)="confirm.emit(true)"></button>
+      <button pButton label="عدم تائید" (click)="confirm.emit(false)"></button>
+      <button pButton label="انصراف" (click)="confirm.emit(null)"></button>
+    </div>
+  </div>
+</p-panel>
