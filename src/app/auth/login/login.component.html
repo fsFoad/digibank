@@ -1,10 +1,7 @@
 <div class="setToCenter">
 
-    <p-panel header="ورود" class="PanelLogin">
+    <p-panel header="سامانه بانکداری اینترنتی شرکتی" class="PanelLogin">
         <div class="p-grid" id="panelDiv">
-            <div>
-                user1/pass1
-            </div>
             <div *ngIf="errorMessage" style="color: red;">
                 {{errorMessage}}
             </div>
@@ -21,6 +18,9 @@
             <div class="p-col-12" id="btnDiv">
 
                 <p-button id="btnLog" (click)="login()" label="ورود"></p-button>
+            </div>
+            <div class="p-col-12">
+                <a href="#">فراموشی رمز عبور</a>
             </div>
             <!--            <div class="p-col-6" id="dropDiv" >-->
             <!--                <label>{{'شیوه ورود' | translate}}</label>-->
