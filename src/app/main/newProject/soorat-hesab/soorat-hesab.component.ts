@@ -27,7 +27,7 @@ export class SooratHesabComponent implements OnInit {
 function getSampleTableData() {
   const row = {
     accountNumber: 2323454566,
-    branchCode: 2345,
+    branchName: '',
     dateOfApplication: '1399/09/09',
     depositor: 'رضا',
     transactionCode: 10000022,
@@ -47,5 +47,5 @@ function getSampleTableData() {
     'امیر حاجیان',
     'محسن فریادرس',
     'امیر لطفی',
-  ].map(x => ({ ...row, depositor: x }))
+  ].map((x, i) => ({ ...row, depositor: x, branchName: Constants.branchNames[i] }))
 }

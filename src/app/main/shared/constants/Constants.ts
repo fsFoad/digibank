@@ -46,6 +46,18 @@ export class Constants {
       openingDate: 14000716,
     },
   ]
+  static branchNames = [
+    'تجریش',
+    'بازار',
+    'دولت',
+    'گاندی',
+    'شوش',
+    'نلسون ماندلا',
+    'سعدی',
+    'سئول',
+    'صادقیه',
+    'توحید',
+  ]
   static acItems = [
     { value: '000', label: '-' },
     { value: '111', label: 'حساب قرض‌الحسنه 25-1000000589-240' },

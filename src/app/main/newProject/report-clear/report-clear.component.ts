@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Constants} from '../../shared/constants/Constants';
+import { Component, OnInit } from '@angular/core';
+import { Constants } from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-report-clear',
@@ -7,12 +7,12 @@ import {Constants} from '../../shared/constants/Constants';
     styleUrls: ['./report-clear.component.scss']
 })
 export class ReportClearComponent implements OnInit {
-  // dropListAccountNumber:{ label: string, value: number }[] = [];
-  acItems = Constants.acItems;
-  dropListBankNumber:{ label: string, value: number }[] = [];
+    // dropListAccountNumber:{ label: string, value: number }[] = [];
+    acItems = Constants.acItems;
+    dropListBankNumber: { label: string, value: number }[] = [];
     tableFlag = false;
     fsList: {
-        accountNumber: number, history: string, personal: string, branchCode: string,
+        accountNumber: number, history: string, personal: string, branchName: string,
         yektaCode: string, status: string, docNumber: string, check: string,
         amounts: string, committedBank: string, amount: number, committedBranchCode: string, docAccountNumber: number
     }[] = [
@@ -20,7 +20,7 @@ export class ReportClearComponent implements OnInit {
             'accountNumber': 7548621548,
             'history': '1400/05/01',
             'personal': 'عرفان حشمتی',
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '3587545',
             'status': '',
             'docNumber': '312',
@@ -35,7 +35,7 @@ export class ReportClearComponent implements OnInit {
             'accountNumber': 1548254962,
             'history': '1400/05/01',
             'personal': 'رستم حبیبی',
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '3587445',
             'status': '',
             'docNumber': '313',
@@ -51,7 +51,7 @@ export class ReportClearComponent implements OnInit {
             'history': '1400/05/01',
             'personal': 'حبیب حسینی'
             ,
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '352345',
             'status': '',
             'docNumber': '314',
@@ -67,7 +67,7 @@ export class ReportClearComponent implements OnInit {
             'history': '1400/05/01',
             'personal': 'کامیار کاظمی'
             ,
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '343315',
             'status': '',
             'docNumber': '315',
@@ -83,7 +83,7 @@ export class ReportClearComponent implements OnInit {
             'history': '1400/05/01',
             'personal': 'فرید ترابی'
             ,
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '345323545',
             'status': '',
             'docNumber': '316',
@@ -99,7 +99,7 @@ export class ReportClearComponent implements OnInit {
             'history': '1400/05/01',
             'personal': 'عماد همتی'
             ,
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '34234543',
             'status': '',
             'docNumber': '317',
@@ -115,7 +115,7 @@ export class ReportClearComponent implements OnInit {
             'history': '1400/05/01',
             'personal': 'سامان کاشانی'
             ,
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '32145',
             'status': '',
             'docNumber': '318',
@@ -131,7 +131,7 @@ export class ReportClearComponent implements OnInit {
             'history': '1400/05/01',
             'personal': 'سینا کریمی'
             ,
-            'branchCode': '85456',
+            branchName: '',
             'yektaCode': '3545445',
             'status': '',
             'docNumber': '319',
@@ -142,25 +142,25 @@ export class ReportClearComponent implements OnInit {
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
-    ];
+    ].map((x, i) => ({ ...x, branchName: Constants.branchNames[i] }));
 
     constructor() {
     }
 
     ngOnInit(): void {
-      // this.dropListAccountNumber = [
-      //   {label: '-', value: 1},
-      //   {label: '7548621548', value: 2},
-      //   {label: '1548254962', value: 3},
-      //   {label: '8465215749', value: 4},
-      // ];
-      this.dropListBankNumber = [
-        {label: '-', value: 1},
-        {label: 'ملی', value: 2},
-        {label: 'تجارت', value: 3},
-        {label: 'صادرات', value: 4},
-        {label: 'ملت', value: 5},
-      ];
+        // this.dropListAccountNumber = [
+        //   {label: '-', value: 1},
+        //   {label: '7548621548', value: 2},
+        //   {label: '1548254962', value: 3},
+        //   {label: '8465215749', value: 4},
+        // ];
+        this.dropListBankNumber = [
+            { label: '-', value: 1 },
+            { label: 'ملی', value: 2 },
+            { label: 'تجارت', value: 3 },
+            { label: 'صادرات', value: 4 },
+            { label: 'ملت', value: 5 },
+        ];
     }
 
 }

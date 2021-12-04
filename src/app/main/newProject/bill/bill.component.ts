@@ -21,7 +21,7 @@ export class BillComponent implements OnInit {
         accountInfo: {
             transactionNumber: number;
             accountNumber: number;
-            branchCode: number;
+            branchName: string;
             transactionDate: string;
             yektaTransactionID: number;
             docNumber: number;
@@ -89,7 +89,7 @@ export class BillComponent implements OnInit {
             accountInfo:[ {
                 transactionNumber: 1009200361,
                 accountNumber: 100001223344,
-                branchCode: 65651,
+                branchName: 'بازار',
                 transactionDate: "1400/05/02",
                 yektaTransactionID: 333300001111,
                 docNumber: 1112,
