@@ -126,6 +126,7 @@ import { DialogModule } from 'primeng/dialog';
 import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-reports/indirect-liabilities-reports.component';
 import { ChartTestComponent } from './chart-test/chart-test.component';
 import { AccountSummaryCardComponent } from './account-summary-card/account-summary-card.component';
+import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 
 @NgModule({
   declarations: [
@@ -221,6 +222,7 @@ import { AccountSummaryCardComponent } from './account-summary-card/account-summ
     IndirectLiabilitiesReportsComponent,
     ChartTestComponent,
     AccountSummaryCardComponent,
+    DepositSourcesReportComponent,
   ],
   imports: [
     CommonModule,

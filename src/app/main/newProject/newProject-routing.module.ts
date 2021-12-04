@@ -74,6 +74,7 @@ import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-repo
 import { ChartTestComponent } from './chart-test/chart-test.component';
 import { LoginGuard } from '../../auth/guard/login.guard';
 import { LoginComponent } from 'app/auth/login/login.component';
+import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 
 
 const routes: Routes = [
@@ -357,6 +358,10 @@ const routes: Routes = [
       {
         path: 'chartTest',
         component: ChartTestComponent,
+      },
+      {
+        path: 'depositSourcesReport',
+        component: DepositSourcesReportComponent,
       },
 
 
