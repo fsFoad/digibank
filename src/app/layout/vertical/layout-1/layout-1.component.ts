@@ -1005,78 +1005,78 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           },
         ]
       },
-      {
-        id: 'walletBuy',
-        label: 'گزارشات مدیریتی',
-        translate: 'گزارشات مدیریتی',
-        type: 'collapsable',
-        items: [
-          {
-            id: 'walletBuy',
-            label: 'دارایی ها',
-            translate: 'دارایی ها',
-            type: 'collapsable',
-            items: [
-              {
-                id: 'walletBuy',
-                label: 'مانده حساب',
-                translate: 'مانده حساب',
-                type: 'item',
-              },
-              {
-                id: 'walletBuy',
-                label: 'صورتحساب',
-                translate: 'صورتحساب',
-                type: 'item',
-              },
-              {
-                id: 'walletBuy',
-                label: ' صورتحساب ارزی',
-                translate: ' صورتحساب ارزی',
-                type: 'item',
-              },
-              {
-                id: 'walletBuy',
-                label: 'اطلاعات آماری مانده حساب',
-                translate: 'اطلاعات آماری مانده حساب',
-                type: 'item',
-              },
-              {
-                id: 'walletBuy',
-                label: 'اطلاعات روند تغییر مانده',
-                translate: 'اطلاعات روند تغییر مانده',
-                type: 'item',
-              },
-              {
-                id: 'walletBuy',
-                label: 'اطلاعات واریزی ها',
-                translate: 'اطلاعات واریزی ها',
-                type: 'item',
-              },
-              {
-                id: 'walletBuy',
-                label: 'اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
-                translate: 'اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
-                type: 'item',
-              }
-            ]
-          },
-          {
-            id: 'walletBuy',
-            label: 'بدهی ها',
-            translate: 'بدهی ها',
-            type: 'collapsable',
-            items: [
-              {
-                id: 'walletBuy',
-                label: 'اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
-                translate: 'اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
-                type: 'item',
-              }
-            ]
-          }
-        ]
-      },
+      // {
+      //   id: 'walletBuy',
+      //   label: 'گزارشات مدیریتی',
+      //   translate: 'گزارشات مدیریتی',
+      //   type: 'collapsable',
+      //   items: [
+      //     {
+      //       id: 'walletBuy',
+      //       label: 'دارایی ها',
+      //       translate: 'دارایی ها',
+      //       type: 'collapsable',
+      //       items: [
+      //         {
+      //           id: 'walletBuy',
+      //           label: 'مانده حساب',
+      //           translate: 'مانده حساب',
+      //           type: 'item',
+      //         },
+      //         {
+      //           id: 'walletBuy',
+      //           label: 'صورتحساب',
+      //           translate: 'صورتحساب',
+      //           type: 'item',
+      //         },
+      //         {
+      //           id: 'walletBuy',
+      //           label: ' صورتحساب ارزی',
+      //           translate: ' صورتحساب ارزی',
+      //           type: 'item',
+      //         },
+      //         {
+      //           id: 'walletBuy',
+      //           label: 'اطلاعات آماری مانده حساب',
+      //           translate: 'اطلاعات آماری مانده حساب',
+      //           type: 'item',
+      //         },
+      //         {
+      //           id: 'walletBuy',
+      //           label: 'اطلاعات روند تغییر مانده',
+      //           translate: 'اطلاعات روند تغییر مانده',
+      //           type: 'item',
+      //         },
+      //         {
+      //           id: 'walletBuy',
+      //           label: 'اطلاعات واریزی ها',
+      //           translate: 'اطلاعات واریزی ها',
+      //           type: 'item',
+      //         },
+      //         {
+      //           id: 'walletBuy',
+      //           label: 'اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
+      //           translate: 'اطلاعات تجمیعی مانده لحظه ای حساب های بانکی',
+      //           type: 'item',
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       id: 'walletBuy',
+      //       label: 'بدهی ها',
+      //       translate: 'بدهی ها',
+      //       type: 'collapsable',
+      //       items: [
+      //         {
+      //           id: 'walletBuy',
+      //           label: 'اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
+      //           translate: 'اطلاعات تسهیلات دریافتی به تفکیک واحدهای مربوطه',
+      //           type: 'item',
+      //         }
+      //       ]
+      //     }
+      //   ]
+      // },
       {
         id: 'walletBuy',
         label: 'تنظیمات',
