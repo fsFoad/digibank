@@ -1,5 +1,5 @@
 <p-panel header="دریافت فایل صورتحساب">
-  <div class="app-mx-10r">
+  <div class="app-mx-30r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col-6">
         <p-dropdown [editable]="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
@@ -45,6 +45,9 @@
   </div>
 
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
-    <button label="تائید" pButton></button>
+    <button label="تائید" pButton (click)="confirmDlg.visible = true"></button>
   </div>
 </p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>

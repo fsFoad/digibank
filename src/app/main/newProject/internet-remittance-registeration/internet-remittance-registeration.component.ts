@@ -13,7 +13,4 @@ export class InternetRemittanceRegisterationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  showConfirm(): void {
-  }
 }
