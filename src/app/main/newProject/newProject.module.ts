@@ -129,6 +129,7 @@ import { AccountSummaryCardComponent } from './account-summary-card/account-summ
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 import { InternetRemittanceCartableDetailsComponent } from './internet-remittance-cartable-details/internet-remittance-cartable-details.component';
 import { ConfirmationService } from 'primeng/api';
+import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
 
 @NgModule({
   providers: [
@@ -229,6 +230,7 @@ import { ConfirmationService } from 'primeng/api';
     AccountSummaryCardComponent,
     DepositSourcesReportComponent,
     InternetRemittanceCartableDetailsComponent,
+    PersonalEntityListComponent,
   ],
   imports: [
     CommonModule,

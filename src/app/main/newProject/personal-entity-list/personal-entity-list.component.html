@@ -1,0 +1,32 @@
+<p-panel header="اصلاح ذینفع شخصی">
+  <div class="app-mx-5r">
+    <p-card>
+      <p-table [value]="rows">
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate>نام ذینفع</th>
+            <th translate>تاریخ تعریف</th>
+            <th translate>شماره تماس</th>
+            <th translate>زمینه فعالیت</th>
+            <th translate>نوع رابطه</th>
+            <th translate>عملیات</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{row.fullName}}</td>
+            <td>{{row.registrationDate|castToDate}}</td>
+            <td>{{row.contactNumber}}</td>
+            <td>{{row.fieldOfActivity}}</td>
+            <td>{{row.relationshipType}}</td>
+            <td>
+              <button pButton icon="pi pi-chevron-circle-right" (click)="selectRow(row)"></button>&nbsp;
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+</p-panel>
