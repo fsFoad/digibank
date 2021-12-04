@@ -69,8 +69,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
       // },
       {
         id: 'issueWalletGroup',
-        label: 'مدریت ذینفعان',
-        translate: 'مدریت ذینفعان',
+        label: 'مدیریت ذینفعان',
+        translate: 'مدیریت ذینفعان',
         type: 'collapsable',
         items: [
           {
@@ -751,13 +751,12 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 label: 'لیست گواهی سپرده',
                 translate: 'لیست گواهی سپرده',
                 type: 'item',
-                routerLink: '/reportClear',
               },
             ]
           },
           {
             id: 'walletBuy',
-            label: 'وراق مشارکت',
+            label: 'اوراق مشارکت',
             translate: 'اوراق مشارکت',
             type: 'collapsable',
             items: [
@@ -766,7 +765,6 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 label: 'لیست اوراق مشارکت',
                 translate: 'لیست اوراق مشارکت',
                 type: 'item',
-                routerLink: '/reportClear',
               },
             ]
           },
