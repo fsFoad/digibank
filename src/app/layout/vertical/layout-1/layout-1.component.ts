@@ -1091,20 +1091,20 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             items: [
               {
                 id: 'walletBuy',
-                label: 'به روزرسانی اطلاعات مشتریان',
-                translate: 'به روزرسانی اطلاعات مشتریان',
+                label: 'به روزرسانی اطلاعات ذینفعان',
+                translate: 'به روزرسانی اطلاعات ذینفعان',
                 type: 'item',
               },
               {
                 id: 'walletBuy',
-                label: 'به روزرسانی اطلاعات حسابها',
-                translate: 'به روزرسانی اطلاعات حسابها',
+                label: 'به روزرسانی اطلاعات حساب‌ها',
+                translate: 'به روزرسانی اطلاعات حساب‌ها',
                 type: 'item',
               },
               {
                 id: 'walletBuy',
-                label: 'به روزرسانی اطلاعات چک',
-                translate: 'به روزرسانی اطلاعات چک',
+                label: 'به روزرسانی اطلاعات پرداخت‌ها',
+                translate: 'به روزرسانی اطلاعات پرداخت‌ها',
                 type: 'item',
               },
               {
@@ -1124,7 +1124,19 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 label: 'به روزسانی اطلاعات اوراق بهادار',
                 translate: 'به روزسانی اطلاعات اوراق بهادار',
                 type: 'item',
-              }
+              },
+              {
+                id: 'walletBuy',
+                label: 'به روزسانی اطلاعات کارت و کیف پول',
+                translate: 'به روزسانی اطلاعات کارت و کیف پول',
+                type: 'item',
+              },
+              {
+                id: 'walletBuy',
+                label: 'به روزسانی اطلاعات مالی و حسابداری',
+                translate: 'به روزسانی اطلاعات مالی و حسابداری',
+                type: 'item',
+              },
             ]
           },
           {
