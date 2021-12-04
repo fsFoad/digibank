@@ -1,0 +1,26 @@
+<p-card class="account app-mx-5r p-d-block" [header]="account.title">
+  <table class="account w-100-p">
+    <tbody class="account">
+      <tr>
+        <td class="p-text-left">شماره حساب:</td>
+        <td>{{ account.accountNumber }}</td>
+        <td class="p-text-left">مانده حساب:</td>
+        <td>{{ account.balance|addCommaSeparator }}</td>
+        <td class="p-text-left">مبلغ مسدودی:</td>
+        <td>{{ account.blockedAmount|addCommaSeparator }}</td>
+        <td class="p-text-left">
+          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info"></button>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-text-left">تاریخ افتتاح:</td>
+        <td>{{account.openingDate|castToDate}}</td>
+        <td class="p-text-left">نام شعبه افتتاح کننده:</td>
+        <td>{{account.openingBranch}}</td>
+        <td class="p-text-left">تاریخ آخرین گردش:</td>
+        <td>{{account.dateOfLastTurnover|castToDate}}</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</p-card>

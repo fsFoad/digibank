@@ -1,5 +1,51 @@
-
+export interface AccountSummary {
+    title: string;
+    accountNumber: string;
+    balance: number;
+    blockedAmount: number;
+    openingDate: number;
+    openingBranch: string;
+    dateOfLastTurnover: number;
+  }
 export class Constants {
+  static acSummaries: AccountSummary[] = [
+    {
+      title: 'قرض الحسنه اشخاص حقوقی',
+      accountNumber: '240-1000000589-25',
+      balance: 350_000_000,
+      blockedAmount: 41_000,
+      dateOfLastTurnover: 14000902,
+      openingBranch: 'ونک',
+      openingDate: 14000715,
+    },
+    {
+      title: 'جاری اشخاص حقوقی',
+      accountNumber: '340-1000000145-65',
+      balance: 1_540_000_000,
+      blockedAmount: 1_000_500_000,
+      dateOfLastTurnover: 14000901,
+      openingBranch: 'استانبول',
+      openingDate: 14000713,
+    },
+    {
+      title: 'جاری اشخاص حقوقی',
+      accountNumber: '340-1000000189-26',
+      balance: 58020000,
+      blockedAmount: 0,
+      dateOfLastTurnover: 14000903,
+      openingBranch: 'بازار',
+      openingDate: 14000712,
+    },
+    {
+      title: 'کوتاه مدت اشخاص حقوقی',
+      accountNumber: '440-1006580523-01',
+      balance: 35400000,
+      blockedAmount: 0,
+      dateOfLastTurnover: 14000905,
+      openingBranch: 'تجریش',
+      openingDate: 14000716,
+    },
+  ]
   static acItems = [
     { value: '000', label: '-' },
     { value: '111', label: 'حساب قرض‌الحسنه 25-1000000589-240' },

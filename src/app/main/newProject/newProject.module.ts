@@ -125,6 +125,7 @@ import { PardakhtAghsatComponent } from './pardakht-aghsat/pardakht-aghsat.compo
 import { DialogModule } from 'primeng/dialog';
 import { IndirectLiabilitiesReportsComponent } from './indirect-liabilities-reports/indirect-liabilities-reports.component';
 import { ChartTestComponent } from './chart-test/chart-test.component';
+import { AccountSummaryCardComponent } from './account-summary-card/account-summary-card.component';
 
 @NgModule({
   declarations: [
@@ -219,6 +220,7 @@ import { ChartTestComponent } from './chart-test/chart-test.component';
     PardakhtAghsatComponent,
     IndirectLiabilitiesReportsComponent,
     ChartTestComponent,
+    AccountSummaryCardComponent,
   ],
   imports: [
     CommonModule,
