@@ -1135,14 +1135,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             items: [
               {
                 id: 'walletBuy',
-                label: 'به روزرسانی سطح دسترسی کاربران',
-                translate: 'به روزرسانی سطح دسترسی کاربران',
+                label: 'ارسال پیامک',
+                translate: 'ارسال پیامک',
                 type: 'item',
               },
               {
                 id: 'walletBuy',
-                label: 'به روزرسانی سطح دسترسی کاربران',
-                translate: 'به روزرسانی سطح دسترسی کاربران',
+                label: 'ارسال پیامک گروهی',
+                translate: 'ارسال پیامک گروهی',
                 type: 'item',
               },
             ]
