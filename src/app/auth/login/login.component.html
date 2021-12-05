@@ -6,17 +6,16 @@
                 {{errorMessage}}
             </div>
             <div class="p-col-12" id="userDiv">
-                <label for="username" class="userpasslabel">رمز عبور:</label>
-                <input placeholder="نام کاربری" [(ngModel)]="userName" id="username" pInputText>
+                <label for="username" class="userpasslabel">شناسه کاربری:</label>
+                <input placeholder="شناسه کاربری" [(ngModel)]="userName" id="username" pInputText>
             </div>
             <br>
             <div class="p-col-12" id="passDiv">
-                <label for="pass" class="userpasslabel">شناسه کاربری:</label>
-                <input type="password" placeholder="کلمه عبور" [(ngModel)]="password" pInputText id="pass"><br><br>
+                <label for="pass" class="userpasslabel">رمز عبور:</label>
+                <input type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="pass"><br><br>
             </div>
             <div class="p-col-12" id="btnDiv">
-
-                <p-button id="btnLog" (click)="login()" label="ورود"></p-button>
+                <button pButton id="btnLog" (click)="login()" label="ورود"></button>
             </div>
             <div class="p-col-12">
                 <a href="#">فراموشی رمز عبور</a>
