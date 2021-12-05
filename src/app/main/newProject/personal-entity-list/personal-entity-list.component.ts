@@ -34,14 +34,14 @@ export class PersonalEntityListComponent implements OnInit {
       registrationDate: 14000910,
       contactNumber: '09016485057',
       fieldOfActivity: 'حقوقی',
-      relationshipType: 'کارمند',
+      relationshipType: 'نمایندگی بیمه',
     },
     {
       fullName: 'تامین کننده مواد اولیه',
       registrationDate: 14000910,
       contactNumber: '021-88584420',
       fieldOfActivity: 'حقوقی',
-      relationshipType: 'کارمند',
+      relationshipType: 'تامین کننده',
     },
   ];
   selectedRow: Row;
