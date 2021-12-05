@@ -55,8 +55,7 @@ export class DepositSourcesReportComponent implements OnInit {
         ]
       }]
   };
-  chartOptions = {
-    locale: 'fa-IR',
+  chartOptions: Chart.ChartOptions = {
     legend: {
       position: 'right',
       // rtl: true,
@@ -68,7 +67,7 @@ export class DepositSourcesReportComponent implements OnInit {
           let label = data.labels[tooltipItem.index];
           let datasetLabel = data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
           let currencyPipe = new AddCommaPipe();
-          let formattedNumber = currencyPipe.transform(datasetLabel);
+          let formattedNumber = currencyPipe.transform(datasetLabel as any);
           return label + ': ' + faDigits(formattedNumber) + ' ریال';
         },
       }
