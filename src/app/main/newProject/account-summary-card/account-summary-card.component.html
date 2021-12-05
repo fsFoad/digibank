@@ -9,7 +9,7 @@
         <td class="p-text-left">مبلغ مسدودی:</td>
         <td>{{ account.blockedAmount|addCommaSeparator }}</td>
         <td class="p-text-left">
-          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info"></button>
+          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info" (click)="update.emit()"></button>
         </td>
       </tr>
       <tr>

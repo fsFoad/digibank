@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { AccountSummary } from 'app/main/shared/constants/Constants';
 
 @Component({
@@ -8,6 +8,7 @@ import { AccountSummary } from 'app/main/shared/constants/Constants';
 })
 export class AccountSummaryCardComponent implements OnInit {
   @Input() account: AccountSummary;
+  @Output() update = new EventEmitter();
   constructor() { }
 
   ngOnInit(): void {

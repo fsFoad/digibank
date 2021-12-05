@@ -1,5 +1,8 @@
 <p-panel header="حساب‌های ریالی شما" class="w-100-p">
   <div class="p-d-flex p-flex-column app-gap-2r">
-    <app-account-summary-card *ngFor="let account of accounts" [account]="account"></app-account-summary-card>
+    <app-account-summary-card *ngFor="let account of accounts" [account]="account" (update)="confirmDlg.visible = true"></app-account-summary-card>
   </div>
 </p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>

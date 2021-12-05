@@ -21,7 +21,7 @@ export class Constants {
     {
       title: 'جاری اشخاص حقوقی',
       accountNumber: '340-1000000145-65',
-      balance: 1_540_000_000,
+      balance: 1_435_000_000,
       blockedAmount: 1_000_500_000,
       dateOfLastTurnover: 14000901,
       openingBranch: 'استانبول',
@@ -30,7 +30,7 @@ export class Constants {
     {
       title: 'جاری اشخاص حقوقی',
       accountNumber: '340-1000000189-26',
-      balance: 58020000,
+      balance: 58_020_000,
       blockedAmount: 0,
       dateOfLastTurnover: 14000903,
       openingBranch: 'بازار',
@@ -39,7 +39,7 @@ export class Constants {
     {
       title: 'کوتاه مدت اشخاص حقوقی',
       accountNumber: '440-1006580523-01',
-      balance: 35400000,
+      balance: 140_400_000,
       blockedAmount: 0,
       dateOfLastTurnover: 14000905,
       openingBranch: 'تجریش',

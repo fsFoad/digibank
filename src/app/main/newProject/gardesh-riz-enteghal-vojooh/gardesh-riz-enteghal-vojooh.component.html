@@ -33,7 +33,10 @@
   </div>
 
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
-    <button label="بازیابی" pButton></button>
+    <button label="بازیابی" pButton (click)="confirmDlg.visible = true"></button>
     <button label="بازگشت" pButton></button>
   </div>
 </p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>

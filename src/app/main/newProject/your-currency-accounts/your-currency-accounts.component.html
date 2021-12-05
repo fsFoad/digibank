@@ -14,7 +14,7 @@
         <img src="https://static.thenounproject.com/png/1652733-200.png">
 
         <td class="p-text-left">
-          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info"></button>
+          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info" (click)="confirmDlg.visible = true"></button>
         </td>
       </tr>
       <tr>
@@ -49,7 +49,7 @@
         <td class="p-text-right">درهم امارات</td>
         <img src="https://static.thenounproject.com/png/495441-200.png" class="p-text-right" >
         <td class="p-text-left">
-          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info"></button>
+          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info" (click)="confirmDlg.visible = true"></button>
         </td>
       </tr>
       <tr>
@@ -68,3 +68,6 @@
     </table>
   </p-card>
 </p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>
