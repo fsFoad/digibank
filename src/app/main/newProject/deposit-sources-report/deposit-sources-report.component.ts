@@ -26,6 +26,11 @@ export class DepositSourcesReportComponent implements OnInit {
         ]
       }]
   };
+  chartOptions = {
+    legend: {
+      position: 'right',
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
