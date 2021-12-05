@@ -10,24 +10,38 @@ export class PersonalEntityListComponent implements OnInit {
   rows: Row[] = [
     {
       fullName: 'پژمان سهرابی',
-      registrationDate: 14000910,
+      registrationDate: 14000610,
       contactNumber: '09006489207',
-      fieldOfActivity: 'فرهنگ',
-      relationshipType: '',
+      fieldOfActivity: 'حقیقی',
+      relationshipType: 'کارمند',
     },
     {
       fullName: 'کامران گیلانی',
       registrationDate: 14000721,
       contactNumber: '09016485057',
-      fieldOfActivity: 'اقتصاد',
-      relationshipType: '',
+      fieldOfActivity: 'حقیقی',
+      relationshipType: 'کارمند',
     },
     {
       fullName: 'هوشنگ مقتصد',
       registrationDate: 14000819,
       contactNumber: '09338854727',
-      fieldOfActivity: 'ورزش',
-      relationshipType: '',
+      fieldOfActivity: 'حقیقی',
+      relationshipType: 'کارمند',
+    },
+    {
+      fullName: 'کارگزاری بیمه سامان',
+      registrationDate: 14000910,
+      contactNumber: '09016485057',
+      fieldOfActivity: 'حقوقی',
+      relationshipType: 'کارمند',
+    },
+    {
+      fullName: 'تامین کننده مواد اولیه',
+      registrationDate: 14000910,
+      contactNumber: '021-88584420',
+      fieldOfActivity: 'حقوقی',
+      relationshipType: 'کارمند',
     },
   ];
   selectedRow: Row;
