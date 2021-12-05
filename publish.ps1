@@ -1,25 +1,27 @@
-﻿function pull() {
+﻿function Pull-Version() {
     write-host "Pulling..."
     git pull
     return $?
 }
 
-function build() {
+function Build-App() {
     write-host "Building..."
     ng build --prod
     return $?
 }
 
-function copy-webconfig() {
-    write-host "Copying web.config..."
-    Copy-Item .\web.config .\dist\wallet-ui\
+function CopyTo-IIS() {
+    Write-Host "Copying to IIS..."
+    Remove-Item -Force -Recurse -Path C:\sites\wallet-ui\wallet-ui\
+    Copy-Item -Force -Recurse -Path .\dist\wallet-ui\ -Destination C:\sites\wallet-ui\
+    Copy-Item .\web.config C:\sites\wallet-ui\wallet-ui\
     return $?
 }
 
 
-if (pull) {
-    if (build) {
-        if (copy-webconfig) {
+if (Pull-Version) {
+    if (Build-App) {
+        if (CopyTo-IIS) {
             Write-Host "Finished successfully."
         }
     }
