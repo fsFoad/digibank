@@ -1,5 +1,5 @@
 <p-panel header="اصلاح ذینفع شخصی">
-  <div class="app-mx-5r">
+  <div class="app-mx-5r" *ngIf="!detailsFlag">
     <p-card>
       <p-table [value]="rows">
         <ng-template pTemplate="header">
@@ -29,4 +29,5 @@
       </p-table>
     </p-card>
   </div>
+  <app-update-personal *ngIf="detailsFlag" ></app-update-personal>
 </p-panel>
