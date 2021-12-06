@@ -57,6 +57,10 @@ export class DepositSourcesReportComponent implements OnInit {
   };
   chartOptions: Chart.ChartOptions = {
     legend: {
+      labels: {
+        fontColor: 'black',
+        fontSize:15
+      },
       position: 'right',
       // rtl: true,
       // textDirection: 'rtl',
