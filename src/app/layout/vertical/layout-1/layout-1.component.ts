@@ -902,16 +902,19 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           },
           {
             id: 'walletBuy',
-            label: 'درخواست صدور کارت حقوقی',
-            translate: 'درخواست صدور کارت حقوقی',
+            label: 'کارت مجازی',
+            translate: 'کارت مجازی',
             type: 'item',
+            items: [
+              {
+                id: 'walletBuy',
+                label: 'درخواست صدور کارت مجازی',
+                translate: 'درخواست صدور کارت مجازی',
+                type: 'item',
+              },
+            ],
           },
-          {
-            id: 'walletBuy',
-            label: 'درخواست صدور کارت مجازی',
-            translate: 'درخواست صدور کارت مجازی',
-            type: 'item',
-          },
+
           {
             id: 'walletBuy',
             label: 'گزارشات',
