@@ -226,13 +226,6 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           //   routerLink: 'sooratHesab'
           // },
           {
-            id: 'bills',
-            label: 'صورت حساب چند بانکی',
-            translate: 'صورت حساب چند بانکی',
-            type: 'item',
-            routerLink: '/bills',
-          },
-          {
             id: 'oldBill',
             label: 'صورت حساب ',
             translate: 'صورت حساب ',
@@ -245,6 +238,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             translate: 'گزارش حسابهای ذینعان',
             type: 'item',
             icon: 'account_balance_wallet',
+          },
+          {
+            id: 'bills',
+            label: 'صورت حساب چند بانکی',
+            translate: 'صورت حساب چند بانکی',
+            type: 'item',
+            routerLink: '/bills',
           },
         ]
       },
