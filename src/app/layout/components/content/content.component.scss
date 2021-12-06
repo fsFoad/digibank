@@ -11,6 +11,9 @@ content {
         width: 100%;
         min-width: 100%;
     }
+    &.no-content-padding .page-container {
+        padding: 0;
+    }
 }
 
 .isFontIran label:not(.pi),

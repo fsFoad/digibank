@@ -8,16 +8,18 @@
 
 <div id="main" >
     <!-- TOOLBAR: Above -->
-    <div style="direction: rtl;" *ngIf="!appSetting.IsVerticalMenu">
-        <p-menubar id="menu" [model]="items"  styleClass="horizontal-menu" [dir]="'rtl'" >
-            <!--    <ng-template pTemplate="start">-->
-            <!--        <img src="assets/showcase/images/primeng.svg" height="40" class="p-mr-2">-->
-            <!--    </ng-template>-->
-            <!--            <ng-template pTemplate="end">-->
-            <!--                <input type="text" pInputText placeholder="Search">-->
-            <!--            </ng-template>-->
-        </p-menubar>
-    </div>
+    <ng-container *ngIf="!fuseConfig.layout.noMenu">
+        <div style="direction: rtl;" *ngIf="!appSetting.IsVerticalMenu">
+            <p-menubar id="menu" [model]="items"  styleClass="horizontal-menu" [dir]="'rtl'" >
+                <!--    <ng-template pTemplate="start">-->
+                <!--        <img src="assets/showcase/images/primeng.svg" height="40" class="p-mr-2">-->
+                <!--    </ng-template>-->
+                <!--            <ng-template pTemplate="end">-->
+                <!--                <input type="text" pInputText placeholder="Search">-->
+                <!--            </ng-template>-->
+            </p-menubar>
+        </div>
+    </ng-container>
     <ng-container *ngIf="fuseConfig.layout.toolbar.position === 'above'">
         <ng-container *ngTemplateOutlet="toolbar"></ng-container>
     </ng-container>
@@ -49,7 +51,7 @@
                 <!-- / TOOLBAR: Below static -->
 
                 <!-- CONTENT -->
-                <content></content>
+                <content [class.no-content-padding]="fuseConfig.layout.content?.noPadding"></content>
                 <!-- / CONTENT -->
 
                 <!-- FOOTER: Below static -->
