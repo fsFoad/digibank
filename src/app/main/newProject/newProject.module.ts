@@ -130,6 +130,13 @@ import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-
 import { InternetRemittanceCartableDetailsComponent } from './internet-remittance-cartable-details/internet-remittance-cartable-details.component';
 import { ConfirmationService } from 'primeng/api';
 import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
+import { UpdatePersonalComponent } from './update-personal/update-personal.component';
+import { UpdatePersonIdentityInfoEditorComponent } from './update-personal/update-person-identity-info-editor/update-person-identity-info-editor.component';
+import { UpdatePartySignatureEditorComponent } from './update-personal/update-party-signature-editor/update-party-signature-editor.component';
+import { UpdateOrganizationalRoleEditorComponent } from './update-personal/update-organizational-role-editor/update-organizational-role-editor.component';
+import { UpdateOrganizationalContactInfoEditorComponent } from './update-personal/update-organizational-contact-info-editor/update-organizational-contact-info-editor.component';
+import { UpdatePersonSupplementaryInfoEditorComponent } from './update-personal/update-person-supplementary-info-editor/update-person-supplementary-info-editor.component';
+import { UpdateOrganizationalEntityDocumentsEditorComponent } from './update-personal/update-organizational-entity-documents-editor/update-organizational-entity-documents-editor.component';
 
 @NgModule({
   providers: [
@@ -231,6 +238,13 @@ import { PersonalEntityListComponent } from './personal-entity-list/personal-ent
     DepositSourcesReportComponent,
     InternetRemittanceCartableDetailsComponent,
     PersonalEntityListComponent,
+    UpdatePersonalComponent,
+    UpdatePersonIdentityInfoEditorComponent,
+    UpdatePartySignatureEditorComponent,
+    UpdateOrganizationalRoleEditorComponent,
+    UpdateOrganizationalContactInfoEditorComponent,
+    UpdatePersonSupplementaryInfoEditorComponent,
+    UpdateOrganizationalEntityDocumentsEditorComponent,
   ],
   imports: [
     CommonModule,

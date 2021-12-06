@@ -52,7 +52,7 @@ export class PersonalEntityListComponent implements OnInit {
 
   selectRow(row: Row): void {
     this.selectedRow = row;
-    this.router.navigate(['/person-editor']);
+    this.router.navigate(['/updatePersonal']);
   }
 }
 

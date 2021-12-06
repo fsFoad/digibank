@@ -76,6 +76,7 @@ import { LoginGuard } from '../../auth/guard/login.guard';
 import { LoginComponent } from 'app/auth/login/login.component';
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
+import {UpdatePersonalComponent} from './update-personal/update-personal.component';
 
 
 const routes: Routes = [
@@ -368,7 +369,10 @@ const routes: Routes = [
         path: 'personalEntityList',
         component: PersonalEntityListComponent,
       },
-
+      {
+        path: 'updatePersonal',
+        component: UpdatePersonalComponent,
+      },
 
       // add new components above
       {
