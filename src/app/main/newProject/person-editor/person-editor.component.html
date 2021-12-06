@@ -24,7 +24,7 @@
   </p-tabView>
 
   <div class="bottom-buttons  p-shadow-3 section">
-    <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [disabled]="activeTab >= 6"></button>
     <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [disabled]="activeTab <= 0"></button>
+    <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [disabled]="activeTab >= 6"></button>
   </div>
 </p-panel>
