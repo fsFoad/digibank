@@ -1,24 +1,29 @@
-<p-panel header="تعریف کیف پول کارکنان" [ngStyle]="{'width':'100%'}">
-  <div class="app-mx-20r">
-    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-      <div class="p-field p-col-3">
-        <input class="input-w-100" placeholder="کد ملی" pInputText>
+<p-panel header="تعریف کیف پول کارکنان"  class="p-jc-center" [formGroup]="walletForm" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-20r p-jc-center">
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="p-field p-col-2"></div>
+      <div class="p-field p-col-4">
+        <input id="inputNational" formControlName="nationalCode"  class="input-w-100" placeholder="کد ملی" pInputText>
+        <button id="btnsearch" class="p-button-outlined" pButton label="بازیابی" (click)="search()"></button>&nbsp;
       </div>
-      <div class="p-field p-col-3">
-        <input class="input-w-100" placeholder="شماره موبایل" pInputText>
+      <div class="p-field p-col-4">
+        <input class="input-w-100" formControlName="mobile" placeholder="شماره موبایل" pInputText>
       </div>
     </div>
-    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-      <div class="p-field p-col-3">
-        <input class="input-w-100" placeholder="نام نام خانوادگی" pInputText>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="p-field p-col-2"></div>
+      <div class="p-field p-col-4">
+        <input class="input-w-100" formControlName="fullName" placeholder="نام نام خانوادگی" pInputText>
       </div>
-      <div class="p-field p-col-3">
-        <input class="input-w-100" placeholder="مبلغ شارژ اولیه" pInputText>
-      </div>
-      <div class="p-d-flex p-jc-center">
-        <button id="btnCreateWallet" class="p-button-info" pButton label="ایجاد کیف پول"></button>&nbsp;
-        <button id="btnBatchRegister" class="p-button-info" pButton label="انصراف"></button>&nbsp;
+      <div class="p-field p-col-4">
+        <input class="input-w-100" formControlName="charge" placeholder="مبلغ شارژ اولیه" pInputText>
       </div>
     </div>
   </div>
+      <div class="p-d-flex p-jc-center">
+        <button id="btnCreateWallet" class="p-button-info" pButton label="ایجاد کیف پول" (click)="confirmDlg.visible = true"></button>&nbsp;
+        <button id="btnBatchRegister" class="p-button-info" pButton label="انصراف"></button>&nbsp;
+      </div>
 </p-panel>
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="ادامه" message="حساب سازمانی تعریف نشده است!" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>
