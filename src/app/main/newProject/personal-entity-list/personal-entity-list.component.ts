@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./personal-entity-list.component.scss']
 })
 export class PersonalEntityListComponent implements OnInit {
+  detailsFlag = false;
+  person;
   rows: Row[] = [
     {
       fullName: 'پژمان سهرابی',
@@ -50,9 +52,19 @@ export class PersonalEntityListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  selectRow(row: Row): void {
-    this.selectedRow = row;
-    this.router.navigate(['/updatePersonal']);
+  selectRow(servise): void {
+    this.person = {
+      customerName: '',
+      date: '',
+      phoneNumber: 0,
+      customerType: '',
+      shipType: '',
+      nationalCode: '',
+      registrationDate:0,
+      accountnNumberdeterminesAmount:0,
+      applicationType:''
+
+    };
   }
 }
 

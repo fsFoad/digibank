@@ -800,10 +800,10 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             items: [
               {
                 id: '/creatWallet',
-                label: 'تعریف کیف پول',
-                translate: 'تعریف کیف پول',
+                label: 'تعریف کیف پول کارکنان',
+                translate: 'تعریف کیف پول کارکنان',
                 type: 'item',
-                routerLink: '//creatWallet',
+                routerLink: '/creatWallet',
               },
               {
                 id: 'chargAmountWallet',

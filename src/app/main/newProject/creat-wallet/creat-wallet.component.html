@@ -1,34 +1,22 @@
-<p-panel header="تعریف کیف پول" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap Fs-mlf">
-        <div class="  p-md-3 FS-mr">
-            <p-dropdown class="p-dropdown-w80" placeholder="شماره حساب متصل"  [options]="acItems"></p-dropdown>
-        </div>
-        <div class="p-md-3  FS-mr">
-            <input class="input-w-100" placeholder="شماره موبایل" pInputText>
-        </div>
-        <div class="p-md-3  FS-mr">
-            <input class="input-w-100" placeholder="مبلغ شارژ اولیه" pInputText>
-        </div>
-        <div class="p-md-3  FS-mr">
-            <input class="input-w-100" placeholder="نام نام خانوادگی" pInputText>
-        </div>
-        <div class="p-md-3  FS-mr">
-            <input class="input-w-100" placeholder="کد ملی" pInputText>
-        </div>
-        <div class="p-md-3  FS-mr">
-            <input class="input-w-100" placeholder="تاریخ تولد" pInputText>
-        </div>
-        <div class="  p-md-3 FS-mr">
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع خدمات" optionValue="value"
-                        [options]="listDrop"
-                        optionLabel="label"></p-dropdown>
-        </div>
-        <div class="  p-md-3 FS-mr"><br></div>
-        <div class="  p-md-3 FS-mr"><br></div>
-        <div></div>
-        <div class="p-md-12 FS-mt">
+<p-panel header="تعریف کیف پول کارکنان" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-20r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <input class="input-w-100" placeholder="کد ملی" pInputText>
+      </div>
+      <div class="p-field p-col-3">
+        <input class="input-w-100" placeholder="شماره موبایل" pInputText>
+      </div>
+      <div class="p-field p-col-3">
+        <input class="input-w-100" placeholder="نام نام خانوادگی" pInputText>
+      </div>
+      <div class="p-field p-col-3">
+        <input class="input-w-100" placeholder="مبلغ شارژ اولیه" pInputText>
+      </div>
+      <div class="p-d-flex p-jc-center">
             <button id="btnCreateWallet" class="p-button-info" pButton label="ایجاد کیف پول"></button>&nbsp;
             <button id="btnBatchRegister" class="p-button-info" pButton label="انصراف"></button>&nbsp;
         </div>
     </div>
+  </div>
 </p-panel>
