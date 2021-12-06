@@ -15,7 +15,7 @@
                 <input type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="pass" (keyup.enter)="login()"><br><br>
             </div>
             <div class="p-col-12" id="btnDiv">
-                <button #btnLogin pButton id="btnLog" [disabled]="!userName || !password" label="ورود"></button>
+                <button #btnLogin pButton id="btnLog" [disabled]="!userName || !password" label="ورود" (click)="login()"></button>
             </div>
             <div class="p-col-12">
                 <a href="#">فراموشی رمز عبور</a>
