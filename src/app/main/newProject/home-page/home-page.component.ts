@@ -21,7 +21,7 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(['/internetRemittanceRegistration']);
   }
   openNemodar(){
-    this.router.navigate(['/chartTest']);
+    this.router.navigate(['/depositSourcesReport']);
   }
 
 }
