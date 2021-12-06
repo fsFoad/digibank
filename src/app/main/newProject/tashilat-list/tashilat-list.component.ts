@@ -16,7 +16,7 @@ export class TashilatListComponent implements OnInit {
     }[] = [
         {
             'remaining': 5100000,
-            'relevantUnit': 'شرکت1',
+            'relevantUnit': 'شرکت ۱',
             'branch': 'دولت',
             'tashilatType': 'فروش اقساطی',
             'fileNumber': '139911-760',
@@ -27,8 +27,8 @@ export class TashilatListComponent implements OnInit {
         },
         {
             'remaining': 1548254962,
-            'relevantUnit': 'شرکت2',
-            'branch': 'بانک',
+            'relevantUnit': 'شرکت ۲',
+            'branch': 'میدان آرژانتین',
             'tashilatType': 'خرید دین',
             'fileNumber': '139910-220',
             'amount': 2000000000,
@@ -38,8 +38,8 @@ export class TashilatListComponent implements OnInit {
         },
         {
             'remaining': 643700000,
-            'relevantUnit': 'شرکت1',
-            'branch': 'بانک',
+            'relevantUnit': 'شرکت ۱',
+            'branch': 'میرداماد',
             'tashilatType': 'خرید دین',
             'fileNumber': '139908-129',
             'amount': 2500000000,

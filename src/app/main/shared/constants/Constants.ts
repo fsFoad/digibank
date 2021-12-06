@@ -57,6 +57,8 @@ export class Constants {
     'سئول',
     'صادقیه',
     'توحید',
+    'میدان آرژانتین',
+    'میرداماد',
   ]
   static acItems = [
     { value: '000', label: '-' },
@@ -68,9 +70,9 @@ export class Constants {
   static organizationalUnit = [
     { value: '000', label: '-' },
     { value: '111', label: 'شرکت هلدینگ' },
-    { value: '222', label: 'شرکت تابع1' },
-    { value: '444', label: 'شرکت تابع2' },
-    { value: '333', label: 'شرکت تابع3' },
+    { value: '222', label: 'شرکت تابعه ۱' },
+    { value: '444', label: 'شرکت تابعه ۲' },
+    { value: '333', label: 'شرکت تابعه ۳' },
   ]
   static HavaleInternetiStatus = [
     { value: '000', label: '-' },
