@@ -49,7 +49,7 @@ export class PersonIdentityInfoEditorComponent implements OnInit {
       birthDateGregorian: [''],
       firstNameLatin: [''],
       lastNameLatin: [''],
-      lastNameLatin2: [''],
+      EnFatherName: [''],
     });
   }
 
