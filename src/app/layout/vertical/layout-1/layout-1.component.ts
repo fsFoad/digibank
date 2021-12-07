@@ -635,7 +635,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             translate: 'مدیریت اعتبار',
             type: 'collapsable',
             items: []
-          }
+          },
+          {
+            id: 'walletBuy',
+            label: 'نمودار تسهیلات دریافتی',
+            translate: 'نمودار تسهیلات دریافتی',
+            type: 'collapsable',
+            routerLink: 'chartOfFacilitiesReceived',
+          },
         ]
       }, {
         id: 'walletBuy',

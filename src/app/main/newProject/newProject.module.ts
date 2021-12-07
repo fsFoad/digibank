@@ -130,6 +130,7 @@ import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-
 import { InternetRemittanceCartableDetailsComponent } from './internet-remittance-cartable-details/internet-remittance-cartable-details.component';
 import { ConfirmationService } from 'primeng/api';
 import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
+import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
 
 @NgModule({
   providers: [
@@ -231,6 +232,7 @@ import { PersonalEntityListComponent } from './personal-entity-list/personal-ent
     DepositSourcesReportComponent,
     InternetRemittanceCartableDetailsComponent,
     PersonalEntityListComponent,
+    ChartOfFacilitiesReceivedComponent,
   ],
   imports: [
     CommonModule,
