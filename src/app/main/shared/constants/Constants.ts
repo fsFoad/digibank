@@ -79,6 +79,15 @@ export class Constants {
     { value: '1', label: 'المثنی' },
 
   ]
+
+  static contactTypes = [
+    { value: '0',label: '-' },
+    { value: '1',label: 'محل کار' },
+    { value: '2',label: 'محل سکونت' },
+  ];
+
+
+
   static codeHoze = [
     { value: '0', label: '-' },
     { value: '1', label: '142' },
@@ -168,6 +177,16 @@ export class Constants {
         {label: 'مرد', value: '1'},
         {label: 'زن', value: '2'},
     ];
+    static  contactTypeGroups = [
+      { label: '-',value: '0'},
+      { label: 'نشانی',value: '1'},
+      { label: 'تلفن ثابت',value: '2'},
+      { label: 'تلفن همراه',value: '3'},
+      { label: 'دورنگار',value: '4'},
+      { label: 'پست الکترونیک',value: '5'},
+      { label: 'صندوق پستی',value: '6'},
+      { label: 'آدرس وب سایت',value: '7'},
+    ];
     static countryList = [
         {label: '-', value: null},
         {label: 'ایران', value: '1'},
@@ -206,6 +225,12 @@ export class Constants {
         {label: 'اسلام', value: '1'},
         {label: 'مسیح', value: '2'},
         {label: 'یهود', value: '3'},
+    ];
+    static nahveTasarofs = [
+      { label: '-', value: '0'},
+      { label: 'ملکی', value: '1'},
+      { label: 'استیجاری', value: '2'},
+      { label: 'وقفی', value: '3'},
     ];
     static sect = [
         {label: '-', value: null},

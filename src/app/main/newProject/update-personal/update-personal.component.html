@@ -3,16 +3,16 @@
       <app-update-person-identity-info-editor [inputIdentity]="inputParam"></app-update-person-identity-info-editor>
     </p-tabPanel>
     <p-tabPanel header="امضاء"   >
-      <app-update-party-signature-editor></app-update-party-signature-editor>
+      <app-update-party-signature-editor ></app-update-party-signature-editor>
     </p-tabPanel>
     <p-tabPanel header="نقش سازمانی"   >
       <app-update-organizational-role-editor></app-update-organizational-role-editor>
     </p-tabPanel>
     <p-tabPanel header="اطلاعات تماس"   >
-      <app-update-organizational-contact-info-editor></app-update-organizational-contact-info-editor>
+      <app-update-organizational-contact-info-editor [inputIdentity]="inputParam"></app-update-organizational-contact-info-editor>
     </p-tabPanel>
     <p-tabPanel header="اطلاعات تکمیلی"   >
-      <app-update-person-supplementary-info-editor></app-update-person-supplementary-info-editor>
+      <app-update-person-supplementary-info-editor  [inputIdentity]="inputParam"></app-update-person-supplementary-info-editor>
     </p-tabPanel>
     <p-tabPanel header=" زمینه فعالیت"   >
       زمینه فعالیت

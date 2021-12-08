@@ -54,12 +54,24 @@ export class PersonalEntityListComponent implements OnInit {
     tedadFamily: number,
     tedadChild: number,
     tedadKefalat: number,
-    contactNumber:string,
-    enLastName:string,
-    codeHoze:string,
-    genderType:string,
-    birthDate:number
-
+    contactNumber: string,
+    enLastName: string,
+    codeHoze: string,
+    genderType: string,
+    birthDate: number,
+    contactsType: string,
+    phoneNumber: string,
+    contactTypeGroups: string,
+    contactStartDate: string,
+    contactEndDate: string,
+    contactProvince: string,
+    contactCity: string,
+    nahveTasarofs:string,
+    addressDescription: string,
+    postalCode:string,
+    contactsStartDate: string
+    contactsEndDate:string
+    region:string
   }[] = [
     {
       'customerName': 'پژمان سهرابی',
@@ -80,9 +92,9 @@ export class PersonalEntityListComponent implements OnInit {
       'seriShenasname': 'د',
       'addadShenasname': 19,
       'seryalShenasname': 625231,
-      'seryalkartMeli':  '2540502361',
+      'seryalkartMeli': '2540502361',
       'shenasnameType': '1',
-      'codeHoze':'2',
+      'codeHoze': '2',
       'city': '4',
       'country': '1',
       'religion': '1',
@@ -107,7 +119,20 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': 4,
       'tedadChild': 2,
       'tedadKefalat': 1,
-      'genderType':'1'
+      'genderType': '1',
+      'contactsType': '1',
+      'phoneNumber': '09125462518',
+      'contactTypeGroups': '3',
+      'contactStartDate': '1400/01/02',
+      'contactEndDate': '1400/02/02',
+      'contactProvince': 'فارس',
+      'contactCity': 'شیراز',
+      'nahveTasarofs': '1',
+      'addressDescription': 'شیراز،بلوار آزادی ، روبروی دریاچه پارک آزادی.',
+      'postalCode': '۷۱۳۴۶۸۳۵۱۱',
+      'contactsStartDate':'1400/02/01',
+      'contactsEndDate':'1400/06/01',
+      'region':'4'
     },
     {
       'customerName': 'کامران گیلانی',
@@ -128,7 +153,7 @@ export class PersonalEntityListComponent implements OnInit {
       'seriShenasname': 'ب',
       'addadShenasname': 15,
       'seryalShenasname': 658245,
-      'seryalkartMeli':  '1250002563',
+      'seryalkartMeli': '1250002563',
       'shenasnameType': '1',
       'city': '4',
       'country': '1',
@@ -154,8 +179,21 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': 5,
       'tedadChild': 3,
       'tedadKefalat': 0,
-      'codeHoze':'1',
-      'genderType':'1'
+      'codeHoze': '1',
+      'genderType': '1',
+      'contactsType': '1',
+      'phoneNumber': '07188243562',
+      'contactTypeGroups': '2',
+      'contactStartDate': '1400/02/22',
+      'contactEndDate': '1400/03/22',
+      'contactProvince': 'فارس',
+      'contactCity': 'شیراز',
+      'nahveTasarofs': '2',
+      'addressDescription': 'شیراز، خیایان ملاصدرا، نرسیده بانک ملت.',
+      'postalCode': '۷۱۳۴۶۸۳۵۱۱',
+      'contactsStartDate':'1400/01/06',
+      'contactsEndDate':'1400/06/01',
+      'region':'2'
     },
     {
       'customerName': 'کارگزاری بیمه سامان',
@@ -175,7 +213,7 @@ export class PersonalEntityListComponent implements OnInit {
       'seriShenasname': '',
       'addadShenasname': null,
       'seryalShenasname': null,
-      'seryalkartMeli':  '',
+      'seryalkartMeli': '',
       'shenasnameType': '',
       'city': '4',
       'country': '1',
@@ -201,9 +239,22 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': null,
       'tedadChild': null,
       'tedadKefalat': null,
-      'codeHoze':'',
-      'genderType':'',
+      'codeHoze': '',
+      'genderType': '',
       'birthDate': null,
+      'contactsType': '1',
+      'phoneNumber': '02188452894',
+      'contactTypeGroups': '2',
+      'contactStartDate': '1400/05/06',
+      'contactEndDate': '1400/06/06',
+      'contactProvince': '',
+      'contactCity': '',
+      'nahveTasarofs': '',
+      'addressDescription': '',
+      'postalCode': '',
+      'contactsStartDate':'',
+      'contactsEndDate':'',
+      'region':''
     },
     {
       customerName: 'تامین کننده مواد اولیه',
@@ -223,7 +274,7 @@ export class PersonalEntityListComponent implements OnInit {
       'seriShenasname': '',
       'addadShenasname': null,
       'seryalShenasname': null,
-      'seryalkartMeli':  '',
+      'seryalkartMeli': '',
       'shenasnameType': '',
       'city': '4',
       'country': '1',
@@ -249,9 +300,23 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': null,
       'tedadChild': null,
       'tedadKefalat': null,
-      'codeHoze':'',
-      'genderType':'',
+      'codeHoze': '',
+      'genderType': '',
       'birthDate': null,
+      'contactsType': '1',
+      'phoneNumber': '02177254896',
+      'contactTypeGroups': '3',
+      'contactStartDate': '1400/06/01',
+      'contactEndDate': '1400/07/01',
+      'contactProvince': '',
+      'contactCity': '',
+      'nahveTasarofs': '',
+      'addressDescription': '',
+      'postalCode':'',
+      'contactsStartDate':'',
+      'contactsEndDate':'',
+      'region':''
+
     },
   ];
   selectedRow: Row;
@@ -261,10 +326,13 @@ export class PersonalEntityListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onClose(event: any){
-    if (event==='close')
+
+  onClose(event: any) {
+    if (event === 'close') {
       this.detailsFlag = false;
+    }
   }
+
   selectRow(servise): void {
     debugger
     this.person = {
@@ -308,9 +376,9 @@ export class PersonalEntityListComponent implements OnInit {
       tedadFamily: 0,
       tedadChild: 0,
       tedadKefalat: 0,
-      contactNumber:'',
-      fieldOfActivity:'',
-      relationshipType:''
+      contactNumber: '',
+      fieldOfActivity: '',
+      relationshipType: ''
 
     };
     this.fsList = servise;
