@@ -1,20 +1,21 @@
+<div [formGroup]="form">
 <div class="app-mx-5r">
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-12 p-md-3">
       <!--      <span class="p-float-label">-->
-      <input placeholder="کد ارجاع مشتری" pInputText>
+      <input placeholder="کد ارجاع مشتری" formControlName="erjaCode" pInputText>
       <!--        <label>کد ارجاع مشتری</label>-->
       <!--      </span>-->
     </div>
     <div class="p-field p-col-12 p-md-3">
       <!--      <span class="p-float-label">-->
-      <input placeholder="شناسه ملی" pInputText>
+      <input placeholder="شناسه ملی" formControlName="nationalCode" pInputText>
       <!--        <label>شناسه ملی</label>-->
       <!--      </span>-->
     </div>
     <div class="p-field p-col-12 p-md-6">
       <!--      <span class="p-float-label">-->
-      <input placeholder="*عنوان" required pInputText>
+      <input placeholder="*عنوان" formControlName="title"  required pInputText>
       <!--        <label>عنوان</label>-->
       <!--      </span>-->
     </div>
@@ -26,19 +27,19 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
       <div class="p-field p-col-12 p-md-3">
         <!--        <span class="p-float-label">-->
-        <p-dropdown placeholder="مقطع تحصیلی" [autoDisplayFirst]="false"></p-dropdown>
+        <p-dropdown placeholder="مقطع تحصیلی" [autoDisplayFirst]="false" [options]="eduMaghta" formControlName="eduMaghta"></p-dropdown>
         <!--          <label>مقطع تحصیلی</label>-->
         <!--        </span>-->
       </div>
       <div class="p-field p-col-12 p-md-3">
         <!--        <span class="p-float-label">-->
-        <p-dropdown placeholder="رشته تحصیلی" [autoDisplayFirst]="false"></p-dropdown>
+        <p-dropdown placeholder="رشته تحصیلی" [options]="eduReshte" optionLabel="label"optionValue="value" formControlName="eduReshte" [autoDisplayFirst]="false"></p-dropdown>
         <!--          <label>رشته تحصیلی</label>-->
         <!--        </span>-->
       </div>
       <div class="p-field p-col-12 p-md-3">
         <!--        <span class="p-float-label">-->
-        <p-dropdown placeholder="گرایش تحصیلی" [autoDisplayFirst]="false"></p-dropdown>
+        <p-dropdown placeholder="گرایش تحصیلی" [options]="eduGraesh" formControlName="eduGraesh" [autoDisplayFirst]="false"></p-dropdown>
         <!--          <label>گرایش تحصیلی</label>-->
         <!--        </span>-->
         <!-- <small>متن کمکی</small> -->
@@ -47,13 +48,13 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
       <div class="p-field p-col-12 p-md-3">
         <!--        <span class="p-float-label">-->
-        <p-dropdown [options]="countryList" placeholder="کشور محل تحصیل" [autoDisplayFirst]="false"></p-dropdown>
+        <p-dropdown [options]="countryList" placeholder="کشور محل تحصیل" formControlName="eduCountry" [autoDisplayFirst]="false"></p-dropdown>
         <!--          <label>کشور محل تحصیل</label>-->
         <!--        </span>-->
       </div>
       <div class="p-field p-col-12 p-md-3">
         <!--        <span class="p-float-label">-->
-        <input placeholder="نوع موسسه آموزشی" pInputText>
+        <input placeholder="نوع موسسه آموزشی"  formControlName="eduMoaseseType" pInputText>
         <!--          <label>نوع موسسه آموزشی</label>-->
         <!--        </span>-->
       </div>
@@ -148,3 +149,4 @@
     </div>
   </div>
 </p-card>
+</div>
