@@ -7,13 +7,13 @@
         <button id="btnsearch" class="p-button-outlined" pButton label="بازیابی" (click)="search()"></button>&nbsp;
       </div>
       <div class="p-field p-col-4">
-        <input class="input-w-100" formControlName="mobile" placeholder="شماره موبایل" pInputText>
+        <input class="input-w-100" formControlName="mobile" placeholder="شماره موبایل" pInputText >
       </div>
     </div>
     <div class="p-fluid p-formgrid p-grid ">
       <div class="p-field p-col-2"></div>
       <div class="p-field p-col-4">
-        <input class="input-w-100" formControlName="fullName" placeholder="نام نام خانوادگی" pInputText>
+        <input class="input-w-100" formControlName="fullName" placeholder="نام نام خانوادگی" pInputText [disabled]="true">
       </div>
       <div class="p-field p-col-4">
         <input class="input-w-100" formControlName="charge" placeholder="مبلغ شارژ اولیه" pInputText>
@@ -28,5 +28,5 @@
 <p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="حساب سازمانی تعریف نشده است!" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
 </p-confirmDialog>
 <p-dialog header="توجه" [(visible)]="displayValidation" acceptLabel="تایید" [style]="{width: '20vw'}">
-  <p style="color: red">کد ملی وارد شده صحیح نمی باشد!</p>
+  <p style="color: red">لطفا کد ملی صحیح وارد کنید!</p>
 </p-dialog>

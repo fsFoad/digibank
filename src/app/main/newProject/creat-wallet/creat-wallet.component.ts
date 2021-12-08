@@ -28,6 +28,8 @@ export class CreatWalletComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.walletForm.controls['mobile'].disable();
+    this.walletForm.controls['fullName'].disable();
     this.listDrop = [
       {label: 'دریافت رمز پویا ', value: 1},
       {label: 'خرید پایانه فروشگاهی', value: 2},
