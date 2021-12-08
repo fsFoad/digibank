@@ -1,4 +1,3 @@
-<p-panel header="اصلاح ذینفع شخصی">
   <p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
     <p-tabPanel header="اطلاعات هویتی">
       <app-update-person-identity-info-editor></app-update-person-identity-info-editor>
@@ -27,4 +26,3 @@
     <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [disabled]="activeTab <= 0"></button>
     <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [disabled]="activeTab >= 6"></button>
   </div>
-</p-panel>
