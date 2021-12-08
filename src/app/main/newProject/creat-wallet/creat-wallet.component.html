@@ -27,3 +27,6 @@
 </p-panel>
 <p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="حساب سازمانی تعریف نشده است!" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
 </p-confirmDialog>
+<p-dialog header="توجه" [(visible)]="displayValidation" acceptLabel="تایید" [style]="{width: '20vw'}">
+  <p style="color: red">کد ملی وارد شده صحیح نمی باشد!</p>
+</p-dialog>

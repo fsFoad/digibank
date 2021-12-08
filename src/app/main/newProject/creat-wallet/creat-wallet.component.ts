@@ -13,6 +13,7 @@ export class CreatWalletComponent implements OnInit {
   listDrop: { label: string, value: number }[] = [];
   acItems = Constants.acItems;
   display = false;
+  displayValidation = false;
   walletForm = this.fb.group({
     nationalCode: [''],
     mobile: [''],
@@ -36,12 +37,16 @@ export class CreatWalletComponent implements OnInit {
   }
 
   search() {
-    debugger
-    if ((this.walletForm.controls['nationalCode'].value !== null) || (this.walletForm.controls['nationalCode'].value !== undefined)) {
+if (this.walletForm.controls['nationalCode'].value.length!==10){
+  this.displayValidation = true;
+}else if ((this.walletForm.controls['nationalCode'].value !== null) ||
+  (this.walletForm.controls['nationalCode'].value !== undefined))
+   {
      debugger
       this.walletForm.controls['mobile'].patchValue('09192265254');
       this.walletForm.controls['fullName'].setValue('حامد صبحی');
-      this.walletForm.controls['charge'].setValue(' 100,000ریال');
+      // this.walletForm.controls['charge'].setValue(' 100,000ریال');
     }
+
   }
 }
