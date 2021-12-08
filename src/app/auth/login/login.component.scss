@@ -55,7 +55,12 @@
     // margin-right: 3%;
     margin-top: 5%;
 }
-
+#loginTypeDiv{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  // margin-right: 3%;
+}
 #passDiv {
     display: flex;
     align-items: center;
@@ -72,6 +77,9 @@ p-button#btnLog {
     background-color: red;
     width: 100%;
     height: 25%;
+}
+.loginType{
+  width: 100%!important;
 }
 
 .PanelLogin {

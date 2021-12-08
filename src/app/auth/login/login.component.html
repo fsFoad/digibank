@@ -5,16 +5,21 @@
             <div *ngIf="errorMessage" style="color: red;">
                 {{errorMessage}}
             </div>
-            <div class="p-col-12" id="userDiv">
+            <div class="p-col-12" id="userDiv" >
                 <label for="username" class="userpasslabel">شناسه کاربری:</label>
-                <input placeholder="شناسه کاربری" [(ngModel)]="userName" id="username" pInputText (keyup.enter)="login()">
+                <input dir="rtl"  placeholder="شناسه کاربری" [(ngModel)]="userName" id="username" pInputText (keyup.enter)="login()">
             </div>
             <br>
             <div class="p-col-12" id="passDiv">
                 <label for="pass" class="userpasslabel">رمز عبور:</label>
-                <input type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="pass" (keyup.enter)="login()"><br><br>
+                <input dir="rtl" type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="pass" (keyup.enter)="login()"><br><br>
             </div>
           <br>
+          <div class="p-col-12" id="loginTypeDiv">
+            <label for="loginType" class="userpasslabel">نوع ورود:</label>
+            <p-dropdown class="loginType" id="loginType" [autoDisplayFirst]="true" [options]="droplist"  ></p-dropdown>
+<!--            <input dir="rtl" type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="loginType" (keyup.enter)="login()"><br><br>-->
+          </div>
             <div class="p-col-12" id="btnDiv">
                 <button #btnLogin pButton id="btnLog" [disabled]="!userName || !password" label="ورود" (click)="login()"></button>
             </div>

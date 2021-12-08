@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
     password: string;
     droplist = [
 
-        { name: 'رمز ثابت', code: 1, countryCode: '1' },
-        { name: 'شناسایی دو عاملی', code: 2, countryCode: '2' },
+        { label: 'رمز ثابت', value: 1  },
+        { label: 'شناسایی دو عاملی', value: 2  },
     ]
     errorMessage: string;
     constructor(
