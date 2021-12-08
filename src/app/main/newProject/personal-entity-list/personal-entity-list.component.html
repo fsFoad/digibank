@@ -1,7 +1,7 @@
 <p-panel header="اصلاح ذینفع شخصی">
   <div class="app-mx-5r" *ngIf="!detailsFlag">
     <p-card>
-      <p-table [value]="rows">
+      <p-table [value]="fsList">
         <ng-template pTemplate="header">
           <tr>
             <th translate>ردیف</th>
@@ -16,7 +16,7 @@
         <ng-template let-i="rowIndex" pTemplate="body" let-row>
           <tr>
             <td>{{i + 1}}</td>
-            <td>{{row.fullName}}</td>
+            <td>{{row.customerName}}</td>
             <td>{{row.registrationDate|castToDate}}</td>
             <td>{{row.contactNumber}}</td>
             <td>{{row.customerType}}</td>
@@ -29,5 +29,6 @@
       </p-table>
     </p-card>
   </div>
-  <app-update-personal *ngIf="detailsFlag" ></app-update-personal>
+  <app-update-personal *ngIf="detailsFlag" [inputParam]="fsList"
+                       (close)="onClose($event)"></app-update-personal>
 </p-panel>

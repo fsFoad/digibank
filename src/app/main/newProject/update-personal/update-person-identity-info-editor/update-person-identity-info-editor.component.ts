@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Constants} from '../../../shared/constants/Constants';
 import {AbstractControlOptions, AsyncValidatorFn, FormBuilder, FormGroup, ValidatorFn} from '@angular/forms';
 
@@ -8,12 +8,15 @@ import {AbstractControlOptions, AsyncValidatorFn, FormBuilder, FormGroup, Valida
   styleUrls: ['./update-person-identity-info-editor.component.scss']
 })
 export class UpdatePersonIdentityInfoEditorComponent implements OnInit {
+  @Input() inputIdentity
   genderTypes = Constants.genderTypes;
   countryList = Constants.countryList;
   cityList = Constants.cityList;
   religion = Constants.religion;
   sect = Constants.sect;
   residenceTypes = Constants.residenceTypes;
+  shenasnameType = Constants.shenasnameType;
+  codeHoze = Constants.codeHoze;
   banks = [
     { value:'0',label: '-' },
     { value:'1',label: 'تجارت' },
@@ -50,11 +53,38 @@ export class UpdatePersonIdentityInfoEditorComponent implements OnInit {
       birthDateGregorian: [''],
       firstNameLatin: [''],
       lastNameLatin: [''],
-      lastNameLatin2: [''],
+      enFatherName: [''],
     });
   }
 
   ngOnInit(): void {
+    this.form.controls['nationalCode'].patchValue(this.inputIdentity.nationalCode)
+    this.form.controls['organizationalRole'].patchValue(this.inputIdentity.organizationalRole)
+    this.form.controls['personeliCode'].patchValue(this.inputIdentity.personalCode)
+    this.form.controls['bankId'].patchValue(this.inputIdentity.banck)
+    this.form.controls['firstName'].patchValue(this.inputIdentity.firstName)
+    this.form.controls['lastName'].patchValue(this.inputIdentity.lastName)
+    this.form.controls['fatherName'].patchValue(this.inputIdentity.fatherName)
+    this.form.controls['shenasnameNumber'].patchValue(this.inputIdentity.numberShenasname)
+    this.form.controls['shenasnameIssueDate'].patchValue(this.inputIdentity.dateShenasname)
+    this.form.controls['shenasnameSeriesLetter'].patchValue(this.inputIdentity.seriShenasname)
+    this.form.controls['shenasnameSeriesNumber'].patchValue(this.inputIdentity.addadShenasname)
+    this.form.controls['shenasnameSerial'].patchValue(this.inputIdentity.seryalShenasname)
+    this.form.controls['cartMelliSerial'].patchValue(this.inputIdentity.seryalkartMeli)
+    this.form.controls['shenasnameTypeId'].patchValue(this.inputIdentity.shenasnameType)
+    this.form.controls['shenasnameIssueCityId'].patchValue(this.inputIdentity.city)
+    this.form.controls['shenasnameHozeCodeId'].patchValue(this.inputIdentity.codeHoze)
+    this.form.controls['genderId'].patchValue(this.inputIdentity.genderType)
+    this.form.controls['birthDate'].patchValue(this.inputIdentity.birthDate)
+    this.form.controls['birthCityId'].patchValue(this.inputIdentity.city)
+    this.form.controls['birthCountryId'].patchValue(this.inputIdentity.country)
+    this.form.controls['religionId'].patchValue(this.inputIdentity.religion)
+    this.form.controls['faithId'].patchValue(this.inputIdentity.sect)
+    this.form.controls['eghamatStatusId'].patchValue(this.inputIdentity.residence)
+    // this.form.controls['birthDateGregorian'].patchValue(this.inputIdentity.enDate)
+    this.form.controls['firstNameLatin'].patchValue(this.inputIdentity.enName)
+    this.form.controls['lastNameLatin'].patchValue(this.inputIdentity.enLastName)
+    this.form.controls['enFatherName'].patchValue(this.inputIdentity.enFatherName)
   }
 
   onNationalCodeEnterKey(): void {

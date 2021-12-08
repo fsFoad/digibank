@@ -105,7 +105,7 @@
     </div>
     <div class="p-field p-col">
       <!--      <span class="p-float-label">-->
-      <p-dropdown formControlName="shenasnameTypeId" placeholder="نوع شناسنامه"></p-dropdown>
+      <p-dropdown formControlName="shenasnameTypeId" placeholder="نوع شناسنامه" [options]="shenasnameType"></p-dropdown>
       <!--        <label>نوع شناسنامه</label>-->
       <!--      </span>-->
     </div>
@@ -117,7 +117,7 @@
     </div>
     <div class="p-field p-col">
       <!--      <span class="p-float-label">-->
-      <p-dropdown formControlName="shenasnameHozeCodeId" placeholder="کد حوزه شناسنامه"></p-dropdown>
+      <p-dropdown formControlName="shenasnameHozeCodeId" placeholder="کد حوزه شناسنامه" [options]="codeHoze"></p-dropdown>
       <!--        <label>کد حوزه شناسنامه</label>-->
       <!--      </span>-->
     </div>
@@ -194,7 +194,7 @@
     </div>
     <div class="p-field p-col">
       <!--      <span class="p-float-label">-->
-      <input formControlName="lastNameLatin2" placeholder="نام خانوادگی انگلیسی" pInputText>
+      <input formControlName="enFatherName" placeholder="نام خانوادگی انگلیسی" pInputText>
       <!--        <label>نام پدر انگلیسی</label>-->
       <!--      </span>-->
     </div>

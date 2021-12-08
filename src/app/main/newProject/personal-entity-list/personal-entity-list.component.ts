@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -7,46 +7,12 @@ import {Router} from '@angular/router';
   styleUrls: ['./personal-entity-list.component.scss']
 })
 export class PersonalEntityListComponent implements OnInit {
+
   detailsFlag = false;
   person;
-  rows: Row[] = [
-    {
-      fullName: 'پژمان سهرابی',
-      registrationDate: 14000610,
-      contactNumber: '09006489207',
-      fieldOfActivity: 'حقیقی',
-      relationshipType: 'کارمند',
-    },
-    {
-      fullName: 'کامران گیلانی',
-      registrationDate: 14000721,
-      contactNumber: '09016485057',
-      fieldOfActivity: 'حقیقی',
-      relationshipType: 'کارمند',
-    },
-    // {
-    //   fullName: 'هوشنگ مقتصد',
-    //   registrationDate: 14000819,
-    //   contactNumber: '09338854727',
-    //   fieldOfActivity: 'حقیقی',
-    //   relationshipType: 'کارمند',
-    // },
-    {
-      fullName: 'کارگزاری بیمه سامان',
-      registrationDate: 14000910,
-      contactNumber: '09016485057',
-      fieldOfActivity: 'حقوقی',
-      relationshipType: 'نمایندگی بیمه',
-    },
-    {
-      fullName: 'تامین کننده مواد اولیه',
-      registrationDate: 14000910,
-      contactNumber: '021-88584420',
-      fieldOfActivity: 'حقوقی',
-      relationshipType: 'تامین کننده',
-    },
-  ];
+
   fsList: {
+
     customerName: string,
     customerType: string,
     relationshipType: string,
@@ -58,8 +24,8 @@ export class PersonalEntityListComponent implements OnInit {
     firstName: string,
     lastName: string,
     fatherName: string,
-    NumberShenasname: number,
-    DateShenasname: number,
+    numberShenasname: number,
+    dateShenasname: number,
     seriShenasname: string,
     addadShenasname: number,
     seryalShenasname: number,
@@ -70,9 +36,9 @@ export class PersonalEntityListComponent implements OnInit {
     religion: string,
     sect: string,
     residence: string,
-    EnDate: number,
-    EnName: string,
-    EnFatherName: string,
+    enDate: number,
+    enName: string,
+    enFatherName: string,
     erjaCode: string,
     eduMaghta: string,
     eduReshte: string,
@@ -89,7 +55,10 @@ export class PersonalEntityListComponent implements OnInit {
     tedadChild: number,
     tedadKefalat: number,
     contactNumber:string,
-    EnLastName:string
+    enLastName:string,
+    codeHoze:string,
+    genderType:string,
+    birthDate:number
 
   }[] = [
     {
@@ -105,22 +74,24 @@ export class PersonalEntityListComponent implements OnInit {
       'firstName': 'پژمان',
       'lastName': 'سهرابی',
       'fatherName': 'فریدون',
-      'NumberShenasname': 2124584185,
-      'DateShenasname': 13740503,
+      'numberShenasname': 2235425126,
+      'dateShenasname': 13740503,
+      'birthDate': 13740501,
       'seriShenasname': 'د',
       'addadShenasname': 19,
       'seryalShenasname': 625231,
       'seryalkartMeli':  '2540502361',
-      'shenasnameType': 'المثنی',
+      'shenasnameType': '1',
+      'codeHoze':'2',
       'city': '4',
       'country': '1',
       'religion': '1',
       'sect': '1',
       'residence': '1',
-      'EnDate': 20030725,
-      'EnName': 'pejman',
-      'EnLastName': 'sohrabi',
-      'EnFatherName': 'freydon',
+      'enDate': 25072003,
+      'enName': 'pejman',
+      'enLastName': 'sohrabi',
+      'enFatherName': 'freydon',
       'erjaCode': '32131',
       'eduMaghta': 'کارشناسی ارشد',
       'eduReshte': 'کامپیوتر',
@@ -136,6 +107,7 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': 4,
       'tedadChild': 2,
       'tedadKefalat': 1,
+      'genderType':'1'
     },
     {
       'customerName': 'کامران گیلانی',
@@ -150,22 +122,23 @@ export class PersonalEntityListComponent implements OnInit {
       'firstName': 'کامران',
       'lastName': 'گیلانی',
       'fatherName': 'سینا',
-      'NumberShenasname': 2566525181,
-      'DateShenasname': 13620503,
+      'numberShenasname': 4598442678,
+      'dateShenasname': 13620503,
+      'birthDate': 13620501,
       'seriShenasname': 'ب',
       'addadShenasname': 15,
       'seryalShenasname': 658245,
       'seryalkartMeli':  '1250002563',
-      'shenasnameType': 'المثنی',
+      'shenasnameType': '1',
       'city': '4',
       'country': '1',
       'religion': '1',
       'sect': '1',
       'residence': '1',
-      'EnDate': 19950725,
-      'EnName': 'kamran',
-      'EnLastName': 'gilani',
-      'EnFatherName': 'sina',
+      'enDate': 25071995,
+      'enName': 'kamran',
+      'enLastName': 'gilani',
+      'enFatherName': 'sina',
       'erjaCode': '25468',
       'eduMaghta': 'دکتری',
       'eduReshte': 'مدیریت',
@@ -181,6 +154,8 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': 5,
       'tedadChild': 3,
       'tedadKefalat': 0,
+      'codeHoze':'1',
+      'genderType':'1'
     },
     {
       'customerName': 'کارگزاری بیمه سامان',
@@ -195,8 +170,8 @@ export class PersonalEntityListComponent implements OnInit {
       'firstName': '',
       'lastName': '',
       'fatherName': '',
-      'NumberShenasname': null,
-      'DateShenasname': null,
+      'numberShenasname': null,
+      'dateShenasname': null,
       'seriShenasname': '',
       'addadShenasname': null,
       'seryalShenasname': null,
@@ -207,10 +182,10 @@ export class PersonalEntityListComponent implements OnInit {
       'religion': '',
       'sect': '',
       'residence': '',
-      'EnDate': null,
-      'EnName': '',
-      'EnLastName': '',
-      'EnFatherName': '',
+      'enDate': null,
+      'enName': '',
+      'enLastName': '',
+      'enFatherName': '',
       'erjaCode': '36214',
       'eduMaghta': '',
       'eduReshte': '',
@@ -226,6 +201,9 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': null,
       'tedadChild': null,
       'tedadKefalat': null,
+      'codeHoze':'',
+      'genderType':'',
+      'birthDate': null,
     },
     {
       customerName: 'تامین کننده مواد اولیه',
@@ -240,8 +218,8 @@ export class PersonalEntityListComponent implements OnInit {
       'firstName': '',
       'lastName': '',
       'fatherName': '',
-      'NumberShenasname': null,
-      'DateShenasname': null,
+      'numberShenasname': null,
+      'dateShenasname': null,
       'seriShenasname': '',
       'addadShenasname': null,
       'seryalShenasname': null,
@@ -252,10 +230,10 @@ export class PersonalEntityListComponent implements OnInit {
       'religion': '',
       'sect': '',
       'residence': '',
-      'EnDate': null,
-      'EnName': '',
-      'EnLastName': '',
-      'EnFatherName': '',
+      'enDate': null,
+      'enName': '',
+      'enLastName': '',
+      'enFatherName': '',
       'erjaCode': '36214',
       'eduMaghta': '',
       'eduReshte': '',
@@ -271,6 +249,9 @@ export class PersonalEntityListComponent implements OnInit {
       'tedadFamily': null,
       'tedadChild': null,
       'tedadKefalat': null,
+      'codeHoze':'',
+      'genderType':'',
+      'birthDate': null,
     },
   ];
   selectedRow: Row;
@@ -280,8 +261,12 @@ export class PersonalEntityListComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  onClose(event: any){
+    if (event==='close')
+      this.detailsFlag = false;
+  }
   selectRow(servise): void {
+    debugger
     this.person = {
       customerName: '',
       customerType: '',
@@ -293,8 +278,8 @@ export class PersonalEntityListComponent implements OnInit {
       firstName: '',
       lastName: '',
       fatherName: '',
-      NumberShenasname: 0,
-      DateShenasname: 0,
+      numberShenasname: 0,
+      dateShenasname: 0,
       seriShenasname: '',
       addadShenasname: '',
       seryalShenasname: '',
@@ -305,9 +290,9 @@ export class PersonalEntityListComponent implements OnInit {
       religion: '',
       sect: '',
       residence: '',
-      EnDate: '',
-      EnName: '',
-      EnFatherName: '',
+      enDate: '',
+      enName: '',
+      enFatherName: '',
       erjaCode: '',
       eduMaghta: '',
       eduReshte: '',

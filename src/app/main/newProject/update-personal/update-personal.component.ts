@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-update-personal',
@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./update-personal.component.scss']
 })
 export class UpdatePersonalComponent implements OnInit {
+  @Input() inputParam
   activeTab = 0;
   constructor() { }
 
   ngOnInit(): void {
+    debugger
+    console.log(this.inputParam)
   }
 
   nextTab(): void {

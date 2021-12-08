@@ -1,6 +1,6 @@
   <p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
     <p-tabPanel header="اطلاعات هویتی">
-      <app-update-person-identity-info-editor></app-update-person-identity-info-editor>
+      <app-update-person-identity-info-editor [inputIdentity]="inputParam"></app-update-person-identity-info-editor>
     </p-tabPanel>
     <p-tabPanel header="امضاء"   >
       <app-update-party-signature-editor></app-update-party-signature-editor>

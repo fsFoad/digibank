@@ -74,6 +74,17 @@ export class Constants {
     { value: '444', label: 'شرکت تابعه ۲' },
     { value: '333', label: 'شرکت تابعه ۳' },
   ]
+  static shenasnameType = [
+    { value: '0', label: '-' },
+    { value: '1', label: 'المثنی' },
+
+  ]
+  static codeHoze = [
+    { value: '0', label: '-' },
+    { value: '1', label: '142' },
+    { value: '2', label: '703' },
+
+  ]
   static HavaleInternetiStatus = [
     { value: '000', label: '-' },
     { value: '111', label: 'ثبت اولیه' },
