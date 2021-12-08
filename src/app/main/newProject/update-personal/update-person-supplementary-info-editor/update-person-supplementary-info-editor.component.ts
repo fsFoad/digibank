@@ -13,6 +13,9 @@ export class UpdatePersonSupplementaryInfoEditorComponent implements OnInit {
   eduReshte=Constants.eduReshte;
   eduGraesh=Constants.eduGraesh;
   eduMoaseseType=Constants.eduMoaseseType;
+  recruitmentType=Constants.recruitmentType;
+  vahed=Constants.vahed;
+  post=Constants.post;
   cityList = Constants.cityList.filter(x => x.value !== null);
   countryList = Constants.countryList.filter(x => x.value !== null);
   public form: FormGroup;
@@ -25,7 +28,18 @@ export class UpdatePersonSupplementaryInfoEditorComponent implements OnInit {
       eduReshte: [''],
       eduGraesh: [''],
       eduMoaseseType: [''],
+      eduMoaseseName: [''],
       eduCountry: [''],
+      startDate: [''],
+      endDate: [''],
+      eduCity: [''],
+      recruitmentType: [''],
+      vahed: [''],
+      post: [''],
+      sahmie: [''],
+      tedadFamily: [''],
+      tedadChild: [''],
+      tedadKefalat: [''],
 
 
     });
@@ -38,7 +52,18 @@ export class UpdatePersonSupplementaryInfoEditorComponent implements OnInit {
     debugger
     this.form.controls['eduGraesh'].patchValue(this.inputIdentity.eduGraesh)
     this.form.controls['eduMoaseseType'].patchValue(this.inputIdentity.eduMoaseseType)
+    this.form.controls['eduMoaseseName'].patchValue(this.inputIdentity.eduMoaseseName)
     this.form.controls['eduCountry'].patchValue(this.inputIdentity.country)
+    this.form.controls['startDate'].patchValue(this.inputIdentity.startDate)
+    this.form.controls['endDate'].patchValue(this.inputIdentity.endDate)
+    this.form.controls['eduCity'].patchValue(this.inputIdentity.eduCity)
+    this.form.controls['recruitmentType'].patchValue(this.inputIdentity.recruitmentType)
+    this.form.controls['vahed'].patchValue(this.inputIdentity.vahed)
+    this.form.controls['post'].patchValue(this.inputIdentity.post)
+    this.form.controls['sahmie'].patchValue(this.inputIdentity.sahmie)
+    this.form.controls['tedadFamily'].patchValue(this.inputIdentity.tedadFamily)
+    this.form.controls['tedadChild'].patchValue(this.inputIdentity.tedadChild)
+    this.form.controls['tedadKefalat'].patchValue(this.inputIdentity.tedadKefalat)
   }
 
 }

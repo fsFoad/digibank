@@ -247,6 +247,25 @@ export class Constants {
     {value: '2', label: 'مدیریت'},
 
   ];
+  static recruitmentType = [
+    {value: '0', label: '-'},
+    {value: '1', label: 'دائم'},
+    {value: '2', label: 'آزمایشی'},
+
+  ];
+  static vahed = [
+    {value: '0', label: '-'},
+    {value: '1', label: 'مدیریت'},
+    {value: '2', label: 'فناوری'},
+
+  ];
+  static post = [
+    {value: '0', label: '-'},
+    {value: '1', label: 'مدیر عامل'},
+    {value: '2', label: 'معمار سیستم'},
+
+  ];
+
   static eduGraesh = [
     {label: '-', value: '0'},
     {label: 'سخت افزار', value: '1'},
