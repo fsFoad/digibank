@@ -81,7 +81,7 @@ export class UpdatePersonIdentityInfoEditorComponent implements OnInit {
     this.form.controls['religionId'].patchValue(this.inputIdentity.religion)
     this.form.controls['faithId'].patchValue(this.inputIdentity.sect)
     this.form.controls['eghamatStatusId'].patchValue(this.inputIdentity.residence)
-    // this.form.controls['birthDateGregorian'].patchValue(this.inputIdentity.enDate)
+    this.form.controls['birthDateGregorian'].patchValue(this.inputIdentity.enDate)
     this.form.controls['firstNameLatin'].patchValue(this.inputIdentity.enName)
     this.form.controls['lastNameLatin'].patchValue(this.inputIdentity.enLastName)
     this.form.controls['enFatherName'].patchValue(this.inputIdentity.enFatherName)
