@@ -7,12 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdateOrganizationalRoleEditorComponent implements OnInit {
   availableRoles = [
-    {name: 'کارمند - ۱'},
-    {name: 'کارگزاری رتبه الف - ۲'},
+    {name: '1-کارمند'},
+    {name: '2-مشتری'},
+    {name: '3-نمایندگی، کارگزاری'},
+    {name: '3-تامین کننده'},
   ];
   selectedRoles = [
-    {name: 'مشتری - ۱۲۱۲۱۲۱۲'},
-    {name: 'کارگزاری رتبه ب - ۱۴۱۵۱۶۱۷'},
+    // {name: 'مشتری - ۱۲۱۲۱۲۱۲'},
+    // {name: 'کارگزاری رتبه ب - ۱۴۱۵۱۶۱۷'},
   ];
   constructor() { }
 
