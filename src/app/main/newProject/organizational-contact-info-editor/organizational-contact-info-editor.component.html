@@ -22,8 +22,11 @@
 <!--  </div>-->
 <!--</div>-->
 
-<!-- <p-divider class="app-divider-h">اطلاعات شماره تماس</p-divider> -->
-<p-card header="اطلاعات شماره تماس" class="p-d-flex p-my-5">
+<div>
+  <button pButton label="ایجاد اطلاعات تماس +"  class="p-button-info" ></button>
+</div>
+<p-card header="اطلاعات تماس" class="p-d-flex p-my-5">
+
   <p-table [value]="table1Rows">
     <ng-template pTemplate="header">
       <tr>
@@ -57,8 +60,11 @@
 </p-card>
 
 
-<!-- <p-divider class="app-divider-h">اطلاعات نشانی</p-divider> -->
+<div>
+  <button pButton label="ایجاد اطلاعات نشانی +"  class="p-button-info" ></button>
+</div>
 <p-card header="اطلاعات نشانی" class="p-d-flex p-my-5">
+
   <p-table [value]="table2Rows">
     <ng-template pTemplate="header">
       <tr>
