@@ -14,22 +14,23 @@ export class OrganizationalContactInfoEditorComponent implements OnInit {
 
 
   table1Rows = [
-    {
-      phoneNumber: '۱۲۳۴۵۶۷۸۹۰',
-      startDate: '۱۴۰۰/۰۲/۲۵',
-      endDate: '۱۴۰۰/۰۲/۲۵',
-    }
+    // {
+    //   phoneNumber: '۱۲۳۴۵۶۷۸۹۰',
+    //   startDate: '۱۴۰۰/۰۲/۲۵',
+    //   endDate: '۱۴۰۰/۰۲/۲۵',
+    // }
   ];
 
-  table2Rows = [1].map(i => ({
-    province: 'تهران',
-    city: 'تهران',
-    region: '۴',
-    addressDescription: '',
-    postalCode: '',
-    startDate: '۱۴۰۰/۰۲/۲۵',
-    endDate: '۱۴۰۰/۰۲/۲۵',
-  }));
+  table2Rows;
+  // = [1].map(i => ({
+  //   province: 'تهران',
+  //   city: 'تهران',
+  //   region: '۴',
+  //   addressDescription: '',
+  //   postalCode: '',
+  //   startDate: '۱۴۰۰/۰۲/۲۵',
+  //   endDate: '۱۴۰۰/۰۲/۲۵',
+  // }));
 
   constructor() { }
 
