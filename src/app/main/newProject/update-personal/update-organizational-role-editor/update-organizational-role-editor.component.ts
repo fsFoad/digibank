@@ -10,7 +10,7 @@ export class UpdateOrganizationalRoleEditorComponent implements OnInit {
     {name: '1-کارمند'},
     {name: '2-مشتری'},
     {name: '3-نمایندگی، کارگزاری'},
-    {name: '3-تامین کننده'},
+    {name: '4-تامین کننده'},
   ];
   selectedRoles = [
     // {name: 'مشتری - ۱۲۱۲۱۲۱۲'},
