@@ -194,6 +194,18 @@ export class Constants {
     {label: 'صندوق پستی', value: '6'},
     {label: 'آدرس وب سایت', value: '7'},
   ];
+  static Mantaghe = [
+    {label: '-', value: '0'},
+    {label: 'منطقه1', value: '1'},
+    {label: 'منطقه2', value: '2'},
+    {label: 'منطقه3', value: '3'},
+    {label: 'منطقه4', value: '4'},
+    {label: 'منطقه5', value: '5'},
+    {label: 'منطقه6', value: '6'},
+    {label: 'منطقه7', value: '7'},
+    {label: 'منطقه8', value: '8'},
+    {label: 'منطقه9', value: '9'},
+  ];
   static countryList = [
     {label: '-', value: null},
     {label: 'ایران', value: '1'},
@@ -201,7 +213,7 @@ export class Constants {
     // {label: 'عربستان', value: '3'},
   ];
   static provinceList = [
-    {label: '-', value: null},
+    {label: '-', value: '0'},
     {label: 'تهران', value: '1', countryvalue: '1'},
     {label: 'اصفهان', value: '2', countryvalue: '1'},
     {label: 'فارس', value: '3', countryvalue: '1'},
@@ -210,7 +222,7 @@ export class Constants {
     {label: 'کرمان', value: '6', countryvalue: '1'},
   ];
   static cityList = [
-    {label: '-', value: null},
+    {label: '-', value: '0'},
     {label: 'تهران', value: '1', provincevalue: '1'},
     {label: 'قم', value: '2', provincevalue: '5'},
     {label: 'اصفهان', value: '3', provincevalue: '2'},

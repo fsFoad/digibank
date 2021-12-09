@@ -53,6 +53,7 @@ import { SubmitClearComponent } from './submit-clear/submit-clear.component';
 import { SubmitCheckComponent } from './submit-check/submit-check.component';
 import { UpOrDownloadComponent } from './up-or-download/up-or-download.component';
 import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
 import { OrganizationalEntityInfoEditorComponent } from './organizational-entity-manager/organizational-entity-info-editor/organizational-entity-info-editor.component';
@@ -71,10 +72,10 @@ import { ChartModule } from 'primeng/chart';
 import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
-import { PartySignatureEditorComponent } from './party-signature-editor/party-signature-editor.component';
-import { OrganizationalRoleEditorComponent } from './organizational-role-editor/organizational-role-editor.component';
-import { OrganizationalContactInfoEditorComponent } from './organizational-contact-info-editor/organizational-contact-info-editor.component';
-import { OrganizationalEntityDocumentsEditorComponent } from './organizational-entity-documents-editor/organizational-entity-documents-editor.component';
+import { PartySignatureEditorComponent } from './person-editor/party-signature-editor/party-signature-editor.component';
+import { OrganizationalRoleEditorComponent } from './person-editor/organizational-role-editor/organizational-role-editor.component';
+import { OrganizationalContactInfoEditorComponent } from './person-editor/organizational-contact-info-editor/organizational-contact-info-editor.component';
+import { OrganizationalEntityDocumentsEditorComponent } from './person-editor/organizational-entity-documents-editor/organizational-entity-documents-editor.component';
 import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { PersonIdentityInfoEditorComponent } from './person-editor/person-identity-info-editor/person-identity-info-editor.component';
 import { PersonSupplementaryInfoEditorComponent } from './person-editor/person-supplementary-info-editor/person-supplementary-info-editor.component';
@@ -137,6 +138,8 @@ import { UpdateOrganizationalRoleEditorComponent } from './update-personal/updat
 import { UpdateOrganizationalContactInfoEditorComponent } from './update-personal/update-organizational-contact-info-editor/update-organizational-contact-info-editor.component';
 import { UpdatePersonSupplementaryInfoEditorComponent } from './update-personal/update-person-supplementary-info-editor/update-person-supplementary-info-editor.component';
 import { UpdateOrganizationalEntityDocumentsEditorComponent } from './update-personal/update-organizational-entity-documents-editor/update-organizational-entity-documents-editor.component';
+import { CreateContactComponent } from './person-editor/organizational-contact-info-editor/create-contact/create-contact.component';
+import { CreateAddressComponent } from './person-editor/organizational-contact-info-editor/create-address/create-address.component';
 
 @NgModule({
   providers: [
@@ -245,6 +248,8 @@ import { UpdateOrganizationalEntityDocumentsEditorComponent } from './update-per
     UpdateOrganizationalContactInfoEditorComponent,
     UpdatePersonSupplementaryInfoEditorComponent,
     UpdateOrganizationalEntityDocumentsEditorComponent,
+    CreateContactComponent,
+    CreateAddressComponent,
   ],
   imports: [
     CommonModule,
@@ -252,6 +257,7 @@ import { UpdateOrganizationalEntityDocumentsEditorComponent } from './update-per
     ButtonModule,
     PanelModule,
     CardModule,
+    InputTextareaModule,
     CheckboxModule,
     DropdownModule,
     InputTextModule,

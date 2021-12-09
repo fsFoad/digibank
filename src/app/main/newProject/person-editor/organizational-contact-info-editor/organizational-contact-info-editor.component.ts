@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Constants} from '../../shared/constants/Constants';
+import {Constants} from '../../../shared/constants/Constants';
 
 @Component({
   selector: 'app-organizational-contact-info-editor',
@@ -10,9 +10,9 @@ export class OrganizationalContactInfoEditorComponent implements OnInit {
   contactTypeGroups =Constants.contactTypeGroups;
   contactTypes =Constants.contactTypes;
   nahveTasarofs = Constants.nahveTasarofs;
-
-
-
+  contactAddressInfoFlag=true;
+  contactInfoFlag=false
+  addressInfoFlag=false
   table1Rows = [
     // {
     //   phoneNumber: '۱۲۳۴۵۶۷۸۹۰',
@@ -36,6 +36,20 @@ export class OrganizationalContactInfoEditorComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  createContactInfo(){
+    this.contactAddressInfoFlag=false;
+    this.contactInfoFlag = true;
+  }
+  createAddressInfo(){
+    this.contactAddressInfoFlag=false;
+    this.addressInfoFlag = true;
 
+  }
+  onClose() {
+    this.contactAddressInfoFlag=true;
+    this.contactInfoFlag = false;
+    this.addressInfoFlag = false;
+
+    }
 }
 
