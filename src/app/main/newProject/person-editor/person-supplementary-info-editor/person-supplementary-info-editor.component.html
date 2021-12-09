@@ -26,19 +26,19 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="مقطع تحصیلی" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown placeholder="مقطع تحصیلی" [options]="eduMaghta" [autoDisplayFirst]="false"></p-dropdown>
 <!--          <label>مقطع تحصیلی</label>-->
 <!--        </span>-->
       </div>
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="رشته تحصیلی" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown placeholder="رشته تحصیلی"  [options]="eduReshte" [autoDisplayFirst]="false"></p-dropdown>
 <!--          <label>رشته تحصیلی</label>-->
 <!--        </span>-->
       </div>
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="گرایش تحصیلی" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown placeholder="گرایش تحصیلی" [options]="eduGraesh" [autoDisplayFirst]="false"></p-dropdown>
 <!--          <label>گرایش تحصیلی</label>-->
 <!--        </span>-->
         <!-- <small>متن کمکی</small> -->
@@ -95,19 +95,19 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="نوع استخدام" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown placeholder="نوع استخدام" [options]="recruitmentType"  [autoDisplayFirst]="false"></p-dropdown>
 <!--          <label>نوع استخدام</label>-->
 <!--        </span>-->
       </div>
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="واحد سازمانی در حال خدمت" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown placeholder="واحد سازمانی در حال خدمت" [options]="vahed" [autoDisplayFirst]="false"></p-dropdown>
 <!--          <label>واحد سازمانی در حال خدمت</label>-->
 <!--        </span>-->
       </div>
       <div class="p-field p-col-12 p-md-3">
 <!--        <span class="p-float-label">-->
-          <p-dropdown placeholder="پست سازمانی" [autoDisplayFirst]="false"></p-dropdown>
+          <p-dropdown placeholder="پست سازمانی" [options]="post" [autoDisplayFirst]="false"></p-dropdown>
 <!--          <label>پست سازمانی</label>-->
 <!--        </span>-->
       </div>
