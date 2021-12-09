@@ -80,6 +80,13 @@ export class Constants {
     {value: '1', label: 'المثنی'},
 
   ];
+  static signType = [
+    {value: '0', label: '-'},
+    {value: '1', label: 'نمونه امضاء'},
+    {value: '2', label: 'اثر انگشت'},
+    {value: '3', label: 'مهر'},
+
+  ];
 
   static contactTypes = [
     {value: '0', label: '-'},
