@@ -14,7 +14,10 @@ export class PersonIdentityInfoEditorComponent implements OnInit {
   religion = Constants.religion;
   sect = Constants.sect;
   residenceTypes = Constants.residenceTypes;
-    banks = [
+  shenasnameType = Constants.shenasnameType;
+  codeHoze = Constants.codeHoze;
+
+  banks = [
       { value:'0',label: '-' },
       { value:'1',label: 'تجارت' },
       { value:'2',label: 'ملت' },
