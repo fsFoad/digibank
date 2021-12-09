@@ -1,16 +1,16 @@
 <p-panel header="گزارش اسناد واگذاری" >
     <div class=" p-fluid p-formgrid p-grid app-mx-10r">
         <div class=" p-field p-col ">
-            <p-dropdown [editable]="true"  placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [editable]="true"  placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
         </div>
         <div class=" p-field p-col ">
             <input placeholder="مبلغ" class="input-w-100" pInputText    >
         </div>
         <div class=" p-field p-col ">
-            <p-dropdown placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-field p-col ">
-            <p-dropdown placeholder="نوع سند" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" placeholder="نوع سند" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
     </div>
   <div class=" p-fluid p-formgrid p-grid app-mx-10r">
@@ -39,12 +39,12 @@
         </div>
         <div class=" p-field p-col ">
             <!--                <label>شماره حساب</label><br>-->
-            <p-dropdown class="p-dropdown-w-100" placeholder="وضعیت چک" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" class="p-dropdown-w-100" placeholder="وضعیت چک" optionValue="value" optionLabel="label"></p-dropdown>
 
         </div>
         <div class=" p-field p-col ">
             <!--                <label>شماره حساب</label><br>-->
-            <p-dropdown placeholder="سرفصل حسابداری" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" placeholder="سرفصل حسابداری" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
   </div>
   <div class=" p-fluid p-formgrid p-grid app-mx-10r">

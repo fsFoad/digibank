@@ -14,27 +14,27 @@
         <div class=" p-md-2 FS-mr2 ">
 
             <p-dropdown class="p-dropdown-w80" placeholder="واحد سازمانی" optionValue="value"
-                        [options]="organList" optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"    [options]="organList" optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr">
 
             <p-dropdown class="p-dropdown-w80" placeholder="واحد های تابعه" optionValue="value"
-                        [options]="representationList" optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"    [options]="representationList" optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr3">
 
             <p-dropdown class="p-dropdown-w80" placeholder="نوع عملیات" optionValue="value"
-                        [options]="operationList"  optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"     [options]="operationList"  optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr4">
 
             <p-dropdown class="p-dropdown-w80" placeholder="بانک" optionValue="value"
-                        [options]="bankList"  optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"  [options]="bankList"  optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr5">
 
             <p-dropdown  [editable]="true" class="p-dropdown-w80" placeholder="شماره حساب"
-                         [options]="acItems"></p-dropdown>
+                         [autoDisplayFirst]="false"   [options]="acItems"></p-dropdown>
         </div>
 
     </div>

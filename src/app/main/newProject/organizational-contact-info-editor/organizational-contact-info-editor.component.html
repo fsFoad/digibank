@@ -40,10 +40,10 @@
       <tr>
         <td>{{i + 1}}</td>
         <td>
-          <p-dropdown [options]="contactTypeGroups" optionLabel="name"></p-dropdown>
+          <p-dropdown [options]="contactTypeGroups" [autoDisplayFirst]="false" ></p-dropdown>
         </td>
         <td>
-          <p-dropdown [options]="contactTypes" optionLabel="name"></p-dropdown>
+          <p-dropdown [options]="contactTypes" [autoDisplayFirst]="false" ></p-dropdown>
         </td>
         <td>{{row.phoneNumber}}</td>
         <td>{{row.startDate}}</td>
@@ -78,13 +78,13 @@
       <tr>
         <td>{{i + 1}}</td>
         <td>
-          <p-dropdown [options]="addressTypes" optionLabel="name"></p-dropdown>
+          <p-dropdown [options]="contactTypes" [autoDisplayFirst]="false" ></p-dropdown>
         </td>
         <td>{{row.province}}</td>
         <td>{{row.city}}</td>
         <td>{{row.region}}</td>
         <td>
-          <p-dropdown [options]="nahveTasarofs" optionLabel="name"></p-dropdown>
+          <p-dropdown [options]="nahveTasarofs" [autoDisplayFirst]="false" ></p-dropdown>
         </td>
         <td>{{row.addressDescription}}</td>
         <td>{{row.postalCode}}</td>

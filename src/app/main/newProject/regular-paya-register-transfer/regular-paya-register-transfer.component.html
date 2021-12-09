@@ -55,7 +55,7 @@
             </div>
             <div class="Fs-p-md2  FS-mr3">
                 <p-dropdown class="p-dropdown-w80" placeholder=" در خواست پرداخت" optionValue="value"
-                            optionLabel="label"></p-dropdown>
+                            [autoDisplayFirst]="false"    optionLabel="label"></p-dropdown>
             </div>
             <div class="FS-mr1 Fs-p-md-11-5 FS-mt1">
                 <input class="input-w-80" placeholder="شرح / توضیحات" pInputText/>
@@ -70,7 +70,7 @@
             </div>
             <div class="Fs-p-md2 FS-mr FS-mt1">
                 <p-dropdown placeholder="     فواصل زمانی" optionValue="value"
-                            optionLabel="label" [options]="listDrop"></p-dropdown>
+                            [autoDisplayFirst]="false"   optionLabel="label" [options]="listDrop"></p-dropdown>
             </div>
         </div>
     </p-card>

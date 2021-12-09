@@ -1,10 +1,10 @@
 <p-panel header="اسناد واگذاری" [ngStyle]="{'width':'100%'}">
     <div class="p-d-flex p-flex-wrap">
         <div class="p-md-3">
-            <p-dropdown [editable]="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
         </div>
         <div class="p-md-3">
-            <p-dropdown placeholder="بانک متعهد" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" placeholder="بانک متعهد" optionValue="value" optionLabel="label"></p-dropdown>
 
         </div>
         <div class="p-md-3">
@@ -26,7 +26,7 @@
             <input placeholder="مبلغ" class="input-w-100" pInputText>
         </div>
         <div class="p-md-3">
-            <p-dropdown placeholder="نوع سند" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" placeholder="نوع سند" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
         <div class="p-md-3">
             <input placeholder="صاحب حساب سند" class="input-w-100" pInputText>

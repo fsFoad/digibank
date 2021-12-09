@@ -8,7 +8,7 @@
         </div>
         <div class=" p-md-3">
             <p-dropdown class="p-dropdown-w80" placeholder="نوع قبض" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"       optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-3 ">
             <input class="input-w-100" placeholder="مبلغ قبض" pInputText disabled>
@@ -18,10 +18,10 @@
         </div>
         <div class=" p-md-3">
             <p-dropdown class="p-dropdown-w80" placeholder="سرفصل حسابداری" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"  optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-3">
-            <p-dropdown [editable]="true" class="p-dropdown-w80" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
+            <p-dropdown [editable]="true" [autoDisplayFirst]="false" class="p-dropdown-w80" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
         </div>
         <div class=" p-md-3 ">
             <input class="input-w-100" placeholder="شرح / توضیحات" pInputText disabled>

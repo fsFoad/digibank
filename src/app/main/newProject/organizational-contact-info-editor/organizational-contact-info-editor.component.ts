@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-organizational-contact-info-editor',
@@ -6,30 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./organizational-contact-info-editor.component.scss']
 })
 export class OrganizationalContactInfoEditorComponent implements OnInit {
-  contactTypeGroups = [
-    { name: 'نشانی' },
-    { name: 'تلفن ثابت' },
-    { name: 'تلفن همراه' },
-    { name: 'دورنگار' },
-    { name: 'پست الکترونیک' },
-    { name: 'صندوق پستی' },
-    { name: 'آدرس وب سایت' },
-  ];
-  contactTypes = [
-    { name: 'محل کار' },
-    { name: 'محل سکونت' },
-  ];
+  contactTypeGroups =Constants.contactTypeGroups;
+  contactTypes =Constants.contactTypes;
+  nahveTasarofs = Constants.nahveTasarofs;
 
-  addressTypes = [
-    { name: 'محل کار' },
-    { name: 'محل سکونت' },
-  ];
 
-  nahveTasarofs = [
-    { name: 'ملکی' },
-    { name: 'استیجاری' },
-    { name: 'وقفی' },
-  ];
 
   table1Rows = [
     {

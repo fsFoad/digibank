@@ -8,7 +8,7 @@
         </div>
         <div class="p-md-3">
             <p-dropdown class="p-dropdown-w80" placeholder="واحد مربوطه" optionValue="value"
-                        optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"     optionLabel="label"></p-dropdown>
         </div>
         <div class="p-md-3">
             <p-dropdown class="p-dropdown-w80" placeholder="سر فصل درآمدی" optionValue="value"
@@ -42,7 +42,7 @@
 
         <div class="p-md-3">
             <p-dropdown class="p-dropdown-w80" placeholder="نوع الگوریتم" optionValue="value"
-                        [options]="listDrop2"    optionLabel="label"></p-dropdown>
+                        [autoDisplayFirst]="false"     [options]="listDrop2"    optionLabel="label"></p-dropdown>
         </div>
         <div class="p-col-4">
             <p-fileUpload   mode="basic"

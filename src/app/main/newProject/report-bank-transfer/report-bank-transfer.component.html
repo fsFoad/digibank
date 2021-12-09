@@ -9,13 +9,13 @@
                                 class="app-persian-calendar-style" ></p-persian-calendar>
         </div>
     <div class="p-field p-col-3">
-            <p-dropdown [editable]="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
         </div>
     <div class="p-field p-col-3">
-            <p-dropdown [options]="HavaleInternetiStatus"  class="p-dropdown-w100" placeholder="وضعیت حواله"  ></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [options]="HavaleInternetiStatus"  class="p-dropdown-w100" placeholder="وضعیت حواله"  ></p-dropdown>
         </div>
     <div class="p-field p-col-3">
-            <p-dropdown [options]="referralType" class="p-dropdown-w100" placeholder="نوع حواله" optionValue="value"
+            <p-dropdown  [autoDisplayFirst]="false" [options]="referralType" class="p-dropdown-w100" placeholder="نوع حواله" optionValue="value"
                         optionLabel="label"></p-dropdown>
         </div>
         <br>

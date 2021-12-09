@@ -1,16 +1,16 @@
 <p-panel header="گزارش واریز" [ngStyle]="{'width':'100%'}">
     <div class="p-d-flex p-flex-wrap">
         <div class=" p-md-2 FS-mr">
-            <p-dropdown placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr">
-            <p-dropdown placeholder="سرفصل در آمدی" optionValue="value" optionLabel="label"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" placeholder="سرفصل در آمدی" optionValue="value" optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr">
             <input placeholder="کد تراکنشی یکتا" class="input-w-100" pInputText    >
         </div>
         <div class=" p-md-2 FS-mr">
-            <p-dropdown [editable]="true" placeholder="شماره حساب" [options]="acItems"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder="شماره حساب" [options]="acItems"></p-dropdown>
         </div>
         <div class=" p-md-2 FS-mr">
             <input placeholder="مبلغ" class="input-w-100" pInputText    >

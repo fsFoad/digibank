@@ -23,7 +23,7 @@
         </div>
       <div class="p-field p-col">
         <!--      <span class="p-float-label">-->
-        <p-dropdown [options]="genderTypes" formControlName="genderId" placeholder="جنسیت"></p-dropdown>
+        <p-dropdown [options]="genderTypes" [autoDisplayFirst]="false" formControlName="genderId" placeholder="جنسیت"></p-dropdown>
         <!--        <label>جنسیت</label>-->
         <!--      </span>-->
       </div>
@@ -32,7 +32,7 @@
             <!--        <p-dropdown [options]="banks" optionLabel="name" [autoDisplayFirst]="false"></p-dropdown>-->
             <!--        <label>بانک</label>-->
             <!--      </span>-->
-            <p-dropdown class="p-dropdown-w80" formControlName="bankId" placeholder="بانک" [autoDisplayFirst]="false" [options]="banks" ></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" class="p-dropdown-w80" formControlName="bankId" placeholder="بانک" [autoDisplayFirst]="false" [options]="banks" ></p-dropdown>
         </div>
     </div>
 
@@ -111,19 +111,19 @@
         </div>
         <div class="p-field p-col">
             <!--      <span class="p-float-label">-->
-            <p-dropdown formControlName="shenasnameTypeId" placeholder="نوع شناسنامه" [options]="shenasnameType"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameTypeId" placeholder="نوع شناسنامه"  [options]="shenasnameType"></p-dropdown>
             <!--        <label>نوع شناسنامه</label>-->
             <!--      </span>-->
         </div>
         <div class="p-field p-col">
             <!--      <span class="p-float-label">-->
-            <p-dropdown [options]="cityList" formControlName="shenasnameIssueCityId" placeholder="شهر محل صدور شناسنامه"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="shenasnameIssueCityId" placeholder="شهر محل صدور شناسنامه"></p-dropdown>
             <!--        <label>شهر محل صدور شناسنامه</label>-->
             <!--      </span>-->
         </div>
         <div class="p-field p-col">
             <!--      <span class="p-float-label">-->
-            <p-dropdown formControlName="shenasnameHozeCodeId" [options]="codeHoze" placeholder="کد حوزه شناسنامه"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameHozeCodeId" [options]="codeHoze" placeholder="کد حوزه شناسنامه"></p-dropdown>
             <!--        <label>کد حوزه شناسنامه</label>-->
             <!--      </span>-->
         </div>
@@ -147,13 +147,13 @@
       </div>
         <div class="p-field p-col">
             <!--      <span class="p-float-label">-->
-            <p-dropdown [options]="cityList" formControlName="birthCityId" placeholder="شهر محل تولد"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="birthCityId" placeholder="شهر محل تولد"></p-dropdown>
             <!--        <label>شهر محل تولد</label>-->
             <!--      </span>-->
         </div>
         <div class="p-field p-col">
             <!--      <span class="p-float-label">-->
-            <p-dropdown [options]="countryList" formControlName="birthCountryId" placeholder="کشور محل تولد"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [options]="countryList" formControlName="birthCountryId" placeholder="کشور محل تولد"></p-dropdown>
             <!--        <label>کشور محل تولد</label>-->
             <!--      </span>-->
         </div>
@@ -162,19 +162,19 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
         <div class="p-field p-col-3">
             <!--      <span class="p-float-label">-->
-            <p-dropdown [options]="religion" formControlName="religionId" placeholder="دین"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [options]="religion" formControlName="religionId" placeholder="دین"></p-dropdown>
             <!--        <label>دین</label>-->
             <!--      </span>-->
         </div>
         <div class="p-field p-col-3">
             <!--      <span class="p-float-label">-->
-            <p-dropdown [options]="sect" formControlName="faithId" placeholder="مذهب"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [options]="sect" formControlName="faithId" placeholder="مذهب"></p-dropdown>
             <!--        <label>مذهب</label>-->
             <!--      </span>-->
         </div>
         <div class="p-field p-col-3">
             <!--      <span class="p-float-label">-->
-            <p-dropdown [options]="residenceTypes" formControlName="eghamatStatusId" placeholder="وضعیت اقامت"></p-dropdown>
+            <p-dropdown [autoDisplayFirst]="false" [options]="residenceTypes" formControlName="eghamatStatusId" placeholder="وضعیت اقامت"></p-dropdown>
             <!--        <label>وضعیت اقامت</label>-->
             <!--      </span>-->
         </div>
