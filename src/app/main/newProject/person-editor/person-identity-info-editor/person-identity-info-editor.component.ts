@@ -14,12 +14,14 @@ export class PersonIdentityInfoEditorComponent implements OnInit {
   religion = Constants.religion;
   sect = Constants.sect;
   residenceTypes = Constants.residenceTypes;
-  banks = [
-    { name: '-' },
-    { name: 'ملت' },
-    { name: 'پارسیان' },
-    { name: 'زیر عنوان' },
-  ]
+    banks = [
+      { value:'0',label: '-' },
+      { value:'1',label: 'تجارت' },
+      { value:'2',label: 'ملت' },
+      { value:'3',label: 'پارسیان' },
+      { value:'4',label: 'سینا' },
+    ]
+
   public form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
