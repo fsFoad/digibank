@@ -21,9 +21,9 @@ export class UpdatePersonSupplementaryInfoEditorComponent implements OnInit {
   public form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      nationalCode: [''],
-      erjaCode: [''],
-      title: [''],
+      // nationalCode: [''],
+      // erjaCode: [''],
+      // title: [''],
       eduMaghta: [''],
       eduReshte: [''],
       eduGraesh: [''],
@@ -45,8 +45,8 @@ export class UpdatePersonSupplementaryInfoEditorComponent implements OnInit {
     });
   }
   ngOnInit(): void {
-    this.form.controls['nationalCode'].patchValue(this.inputIdentity.nationalCode)
-    this.form.controls['erjaCode'].patchValue(this.inputIdentity.erjaCode)
+    // this.form.controls['nationalCode'].patchValue(this.inputIdentity.nationalCode)
+    // this.form.controls['erjaCode'].patchValue(this.inputIdentity.erjaCode)
     this.form.controls['eduMaghta'].patchValue(this.inputIdentity.eduMaghta)
     this.form.controls['eduReshte'].patchValue(this.inputIdentity.eduReshte)
     debugger
