@@ -64,7 +64,7 @@ export class AccountTreeComponent implements OnInit, OnDestroy {
   onNodeSelect(e: TreeNodeSelectEvent<AccData>): void {
     // this.selectedNode = e.node;
     if (!e.node.data) {
-      e.node.data = createDefaultData();
+      e.node.data = { ...createDefaultData(), title: e.node.label };
     }
     this.form.setValue(e.node.data);
   }
