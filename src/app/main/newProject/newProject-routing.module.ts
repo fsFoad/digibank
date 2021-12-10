@@ -77,6 +77,7 @@ import { LoginComponent } from 'app/auth/login/login.component';
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
 import {UpdatePersonalComponent} from './update-personal/update-personal.component';
+import { AccountTreeComponent } from './account-tree/account-tree.component';
 
 
 const routes: Routes = [
@@ -372,6 +373,10 @@ const routes: Routes = [
       {
         path: 'updatePersonal',
         component: UpdatePersonalComponent,
+      },
+      {
+        path: 'accountTree',
+        component: AccountTreeComponent,
       },
 
       // add new components above
