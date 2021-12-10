@@ -72,8 +72,7 @@
       </div>
     </div>
     <p-card header="فهرست تائید کنندگان">
-      <p-table [value]="approversRows" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-        currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+      <p-table [value]="approversRows" >
         <ng-template pTemplate="header">
           <tr>
             <th translate>ردیف</th>
