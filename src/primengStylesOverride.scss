@@ -1,121 +1,146 @@
-a, span,label,div,input,textarea{
-    font-size: 14px;
+a,
+span,
+label,
+div,
+input,
+textarea {
+  font-size: 14px;
 }
 
 //input,textarea,amount-box,p-inputNumber {
 //    min-width: 80%;
 //    max-width: 100%;
 //}
-input.input-w-100{
-    width: 100%;
-}
-input.input-w-20{
-    width: 20%;
-}
-input.input-w-80{
-    width: 80%;
-}
-input.input-w-92{
-    width: 92%;
-}
-input.input-w-95{
-    width: 95%;
-}
-input.input-w-96{
-    width: 95.5%;
-}
-input.input-w-70{
-    width: 70%;
-}
-input.input-w-65{
-    width: 65%;
-}
-input.input-w-85{
-    width: 80%;
-}
-input.input-w-40{
-    width: 40%;
-}
-amount-box.amount-box-100w{
+input.input-w-100 {
   width: 100%;
 }
-p-persian-calendar.p-persian-calendar-w-80{
-    width: 80%;
-}
-p-persian-calendar.p-persian-calendar-w-100{
-    width: 100%;
-}
-p-dropdown.p-dropdown.p-dropdown-w80#drop80{
-    width: 80%;
-}
-p-dropdown.p-dropdown.p-dropdown-w-100{
-    width: 100%;
+
+input.input-w-20 {
+  width: 20%;
 }
 
-div.p-dropdown-panel.p-component{
-    right: 0 ;
+input.input-w-80 {
+  width: 80%;
 }
+
+input.input-w-92 {
+  width: 92%;
+}
+
+input.input-w-95 {
+  width: 95%;
+}
+
+input.input-w-96 {
+  width: 95.5%;
+}
+
+input.input-w-70 {
+  width: 70%;
+}
+
+input.input-w-65 {
+  width: 65%;
+}
+
+input.input-w-85 {
+  width: 80%;
+}
+
+input.input-w-40 {
+  width: 40%;
+}
+
+amount-box.amount-box-100w {
+  width: 100%;
+}
+
+p-persian-calendar.p-persian-calendar-w-80 {
+  width: 80%;
+}
+
+p-persian-calendar.p-persian-calendar-w-100 {
+  width: 100%;
+}
+
+p-dropdown.p-dropdown.p-dropdown-w80#drop80 {
+  width: 80%;
+}
+
+p-dropdown.p-dropdown.p-dropdown-w-100 {
+  width: 100%;
+}
+
+div.p-dropdown-panel.p-component {
+  right: 0;
+}
+
 .p-dropdown {
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.38);
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-    border-radius: 4px;
-    min-width: 100%;
-    max-width: 100%;
-    font-size: 15px;
-}
-.p-dropdown-panel{
-    right:0 !important;
-}
-.p-dropdown .p-dropdown-label {
-    background: transparent;
-    border: 0 none;
-    font-size: 15px;
-}
-.p-datatable .p-datatable-thead > tr > th {
-    text-align: center !important;
-    padding: 0.75rem 0.75rem;
-    border: 1px solid #e4e4e4;
-    border-width: 0 0 1px 0;
-    font-weight: 500;
-    color: #e4e4e4;
-    background: #5b8086;
-    transition: none;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.38);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  border-radius: 4px;
+  font-size: 15px;
 }
 
-.p-button.p-button-text.p-button-plain{
-    color: #ffffff;
-    background: #3a6286;
+.p-dropdown-panel {
+  right: 0 !important;
+}
+
+.p-dropdown .p-dropdown-label {
+  background: transparent;
+  border: 0 none;
+  font-size: 15px;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+  text-align: center !important;
+  padding: 0.75rem 0.75rem;
+  border: 1px solid #e4e4e4;
+  border-width: 0 0 1px 0;
+  font-weight: 500;
+  color: #e4e4e4;
+  background: #5b8086;
+  transition: none;
+}
+
+.p-button.p-button-text.p-button-plain {
+  color: #ffffff;
+  background: #3a6286;
 }
 
 .p-panel .p-panel-header {
-    border: 1px solid #a19f9d;
-    padding: 1rem;
-    background: #67898f;
-    color: #e7e7e0;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
+  border: 1px solid #a19f9d;
+  padding: 1rem;
+  background: #67898f;
+  color: #e7e7e0;
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
 }
 
 .p-inputtext:disabled {
-    background-color: #f3f2f1;
-    border-color: #f3f2f1;
-    color: #34ACFC;
-    opacity: 1;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.p-dropdown.p-disabled .p-dropdown-label, .p-dropdown.p-disabled .p-dropdown-trigger-icon, .p-multiselect.p-disabled .p-dropdown-label, .p-multiselect.p-disabled .p-dropdown-trigger-icon {
-    color: #34ACFC;
+  background-color: #f3f2f1;
+  border-color: #f3f2f1;
+  color: #34acfc;
+  opacity: 1;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-.p-datatable .p-datatable-tbody > tr > td {
-    text-align: center !important;
-    border: 1px solid #e4e4e4;
-    border-width: 0 0 1px 0;
-    padding: 0.75rem 0.75rem;
+.p-dropdown.p-disabled .p-dropdown-label,
+.p-dropdown.p-disabled .p-dropdown-trigger-icon,
+.p-multiselect.p-disabled .p-dropdown-label,
+.p-multiselect.p-disabled .p-dropdown-trigger-icon {
+  color: #34acfc;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+  text-align: center !important;
+  border: 1px solid #e4e4e4;
+  border-width: 0 0 1px 0;
+  padding: 0.75rem 0.75rem;
 }
 
 // why change icon globally to something unrelated?
@@ -123,153 +148,155 @@ div.p-dropdown-panel.p-component{
 // .pi-times:before {
 //     content: "\e935" !important;
 // }
-
 .p-inputtext {
-    font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
-    font-size: 15px !important;
-    color: #000001;
-    background: #ffffff;
-    padding: 0.75rem 0.75rem;
-    border: 1px solid rgba(0, 0, 0, 0.38);
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 4px;
+  font-family: Roboto, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;
+  font-size: 15px !important;
+  color: #000001;
+  background: #ffffff;
+  padding: 0.75rem 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.38);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 4px;
 }
 
 .ui-calendar.ui-calendar-w-btn .ui-inputtext {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: 0 none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-right: 0 none;
 }
 
 .ui-calendar.ui-calendar-w-btn input {
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 
 body.theme-default {
-    .mat-snack-bar-container{
-        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-        color: #ffffff;
-
-        &.panel-snackbar-success{
-            // background-color: #489be5;
-            opacity: 0.8 !important;
-            background: #C8E6C9;
-            border: solid #439446;
-            border-width: 0 6px 0 0;
-            color: #224a23;
-        }
-        &.panel-snackbar-error{
-            // background-color: #f44336;
-            opacity: 0.8 !important;;
-            background: #FFCDD2;
-            border: solid #e60017;
-            border-width: 0 6px 0 0;
-            color: #73000c;
-        }
-        &.panel-snackbar-warning{
-            // background-color: #f44336;
-            opacity: 0.8 !important;;
-            background: #f5d991;
-            border: solid #f6c700;
-            border-width: 0 6px 0 0;
-            color: #181706;
-        }
-
+  .mat-snack-bar-container {
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    color: #ffffff;
+    &.panel-snackbar-success {
+      // background-color: #489be5;
+      opacity: 0.8 !important;
+      background: #c8e6c9;
+      border: solid #439446;
+      border-width: 0 6px 0 0;
+      color: #224a23;
     }
+    &.panel-snackbar-error {
+      // background-color: #f44336;
+      opacity: 0.8 !important;
+      background: #ffcdd2;
+      border: solid #e60017;
+      border-width: 0 6px 0 0;
+      color: #73000c;
+    }
+    &.panel-snackbar-warning {
+      // background-color: #f44336;
+      opacity: 0.8 !important;
+      background: #f5d991;
+      border: solid #f6c700;
+      border-width: 0 6px 0 0;
+      color: #181706;
+    }
+  }
+}
 
+.main-toolbar {
+  background-color: #eee !important;
 }
-.main-toolbar{
-    background-color: #eee !important;
-}
+
 //#0e2e33
-.page-container{
-    padding: 2rem;
+.page-container {
+  padding: 2rem;
 }
 
 //
 //.p-inputtext {
 //    font-family: 'iranyekan', serif !important;
 //}
-
-.p-dropdown-panel{
-    right:0;
-    left: unset !important;
+.p-dropdown-panel {
+  right: 0;
+  left: unset !important;
 }
 
-.p-card{
-    box-shadow: rgba(0, 0, 0, 0.8) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.8) 0px 0.3px 0.9px 0px;
+.p-card {
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 1.6px 3.6px 0px, rgba(0, 0, 0, 0.8) 0px 0.3px 0.9px 0px;
 }
 
-.p-checkbox .p-checkbox-box.p-disabled{
-    background-color: #8cd5d6;
-    border-color: #8cd5d6;
-    color: #8cd5d6;
+.p-checkbox .p-checkbox-box.p-disabled {
+  background-color: #8cd5d6;
+  border-color: #8cd5d6;
+  color: #8cd5d6;
 }
 
-body.theme-default .accent{
-    background-color: #3a6286 !important
+body.theme-default .accent {
+  background-color: #3a6286 !important;
 }
-.btnConfirm{
-    width: 25%;
+
+.btnConfirm {
+  width: 25%;
 }
-.btnClear{
-    width: 25%;
+
+.btnClear {
+  width: 25%;
 }
-.btnGroupCharge{
-    width: 40%;
+
+.btnGroupCharge {
+  width: 40%;
 }
-.btnClearSearch{
-    margin-right: 3%;
-    width: 60%;
+
+.btnClearSearch {
+  margin-right: 3%;
+  width: 60%;
 }
-.btnSearch{
-    width: 30%;
+
+.btnSearch {
+  width: 30%;
 }
-#btnExcel{
-    width: 10%;
+
+#btnExcel {
+  width: 10%;
 }
+
 #operationColumn {
-    width: 20%;
+  width: 20%;
 }
 
 .p-menubar .p-submenu-list {
-    display: none;
-    position: absolute;
-    z-index: 1000 !important;
+  display: none;
+  position: absolute;
+  z-index: 1000 !important;
 }
 
 .p-component {
-    font-family: 'iranyekan',-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1rem;
-    font-weight: normal;
-
+  font-family: "iranyekan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: normal;
 }
 
 .p-menubar .p-menuitem {
-    position: relative;
-    direction: rtl;
-    background-color: #1f3f43;
-
-}
-.p-menubar .p-menuitem:hover{
-    background-color: #37666c;
+  position: relative;
+  direction: rtl;
+  background-color: #1f3f43;
 }
 
-.p-menubar .p-submenu-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
-    display: block;
-    left: -100% !important;
-    top: 0;
-    background-color: #1f3f43;
+.p-menubar .p-menuitem:hover {
+  background-color: #37666c;
+}
 
+.p-menubar .p-submenu-list>.p-menuitem-active>p-menubarsub>.p-submenu-list {
+  display: block;
+  left: -100% !important;
+  top: 0;
+  background-color: #1f3f43;
 }
 
 p-menubar .pi-angle-right::before {
   content: "\e931";
-  color: #ECDDCD;
+  color: #ecddcd;
 }
 
 .p-submenu-list .p-submenu-icon {
@@ -285,110 +312,108 @@ p-menubar .pi-angle-right::before {
 // :not(.p-dropdown-trigger-icon):not(.p-divider):not(.p-button-icon)::before{
 //     color: #ECDDCD;
 // }
-p-menubar .pi::before{
-    color: #ECDDCD;
+p-menubar .pi::before {
+  color: #ecddcd;
 }
-.p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
-    margin-left: auto;
-    margin-right: auto;
 
+.p-menubar .p-submenu-list .p-menuitem-link .p-submenu-icon {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // fix incorrect margin in rtl context
 .p-button .p-button-icon-right {
-	margin-inline-start: 0.5rem;
-	margin-inline-end: 0rem;
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0rem;
 }
 
 // fix incorrect margin in rtl context
 .p-button .p-button-icon-left {
-	margin-inline-start: 0rem;
-	margin-inline-end: 0.5rem;
+  margin-inline-start: 0rem;
+  margin-inline-end: 0.5rem;
 }
 
-
 // shs
-
 .p-paginator-icon {
-    transform: rotate(180deg);
-    &::before {
-        color: black !important;
-    }
+  transform: rotate(180deg);
+  &::before {
+    color: black !important;
+  }
 }
 
 .p-radiobutton-label {
-    margin-inline-start: .5rem;
-    margin-inline-end: 0rem;
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0rem;
 }
 
 .p-checkbox-label {
-	margin-inline-start: .5rem;
-    margin-inline-end: 0rem;
+  margin-inline-start: 0.5rem;
+  margin-inline-end: 0rem;
 }
 
-.p-float-label input:focus ~ label,
-.p-float-label input.p-filled ~ label,
-.p-float-label textarea:focus ~ label,
-.p-float-label textarea.p-filled ~ label,
-.p-float-label .p-inputwrapper-focus ~ label,
-.p-float-label .ui-inputwrapper-focus ~ label, // p-persian-calendar
-.p-float-label .ui-inputwrapper-filled ~ label, // p-persian-calendar
-.p-float-label .p-inputwrapper-filled ~ label {
-    top: 0rem;
-    background-color: white;
-    padding: 0 .3rem;
+.p-float-label input:focus~label,
+.p-float-label input.p-filled~label,
+.p-float-label textarea:focus~label,
+.p-float-label textarea.p-filled~label,
+.p-float-label .p-inputwrapper-focus~label,
+.p-float-label .ui-inputwrapper-focus~label, // p-persian-calendar
+.p-float-label .ui-inputwrapper-filled~label, // p-persian-calendar
+.p-float-label .p-inputwrapper-filled~label {
+  top: 0rem;
+  background-color: white;
+  padding: 0 0.3rem;
 }
 
-.p-float-label .ui-inputwrapper-focus ~ label, // p-persian-calendar
-.p-float-label .ui-inputwrapper-filled ~ label { // p-persian-calendar
-    font-size: 12px;
+.p-float-label .ui-inputwrapper-focus~label, // p-persian-calendar
+.p-float-label .ui-inputwrapper-filled~label {
+  // p-persian-calendar
+  font-size: 12px;
 }
 
 p-persian-calendar.app-persian-calendar-style {
-    .ui-datepicker-buttonbar .p-button {
-        border-radius: 4px;
-        width: auto;
+  .ui-datepicker-buttonbar .p-button {
+    border-radius: 4px;
+    width: auto;
+  }
+  &>.ui-calendar {
+    display: flex !important;
+    &>input {
+      border-radius: 0 4px 4px 0 !important;
     }
-    & > .ui-calendar {
-        display: flex !important;
-        & > input {
-            border-radius: 0 4px 4px 0 !important;
-        }
-        & > .p-button {
-            border-radius: 4px 0 0 4px !important;
-            width: 2.357rem;
-        }
-        & > .ui-datepicker {
-            border-radius: 4px;
-            box-shadow: 0px 3px 8px -4px black;
-        }
+    &>.p-button {
+      border-radius: 4px 0 0 4px !important;
+      width: 2.357rem;
     }
-}
-  
-.p-float-label > label {
-    left: revert;
-    right: 0.5rem;
+    &>.ui-datepicker {
+      border-radius: 4px;
+      box-shadow: 0px 3px 8px -4px black;
+    }
+  }
 }
 
+.p-float-label>label {
+  left: revert;
+  right: 0.5rem;
+}
 
 .app-divider-h {
-    .p-divider-content {
-        background: white;
-        padding: 0 .2em;
+  .p-divider-content {
+    background: white;
+    padding: 0 0.2em;
+  }
+  .p-divider {
+    margin: 2em 0 1.5em;
+    &::before {
+      border-color: var(--surface-d);
     }
-    .p-divider {
-        margin: 2em 0 1.5em;
-        &::before {
-            border-color: var(--surface-d);
-        }
-    }
+  }
 }
 
 // add a star to a label immediately after a required input
-input[required] + label::after {
-  content: '*';
+input[required]+label::after {
+  content: "*";
   color: red;
-  margin-inline-start: .22em;
+  margin-inline-start: 0.22em;
 }
 
 .app-mirror-transfer-icons {
@@ -403,155 +428,174 @@ input[required] + label::after {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  & > button {
+  &>button {
     width: auto !important;
-    padding: .5rem 2rem !important;
+    padding: 0.5rem 2rem !important;
   }
 }
 
-.app-child-px-1r > * {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-}
-.app-child-px-2r > * {
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
-}
-.app-child-px-3r > * {
-    padding-left: 3rem !important;
-    padding-right: 3rem !important;
-}
-.app-child-px-4r > * {
-    padding-left: 4rem !important;
-    padding-right: 4rem !important;
-}
-.app-child-px-5r > * {
-    padding-left: 5rem !important;
-    padding-right: 5rem !important;
-}
-.app-child-px-6r > * {
-    padding-left: 6rem !important;
-    padding-right: 6rem !important;
+.app-child-px-1r>* {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
+.app-child-px-2r>* {
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
+}
+
+.app-child-px-3r>* {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+
+.app-child-px-4r>* {
+  padding-left: 4rem !important;
+  padding-right: 4rem !important;
+}
+
+.app-child-px-5r>* {
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
+}
+
+.app-child-px-6r>* {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+}
 
 // set padding-x: 2rem on all p-col* children.
-.app-col-px-2r { 
-    // negative margins are required
-    // to prevent nested class usage to cause indented elements.
-    margin-left: -2rem;
-    margin-right: -2rem;
-    & > [class*=p-col] {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
+.app-col-px-2r {
+  // negative margins are required
+  // to prevent nested class usage to cause indented elements.
+  margin-left: -2rem;
+  margin-right: -2rem;
+  &>[class*="p-col"] {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
 .app-mx-5r {
-    margin-left: 5rem;
-    margin-right: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 
 .app-mx-10r {
-    margin-left: 10rem;
-    margin-right: 10rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
 }
+
 .app-mx-20r {
-    margin-left: 20rem;
-    margin-right: 20rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
+
 .app-mx-30r {
-    margin-left: 30rem;
-    margin-right: 30rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
 }
+
 .app-mx-35r {
   margin-left: 35rem;
   margin-right: 35rem;
 }
+
 .app-mx-40r {
-    margin-left: 40rem;
-    margin-right: 40rem;
+  margin-left: 40rem;
+  margin-right: 40rem;
 }
+
 .app-mx-45r {
   margin-left: 45rem;
   margin-right: 45rem;
 }
+
 .app-mx-49r {
   margin-left: 49rem;
   margin-right: 49rem;
 }
+
 .app-mx-52r {
   margin-left: 52rem;
   margin-right: 52rem;
 }
+
 .app-mx-54r {
   margin-left: 54rem;
   margin-right: 54rem;
 }
+
 .app-flex-grow-1 {
-    flex-grow: 1;
+  flex-grow: 1;
 }
+
 .app-flex-grow-2 {
-    flex-grow: 2;
+  flex-grow: 2;
 }
+
 .app-flex-grow-3 {
-    flex-grow: 3;
+  flex-grow: 3;
 }
+
 .app-flex-grow-4 {
-    flex-grow: 4;
+  flex-grow: 4;
 }
+
 .app-flex-grow-5 {
-    flex-grow: 5;
+  flex-grow: 5;
 }
+
 .app-flex-grow-6 {
-    flex-grow: 6;
+  flex-grow: 6;
 }
 
 .app-gap-1r {
-    gap: 1rem;
+  gap: 1rem;
 }
 
 .app-gap-2r {
-    gap: 2rem;
+  gap: 2rem;
 }
 
 .app-gap-3r {
-    gap: 3rem;
+  gap: 3rem;
 }
 
 .app-gap-4r {
-    gap: 4rem;
+  gap: 4rem;
 }
 
 .app-gap-5r {
-    gap: 5rem;
+  gap: 5rem;
 }
 
 .app-gap-6r {
-    gap: 6rem;
+  gap: 6rem;
 }
 
 // width needs to be set appropriately
 .app-property-value-list {
-    dt, dd {
-        float: inline-start;
-        font-size: 1.4rem;
-        line-height: 1;
-        padding: 0;
-        margin: 0 0 1.25rem;
+  dt,
+  dd {
+    float: inline-start;
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 0;
+    margin: 0 0 1.25rem;
+  }
+  dd {
+    text-align: start;
+  }
+  dt {
+    clear: both;
+    width: 20rem; // set appropriately
+    text-align: end;
+    &::after {
+      content: ":";
+      margin-inline-end: 1rem;
     }
-    dd {
-        text-align: start;
-    }
-    dt {
-        clear: both;
-        width: 20rem; // set appropriately
-        text-align: end;
-        &::after {
-            content: ':';
-            margin-inline-end: 1rem;
-        }
-    }
+  }
 }
 
 .app-theme {
@@ -561,158 +605,178 @@ input[required] + label::after {
   --app-primary-border: hsl(var(--app-primary-color-hs), 25%);
   --app-primary-text-color: #fff;
   --app-focus-shadow: hsl(var(--app-primary-color-hs), 55%);
-  
   .horizontal-menu {
     background-color: var(--app-primary-color);
   }
-  
   .p-menubar {
     .p-menuitem {
       background-color: var(--app-primary-color);
     }
-    .p-menuitem.p-menuitem-active > .p-menuitem-link {
+    .p-menuitem.p-menuitem-active>.p-menuitem-link {
       background: var(--app-primary-color);
     }
-    
-    .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text {
+    .p-menuitem.p-menuitem-active>.p-menuitem-link .p-menuitem-text {
       color: var(--app-primary-text-color);
     }
-    
     .p-menuitem-link .p-menuitem-text {
       color: var(--app-primary-text-color);
     }
-    
-    .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+    .p-menubar-root-list>.p-menuitem>.p-menuitem-link .p-menuitem-text {
       color: var(--app-primary-text-color);
     }
-    
     a:hover {
       background-color: var(--app-hover-background) !important;
     }
-
     a:hover,
     a:active {
       text-decoration: none !important;
     }
-
     .pi::before {
       color: var(--app-primary-text-color) !important;
     }
-
-    .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text,
-    .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+    .p-menubar-root-list>.p-menuitem.p-menuitem-active>.p-menuitem-link .p-menuitem-text,
+    .p-menubar-root-list>.p-menuitem.p-menuitem-active>.p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
       color: var(--app-primary-text-color) !important;
     }
-
-    .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+    .p-menubar-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
       color: var(--app-primary-text-color) !important;
     }
-
-    .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus {
+    .p-menubar-root-list>.p-menuitem>.p-menuitem-link:focus {
       box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
     }
-
     .p-menuitem-link:focus {
       box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
     }
-
-    .p-menuitem.p-menuitem-active > a {
+    .p-menuitem.p-menuitem-active>a {
       background-color: var(--app-hover-background) !important;
     }
   }
-
   .p-inputtext:enabled:focus {
     box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
   }
-  
   .p-panel .p-panel-header {
     background: var(--app-primary-color);
     border: 1px solid var(--app-primary-border);
     color: var(--app-primary-text-color);
   }
-
   .p-button {
     background: var(--app-primary-color);
     border: 1px solid var(--app-primary-border);
     color: var(--app-primary-text-color);
   }
-
   .p-button:enabled:hover {
     color: var(--app-primary-text-color);
   }
-
   .p-fileupload-choose:not(.p-disabled):hover {
     background: var(--app-hover-background);
     border-color: var(--app-primary-border);
     color: var(--app-primary-text-color);
   }
-
   .p-button:focus {
     box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
   }
-
   .p-button.p-button-info:enabled:active,
-  .p-buttonset.p-button-info > .p-button:enabled:active,
-  .p-splitbutton.p-button-info > .p-button:enabled:active {
+  .p-buttonset.p-button-info>.p-button:enabled:active,
+  .p-splitbutton.p-button-info>.p-button:enabled:active {
     color: var(--app-primary-text-color);
   }
-
   .p-button.p-button-info,
-  .p-buttonset.p-button-info > .p-button,
-  .p-splitbutton.p-button-info > .p-button {
+  .p-buttonset.p-button-info>.p-button,
+  .p-splitbutton.p-button-info>.p-button {
     color: var(--app-primary-text-color);
   }
-
   .p-button.p-button-text.p-button-plain {
     background: var(--app-primary-color);
   }
-
   .p-button.p-button-info:enabled:hover,
-  .p-buttonset.p-button-info > .p-button:enabled:hover,
-  .p-splitbutton.p-button-info > .p-button:enabled:hover {
+  .p-buttonset.p-button-info>.p-button:enabled:hover,
+  .p-splitbutton.p-button-info>.p-button:enabled:hover {
     background: var(--app-hover-background);
     border-color: var(--app-primary-border);
     color: var(--app-primary-text-color);
   }
-
   .p-button.p-button-info:enabled:focus,
-  .p-buttonset.p-button-info > .p-button:enabled:focus,
-  .p-splitbutton.p-button-info > .p-button:enabled:focus {
+  .p-buttonset.p-button-info>.p-button:enabled:focus,
+  .p-splitbutton.p-button-info>.p-button:enabled:focus {
     box-shadow: 0 0 0 0.2rem var(--app-focus-shadow);
   }
-
   .p-button:enabled:hover {
     background: var(--app-hover-background);
     border: 1px solid var(--app-primary-border);
   }
-
   .p-button:enabled:active {
     background: var(--app-primary-color);
     border-color: var(--app-primary-border);
   }
-
-  .p-datatable .p-datatable-thead > tr > th {
+  .p-datatable .p-datatable-thead>tr>th {
     background: var(--app-primary-color);
     // border: 1px solid var(--app-primary-border);
     color: var(--app-primary-text-color);
   }
-
   .p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
     background-color: var(--app-primary-color);
   }
-
   .p-checkbox .p-checkbox-box.p-highlight {
     background: var(--app-primary-color);
     border-color: var(--app-primary-border);
   }
-
-  .p-dropdown:not(.p-disabled).p-focus, .p-multiselect:not(.p-disabled).p-focus {
+  .p-dropdown:not(.p-disabled).p-focus,
+  .p-multiselect:not(.p-disabled).p-focus {
     box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
   }
-
   .p-dropdown:not(.p-disabled).p-focus {
     border-color: var(--app-primary-border);
   }
-
 }
 
+// tree flip icon from right to left
+.p-tree-toggler-icon.pi-chevron-right::before {
+  content: "\e900";
+}
+
+// tree: rtl padding for children
+.p-tree .p-treenode-children {
+  padding: 0 1rem 0 0;
+}
+
+// tree icon margin
+.p-tree .p-tree-container .p-treenode .p-treenode-content .p-tree-toggler {
+  margin-inline-start: 0;
+  margin-inline-end: 0.5rem;
+}
+
+p-dropdown {
+  display: inline-flex;
+}
+
+.p-dropdown.p-component {
+  flex: 1;
+}
+
+p-tree {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+}
+
+.p-tree.p-component {
+  flex: 1;
+}
+
+// limit max height to the height specified for the component
+.p-tree.p-component {
+  max-height: 100%;
+  overflow: auto;
+}
+
+.p-contextmenu .p-menuitem-link .p-menuitem-icon {
+  margin-inline-start: 0;
+  margin-inline-end: 0.5rem;
+}
+
+.p-contextmenu .p-menuitem.p-menuitem-active>.p-menuitem-link {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none !important;
+  }
+}
