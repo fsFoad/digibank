@@ -10,8 +10,8 @@
             <input placeholder="متعلق به حساب" dir="rtl" disabled pInputText>
         </div>
         <div class="FS-mr2 p-md-2 ">
-            <amount-box class="input-w-80" placeholder="مبلغ">
-            </amount-box>
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" placeholder="مبلغ"></p-inputNumber>
+
         </div>
         <br>
     </div>

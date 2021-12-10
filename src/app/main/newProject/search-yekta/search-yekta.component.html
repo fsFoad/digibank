@@ -6,7 +6,8 @@
             <input placeholder="شماره حساب" class="input-w-100" pInputText disabled>
         </div>
         <div class=" p-md-2 FS-mr">
-            <input placeholder="مبلغ" class="input-w-100" pInputText disabled>
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                         [minFractionDigits]="0" placeholder="مبلغ" [disabled]="true"></p-inputNumber>
         </div>
         <div class=" p-md-2 FS-mr">
             <input placeholder="تاریخ ایجاد" class="input-w-100" pInputText disabled>

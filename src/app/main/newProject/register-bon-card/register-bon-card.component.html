@@ -14,7 +14,8 @@
         </div>
 
         <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="مبلغ شارژ اولیه" pInputText>
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                         [minFractionDigits]="0" placeholder="مبلغ شارژ اولیه"></p-inputNumber>
 
         </div>
 

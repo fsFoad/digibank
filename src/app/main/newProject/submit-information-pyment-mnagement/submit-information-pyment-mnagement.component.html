@@ -53,7 +53,8 @@
     </div>
     <div class="p-fluid p-formgrid p-grid app-mx-10r">
       <div class="p-field p-col">
-        <input placeholder="مبلغ قابل پرداخت" class="input-w-100" pInputText>
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0" placeholder="مبلغ قابل پرداخت"></p-inputNumber>
       </div>
       <div class="p-field p-col">
         <p-persian-calendar placeholder="تاریخ شروع پرداخت" yearRange="1300:1410"

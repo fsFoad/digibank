@@ -15,7 +15,9 @@
             <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder="شماره حساب متصل"  [options]="acItems"></p-dropdown>
         </div>
         <div class=" p-md-3 FS-mr">
-            <input placeholder="مبلغ شارژ" class="input-w-96" pInputText>
+
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                         [minFractionDigits]="0" placeholder="مبلغ شارژ"></p-inputNumber>
         </div>
         <div class=" p-md-3 FS-mr">
             <input class="input-w-100" placeholder="شرح تراکنش / توضیحات" pInputText/>
