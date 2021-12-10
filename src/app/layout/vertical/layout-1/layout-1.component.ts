@@ -936,11 +936,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 routerLink: '//reportStatusWallet',
               },
               {
-                id: 'billsBonCard',
+                id: 'BillingBonCard',
                 label: 'اطلاعات تراکنش بن کارت',
                 translate: 'اطلاعات تراکنش بن کارت',
                 type: 'item',
-                routerLink: '/billsBonCard',
+                routerLink: '/BillingBonCard',
               },
               {
                 id: 'walletBuy',

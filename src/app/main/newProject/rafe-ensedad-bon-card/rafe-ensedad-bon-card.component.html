@@ -24,7 +24,11 @@
     </div>
     <div class="p-col-12">
         <br>
-        <button id="btnUnblocking" class="p-button-info" pButton label="رفع انسداد"></button>&nbsp;
-        <button id="btnUnblockingAll" class="p-button-info" pButton label="ابطال کلیه انسداد های کارت انتخابی"></button>&nbsp;
+        <button id="btnUnblocking" class="p-button-info" pButton label="رفع انسداد" (click)="confirmDlg.visible = true"
+        ></button>&nbsp;
+        <button id="btnUnblockingAll" class="p-button-info" pButton label="ابطال کلیه انسداد های کارت انتخابی"
+                (click)="confirmDlg.visible = true"></button>&nbsp;
     </div>
 </p-panel>
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>

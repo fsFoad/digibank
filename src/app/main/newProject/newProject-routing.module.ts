@@ -149,7 +149,7 @@ const routes: Routes = [
         component: BillComponent,
       },
       {
-        path: 'billsBonCard',
+        path: 'BillingBonCard',
         component: BillingBonCardComponent,
       },
       {

@@ -9,70 +9,70 @@ import { Constants } from 'app/main/shared/constants/Constants';
 export class WalletTransactionComponent implements OnInit {
     tableFlag = false;
     fsList: {
-        accountNumber: number, history: string, branchName: string,
+        accountNumber: string, history: string, branchName: string,
         walletId: string, transactionType: string, transactionDes: string, docNumber: string,
         remaining: string, amount: string
     }[] = [
         {
-            'accountNumber': 1574655249, 'history': '1400/05/01',
-            branchName: '', 'walletId': '3223345',
+            'accountNumber': '240-1000000589-25', 'history': '1400/03/01',
+            branchName: '', 'walletId': '32233345',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1001',
-            'remaining': ' 0', 'amount': '70000000'
+            'remaining': ' 0', 'amount': '20000000'
         },
         {
-            'accountNumber': 7541589521, 'history': '1400/05/01'
+            'accountNumber': '340-1000000145-65', 'history': '1400/04/12'
             , branchName: '', 'walletId': '35454545',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1002',
-            'remaining': '0', 'amount': '70000000'
+            'remaining': '0', 'amount': '50000000'
         },
         {
-            'accountNumber': 7548621548, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '3587545',
+            'accountNumber': '340-1000000189-26', 'history': '1400/05/30'
+            , branchName: '', 'walletId': '35747545',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1003',
-            'remaining': '0', 'amount': '70000000'
+            'remaining': '0', 'amount': '65000000'
         },
         {
-            'accountNumber': 1548254962, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '3587445',
+            'accountNumber': '440-1006580523-01', 'history': '1400/07/28'
+            , branchName: '', 'walletId': '35874145',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1004',
-            'remaining': ' 0', 'amount': '70000000'
+            'remaining': ' 0', 'amount': '89000000'
         },
-        {
-            'accountNumber': 8465215749, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '352345',
-            'transactionType': '', 'transactionDes': ' ', 'docNumber': '1005',
-            'remaining': '0 ', 'amount': '70000000'
-        },
-        {
-            'accountNumber': 3256157895, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '343315',
-            'transactionType': '', 'transactionDes': ' ', 'docNumber': '1006',
-            'remaining': '0 ', 'amount': '70000000'
-        },
-        {
-            'accountNumber': 7416581213, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '345323545',
-            'transactionType': '', 'transactionDes': ' ', 'docNumber': '1007',
-            'remaining': ' 0', 'amount': '70000000'
-        },
-        {
-            'accountNumber': 8742154565, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '34234543',
-            'transactionType': '', 'transactionDes': ' ', 'docNumber': '1008',
-            'remaining': ' 0', 'amount': '70000000'
-        },
-        {
-            'accountNumber': 1525844572, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '32145',
-            'transactionType': '', 'transactionDes': ' ', 'docNumber': '1009',
-            'remaining': ' 0', 'amount': '70000000'
-        },
-        {
-            'accountNumber': 8754788621, 'history': '1400/05/01'
-            , branchName: '', 'walletId': '3545445',
-            'transactionType': '', 'transactionDes': ' ', 'docNumber': '1010',
-            'remaining': '0 ', 'amount': '70000000'
-        },
+        // {
+        //     'accountNumber': 8465215749, 'history': '1400/05/01'
+        //     , branchName: '', 'walletId': '352345',
+        //     'transactionType': '', 'transactionDes': ' ', 'docNumber': '1005',
+        //     'remaining': '0 ', 'amount': '70000000'
+        // },
+        // {
+        //     'accountNumber': 3256157895, 'history': '1400/05/01'
+        //     , branchName: '', 'walletId': '343315',
+        //     'transactionType': '', 'transactionDes': ' ', 'docNumber': '1006',
+        //     'remaining': '0 ', 'amount': '70000000'
+        // },
+        // {
+        //     'accountNumber': 7416581213, 'history': '1400/05/01'
+        //     , branchName: '', 'walletId': '345323545',
+        //     'transactionType': '', 'transactionDes': ' ', 'docNumber': '1007',
+        //     'remaining': ' 0', 'amount': '70000000'
+        // },
+        // {
+        //     'accountNumber': 8742154565, 'history': '1400/05/01'
+        //     , branchName: '', 'walletId': '34234543',
+        //     'transactionType': '', 'transactionDes': ' ', 'docNumber': '1008',
+        //     'remaining': ' 0', 'amount': '70000000'
+        // },
+        // {
+        //     'accountNumber': 1525844572, 'history': '1400/05/01'
+        //     , branchName: '', 'walletId': '32145',
+        //     'transactionType': '', 'transactionDes': ' ', 'docNumber': '1009',
+        //     'remaining': ' 0', 'amount': '70000000'
+        // },
+        // {
+        //     'accountNumber': 8754788621, 'history': '1400/05/01'
+        //     , branchName: '', 'walletId': '3545445',
+        //     'transactionType': '', 'transactionDes': ' ', 'docNumber': '1010',
+        //     'remaining': '0 ', 'amount': '70000000'
+        // },
     ].map((x, i) => ({ ...x, branchName: Constants.branchNames[i] }));
 
     constructor() {
