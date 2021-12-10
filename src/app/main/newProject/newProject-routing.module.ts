@@ -76,8 +76,9 @@ import { LoginGuard } from '../../auth/guard/login.guard';
 import { LoginComponent } from 'app/auth/login/login.component';
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
-import {UpdatePersonalComponent} from './update-personal/update-personal.component';
+import { UpdatePersonalComponent } from './update-personal/update-personal.component';
 import { AccountTreeComponent } from './account-tree/account-tree.component';
+import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
 
 
 const routes: Routes = [
@@ -378,6 +379,11 @@ const routes: Routes = [
         path: 'accountTree',
         component: AccountTreeComponent,
       },
+      {
+        path: 'chartOfFacilitiesReceived',
+        component: ChartOfFacilitiesReceivedComponent,
+      },
+
 
       // add new components above
       {

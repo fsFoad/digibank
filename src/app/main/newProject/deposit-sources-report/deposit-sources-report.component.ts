@@ -4,14 +4,14 @@ import { Constants } from 'app/main/shared/constants/Constants';
 import { AddCommaPipe } from 'app/main/shared/pipes/add-comma.pipe';
 import * as Chart from 'chart.js';
 
-const rlm = '\u200f';
-const lrm = '\u200e';
-const ltre = '\u202a';
-const rtle = '\u202b';
-const popd = '\u202c';
-const nads = '⁮\u206e';
+export const rlm = '\u200f';
+export const lrm = '\u200e';
+export const ltre = '\u202a';
+export const rtle = '\u202b';
+export const popd = '\u202c';
+export const nads = '⁮\u206e';
 
-function faDigits(s: string): string {
+export function faDigits(s: string): string {
   if (!s) {
     return s;
   }
@@ -78,10 +78,15 @@ export class DepositSourcesReportComponent implements OnInit {
     }
   }
   constructor() {
-    Chart.defaults.global.defaultFontFamily = 'iranyekan'
+    setChartFont();
   }
 
   ngOnInit(): void {
   }
 
 }
+
+export  function setChartFont() {
+  Chart.defaults.global.defaultFontFamily = 'iranyekan';
+}
+

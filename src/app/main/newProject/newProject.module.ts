@@ -144,6 +144,8 @@ import { AccountTreeComponent } from './account-tree/account-tree.component';
 import { TreeModule } from 'primeng/tree';
 import { ContextMenuModule } from 'primeng/contextmenu';
 import { ToastModule } from 'primeng/toast';
+import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
+
 @NgModule({
   providers: [
     ConfirmationService,
@@ -255,6 +257,7 @@ import { ToastModule } from 'primeng/toast';
     CreateContactComponent,
     CreateAddressComponent,
     AccountTreeComponent,
+    ChartOfFacilitiesReceivedComponent,
   ],
   imports: [
     CommonModule,
