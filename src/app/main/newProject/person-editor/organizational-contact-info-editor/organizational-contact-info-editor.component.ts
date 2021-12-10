@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import {Constants} from '../../../shared/constants/Constants';
+import {AddressInfo, ContactInfo} from '../../models/DigiBankModel';
 
 @Component({
   selector: 'app-organizational-contact-info-editor',
@@ -10,6 +11,11 @@ export class OrganizationalContactInfoEditorComponent implements OnInit {
   contactTypeGroups =Constants.contactTypeGroups;
   contactTypes =Constants.contactTypes;
   nahveTasarofs = Constants.nahveTasarofs;
+  province = Constants.provinceList;
+  city = Constants.cityList;
+  mantaghe = Constants.mantaghe;
+  TBListContact:ContactInfo[] = [];
+  TBListAddress:AddressInfo[] = [];
   contactAddressInfoFlag=true;
   contactInfoFlag=false
   addressInfoFlag=false
@@ -51,5 +57,12 @@ export class OrganizationalContactInfoEditorComponent implements OnInit {
     this.addressInfoFlag = false;
 
     }
+
+  addItemContact(newItemContact: ContactInfo[]){
+    this.TBListContact.push(...newItemContact);
+  }
+  addItemAddress(newItemAddress: AddressInfo[]){
+    this.TBListAddress.push(...newItemAddress);
+  }
 }
 
