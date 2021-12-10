@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -7,21 +6,8 @@ import {Router} from '@angular/router';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor(private router: Router) {
-
-
+  constructor() {
   }
-    ngOnInit(): void {
+  ngOnInit(): void {
   }
-  openSoratHesab(){
-      this.router.navigate(['/oldBill']);
-}
-  openEnteghal(){
-    this.router.navigate(['/internetRemittanceRegistration']);
-  }
-  openNemodar(){
-    this.router.navigate(['/depositSourcesReport']);
-  }
-
 }

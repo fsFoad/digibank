@@ -635,7 +635,14 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             translate: 'مدیریت اعتبار',
             type: 'collapsable',
             items: []
-          }
+          },
+          {
+            id: 'walletBuy',
+            label: 'نمودار تسهیلات دریافتی',
+            translate: 'نمودار تسهیلات دریافتی',
+            type: 'collapsable',
+            routerLink: 'chartOfFacilitiesReceived',
+          },
         ]
       }, {
         id: 'walletBuy',
@@ -1005,6 +1012,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             label: 'قالب اسناد مالی',
             translate: 'قالب اسناد مالی',
             type: 'item',
+          },
+          {
+            id: 'bills',
+            label: 'درختواره اسناد مالی',
+            translate: 'درختواره اسناد مالی',
+            type: 'item',
+            routerLink: '/accountTree',
           },
           {
             id: 'walletBuy',

@@ -1,0 +1,44 @@
+<p-panel header="درختواره اسناد مالی">
+  <div [formGroup]="form" class="app-mx-5r">
+    <div class="p-d-flex app-gap-1r">
+      <p-contextMenu #contextMenu [model]="contextMenuItems"></p-contextMenu>
+      <p-toast></p-toast>
+      <p-tree [value]="accounts" selectionMode="single" [(selection)]="selectedNode" (onNodeSelect)="onNodeSelect($event)" [contextMenu]="contextMenu" [ngStyle]="{minWidth: '35rem', maxHeight: '38.3rem'}"></p-tree>
+      <div class="p-fluidx p-d-flex p-flex-column app-flex-grow-1">
+        <div class="p-field p-col">
+          <p-dropdown formControlName="type" placeholder="نوع حساب"></p-dropdown>
+        </div>
+        <div class="p-field p-col">
+          <div class="p-d-flex p-ai-center app-gap-1r">
+            <input formControlName="field1" pInputText placeholder="" style="width: 5rem;">
+            <p-dropdown formControlName="parentAccount" placeholder="حساب سرشاخه"></p-dropdown>
+          </div>
+        </div>
+        <div class="p-field p-col">
+          <div class="p-d-flex p-ai-center app-gap-1r">
+            <input formControlName="code" pInputText placeholder="کد">
+            <span>کد حساب: {{ form.value.fullCode }}</span>
+          </div>
+        </div>
+        <div class="p-field p-col">
+          <input formControlName="title" pInputText placeholder="عنوان حساب">
+        </div>
+        <div class="p-field p-col">
+          <input formControlName="title2" pInputText placeholder="عنوان حساب ۲">
+        </div>
+        <div class="p-field p-col">
+          <p-checkbox formControlName="active" [binary]="true" label="وضعیت فعال"></p-checkbox>
+        </div>
+        <div class="p-field p-col p-d-flex app-gap-1r">
+          <span style="margin-bottom: 8px;">
+            ماهیت:
+          </span>
+
+          <p-radioButton name="nature" formControlName="nature" value="debtor" label="بدهکار" [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
+          <p-radioButton name="nature" formControlName="nature" value="creditor" label="بستانکار" [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
+          <p-radioButton name="nature" formControlName="nature" value="not-important" label="مهم نیست" [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
+        </div>
+      </div>
+    </div>
+  </div>
+</p-panel>

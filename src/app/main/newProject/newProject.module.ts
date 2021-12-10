@@ -53,7 +53,7 @@ import { SubmitClearComponent } from './submit-clear/submit-clear.component';
 import { SubmitCheckComponent } from './submit-check/submit-check.component';
 import { UpOrDownloadComponent } from './up-or-download/up-or-download.component';
 import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
-import {InputTextareaModule} from 'primeng/inputtextarea';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
 import { OrganizationalEntityInfoEditorComponent } from './organizational-entity-manager/organizational-entity-info-editor/organizational-entity-info-editor.component';
@@ -129,7 +129,7 @@ import { ChartTestComponent } from './chart-test/chart-test.component';
 import { AccountSummaryCardComponent } from './account-summary-card/account-summary-card.component';
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 import { InternetRemittanceCartableDetailsComponent } from './internet-remittance-cartable-details/internet-remittance-cartable-details.component';
-import { ConfirmationService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
 import { UpdatePersonalComponent } from './update-personal/update-personal.component';
 import { UpdatePersonIdentityInfoEditorComponent } from './update-personal/update-person-identity-info-editor/update-person-identity-info-editor.component';
@@ -140,10 +140,17 @@ import { UpdatePersonSupplementaryInfoEditorComponent } from './update-personal/
 import { UpdateOrganizationalEntityDocumentsEditorComponent } from './update-personal/update-organizational-entity-documents-editor/update-organizational-entity-documents-editor.component';
 import { CreateContactComponent } from './person-editor/organizational-contact-info-editor/create-contact/create-contact.component';
 import { CreateAddressComponent } from './person-editor/organizational-contact-info-editor/create-address/create-address.component';
+import { AccountTreeComponent } from './account-tree/account-tree.component';
+import { TreeModule } from 'primeng/tree';
+import { ContextMenuModule } from 'primeng/contextmenu';
+import { ToastModule } from 'primeng/toast';
+import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
+import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
 
 @NgModule({
   providers: [
     ConfirmationService,
+    MessageService,
   ],
   declarations: [
     ReportBankTransferComponent,
@@ -250,6 +257,9 @@ import { CreateAddressComponent } from './person-editor/organizational-contact-i
     UpdateOrganizationalEntityDocumentsEditorComponent,
     CreateContactComponent,
     CreateAddressComponent,
+    AccountTreeComponent,
+    ChartOfFacilitiesReceivedComponent,
+    ExpendituresAndRevenuesComponent,
   ],
   imports: [
     CommonModule,
@@ -289,6 +299,9 @@ import { CreateAddressComponent } from './person-editor/organizational-contact-i
     PaginatorModule,
     DialogModule,
     ChartModule,
+    TreeModule,
+    ContextMenuModule,
+    ToastModule,
   ],
   exports: [
     ReportBankTransferComponent
