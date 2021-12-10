@@ -1,62 +1,67 @@
 <p-panel header="صدور بن کارت" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
 
-    <div class="p-d-flex p-flex-wrap">
-        <div class=" p-md-3">
+      <div class="p-field p-col">
             <!--                <label>نوع حواله</label><br>-->
             <p-dropdown [autoDisplayFirst]="false" [editable]="true" class="p-dropdown-w80" placeholder="شماره حساب متصل به کارت"  [options]="acItems"></p-dropdown>
         </div>
-        <div class=" p-md-3 ">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="نام نام خانوادگی" pInputText>
         </div>
-        <div class=" p-md-3 ">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="شماره موبایل" pInputText>
 
         </div>
 
-        <div class=" p-md-3 ">
+      <div class="p-field p-col">
           <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
                          [minFractionDigits]="0" placeholder="مبلغ شارژ اولیه"></p-inputNumber>
 
         </div>
-
-        <div class=" p-md-3 ">
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="کد ملی" pInputText>
 
         </div>
-        <div class=" p-md-3 ">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="نام پدر" pInputText>
 
         </div>
-        <div class=" p-md-3 ">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="شماره شناسنامه" pInputText>
 
         </div>
-        <div class=" p-md-3 ">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="تاریخ تولد" pInputText>
 
         </div>
-        <div class=" p-md-3 ">
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="کد شعبه" pInputText>
 
         </div>
-        <div class=" p-md-3 ">
+      <div class="p-field p-col">
             <input class="input-w-100" placeholder="نام شعبه" pInputText>
 
         </div>
-        <div class=" p-md-3">
+      <div class="p-field p-col">
             <!--                <label>نوع حواله</label><br>-->
             <p-dropdown class="p-dropdown-w80" placeholder="نوع خدمات" optionValue="value"
                         [options]="listDrop" [autoDisplayFirst]="false"
                         optionLabel="label"></p-dropdown>
         </div>
-
+      <div class="p-field p-col"></div>
 
     </div>
-
+  </div>
     <div class="p-col-12">
         <br>
         <button id="btnRegister" class="p-button-info" pButton label="صدور"></button>&nbsp;
         <button id="btnCertificationBonCard" class="p-button-info" pButton label="انصراف"></button>&nbsp;
 
     </div>
+
 </p-panel>
