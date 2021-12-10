@@ -8,6 +8,8 @@ interface AccData {
   type?: string;
   field1?: string;
   parentAccount?: string;
+  parentCodeStr: string;
+  fullCode: string;
   code?: string;
   title?: string;
   title2?: string;
@@ -40,7 +42,9 @@ export class AccountTreeComponent implements OnInit, OnDestroy {
       type: [''],
       field1: [''],
       parentAccount: [''],
-      code: [''],
+      parentCodeStr: [''],
+      fullCode: [''],
+      code: ['0'],
       title: [''],
       title2: [''],
       active: [false],
@@ -52,6 +56,10 @@ export class AccountTreeComponent implements OnInit, OnDestroy {
     this.form.valueChanges.pipe(takeUntil(this.ngDestroy$)).subscribe(value => {
       if (this.selectedNode) {
         this.selectedNode.data = value;
+        updateDynamicProperties(this.selectedNode);
+        this.form.patchValue({
+          fullCode: this.selectedNode.data.fullCode,
+        }, { emitEvent: false, });
       }
     });
   }
@@ -62,23 +70,45 @@ export class AccountTreeComponent implements OnInit, OnDestroy {
   }
 
   onNodeSelect(e: TreeNodeSelectEvent<AccData>): void {
-    // this.selectedNode = e.node;
-    if (!e.node.data) {
-      e.node.data = { ...createDefaultData(), title: e.node.label };
-    }
     this.form.setValue(e.node.data);
   }
 
   addNode(e: any): void {
-    console.log('addNode', e);
-    const newNode = {
-      label: 'new node',
-      data: createDefaultData(),
-    };
-    this.selectedNode.children = [...(this.selectedNode.children || []), newNode];
-    this.selectedNode.expanded = true;
+    const parent = this.selectedNode;
+    const newNode = createNode('0', 'جدید', parent);
+    parent.children = [...(parent.children || []), newNode];
+    parent.expanded = true;
     this.selectedNode = newNode;
+    this.form.setValue(newNode.data);
   }
+}
+
+function updateDynamicProperties(node: TreeNode<AccData>): void {
+  const parentData = node.parent?.data;
+  node.data.fullCode = filterJoin([parentData?.fullCode, node.data.code], '');
+  node.label = filterJoin([node.data.fullCode, node.data?.title], ' - ');
+  for (const child of (node.children || [])) {
+    updateDynamicProperties(child);
+  }
+}
+
+function filterJoin(items: any[], separator?: string, filter?: (x: any) => boolean): string {
+  if (filter) {
+    return items.filter(filter).join(separator);
+  } else {
+    return items.filter(x => x).join(separator);
+  }
+}
+
+
+function createNode(code: string, title: string, parent?: TreeNode<AccData>): TreeNode<AccData> {
+  const parentCodeStr = filterJoin([parent?.data?.parentCodeStr, parent?.data?.code], '');
+  const node: TreeNode<AccData> = {
+    parent,
+    data: { ...createDefaultData(), code, title, parentCodeStr, },
+  };
+  node.label = filterJoin([filterJoin([parentCodeStr, code], ''), title], ' - ');
+  return node;
 }
 
 function createDefaultData(): AccData {
@@ -86,6 +116,8 @@ function createDefaultData(): AccData {
     type: '',
     field1: '',
     parentAccount: '',
+    parentCodeStr: '',
+    fullCode: '',
     code: '',
     title: '',
     title2: '',
@@ -95,32 +127,25 @@ function createDefaultData(): AccData {
 }
 
 function createSampleAccounts(): TreeNode<AccData>[] {
-  return [
-    {
-      label: 'حسابها',
-      expanded: true,
-      children: [
-        '۱۱ - دارایی‌های جاری',
-        '۱۲ - دارایی‌های غیر جاری',
-        '۲۱ - بدهی‌های جاری',
-        '۲۲ - بدهی‌های غیر جاری',
-        '۳۱ - حقوق صاحبان سهام',
-        '۴۱ - فروش و درآمدها',
-        '۵۱ - بهای تمام شده کالای فروش رفته',
-        '۶۱ - هزینه‌های فعالیت',
-        '۶۲ - سایر هزینه‌ها و درآمدهای غیر عملیاتی',
-        '۹۱ - حساب‌های انتظامی',
-      ].map(x => (
-        {
-          label: x,
-          children: [
-            {
-              label: 'آزمایشی',
-            }
-          ]
-        }
-      ))
-    }
-  ];
+  const root = createNode('', 'حسابها');
+  root.expanded = true;
+  root.children =
+    [
+      ['11', 'دارایی‌های جاری'],
+      ['12', 'دارایی‌های غیر جاری'],
+      ['21', 'بدهی‌های جاری'],
+      ['22', 'بدهی‌های غیر جاری'],
+      ['31', 'حقوق صاحبان سهام'],
+      ['41', 'فروش و درآمدها'],
+      ['51', 'بهای تمام شده کالای فروش رفته'],
+      ['61', 'هزینه‌های فعالیت'],
+      ['62', 'سایر هزینه‌ها و درآمدهای غیر عملیاتی'],
+      ['91', 'حساب‌های انتظامی'],
+    ].map(x => {
+      const node = createNode(x[0], x[1], root);
+      node.children = [createNode('0', 'آزمایشی', node)];
+      return node;
+    });
+  return [root];
 }
 
