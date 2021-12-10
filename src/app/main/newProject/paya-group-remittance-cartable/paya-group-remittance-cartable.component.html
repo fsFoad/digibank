@@ -1,7 +1,6 @@
 <p-panel header="کارتابل حواله گروهی پایا" *ngIf="!showDetailsComponent">
   <p-card *ngIf="showTable" class="p-d-flex p-my-5">
-    <p-table [value]="tableData" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-      currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+    <p-table [value]="tableData">
       <ng-template pTemplate="header">
         <tr>
           <th translate>ردیف</th>

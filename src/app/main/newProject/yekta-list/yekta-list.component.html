@@ -13,7 +13,8 @@
             <input placeholder="شماره حساب" class="input-w-100" pInputText>
         </div>
         <div class=" p-md-3 ">
-            <input placeholder="مبلغ" class="input-w-100" pInputText>
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                         [minFractionDigits]="0" placeholder="مبلغ"></p-inputNumber>
         </div>
         <div class=" p-md-3 ">
             <p-dropdown class="p-dropdown-w80" placeholder="نوع الگوریتم" optionValue="value"

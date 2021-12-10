@@ -12,7 +12,8 @@
                         [autoDisplayFirst]="false"    optionLabel="label"></p-dropdown>
         </div>
         <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="مبلغ حواله" pInputText>
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                         [minFractionDigits]="0" placeholder="مبلغ حواله"></p-inputNumber>
         </div>
     </div>
     <br>

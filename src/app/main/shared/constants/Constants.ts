@@ -252,7 +252,7 @@ export class Constants {
     { label: 'صندوق پستی', value: '6' },
     { label: 'آدرس وب سایت', value: '7' },
   ];
-  static Mantaghe = [
+  static mantaghe = [
     { label: '-', value: '0' },
     { label: 'منطقه1', value: '1' },
     { label: 'منطقه2', value: '2' },

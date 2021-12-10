@@ -1,19 +1,27 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'paramTitle'
 })
 export class ParameterTitlePipe implements PipeTransform {
 
+
   transform(value, list: any[], identity = 'id', label = 'title'): any {
+    debugger
     let a: any[];
+    let b: any;
+    let tempType: string;
 
     if (value && list && list.length > 0) {
+      tempType = (value).toString();
       a = list.filter(a =>
-        a[identity] === Number(value)
+        a[identity] === (tempType)
       );
       if (a && a.length > 0) {
-        return `${value} - ${a[0][label]}`;
+
+        b = `${value} - ${a[0][label]}`;
+        debugger
+        return b;
       } else {
         return '';
       }

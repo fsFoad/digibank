@@ -16,7 +16,8 @@
         <input class="input-w-100" formControlName="fullName" placeholder="نام نام خانوادگی" pInputText [disabled]="true">
       </div>
       <div class="p-field p-col-4">
-        <input class="input-w-100" formControlName="charge" placeholder="مبلغ شارژ اولیه" pInputText>
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0" formControlName="charge" placeholder="مبلغ شارژ اولیه"></p-inputNumber>
       </div>
     </div>
   </div>

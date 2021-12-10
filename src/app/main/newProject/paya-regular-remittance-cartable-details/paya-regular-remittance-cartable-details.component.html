@@ -22,8 +22,7 @@
     </p-card>
 
     <p-card>
-      <p-table [value]="table1Rows" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-        currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+      <p-table [value]="table1Rows" >
         <ng-template pTemplate="header">
           <tr>
             <th translate>ردیف</th>
@@ -60,8 +59,7 @@
     </p-card>
 
     <p-card header="فهرست تائید کنندگان">
-      <p-table [value]="table2Rows" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
-        currentPageReportTemplate="شماره {first} تا {last} از {totalRecords} ردیف">
+      <p-table [value]="table2Rows">
         <ng-template pTemplate="header">
           <tr>
             <th translate>ردیف</th>

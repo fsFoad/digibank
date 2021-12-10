@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Constants} from '../../shared/constants/Constants';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-gardesh-riz-enteghal-vojooh',
@@ -16,9 +17,11 @@ export class GardeshRizEnteghalVojoohComponent implements OnInit {
   //   { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
   //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
   // ]
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-
+  goToHome(){
+    this.router.navigate(['']);
+  }
 }
