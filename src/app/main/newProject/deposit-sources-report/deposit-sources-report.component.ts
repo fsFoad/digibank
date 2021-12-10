@@ -36,30 +36,23 @@ export function faDigits(s: string): string {
 })
 export class DepositSourcesReportComponent implements OnInit {
 
-  data = {
-    labels: Constants.acSummaries.map(x => `${x.title} (${ltre}${faDigits(x.accountNumber)}${popd}${rlm})`),
-    datasets: [
-      {
-        data: Constants.acSummaries.map(x => x.balance),
-        backgroundColor: [
-          "hsl(347, 100%, 70%)",
-          "hsl(204, 82%, 57%)",
-          "hsl(43, 100%, 67%)",
-          "hsl(55, 90%, 36%)",
-        ],
-        hoverBackgroundColor: [
-          "hsl(347, 100%, 80%)",
-          "hsl(204, 82%, 67%)",
-          "hsl(43, 100%, 77%)",
-          "hsl(55, 90%, 46%)",
-        ]
-      }]
-  };
-  chartOptions: Chart.ChartOptions = {
+  data = getChartDataForDepositSources();
+  chartOptions: Chart.ChartOptions = getChartOptionsForDepositSources()
+  constructor() {
+    setChartFont();
+  }
+
+  ngOnInit(): void {
+  }
+
+}
+
+export function getChartOptionsForDepositSources(): Chart.ChartOptions {
+  return {
     legend: {
       labels: {
         fontColor: 'black',
-        fontSize:15
+        fontSize: 15
       },
       position: 'right',
       // rtl: true,
@@ -76,14 +69,30 @@ export class DepositSourcesReportComponent implements OnInit {
         },
       }
     }
-  }
-  constructor() {
-    setChartFont();
-  }
+  };
+}
 
-  ngOnInit(): void {
-  }
-
+export function getChartDataForDepositSources() {
+  return {
+    labels: Constants.acSummaries.map(x => `${x.title} (${ltre}${faDigits(x.accountNumber)}${popd}${rlm})`),
+    datasets: [
+      {
+        data: Constants.acSummaries.map(x => x.balance),
+        backgroundColor: [
+          "hsl(347, 100%, 70%)",
+          "hsl(204, 82%, 57%)",
+          "hsl(43, 100%, 67%)",
+          "hsl(90, 82%, 57%)",
+        ],
+        hoverBackgroundColor: [
+          "hsl(347, 100%, 80%)",
+          "hsl(204, 82%, 67%)",
+          "hsl(43, 100%, 77%)",
+          "hsl(90, 82%, 67%)",
+        ]
+      }
+    ]
+  };
 }
 
 export  function setChartFont() {

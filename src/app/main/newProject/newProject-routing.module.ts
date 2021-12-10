@@ -79,6 +79,7 @@ import { PersonalEntityListComponent } from './personal-entity-list/personal-ent
 import { UpdatePersonalComponent } from './update-personal/update-personal.component';
 import { AccountTreeComponent } from './account-tree/account-tree.component';
 import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
+import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
 
 
 const routes: Routes = [
@@ -382,6 +383,10 @@ const routes: Routes = [
       {
         path: 'chartOfFacilitiesReceived',
         component: ChartOfFacilitiesReceivedComponent,
+      },
+      {
+        path: 'expendituresAndRevenues',
+        component: ExpendituresAndRevenuesComponent,
       },
 
 

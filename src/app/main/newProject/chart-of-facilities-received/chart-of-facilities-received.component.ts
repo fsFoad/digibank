@@ -9,26 +9,18 @@ import { faDigits, setChartFont } from '../deposit-sources-report/deposit-source
   styleUrls: ['./chart-of-facilities-received.component.scss']
 })
 export class ChartOfFacilitiesReceivedComponent implements OnInit {
-  data = {
-    labels: Constants.tashilats.map(x => `${x.relevantUnit} (${x.tashilatType})`),
-    datasets: [
-      {
-        data: Constants.tashilats.map(x => x.amount),
-        backgroundColor: [
-          "hsl(0, 100%, 70%)",
-          "hsl(90, 82%, 57%)",
-          "hsl(180, 100%, 67%)",
-          "hsl(270, 90%, 36%)",
-        ],
-        hoverBackgroundColor: [
-          "hsl(0, 100%, 80%)",
-          "hsl(90, 82%, 67%)",
-          "hsl(180, 100%, 77%)",
-          "hsl(270, 90%, 46%)",
-        ]
-      }]
-  };
-  chartOptions: Chart.ChartOptions = {
+  data = getChartDataForFacilitiesReceived();
+  chartOptions: Chart.ChartOptions = getChartOptionsForFacilitiesReceived()
+  constructor() {
+    setChartFont();
+  }
+  ngOnInit(): void {
+  }
+
+}
+
+export function getChartOptionsForFacilitiesReceived(): Chart.ChartOptions {
+  return {
     legend: {
       labels: {
         fontColor: 'black',
@@ -47,11 +39,29 @@ export class ChartOfFacilitiesReceivedComponent implements OnInit {
         },
       }
     }
-  }
-  constructor() {
-    setChartFont();
-  }
-  ngOnInit(): void {
-  }
-
+  };
 }
+
+export function getChartDataForFacilitiesReceived() {
+  return {
+    labels: Constants.tashilats.map(x => `${x.relevantUnit} (${x.tashilatType})`),
+    datasets: [
+      {
+        data: Constants.tashilats.map(x => x.amount),
+        backgroundColor: [
+          "hsl(43, 100%, 67%)",
+          "hsl(90, 82%, 57%)",
+          "hsl(347, 100%, 70%)",
+          "hsl(204, 82%, 57%)",
+        ],
+        hoverBackgroundColor: [
+          "hsl(43, 100%, 77%)",
+          "hsl(90, 82%, 67%)",
+          "hsl(347, 100%, 80%)",
+          "hsl(204, 82%, 67%)",
+        ]
+      }
+    ]
+  };
+}
+
