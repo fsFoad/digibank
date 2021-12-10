@@ -246,13 +246,6 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             type: 'item',
             routerLink: '/bills',
           },
-          {
-            id: 'bills',
-            label: 'درختواره اسناد مالی',
-            translate: 'درختواره اسناد مالی',
-            type: 'item',
-            routerLink: '/accountTree',
-          },
         ]
       },
       {
@@ -1012,6 +1005,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             label: 'قالب اسناد مالی',
             translate: 'قالب اسناد مالی',
             type: 'item',
+          },
+          {
+            id: 'bills',
+            label: 'درختواره اسناد مالی',
+            translate: 'درختواره اسناد مالی',
+            type: 'item',
+            routerLink: '/accountTree',
           },
           {
             id: 'walletBuy',
