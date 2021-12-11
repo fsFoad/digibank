@@ -1,8 +1,8 @@
-<p-card header="ایجاد اطلاعات نشانی"  [formGroup]="form">
-  <div class="app-mx-5r">
+<p-card header="ایجاد اطلاعات نشانی" [formGroup]="form">
+  <div class="app-mx-20r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
-        <p-dropdown [options]="contactTypes" formControlName="contactTypes"  placeholder="نوع نشانی"
+        <p-dropdown [options]="contactTypes" formControlName="contactTypes" placeholder="نوع نشانی"
                     [autoDisplayFirst]="false"></p-dropdown>
       </div>
       <div class="p-field p-col">
@@ -13,43 +13,50 @@
         <p-dropdown [options]="cityList" formControlName="city" placeholder="شهر"
                     [autoDisplayFirst]="false"></p-dropdown>
       </div>
+
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
         <p-dropdown class="p-dropdown-w80" formControlName="mantaghe" placeholder="منطقه" [autoDisplayFirst]="false"
                     [options]="mantaghe"></p-dropdown>
       </div>
-
-    </div>
-    <div class="p-field p-col">
-      <textarea rows="2" cols="151" formControlName="desAddress" placeholder="شرح نشانی" pInputTextarea></textarea>
-    </div>
-    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
         <input placeholder="کدپستی" formControlName="postalCode" pInputText>
       </div>
-      <div class="p-field p-col">
-        <input placeholder="تلفن" formControlName="phoneNumber" pInputText>
-      </div>
-      <div class="p-field p-col">
-        <p-dropdown class="p-dropdown-w80" placeholder="نحوه تصرف" [autoDisplayFirst]="false"
-                    formControlName="nahveTasarofs"    [options]="nahveTasarofs"></p-dropdown>
-      </div>
-      <div class="p-field p-col">
-      </div>
+      <div class="p-field p-col"></div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
-        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"
-                            formControlName="startDate"       placeholder="تاریخ شروع"></p-persian-calendar>
-      </div>
-      <div class="p-field p-col">
-        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"
-                            placeholder="تاریخ پایان"  formControlName="endDate"></p-persian-calendar>
-      </div>
-      <div class="p-field p-col">
-      </div>
-      <div class="p-field p-col">
+        <textarea rows="2" cols="50" formControlName="desAddress" placeholder="شرح نشانی" pInputTextarea></textarea>
       </div>
     </div>
+    <!--    <div class="p-fluid p-formgrid p-grid app-col-px-2r">-->
+
+
+    <!--&lt;!&ndash;      <div class="p-field p-col">&ndash;&gt;-->
+    <!--&lt;!&ndash;        <input placeholder="تلفن" formControlName="phoneNumber" pInputText>&ndash;&gt;-->
+    <!--&lt;!&ndash;      </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <div class="p-field p-col">&ndash;&gt;-->
+    <!--&lt;!&ndash;        <p-dropdown class="p-dropdown-w80" placeholder="نحوه تصرف" [autoDisplayFirst]="false"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    formControlName="nahveTasarofs"    [options]="nahveTasarofs"></p-dropdown>&ndash;&gt;-->
+    <!--&lt;!&ndash;      </div>&ndash;&gt;-->
+    <!--      <div class="p-field p-col">-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    <div class="p-fluid p-formgrid p-grid app-col-px-2r">-->
+    <!--      <div class="p-field p-col">-->
+    <!--        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"-->
+    <!--                            formControlName="startDate"       placeholder="تاریخ شروع"></p-persian-calendar>-->
+    <!--      </div>-->
+    <!--      <div class="p-field p-col">-->
+    <!--        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"-->
+    <!--                            placeholder="تاریخ پایان"  formControlName="endDate"></p-persian-calendar>-->
+    <!--      </div>-->
+    <!--      <div class="p-field p-col">-->
+    <!--      </div>-->
+    <!--      <div class="p-field p-col">-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
     <button label="تایید" pButton (click)="Confirmation()"></button>
