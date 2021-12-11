@@ -246,7 +246,7 @@ export class Constants {
     { label: '-', value: '0' },
     // { label: 'نشانی', value: '1' },
     { label: 'تلفن ثابت محل کار', value: '1' },
-    { label: 'تلفن ثابت منزل', value: '2' },
+    { label: 'تلفن ثابت محل سکونت', value: '2' },
     { label: 'تلفن همراه', value: '3' },
     { label: 'دورنگار', value: '4' },
     { label: 'پست الکترونیک', value: '5' },
