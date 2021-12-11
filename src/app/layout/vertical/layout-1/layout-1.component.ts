@@ -1006,19 +1006,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             label: 'تعریف سرفصل های مالی',
             translate: 'تعریف سرفصل های مالی',
             type: 'item',
+            routerLink: '/accountTree',
           },
           {
             id: 'walletBuy',
             label: 'قالب اسناد مالی',
             translate: 'قالب اسناد مالی',
             type: 'item',
-          },
-          {
-            id: 'bills',
-            label: 'درختواره اسناد مالی',
-            translate: 'درختواره اسناد مالی',
-            type: 'item',
-            routerLink: '/accountTree',
           },
           {
             id: 'walletBuy',
