@@ -605,6 +605,12 @@ input[required]+label::after {
   --app-primary-border: hsl(var(--app-primary-color-hs), 25%);
   --app-primary-text-color: #fff;
   --app-focus-shadow: hsl(var(--app-primary-color-hs), 55%);
+  --app-disabled-background-color: #f3f2f1;
+  .p-checkbox .p-checkbox-box.p-disabled {
+    background-color: var(--app-disabled-background-color);
+    border-color: var(--app-disabled-background-color);
+    color: var(--app-disabled-background-color);
+  }
   .horizontal-menu {
     background-color: var(--app-primary-color);
   }
