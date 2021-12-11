@@ -976,6 +976,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             label: 'اسناد مالی متناظر با تراکنش‌های بانکی',
             translate: 'اسناد مالی متناظر با تراکنش‌های بانکی',
             type: 'item',
+            routerLink: '/accountTransactions',
           },
           {
             id: 'walletBuy',

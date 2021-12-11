@@ -146,6 +146,7 @@ import { ContextMenuModule } from 'primeng/contextmenu';
 import { ToastModule } from 'primeng/toast';
 import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
 import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
+import { AccountTransactionsComponent } from './account-transactions/account-transactions.component';
 
 @NgModule({
   providers: [
@@ -260,6 +261,7 @@ import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/ex
     AccountTreeComponent,
     ChartOfFacilitiesReceivedComponent,
     ExpendituresAndRevenuesComponent,
+    AccountTransactionsComponent,
   ],
   imports: [
     CommonModule,

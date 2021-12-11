@@ -80,6 +80,7 @@ import { UpdatePersonalComponent } from './update-personal/update-personal.compo
 import { AccountTreeComponent } from './account-tree/account-tree.component';
 import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
 import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
+import { AccountTransactionsComponent } from './account-transactions/account-transactions.component';
 
 
 const routes: Routes = [
@@ -387,6 +388,10 @@ const routes: Routes = [
       {
         path: 'expendituresAndRevenues',
         component: ExpendituresAndRevenuesComponent,
+      },
+      {
+        path: 'accountTransactions',
+        component: AccountTransactionsComponent,
       },
 
 
