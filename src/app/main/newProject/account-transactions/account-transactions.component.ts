@@ -48,6 +48,17 @@ function createSampleL1Rows(): L1Row[] {
     ['61', 'هزینه‌های فعالیت'],
     ['62', 'سایر هزینه‌ها و درآمدهای غیر عملیاتی'],
     ['91', 'حساب‌های انتظامی'],
-  ].map(x => ({ code: x[0], title: x[1] }));
+  ].map(x => ({
+    code: x[0],
+    title: x[1],
+    rows: [0, 1, 2].map(y => ({
+      code: `${x[0]}${1000 + y}`,
+      title: `sub title ${y + 1}`,
+      rows: [0, 1, 2].map(z => ({
+        code: `${x[0]}${1000 + y}${1000 + z}`,
+        title: `sub sub title ${z + 1}`,
+      })),
+    })),
+  }));
 }
 

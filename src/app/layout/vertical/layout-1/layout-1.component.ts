@@ -1238,13 +1238,11 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
   /**
    * On destroy
    */
-  ngOnDestroy()
-    :
-    void {
+  ngOnDestroy(): void {
     // Unsubscribe from all subscriptions
     this._unsubscribeAll.next();
     this._unsubscribeAll.complete();
-  };
+  }
 }
 
 function addStar(item: MenuItem): boolean {
