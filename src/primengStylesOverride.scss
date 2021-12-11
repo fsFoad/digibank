@@ -515,7 +515,7 @@ input[required]+label::after {
   }
 }
 
-@include attr-x("width", "app-w-", "pc", 20, 5, "%");
+@include attr-x("width", "app-w-", "pc", 20, 5, "% !important");
 @include attr-x("gap", "app-gap-", "r", 6, 1, "rem");
 @include attr-x("flex-grow", "app-flex-grow-", "", 6, 1, "");
 // width needs to be set appropriately
@@ -550,6 +550,27 @@ input[required]+label::after {
   --app-primary-text-color: #fff;
   --app-focus-shadow: hsl(var(--app-primary-color-hs), 55%);
   --app-disabled-background-color: #f3f2f1;
+  --app-nested-back-hs: 200, 50%;
+  --app-nested-back-1: hsl(var(--app-nested-back-hs), 100%);
+  --app-nested-back-2: hsl(var(--app-nested-back-hs), 95%);
+  --app-nested-back-3: hsl(var(--app-nested-back-hs), 90%);
+  .app-nested-level-1 {
+    background-color: var(--app-nested-back-1);
+  }
+  .app-nested-level-2 {
+    background-color: var(--app-nested-back-2);
+  }
+  .app-nested-level-3 {
+    background-color: var(--app-nested-back-3);
+  }
+  .p-button.p-button-text.p-button-plain:enabled:hover {
+    background: var(--app-hover-background);
+    color: white;
+  }
+  .p-button.p-button-text.p-button-plain:enabled:active {
+    background: var(--app-hover-background);
+    color: white;
+  }
   .p-checkbox .p-checkbox-box.p-disabled {
     background-color: var(--app-disabled-background-color);
     border-color: var(--app-disabled-background-color);
@@ -703,6 +724,9 @@ input[required]+label::after {
     &:focus {
       box-shadow: 0 0 0 0.2rem var(--app-focus-shadow);
     }
+  }
+  .p-datatable .p-datatable-tbody>tr {
+    background: transparent;
   }
 }
 
