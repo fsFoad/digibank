@@ -1,26 +1,28 @@
 <p-card header="ایجاد اطلاعات تماس" [formGroup]="form">
-  <div class="app-mx-20r p-jc-center">
-    <div class="p-fluid p-formgrid p-grid  ">
 
-      <div class="p-field p-col-4">
+    <div  class="p-fluid p-formgrid p-grid  p-jc-center app-mx-20r">
+
+      <div class="p-field p-col-3">
         <p-dropdown placeholder="گروه نوع تماس" formControlName="contactTypeGroups" [options]="contactTypeGroups" [autoDisplayFirst]="false"></p-dropdown>
       </div>
-      <div class="p-field p-col-4">
-        <p-dropdown placeholder="نوع تماس" formControlName="contactTypes" [options]="contactTypes" [autoDisplayFirst]="false"></p-dropdown>
+      <div class="p-field p-col-5">
+<!--        <p-dropdown placeholder="نوع تماس" ></p-dropdown>-->
+        <input class="input-w-100" formControlName="contactInfo"  placeholder="اطلاعات تماس" pInputText >
       </div>
-      <div class="p-field p-col-4">
-        <input class="input-w-100" formControlName="discContact" placeholder="شرح تماس" pInputText >
-      </div>
+
     </div>
-  </div>
-  <div class="p-fluid p-formgrid p-grid app-mx-20r ">
-    <div class="p-field p-col-2"></div>
-    <div class="p-field p-col-4">
-      <p-persian-calendar formControlName="startDate" yearRange="1300:1410" class="app-persian-calendar-style"  placeholder="تاریخ شروع"></p-persian-calendar>
+
+  <div class="p-fluid p-formgrid p-grid app-mx-20r   p-jc-center ">
+    <div class="p-field p-col-8">
+      <input class="input-w-100" formControlName="discContact" placeholder="شرح تماس" pInputText >
     </div>
-    <div class="p-field p-col-4">
-      <p-persian-calendar   formControlName="endDate"  yearRange="1300:1410" class="app-persian-calendar-style"  placeholder="تاریخ پایان"></p-persian-calendar>
-    </div>
+<!--    <div class="p-field p-col-2"></div>-->
+<!--    <div class="p-field p-col-4">-->
+<!--      <p-persian-calendar formControlName="startDate" yearRange="1300:1410" class="app-persian-calendar-style"  placeholder="تاریخ شروع"></p-persian-calendar>-->
+<!--    </div>-->
+<!--    <div class="p-field p-col-4">-->
+<!--      <p-persian-calendar   formControlName="endDate"  yearRange="1300:1410" class="app-persian-calendar-style"  placeholder="تاریخ پایان"></p-persian-calendar>-->
+<!--    </div>-->
   </div>
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
     <button label="تایید" pButton (click)="Confirmation()"></button>

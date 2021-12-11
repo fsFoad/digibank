@@ -34,8 +34,8 @@
           <th translate>گروه نوع تماس</th>
           <th translate>نوع تماس</th>
           <th translate>شماره تماس</th>
-          <th translate>تاریخ شروع</th>
-          <th translate>تاریخ پایان</th>
+<!--          <th translate>تاریخ شروع</th>-->
+<!--          <th translate>تاریخ پایان</th>-->
           <th translate>پیش فرض</th>
         </tr>
       </ng-template>
@@ -43,10 +43,10 @@
         <tr>
           <td>{{i + 1}}</td>
           <td>{{row.contactTypeGroups|paramTitle :contactTypeGroups:'value':'label'}}</td>
-          <td>{{row.contactTypes|paramTitle :contactTypes:'value':'label'}}</td>
+          <td>{{row.contactInfo}}</td>
           <td>{{row.discContact}}</td>
-          <td>{{row.startDate | castToDate}}</td>
-          <td>{{row.endDate | castToDate}}</td>
+<!--          <td>{{row.startDate | castToDate}}</td>-->
+<!--          <td>{{row.endDate | castToDate}}</td>-->
           <td>
             <p-inputSwitch></p-inputSwitch>
           </td>
@@ -69,11 +69,11 @@
           <th translate>استان</th>
           <th translate>شهر</th>
           <th translate>منطقه</th>
-          <th translate>نحوه تصرف</th>
+<!--          <th translate>نحوه تصرف</th>-->
           <th translate style="width:35%;">شرح نشانی</th>
           <th translate>کد پستی</th>
-          <th translate>تاریخ شروع</th>
-          <th translate>تاریخ پایان</th>
+<!--          <th translate>تاریخ شروع</th>-->
+<!--          <th translate>تاریخ پایان</th>-->
         </tr>
       </ng-template>
       <ng-template let-i="rowIndex" pTemplate="body" let-row>
@@ -83,11 +83,11 @@
           <td>{{row.province|paramTitle :province:'value':'label'}}</td>
           <td>{{row.city|paramTitle :city:'value':'label'}}</td>
           <td>{{row.mantaghe|paramTitle :mantaghe:'value':'label'}}</td>
-          <td>{{row.nahveTasarofs|paramTitle :nahveTasarofs:'value':'label'}} </td>
+<!--          <td>{{row.nahveTasarofs|paramTitle :nahveTasarofs:'value':'label'}} </td>-->
           <td>{{row.desAddress}}</td>
           <td>{{row.postalCode}}</td>
-          <td>{{row.startDate| castToDate}}</td>
-          <td>{{row.endDate| castToDate}}</td>
+<!--          <td>{{row.startDate| castToDate}}</td>-->
+<!--          <td>{{row.endDate| castToDate}}</td>-->
         </tr>
       </ng-template>
     </p-table>

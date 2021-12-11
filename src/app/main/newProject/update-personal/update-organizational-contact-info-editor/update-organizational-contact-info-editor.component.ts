@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {Constants} from '../../../shared/constants/Constants';
+import {AddressInfo, ContactInfo} from '../../models/DigiBankModel';
 
 @Component({
   selector: 'app-update-organizational-contact-info-editor',
@@ -9,10 +10,17 @@ import {Constants} from '../../../shared/constants/Constants';
 })
 export class UpdateOrganizationalContactInfoEditorComponent implements OnInit {
   @Input() inputIdentity
-  contactTypeGroups=Constants.contactTypeGroups;
-  contactTypes = Constants.contactTypes;
+  contactTypeGroups =Constants.contactTypeGroups;
+  contactTypes =Constants.contactTypes;
   nahveTasarofs = Constants.nahveTasarofs;
-
+  province = Constants.provinceList;
+  city = Constants.cityList;
+  mantaghe = Constants.mantaghe;
+  TBListContact:ContactInfo[] = [];
+  TBListAddress:AddressInfo[] = [];
+  contactAddressInfoFlag=true;
+  contactInfoFlag=false
+  addressInfoFlag=false
 
   table1Rows;
   table2Rows;
@@ -62,6 +70,27 @@ export class UpdateOrganizationalContactInfoEditorComponent implements OnInit {
       }
     ];
   }
+  createContactInfo(){
+    this.contactAddressInfoFlag=false;
+    this.contactInfoFlag = true;
+  }
+  createAddressInfo(){
+    this.contactAddressInfoFlag=false;
+    this.addressInfoFlag = true;
 
+  }
+  onClose() {
+    this.contactAddressInfoFlag=true;
+    this.contactInfoFlag = false;
+    this.addressInfoFlag = false;
+
+  }
+
+  addItemContact(newItemContact: ContactInfo[]){
+    this.TBListContact.push(...newItemContact);
+  }
+  addItemAddress(newItemAddress: AddressInfo[]){
+    this.TBListAddress.push(...newItemAddress);
+  }
 }
 
