@@ -94,7 +94,7 @@ div.p-dropdown-panel.p-component {
 }
 
 .p-datatable .p-datatable-thead>tr>th {
-  text-align: center !important;
+  text-align: center;
   padding: 0.75rem 0.75rem;
   border: 1px solid #e4e4e4;
   border-width: 0 0 1px 0;
@@ -137,7 +137,7 @@ div.p-dropdown-panel.p-component {
 }
 
 .p-datatable .p-datatable-tbody>tr>td {
-  text-align: center !important;
+  text-align: center;
   border: 1px solid #e4e4e4;
   border-width: 0 0 1px 0;
   padding: 0.75rem 0.75rem;
@@ -434,36 +434,16 @@ input[required]+label::after {
   }
 }
 
-.app-child-px-1r>* {
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
+@mixin app-child-px() {
+  @for $i from 1 through 6 {
+    .app-child-px-#{$i}r>* {
+      padding-left: #{$i}#{"rem"} !important;
+      padding-right: #{$i}#{"rem"} !important;
+    }
+  }
 }
 
-.app-child-px-2r>* {
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-}
-
-.app-child-px-3r>* {
-  padding-left: 3rem !important;
-  padding-right: 3rem !important;
-}
-
-.app-child-px-4r>* {
-  padding-left: 4rem !important;
-  padding-right: 4rem !important;
-}
-
-.app-child-px-5r>* {
-  padding-left: 5rem !important;
-  padding-right: 5rem !important;
-}
-
-.app-child-px-6r>* {
-  padding-left: 6rem !important;
-  padding-right: 6rem !important;
-}
-
+@include app-child-px();
 // set padding-x: 2rem on all p-col* children.
 .app-col-px-2r {
   // negative margins are required
@@ -526,54 +506,18 @@ input[required]+label::after {
   margin-right: 54rem;
 }
 
-.app-flex-grow-1 {
-  flex-grow: 1;
+@mixin attr-x($attr, $prefix, $postfix, $count, $step, $unit) {
+  @for $i from 1 through $count {
+    $j: $step * $i;
+    .#{$prefix}#{$j}#{$postfix} {
+      #{$attr}: #{$j}#{$unit};
+    }
+  }
 }
 
-.app-flex-grow-2 {
-  flex-grow: 2;
-}
-
-.app-flex-grow-3 {
-  flex-grow: 3;
-}
-
-.app-flex-grow-4 {
-  flex-grow: 4;
-}
-
-.app-flex-grow-5 {
-  flex-grow: 5;
-}
-
-.app-flex-grow-6 {
-  flex-grow: 6;
-}
-
-.app-gap-1r {
-  gap: 1rem;
-}
-
-.app-gap-2r {
-  gap: 2rem;
-}
-
-.app-gap-3r {
-  gap: 3rem;
-}
-
-.app-gap-4r {
-  gap: 4rem;
-}
-
-.app-gap-5r {
-  gap: 5rem;
-}
-
-.app-gap-6r {
-  gap: 6rem;
-}
-
+@include attr-x("width", "app-w-", "pc", 20, 5, "%");
+@include attr-x("gap", "app-gap-", "r", 6, 1, "rem");
+@include attr-x("flex-grow", "app-flex-grow-", "", 6, 1, "");
 // width needs to be set appropriately
 .app-property-value-list {
   dt,
@@ -824,5 +768,5 @@ p-tree {
   width: 100%;
   height: 400px;
   text-align: left;
-  font-family: 'Cascadia Code', 'Courier New', Courier, monospace;
+  font-family: "Cascadia Code", "Courier New", Courier, monospace;
 }
