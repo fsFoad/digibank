@@ -14,17 +14,16 @@ export class CreateContactComponent implements OnInit {
   @Output() myListContact: EventEmitter<ContactInfo[]> = new EventEmitter()
   // @Output() TBList :ContactInfo[];
   contactTypeGroups =Constants.contactTypeGroups;
-  contactTypes =Constants.contactTypes;
   TBListContact:ContactInfo[]=[]
 
   public form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       contactTypeGroups:[''],
-      contactTypes:[''],
+      contactInfo:[''],
       discContact:[''],
-      startDate:null,
-      endDate:null
+      // startDate:null,
+      // endDate:null
     });
   }
 

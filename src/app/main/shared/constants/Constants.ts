@@ -244,13 +244,20 @@ export class Constants {
   ];
   static contactTypeGroups = [
     { label: '-', value: '0' },
-    { label: 'نشانی', value: '1' },
-    { label: 'تلفن ثابت', value: '2' },
+    // { label: 'نشانی', value: '1' },
+    { label: 'تلفن ثابت محل کار', value: '1' },
+    { label: 'تلفن ثابت منزل', value: '2' },
     { label: 'تلفن همراه', value: '3' },
     { label: 'دورنگار', value: '4' },
     { label: 'پست الکترونیک', value: '5' },
     { label: 'صندوق پستی', value: '6' },
     { label: 'آدرس وب سایت', value: '7' },
+    { label: 'آدرس شبکه اجتماعی تلگرام', value: '8' },
+    { label: 'آدرس شبکه اجتماعی واتس اپ', value: '9' },
+    { label: 'آدرس شبکه اجتماعی اینستاگرام', value: '10' },
+    { label: 'آدرس شبکه اجتماعی لینکدین', value: '11' },
+    { label: 'آدرس شبکه اجتماعی سایر', value: '12' },
+
   ];
   static mantaghe = [
     { label: '-', value: '0' },

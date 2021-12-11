@@ -34,8 +34,8 @@
           <th translate>گروه نوع تماس</th>
           <th translate>نوع تماس</th>
           <th translate>شماره تماس</th>
-          <th translate>تاریخ شروع</th>
-          <th translate>تاریخ پایان</th>
+<!--          <th translate>تاریخ شروع</th>-->
+<!--          <th translate>تاریخ پایان</th>-->
           <th translate>پیش فرض</th>
         </tr>
       </ng-template>
@@ -43,10 +43,10 @@
         <tr>
           <td>{{i + 1}}</td>
           <td>{{row.contactTypeGroups|paramTitle :contactTypeGroups:'value':'label'}}</td>
-          <td>{{row.contactTypes|paramTitle :contactTypes:'value':'label'}}</td>
+          <td>{{row.contactInfo}}</td>
           <td>{{row.discContact}}</td>
-          <td>{{row.startDate | castToDate}}</td>
-          <td>{{row.endDate | castToDate}}</td>
+<!--          <td>{{row.startDate | castToDate}}</td>-->
+<!--          <td>{{row.endDate | castToDate}}</td>-->
           <td>
             <p-inputSwitch></p-inputSwitch>
           </td>
