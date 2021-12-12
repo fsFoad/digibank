@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../../shared/constants/Constants';
 
 @Component({
   selector: 'app-organizational-role-editor',
@@ -6,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./organizational-role-editor.component.scss']
 })
 export class OrganizationalRoleEditorComponent implements OnInit {
-  availableRoles = [
-    {name: '1-کارمند'},
-    {name: '2-مشتری'},
-    {name: '3-نمایندگی، کارگزاری'},
-    {name: '4-تامین کننده'},
-  ];
+  availableRoles=Constants.availableRoles;
   selectedRoles = [
     // {name: 'مشتری - ۱۲۱۲۱۲۱۲'},
     // {name: 'کارگزاری رتبه ب - ۱۴۱۵۱۶۱۷'},
