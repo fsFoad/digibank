@@ -22,15 +22,18 @@ export class UpdateOrganizationalContactInfoEditorComponent implements OnInit {
   contactInfoFlag=false
   addressInfoFlag=false
 
-  table1Rows;
   table2Rows;
+  // = [1].map(i => ({
+  //   province: 'تهران',
+  //   city: 'تهران',
+  //   region: '۴',
+  //   addressDescription: '',
+  //   postalCode: '',
+  //   startDate: '۱۴۰۰/۰۲/۲۵',
+  //   endDate: '۱۴۰۰/۰۲/۲۵',
+  // }));
 
-
-
-
-
-
-  public form: FormGroup;
+   public form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({
       nationalCode: [''],
@@ -44,29 +47,27 @@ export class UpdateOrganizationalContactInfoEditorComponent implements OnInit {
 
     });
   }
-  ngOnInit(): void {
-    debugger
-    this.form.controls['nationalCode'].patchValue(this.inputIdentity.nationalCode)
-    this.form.controls['erjaCode'].patchValue(this.inputIdentity.erjaCode)
-    this.form.controls['contactTypeGroups'].patchValue(this.inputIdentity.contactTypeGroups)
-    this.form.controls['contactsType'].patchValue(this.inputIdentity.contactsType)
-    this.form.controls['contactsTypeAddress'].patchValue(this.inputIdentity.contactsType)
-    this.form.controls['nahveTasarofs'].patchValue(this.inputIdentity.nahveTasarofs)
-    this.table2Rows = [1].map(i => ({
 
+  ngOnInit(): void {
+  debugger
+
+    this.TBListAddress = [1].map(i => ({
+      contactTypes:this.inputIdentity.contactTypes,
       province:this.inputIdentity.contactProvince,
-      city: this.inputIdentity.contactCity,
-      region: this.inputIdentity.region,
-      addressDescription:this.inputIdentity.addressDescription ,
       postalCode: this.inputIdentity.postalCode,
-      startDate: this.inputIdentity.contactsStartDate,
-      endDate: this.inputIdentity.contactsEndDate,
+      city: this.inputIdentity.contactCity,
+      desAddress:this.inputIdentity.addressDescription,
+      mantaghe:this.inputIdentity.mantaghe,
+      phoneNumber:this.inputIdentity.mantaghe,
+
+
     }));
-    this.table1Rows = [
+    this.TBListContact = [
       {
-        phoneNumber: this.inputIdentity.phoneNumber,
-        startDate: this.inputIdentity.contactStartDate,
-        endDate: this.inputIdentity.contactEndDate,
+        contactTypeGroups:this.inputIdentity.contactTypeGroups,
+        contactTypes:this.inputIdentity.contactTypes,
+        discContact:this.inputIdentity.phoneNumber,
+
       }
     ];
   }
@@ -93,4 +94,3 @@ export class UpdateOrganizationalContactInfoEditorComponent implements OnInit {
     this.TBListAddress.push(...newItemAddress);
   }
 }
-
