@@ -349,9 +349,7 @@ export class PersonalEntityListComponent implements OnInit {
   }
 
   selectRow(servise): void {
-    debugger
     this.fsList = servise;
-    debugger
     this.detailsFlag = true;
   }
 }

@@ -49,7 +49,6 @@ export class UpdateOrganizationalContactInfoEditorComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  debugger
 
     this.TBListAddress = [1].map(i => ({
       contactTypes:this.inputIdentity.contactTypes,

@@ -7,7 +7,6 @@ export class ParameterTitlePipe implements PipeTransform {
 
 
   transform(value, list: any[], identity = 'id', label = 'title'): any {
-    debugger
     let a: any[];
     let b: any;
     let tempType: string;
@@ -20,7 +19,6 @@ export class ParameterTitlePipe implements PipeTransform {
       if (a && a.length > 0) {
 
         b = `${value} - ${a[0][label]}`;
-        debugger
         return b;
       } else {
         return '';

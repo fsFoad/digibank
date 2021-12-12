@@ -44,7 +44,6 @@ if (this.walletForm.controls['nationalCode'].value.length!==10){
 }else if ((this.walletForm.controls['nationalCode'].value !== null) ||
   (this.walletForm.controls['nationalCode'].value !== undefined))
    {
-     debugger
       this.walletForm.controls['mobile'].patchValue('09192265254');
       this.walletForm.controls['fullName'].setValue('حامد صبحی');
       // this.walletForm.controls['charge'].setValue(' 100,000ریال');

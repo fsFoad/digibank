@@ -49,7 +49,6 @@ export class UpdatePersonSupplementaryInfoEditorComponent implements OnInit {
     // this.form.controls['erjaCode'].patchValue(this.inputIdentity.erjaCode)
     this.form.controls['eduMaghta'].patchValue(this.inputIdentity.eduMaghta)
     this.form.controls['eduReshte'].patchValue(this.inputIdentity.eduReshte)
-    debugger
     this.form.controls['eduGraesh'].patchValue(this.inputIdentity.eduGraesh)
     this.form.controls['eduMoaseseType'].patchValue(this.inputIdentity.eduMoaseseType)
     this.form.controls['eduMoaseseName'].patchValue(this.inputIdentity.eduMoaseseName)

@@ -49,7 +49,6 @@ export class CardBoardGhobozComponent implements OnInit {
 
     };
     this.fsList = servise;
-    debugger
     this.detailsFlag = true;
   }
   onClose(event: any){

@@ -11,7 +11,6 @@ export class UpdatePersonalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    debugger
     console.log(this.inputParam)
   }
 

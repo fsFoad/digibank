@@ -55,7 +55,6 @@ person;
 
     };
     this.fsList = servise;
-    debugger
     this.detailsFlag = true;
   }
   onClose(event: any){
