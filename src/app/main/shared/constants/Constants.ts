@@ -151,13 +151,25 @@ export class Constants {
     { value: '1', label: 'محل کار' },
     { value: '2', label: 'محل سکونت' },
   ];
-
-
+static bankNameList = [
+    {label: '-', value: 1},
+    {label: 'ملی', value: 2},
+    {label: 'ملت', value: 3},
+    {label: 'صادرات', value: 4},
+    {label: 'پاسارگاد', value: 5},
+    {label: 'تجارت', value: 6},
+  ];
+ static availableRoles = [
+    { value: '0',label: '-'},
+    { value: '1',label: '1-کارمند'},
+    { value: '2',label: '2-مشتری'},
+    { value: '3',label: '3-نمایندگی، کارگزاری'},
+    { value: '4',label: '4-تامین کننده'},
+  ];
   static codeHoze = [
     { value: '0', label: '-' },
     { value: '1', label: '142' },
     { value: '2', label: '703' },
-
   ];
   static HavaleInternetiStatus = [
     { value: '000', label: '-' },
@@ -385,6 +397,7 @@ export class Constants {
     { value: '5', label: 'درگاه پرداخت اینترنتی' },
 
   ];
+
   static segmentTypeList = [
     {
       value: null,

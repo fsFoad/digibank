@@ -1,3 +1,4 @@
+<script src="organizational-entity-info-editor.component.ts"></script>
 <div class="app-mx-5r">
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
@@ -14,13 +15,13 @@
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="نقش سازمانی"></p-dropdown>
+        <p-dropdown placeholder="نقش سازمانی" [options]="availableRoles"></p-dropdown>
         <!-- <label>نقش سازمانی</label> -->
       <!-- </span> -->
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="بانک"></p-dropdown>
+        <p-dropdown placeholder="بانک" [options]="bankNameList"></p-dropdown>
         <!-- <label>بانک</label> -->
       <!-- </span> -->
     </div>
