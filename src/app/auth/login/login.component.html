@@ -6,12 +6,12 @@
             </div>
             <div class="p-col-12" id="userDiv">
                 <label for="username" class="userpasslabel">شناسه کاربری:</label>
-                <input dir="ltr" placeholder="شناسه کاربری" [(ngModel)]="userName" id="username" pInputText
+                <input placeholder="شناسه کاربری" [(ngModel)]="userName" id="username" pInputText
                     (keyup.enter)="login()" [disabled]="loading" [ngStyle]="{direction:userName?'ltr':'rtl'}">
             </div>
             <div class="p-col-12" id="passDiv">
                 <label for="pass" class="userpasslabel">رمز عبور:</label>
-                <input dir="ltr" type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="pass"
+                <input type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="pass"
                     (keyup.enter)="login()" [disabled]="loading" [ngStyle]="{direction:password?'ltr':'rtl'}">
             </div>
             <div class="p-col-12" id="loginTypeDiv">

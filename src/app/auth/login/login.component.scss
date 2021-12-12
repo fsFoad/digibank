@@ -101,3 +101,7 @@ p-button#btnLog {
 :host ::ng-deep .p-panel .p-panel-content {
     background: rgba(255, 255, 255, 0.65);
 }
+:host ::ng-deep ::placeholder {
+    color: #605e5c;
+    opacity: 1;
+}
