@@ -73,6 +73,8 @@ export class PersonalEntityListComponent implements OnInit {
     contactsEndDate:string
     region:string,
     eduCity:string,
+    mantaghe:string,
+    contactTypes:string
   }[] = [
     {
       'customerName': 'پژمان سهرابی',
@@ -127,14 +129,17 @@ export class PersonalEntityListComponent implements OnInit {
       'contactTypeGroups': '3',
       'contactStartDate': '1400/01/02',
       'contactEndDate': '1400/02/02',
-      'contactProvince': 'فارس',
+      'contactProvince': '3',
       'contactCity': 'شیراز',
       'nahveTasarofs': '1',
       'addressDescription': 'شیراز،بلوار آزادی ، روبروی دریاچه پارک آزادی.',
       'postalCode': '۷۱۳۴۶۸۳۵۱۱',
       'contactsStartDate':'1400/02/01',
       'contactsEndDate':'1400/06/01',
-      'region':'4'
+      'region':'4',
+      'mantaghe':'4',
+      'contactTypes':'1'
+
     },
     {
       'customerName': 'کامران گیلانی',
@@ -189,14 +194,16 @@ export class PersonalEntityListComponent implements OnInit {
       'contactTypeGroups': '2',
       'contactStartDate': '1400/02/22',
       'contactEndDate': '1400/03/22',
-      'contactProvince': 'فارس',
-      'contactCity': 'شیراز',
+      'contactProvince': '3',
+      'contactCity': '4',
       'nahveTasarofs': '2',
       'addressDescription': 'شیراز، خیایان ملاصدرا، نرسیده بانک ملت.',
       'postalCode': '۷۱۳۴۶۸۳۵۱۱',
       'contactsStartDate':'1400/01/06',
       'contactsEndDate':'1400/06/01',
-      'region':'2'
+      'region':'2',
+      'mantaghe':'2',
+      'contactTypes':'1'
     },
     {
       'customerName': 'کارگزاری بیمه سامان',
@@ -258,7 +265,9 @@ export class PersonalEntityListComponent implements OnInit {
       'postalCode': '',
       'contactsStartDate':'',
       'contactsEndDate':'',
-      'region':''
+      'region':'',
+      'mantaghe':'',
+      'contactTypes':''
     },
     {
       customerName: 'تامین کننده مواد اولیه',
@@ -320,8 +329,9 @@ export class PersonalEntityListComponent implements OnInit {
       'postalCode':'',
       'contactsStartDate':'',
       'contactsEndDate':'',
-      'region':''
-
+      'region':'',
+      'mantaghe':'',
+      'contactTypes':' '
     },
   ];
   selectedRow: Row;

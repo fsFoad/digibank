@@ -2,8 +2,8 @@ export interface ContactInfo {
   contactTypeGroups:string;
   contactTypes:string;
   discContact:string;
-  startDate:number;
-  endDate:number;
+  // startDate:number;
+  // endDate:number;
 }
 export interface AddressInfo {
   contactTypes:string;
@@ -13,7 +13,7 @@ export interface AddressInfo {
   mantaghe:string;
   postalCode:string;
   phoneNumber:string;
-  nahveTasarofs:string;
-  startDate:number;
-  endDate:number;
+  // nahveTasarofs:string;
+  // startDate:number;
+  // endDate:number;
 }
