@@ -81,17 +81,17 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             icon: 'account_balance_wallet',
             items: [
               {
-                id: 'real',
-                label: 'تعریف',
-                translate: 'تعریف',
+                id: 'person-editor',
+                label: 'تعریف ذینفع شخصی',
+                translate: 'تعریف ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/person-editor',
               },
               {
-                id: 'real',
-                label: 'اصلاح',
-                translate: 'اصلاح',
+                id: 'personalEntityList',
+                label: 'اصلاح ذینفع شخصی',
+                translate: 'اصلاح ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/personalEntityList',
