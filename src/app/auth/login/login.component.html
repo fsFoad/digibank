@@ -1,29 +1,23 @@
-<div class="setToCenter">
-    <p-panel header="سامانه بانکداری شرکتی/سازمانی  دیجیتال" class="PanelLogin ">
-        <div class="p-grid" id="panelDiv">
-            <div *ngIf="errorMessage" style="color: red;">
-                {{errorMessage}}
-            </div>
-            <div class="p-col-12" id="userDiv">
-                <label for="username" class="userpasslabel">شناسه کاربری:</label>
-                <input placeholder="شناسه کاربری" [(ngModel)]="userName" id="username" pInputText
-                    (keyup.enter)="login()" [disabled]="loading" [ngStyle]="{direction:userName?'ltr':'rtl'}">
-            </div>
-            <div class="p-col-12" id="passDiv">
-                <label for="pass" class="userpasslabel">رمز عبور:</label>
-                <input type="password" placeholder="رمز عبور" [(ngModel)]="password" pInputText id="pass"
-                    (keyup.enter)="login()" [disabled]="loading" [ngStyle]="{direction:password?'ltr':'rtl'}">
-            </div>
-            <div class="p-col-12" id="loginTypeDiv">
-                <label for="loginType" class="userpasslabel">نوع ورود:</label>
-                <p-dropdown class="loginType" id="loginType" [autoDisplayFirst]="true" [options]="droplist"
-                    [disabled]="loading"></p-dropdown>
-            </div>
-            <div class="p-col-12 p-d-flex p-jc-center p-ai-center app-gap-2r" id="btnDiv">
-                <a href="#">فراموشی رمز عبور</a>
-                <button #btnLogin pButton id="btnLog" [loading]="loading" iconPos="right" label="ورود"
-                    (click)="login()"></button>
-            </div>
+<p-panel class="PanelLogin" header="سامانه بانکداری شرکتی/سازمانی  دیجیتال">
+    <div id="panelDiv1" class="p-d-flex p-flex-column p-ai-end app-gap-1r app-px-6r app-py-2r">
+        <div class="p-d-flex p-jc-center p-ai-center app-gap-2r">
+            <label for="username">شناسه کاربری:</label>
+            <input id="username" dir="ltr" pInputText [(ngModel)]="userName" (keyup.enter)="login()" [disabled]="loading">
         </div>
-    </p-panel>
-</div>
+        <div class="p-d-flex p-jc-center p-ai-center app-gap-2r">
+            <label for="pass">رمز عبور:</label>
+            <input id="pass" type="password" dir="ltr" pInputText [(ngModel)]="password" (keyup.enter)="login()"
+                [disabled]="loading">
+        </div>
+        <div class="p-d-flex p-jc-center p-ai-center app-gap-2r">
+            <label for="loginType">نوع ورود:</label>
+            <p-dropdown id="loginType" class="loginType" [autoDisplayFirst]="true" [options]="droplist" (keyup.enter)="login()"
+                [disabled]="loading"></p-dropdown>
+        </div>
+        <div class="p-d-flex p-jc-center p-ai-center p-as-center app-gap-2r" id="btnDiv">
+            <a href="#">فراموشی رمز عبور</a>
+            <button id="btnLog" pButton class="p-px-6 p-py-3" [loading]="loading" iconPos="right" label="ورود"
+                (click)="login()"></button>
+        </div>
+    </div>
+</p-panel>

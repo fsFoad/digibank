@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
         { label: 'رمز ثابت', value: 1 },
         { label: 'شناسایی دو عاملی', value: 2 },
     ]
-    errorMessage: string;
     loading: boolean;
     constructor(
         private loginService: LoginService,
@@ -43,7 +42,6 @@ export class LoginComponent implements OnInit {
                 this.router.navigate(['/'])
             } else {
                 this.notifierService.showError({ detail: 'نام کاربری یا رمز عبور معتبر نمی باشد' })
-                // this.errorMessage = 'نام کاربری یا رمز عبور معتبر نمی باشد';
                 this.loginService.authenticated = false;
                 this.loading = false;
             }
