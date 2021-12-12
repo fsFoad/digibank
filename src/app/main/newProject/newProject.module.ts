@@ -147,6 +147,8 @@ import { ToastModule } from 'primeng/toast';
 import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
 import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
 import { AccountTransactionsComponent } from './account-transactions/account-transactions.component';
+import { UpdateAddressComponent } from './update-personal/update-organizational-contact-info-editor/update-address/update-address.component';
+import { UpdateContactComponent } from './update-personal/update-organizational-contact-info-editor/update-contact/update-contact.component';
 
 @NgModule({
   providers: [
@@ -262,6 +264,8 @@ import { AccountTransactionsComponent } from './account-transactions/account-tra
     ChartOfFacilitiesReceivedComponent,
     ExpendituresAndRevenuesComponent,
     AccountTransactionsComponent,
+    UpdateAddressComponent,
+    UpdateContactComponent,
   ],
   imports: [
     CommonModule,
