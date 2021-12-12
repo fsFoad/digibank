@@ -1,4 +1,4 @@
-<p-panel header="درختواره اسناد مالی">
+<p-panel header="تعریف سرفصل‌های مالی">
   <div [formGroup]="form" class="app-mx-5r">
     <div class="p-d-flex app-gap-1r">
       <p-contextMenu #contextMenu [model]="contextMenuItems"></p-contextMenu>
@@ -7,7 +7,7 @@
       <div class="p-fluidx p-d-flex p-flex-column app-flex-grow-1">
         <div class="p-field p-col">
           <span style="margin-inline-end: .5em;">نوع حساب:</span>
-          <span *ngIf="form.value.level === 1">کل</span>
+          <span *ngIf="selectedNode?.data && form.value.level === 1">کل</span>
           <span *ngIf="form.value.level === 2">معین</span>
           <span *ngIf="form.value.level === 3">تفضیلی</span>
         </div>
