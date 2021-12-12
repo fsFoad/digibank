@@ -518,10 +518,35 @@ input[required] + label::after {
     }
   }
 }
+@mixin attr-2x($attr, $attr2, $prefix, $postfix, $count, $step, $unit) {
+  @for $i from 1 through $count {
+    $j: $step * $i;
+    .#{$prefix}#{$j}#{$postfix} {
+      #{$attr}: #{$j}#{$unit};
+      #{$attr2}: #{$j}#{$unit};
+    }
+  }
+}
 
 @include attr-x("width", "app-w-", "pc", 20, 5, "% !important");
 @include attr-x("gap", "app-gap-", "r", 6, 1, "rem");
 @include attr-x("flex-grow", "app-flex-grow-", "", 6, 1, "");
+@include attr-2x("padding-left", "padding-right", "app-px-", "r", 6, 1, "rem");
+@include attr-2x("padding-top", "padding-bottom", "app-py-", "r", 6, 1, "rem");
+
+.app-rtl {
+  direction: rtl;
+}
+.app-ltr {
+  direction: ltr;
+}
+.app-text-start {
+  text-align: start;
+}
+.app-text-end {
+  text-align: end;
+}
+
 // width needs to be set appropriately
 .app-property-value-list {
   dt,
