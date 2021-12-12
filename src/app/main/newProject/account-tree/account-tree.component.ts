@@ -49,7 +49,7 @@ export class AccountTreeComponent implements OnInit {
       this.form.enable();
       this.form.setValue(e.node.data);
     } else {
-      this.form.setValue({ ...createDefaultData(), level: 0 }); // invalid level to hide it in form
+      this.form.setValue(createDefaultData());
       this.form.disable();
     }
   }
