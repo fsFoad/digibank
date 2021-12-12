@@ -3111,7 +3111,7 @@ p-togglebutton.ng-dirty.ng-invalid > .p-togglebutton.p-button {
 .p-panel .p-panel-content {
   padding: 1rem;
   border: 1px solid #a19f9d;
-  background: rgba(255, 255, 255, 0.65);
+  background: #ffffff;
   color: #323130;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
