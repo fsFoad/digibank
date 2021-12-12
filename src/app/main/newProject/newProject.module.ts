@@ -147,11 +147,14 @@ import { ToastModule } from 'primeng/toast';
 import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
 import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
 import { AccountTransactionsComponent } from './account-transactions/account-transactions.component';
+import { NotifierService, MessageService as MessageService2 } from '../shared/notifier/notifier.module';
 
 @NgModule({
   providers: [
     ConfirmationService,
     MessageService,
+    NotifierService,
+    MessageService2,
   ],
   declarations: [
     ReportBankTransferComponent,
