@@ -78,7 +78,8 @@ div.p-dropdown-panel.p-component {
 .p-dropdown {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.38);
-  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s,
+    background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   border-radius: 4px;
   font-size: 15px;
 }
@@ -93,7 +94,7 @@ div.p-dropdown-panel.p-component {
   font-size: 15px;
 }
 
-.p-datatable .p-datatable-thead>tr>th {
+.p-datatable .p-datatable-thead > tr > th {
   text-align: center;
   padding: 0.75rem 0.75rem;
   border: 1px solid #e4e4e4;
@@ -136,7 +137,7 @@ div.p-dropdown-panel.p-component {
   color: #34acfc;
 }
 
-.p-datatable .p-datatable-tbody>tr>td {
+.p-datatable .p-datatable-tbody > tr > td {
   text-align: center;
   border: 1px solid #e4e4e4;
   border-width: 0 0 1px 0;
@@ -155,7 +156,8 @@ div.p-dropdown-panel.p-component {
   background: #ffffff;
   padding: 0.75rem 0.75rem;
   border: 1px solid rgba(0, 0, 0, 0.38);
-  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s, background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s,
+    background-size 0.2s cubic-bezier(0.64, 0.09, 0.08, 1);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -175,7 +177,8 @@ div.p-dropdown-panel.p-component {
 
 body.theme-default {
   .mat-snack-bar-container {
-    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+      0px 1px 18px 0px rgba(0, 0, 0, 0.12);
     color: #ffffff;
     &.panel-snackbar-success {
       // background-color: #489be5;
@@ -272,7 +275,8 @@ body.theme-default .accent {
 }
 
 .p-component {
-  font-family: "iranyekan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "iranyekan", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 1rem;
   font-weight: normal;
 }
@@ -287,7 +291,7 @@ body.theme-default .accent {
   background-color: #37666c;
 }
 
-.p-menubar .p-submenu-list>.p-menuitem-active>p-menubarsub>.p-submenu-list {
+.p-menubar .p-submenu-list > .p-menuitem-active > p-menubarsub > .p-submenu-list {
   display: block;
   left: -100% !important;
   top: 0;
@@ -375,23 +379,23 @@ p-persian-calendar.app-persian-calendar-style {
     border-radius: 4px;
     width: auto;
   }
-  &>.ui-calendar {
+  & > .ui-calendar {
     display: flex !important;
-    &>input {
+    & > input {
       border-radius: 0 4px 4px 0 !important;
     }
-    &>.p-button {
+    & > .p-button {
       border-radius: 4px 0 0 4px !important;
       width: 2.357rem;
     }
-    &>.ui-datepicker {
+    & > .ui-datepicker {
       border-radius: 4px;
       box-shadow: 0px 3px 8px -4px black;
     }
   }
 }
 
-.p-float-label>label {
+.p-float-label > label {
   left: revert;
   right: 0.5rem;
 }
@@ -410,7 +414,7 @@ p-persian-calendar.app-persian-calendar-style {
 }
 
 // add a star to a label immediately after a required input
-input[required]+label::after {
+input[required] + label::after {
   content: "*";
   color: red;
   margin-inline-start: 0.22em;
@@ -428,7 +432,7 @@ input[required]+label::after {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  &>button {
+  & > button {
     width: auto !important;
     padding: 0.5rem 2rem !important;
   }
@@ -436,7 +440,7 @@ input[required]+label::after {
 
 @mixin app-child-px() {
   @for $i from 1 through 6 {
-    .app-child-px-#{$i}r>* {
+    .app-child-px-#{$i}r > * {
       padding-left: #{$i}#{"rem"} !important;
       padding-right: #{$i}#{"rem"} !important;
     }
@@ -450,7 +454,7 @@ input[required]+label::after {
   // to prevent nested class usage to cause indented elements.
   margin-left: -2rem;
   margin-right: -2rem;
-  &>[class*="p-col"] {
+  & > [class*="p-col"] {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -563,6 +567,13 @@ input[required]+label::after {
   .app-nested-level-3 {
     background-color: var(--app-nested-back-3);
   }
+  .p-button.p-disabled,
+  .p-button.p-component:disabled {
+    opacity: 1;
+    background-color: var(--app-disabled-background-color);
+    color: hsl(0, 0%, 71.2%);
+    border: 1px solid hsl(0, 0%, 65.2%);
+  }
   .p-button.p-button-text.p-button-plain:enabled:hover {
     background: var(--app-hover-background);
     color: white;
@@ -583,16 +594,16 @@ input[required]+label::after {
     .p-menuitem {
       background-color: var(--app-primary-color);
     }
-    .p-menuitem.p-menuitem-active>.p-menuitem-link {
+    .p-menuitem.p-menuitem-active > .p-menuitem-link {
       background: var(--app-primary-color);
     }
-    .p-menuitem.p-menuitem-active>.p-menuitem-link .p-menuitem-text {
+    .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text {
       color: var(--app-primary-text-color);
     }
     .p-menuitem-link .p-menuitem-text {
       color: var(--app-primary-text-color);
     }
-    .p-menubar-root-list>.p-menuitem>.p-menuitem-link .p-menuitem-text {
+    .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
       color: var(--app-primary-text-color);
     }
     a:hover {
@@ -605,20 +616,20 @@ input[required]+label::after {
     .pi::before {
       color: var(--app-primary-text-color) !important;
     }
-    .p-menubar-root-list>.p-menuitem.p-menuitem-active>.p-menuitem-link .p-menuitem-text,
-    .p-menubar-root-list>.p-menuitem.p-menuitem-active>.p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+    .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link .p-menuitem-text,
+    .p-menubar-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
       color: var(--app-primary-text-color) !important;
     }
-    .p-menubar-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
+    .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover .p-menuitem-text {
       color: var(--app-primary-text-color) !important;
     }
-    .p-menubar-root-list>.p-menuitem>.p-menuitem-link:focus {
+    .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus {
       box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
     }
     .p-menuitem-link:focus {
       box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
     }
-    .p-menuitem.p-menuitem-active>a {
+    .p-menuitem.p-menuitem-active > a {
       background-color: var(--app-hover-background) !important;
     }
   }
@@ -647,28 +658,28 @@ input[required]+label::after {
     box-shadow: inset 0 0 0 1px var(--app-focus-shadow);
   }
   .p-button.p-button-info:enabled:active,
-  .p-buttonset.p-button-info>.p-button:enabled:active,
-  .p-splitbutton.p-button-info>.p-button:enabled:active {
+  .p-buttonset.p-button-info > .p-button:enabled:active,
+  .p-splitbutton.p-button-info > .p-button:enabled:active {
     color: var(--app-primary-text-color);
   }
   .p-button.p-button-info,
-  .p-buttonset.p-button-info>.p-button,
-  .p-splitbutton.p-button-info>.p-button {
+  .p-buttonset.p-button-info > .p-button,
+  .p-splitbutton.p-button-info > .p-button {
     color: var(--app-primary-text-color);
   }
   .p-button.p-button-text.p-button-plain {
     background: var(--app-primary-color);
   }
   .p-button.p-button-info:enabled:hover,
-  .p-buttonset.p-button-info>.p-button:enabled:hover,
-  .p-splitbutton.p-button-info>.p-button:enabled:hover {
+  .p-buttonset.p-button-info > .p-button:enabled:hover,
+  .p-splitbutton.p-button-info > .p-button:enabled:hover {
     background: var(--app-hover-background);
     border-color: var(--app-primary-border);
     color: var(--app-primary-text-color);
   }
   .p-button.p-button-info:enabled:focus,
-  .p-buttonset.p-button-info>.p-button:enabled:focus,
-  .p-splitbutton.p-button-info>.p-button:enabled:focus {
+  .p-buttonset.p-button-info > .p-button:enabled:focus,
+  .p-splitbutton.p-button-info > .p-button:enabled:focus {
     box-shadow: 0 0 0 0.2rem var(--app-focus-shadow);
   }
   .p-button:enabled:hover {
@@ -679,7 +690,7 @@ input[required]+label::after {
     background: var(--app-primary-color);
     border-color: var(--app-primary-border);
   }
-  .p-datatable .p-datatable-thead>tr>th {
+  .p-datatable .p-datatable-thead > tr > th {
     background: var(--app-primary-color);
     // border: 1px solid var(--app-primary-border);
     color: var(--app-primary-text-color);
@@ -725,7 +736,7 @@ input[required]+label::after {
       box-shadow: 0 0 0 0.2rem var(--app-focus-shadow);
     }
   }
-  .p-datatable .p-datatable-tbody>tr {
+  .p-datatable .p-datatable-tbody > tr {
     background: transparent;
   }
 }
@@ -775,7 +786,7 @@ p-tree {
   margin-inline-end: 0.5rem;
 }
 
-.p-contextmenu .p-menuitem.p-menuitem-active>.p-menuitem-link {
+.p-contextmenu .p-menuitem.p-menuitem-active > .p-menuitem-link {
   text-decoration: none;
   &:hover {
     text-decoration: none !important;
