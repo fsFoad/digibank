@@ -43,7 +43,7 @@
         <tr>
           <td>{{i + 1}}</td>
           <td>{{row.contactTypeGroups|paramTitle :contactTypeGroups:'value':'label'}}</td>
-          <td>{{row.contactInfo}}</td>
+          <td>{{row.discContact}}</td>
           <td>{{row.discContact}}</td>
           <!--          <td>{{row.startDate | castToDate}}</td>-->
           <!--          <td>{{row.endDate | castToDate}}</td>-->
@@ -57,7 +57,7 @@
 
 
   <div>
-    <button pButton label="ایجاد اطلاعات نشانی +" class="p-button-info"  (click)="createAddressInfo()"></button>
+    <button pButton label="ایجاد اطلاعات نشانی +" class="p-button-info" (click)="createAddressInfo()"></button>
   </div>
   <p-card header="اطلاعات نشانی" class="p-d-flex p-my-5">
 
@@ -69,9 +69,9 @@
           <th translate>استان</th>
           <th translate>شهر</th>
           <th translate>منطقه</th>
-          <!--          <th translate>نحوه تصرف</th>-->
           <th translate style="width:35%;">شرح نشانی</th>
           <th translate>کد پستی</th>
+          <!--          <th translate>نحوه تصرف</th>-->
           <!--          <th translate>تاریخ شروع</th>-->
           <!--          <th translate>تاریخ پایان</th>-->
         </tr>
@@ -83,9 +83,9 @@
           <td>{{row.province|paramTitle :province:'value':'label'}}</td>
           <td>{{row.city|paramTitle :city:'value':'label'}}</td>
           <td>{{row.mantaghe|paramTitle :mantaghe:'value':'label'}}</td>
-          <!--          <td>{{row.nahveTasarofs|paramTitle :nahveTasarofs:'value':'label'}} </td>-->
           <td>{{row.desAddress}}</td>
           <td>{{row.postalCode}}</td>
+          <!--          <td>{{row.nahveTasarofs|paramTitle :nahveTasarofs:'value':'label'}} </td>-->
           <!--          <td>{{row.startDate| castToDate}}</td>-->
           <!--          <td>{{row.endDate| castToDate}}</td>-->
         </tr>
@@ -93,5 +93,7 @@
     </p-table>
   </p-card>
 </div>
-<app-create-contact *ngIf="contactInfoFlag" (close)="onClose()" (myListContact)="addItemContact($event)"></app-create-contact>
-<app-create-address *ngIf="addressInfoFlag"  (close)="onClose()" (myListAddress)="addItemAddress($event)"></app-create-address>
+<app-update-contact *ngIf="contactInfoFlag" (close)="onClose()"
+                    (myListUpdateConstants)="addItemContact($event)"></app-update-contact>
+<app-update-address *ngIf="addressInfoFlag" (close)="onClose()"
+                    (myListUpdateAddress)="addItemAddress($event)"></app-update-address>
