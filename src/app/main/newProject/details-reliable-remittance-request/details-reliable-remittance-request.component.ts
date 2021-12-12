@@ -47,7 +47,6 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
 
   ngOnInit(): void {
 
-    debugger
     this.SourceAccountNumber = this.inputDetails.SourceAccountNumber;
     this.amounts = this.inputDetails.amounts;
     this.registrar = this.inputDetails.registrar;
@@ -57,7 +56,6 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
     this.verificationCode = this.inputDetails.verificationCode;
     this.remittancesNumber = this.inputDetails.remittancesNumber;
 
-    debugger
 
     switch (this.registrar) {
       case 'علی محمدی': {
@@ -109,7 +107,6 @@ export class DetailsReliableRemittanceRequestComponent implements OnInit {
         break;
       }
     }
-    debugger
     switch (this.registrar) {
       case 'علی محمدی': {
         this.table2List = [{

@@ -45,12 +45,10 @@ export class RequestGhobozComponent implements OnInit {
 
   ngOnInit(): void {
 
-    debugger
     this.amounts = this.inputDetails.amounts;
     this.registrar = this.inputDetails.registrar;
     this.ghabzType = this.inputDetails.ghabzType;
     this.accountnNumberdeterminesAmount = this.inputDetails.accountnNumberdeterminesAmount;
-    debugger
 
     switch (this.registrar) {
       case 'علی محمدی': {
@@ -102,7 +100,6 @@ export class RequestGhobozComponent implements OnInit {
         break;
       }
     }
-    debugger
     switch (this.registrar) {
       case 'علی محمدی': {
         this.table2List = [{
