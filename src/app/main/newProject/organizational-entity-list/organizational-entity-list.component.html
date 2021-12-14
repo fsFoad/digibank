@@ -1,0 +1,34 @@
+<p-panel header="اصلاح ذینفع سازمانی">
+  <div class="app-mx-5r" *ngIf="!detailsFlag">
+    <p-card>
+      <p-table [value]="fsList">
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate>نام ذینفع</th>
+            <th translate>تاریخ تعریف</th>
+            <th translate>شماره تماس</th>
+            <th translate>نوع ذینفع</th>
+            <th translate>نوع رابطه</th>
+            <th translate>عملیات</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{row.customerName}}</td>
+            <td>{{row.registrationDate|castToDate}}</td>
+            <td>{{row.contactNumber}}</td>
+            <td>{{row.customerType}}</td>
+            <td>{{row.relationshipType}}</td>
+            <td>
+              <button pButton icon="pi pi-chevron-circle-right" (click)="selectRow(row)"></button>&nbsp;
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+  <app-update-organizational-entity-manager *ngIf="detailsFlag" [inputParam]="fsList"
+                       (close)="onClose($event)"></app-update-organizational-entity-manager>
+</p-panel>

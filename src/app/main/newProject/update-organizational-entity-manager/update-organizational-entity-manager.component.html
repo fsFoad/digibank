@@ -1,0 +1,27 @@
+
+  <p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
+    <p-tabPanel header="اطلاعات سازمانی" [disabled]="true" >
+      <app-organizational-entity-info-editor></app-organizational-entity-info-editor>
+    </p-tabPanel>
+    <p-tabPanel header="اطلاعات هیئت مدیره و سهامداران" [disabled]="true" >
+      <app-board-of-directors-editor></app-board-of-directors-editor>
+    </p-tabPanel>
+    <p-tabPanel header="امضاء" [disabled]="true" >
+      <app-party-signature-editor></app-party-signature-editor>
+    </p-tabPanel>
+    <p-tabPanel header="نقش سازمانی" [disabled]="true" >
+      <app-organizational-role-editor></app-organizational-role-editor>
+    </p-tabPanel>
+    <p-tabPanel header="اطلاعات تماس" [disabled]="true" >
+      <app-organizational-contact-info-editor></app-organizational-contact-info-editor>
+    </p-tabPanel>
+    <p-tabPanel header="مستندات" [disabled]="true" >
+      <app-organizational-entity-documents-editor></app-organizational-entity-documents-editor>
+    </p-tabPanel>
+  </p-tabView>
+
+  <div class="bottom-buttons  p-shadow-3 section">
+    <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
+    <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="activeTab >= 5"></button>
+  </div>
+
