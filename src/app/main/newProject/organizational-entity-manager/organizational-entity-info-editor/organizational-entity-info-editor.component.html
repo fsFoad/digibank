@@ -21,7 +21,7 @@
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="بانک" [options]="bankNameList"></p-dropdown>
+        <p-dropdown [autoDisplayFirst]="false" placeholder="بانک" [options]="bankNameList"></p-dropdown>
         <!-- <label>بانک</label> -->
       <!-- </span> -->
     </div>
@@ -30,13 +30,13 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="نوع ذینفع سازمانی"></p-dropdown>
+        <p-dropdown placeholder="نوع ذینفع سازمانی" [autoDisplayFirst]="false" [options]="organizationalUnit"></p-dropdown>
         <!-- <label>نوع ذینفع سازمانی</label> -->
       <!-- </span> -->
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="وضعیت ذینفع سازمانی"></p-dropdown>
+        <p-dropdown [autoDisplayFirst]="false" placeholder="وضعیت ذینفع سازمانی" [options]="statusZinaf"></p-dropdown>
         <!-- <label>وضعیت ذینفع سازمانی</label> -->
       <!-- </span> -->
     </div>
@@ -48,7 +48,7 @@
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="نوع مالکیت"></p-dropdown>
+        <p-dropdown [autoDisplayFirst]="false" placeholder="نوع مالکیت" [options]="noMalekiat"></p-dropdown>
         <!-- <label>نوع مالکیت</label> -->
       <!-- </span> -->
     </div>

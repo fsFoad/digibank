@@ -9,6 +9,10 @@ import {Constants} from '../../../shared/constants/Constants';
 export class OrganizationalEntityInfoEditorComponent implements OnInit {
   availableRoles=Constants.availableRoles;
   bankNameList=Constants.bankNameList;
+  organizationalUnit = Constants.organizationalUnit;
+  statusZinaf = Constants.statusZinaf;
+  noMalekiat = Constants.noMalekiat;
+
   constructor() { }
 
   ngOnInit(): void {
