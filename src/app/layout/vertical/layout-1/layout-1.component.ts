@@ -106,12 +106,20 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             items: [
               {
                 id: 'real',
-                label: 'تعریف',
-                translate: 'تعریف',
+                label: 'تعریف ذینفع سازمانی',
+                translate: 'تعریف ذینفع سازمانی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/organizational-entity-manager',
-              }
+              },
+              {
+                id: 'organizationalEntityList',
+                label: 'اصلاح ذینفع سازمانی',
+                translate: 'اصلاح ذینفع سازمانی',
+                type: 'item',
+                icon: 'account_balance_wallet',
+                routerLink: '/organizationalEntityList',
+              },
             ]
           },
           {
