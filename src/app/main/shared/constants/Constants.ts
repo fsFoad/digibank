@@ -163,7 +163,13 @@ static bankNameList = [
     { value: '0',label: '-'},
     { value: '1',label: '1-کارمند'},
     { value: '2',label: '2-مشتری'},
-    { value: '3',label: '3-نمایندگی، کارگزاری'},
+    { value: '3',label: '3-نمایندگی کارگزاری'},
+    { value: '4',label: '4-تامین کننده'},
+  ];
+ static availableRolespickList = [
+    { value: '1',label: '1-کارمند'},
+    { value: '2',label: '2-مشتری'},
+    { value: '3',label: '3-نمایندگی کارگزاری'},
     { value: '4',label: '4-تامین کننده'},
   ];
   static codeHoze = [
