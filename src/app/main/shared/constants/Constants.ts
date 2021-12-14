@@ -151,6 +151,11 @@ export class Constants {
     { value: '1', label: 'محل کار' },
     { value: '2', label: 'محل سکونت' },
   ];
+  static statusZinaf = [
+    { value: '0', label: '-' },
+    { value: '1', label: 'فعال' },
+    { value: '2', label: 'غیر فعال' },
+  ];
 static bankNameList = [
     {label: '-', value: 1},
     {label: 'ملی', value: 2},
