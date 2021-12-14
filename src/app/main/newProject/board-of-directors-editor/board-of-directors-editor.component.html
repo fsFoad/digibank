@@ -1,76 +1,8 @@
-<div class="app-mx-5r">
-  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-    <div class="p-field p-col-3">
-      <!-- <span class="p-float-label"> -->
-        <input pInputText placeholder="کد ارجاع مشتری">
-        <!-- <label>کد ارجاع مشتری</label> -->
-      <!-- </span> -->
-    </div>
-    <div class="p-field p-col-3">
-      <!-- <span class="p-float-label"> -->
-        <input pInputText placeholder="شناسه ملی">
-        <!-- <label>شناسه ملی</label> -->
-      <!-- </span> -->
-    </div>
-    <div class="p-field p-col-6">
-      <!-- <span class="p-float-label"> -->
-        <input required placeholder="عنوان" pInputText>
-        <!-- <label>عنوان</label> -->
-      <!-- </span> -->
-    </div>
-  </div>
-
-  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-    <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <input pInputText placeholder="کد ارجاع ذینفع شخصی">
-        <!-- <label>کد ارجاع ذینفع شخصی</label> -->
-      <!-- </span> -->
-    </div>
-    <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <input pInputText placeholder="کد ملی / کد اتباع / شناسه ملی">
-        <!-- <label>کد ملی / کد اتباع / شناسه ملی</label> -->
-      <!-- </span> -->
-    </div>
-    <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <p-dropdown [autoDisplayFirst]="false" placeholder="نوع سمت"></p-dropdown>
-        <!-- <label>نوع سمت</label> -->
-      <!-- </span> -->
-    </div>
-    <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <input pInputText placeholder="حدود اختیارات">
-        <!-- <label>حدود اختیارات</label> -->
-      <!-- </span> -->
-    </div>
-  </div>
-
-  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-    <div class="p-field p-col-3">
-      <!-- <span class="p-float-label"> -->
-        <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
-        <!-- <label>تاریخ شروع</label> -->
-      <!-- </span> -->
-      <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
-    </div>
-    <div class="p-field p-col-3">
-      <!-- <span class="p-float-label"> -->
-        <p-persian-calendar placeholder="تاریخ پایان" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
-        <!-- <label>تاریخ پایان</label> -->
-      <!-- </span> -->
-      <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
-    </div>
-    <div class="p-field p-col-3 p-d-flex p-ai-center">
-      <p-button class="p-button-raised" icon="pi pi-plus" [ngStyle]="{width: 'auto'}" title="افزودن"></p-button>
-    </div>
-  </div>
-</div>
-
 <!-- <p-divider class="app-divider-h">اطلاعات ثبتی</p-divider> -->
-
-<p-card header="اطلاعات ثبتی">
+<div *ngIf="!createRegistrationInfoFlag" class="p-mb-3">
+  <button pButton label="ایجاد اطلاعات ثبتی +" class="p-button-info" (click)="createRegistrationInfo()"></button>
+</div>
+<p-card  header="اطلاعات ثبتی" *ngIf="!createRegistrationInfoFlag">
   <p-table [value]="rows">
     <ng-template pTemplate="header">
       <tr>
@@ -102,3 +34,4 @@
     </ng-template>
   </p-table>
 </p-card>
+<app-create-registration-info  (close)="onClose()"  *ngIf="createRegistrationInfoFlag"></app-create-registration-info>

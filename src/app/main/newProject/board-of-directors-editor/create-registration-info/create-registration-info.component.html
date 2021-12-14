@@ -1,1 +1,73 @@
-<p>create-registration-info works!</p>
+<div class="app-mx-5r">
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <!-- <span class="p-float-label"> -->
+      <input pInputText placeholder="کد ارجاع مشتری">
+      <!-- <label>کد ارجاع مشتری</label> -->
+      <!-- </span> -->
+    </div>
+    <div class="p-field p-col-3">
+      <!-- <span class="p-float-label"> -->
+      <input pInputText placeholder="شناسه ملی">
+      <!-- <label>شناسه ملی</label> -->
+      <!-- </span> -->
+    </div>
+    <div class="p-field p-col-6">
+      <!-- <span class="p-float-label"> -->
+      <input required placeholder="عنوان" pInputText>
+      <!-- <label>عنوان</label> -->
+      <!-- </span> -->
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <!-- <span class="p-float-label"> -->
+      <input pInputText placeholder="کد ارجاع ذینفع شخصی">
+      <!-- <label>کد ارجاع ذینفع شخصی</label> -->
+      <!-- </span> -->
+    </div>
+    <div class="p-field p-col">
+      <!-- <span class="p-float-label"> -->
+      <input pInputText placeholder="کد ملی / کد اتباع / شناسه ملی">
+      <!-- <label>کد ملی / کد اتباع / شناسه ملی</label> -->
+      <!-- </span> -->
+    </div>
+    <div class="p-field p-col">
+      <!-- <span class="p-float-label"> -->
+      <p-dropdown [autoDisplayFirst]="false" placeholder="نوع سمت" [options]="postOrganization"></p-dropdown>
+      <!-- <label>نوع سمت</label> -->
+      <!-- </span> -->
+    </div>
+    <div class="p-field p-col">
+      <!-- <span class="p-float-label"> -->
+      <input pInputText placeholder="حدود اختیارات">
+      <!-- <label>حدود اختیارات</label> -->
+      <!-- </span> -->
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <!-- <span class="p-float-label"> -->
+      <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+      <!-- <label>تاریخ شروع</label> -->
+      <!-- </span> -->
+      <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
+    </div>
+    <div class="p-field p-col-3">
+      <!-- <span class="p-float-label"> -->
+      <p-persian-calendar placeholder="تاریخ پایان" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+      <!-- <label>تاریخ پایان</label> -->
+      <!-- </span> -->
+      <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
+    </div>
+   <div class="p-field p-col-3"></div>
+   <div class="p-field p-col-3"></div>
+
+  </div>
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
+    <button label="تایید" pButton (click)="Confirmation()"></button>
+    <button label="انصراف" pButton (click)="onClose()"></button>
+  </div>
+</div>
