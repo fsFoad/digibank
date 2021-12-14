@@ -156,6 +156,11 @@ export class Constants {
     { value: '1', label: 'فعال' },
     { value: '2', label: 'غیر فعال' },
   ];
+  static noMalekiat = [
+    { value: '0', label: '-' },
+    { value: '1', label: 'خصوصی' },
+
+  ];
 static bankNameList = [
     {label: '-', value: 1},
     {label: 'ملی', value: 2},
