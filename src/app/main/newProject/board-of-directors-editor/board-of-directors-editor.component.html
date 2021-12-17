@@ -3,7 +3,7 @@
   <button pButton label="ایجاد اطلاعات ثبتی +" class="p-button-info" (click)="createRegistrationInfo()"></button>
 </div>
 <p-card  header="اطلاعات ثبتی" *ngIf="!createRegistrationInfoFlag">
-  <p-table [value]="rows">
+  <p-table [value]="TBListRegistrationInfo">
     <ng-template pTemplate="header">
       <tr>
         <th translate>ردیف</th>
@@ -14,17 +14,17 @@
         <th translate>کد ارجاع ذینفع شخصی</th>
         <th translate>تاریخ شروع</th>
         <th translate>تاریخ پایان</th>
-        <th style="width: 3%;"></th>
+        <th translate>عملیات</th>
       </tr>
     </ng-template>
     <ng-template let-i="rowIndex" pTemplate="body" let-row>
       <tr>
         <td>{{i + 1}}</td>
         <td>{{row.title}}</td>
-        <td>{{row.semat}}</td>
-        <td>{{row.codeMelli}}</td>
-        <td>{{row.hododeEkhtiarat}}</td>
-        <td>{{row.codeErjaZinafShakhsi}}</td>
+        <td>{{row.postType|paramTitle :postOrganization:'value':'label'}}</td>
+        <td>{{row.nationalCode}}</td>
+        <td>{{row.LimitsAuthority}}</td>
+        <td>{{row.erjaCodeZinaf}}</td>
         <td>{{row.startDate|castToDate}}</td>
         <td>{{row.endDate|castToDate}}</td>
         <td>
@@ -34,4 +34,4 @@
     </ng-template>
   </p-table>
 </p-card>
-<app-create-registration-info  (close)="onClose()"  *ngIf="createRegistrationInfoFlag"></app-create-registration-info>
+<app-create-registration-info  (close)="onClose()"  *ngIf="createRegistrationInfoFlag" (myListRegistrationInfo)="AddItemRegistrationInfo($event)"></app-create-registration-info>

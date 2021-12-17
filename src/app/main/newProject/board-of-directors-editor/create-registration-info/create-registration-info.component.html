@@ -1,20 +1,20 @@
-<div class="app-mx-5r">
+<div class="app-mx-5r"  [formGroup]="form">
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-3">
       <!-- <span class="p-float-label"> -->
-      <input pInputText placeholder="کد ارجاع مشتری">
+      <input pInputText placeholder="کد ارجاع مشتری" formControlName="erjaCode">
       <!-- <label>کد ارجاع مشتری</label> -->
       <!-- </span> -->
     </div>
     <div class="p-field p-col-3">
       <!-- <span class="p-float-label"> -->
-      <input pInputText placeholder="شناسه ملی">
+      <input pInputText placeholder="شناسه ملی" formControlName="nationalCode">
       <!-- <label>شناسه ملی</label> -->
       <!-- </span> -->
     </div>
     <div class="p-field p-col-6">
       <!-- <span class="p-float-label"> -->
-      <input required placeholder="عنوان" pInputText>
+      <input required placeholder="عنوان" pInputText formControlName="title">
       <!-- <label>عنوان</label> -->
       <!-- </span> -->
     </div>
@@ -23,25 +23,26 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-      <input pInputText placeholder="کد ارجاع ذینفع شخصی">
+      <input pInputText placeholder="کد ارجاع ذینفع شخصی" formControlName="erjaCodeZinaf">
       <!-- <label>کد ارجاع ذینفع شخصی</label> -->
       <!-- </span> -->
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-      <input pInputText placeholder="کد ملی / کد اتباع / شناسه ملی">
+      <input pInputText placeholder="کد ملی / کد اتباع / شناسه ملی" formControlName="nationalCodeAtba">
       <!-- <label>کد ملی / کد اتباع / شناسه ملی</label> -->
       <!-- </span> -->
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-      <p-dropdown [autoDisplayFirst]="false" placeholder="نوع سمت" [options]="postOrganization"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" placeholder="نوع سمت" formControlName="postType"
+                  [options]="postOrganization"></p-dropdown>
       <!-- <label>نوع سمت</label> -->
       <!-- </span> -->
     </div>
     <div class="p-field p-col">
       <!-- <span class="p-float-label"> -->
-      <input pInputText placeholder="حدود اختیارات">
+      <input pInputText placeholder="حدود اختیارات" formControlName="LimitsAuthority">
       <!-- <label>حدود اختیارات</label> -->
       <!-- </span> -->
     </div>
@@ -50,14 +51,16 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-3">
       <!-- <span class="p-float-label"> -->
-      <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+      <p-persian-calendar placeholder="تاریخ شروع" formControlName="startDate" yearRange="1300:1410"
+                          class="app-persian-calendar-style"></p-persian-calendar>
       <!-- <label>تاریخ شروع</label> -->
       <!-- </span> -->
       <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
     </div>
     <div class="p-field p-col-3">
       <!-- <span class="p-float-label"> -->
-      <p-persian-calendar placeholder="تاریخ پایان" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+      <p-persian-calendar placeholder="تاریخ پایان" formControlName="endDate"yearRange="1300:1410"
+                          class="app-persian-calendar-style"></p-persian-calendar>
       <!-- <label>تاریخ پایان</label> -->
       <!-- </span> -->
       <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
