@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Constants} from '../../../shared/constants/Constants';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import { registrationInfo} from '../../models/DigiBankModel';
 
 @Component({
   selector: 'app-create-registration-info',
@@ -6,10 +9,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-registration-info.component.scss']
 })
 export class CreateRegistrationInfoComponent implements OnInit {
-
-  constructor() { }
+  @Output() close = new EventEmitter<string>();
+  @Output() myListRegistrationInfo: EventEmitter<registrationInfo[]> = new EventEmitter()
+  postOrganization = Constants.postOrganization;
+  tempList:registrationInfo[]=[];
+  public form: FormGroup;
+  constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      erjaCode:[''],
+      nationalCode:[''],
+      title:[''],
+      erjaCodeZinaf:[''],
+      nationalCodeAtba:[''],
+      postType:[''],
+      LimitsAuthority:[''],
+      startDate:[''],
+      endDate:[''],
+    });
+  }
 
   ngOnInit(): void {
   }
 
+  Confirmation() {
+    this.tempList.push(this.form.value);
+    this.myListRegistrationInfo.emit(this.tempList)
+    this.close.emit('close');
+  }
+
+  onClose() {
+    this.close.emit('close');
+  }
 }

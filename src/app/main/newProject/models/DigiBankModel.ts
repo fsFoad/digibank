@@ -17,3 +17,14 @@ export interface AddressInfo {
   // startDate:number;
   // endDate:number;
 }
+export interface registrationInfo{
+  erjaCode:number;
+  nationalCode:number;
+  title:string;
+  erjaCodeZinaf:number;
+  nationalCodeAtba:number;
+  postType:string;
+  LimitsAuthority:string;
+  startDate:number;
+  endDate:number;
+}
