@@ -1,103 +1,18 @@
 :host {
-    background-image: url(/assets/images/backgrounds/back1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.setToCenter {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#withLabel {
-    width: 50%;
-}
-
-.img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-repeat: repeat;
-}
-
-:host {
-    width: 100%;
-    background-repeat: repeat;
-}
-
-#panelDiv {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-content: center;
     align-items: center;
-    text-align: center;
     width: 100%;
-    height: 100%;
-    background-position: 50%;
-}
-
-// input {
-//     background-color: #086976;
-// }
-
-::-webkit-input-placeholder {
-    color: #ffffff;
-}
-
-#userDiv {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    // margin-right: 3%;
-    margin-top: 5%;
-}
-#loginTypeDiv {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    // margin-right: 3%;
-}
-#passDiv {
-    display: flex;
-    align-items: center;
-    width: 80%;
-    // margin-right: 3%;
-}
-
-// #btnDiv {
-//     margin-bottom: 5%;
-//     height: 50%;
-// }
-
-p-button#btnLog {
-    background-color: red;
-    width: 100%;
-    height: 25%;
-}
-.loginType {
-    width: 100% !important;
-}
-
-.PanelLogin {
-    //justify-content: center;
-    //align-content: center;
-    //align-items: center;
-    //text-align: center;
-}
-
-.userpasslabel {
-    width: 18em;
-    display: inline-block;
-    padding-inline-end: 0.3em;
-    text-align: center;
-}
-
-#btnLog {
-    padding: 1em 3em;
+    background-image: url(/assets/images/backgrounds/back1.jpg);
+    background-repeat: repeat;
+    background-size: cover;
 }
 
 :host ::ng-deep .p-panel .p-panel-content {
     background: rgba(255, 255, 255, 0.65);
+}
+
+input,
+p-dropdown {
+    width: 190px;
 }

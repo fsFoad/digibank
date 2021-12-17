@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from "../guard/login.service";
 import { Router } from "@angular/router";
-import { NotifierService } from "../../main/shared/notifier/notifier.module";
+import { MessageService, NotifierService } from "../../main/shared/notifier/notifier.module";
+import { FuseConfigService } from '@fuse/services/config.service';
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.scss']
+    styleUrls: ['./login.component.scss'],
+    providers: [NotifierService, MessageService],
 })
 export class LoginComponent implements OnInit {
     userName: string;
@@ -15,13 +17,14 @@ export class LoginComponent implements OnInit {
         { label: 'رمز ثابت', value: 1 },
         { label: 'شناسایی دو عاملی', value: 2 },
     ]
-    errorMessage: string;
     loading: boolean;
     constructor(
         private loginService: LoginService,
         private router: Router,
+        private _fuseConfigService: FuseConfigService,
         private notifierService: NotifierService
     ) {
+        this._fuseConfigService.config = { layout: { noMenu: true, content: { noPadding: true } } };
     }
 
     ngOnInit(): void {
@@ -39,7 +42,6 @@ export class LoginComponent implements OnInit {
                 this.router.navigate(['/'])
             } else {
                 this.notifierService.showError({ detail: 'نام کاربری یا رمز عبور معتبر نمی باشد' })
-                // this.errorMessage = 'نام کاربری یا رمز عبور معتبر نمی باشد';
                 this.loginService.authenticated = false;
                 this.loading = false;
             }
