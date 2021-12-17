@@ -1,7 +1,7 @@
 
   <p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
     <p-tabPanel header="اطلاعات سازمانی" [disabled]="true" >
-      <app-organizational-entity-info-editor></app-organizational-entity-info-editor>
+      <app-organizational-entity-info-editor [inputIdentity]="inputParam"></app-organizational-entity-info-editor>
     </p-tabPanel>
     <p-tabPanel header="اطلاعات هیئت مدیره و سهامداران" [disabled]="true" >
       <app-board-of-directors-editor></app-board-of-directors-editor>

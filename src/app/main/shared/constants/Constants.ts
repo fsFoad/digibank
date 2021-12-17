@@ -127,11 +127,11 @@ export class Constants {
     },
   ];
   static organizationalUnit = [
-    {value: '000', label: '-'},
-    {value: '111', label: 'شرکت هلدینگ'},
-    {value: '222', label: 'شرکت تابعه ۱'},
-    {value: '444', label: 'شرکت تابعه ۲'},
-    {value: '333', label: 'شرکت تابعه ۳'},
+    {value: '0', label: '-'},
+    {value: '1', label: 'شرکت هلدینگ'},
+    {value: '2', label: 'شرکت تابعه ۱'},
+    {value: '3', label: 'شرکت تابعه ۲'},
+    {value: '4', label: 'شرکت تابعه ۳'},
   ];
   static shenasnameType = [
     {value: '0', label: '-'},
@@ -167,12 +167,12 @@ export class Constants {
 
   ];
   static bankNameList = [
-    {label: '-', value: 1},
-    {label: 'ملی', value: 2},
-    {label: 'ملت', value: 3},
-    {label: 'صادرات', value: 4},
-    {label: 'پاسارگاد', value: 5},
-    {label: 'تجارت', value: 6},
+    {label: '-', value: '0'},
+    {label: 'ملی', value: '1'},
+    {label: 'ملت', value: '2'},
+    {label: 'صادرات', value: '3'},
+    {label: 'پاسارگاد', value: '4'},
+    {label: 'تجارت', value: '5'},
   ];
   static availableRoles = [
     {value: '0', label: '-'},
