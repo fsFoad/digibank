@@ -2,77 +2,77 @@
 <div class="app-mx-5r" [formGroup]="form">
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <input placeholder="شناسه ملی" formControlName="nationalCode" pInputText>
-        <!-- <label>شناسه ملی</label> -->
-      <!-- </span> -->
+       <span class="p-float-label">
+        <input formControlName="nationalCode" pInputText>
+         <label>شناسه ملی</label>
+       </span>
     </div>
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <input placeholder="کد سازمانی" formControlName="organizationalCode" pInputText>
-        <!-- <label>کد سازمانی</label> -->
-      <!-- </span> -->
+       <span class="p-float-label">
+        <input formControlName="organizationalCode" pInputText>
+         <label>کد سازمانی</label>
+       </span>
     </div>
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="نقش سازمانی" formControlName="availableRoles" [options]="availableRoles"></p-dropdown>
-        <!-- <label>نقش سازمانی</label> -->
-      <!-- </span> -->
+       <span class="p-float-label">
+        <p-dropdown formControlName="availableRoles" [options]="availableRoles"></p-dropdown>
+         <label>نقش سازمانی</label>
+       </span>
     </div>
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <p-dropdown [autoDisplayFirst]="false" placeholder="بانک" formControlName="bankNameList"
+       <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" formControlName="bankNameList"
                     [options]="bankNameList"></p-dropdown>
-        <!-- <label>بانک</label> -->
-      <!-- </span> -->
+         <label>بانک</label>
+       </span>
     </div>
   </div>
   
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <p-dropdown placeholder="نوع ذینفع سازمانی" formControlName="organizationalUnit"
+       <span class="p-float-label">
+        <p-dropdown formControlName="organizationalUnit"
                     [autoDisplayFirst]="false" [options]="organizationalUnit"></p-dropdown>
-        <!-- <label>نوع ذینفع سازمانی</label> -->
-      <!-- </span> -->
+         <label>نوع ذینفع سازمانی</label>
+       </span>
     </div>
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
+       <span class="p-float-label">
         <p-dropdown [autoDisplayFirst]="false" formControlName="statusZinaf"
-                    placeholder="وضعیت ذینفع سازمانی" [options]="statusZinaf"></p-dropdown>
-        <!-- <label>وضعیت ذینفع سازمانی</label> -->
-      <!-- </span> -->
+                    [options]="statusZinaf"></p-dropdown>
+         <label>وضعیت ذینفع سازمانی</label>
+       </span>
     </div>
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
-        <input placeholder="کد شهاب"  formControlName="shahabCode" pInputText>
-        <!-- <label>کد شهاب</label> -->
-      <!-- </span> -->
+       <span class="p-float-label">
+        <input formControlName="shahabCode" pInputText>
+         <label>کد شهاب</label>
+       </span>
     </div>
     <div class="p-field p-col">
-      <!-- <span class="p-float-label"> -->
+       <span class="p-float-label">
         <p-dropdown [autoDisplayFirst]="false" formControlName="noMalekiat"
-                    placeholder="نوع مالکیت" [options]="noMalekiat"></p-dropdown>
-        <!-- <label>نوع مالکیت</label> -->
-      <!-- </span> -->
+                   [options]="noMalekiat"></p-dropdown>
+         <label>نوع مالکیت</label>
+       </span>
     </div>
   </div>
   
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-9">
-      <!-- <span class="p-float-label"> -->
-        <input placeholder="عنوان" formControlName="title" pInputText>
-        <!-- <label>عنوان</label> -->
-      <!-- </span> -->
+       <span class="p-float-label">
+        <input formControlName="title" pInputText>
+         <label>عنوان</label>
+       </span>
     </div>
   </div>
   
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-9">
-      <!-- <span class="p-float-label"> -->
-        <input placeholder="عنوان انگلیسی" formControlName="enTitle" pInputText>
-        <!-- <label>عنوان انگلیسی</label> -->
-      <!-- </span> -->
+       <span class="p-float-label">
+        <input formControlName="enTitle" pInputText>
+         <label>عنوان انگلیسی</label>
+       </span>
     </div>
   </div>
 </div>
@@ -82,37 +82,37 @@
   <div class="app-mx-10r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
-        <!-- <span class="p-float-label"> -->
-          <input placeholder="شماره ثبت" formControlName="numberSubmit" pInputText>
-          <!-- <label>شماره ثبت</label> -->
-        <!-- </span> -->
+         <span class="p-float-label">
+          <input formControlName="numberSubmit" pInputText>
+           <label>شماره ثبت</label>
+         </span>
       </div>
       <div class="p-field p-col">
-        <!-- <span class="p-float-label"> -->
-          <input placeholder="شماره روزنامه رسمی" formControlName="numberNewspaperOfficial" pInputText>
-          <!-- <label>شماره روزنامه رسمی</label> -->
-        <!-- </span> -->
+         <span class="p-float-label">
+          <input formControlName="numberNewspaperOfficial" pInputText>
+           <label>شماره روزنامه رسمی</label>
+         </span>
       </div>
       <div class="p-field p-col">
-        <!-- <span class="p-float-label"> -->
-          <input placeholder="حوزه ثبت" formControlName="areaRegistration" pInputText>
-          <!-- <label>حوزه ثبت</label> -->
-        <!-- </span> -->
+         <span class="p-float-label">
+          <input formControlName="areaRegistration" pInputText>
+           <label>حوزه ثبت</label>
+         </span>
       </div>
       <div class="p-field p-col">
-        <!-- <span class="p-float-label"> -->
-          <input placeholder="تاریخ ثبت" formControlName="dateRegistration" pInputText>
-          <!-- <label>تاریخ ثبت</label> -->
-        <!-- </span> -->
+         <span class="p-float-label">
+          <input formControlName="dateRegistration" pInputText>
+           <label>تاریخ ثبت</label>
+         </span>
       </div>
     </div>
 
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col-3">
-        <!-- <span class="p-float-label"> -->
-          <input placeholder="محل ثبت" formControlName="placeRegistration" pInputText>
-          <!-- <label>محل ثبت</label> -->
-        <!-- </span> -->
+         <span class="p-float-label">
+          <input formControlName="placeRegistration" pInputText>
+           <label>محل ثبت</label>
+         </span>
       </div>
     </div>
   </div>
