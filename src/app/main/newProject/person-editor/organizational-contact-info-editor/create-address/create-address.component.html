@@ -2,32 +2,50 @@
   <div class="app-mx-20r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
-        <p-dropdown [options]="contactTypes" formControlName="contactTypes" placeholder="نوع نشانی"
+         <span class="p-float-label">
+        <p-dropdown [options]="contactTypes" formControlName="contactTypes"
                     [autoDisplayFirst]="false"></p-dropdown>
+                     <label>نوع نشانی</label>
+         </span>
       </div>
       <div class="p-field p-col">
-        <p-dropdown [options]="provinceList" formControlName="province" placeholder="استان"
+         <span class="p-float-label">
+        <p-dropdown [options]="provinceList" formControlName="province"
                     [autoDisplayFirst]="false"></p-dropdown>
+            <label>استان</label>
+         </span>
       </div>
       <div class="p-field p-col">
-        <p-dropdown [options]="cityList" formControlName="city" placeholder="شهر"
+         <span class="p-float-label">
+        <p-dropdown [options]="cityList" formControlName="city"
                     [autoDisplayFirst]="false"></p-dropdown>
+            <label>شهر</label>
+         </span>
       </div>
 
     </div>
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
-        <p-dropdown class="p-dropdown-w80" formControlName="mantaghe" placeholder="منطقه" [autoDisplayFirst]="false"
+          <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" formControlName="mantaghe" [autoDisplayFirst]="false"
                     [options]="mantaghe"></p-dropdown>
+              <label>منطقه</label>
+         </span>
       </div>
       <div class="p-field p-col">
-        <input placeholder="کدپستی" formControlName="postalCode" pInputText>
+           <span class="p-float-label">
+        <input formControlName="postalCode" pInputText>
+              <label>کدپستی</label>
+         </span>
       </div>
       <div class="p-field p-col"></div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
-        <textarea rows="2" cols="50" formControlName="desAddress" placeholder="شرح نشانی" pInputTextarea></textarea>
+         <span class="p-float-label">
+        <textarea rows="2" cols="50" formControlName="desAddress"  pInputTextarea></textarea>
+       <label>شرح نشانی</label>
+         </span>
       </div>
     </div>
     <!--    <div class="p-fluid p-formgrid p-grid app-col-px-2r">-->

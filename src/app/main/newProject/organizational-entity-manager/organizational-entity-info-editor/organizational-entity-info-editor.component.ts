@@ -38,7 +38,6 @@ export class OrganizationalEntityInfoEditorComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger
     this.form.controls['nationalCode'].patchValue(this.inputIdentity.nationalCode)
     this.form.controls['availableRoles'].patchValue(this.inputIdentity.organizationalRole)
     this.form.controls['organizationalCode'].patchValue(this.inputIdentity.personalCode)
@@ -53,7 +52,6 @@ export class OrganizationalEntityInfoEditorComponent implements OnInit {
     this.form.controls['numberNewspaperOfficial'].patchValue(this.inputIdentity.numberNewspaperOfficial)
     this.form.controls['areaRegistration'].patchValue(this.inputIdentity.areaRegistration)
     this.form.controls['dateRegistration'].patchValue(this.inputIdentity.dateRegistration)
-    debugger
   }
 
 }

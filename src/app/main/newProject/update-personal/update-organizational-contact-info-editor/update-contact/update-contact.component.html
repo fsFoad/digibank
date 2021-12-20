@@ -1,20 +1,30 @@
 <p-card header="ایجاد اطلاعات تماس" [formGroup]="form">
 
-  <div  class="p-fluid p-formgrid p-grid  p-jc-center app-mx-20r">
+  <div class="p-fluid p-formgrid p-grid  p-jc-center app-mx-20r">
 
     <div class="p-field p-col-4">
-      <p-dropdown placeholder="گروه نوع تماس" formControlName="contactTypeGroups" [options]="contactTypeGroups" [autoDisplayFirst]="false"></p-dropdown>
+        <span class="p-float-label">
+      <p-dropdown formControlName="contactTypeGroups" [options]="contactTypeGroups"
+                  [autoDisplayFirst]="false"></p-dropdown>
+                <label>گروه نوع تماس</label>
+   </span>
     </div>
     <div class="p-field p-col-6">
       <!--        <p-dropdown placeholder="نوع تماس" ></p-dropdown>-->
-      <input class="input-w-100" formControlName="contactInfo"  placeholder="اطلاعات تماس" pInputText >
+      <span class="p-float-label">
+      <input class="input-w-100" formControlName="contactInfo" pInputText>
+           <label>اطلاعات تماس</label>
+     </span>
     </div>
 
   </div>
 
   <div class="p-fluid p-formgrid p-grid app-mx-20r   p-jc-center ">
     <div class="p-field p-col-10">
-      <input class="input-w-100" formControlName="discContact" placeholder="شرح تماس" pInputText >
+        <span class="p-float-label">
+      <input class="input-w-100" formControlName="discContact" pInputText>
+          <label>شرح تماس</label>
+        </span>
     </div>
     <!--    <div class="p-field p-col-2"></div>-->
     <!--    <div class="p-field p-col-4">-->
