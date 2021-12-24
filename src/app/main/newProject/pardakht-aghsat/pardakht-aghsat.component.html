@@ -1,19 +1,26 @@
 <p-panel header="باز پرداخت اقساط">
   <div class="p-fluid p-formgrid p-grid app-mx-30r" *ngIf="!detailsFlag">
     <div class="p-field p-col">
-      <input class="input-w-100" placeholder="شماره قرار داد" pInputText>
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره قرار داد</label>
+      </span>
     </div>
     <div class="p-field p-col">
-      <input class="input-w-100" placeholder="شماره حساب" pInputText>
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره حساب</label>
+      </span>
     </div>
     <div class="p-field p-col">
-      <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
-                     placeholder="مبلغ"></p-inputNumber>
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"></p-inputNumber>
+        <label>مبلغ</label>
+      </span>
     </div>
   </div>
   <div class="p-d-flex p-jc-center" *ngIf="!detailsFlag">
     <button pButton class="p-button-info  btn-ml" label="تائید" (click)="this.detailsFlag = true;"></button>
-
   </div>
 
   <p-card header="تایید اطلاعات" *ngIf="detailsFlag">
@@ -29,7 +36,6 @@
               <label>کل مانده بدهی قرارداد جهت تسویه کلی: 86,169,195ریال</label>
               <br>
               <label>مبلغ قسط : 9,025,000ریال</label>
-
             </div>
           </div>
         </div>
@@ -56,7 +62,6 @@
     <br>
     <div class="p-d-flex p-jc-center">
       <button pButton class="p-button-info  btn-ml" label="تائید" (click)="showModalDialog()"></button>
-
     </div>
   </p-card>
 </p-panel>

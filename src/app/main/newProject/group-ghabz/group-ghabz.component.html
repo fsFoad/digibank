@@ -1,25 +1,29 @@
 <p-panel header="ثبت قبوض گروهی">
-    <div class="p-d-flex p-flex-wrap">
-        <div class="p-md-2 FS-mr2">
-            <p-fileUpload mode="basic"
-                          [auto]="true" [customUpload]="true"
-                          [showCancelButton]="false" [showUploadButton]="false"
-                          accept=".xlsx" chooseLabel="فایل گروهی قبوض" [multiple]="false"
-            >
-            </p-fileUpload>
-        </div>
-        <div class="  p-md-3 FS-mr">
-            <!--                <label>نوع حواله</label><br>-->
-            <p-dropdown [autoDisplayFirst]="false" [editable]="true" class="p-dropdown-w80" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
-        </div>
-        <div class="p-md-3  FS-mr">
-            <input class="input-w-100" placeholder="شرح / توضیحات" pInputText>
-        </div>
-        <div class=" p-md-5  FS-mr">
-        </div>
+  <div class="p-d-flex p-flex-wrap">
+    <div class="p-md-2 FS-mr2">
+      <p-fileUpload mode="basic"
+                    [auto]="true" [customUpload]="true"
+                    [showCancelButton]="false" [showUploadButton]="false"
+                    accept=".xlsx" chooseLabel="فایل گروهی قبوض" [multiple]="false">
+      </p-fileUpload>
     </div>
-    <div class="p-col-12">
-        <br>
-        <button id="btnBatchRegister" class="p-button-info" pButton label="ثبت گروهی"></button>&nbsp;&nbsp;
+    <div class="  p-md-3 FS-mr">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [editable]="true" class="p-dropdown-w80" placeholder=""
+                    [options]="acItems"></p-dropdown>
+        <label>شماره حساب</label>
+      </span>
     </div>
+    <div class="p-md-3  FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" placeholder="" pInputText>
+        <label>شرح / توضیحات</label>
+      </span>
+    </div>
+    <div class=" p-md-5  FS-mr"></div>
+  </div>
+  <div class="p-col-12">
+    <br>
+    <button id="btnBatchRegister" class="p-button-info" pButton label="ثبت گروهی"></button>&nbsp;&nbsp;
+  </div>
 </p-panel>

@@ -2,7 +2,10 @@
   <div class="app-mx-30r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col-6">
-        <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
+        <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder="" [options]="acItems"></p-dropdown>
+          <label>شماره حساب</label>
+        </span>
       </div>
     </div>
 
@@ -11,14 +14,25 @@
         <span class="header" style="margin-bottom: 8px;">
           دوره صورتحساب:
         </span>
-
-        <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="previousMonth" label="ماه قبل" [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
-        <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="currentMonth" label="ماه جاری" [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
-        <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="previousDay" label="روز قبل" [ngStyle]="{marginBottom: '3px'}"></p-radioButton>
+        <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="previousMonth" label="ماه قبل"
+                       [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
+        <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="currentMonth" label="ماه جاری"
+                       [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
+        <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="previousDay" label="روز قبل"
+                       [ngStyle]="{marginBottom: '3px'}"></p-radioButton>
         <div class="p-d-flex app-gap-2r custom-range-row">
-          <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="customRange" label="بازه"></p-radioButton>
-          <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style" [disabled]="billingPeriod != 'customRange'"></p-persian-calendar>
-          <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410" class="app-persian-calendar-style" [disabled]="billingPeriod != 'customRange'"></p-persian-calendar>
+          <p-radioButton name="billingPeriod" [(ngModel)]="billingPeriod" value="customRange"
+                         label="بازه"></p-radioButton>
+          <span class="p-float-label">
+          <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style"
+                              [disabled]="billingPeriod != 'customRange'"></p-persian-calendar>
+           <label>از تاریخ</label>
+          </span>
+          <span class="p-float-label">
+          <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style"
+                              [disabled]="billingPeriod != 'customRange'"></p-persian-calendar>
+          <label>تا تاریخ</label>
+          </span>
         </div>
 
       </div>
@@ -36,8 +50,10 @@
           دریافت به صورت:
         </span>
 
-        <p-radioButton name="format" [(ngModel)]="format" value="html" label="HTML" [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
-        <p-radioButton name="format" [(ngModel)]="format" value="csv" label="CSV" [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
+        <p-radioButton name="format" [(ngModel)]="format" value="html" label="HTML"
+                       [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
+        <p-radioButton name="format" [(ngModel)]="format" value="csv" label="CSV"
+                       [ngStyle]="{marginBottom: '12px'}"></p-radioButton>
 
       </div>
     </div>
@@ -49,5 +65,6 @@
   </div>
 </p-panel>
 
-<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد"
+                 [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
 </p-confirmDialog>

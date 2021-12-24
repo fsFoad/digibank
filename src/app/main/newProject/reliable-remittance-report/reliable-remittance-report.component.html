@@ -2,20 +2,32 @@
   <div class="app-mx-5r">
     <div class="p-fluid p-formgrid p-grid app-mx-30r">
       <div class="p-field p-col">
-        <p-dropdown placeholder="نوع گزارش" [autoDisplayFirst]="false" [options]="reportTypeList"></p-dropdown>
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="reportTypeList"></p-dropdown>
+          <label>نوع گزارش</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <p-dropdown placeholder="نام بانک" [autoDisplayFirst]="false" [options]="bankNameList"></p-dropdown>
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList"></p-dropdown>
+          <label>نام بانک</label>
+        </span>
       </div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-mx-30r">
       <div class="p-field p-col">
-        <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"
-        ></p-persian-calendar>
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"
+          ></p-persian-calendar>
+          <label>از تاریخ</label>
+      </span>
       </div>
       <div class="p-field p-col">
-        <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"
-        ></p-persian-calendar>
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+          </p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
       </div>
     </div>
     <div class="p-grid p-formgrid p-fluid app-mx-54r">

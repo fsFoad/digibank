@@ -1,34 +1,54 @@
 <p-panel header="رفع انسداد بن کارت" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-        <div class=" p-md-2 FS-mr">
-            <p-dropdown [autoDisplayFirst]="false" placeholder="شماره کارت" optionValue="value" optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="صاحب کارت" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                         [minFractionDigits]="0" placeholder="مبلغ موجودی"></p-inputNumber>
-        </div>
-        <div class=" p-md-2 FS-mr">
-          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                         [minFractionDigits]="0" placeholder="مبلغ انسداد"></p-inputNumber>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="شماره انسداد" class="input-w-100" pInputText>
-        </div>
-        <div class="FS-mr Fs-p-md-12">
-            <input class="input-w-96" placeholder="شرح / توضیحات" pInputText/>
-            <br>
-        </div>
+  <div class="p-d-flex p-flex-wrap">
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" optionValue="value"
+                    optionLabel="label"></p-dropdown>
+        <label>شماره کارت</label>
+      </span>
     </div>
-    <div class="p-col-12">
-        <br>
-        <button id="btnUnblocking" class="p-button-info" pButton label="رفع انسداد" (click)="confirmDlg.visible = true"
-        ></button>&nbsp;
-        <button id="btnUnblockingAll" class="p-button-info" pButton label="ابطال کلیه انسداد های کارت انتخابی"
-                (click)="confirmDlg.visible = true"></button>&nbsp;
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>صاحب کارت</label>
+      </span>
     </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0"></p-inputNumber>
+        <label>مبلغ موجودی</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0"></p-inputNumber>
+        <label>مبلغ انسداد</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره انسداد</label>
+      </span>
+    </div>
+    <div class="FS-mr Fs-p-md-12">
+      <span class="p-float-label">
+        <input class="input-w-96" pInputText/>
+        <label>شرح / توضیحات</label>
+      </span>
+      <br>
+    </div>
+  </div>
+  <div class="p-col-12">
+    <br>
+    <button id="btnUnblocking" class="p-button-info" pButton label="رفع انسداد" (click)="confirmDlg.visible = true">
+    </button>&nbsp;
+    <button id="btnUnblockingAll" class="p-button-info" pButton label="ابطال کلیه انسداد های کارت انتخابی"
+            (click)="confirmDlg.visible = true"></button>&nbsp;
+  </div>
 </p-panel>
-<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
-</p-confirmDialog>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد"
+                 [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle"></p-confirmDialog>

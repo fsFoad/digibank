@@ -1,55 +1,80 @@
 <p-panel header="ثبت دستور بانک پرداخت قبض" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-        <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="شناسه قبض" pInputText>
-        </div>
-        <div class=" p-md-3 ">
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع قبض" optionValue="value"
-                        [autoDisplayFirst]="false"      optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-3">
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع پرداخت" optionValue="value"
-                        [autoDisplayFirst]="false"    optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-3 ">
-          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                         [minFractionDigits]="0" placeholder="سقف مبلغ مجاز قبض"></p-inputNumber>
-
-        </div>
+  <div class="p-d-flex p-flex-wrap">
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شناسه قبض</label>
+      </span>
     </div>
-    <br>
-    <div class="p-d-flex p-flex-wrap">
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="کد شتابی بانکی" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="کد پیوست" pInputText/>
-        </div>
-        <div class="p-md-3">
-        </div>
-        <div class="p-md-3"></div>
-        <div class="p-md-12 ">
-            <input class="input-w-100" placeholder="شرح / توضیحات" pInputText/>
-        </div>
-        <div class="p-md-3">
-            <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410"
-                                class="app-persian-calendar-style"></p-persian-calendar>
-        </div>
-        <div class="p-md-3">
-            <p-persian-calendar placeholder="تاریخ انقضا" yearRange="1300:1410"
-                                class="app-persian-calendar-style"></p-persian-calendar>
-        </div>
-        <div class="p-md-3">
-            <p-checkbox name="check" id="ny " value="val1"></p-checkbox>
-            <label> بدون تاریخ امضا </label>
-        </div>
-        <div class="p-md-3"></div>
-        <div class="p-md-3Fs"></div>
-        <div class="p-md-6Fs">
-            <br>
-            <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
-            <button id="btnBatchRegister" class="p-button-info" pButton label="ثبت گروهی"></button>&nbsp;
-        </div>
-        <div class="p-md-3Fs p-col-4"></div>
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" optionValue="value"
+                        [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+        <label>نوع قبض</label>
+      </span>
     </div>
+    <div class=" p-md-3">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" optionValue="value"
+                        [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+        <label>نوع پرداخت</label>
+      </span>
+    </div>
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                     [minFractionDigits]="0"></p-inputNumber>
+        <label>سقف مبلغ مجاز قبض</label>
+      </span>
+    </div>
+  </div>
+  <br>
+  <div class="p-d-flex p-flex-wrap">
+    <div class="p-md-3">
+      <span class="p-float-label">
+      <input class="input-w-100" pInputText>
+        <label>کد شتابی بانکی</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+      <input class="input-w-100" pInputText/>
+        <label>کد پیوست</label>
+      </span>
+    </div>
+    <div class="p-md-3"></div>
+    <div class="p-md-3"></div>
+    <div class="p-md-12 ">
+      <span class="p-float-label">
+      <input class="input-w-100" pInputText/>
+        <label>شرح / توضیحات</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+      <p-persian-calendar yearRange="1300:1410"
+                          class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ شروع</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+      <p-persian-calendar yearRange="1300:1410"
+                          class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ انقضا</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <p-checkbox name="check" id="ny " value="val1"></p-checkbox>
+      <label> بدون تاریخ امضا </label>
+    </div>
+    <div class="p-md-3"></div>
+    <div class="p-md-3Fs"></div>
+    <div class="p-md-6Fs">
+      <br>
+      <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
+      <button id="btnBatchRegister" class="p-button-info" pButton label="ثبت گروهی"></button>&nbsp;
+    </div>
+    <div class="p-md-3Fs p-col-4"></div>
+  </div>
 </p-panel>

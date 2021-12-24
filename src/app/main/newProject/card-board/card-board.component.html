@@ -1,32 +1,38 @@
 <p-panel header="کارتابل">
   <div class="p-d-flex p-flex-wrap Fs-mlf">
-
-      <div class="FS-p-md-1 FS-mr2 FS-ml FS-mt">
-        <input class="input-w-100" placeholder="شماره در خواست" pInputText>
-
-      </div>
-
-      <div class="  FS-p-md-4 FS-mt FS-mr">
-        <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
-                            class="app-persian-calendar-style"></p-persian-calendar>
-      </div>
-
-      <div class=" FS-p-md-4 FS-mt FS-mr">
-        <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
-                            yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
-      </div>
-
-      <div class=" p-md-2  FS-mr">
-        <p-dropdown class="p-dropdown-w80" placeholder="واحد مربوطه" optionValue="value"
-                    optionLabel="label"></p-dropdown>
-
-      </div>
+    <div class="FS-p-md-1 FS-mr2 FS-ml FS-mt">
+        <span class="p-float-label">
+        <input class="input-w-100" placeholder="" pInputText>
+          <label>شماره در خواست</label>
+      </span>
+    </div>
+    <div class="  FS-p-md-4 FS-mt FS-mr">
+        <span class="p-float-label">
+          <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style">
+          </p-persian-calendar>
+          <label>از تاریخ</label>
+      </span>
+    </div>
+    <div class=" FS-p-md-4 FS-mt FS-mr">
+        <span class="p-float-label">
+          <p-persian-calendar placeholder="" yearRange="1300:1410" yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تا تاریخ</label>
+      </span>
+    </div>
+    <div class=" p-md-2  FS-mr">
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w80" placeholder="" optionValue="value" optionLabel="label">
+          </p-dropdown>
+          <label>واحد مربوطه</label>
+      </span>
+    </div>
   </div>
-  <div class="p-col-12"  >
+  <div class="p-col-12">
     <br>
-    <button id="btnRecovery"  class="p-button-info" pButton label="جستجو" (click)="tableFlag=true;"></button>&nbsp;
-    <button id="btnSearch"  class="p-button-info" pButton label="گزارش" (click)="tableFlag=true;"></button>&nbsp;
-    <button id="btncardBoard"  class="p-button-info" pButton label="نمایش کارتابل" (click)="tableFlag=true;"></button>&nbsp;
+    <button id="btnRecovery" class="p-button-info" pButton label="جستجو" (click)="tableFlag=true;"></button>&nbsp;
+    <button id="btnSearch" class="p-button-info" pButton label="گزارش" (click)="tableFlag=true;"></button>&nbsp;
+    <button id="btncardBoard" class="p-button-info" pButton label="نمایش کارتابل" (click)="tableFlag=true;"></button>&nbsp;
   </div>
   <br *ngIf=tableFlag>
   <p-card *ngIf=tableFlag>
@@ -39,7 +45,6 @@
           <th translate>مبلغ</th>
           <th translate>وضعیت عملیات</th>
           <th translate>زمان</th>
-
         </tr>
       </ng-template>
       <ng-template let-i="rowIndex" pTemplate="body" let-service>

@@ -3,24 +3,33 @@
     <div class="p-fluid p-formgrid p-grid  ">
       <br>
       <div class="p-field p-col-4">
-        <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
                             class="app-persian-calendar-style"></p-persian-calendar>
+          <label>از تاریخ</label>
+        </span>
       </div>
       <div class="p-field p-col-4">
-        <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
-                            class="app-persian-calendar-style"></p-persian-calendar>
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
       </div>
       <div class="p-field p-col-4">
-        <p-dropdown class="p-dropdown-w80" placeholder="شماره کارت" optionValue="value"
-                    [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w80" optionValue="value" [autoDisplayFirst]="false"
+                      optionLabel="label"></p-dropdown>
+          <label>شماره کارت</label>
+        </span>
       </div>
     </div>
   </div>
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-2">
-    <button  class="p-button-outlined" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
-
+    <button class="p-button-outlined" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
   </div>
   <br>
+  
   <p-card *ngIf=tableFlag>
     <p-table [value]="fsList">
       <ng-template pTemplate="header">

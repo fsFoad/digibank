@@ -1,54 +1,87 @@
 <p-panel header="تاییدیه الکترونیکی چک" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-        <div class="p-md-3">
-            <input placeholder="شماره حساب" class="input-w-100" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input placeholder="مبلغ" class="input-w-100" pInputText>
-        </div>
-        <div class="p-md-3">
-            <p-persian-calendar placeholder="تاریخ سررسید" yearRange="1300:1410"
-                                class="app-persian-calendar-style"></p-persian-calendar>
-        </div>
-        <div class="p-md-3">
-            <p-dropdown [autoDisplayFirst]="false" placeholder="واحد مربوطه" optionValue="value" optionLabel="label"></p-dropdown>
-        </div>
-        <div class="p-md-3">
-            <input placeholder="مانده حساب" class="input-w-100" pInputText disabled>
-        </div>
-        <div class="p-md-3">
-            <input placeholder="مانده دفتری" class="input-w-100" pInputText disabled>
-        </div>
-        <div class="p-md-3">
-            <input placeholder="جمع چک های پاس نشده" class="input-w-100" pInputText disabled>
-        </div>
-        <div class="p-md-3">
-            <input placeholder="مانده حساب پشتیبان" class="input-w-100" pInputText disabled>
-        </div>
-        <div class="p-md-6">
-            <input placeholder="در وجه" class="input-w-100" pInputText>
-        </div>
-        <div class="p-md-6">
-            <input placeholder="بابت" class="input-w-100" pInputText>
-        </div>
-        <div class="p-md-6">
-            <input placeholder="شماره 16 رقمی صیاد" class="input-w-100" pInputText>
-        </div>
-        <div class="p-md-3">
+  <div class="p-d-flex p-flex-wrap">
+    <div class="p-md-3">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText>
+            <label>شماره حساب</label>
+          </span>
+    </div>
+    <div class="p-md-3">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText>
+            <label>مبلغ</label>
+          </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ سررسید</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" optionValue="value"
+                    optionLabel="label"></p-dropdown>
+        <label>واحد مربوطه</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>مانده حساب</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>مانده دفتری</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>جمع چک های پاس نشده</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>مانده حساب پشتیبان</label>
+      </span>
+    </div>
+    <div class="p-md-6">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>در وجه</label>
+      </span>
+    </div>
+    <div class="p-md-6">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>بابت</label>
+      </span>
+    </div>
+    <div class="p-md-6">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره 16 رقمی صیاد</label>
+      </span>
+    </div>
+    <div class="p-md-3">
             <p-fileUpload mode="basic"
                           [auto]="true" [customUpload]="true"
                           [showCancelButton]="false" [showUploadButton]="false"
-                          accept=".xlsx" chooseLabel="پیوست تصویر چک" [multiple]="false"
-            >
+                          accept=".xlsx" chooseLabel="پیوست تصویر چک" [multiple]="false">
             </p-fileUpload>
-        </div>
     </div>
-    <div class="p-md-12 FS-height">
-        <button id="btnRegister" class=" p-button-outlined p-button-success" pButton label="چاپ چک"></button>&nbsp;
-        <button id="4" class="btn-mr p-button-outlined p-button-secondary" pButton label="تاییدیه چک"></button>&nbsp;
-        <button id="3" class="btn-mr p-button-outlined" pButton label="استعلام وضعیت چک"></button>
-        <button id="f2" class="btn-mr p-button-outlined p-button-warning" pButton label="ابطال موقت"></button>&nbsp;
-        <button id="5" class="btn-mr  p-button-outlined p-button-danger" pButton label="ابطال کامل"></button>&nbsp;
-    </div>
-
+  </div>
+  <div class="p-md-12 FS-height">
+    <button id="btnRegister" class=" p-button-outlined p-button-success" pButton label="چاپ چک"></button>&nbsp;
+    <button id="4" class="btn-mr p-button-outlined p-button-secondary" pButton label="تاییدیه چک"></button>&nbsp;
+    <button id="3" class="btn-mr p-button-outlined" pButton label="استعلام وضعیت چک"></button>
+    <button id="f2" class="btn-mr p-button-outlined p-button-warning" pButton label="ابطال موقت"></button>&nbsp;
+    <button id="5" class="btn-mr  p-button-outlined p-button-danger" pButton label="ابطال کامل"></button>&nbsp;
+    <label>توضیحات</label>
+  </div>
 </p-panel>

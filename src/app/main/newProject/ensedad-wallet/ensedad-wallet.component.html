@@ -1,27 +1,42 @@
 <p-panel header="انسداد کیف پول" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap Fs-mlf">
-        <div class=" p-md-3 FS-mr">
-            <input placeholder="شماره آی دی کیف پول" class="input-w-70" pInputText>
-            <button id="btnIdWallet" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
-        </div>
-        <div class=" p-md-3 FS-mr">
-            <input placeholder="شماره موبایل" class="input-w-70" pInputText>
-            <button id="btnIdWallet2" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
-        </div>
-        <div class=" p-md-3 FS-mr">
-            <input placeholder="موجودی فعلی" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-3 FS-mr">
-            <input placeholder="ذینفع کیف پول" class="input-w-100" pInputText disabled>
-        </div>
-        <div class="FS-mr2 p-md-5">
-            <br>
-            <input class="input-w-85" placeholder="مبلغ انسداد" pInputText/>
-        </div>
+  <div class="p-d-flex p-flex-wrap Fs-mlf">
+    <div class=" p-md-3 FS-mr">
+      <span class="p-float-label">
+        <input placeholder="" class="input-w-65" pInputText>
+        <label>شماره آی دی کیف پول</label>
+      </span>
+      <button id="btnIdWallet" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
     </div>
-    <br>
-    <div class="p-md-12 FS-height">
-        <button id="btnBlockAmount" class="p-button-info" pButton label="انسداد مبلغ"></button>&nbsp;
-        <button id="btnBlockWallet" class="p-button-info" pButton label="انسداد کامل کیف پول"></button>&nbsp;
+    <div class=" p-md-4 FS-mr">
+      <span class="p-float-label">
+        <input placeholder="" class="input-w-65" pInputText>
+        <label>شماره موبایل</label>
+      </span>
+      <button id="btnIdWallet2" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
     </div>
+    <div class=" p-md-3 FS-mr">
+      <span class="p-float-label">
+        <input placeholder="" class="input-w-100" pInputText disabled>
+        <label>موجودی فعلی</label>
+      </span>
+    </div>
+    <div class=" p-md-3 FS-mr">
+      <span class="p-float-label">
+        <input placeholder="" class="input-w-100" pInputText disabled>
+        <label>ذینفع کیف پول</label>
+      </span>
+    </div>
+    <div class="FS-mr2 p-md-5">
+      <br>
+      <span class="p-float-label">
+        <input class="input-w-85" placeholder="" pInputText/>
+        <label>مبلغ انسداد</label>
+      </span>
+    </div>
+  </div>
+  <br>
+  <div class="p-md-12 FS-height">
+    <button id="btnBlockAmount" class="p-button-info" pButton label="انسداد مبلغ"></button>&nbsp;
+    <button id="btnBlockWallet" class="p-button-info" pButton label="انسداد کامل کیف پول"></button>&nbsp;
+  </div>
 </p-panel>

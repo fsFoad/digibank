@@ -9,10 +9,16 @@
           <div class="p-d-flex app-gap-2r custom-range-row">
             <p-radioButton name="billingPeriod" formControlName="billingPeriod" value="customRange" label="بازه">
             </p-radioButton>
-            <p-persian-calendar formControlName="fromDate" placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style">
-            </p-persian-calendar>
-            <p-persian-calendar formControlName="toDate" placeholder="تا تاریخ" yearRange="1300:1410" class="app-persian-calendar-style">
-            </p-persian-calendar>
+            <span class="p-float-label">
+              <p-persian-calendar formControlName="fromDate" yearRange="1300:1410" class="app-persian-calendar-style">
+              </p-persian-calendar>
+              <label>از تاریخ</label>
+            </span>
+            <span class="p-float-label">
+              <p-persian-calendar formControlName="toDate" yearRange="1300:1410" class="app-persian-calendar-style">
+              </p-persian-calendar>
+              <label>تا تاریخ</label>
+            </span>
           </div>
         </div>
       </div>

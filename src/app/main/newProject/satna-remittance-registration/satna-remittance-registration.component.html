@@ -10,23 +10,35 @@
       امکان ارسال حواله ساتنا با مبلغ کمتر از صد و پنجاه میلیون ریال، تنها برای بانکهای مقصدی که از حواله پایا پشتیبانی
       نمی‌کنند فراهم می‌باشد
     </div>
-
+    
     <p-card header="مشخصات فرستنده حواله">
       <div class="app-mx-20r">
         <div class="p-fluid p-formgrid p-grid ">
           <div class="p-field p-col">
-            <input pInputText placeholder="کد ملی">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>کد ملی</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="کد شهاب">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>کد شهاب</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="کد پستی">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>کد پستی</label>
+            </span>
           </div>
         </div>
         <div class="p-fluid p-formgrid p-grid app-col-px-2r">
           <div class="p-field p-col">
-            <p-dropdown placeholder="انتقال از" [options]="acItems"></p-dropdown>
+            <span class="p-float-label">
+              <p-dropdown [autoDisplayFirst]="false" [options]="acItems"></p-dropdown>
+              <label>انتقال از</label>
+            </span>
           </div>
           <div class="p-field p-col p-d-flex p-ai-center">
             نام شخص/شرکت
@@ -34,19 +46,28 @@
         </div>
       </div>
     </p-card>
-
+    
     <p-card header="مشخصات حواله">
       <div class="app-mx-20r">
         <div class="p-fluid p-formgrid p-grid ">
           <div class="p-field p-col">
-            <input pInputText placeholder="شناسه واریز کننده">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>شناسه واریز کننده</label>
+          </span>
           </div>
           <div class="p-field p-col">
-            <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
-                           placeholder="مبلغ حواله"></p-inputNumber>
+            <span class="p-float-label">
+              <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+                           ></p-inputNumber>
+              <label>مبلغ حواله</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <p-dropdown placeholder="بابت" [options]="forItems"></p-dropdown>
+            <span class="p-float-label">
+              <p-dropdown [autoDisplayFirst]="false" [options]="forItems"></p-dropdown>
+              <label>بابت</label>
+            </span>
           </div>
         </div>
       </div>
@@ -56,32 +77,55 @@
       <div class="app-mx-10r">
         <div class="p-fluid p-formgrid p-grid ">
           <div class="p-field p-col">
-            <p-dropdown placeholder="نوع گیرنده حواله" [options]="receiverItems"></p-dropdown>
+            <span class="p-float-label">
+              <p-dropdown [autoDisplayFirst]="false" [options]="receiverItems"></p-dropdown>
+              <label>نوع گیرنده حواله</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="به شماره شبای">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>به شماره شبای</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="نوع حساب">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>نوع حساب</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="نام بانک مقصد">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>نام بانک مقصد</label>
+            </span>
           </div>
         </div>
-
-
+        
         <div class="p-fluid p-formgrid p-grid ">
           <div class="p-field p-col">
-            <input pInputText placeholder="کد ملی/شماره ملی/شماره فراگیر">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>کد ملی/شماره ملی/شماره فراگیر</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="کد شهاب">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>کد شهاب</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="کد پستی">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>کد پستی</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="شرح">
+            <span class="p-float-label">
+              <input pInputText >
+              <label>شرح</label>
+            </span>
           </div>
         </div>
       </div>
@@ -93,5 +137,5 @@
   </div>
 </p-panel>
 
-<app-satna-remittance-registration-confirmation *ngIf="showConfirmationComponent"
-                                                (confirm)="closeConfirmation()"></app-satna-remittance-registration-confirmation>
+<app-satna-remittance-registration-confirmation *ngIf="showConfirmationComponent" (confirm)="closeConfirmation()">
+</app-satna-remittance-registration-confirmation>

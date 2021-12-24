@@ -4,82 +4,136 @@
       <div class="app-mx-20r">
         <div class="p-fluid p-formgrid p-grid app-col-px-2r">
           <div class="p-field p-col">
-            <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder="شماره حساب" [options]="acItems"></p-dropdown>
-
-
-
+            <span class="p-float-label">
+              <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder=""
+                          [options]="acItems"></p-dropdown>
+              <label>شماره حساب</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="شماره حساب شبا مبدا" disabled>
+            <span class="p-float-label">
+              <input pInputText placeholder="" disabled>
+              <label>شماره حساب شبا مبدا</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="کد ملی/شناسه ملی/شماره فراگیر صاحب حساب مبدا" disabled>
-          </div>
-        </div>
-        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-          <div class="p-field p-col">
-            <input pInputText placeholder="نام صاحب / صاحبان حساب" disabled>
-          </div>
-          <div class="p-field p-col">
-            <input pInputText placeholder="کد شهاب صاحب حساب مبدا" disabled>
-          </div>
-          <div class="p-field p-col">
-            <input pInputText placeholder="کد پستی صاحب حساب مبدا" disabled>
+            <span class="p-float-label">
+              <input pInputText placeholder="" disabled>
+              <label>کد ملی/شناسه ملی/شماره فراگیر صاحب حساب مبدا</label>
+            </span>
           </div>
         </div>
         <div class="p-fluid p-formgrid p-grid app-col-px-2r">
           <div class="p-field p-col">
-            <p-persian-calendar placeholder="تاریخ شروع" yearRange="1300:1410" class="app-persian-calendar-style">
-            </p-persian-calendar>
+            <span class="p-float-label">
+              <input pInputText placeholder="" disabled>
+              <label>نام صاحب / صاحبان حساب</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <p-persian-calendar placeholder="تاریخ پایان" yearRange="1300:1410" class="app-persian-calendar-style">
-            </p-persian-calendar>
+            <span class="p-float-label">
+              <input pInputText placeholder="" disabled>
+              <label>کد شهاب صاحب حساب مبدا</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <p-dropdown [autoDisplayFirst]="false" placeholder="دوره" [options]="periodItems"></p-dropdown>
+            <span class="p-float-label">
+              <input pInputText placeholder="" disabled>
+              <label>کد پستی صاحب حساب مبدا</label>
+            </span>
+          </div>
+        </div>
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <span class="p-float-label">
+              <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style">
+              </p-persian-calendar>
+              <label>تاریخ شروع</label>
+            </span>
+          </div>
+          <div class="p-field p-col">
+            <span class="p-float-label">
+              <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style">
+              </p-persian-calendar>
+              <label>تاریخ پایان</label>
+            </span>
+          </div>
+          <div class="p-field p-col">
+            <span class="p-float-label">
+              <p-dropdown [autoDisplayFirst]="false" placeholder="" [options]="periodItems"></p-dropdown>
+              <label>دوره</label>
+            </span>
           </div>
         </div>
       </div>
     </p-card>
+
     <p-card header="مشخصات گیرنده حواله">
       <div class="app-mx-20r">
         <div class="p-fluid p-formgrid p-grid app-col-px-2r">
           <div class="p-field p-col">
-            <input pInputText placeholder="شماره شبا مقصد">
+            <span class="p-float-label">
+              <input pInputText placeholder="">
+              <label>شماره شبا مقصد</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="نام بانک مقصد" disabled>
+            <span class="p-float-label">
+              <input pInputText placeholder="" disabled>
+              <label>نام بانک مقصد</label>
+        </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="شناسه واریز کننده">
-          </div>
-        </div>
-        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-          <div class="p-field p-col">
-            <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
-              placeholder="مبلغ"></p-inputNumber>
-          </div>
-          <div class="p-field p-col">
-            <p-dropdown placeholder="بابت" [autoDisplayFirst]="false" [options]="forItems"></p-dropdown>
-          </div>
-          <div class="p-field p-col">
-            <input pInputText placeholder="کد پستی">
+            <span class="p-float-label">
+              <input pInputText placeholder="">
+              <label>شناسه واریز کننده</label>
+            </span>
           </div>
         </div>
         <div class="p-fluid p-formgrid p-grid app-col-px-2r">
           <div class="p-field p-col">
-            <input pInputText placeholder="کد پستی/شماره ملی/شناسه فراگیر">
+            <span class="p-float-label">
+              <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+                             placeholder=""></p-inputNumber>
+              <label>مبلغ</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="شرح">
+            <span class="p-float-label">
+              <p-dropdown placeholder="" [autoDisplayFirst]="false" [options]="forItems"></p-dropdown>
+              <label>بابت</label>
+            </span>
           </div>
           <div class="p-field p-col">
-            <input pInputText placeholder="کد شهاب">
+            <span class="p-float-label">
+              <input pInputText placeholder="">
+              <label>کد پستی</label>
+            </span>
+          </div>
+        </div>
+        <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+          <div class="p-field p-col">
+            <span class="p-float-label">
+              <input pInputText placeholder="">
+              <label>کد پستی/شماره ملی/شناسه فراگیر</label>
+            </span>
+          </div>
+          <div class="p-field p-col">
+            <span class="p-float-label">
+              <input pInputText placeholder="">
+              <label>شرح</label>
+            </span>
+          </div>
+          <div class="p-field p-col">
+            <span class="p-float-label">
+              <input pInputText placeholder="">
+              <label>کد شهاب</label>
+            </span>
           </div>
         </div>
       </div>
     </p-card>
+
     <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
       <button pButton label="ثبت درخواست" (click)="showConfirmation(true)"></button>
       <button pButton label="انصراف"></button>
@@ -87,7 +141,8 @@
   </div>
 </p-panel>
 
-<app-paya-regular-remittance-registration-confirmation *ngIf="showConfirmationComponent" (confirm)="showConfirmation(false)"></app-paya-regular-remittance-registration-confirmation>
+<app-paya-regular-remittance-registration-confirmation *ngIf="showConfirmationComponent"
+                                                       (confirm)="showConfirmation(false)"></app-paya-regular-remittance-registration-confirmation>
 
 <p-confirmDialog header="مشترک گرامی به اطلاع می رساند:" acceptLabel="تایید" [rejectVisible]="false" [closable]="false">
 </p-confirmDialog>

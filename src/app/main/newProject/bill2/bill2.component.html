@@ -2,23 +2,40 @@
   <div class="app-mx-5r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col-3">
-        <p-dropdown   placeholder="واحد سازمانی" [autoDisplayFirst]="false" [options]="organizationalUnit"></p-dropdown>
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="organizationalUnit">
+          </p-dropdown>
+          <label>واحد سازمانی</label>
+        </span>
       </div>
       <div class="p-field p-col-3">
-        <p-dropdown [editable]="true" placeholder="شماره حساب" [autoDisplayFirst]="false" [options]="acItems"></p-dropdown>
+        <span class="p-float-label">
+          <p-dropdown [editable]="true" [autoDisplayFirst]="false"
+                      [options]="acItems"></p-dropdown>
+          <label>شماره حساب</label>
+        </span>
       </div>
       <div class="p-field p-col-3">
-        <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+          </p-persian-calendar>
+          <label>از تاریخ</label>
+        </span>
       </div>
       <div class="p-field p-col-3">
-        <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
       </div>
     </div>
     <div class="p-d-flex p-jc-center">
-      <button  id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+      <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
     </div>
   </div>
-  <p-card  *ngIf=tableFlag>
+  
+  <p-card *ngIf=tableFlag>
     <p-table [value]="fsList">
       <ng-template pTemplate="header">
         <tr>
@@ -29,7 +46,6 @@
           <th translate>واریز کننده</th>
           <th translate>کد یکتای تراکنش</th>
           <th translate>شماره سند/چک / حواله</th>
-<!--          <th translate>شماره سند</th>-->
           <th translate>بدهکار</th>
           <th translate>بستانکار</th>
           <th translate>مانده</th>
@@ -47,7 +63,6 @@
           <td>{{service.depositor}}</td>
           <td>{{service.yektaCode}}</td>
           <td>{{service.check}}</td>
-<!--          <td>{{service.doc}}</td>-->
           <td>0</td>
           <td>{{service.creditor|addCommaSeparator}}</td>
           <td>{{service.amount|addCommaSeparator}}</td>
