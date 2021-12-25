@@ -64,14 +64,15 @@
       <div class="p-fluid p-formgrid p-grid app-col-px-2r">
         <div class="p-field p-col">
           <p-checkbox [binary] name="userConfirmCheckbox" value="confirmed"
-            [(ngModel)]="agreementConfirmationCheckboxValue" label="موارد فوق مورد تائید اینجانب رضا یعقوبی می‌باشد">
+                      [(ngModel)]="agreementConfirmationCheckboxValue"
+                      label="موارد فوق مورد تائید اینجانب رضا یعقوبی می‌باشد">
           </p-checkbox>
         </div>
       </div>
     </div>
     <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
       <button pButton label="تائید" (click)="agreementConfirmed = true"
-        [disabled]="!agreementConfirmationCheckboxValue"></button>
+              [disabled]="!agreementConfirmationCheckboxValue"></button>
     </div>
   </ng-container>
 
@@ -90,22 +91,31 @@
       <div class="p-fluid p-formgrid p-grid">
         <div class="p-col"></div>
         <div class="p-field p-col">
-          <p-dropdown placeholder="انتقال از" [options]="acItems"></p-dropdown>
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" [options]="acItems"></p-dropdown>
+            <label>انتقال از</label>
+          </span>
         </div>
         <div class="p-field p-col">
-          <p-persian-calendar placeholder="تاریخ موثر" yearRange="1300:1410" class="app-persian-calendar-style">
-          </p-persian-calendar>
+          <span class="p-float-label">
+            <p-persian-calendar  yearRange="1300:1410" class="app-persian-calendar-style">
+            </p-persian-calendar>
+            <label>تاریخ موثر</label>
+          </span>
         </div>
         <div class="p-col"></div>
       </div>
       <div class="p-fluid p-formgrid p-grid">
         <div class="p-col"></div>
         <div class="p-field p-col">
-          <input pInputText placeholder="نام فایل">
+          <span class="p-float-label">
+            <input pInputText >
+            <label>نام فایل</label>
+          </span>
         </div>
         <div class="p-field p-col">
           <p-fileUpload mode="basic" [auto]="true" [customUpload]="true" [showCancelButton]="false"
-            [showUploadButton]="false" accept=".xlsx" chooseLabel="مسیر فایل" [multiple]="false">
+                        [showUploadButton]="false" accept=".xlsx" chooseLabel="مسیر فایل" [multiple]="false">
           </p-fileUpload>
         </div>
         <div class="p-col"></div>
@@ -113,11 +123,17 @@
       <div class="p-fluid p-formgrid p-grid">
         <div class="p-col"></div>
         <div class="p-field p-col">
-          <p-inputNumber placeholder="تعداد کل ردیف‌های واریز"></p-inputNumber>
+          <span class="p-float-label">
+            <p-inputNumber ></p-inputNumber>
+            <label>تعداد کل ردیف‌های واریز</label>
+          </span>
         </div>
         <div class="p-field p-col">
-          <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
-            placeholder="جمع کل مبالغ واریز"></p-inputNumber>
+          <span class="p-float-label">
+            <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" 
+                           ></p-inputNumber>
+            <label>جمع کل مبالغ واریز</label>
+          </span>
         </div>
         <div class="p-col"></div>
       </div>

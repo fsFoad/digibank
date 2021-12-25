@@ -1,74 +1,102 @@
 <p-panel header="جستجو کد تراکنش یکتا" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
+  <div class="p-d-flex p-flex-wrap">
+    <div class=" p-md-2 FS-mr">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText disabled>
+            <label>شماره حساب</label>
+          </span>
     </div>
-    <div class="p-d-flex p-flex-wrap">
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="شماره حساب" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
+    <div class=" p-md-2 FS-mr">
+        <span class="p-float-label">
           <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                         [minFractionDigits]="0" placeholder="مبلغ" [disabled]="true"></p-inputNumber>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="تاریخ ایجاد" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="کاربر ایجاد کننده" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="واحد ایجاد کننده" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="نوع کد تراکنش" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="کد پیوست" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="شناسه ملی  / حقوقی" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="تاریخ انقضا" class="input-w-100" pInputText disabled>
-        </div>
-        <div class=" p-md-2 FS-mr">
-            <input placeholder="سر فصل حسابداری" class="input-w-100" pInputText disabled>
-        </div>
+                         [minFractionDigits]="0" [disabled]="true"></p-inputNumber>
+          <label>مبلغ</label>
+        </span>
     </div>
-    <div class="p-col-12">
-        <br>
-        <button id="btnSearch" class="p-button-info" pButton label="جستجو" (click)="tableFlag=true;"></button>&nbsp;
-        <button id="btnPrint" class="p-button-info" pButton label="چاپ اطلاعات"></button>&nbsp;
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>تاریخ ایجاد</label>
+      </span>
     </div>
-    <p-card *ngIf=tableFlag>
-        <p-table [value]="fsList">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th translate>ردیف</th>
-                    <th translate id="thAccountNumber">شماره حساب</th>
-                    <th translate>تاریخ</th>
-                    <th translate>نام شعبه</th>
-                    <th translate>واریز کننده</th>
-                    <th translate>شماره سند</th>
-                    <th translate>کد یکتا</th>
-                    <th translate>بدهکار</th>
-                    <th translate>بستانکار</th>
-                    <th translate>توضیحات</th>
-                </tr>
-            </ng-template>
-            <ng-template let-i="rowIndex" pTemplate="body" let-searchYekta>
-                <tr>
-                    <td>{{i + 1}}</td>
-                    <td>{{searchYekta.accountNumber}}</td>
-                    <td>{{searchYekta.history}}</td>
-                    <td>{{searchYekta.branchName}}</td>
-                    <td>{{searchYekta.Depositor}}</td>
-                    <td>{{searchYekta.docNumber}}</td>
-                    <td>{{searchYekta.yektaCode}}</td>
-                    <td>0</td>
-                    <td>{{searchYekta.creditor|addCommaSeparator}}</td>
-                    <td></td>
-                </tr>
-            </ng-template>
-        </p-table>
-    </p-card>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>کاربر ایجاد کننده</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>واحد ایجاد کننده</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>نوع کد تراکنش</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>کد پیوست</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>شناسه ملی  / حقوقی</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>تاریخ انقضا</label>
+      </span>
+    </div>
+    <div class=" p-md-2 FS-mr">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>سر فصل حسابداری</label>
+      </span>
+    </div>
+  </div>
+  <div class="p-col-12">
+    <br>
+    <button id="btnSearch" class="p-button-info" pButton label="جستجو" (click)="tableFlag=true;"></button>&nbsp;
+    <button id="btnPrint" class="p-button-info" pButton label="چاپ اطلاعات"></button>&nbsp;
+  </div>
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>تاریخ</th>
+          <th translate>نام شعبه</th>
+          <th translate>واریز کننده</th>
+          <th translate>شماره سند</th>
+          <th translate>کد یکتا</th>
+          <th translate>بدهکار</th>
+          <th translate>بستانکار</th>
+          <th translate>توضیحات</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-searchYekta>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{searchYekta.accountNumber}}</td>
+          <td>{{searchYekta.history}}</td>
+          <td>{{searchYekta.branchName}}</td>
+          <td>{{searchYekta.Depositor}}</td>
+          <td>{{searchYekta.docNumber}}</td>
+          <td>{{searchYekta.yektaCode}}</td>
+          <td>0</td>
+          <td>{{searchYekta.creditor|addCommaSeparator}}</td>
+          <td></td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
 </p-panel>

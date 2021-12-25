@@ -1,152 +1,166 @@
 <p-panel header="صورت حساب" [ngStyle]="{'width':'100%'}">
-<div *ngIf="!upOrDownloadFlag">
-    <div class="p-d-flex p-flex-wrap"  >
-        <div class="Fs-p-md FS-mr FS-mt">
-            <p-persian-calendar placeholder="از تاریخ" yearRange="1300:1410"
-                                class="app-persian-calendar-style" ></p-persian-calendar>
-
-        </div>
-        <div class="Fs-p-md FS-mr2 FS-mt">
-            <p-persian-calendar placeholder="تا تاریخ" yearRange="1300:1410"
-                                class="app-persian-calendar-style" ></p-persian-calendar>
-
-        </div>
-        <div class=" p-md-2 FS-mr2 ">
-
-            <p-dropdown class="p-dropdown-w80" placeholder="واحد سازمانی" optionValue="value"
-                        [autoDisplayFirst]="false"    [options]="organList" optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-2 FS-mr">
-
-            <p-dropdown class="p-dropdown-w80" placeholder="واحد های تابعه" optionValue="value"
-                        [autoDisplayFirst]="false"    [options]="representationList" optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-2 FS-mr3">
-
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع عملیات" optionValue="value"
-                        [autoDisplayFirst]="false"     [options]="operationList"  optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-2 FS-mr4">
-
-            <p-dropdown class="p-dropdown-w80" placeholder="بانک" optionValue="value"
-                        [autoDisplayFirst]="false"  [options]="bankList"  optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-2 FS-mr5">
-
-            <p-dropdown  [editable]="true" class="p-dropdown-w80" placeholder="شماره حساب"
-                         [autoDisplayFirst]="false"   [options]="acItems"></p-dropdown>
-        </div>
-
+  <div *ngIf="!upOrDownloadFlag">
+    <div class="p-d-flex p-flex-wrap">
+      <div class="Fs-p-md FS-mr FS-mt">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>از تاریخ</label>
+          </span>
+      </div>
+      <div class="Fs-p-md FS-mr2 FS-mt">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تا تاریخ</label>
+          </span>
+      </div>
+      <div class=" p-md-2 FS-mr2 ">
+          <span class="p-float-label">
+            <p-dropdown class="p-dropdown-w80" optionValue="value"
+                        [autoDisplayFirst]="false" [options]="organList" optionLabel="label"></p-dropdown>
+            <label>واحد سازمانی</label>
+          </span>
+      </div>
+      <div class=" p-md-2 FS-mr">
+          <span class="p-float-label">
+            <p-dropdown class="p-dropdown-w80" optionValue="value"
+                        [autoDisplayFirst]="false" [options]="representationList" optionLabel="label"></p-dropdown>
+            <label>واحد های تابعه</label>
+          </span>
+      </div>
+      <div class=" p-md-2 FS-mr3">
+          <span class="p-float-label">
+            <p-dropdown class="p-dropdown-w80" optionValue="value"
+                        [autoDisplayFirst]="false" [options]="operationList" optionLabel="label"></p-dropdown>
+            <label>نوع عملیات</label>
+          </span>
+      </div>
+      <div class=" p-md-2 FS-mr4">
+          <span class="p-float-label">
+            <p-dropdown class="p-dropdown-w80" optionValue="value"
+                        [autoDisplayFirst]="false" [options]="bankList" optionLabel="label"></p-dropdown>
+            <label>بانک</label>
+          </span>
+      </div>
+      <div class=" p-md-2 FS-mr5">
+          <span class="p-float-label">
+            <p-dropdown [editable]="true" class="p-dropdown-w80"
+                        [autoDisplayFirst]="false" [options]="acItems"></p-dropdown>
+            <label>شماره حساب</label>
+          </span>
+      </div>
     </div>
 
-    <div class="p-col-12"  >
-        <br>
-        <button id="btnRecovery"  class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+    <div class="p-col-12">
+      <br>
+      <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
     </div>
-    <p-card  *ngIf=tableFlag header="صورتحساب / کارگزاری 11003 محمد امین الدوله "  >
-        <p-table [value]="tableList" dataKey="bankId">
-            <ng-template  pTemplate="header">
-                <tr>
-                    <th>ردیف</th>
-                    <th style="width: 20%;direction: rtl" >بانک</th>
-                </tr>
-            </ng-template>
-            <ng-template colspan="12" pTemplate="body" let-bills let-expanded="expanded" let-i="rowIndex">
-                <tr>
-                    <td>{{i + 1}}</td>
-                    <td>{{bills.bankName}}</td>
-                    <td>
-                        <button type="button" pButton pRipple [pRowToggler]="bills"
-                                class="p-button-text p-button-rounded p-button-plain"
-                                [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
-                    </td>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="rowexpansion" let-bills>
-                <tr>
-                    <td colspan="12">
-                        <div class="p-p-3">
-                            <p-table [value]="bills.accountInfo" dataKey="id">
-                                <ng-template pTemplate="header" >
-                <tr>
-                    <th  >ردیف</th>
-                    <th  >شماره بانکی تراکنش</th>
-                    <th  >شماره حساب</th>
-                    <th  >نام شعبه</th>
-                    <th  >تاریخ تراکنش</th>
-                    <th  >شناسه یکتا تراکنش</th>
-                    <th  >شماره سند</th>
-                    <th  >نوع عملیات</th>
-                    <th  >مبلغ</th>
-                    <th  >مانده</th>
-                    <th  >شرح اصلی تراکنش</th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-accountTrans let-j="rowIndex"  let-expanded="expanded" >
-                <tr id="row">
-                    <td>{{j+1}}</td>
-                    <td>{{accountTrans.transactionNumber}}</td>
-                    <td>{{accountTrans.accountNumber}}</td>
-                    <td>{{accountTrans.branchName}}</td>
-                    <td>{{accountTrans.transactionDate}}</td>
-                    <td>{{accountTrans.yektaTransactionID}}</td>
-                    <td>{{accountTrans.docNumber}}</td>
-                    <td>{{accountTrans.typeOperation}}</td>
-                    <td>{{accountTrans.amount | addCommaSeparator }}</td>
-                    <td>{{accountTrans.remaining | addCommaSeparator}}</td>
-                    <td>{{accountTrans.desTransaction}}</td>
-                    <td>
-                        <button type="button" pButton pRipple [pRowToggler]="accountTrans"
-                                class="p-button-text p-button-rounded p-button-plain"
-                                [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
-                    </td>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="rowexpansion" let-transaction>
-                <tr>
-                    <td colspan="11">
-                        <div class="p-p-3">
-                            <p-table [value]="transaction.transactionInfo" dataKey="id">
-                                <ng-template pTemplate="header" >
-                <tr id="headerTable">
-                    <th  >ردیف</th>
-                    <th  >شماره سازمانی تراکنش</th>
-                    <th  >کانال عامل تراکنش</th>
-                    <th  >شماره ترمینال</th>
-                    <th  >تاریخ اعمال حسابداری</th>
-                    <th  >سرفصل حسابداری</th>
-                    <th  >شرح سازمانی تراکنش</th>
-                    <th  >آپلود / دانلود مستندات</th>
 
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-transaction let-j="rowIndex"  let-expanded="expanded" >
-                <tr >
-                    <td>{{j+1}}</td>
-                    <td>{{transaction.organNumber}}</td>
-                    <td>{{transaction.transactionAgent}}</td>
-                    <td>{{transaction.terminalNumber}}</td>
-                    <td>{{transaction.dateAccounting}}</td>
-                    <td>{{transaction.accountingHeading}}</td>
-                    <td>{{transaction.desOrganTransaction}}</td>
-                    <td>
-                        <button type="submit" pButton  icon="pi pi-plus" (click)="upOrDownloadFlag=true;"></button>
-                    </td>
-
-                </tr>
-            </ng-template>
-        </p-table>
-        </div>
-        </td>
-        </tr>
+    <p-card *ngIf=tableFlag header="صورتحساب / کارگزاری 11003 محمد امین الدوله ">
+      <p-table [value]="tableList" dataKey="bankId">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>ردیف</th>
+            <th style="width: 20%;direction: rtl">بانک</th>
+          </tr>
         </ng-template>
-        </p-table>
-        </div>
-        </td>
-        </tr>
+        <ng-template colspan="12" pTemplate="body" let-bills let-expanded="expanded" let-i="rowIndex">
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{bills.bankName}}</td>
+            <td>
+              <button type="button" pButton pRipple [pRowToggler]="bills"
+                      class="p-button-text p-button-rounded p-button-plain"
+                      [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+            </td>
+          </tr>
         </ng-template>
-        </p-table>
-    </p-card>
-    </div>
+        <ng-template pTemplate="rowexpansion" let-bills>
+          <tr>
+            <td colspan="12">
+              <div class="p-p-3">
+                <p-table [value]="bills.accountInfo" dataKey="id">
+                  <ng-template pTemplate="header">
+          <tr>
+            <th>ردیف</th>
+            <th>شماره بانکی تراکنش</th>
+            <th>شماره حساب</th>
+            <th>نام شعبه</th>
+            <th>تاریخ تراکنش</th>
+            <th>شناسه یکتا تراکنش</th>
+            <th>شماره سند</th>
+            <th>نوع عملیات</th>
+            <th>مبلغ</th>
+            <th>مانده</th>
+            <th>شرح اصلی تراکنش</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-accountTrans let-j="rowIndex" let-expanded="expanded">
+          <tr id="row">
+            <td>{{j + 1}}</td>
+            <td>{{accountTrans.transactionNumber}}</td>
+            <td>{{accountTrans.accountNumber}}</td>
+            <td>{{accountTrans.branchName}}</td>
+            <td>{{accountTrans.transactionDate}}</td>
+            <td>{{accountTrans.yektaTransactionID}}</td>
+            <td>{{accountTrans.docNumber}}</td>
+            <td>{{accountTrans.typeOperation}}</td>
+            <td>{{accountTrans.amount | addCommaSeparator }}</td>
+            <td>{{accountTrans.remaining | addCommaSeparator}}</td>
+            <td>{{accountTrans.desTransaction}}</td>
+            <td>
+              <button type="button" pButton pRipple [pRowToggler]="accountTrans"
+                      class="p-button-text p-button-rounded p-button-plain"
+                      [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></button>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="rowexpansion" let-transaction>
+          <tr>
+            <td colspan="11">
+              <div class="p-p-3">
+                <p-table [value]="transaction.transactionInfo" dataKey="id">
+                  <ng-template pTemplate="header">
+          <tr id="headerTable">
+            <th>ردیف</th>
+            <th>شماره سازمانی تراکنش</th>
+            <th>کانال عامل تراکنش</th>
+            <th>شماره ترمینال</th>
+            <th>تاریخ اعمال حسابداری</th>
+            <th>سرفصل حسابداری</th>
+            <th>شرح سازمانی تراکنش</th>
+            <th>آپلود / دانلود مستندات</th>
+
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-transaction let-j="rowIndex" let-expanded="expanded">
+          <tr>
+            <td>{{j + 1}}</td>
+            <td>{{transaction.organNumber}}</td>
+            <td>{{transaction.transactionAgent}}</td>
+            <td>{{transaction.terminalNumber}}</td>
+            <td>{{transaction.dateAccounting}}</td>
+            <td>{{transaction.accountingHeading}}</td>
+            <td>{{transaction.desOrganTransaction}}</td>
+            <td>
+              <button type="submit" pButton icon="pi pi-plus" (click)="upOrDownloadFlag=true;"></button>
+            </td>
+
+          </tr>
+        </ng-template>
+      </p-table>
+  </div>
+  </td>
+  </tr>
+  </ng-template>
+  </p-table>
+  </div>
+  </td>
+  </tr>
+  </ng-template>
+  </p-table>
+  </p-card>
+  </div>
   <app-up-or-download *ngIf="upOrDownloadFlag"></app-up-or-download>
 </p-panel>

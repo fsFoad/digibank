@@ -27,7 +27,7 @@
       <p-pickList [source]="availableRoles" [target]="selectedRoles" [showSourceControls]="false"
         [showTargetControls]="false" class="app-mirror-transfer-icons app-custom-picklist-header" sourceHeader="نقش‌های معتبر سازمان"
         targetHeader="نقش ذینفع در سازمان">
-        <ng-template let-row pTemplate="item">{{row.name}}</ng-template>
+        <ng-template let-row pTemplate="item">{{row.label}}</ng-template>
       </p-pickList>
     </div>
     <div class="p-col-2"></div>

@@ -1,36 +1,50 @@
 <p-panel header='وضعیت کیف پول' [ngStyle]="{'width':'100%'}">
     <div class="p-d-flex p-flex-wrap app-mx-10r">
-        <div class="p-md-3">
-            <p-dropdown [editable]="true" [autoDisplayFirst]="false" class="p-dropdown-w80" placeholder="شماره حساب متصل"  [options]="acItems"></p-dropdown>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="شماره آیدی کیف پول" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="شماره موبایل" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="ذینفع کیف پول" pInputText>
-        </div>
+         <div class="p-md-3">
+           <span class="p-float-label">
+             <p-dropdown [editable]="true" [autoDisplayFirst]="false" class="p-dropdown-w80" 
+                         [options]="acItems"></p-dropdown>
+             <label>شماره حساب متصل</label>
+           </span>
+         </div>
+         <div class="p-md-3">
+           <span class="p-float-label">
+             <input class="input-w-100" pInputText>
+             <label>شماره آیدی کیف پول</label>
+           </span>
+         </div>
+         <div class="p-md-3">
+           <span class="p-float-label">
+             <input class="input-w-100" pInputText>
+             <label>شماره موبایل</label>
+           </span>
+         </div>
+         <div class="p-md-3">
+           <span class="p-float-label">
+             <input class="input-w-100" pInputText>
+             <label>ذینفع کیف پول</label>
+           </span>
+         </div>
         <div class="p-md-12 FS-mt">
-            <button id="btnReport" class="p-button" pButton label="بازیابی گزارش"  (click)="tableFlag=true;"></button>&nbsp;
+          <button id="btnReport" class="p-button" pButton label="بازیابی گزارش"  (click)="tableFlag=true;"></button>&nbsp;
         </div>
     </div>
-    <p-card  *ngIf=tableFlag>
-        <p-table [value]="fsList">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th translate>ردیف</th>
-                    <th translate id="thAccountNumber">شماره حساب</th>
-                    <th translate>ذینفع کیف پول</th>
-                    <th translate>شماره آیدی کیف پول</th>
-                    <th translate>شماره موبایل</th>
-                    <th translate>تاریخ ایجاد</th>
-                    <th translate>وضعیت</th>
-                    <th translate>مانده کیف</th>
-                </tr>
-            </ng-template>
-            <ng-template let-i="rowIndex" pTemplate="body" let-reportWallet>
+  
+  <p-card  *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>ذینفع کیف پول</th>
+          <th translate>شماره آیدی کیف پول</th>
+          <th translate>شماره موبایل</th>
+          <th translate>تاریخ ایجاد</th>
+          <th translate>وضعیت</th>
+          <th translate>مانده کیف</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-reportWallet>
                 <tr>
                     <td>{{i + 1}}</td>
                     <td>{{reportWallet.accountNumber}}</td>

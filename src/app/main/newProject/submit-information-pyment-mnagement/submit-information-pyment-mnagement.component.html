@@ -2,92 +2,154 @@
   <div class="app-mx-5r">
     <div class="p-fluid p-formgrid p-grid app-mx-10r">
       <div class="p-field p-col">
-        <p-dropdown class="p-dropdown-w100" placeholder="مشتری" optionValue="value"
-           [options]="dropList"          optionLabel="label"></p-dropdown>
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w100" optionValue="value"
+                    [options]="dropList" optionLabel="label"></p-dropdown>
+          <label>مشتری</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w100" optionValue="value"
+                      optionLabel="label"></p-dropdown>
+          <label>مشتری ویژه</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>کد ملی</label>
+        </span>
       </div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-mx-10r">
       <div class="p-field p-col">
-        <p-dropdown class="p-dropdown-w100" placeholder="مشتری ویژه" optionValue="value"
-                         optionLabel="label"></p-dropdown>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حساب</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <input   placeholder="کد دوره پرداخت" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حساب ذینفع</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <input   placeholder="سقف پرداخت" class="input-w-100" pInputText>
-      </div>
-    </div>
-    <div class="p-fluid p-formgrid p-grid app-mx-10r">
-      <div class="p-field p-col">
-        <input placeholder="نوع پرداخت" class="input-w-100" pInputText>
-      </div>
-      <div class="p-field p-col">
-        <input placeholder="شماره حساب" class="input-w-100" pInputText>
-      </div>
-      <div class="p-field p-col">
-        <input placeholder="شماره حساب ذینفع" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره موبایل</label>
+        </span>
       </div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-mx-10r">
       <div class="p-field p-col">
-        <input placeholder="شناسه واریز" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>کد دوره پرداخت</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <input placeholder="شناسه عددی" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>سقف پرداخت</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <input placeholder="شناسه حرفی" class="input-w-100" pInputText>
-      </div>
-    </div>
-    <div class="p-fluid p-formgrid p-grid app-mx-10r">
-      <div class="p-field p-col">
-        <input placeholder="شماره حواله" class="input-w-100" pInputText>
-      </div>
-      <div class="p-field p-col">
-        <input placeholder="شماره سهامدار" class="input-w-100" pInputText>
-      </div>
-      <div class="p-field p-col">
-        <input placeholder="شماره شناسنامه ذینفع" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نوع پرداخت</label>
+        </span>
       </div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-mx-10r">
       <div class="p-field p-col">
-        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                       [minFractionDigits]="0" placeholder="مبلغ قابل پرداخت"></p-inputNumber>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شناسه واریز</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <p-persian-calendar placeholder="تاریخ شروع پرداخت" yearRange="1300:1410"
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شناسه عددی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شناسه حرفی</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حواله</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره سهامدار</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره شناسنامه ذینفع</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+                          ></p-inputNumber>
+          <label>مبلغ قابل پرداخت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
                             class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تاریخ شروع پرداخت</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <p-persian-calendar placeholder="تاریخ انقضا پرداخت" yearRange="1300:1410"
-                            class="app-persian-calendar-style"></p-persian-calendar>
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تاریخ انقضا پرداخت</label>
+        </span>
       </div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-mx-10r">
       <div class="p-field p-col">
-        <input placeholder="نام" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نام</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <input placeholder="نام خانوادگی" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نام خانوادگی</label>
+        </span>
       </div>
       <div class="p-field p-col">
-        <input placeholder="نام پدر" class="input-w-100" pInputText>
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نام پدر</label>
+        </span>
       </div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-mx-10r">
-      <div class="p-field p-col">
-        <input placeholder="کد ملی" class="input-w-100" pInputText>
-      </div>
-      <div class="p-field p-col">
-        <input placeholder="شماره موبایل" class="input-w-100" pInputText>
-      </div>
     </div>
-      <div class="p-d-flex p-jc-center">
-
-        <button pButton class="p-button-info btnWidth btn-ml "  label="ثبت" ></button>
-        <button pButton class="p-button-info btnWidth"   label="پاک کردن فرم" ></button>
-      </div>
+    <div class="p-d-flex p-jc-center">
+      <button pButton class="p-button-info btnWidth btn-ml " label="ثبت"></button>
+      <button pButton class="p-button-info btnWidth" label="پاک کردن فرم"></button>
     </div>
+  </div>
 </p-panel>

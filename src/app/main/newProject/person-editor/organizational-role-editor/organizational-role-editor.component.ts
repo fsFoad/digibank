@@ -7,7 +7,7 @@ import {Constants} from '../../../shared/constants/Constants';
   styleUrls: ['./organizational-role-editor.component.scss']
 })
 export class OrganizationalRoleEditorComponent implements OnInit {
-  availableRoles=Constants.availableRoles;
+  availableRoles=Constants.availableRolespickList;
   selectedRoles = [
     // {name: 'مشتری - ۱۲۱۲۱۲۱۲'},
     // {name: 'کارگزاری رتبه ب - ۱۴۱۵۱۶۱۷'},

@@ -1,60 +1,96 @@
 <p-panel header='تولید کد یکتا' [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-        <div class="p-md-3">
-            <input  class="input-w-100" placeholder="شماره حساب" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="صاحب حساب" pInputText>
-        </div>
-        <div class="p-md-3">
-            <p-dropdown class="p-dropdown-w80" placeholder="واحد مربوطه" optionValue="value"
-                        [autoDisplayFirst]="false"     optionLabel="label"></p-dropdown>
-        </div>
-        <div class="p-md-3">
-            <p-dropdown class="p-dropdown-w80" placeholder="سر فصل درآمدی" optionValue="value"
-                        optionLabel="label"></p-dropdown>
-        </div>
-        <div class="p-md-3">
-          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                         [minFractionDigits]="0" placeholder="مبلغ"></p-inputNumber>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="کد مبنا" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="تاریخ انقضا" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="کد عمومی" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="واریز کننده" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="موبایل" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="کد اقتصادی / کد ملی" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="آدرس" pInputText>
-        </div>
-
-
-        <div class="p-md-3">
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع الگوریتم" optionValue="value"
-                        [autoDisplayFirst]="false"     [options]="listDrop2"    optionLabel="label"></p-dropdown>
-        </div>
-        <div class="p-col-4">
-            <p-fileUpload   mode="basic"
-                            [auto]="true" [customUpload]="true"
-                            [showCancelButton]="false" [showUploadButton]="false"
-                            accept=".xlsx" chooseLabel="اسناد مرتبط" [multiple]="false"
-            >
-            </p-fileUpload>
-        </div>
-        <div class="p-md-12 FS-mt">
-            <button id="btnCreatYektaCode" class="p-button-info" pButton label="تولید کد یکتا"></button>&nbsp;
-        </div>
+  <div class="p-d-flex p-flex-wrap">
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره حساب</label>
+      </span>
     </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>صاحب حساب</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" optionValue="value"
+                    [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+        <label>واحد مربوطه</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" optionValue="value"
+                    optionLabel="label"></p-dropdown>
+        <label>سر فصل درآمدی</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0"></p-inputNumber>
+        <label>مبلغ</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد مبنا</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>تاریخ انقضا</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد عمومی</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>واریز کننده</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>موبایل</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد اقتصادی / کد ملی</label>
+      </span>
+    </div>
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>آدرس</label>
+      </span>
+    </div>
+
+    <div class="p-md-3">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" optionValue="value"
+                    [autoDisplayFirst]="false" [options]="listDrop2" optionLabel="label"></p-dropdown>
+        <label>نوع الگوریتم</label>
+      </span>
+    </div>
+    <div class="p-col-4">
+      <p-fileUpload mode="basic"
+                    [auto]="true" [customUpload]="true" [showCancelButton]="false" [showUploadButton]="false"
+                    accept=".xlsx" chooseLabel="اسناد مرتبط" [multiple]="false">
+      </p-fileUpload>
+    </div>
+    <div class="p-md-12 FS-mt">
+      <button id="btnCreatYektaCode" class="p-button-info" pButton label="تولید کد یکتا"></button>&nbsp;
+    </div>
+  </div>
 </p-panel>

@@ -1,64 +1,89 @@
 <p-panel header="گزارش پرداخت قبوض" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-        <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="شناسه قبض" pInputText>
-        </div>
-        <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="شناسه پرداخت" pInputText>
-        </div>
-        <div class=" p-md-3 ">
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع قبض" optionValue="value"
+  <div class="p-d-flex p-flex-wrap">
+    <div class=" p-md-3 ">
+          <span class="p-float-label">
+            <input class="input-w-100" placeholder="" pInputText>
+            <label>شناسه قبض</label>
+          </span>
+    </div>
+    <div class=" p-md-3 ">
+          <span class="p-float-label">
+            <input class="input-w-100" placeholder="" pInputText>
+            <label>شناسه پرداخت</label>
+          </span>
+    </div>
+    <div class=" p-md-3 ">
+          <span class="p-float-label">
+            <p-dropdown class="p-dropdown-w80" placeholder="" optionValue="value"
                         optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-3 ">
+            <label>نوع قبض</label>
+          </span>
+    </div>
+    <div class=" p-md-3 ">
+        <span class="p-float-label">
           <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                         [minFractionDigits]="0" placeholder="مبلغ قبض"></p-inputNumber>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="کد یکتا تراکنش بانکی" pInputText>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="کد پیوست مشتریان" pInputText/>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="شرح سند / توضیحات" pInputText/>
-        </div>
-        <div class="p-md-3">
-            <input class="input-w-100" placeholder="شماره حواله" pInputText/>
-        </div>
+                         [minFractionDigits]="0" placeholder=""></p-inputNumber>
+          <label>مبلغ قبض</label>
+        </span>
     </div>
-    <div class="p-col-12">
-        <br>
-        <button id="btnSearch" class="p-button-info" pButton label="جستجو" (click)="tableFlag=true;"></button>
+    <div class="p-md-3">
+        <span class="p-float-label">
+          <input class="input-w-100" placeholder="" pInputText>
+          <label>کد یکتا تراکنش بانکی</label>
+        </span>
     </div>
-    <p-card *ngIf=tableFlag>
-        <p-table [value]="fsList">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th translate>ردیف</th>
-                    <th translate id="thAccountNumber">شماره حساب</th>
-                    <th translate>شناسه قبض</th>
-                    <th translate>شناسه پرداخت</th>
-                    <th translate>تاریخ سر رسید</th>
-                    <th translate>تاریخ پرداخت</th>
-                    <th translate>مبلغ</th>
-                    <th translate>شماره حواله</th>
-                    <th translate>کد یکتای تراکنش</th>
-                </tr>
-            </ng-template>
-            <ng-template let-i="rowIndex" pTemplate="body" let-reportGhabz>
-                <tr>
-                    <td>{{i + 1}}</td>
-                    <td>{{reportGhabz.accountNumber}}</td>
-                    <td>{{reportGhabz.billingID}}</td>
-                    <td>{{reportGhabz.paymentCode}}</td>
-                    <td>{{reportGhabz.history}}</td>
-                    <td>{{reportGhabz.history}}</td>
-                    <td>{{reportGhabz.amount|addCommaSeparator}}</td>
-                    <td>{{reportGhabz.referralNumber}}</td>
-                    <td>{{reportGhabz.transactionYektaCode}}</td>
-                </tr>
-            </ng-template>
-        </p-table>
-    </p-card>
+    <div class="p-md-3">
+        <span class="p-float-label">
+          <input class="input-w-100" placeholder="" pInputText/>
+          <label>کد پیوست مشتریان</label>
+        </span>
+    </div>
+    <div class="p-md-3">
+        <span class="p-float-label">
+          <input class="input-w-100" placeholder="" pInputText/>
+          <label>شرح سند / توضیحات</label>
+        </span>
+    </div>
+    <div class="p-md-3">
+        <span class="p-float-label">
+          <input class="input-w-100" placeholder="" pInputText/>
+          <label>شماره حواله</label>
+        </span>
+    </div>
+  </div>
+  <div class="p-col-12">
+    <br>
+    <button id="btnSearch" class="p-button-info" pButton label="جستجو" (click)="tableFlag=true;"></button>
+  </div>
+
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>شناسه قبض</th>
+          <th translate>شناسه پرداخت</th>
+          <th translate>تاریخ سر رسید</th>
+          <th translate>تاریخ پرداخت</th>
+          <th translate>مبلغ</th>
+          <th translate>شماره حواله</th>
+          <th translate>کد یکتای تراکنش</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-reportGhabz>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{reportGhabz.accountNumber}}</td>
+          <td>{{reportGhabz.billingID}}</td>
+          <td>{{reportGhabz.paymentCode}}</td>
+          <td>{{reportGhabz.history}}</td>
+          <td>{{reportGhabz.history}}</td>
+          <td>{{reportGhabz.amount|addCommaSeparator}}</td>
+          <td>{{reportGhabz.referralNumber}}</td>
+          <td>{{reportGhabz.transactionYektaCode}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
 </p-panel>

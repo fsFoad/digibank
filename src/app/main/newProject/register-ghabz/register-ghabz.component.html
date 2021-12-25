@@ -1,38 +1,63 @@
 <p-panel header="ثبت قبض" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-        <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="شناسه قبض" pInputText>
-        </div>
-        <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="شناسه پرداخت" pInputText>
-        </div>
-        <div class=" p-md-3">
-            <p-dropdown class="p-dropdown-w80" placeholder="نوع قبض" optionValue="value"
-                        [autoDisplayFirst]="false"       optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-3 ">
-          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
-                         [minFractionDigits]="0" placeholder="مبلغ قبض"></p-inputNumber>
-        </div>
-        <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="مهلت پرداخت" pInputText disabled>
-        </div>
-        <div class=" p-md-3">
-            <p-dropdown class="p-dropdown-w80" placeholder="سرفصل حسابداری" optionValue="value"
-                        [autoDisplayFirst]="false"  optionLabel="label"></p-dropdown>
-        </div>
-        <div class=" p-md-3">
-            <p-dropdown [editable]="true" [autoDisplayFirst]="false" class="p-dropdown-w80" placeholder="شماره حساب"  [options]="acItems"></p-dropdown>
-        </div>
-        <div class=" p-md-3 ">
-            <input class="input-w-100" placeholder="شرح / توضیحات" pInputText disabled>
-        </div>
-        <div class="p-md-3Fs"></div>
-        <div class="p-md-6Fs">
-            <br>
-            <button id="btnRegister" class="p-button-info" pButton label="پرداخت"></button>&nbsp;
-            <button id="btnInquiryGhabz" class="p-button-info" pButton label="استعلام قبض"></button>&nbsp;
-        </div>
-        <div class="p-md-3Fs"></div>
+  <div class="p-d-flex p-flex-wrap">
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شناسه قبض</label>
+      </span>
     </div>
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شناسه پرداخت</label>
+      </span>
+    </div>
+    <div class=" p-md-3">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" optionValue="value"
+                    [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+        <label>نوع قبض</label>
+      </span>
+    </div>
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0" ></p-inputNumber>
+        <label>مبلغ قبض</label>
+      </span>
+    </div>
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>مهلت پرداخت</label>
+      </span>
+    </div>
+    <div class=" p-md-3">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w80" optionValue="value"
+                    [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+        <label>سرفصل حسابداری</label>
+      </span>
+    </div>
+    <div class=" p-md-3">
+      <span class="p-float-label">
+        <p-dropdown [editable]="true" [autoDisplayFirst]="false" class="p-dropdown-w80" 
+                    [options]="acItems"></p-dropdown>
+        <label>شماره حساب</label>
+      </span>
+    </div>
+    <div class=" p-md-3 ">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>شرح / توضیحات</label>
+      </span>
+    </div>
+    <div class="p-md-3Fs"></div>
+    <div class="p-md-6Fs">
+      <br>
+      <button id="btnRegister" class="p-button-info" pButton label="پرداخت"></button>&nbsp;
+      <button id="btnInquiryGhabz" class="p-button-info" pButton label="استعلام قبض"></button>&nbsp;
+    </div>
+    <div class="p-md-3Fs"></div>
+  </div>
 </p-panel>
