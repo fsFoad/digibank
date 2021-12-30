@@ -1,48 +1,51 @@
 <p-panel header="شارژ کیف پول" [ngStyle]="{'width':'100%'}">
-  <div class="p-d-flex p-flex-wrap">
-    <div class=" p-md-3 FS-mr">
+  <div class="app-mx-20r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
       <span class="p-float-label">
-        <input placeholder="" class="input-w-70" pInputText>
+        <input  id="inputIdWallet" class="input-w-20" pInputText>
         <label>شماره آی دی کیف پول</label>
       </span>
-      <button id="btnIdWallet" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
-    </div>
-    <div class=" p-md-3 FS-mr">
+        <button id="btnIdWallet" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
+      </div>
+      <div class="p-field p-col">
       <span class="p-float-label">
-        <input placeholder="" class="input-w-70" pInputText>
+        <input   class="input-w-70" pInputText>
         <label>شماره موبایل</label>
       </span>
-      <button id="btnIdWallet2" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
-    </div>
-    <div class=" p-md-3 FS-mr">
+        <button id="btnIdWallet2" class="p-button-outlined" pButton label="بازیابی"></button>&nbsp;
+      </div>
+      <div class="p-field p-col">
       <span class="p-float-label">
-        <input placeholder="" class="input-w-100" pInputText disabled>
+        <input   class="input-w-100" pInputText disabled>
         <label>موجودی فعلی</label>
       </span>
+      </div>
     </div>
-    <div class=" p-md-3 FS-mr">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
       <span class="p-float-label">
         <p-dropdown [autoDisplayFirst]="false" [editable]="true" placeholder=""
                     [options]="acItems"></p-dropdown>
         <label>شماره حساب متصل</label>
       </span>
-    </div>
-    <div class=" p-md-3 FS-mr">
+      </div>
+      <div class="p-field p-col">
       <span class="p-float-label">
         <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
                        [minFractionDigits]="0" placeholder=""></p-inputNumber>
         <label>مبلغ شارژ</label>
       </span>
-    </div>
-    <div class=" p-md-3 FS-mr">
+      </div>
+      <div class="p-field p-col">
       <span class="p-float-label">
-        <input class="input-w-100" placeholder="" pInputText/>
+        <input class="input-w-100"   pInputText/>
         <label>شرح تراکنش / توضیحات</label>
       </span>
+      </div>
     </div>
   </div>
-  <br>
-  <div class="p-md-12 FS-height">
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
     <button id="btnCreateWallet" class="p-button-info" pButton label="شارژ کیف پول"></button>&nbsp;
     <button id="btnBatchRegister" class="p-button-info" pButton label="انصراف"></button>&nbsp;
   </div>

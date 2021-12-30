@@ -33,9 +33,7 @@
   </p-card>
   <app-details-reliable-remittance-request *ngIf="detailsFlag" [inputDetails]="fsList"
                                            (close)="onClose($event)"></app-details-reliable-remittance-request>
-  <div class="p-d-flex p-flex-wrap Fs-mlf" *ngIf="!detailsFlag">
-    <div class="p-md-12 FS-mt">
+    <div class="p-d-flex p-jc-center p-mt-3" *ngIf="!detailsFlag">
       <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="tempTable=fsList;"></button>&nbsp;
     </div>
-  </div>
 </p-panel>

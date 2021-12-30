@@ -33,13 +33,9 @@
       </ng-template>
     </p-table>
   </p-card>
-
   <app-specifications-request-satna *ngIf="detailsFlag" [satnaRow]="selectedRow" (close)="onClose($event)">
   </app-specifications-request-satna>
-  
-  <div class="p-d-flex p-flex-wrap Fs-mlf" *ngIf="!detailsFlag">
-    <div class="p-md-12 FS-mt">
-      <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="getSatnaRows()"></button>&nbsp;
-    </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5" *ngIf="!detailsFlag">
+    <button id="btnUpdate" class="p-button" pButton label="بروزرسانی" (click)="getSatnaRows()"></button>&nbsp;
   </div>
 </p-panel>

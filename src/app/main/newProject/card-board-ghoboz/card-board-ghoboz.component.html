@@ -34,9 +34,7 @@
     </p-table>
   </p-card>
   <app-request-ghoboz *ngIf="detailsFlag" [inputDetails]="fsList" (close)="onClose($event)"></app-request-ghoboz>
-<!--  <app-request-ghoboz [inputDetails]="fsList" (close)="onClose($event)"></app-request-ghoboz>-->
-<br>
-    <div class="p-d-flex p-jc-center" *ngIf="!detailsFlag">
-      <button pButton class="p-button-info  "  label="بروزرسانی" (click)="tempTable=fsList;" ></button>
-    </div>
+  <div class="p-d-flex p-jc-center p-mt-3" *ngIf="!detailsFlag">
+    <button pButton class="p-button-info  " label="بروزرسانی" (click)="tempTable=fsList;"></button>
+  </div>
 </p-panel>

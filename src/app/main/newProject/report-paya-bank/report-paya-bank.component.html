@@ -1,80 +1,85 @@
 <p-panel header="گزارش وضعیت حواله های بانک پرداخت" [ngStyle]="{'width':'100%'}">
-  <div class="p-d-flex p-flex-wrap">
-      <div class="p-md-3">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input class="input-w-100" placeholder="" pInputText>
           <label>شماره قبض</label>
         </span>
       </div>
-      <div class="p-md-3">
+      <div class="p-field p-col">
         <span class="p-float-label">
-          <p-dropdown class="p-dropdown-w80" placeholder="" optionValue="value"
-                        [autoDisplayFirst]="false"    optionLabel="label"></p-dropdown>
+          <p-dropdown class="p-dropdown-w100" placeholder="" optionValue="value"
+                      [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
           <label>نوع حواله</label>
         </span>
       </div>
-      <div class="p-md-3">
+      <div class="p-field p-col">
         <span class="p-float-label">
-          <p-dropdown class="p-dropdown-w80" placeholder="" optionValue="value"
-                      [autoDisplayFirst]="false"    optionLabel="label"></p-dropdown>
+          <p-dropdown class="p-dropdown-w100" placeholder="" optionValue="value"
+                      [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
           <label>نوع پرداخت</label>
         </span>
       </div>
-      <div class="p-md-3">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
                          [minFractionDigits]="0" placeholder=""></p-inputNumber>
           <label>مبلغ حواله</label>
         </span>
       </div>
-  </div>
-  <br>
-  <div class="p-d-flex p-flex-wrap">
-    <div class="p-md-3">
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
       <span class="p-float-label">
         <input class="input-w-100" placeholder="" pInputText>
         <label>شماره سیم کارت</label>
       </span>
-    </div>
-    <div class="p-md-3">
+      </div>
+      <div class="p-field p-col">
       <span class="p-float-label">
         <input class="input-w-100" placeholder="" pInputText/>
         <label>کد پیوست</label>
       </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
     </div>
-    <div class="p-md-3"></div>
-    <div class="p-md-3"></div>
-    <div class="p-md-12 ">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
       <span class="p-float-label">
         <input class="input-w-100" placeholder="" pInputText/>
         <label>توضیحات</label>
       </span>
+      </div>
     </div>
-    <div class="p-md-3">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
       <span class="p-float-label">
         <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style">
         </p-persian-calendar>
         <label>تاریخ شروع</label>
       </span>
-    </div>
-    <div class="p-md-3">
+      </div>
+      <div class="p-field p-col">
       <span class="p-float-label">
         <p-persian-calendar placeholder="" yearRange="1300:1410"
                             class="app-persian-calendar-style"></p-persian-calendar>
         <label>تاریخ انقضا</label>
       </span>
-    </div>
-    <div class="p-md-3">
+      </div>
+      <div class="p-field p-col">
         <p-checkbox name="check" value="val1"></p-checkbox>
         <label> بدون تاریخ امضا </label>
-    </div>
-    <div class="p-md-3">
+      </div>
+      <div class="p-field p-col">
         <p-checkbox name="check" value="val1"></p-checkbox>
         <label> نمایش حواله های حذف شده </label>
+      </div>
     </div>
   </div>
-  <div class="p-col-12">
-    <br>
+
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
     <button id="btnSearch" class="p-button-info" pButton label=" جستجو" (click)="tableFlag=true;"></button>&nbsp;
   </div>
 

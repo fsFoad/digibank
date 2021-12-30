@@ -1,58 +1,62 @@
 <p-panel header="گزارش پرداخت قبوض" [ngStyle]="{'width':'100%'}">
-  <div class="p-d-flex p-flex-wrap">
-    <div class=" p-md-3 ">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
           <span class="p-float-label">
             <input class="input-w-100" placeholder="" pInputText>
             <label>شناسه قبض</label>
           </span>
-    </div>
-    <div class=" p-md-3 ">
+      </div>
+      <div class="p-field p-col">
           <span class="p-float-label">
             <input class="input-w-100" placeholder="" pInputText>
             <label>شناسه پرداخت</label>
           </span>
-    </div>
-    <div class=" p-md-3 ">
+      </div>
+      <div class="p-field p-col">
           <span class="p-float-label">
-            <p-dropdown class="p-dropdown-w80" placeholder="" optionValue="value"
+            <p-dropdown class="p-dropdown-w100" placeholder="" optionValue="value"
                         optionLabel="label"></p-dropdown>
             <label>نوع قبض</label>
           </span>
-    </div>
-    <div class=" p-md-3 ">
+      </div>
+      <div class="p-field p-col">
         <span class="p-float-label">
           <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
                          [minFractionDigits]="0" placeholder=""></p-inputNumber>
           <label>مبلغ قبض</label>
         </span>
+      </div>
     </div>
-    <div class="p-md-3">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input class="input-w-100" placeholder="" pInputText>
           <label>کد یکتا تراکنش بانکی</label>
         </span>
-    </div>
-    <div class="p-md-3">
+      </div>
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input class="input-w-100" placeholder="" pInputText/>
           <label>کد پیوست مشتریان</label>
         </span>
-    </div>
-    <div class="p-md-3">
+      </div>
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input class="input-w-100" placeholder="" pInputText/>
           <label>شرح سند / توضیحات</label>
         </span>
-    </div>
-    <div class="p-md-3">
+      </div>
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input class="input-w-100" placeholder="" pInputText/>
           <label>شماره حواله</label>
         </span>
+      </div>
     </div>
   </div>
-  <div class="p-col-12">
-    <br>
+
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
     <button id="btnSearch" class="p-button-info" pButton label="جستجو" (click)="tableFlag=true;"></button>
   </div>
 

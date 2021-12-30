@@ -1,41 +1,40 @@
 <p-panel header="انسداد بن کارت" [ngStyle]="{'width':'100%'}">
-  <div class="p-d-flex p-flex-wrap Fs-mlf">
-    <div class=" p-md-3 FS-mr">
-      <span class="p-float-label">
-        <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label">
-        </p-dropdown>
-        <label>شماره کارت</label>
-      </span>
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label">
+          </p-dropdown>
+          <label>شماره کارت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText disabled>
+          <label>صاحب کارت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText disabled>
+          <label>مبلغ موجودی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>مبلغ انسداد</label>
+        </span>
+      </div>
+      <div class="p-field p-col-12">
+        <span class="p-float-label">
+          <input class="input-w-92" pInputText/>
+          <label>شرح / توضیحات</label>
+        </span>
+      </div>
     </div>
-    <div class=" p-md-3 FS-mr">
-      <span class="p-float-label">
-        <input class="input-w-100" pInputText disabled>
-        <label>صاحب کارت</label>
-      </span>
-    </div>
-    <div class=" p-md-3 FS-mr">
-      <span class="p-float-label">
-        <input class="input-w-100" pInputText disabled>
-        <label>مبلغ موجودی</label>
-      </span>
-    </div>
-    <div class=" p-md-3 FS-mr">
-      <span class="p-float-label">
-        <input class="input-w-100" pInputText>
-        <label>مبلغ انسداد</label>
-      </span>
-    </div>
-    <div class="FS-mr p-md-11">
-      <span class="p-float-label">
-        <input class="input-w-92" pInputText/>
-        <label>شرح / توضیحات</label>
-      </span>
-    </div>
-    <br>
   </div>
-  <br>
-  <div class="p-col-12">
-    <br>
+  <div class="p-d-flex p-jc-center p-mt-1">
     <button id="btnBlockAmount" class="p-button-info" pButton label="انسداد مبلغ"
             (click)="confirmDlg.visible = true"></button>&nbsp;
     <button id="btnBlockCard" class="p-button-info" pButton label="انسداد کامل کارت"

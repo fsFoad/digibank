@@ -1,7 +1,6 @@
 <p-panel header="اطلاعات تراکنش بن کارت" [ngStyle]="{'width':'100%'}">
   <div class="app-mx-20r p-jc-center">
-    <div class="p-fluid p-formgrid p-grid  ">
-      <br>
+    <div class="p-fluid p-formgrid p-grid p-mt-1">
       <div class="p-field p-col-4">
         <span class="p-float-label">
           <p-persian-calendar yearRange="1300:1410"
@@ -18,52 +17,52 @@
       </div>
       <div class="p-field p-col-4">
         <span class="p-float-label">
-          <p-dropdown class="p-dropdown-w80" optionValue="value" [autoDisplayFirst]="false"
+          <p-dropdown class="p-dropdown-w100" optionValue="value" [autoDisplayFirst]="false"
                       optionLabel="label"></p-dropdown>
           <label>شماره کارت</label>
         </span>
       </div>
     </div>
   </div>
-  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-2">
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-5 p-mb-5">
     <button class="p-button-outlined" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
   </div>
-  <br>
-  
-  <p-card *ngIf=tableFlag>
-    <p-table [value]="fsList">
-      <ng-template pTemplate="header">
-        <tr>
-          <th translate>ردیف</th>
-          <th translate style="width: 15%">شماره حساب</th>
-          <th translate>شعبه</th>
-          <th translate>تاریخ اعمال</th>
-          <th translate>شرح تراکنش</th>
-          <th translate>چک / حواله</th>
-          <th translate>سند</th>
-          <th translate>بدهکار</th>
-          <th translate>بستانکار</th>
-          <th translate>مانده</th>
-          <th translate>تاریخ انجام</th>
-          <th translate>کد نوع خدمات</th>
-        </tr>
-      </ng-template>
-      <ng-template let-i="rowIndex" pTemplate="body" let-service>
-        <tr>
-          <td>{{i + 1}}</td>
-          <td>{{service.accountNumber}}</td>
-          <td>{{service.branchName}}</td>
-          <td>{{service.history}}</td>
-          <td>{{service.transactionDes}}</td>
-          <td>{{service.check}}</td>
-          <td>{{service.doc}}</td>
-          <td>0</td>
-          <td>{{service.creditor|addCommaSeparator}}</td>
-          <td>{{service.amount|addCommaSeparator}}</td>
-          <td>1400/06/01</td>
-          <td>170</td>
-        </tr>
-      </ng-template>
-    </p-table>
-  </p-card>
+  <div *ngIf=tableFlag class="p-mt-3">
+    <p-card >
+      <p-table [value]="fsList">
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate style="width: 15%">شماره حساب</th>
+            <th translate>شعبه</th>
+            <th translate>تاریخ اعمال</th>
+            <th translate>شرح تراکنش</th>
+            <th translate>چک / حواله</th>
+            <th translate>سند</th>
+            <th translate>بدهکار</th>
+            <th translate>بستانکار</th>
+            <th translate>مانده</th>
+            <th translate>تاریخ انجام</th>
+            <th translate>کد نوع خدمات</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-service>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{service.accountNumber}}</td>
+            <td>{{service.branchName}}</td>
+            <td>{{service.history}}</td>
+            <td>{{service.transactionDes}}</td>
+            <td>{{service.check}}</td>
+            <td>{{service.doc}}</td>
+            <td>0</td>
+            <td>{{service.creditor|addCommaSeparator}}</td>
+            <td>{{service.amount|addCommaSeparator}}</td>
+            <td>1400/06/01</td>
+            <td>170</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
 </p-panel>

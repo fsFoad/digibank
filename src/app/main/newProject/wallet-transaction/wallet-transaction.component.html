@@ -1,20 +1,23 @@
 <p-panel header="اطلاعات شارژ کیف پول به تفکیک واحد های تابعه">
-  <div class="p-d-flex p-flex-wrap">
-    <div class="p-md-3  FS-mr2">
+  <div class="app-mx-20r p-jc-center">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col-2"></div>
+      <div class="p-field p-col-4">
       <span class="p-float-label">
         <input class="input-w-100" pInputText>
         <label>شماره آیدی کیف پول</label>
       </span>
-    </div>
-    <div class="p-md-3  FS-mr">
+      </div>
+      <div class="p-field p-col-4">
       <span class="p-float-label">
         <input class="input-w-100" pInputText>
         <label>شماره موبایل</label>
       </span>
+      </div>
     </div>
-    <div class="p-md-12 FS-mt">
-      <button id="btnRecovery" class="p-button" pButton label="بازیابی گزارش" (click)="tableFlag=true;"></button>&nbsp;
-    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnRecovery" class="p-button" pButton label="بازیابی گزارش" (click)="tableFlag=true;"></button>&nbsp;
   </div>
   <p-card *ngIf=tableFlag>
     <p-table [value]="fsList">

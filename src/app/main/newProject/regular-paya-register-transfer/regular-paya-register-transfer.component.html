@@ -1,129 +1,134 @@
 <p-panel header="ثبت حواله پایا منظم" [ngStyle]="{'width':'100%'}">
-  <div class="p-d-flex p-flex-wrap Fs-mlf">
-    <div class=" p-md-5 ">
-      <span class="p-float-label">
-        <input dir="ltr" [(ngModel)]="ibon" pInputText>
-        <label>شماره شبا</label>
-      </span>
-    </div>
-    <div class="FS-mr2 p-md-2 ">
-      <span class="p-float-label">
-        <input dir="rtl" disabled pInputText>
-        <label>صاحب بانک</label>
-      </span>
-    </div>
-    <div class="FS-mr2 p-md-2 ">
-      <span class="p-float-label">
-        <input dir="rtl" disabled pInputText>
-        <label>متعلق به حساب</label>
-      </span>
-    </div>
-    <div class="FS-mr2 p-md-2 ">
-      <span class="p-float-label">
-        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
-                        ></p-inputNumber>
-        <label>مبلغ</label>
-      </span>
+  <div class="app-mx-2-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input dir="ltr" [(ngModel)]="ibon" pInputText>
+          <label>شماره شبا</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input dir="rtl" disabled pInputText>
+          <label>صاحب حساب</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input dir="rtl" disabled pInputText>
+          <label>متعلق به حساب</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                         [minFractionDigits]="0"></p-inputNumber>
+          <label>مبلغ</label>
+        </span>
+      </div>
     </div>
   </div>
-  <br>
-
   <p-card header="اشخاص حقیقی">
-    <div class="p-d-flex p-flex-wrap Fs-mlf3">
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>نام</label>
-        </span>
+    <div class="p-fluid p-formgrid p-grid app-mx-5r app-col-px-2r ">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>نام</label>
+          </span>
       </div>
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>نام خانوادگی</label>
-        </span>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>نام خانوادگی</label>
+          </span>
       </div>
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>کد ملی</label>
-        </span>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>کد ملی</label>
+          </span>
       </div>
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>شناسنامه</label>
-        </span>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>شناسنامه</label>
+          </span>
       </div>
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>نام پدر</label>
-        </span>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-5r app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>نام پدر</label>
+          </span>
       </div>
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>کد شهاب</label>
-        </span>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>کد شهاب</label>
+          </span>
       </div>
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>کد پستی</label>
-        </span>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>کد پستی</label>
+          </span>
       </div>
-      <div class="p-md-3">
-        <span class="p-float-label">
-          <input pInputText>
-          <label>شماره تماس</label>
-        </span>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>شماره تماس</label>
+          </span>
       </div>
     </div>
   </p-card>
   <br>
-
   <p-card header="اشخاص حقوقی">
-    <div class="p-d-flex p-flex-wrap Fs-mlf4">
-      <div class="Fs-p-md2 ">
+    <div class="p-fluid p-formgrid p-grid app-mx-20r app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input pInputText>
           <label>کد شهاب مبدا</label>
         </span>
       </div>
-      <div class="Fs-p-md2 FS-mr3">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input STYLE="width: 100%" class="p-inputtext-lg" pInputText>
           <label>اطلاعات پیوست مشتریان</label>
         </span>
       </div>
-      <div class="Fs-p-md2  FS-mr3">
+      <div class="p-field p-col">
         <span class="p-float-label">
-          <p-dropdown class="p-dropdown-w80" optionValue="value"
+          <p-dropdown class="p-dropdown-w100" optionValue="value"
                       [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
           <label> در خواست پرداخت</label>
         </span>
       </div>
-      <div class="FS-mr1 Fs-p-md-11-5 FS-mt1">
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-20r app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <input class="input-w-80" pInputText/>
           <label>شرح / توضیحات</label>
         </span>
       </div>
-      <div class="Fs-p-md  FS-mt1">
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-20r app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <p-persian-calendar yearRange="1300:1410"
                               class="app-persian-calendar-style"></p-persian-calendar>
           <label>شروع</label>
         </span>
       </div>
-      <div class="Fs-p-md FS-mr FS-mt1">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <p-persian-calendar yearRange="1300:1410"
                               class="app-persian-calendar-style"></p-persian-calendar>
           <label>اتمام</label>
         </span>
       </div>
-      <div class="Fs-p-md2 FS-mr FS-mt1">
+      <div class="p-field p-col">
         <span class="p-float-label">
           <p-dropdown optionValue="value"
                       [autoDisplayFirst]="false" optionLabel="label" [options]="listDrop"></p-dropdown>
@@ -133,8 +138,7 @@
     </div>
   </p-card>
 
-  <div class="p-col-12">
-    <br>
+  <div class="p-d-flex p-jc-center p-mt-5">
     <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
     <button id="btnCheckNationalCode" class="p-button-info" pButton label="برسی کامل کد ملی"></button>&nbsp;
   </div>

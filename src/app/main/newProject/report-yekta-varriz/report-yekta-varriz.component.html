@@ -1,69 +1,74 @@
 <p-panel header="گزارش واریز" [ngStyle]="{'width':'100%'}">
-    <div class="p-d-flex p-flex-wrap">
-         <div class=" p-md-2 FS-mr">
-           <span class="p-float-label">
-             <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label"></p-dropdown>
-             <label>واحد مربوطه</label>
-           </span>
-         </div>
-         <div class=" p-md-2 FS-mr">
-           <span class="p-float-label">
-             <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label"></p-dropdown>
-             <label>سرفصل در آمدی</label>
-           </span>
-         </div>
-         <div class=" p-md-2 FS-mr">
-           <span class="p-float-label">
-             <input class="input-w-100" pInputText    >
-             <label>کد تراکنشی یکتا</label>
-           </span>
-         </div>
-         <div class=" p-md-2 FS-mr">
-           <span class="p-float-label">
-             <p-dropdown [autoDisplayFirst]="false" [editable]="true" [options]="acItems">
-             </p-dropdown>
-             <label>شماره حساب</label>
-           </span>
-         </div>
-         <div class=" p-md-2 FS-mr">
-           <span class="p-float-label">
-             <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
-                             ></p-inputNumber>
-             <label>مبلغ</label>
-           </span>
-         </div>
-        <div class="Fs-p-md FS-mr FS-mt">
-          <span class="p-float-label">
-            <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
-            </p-persian-calendar>
-            <label>از تاریخ</label>
-          </span>
-        </div>
-        <div class="Fs-p-md FS-mr2 FS-mt">
-          <span class="p-float-label">
-            <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
-            </p-persian-calendar>
-            <label>تا تاریخ</label>
-          </span>
-        </div>
-        <div class=" p-md-3 FS-mr3">
-          <span class="p-float-label">
-            <input class="input-w-100" pInputText>
-            <label>کد پیوست</label>
-          </span>
-        </div>
-        <div class=" Fs-p-md-3 FS-mr2 FS-mt">
-          <span class="p-float-label">
-            <input class="input-w-100" pInputText>
-            <label>کد اقتصادی / کد ملی</label>
-          </span>
-        </div>
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label"></p-dropdown>
+          <label>واحد مربوطه</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label"></p-dropdown>
+          <label>سرفصل در آمدی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>کد تراکنشی یکتا</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [editable]="true" [options]="acItems">
+          </p-dropdown>
+          <label>شماره حساب</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0">
+          </p-inputNumber>
+          <label>مبلغ</label>
+        </span>
+      </div>
     </div>
-    <div class="p-md-12 FS-height">
-      <button id="btnReport"  class="p-button-info" pButton label="گزارش" (click)="tableFlag=true;"></button>&nbsp;
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+          </p-persian-calendar>
+          <label>از تاریخ</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+          </p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>کد پیوست</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>کد اقتصادی / کد ملی</label>
+        </span>
+      </div>
     </div>
+  </div>
 
-  <p-card  *ngIf=tableFlag>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnReport" class="p-button-info" pButton label="گزارش" (click)="tableFlag=true;"></button>&nbsp;
+  </div>
+
+  <p-card *ngIf=tableFlag>
     <p-table [value]="fsList">
       <ng-template pTemplate="header">
         <tr>

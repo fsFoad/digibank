@@ -2,6 +2,21 @@
   <div class="app-mx-5r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col-3">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>از تاریخ</label>
+        </span>
+      </div>
+      <div class="p-field p-col-3">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
+      </div>
+    </div>
+      <div class="p-field p-col-3">
          <span class="p-float-label">
            <p-dropdown [autoDisplayFirst]="false" [options]="organizationalUnit"></p-dropdown>
            <label>واحد سازمانی</label>
@@ -13,21 +28,6 @@
            <label>شماره حساب</label>
          </span>
       </div>
-      <div class="p-field p-col-3">
-        <span class="p-float-label">
-          <p-persian-calendar yearRange="1300:1410"
-                            class="app-persian-calendar-style"></p-persian-calendar>
-          <label>از تاریخ</label>
-        </span>
-      </div>
-      <div class="p-field p-col-3">
-        <span class="p-float-label">
-          <p-persian-calendar yearRange="1300:1410"
-                            class="app-persian-calendar-style"></p-persian-calendar>
-          <label>تا تاریخ</label>
-        </span>
-      </div>
-    </div>
     <div class="p-d-flex p-jc-center">
       <button pButton class="p-button-info p-px-6" (click)="showTable = true" label="بازیابی"></button>
     </div>
