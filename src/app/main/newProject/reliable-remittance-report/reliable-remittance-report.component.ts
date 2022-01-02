@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-reliable-remittance-report',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReliableRemittanceReportComponent implements OnInit {
 reportTypeList:{ label: string, value: number }[] = [];
-bankNameList:{ label: string, value: number }[] = [];
+bankNameList=Constants.bankNameList;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,14 +16,6 @@ bankNameList:{ label: string, value: number }[] = [];
       {label: '-', value: 1},
       {label: 'صادره', value: 2},
       {label: 'وارده', value: 3},
-    ];
-    this.bankNameList = [
-      {label: '-', value: 1},
-      {label: 'ملی', value: 2},
-      {label: 'ملت', value: 3},
-      {label: 'صادرات', value: 4},
-      {label: 'پاسارگاد', value: 5},
-      {label: 'تجارت', value: 6},
     ];
   }
 

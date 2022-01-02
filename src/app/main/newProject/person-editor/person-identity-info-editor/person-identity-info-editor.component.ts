@@ -16,14 +16,9 @@ export class PersonIdentityInfoEditorComponent implements OnInit {
   residenceTypes = Constants.residenceTypes;
   shenasnameType = Constants.shenasnameType;
   codeHoze = Constants.codeHoze;
+  bankName = Constants.bankNameList;
 
-  banks = [
-      { value:'0',label: '-' },
-      { value:'1',label: 'تجارت' },
-      { value:'2',label: 'ملت' },
-      { value:'3',label: 'پارسیان' },
-      { value:'4',label: 'سینا' },
-    ]
+
 
   public form: FormGroup;
   constructor(fb: FormBuilder) {

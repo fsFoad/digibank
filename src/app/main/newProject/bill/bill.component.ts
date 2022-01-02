@@ -9,10 +9,11 @@ import {Constants} from '../../shared/constants/Constants';
 export class BillComponent implements OnInit {
     upOrDownloadFlag=false;
   acItems = Constants.acItems;
+  bankNameList = Constants.bankNameList;
     organList: { label: string, value: number }[] = [];
     representationList: { label: string, value: number }[] = [];
     operationList: { label: string, value: number }[] = [];
-    bankList: { label: string, value: number }[] = [];
+
     // accountList: { label: string, value: number }[] = [];
 
     tableList: {
@@ -72,17 +73,7 @@ export class BillComponent implements OnInit {
         //     {label: 'سپرده کوتاه مدت 2000099998888', value: 2},
         //
         // ];
-        this.bankList = [
-            {label: '-', value: 0},
-            {label: 'ملت', value: 1},
-            {label: 'سینا', value: 2},
-            {label: 'پاسارگاد', value: 2},
-            {label: 'صادرات', value: 2},
-            {label: 'تجارت', value: 2},
-            {label: 'ملی', value: 2},
-            {label: 'پارسیان', value: 2},
 
-        ];
         this.tableList =  [{
             bankId: 1,
             bankName: "بانک ملت",

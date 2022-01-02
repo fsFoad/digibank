@@ -8,6 +8,7 @@ import {Constants} from '../../shared/constants/Constants';
 })
 export class SubmitClearComponent implements OnInit {
   acItems = Constants.acItems;
+  bankNameList = Constants.bankNameList;
   constructor() { }
 
   ngOnInit(): void {

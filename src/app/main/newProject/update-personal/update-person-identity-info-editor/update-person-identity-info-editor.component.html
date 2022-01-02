@@ -2,7 +2,7 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
             <span class="p-float-label">
-      <input formControlName="nationalCode" placeholder="کد ملی" pInputText (keyup.enter)="onNationalCodeEnterKey()">
+      <input formControlName="nationalCode"pInputText (keyup.enter)="onNationalCodeEnterKey()">
               <!--        <input pInputText>-->
               <label>کد ملی</label>
             </span>
@@ -17,21 +17,20 @@
     <div class="p-field p-col">
             <span class="p-float-label">
       <!--        <input pInputText>-->
-      <input formControlName="personeliCode" placeholder="کد پرسنلی" pInputText>
+      <input formControlName="personeliCode"pInputText>
               <label>کد پرسنلی</label>
             </span>
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" [options]="genderTypes" formControlName="genderId"
-                  placeholder="جنسیت"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" [options]="genderTypes" formControlName="genderId"></p-dropdown>
               <label>جنسیت</label>
             </span>
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
 <!--              <p-dropdown [options]="banks" optionLabel="name" [autoDisplayFirst]="false"></p-dropdown>-->
-      <p-dropdown [autoDisplayFirst]="false" class="p-dropdown-w100" formControlName="bankId" placeholder="بانک"
+      <p-dropdown [autoDisplayFirst]="false" class="p-dropdown-w100" formControlName="bankId"
                   [options]="banks"></p-dropdown>
               <label>بانک</label>
             </span>
@@ -41,7 +40,7 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <input formControlName="firstName" placeholder="نام" pInputText>
+      <input formControlName="firstName"pInputText>
               <!--        <input required pInputText>-->
               <label>نام</label>
             </span>
@@ -50,7 +49,7 @@
     <div class="p-field p-col-3">
             <span class="p-float-label">
       <!--        <input required pInputText>-->
-      <input formControlName="lastName" placeholder="نام خانوادگی" pInputText>
+      <input formControlName="lastName"pInputText>
               <label>نام خانوادگی</label>
             </span>
       <!--      <small>متن کمکی</small>-->
@@ -58,15 +57,14 @@
     <div class="p-field p-col-3">
             <span class="p-float-label">
       <!--        <input required pInputText>-->
-      <input formControlName="fatherName" placeholder="نام پدر" pInputText>
+      <input formControlName="fatherName"pInputText>
               <label>نام پدر</label>
             </span>
       <!--      <small>متن کمکی</small>-->
     </div>
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-inputNumber mode="decimal" formControlName="shenasnameNumber" placeholder="شماره شناسنامه"
-                     [useGrouping]="false"></p-inputNumber>
+      <p-inputNumber mode="decimal" formControlName="shenasnameNumber" [useGrouping]="false"></p-inputNumber>
               <label>شماره شناسنامه</label>
             </span>
       <!--       <small>ورودی به صورت عدد می باشد</small>-->
@@ -76,31 +74,29 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style" formControlName="shenasnameIssueDate"
-                          placeholder="تاریخ صدور شناسنامه"></p-persian-calendar>
+      <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style" formControlName="shenasnameIssueDate">
+      </p-persian-calendar>
               <label>تاریخ صدور شناسنامه</label>
             </span>
       <!--       <small>ورودی به صورت تاریخ می باشد</small>-->
     </div>
     <div class="p-field p-col-3">
        <span class="p-float-label">
-      <input pInputText formControlName="shenasnameSeriesLetter" placeholder="حرف سری شناسنامه">
+      <input pInputText formControlName="shenasnameSeriesLetter">
        <label style="font-size: 80%">حرف سری شناسنامه</label>
        </span>
       <!-- <small>متن کمکی</small> -->
     </div>
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-inputNumber mode="decimal" formControlName="shenasnameSeriesNumber" placeholder="عدد سری شناسنامه"
-                     [useGrouping]="false"></p-inputNumber>
+      <p-inputNumber mode="decimal" formControlName="shenasnameSeriesNumber" [useGrouping]="false"></p-inputNumber>
               <label>عدد سری شناسنامه</label>
             </span>
       <!-- <small>ورودی به صورت عدد می باشد</small> -->
     </div>
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-inputNumber mode="decimal" formControlName="shenasnameSerial" placeholder="سریال شناسنامه"
-                     [useGrouping]="false"></p-inputNumber>
+      <p-inputNumber mode="decimal" formControlName="shenasnameSerial" [useGrouping]="false"></p-inputNumber>
               <label>سریال شناسنامه</label>
             </span>
       <!-- <small>ورودی به صورت عدد می باشد</small> -->
@@ -110,30 +106,27 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-inputNumber mode="decimal" formControlName="cartMelliSerial" placeholder="سریال کارت ملی"
-                     [useGrouping]="false"></p-inputNumber>
+      <p-inputNumber mode="decimal" formControlName="cartMelliSerial" [useGrouping]="false"></p-inputNumber>
               <label>سریال کارت ملی</label>
             </span>
       <!-- <small>ورودی به صورت عدد می باشد</small> -->
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameTypeId" placeholder="نوع شناسنامه"
-                  [options]="shenasnameType"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameTypeId" [options]="shenasnameType"></p-dropdown>
               <label>نوع شناسنامه</label>
             </span>
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="shenasnameIssueCityId"
-                  placeholder="شهر محل صدور شناسنامه"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="shenasnameIssueCityId">
+      </p-dropdown>
               <label>شهر محل صدور شناسنامه</label>
             </span>
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameHozeCodeId" placeholder="کد حوزه شناسنامه"
-                  [options]="codeHoze"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameHozeCodeId" [options]="codeHoze"></p-dropdown>
               <label>کد حوزه شناسنامه</label>
             </span>
     </div>
@@ -143,7 +136,7 @@
 
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-persian-calendar formControlName="birthDate" placeholder="تاریخ تولد" yearRange="1300:1410"
+      <p-persian-calendar formControlName="birthDate" yearRange="1300:1410"
                           class="app-persian-calendar-style"></p-persian-calendar>
               <label>تاریخ تولد</label>
             </span>
@@ -151,22 +144,20 @@
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-calendar formControlName="birthDateGregorian" placeholder="تاریخ تولد به میلادی"></p-calendar>
+      <p-calendar formControlName="birthDateGregorian"></p-calendar>
               <label>تاریخ تولد به میلادی</label>
             </span>
       <!-- <small>ورودی به صورت تاریخ می باشد</small> -->
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="birthCityId"
-                  placeholder="شهر محل تولد"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="birthCityId"></p-dropdown>
               <label>شهر محل تولد</label>
             </span>
     </div>
     <div class="p-field p-col">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" [options]="countryList" formControlName="birthCountryId"
-                  placeholder="کشور محل تولد"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" [options]="countryList" formControlName="birthCountryId"></p-dropdown>
               <label>کشور محل تولد</label>
             </span>
     </div>
@@ -175,21 +166,19 @@
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" [options]="religion" formControlName="religionId"
-                  placeholder="دین"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" [options]="religion" formControlName="religionId"></p-dropdown>
               <label>دین</label>
             </span>
     </div>
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" [options]="sect" formControlName="faithId" placeholder="مذهب"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" [options]="sect" formControlName="faithId"></p-dropdown>
               <label>مذهب</label>
             </span>
     </div>
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <p-dropdown [autoDisplayFirst]="false" [options]="residenceTypes" formControlName="eghamatStatusId"
-                  placeholder="وضعیت اقامت"></p-dropdown>
+      <p-dropdown [autoDisplayFirst]="false" [options]="residenceTypes" formControlName="eghamatStatusId"></p-dropdown>
               <label>وضعیت اقامت</label>
             </span>
     </div>
@@ -199,19 +188,19 @@
 
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <input formControlName="firstNameLatin" placeholder="نام انگلیسی" pInputText>
+      <input formControlName="firstNameLatin" pInputText>
               <label>نام انگلیسی</label>
             </span>
     </div>
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <input formControlName="lastNameLatin" placeholder="نام خانوادگی انگلیسی" pInputText>
+      <input formControlName="lastNameLatin" pInputText>
               <label>نام خانوادگی انگلیسی</label>
             </span>
     </div>
     <div class="p-field p-col-3">
             <span class="p-float-label">
-      <input formControlName="enFatherName" placeholder="نام پدر انگلیسی" pInputText>
+      <input formControlName="enFatherName" pInputText>
               <label>نام پدر انگلیسی</label>
             </span>
     </div>
