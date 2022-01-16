@@ -73,6 +73,23 @@ export class Constants {
     'میدان آرژانتین',
     'میرداماد',
   ];
+  static operationType=[
+    {value: ' ', label: '-'},
+    {value: 'واریز', label: 'واریز'},
+    {value: 'برداشت', label: 'برداشت'},
+    {value: 'پرداخت اقساط', label: 'پرداخت اقساط'},
+    {value: 'پرداخت قبوض', label: 'پرداخت قبوض'},
+    {value: 'ساتنا', label: 'ساتنا'},
+    {value: 'پایا', label: 'پایا'},
+  ]
+  static priority=[
+    {value: ' ', label: '-'},
+    {value: 'بالا', label: 'بالا'},
+    {value: 'پایین', label: 'پایین'},
+    {value: 'معمولی', label: 'معمولی'},
+
+  ]
+
   static acItems = [
     {value: '000', label: '-'},
     {value: '111', label: 'حساب قرض‌الحسنه 25-1000000589-240'},
@@ -173,6 +190,19 @@ export class Constants {
     {label: 'صادرات', value: '3'},
     {label: 'پاسارگاد', value: '4'},
     {label: 'تجارت', value: '5'},
+  ];
+  static financialHeading = [
+    {label: '-', value: ' '},
+    {label: 'دارایی‌های جاری', value: 'دارایی‌های جاری'},
+    {label: 'دارایی‌های غیر جاری', value: 'دارایی‌های غیر جاری'},
+    {label: 'بدهی‌های جاری', value: 'بدهی‌های جاری'},
+    {label: 'بدهی‌های غیر جاری', value: 'بدهی‌های غیر جاری'},
+    {label: 'حقوق صاحبان سهام', value: 'حقوق صاحبان سهام'},
+    {label: 'فروش و درآمدها', value: 'فروش و درآمدها'},
+    {label: 'بهای تمام شده کالای فروش رفته', value: 'بهای تمام شده کالای فروش رفته'},
+    {label: 'هزینه‌های فعالیت', value: '8'},
+    {label: 'سایر هزینه‌ها و درآمدهای غیر عملیاتی', value: 'سایر هزینه‌ها و درآمدهای غیر عملیاتی'},
+    {label: 'حساب‌های انتظامی', value: 'حساب‌های انتظامی'},
   ];
   static availableRoles = [
     {value: '0', label: '-'},
