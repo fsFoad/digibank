@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Constants} from '../../../shared/constants/Constants';
 import {FormBuilder, FormGroup} from '@angular/forms';
-import { registrationInfo} from '../../models/DigiBankModel';
+import { RegistrationInfo} from '../../models/DigiBankModel';
 
 @Component({
   selector: 'app-create-registration-info',
@@ -10,9 +10,9 @@ import { registrationInfo} from '../../models/DigiBankModel';
 })
 export class CreateRegistrationInfoComponent implements OnInit {
   @Output() close = new EventEmitter<string>();
-  @Output() myListRegistrationInfo: EventEmitter<registrationInfo[]> = new EventEmitter()
+  @Output() myListRegistrationInfo: EventEmitter<RegistrationInfo[]> = new EventEmitter()
   postOrganization = Constants.postOrganization;
-  tempList:registrationInfo[]=[];
+  tempList:RegistrationInfo[]=[];
   public form: FormGroup;
   constructor(fb: FormBuilder) {
     this.form = fb.group({

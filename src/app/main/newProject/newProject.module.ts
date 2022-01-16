@@ -153,6 +153,7 @@ import { UpdateContactComponent } from './update-personal/update-organizational-
 import { UpdateOrganizationalEntityManagerComponent } from './update-organizational-entity-manager/update-organizational-entity-manager.component';
 import { OrganizationalEntityListComponent } from './organizational-entity-list/organizational-entity-list.component';
 import { CreateRegistrationInfoComponent } from './board-of-directors-editor/create-registration-info/create-registration-info.component';
+import { IdentificationTransactionComponent } from './identification-transaction/identification-transaction.component';
 
 @NgModule({
   providers: [
@@ -275,6 +276,7 @@ import { CreateRegistrationInfoComponent } from './board-of-directors-editor/cre
     UpdateOrganizationalEntityManagerComponent,
     OrganizationalEntityListComponent,
     CreateRegistrationInfoComponent,
+    IdentificationTransactionComponent,
   ],
   imports: [
     CommonModule,

@@ -234,6 +234,13 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           //   routerLink: 'sooratHesab'
           // },
           {
+            id: 'identificationTransaction',
+            label: 'شناسه گذاری تراکنش ها',
+            translate: 'شناسه گذاری تراکنش ها',
+            type: 'item',
+            routerLink: '/identificationTransaction',
+          },
+          {
             id: 'oldBill',
             label: 'صورت حساب ',
             translate: 'صورت حساب ',

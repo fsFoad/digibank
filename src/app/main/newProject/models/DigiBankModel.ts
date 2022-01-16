@@ -17,7 +17,7 @@ export interface AddressInfo {
   // startDate:number;
   // endDate:number;
 }
-export interface registrationInfo{
+export interface RegistrationInfo {
   erjaCode:number;
   nationalCode:number;
   title:string;
@@ -28,3 +28,22 @@ export interface registrationInfo{
   startDate:number;
   endDate:number;
 }
+export interface Bills {
+  id:number;
+  accountNumber: string;
+  history: string;
+  branchName: string;
+  yektaCode: string;
+  debtor: string;
+  depositor: string;
+  check: string;
+  amounts: string;
+  donDate: string;
+  amount: number;
+  creditor: string;
+  operationType: string;
+  desTransaction: string;
+  priority: string;
+  financialHeading: string;
+}
+

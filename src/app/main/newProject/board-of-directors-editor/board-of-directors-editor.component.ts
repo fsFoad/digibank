@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ContactInfo, registrationInfo} from '../models/DigiBankModel';
+import {ContactInfo, RegistrationInfo} from '../models/DigiBankModel';
 import {Constants} from '../../shared/constants/Constants';
 
 @Component({
@@ -9,7 +9,7 @@ import {Constants} from '../../shared/constants/Constants';
 })
 export class BoardOfDirectorsEditorComponent implements OnInit {
   createRegistrationInfoFlag = false;
-  TBListRegistrationInfo:registrationInfo[] = [];
+  TBListRegistrationInfo:RegistrationInfo[] = [];
   postOrganization = Constants.postOrganization;
 
   constructor() {
@@ -18,7 +18,7 @@ export class BoardOfDirectorsEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  removeRow(TBListRegistrationInfo: registrationInfo): void {
+  removeRow(TBListRegistrationInfo: RegistrationInfo): void {
     this.TBListRegistrationInfo = this.TBListRegistrationInfo.filter(x => x !== TBListRegistrationInfo);
   }
 
@@ -29,7 +29,7 @@ export class BoardOfDirectorsEditorComponent implements OnInit {
   onClose() {
     this.createRegistrationInfoFlag = false;
   }
-  AddItemRegistrationInfo(newItemRegistrationInfo: registrationInfo[]){
+  AddItemRegistrationInfo(newItemRegistrationInfo: RegistrationInfo[]){
 
       this.TBListRegistrationInfo.push(...newItemRegistrationInfo);
     }

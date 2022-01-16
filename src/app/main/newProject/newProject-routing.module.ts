@@ -82,6 +82,7 @@ import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-receiv
 import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
 import { AccountTransactionsComponent } from './account-transactions/account-transactions.component';
 import {OrganizationalEntityListComponent} from './organizational-entity-list/organizational-entity-list.component';
+import {IdentificationTransactionComponent} from './identification-transaction/identification-transaction.component';
 
 
 const routes: Routes = [
@@ -397,6 +398,10 @@ const routes: Routes = [
       {
         path: 'organizationalEntityList',
         component: OrganizationalEntityListComponent,
+      },
+      {
+        path: 'identificationTransaction',
+        component: IdentificationTransactionComponent,
       },
 
       // add new components above
