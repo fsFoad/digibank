@@ -1,0 +1,104 @@
+<p-panel header="کارتابل پرداخت ویژه">
+  <div class="p-d-flex p-flex-column p-jc-stretch app-gap-2r">
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <dl class="app-property-value-list">
+          <dt>نوع مشتری ذینفع</dt>
+          <dd>حقیقی</dd>
+          <dt>کد دوره</dt>
+          <dd>140008888</dd>
+          <dt>نوع پرداخت</dt>
+          <dd>پرداخت سود</dd>
+          <dt>شماره حواله/شناسنامه/ثبت</dt>
+          <dd>88</dd>
+          <dt>تاریخ شروع پرداخت</dt>
+          <dd>1400/08/01</dd>
+          <dt>مبلغ کارمزد</dt>
+          <dd>0</dd>
+          <dt>تاریخ ثبت</dt>
+          <dd>1400/08/05</dd>
+          <dt>نام</dt>
+          <dd>fds</dd>
+          <dt>شماره شناسنامه ذینفع</dt>
+          <dd>6456456</dd>
+        </dl>
+        <div class="p-field p-col">
+          <input pInputText placeholder="شرح تائید / لغو کننده">
+        </div>
+      </div>
+      <div class="p-field p-col">
+        <dl class="app-property-value-list">
+          <dt>مشتری ویژه</dt>
+          <dd>گرجی</dd>
+    
+          <dt>شناسه عددی</dt>
+          <dd>۸۸</dd>
+          <dt>شماره سهامدار</dt>
+          <dd>۱۲۳۴</dd>
+          <dt>تاریخ انقضای پرداخت</dt>
+          <dd>1400/08/11</dd>
+          <dt>شماره حساب کارمزد</dt>
+          <dd>۱۴۴۲۳۵۴۵۶</dd>
+          <dt>ثبت کننده</dt>
+          <dd>رادمهر</dd>
+          <dt>نام خانوادگی</dt>
+          <dd>FDSF</dd>
+          <dt>کد ملی</dt>
+          <dd>-</dd>
+        </dl>
+      </div>
+      <div class="p-field p-col">
+        <dl class="app-property-value-list">
+          <dt>شماره حساب ذینفع</dt>
+          <dd>-</dd>
+          <dt>شماره حساب</dt>
+          <dd>۴۵۱۷۶۲۵۶</dd>
+    
+          <dt>شناسه حرفی</dt>
+          <dd>-</dd>
+          <dt>مبلغ قابل پرداخت</dt>
+          <dd>۱</dd>
+          <dt>شناسه واریز</dt>
+          <dd>-</dd>
+          <dt>وضعیت درخواست</dt>
+          <dd stlye="color: green;">ثبت شده</dd>
+          <dt>نوع درخواست</dt>
+          <dd>ثبت رکوردی پرداخت ویژه</dd>
+          <dt>نام پدر</dt>
+          <dd>DGDGD</dd>
+          <dt>شماره موبایل</dt>
+          <dd>-</dd>
+        </dl>
+      </div>
+    </div>
+    <p-card header="فهرست تائید کنندگان">
+      <p-table [value]="approversRows" >
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate>نام و نام خانوادگی</th>
+            <th translate>نوع تائید</th>
+            <th translate>وضعیت تائید</th>
+            <th translate>تاریخ</th>
+            <th translate>شرح</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{row.fullName}}</td>
+            <td>{{row.confirmationType}}</td>
+            <td>{{row.confirmationStatus}}</td>
+            <td>{{row.date}}</td>
+            <td>{{row.description}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+    <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
+      <button pButton label="تائید" (click)="confirm.emit(true)"></button>
+      <button pButton label="لغو" (click)="confirm.emit(false)"></button>
+      <button pButton label="بازگشت" (click)="confirm.emit(false)"></button>
+    </div>
+  </div>
+</p-panel>

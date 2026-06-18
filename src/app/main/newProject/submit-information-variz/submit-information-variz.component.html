@@ -1,0 +1,111 @@
+<p-panel header="ثبت اطلاعات">
+  <div class="app-mx-10r">
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شناسه واریز کننده</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input  class="input-w-100" pInputText>
+          <label>نام واریز کننده</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input  class="input-w-100" pInputText>
+          <label>ردیف شناسه</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input  class="input-w-100" pInputText>
+          <label>دوره</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false"  optionValue="value"></p-dropdown>
+          <label>گروه</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar  yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+          <label>مهلت پرداخت</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حساب 1</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                     [minFractionDigits]="0" ></p-inputNumber>
+          <label>مبلغ 1</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شرح 1</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حساب 2</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0" ></p-inputNumber>
+          <label>مبلغ 2</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شرح 2</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حساب 3</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0" ></p-inputNumber>
+          <label>مبلغ 3</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شرح 3</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-d-flex p-jc-center">
+        <button pButton pRipple type="button" label="بارگذاری" style="width:10rem" class="p-mr-2 p-mb-2"></button>
+    </div>
+  </div>
+</p-panel>

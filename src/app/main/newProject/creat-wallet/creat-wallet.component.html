@@ -1,0 +1,50 @@
+<p-panel header="تعریف کیف پول کارکنان" class="p-jc-center" [formGroup]="walletForm" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-20r p-jc-center">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col-2"></div>
+      <div class="p-field p-col-4">
+        <span class="p-float-label">
+          <input id="inputNational" formControlName="nationalCode" class="input-w-100" placeholder="" pInputText>
+          <label>کد ملی</label>
+        </span>
+        <button id="btnsearch" class="p-button-outlined" pButton label="بازیابی" (click)="search()"></button>&nbsp;
+      </div>
+      <div class="p-field p-col-4">
+        <span class="p-float-label">
+          <input class="input-w-100" formControlName="mobile" placeholder="" pInputText>
+          <label>شماره موبایل</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="p-field p-col-2"></div>
+      <div class="p-field p-col-4">
+        <span class="p-float-label">
+          <input class="input-w-100" formControlName="fullName" placeholder="" pInputText
+               [disabled]="true">
+          <label>نام نام خانوادگی</label>
+        </span>
+      </div>
+      <div class="p-field p-col-4">
+        <span class="p-float-label">
+      <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                     [minFractionDigits]="0" placeholder=""></p-inputNumber>
+          <label>مبلغ شارژ اولیه</label>
+      </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnCreateWallet" class="p-button-info" pButton label="ایجاد کیف پول"
+            (click)="confirmDlg.visible = true"></button>&nbsp;
+    <button id="btnBatchRegister" class="p-button-info" pButton label="انصراف"></button>&nbsp;
+  </div>
+</p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="حساب سازمانی تعریف نشده است!"
+                 [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>
+
+<p-dialog header="توجه" [(visible)]="displayValidation" acceptLabel="تایید" [style]="{width: '20vw'}">
+  <p style="color: red">لطفا کد ملی صحیح وارد کنید!</p>
+</p-dialog>

@@ -1,0 +1,73 @@
+<p-panel header="صورتحساب" class="w-100">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-3">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>از تاریخ</label>
+        </span>
+      </div>
+      <div class="p-field p-col-3">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
+      </div>
+    </div>
+      <div class="p-field p-col-3">
+         <span class="p-float-label">
+           <p-dropdown [autoDisplayFirst]="false" [options]="organizationalUnit"></p-dropdown>
+           <label>واحد سازمانی</label>
+          </span>
+      </div>
+      <div class="p-field p-col-3">
+         <span class="p-float-label">
+           <p-dropdown [autoDisplayFirst]="false" [editable]="true" [options]="acItems"></p-dropdown>
+           <label>شماره حساب</label>
+         </span>
+      </div>
+    <div class="p-d-flex p-jc-center">
+      <button pButton class="p-button-info p-px-6" (click)="showTable = true" label="بازیابی"></button>
+    </div>
+  </div>
+  <p-card *ngIf="showTable" class="p-d-flex p-my-5">
+    <p-table [value]="tableData">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>نام شعبه</th>
+          <th translate>تاریخ اعمال</th>
+          <th translate>واریز کننده</th>
+          <th translate>کد یکتای تراکنش</th>
+          <th translate>چک/حواله</th>
+          <th translate>سند</th>
+          <th translate>بدهکار</th>
+          <th translate>بستانکار</th>
+          <th translate>مانده</th>
+          <th translate>تاریخ انجام</th>
+          <th translate>کد نوع خدمات</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-row>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{row.accountNumber}}</td>
+          <td>{{row.branchName}}</td>
+          <td>{{row.dateOfApplication}}</td>
+          <td>{{row.depositor}}</td>
+          <td>{{row.transactionCode}}</td>
+          <td>{{row.checkOrRemittance}}</td>
+          <td>{{row.document}}</td>
+          <td>{{row.debtor|addCommaSeparator}}</td>
+          <td>{{row.creditor|addCommaSeparator}}</td>
+          <td>{{row.remaining|addCommaSeparator}}</td>
+          <td>{{row.dateOfCompletion}}</td>
+          <td>{{row.serviceTypeCode}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

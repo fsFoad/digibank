@@ -1,0 +1,52 @@
+<p-panel header="بارگذاری فایل">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col ">
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w100" optionValue="value"
+                      [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+          <label>مشتری ویژه</label>
+        </span>
+      </div>
+      <div class="p-field p-col ">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حساب</label>
+        </span>
+      </div>
+      <div class="p-field p-col "></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col ">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نوع پرداخت</label>
+        </span>
+      </div>
+      <div class="p-field p-col ">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>سقف پرداخت</label>
+        </span>
+      </div>
+      <div class="p-field p-col ">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شرح</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-10r">
+      <div class="p-field p-col ">
+        <p-fileUpload mode="basic" [auto]="true" [customUpload]="true"
+                      [showCancelButton]="false" [showUploadButton]="false" [multiple]="false"
+                      accept=".xlsx" chooseLabel="بارگذاری فایل">
+          <ng-template pTemplate="content"></ng-template>
+        </p-fileUpload>
+      </div>
+    </div>
+    <div class="p-d-flex  p-jc-center p-mt-6">
+      <button pButton pRipple type="button" label="بارگذاری" style="width:10rem" class="p-mr-2 p-mb-2"></button>
+    </div>
+  </div>
+</p-panel>

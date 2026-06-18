@@ -1,0 +1,87 @@
+<div class="app-mx-5r">
+<!--  <div class="p-fluid p-formgrid p-grid app-col-px-2r">-->
+<!--    <div class="p-field p-col-3">-->
+<!--&lt;!&ndash;      <span class="p-float-label">&ndash;&gt;-->
+<!--        <input placeholder="کد ارجاع مشتری" pInputText>-->
+<!--&lt;!&ndash;        <label>کد ارجاع مشتری</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </span>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="p-field p-col-3">-->
+<!--&lt;!&ndash;      <span class="p-float-label">&ndash;&gt;-->
+<!--        <input  placeholder="شناسه ملی" pInputText>-->
+<!--&lt;!&ndash;        <label>شناسه ملی</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </span>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="p-field p-col-6">-->
+<!--&lt;!&ndash;      <span class="p-float-label">&ndash;&gt;-->
+<!--        <input placeholder="*عنوان" required pInputText>-->
+<!--&lt;!&ndash;        <label>عنوان</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </span>&ndash;&gt;-->
+<!--      &lt;!&ndash; <small>متن کمکی</small> &ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+  
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-col p-d-flex p-flex-column">
+  
+      <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col-6">
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" ></p-dropdown>
+            <label>نوع سند</label>
+          </span>
+        </div>
+      </div>
+  
+      <div class="row2 p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col-6">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>متا دیتا ۱ سند</label>
+          </span>
+           <small>متن کمکی</small>
+        </div>
+        <div class="p-field p-col-6">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>متا دیتا ۲ سند</label>
+          </span>
+          <!-- <small>متن کمکی</small> -->
+        </div>
+      </div>
+  
+      <div class="row3 p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col-6">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>خواندن از پرونده</label>
+          </span>
+          <!-- <small>متن کمکی</small> -->
+        </div>
+      </div>
+  
+      <div class="row4 p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText>
+            <label>پاورقی</label>
+          </span>
+          <!-- <small>متن کمکی</small> -->
+        </div>
+      </div>
+    </div>
+    <div class="p-col p-d-flex p-flex-column">
+      <div class="p-d-flex p-jc-center p-ai-center" >
+        <div style="width: 200px; height: 200px; background: gray; border: 1px solid black;">
+          تصویر
+        </div>
+      </div>
+      <div class="app-button-bar p-jc-center p-mt-2">
+        <button pButton label="خواندن از پرونده"></button>
+        <button pButton label="اسکن تصویر"></button>
+        <button pButton label="تصویر بعدی"></button>
+        <button pButton label="تصویر قبلی"></button>
+      </div>
+    </div>
+  </div>
+</div>

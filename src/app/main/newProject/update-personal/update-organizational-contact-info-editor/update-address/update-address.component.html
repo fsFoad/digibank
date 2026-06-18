@@ -1,0 +1,82 @@
+<p-card header="ایجاد اطلاعات نشانی" [formGroup]="form">
+  <div class="app-mx-20r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+           <p-dropdown [options]="contactTypes" formControlName="contactTypes"
+                       [autoDisplayFirst]="false"></p-dropdown>
+                <label>نوع نشانی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+         <span class="p-float-label">
+             <p-dropdown [options]="provinceList" formControlName="province"
+                         [autoDisplayFirst]="false"></p-dropdown>
+                    <label>استان</label>
+         </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+           <p-dropdown [options]="cityList" formControlName="city"
+                       [autoDisplayFirst]="false"></p-dropdown>
+                           <label>شهر</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+           <p-dropdown class="p-dropdown-w100" formControlName="mantaghe" [autoDisplayFirst]="false"
+                       [options]="mantaghe"></p-dropdown>
+           <label>منطقه</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+           <input formControlName="postalCode" pInputText>
+                                         <label>کدپستی</label>
+        </span>
+      </div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+           <textarea rows="2" cols="50" formControlName="desAddress" pInputTextarea></textarea>
+                                         <label>شرح نشانی</label>
+        </span>
+      </div>
+    </div>
+    <!--    <div class="p-fluid p-formgrid p-grid app-col-px-2r">-->
+
+
+    <!--&lt;!&ndash;      <div class="p-field p-col">&ndash;&gt;-->
+    <!--&lt;!&ndash;        <input placeholder="تلفن" formControlName="phoneNumber" pInputText>&ndash;&gt;-->
+    <!--&lt;!&ndash;      </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;      <div class="p-field p-col">&ndash;&gt;-->
+    <!--&lt;!&ndash;        <p-dropdown class="p-dropdown-w100" placeholder="نحوه تصرف" [autoDisplayFirst]="false"&ndash;&gt;-->
+    <!--&lt;!&ndash;                    formControlName="nahveTasarofs"    [options]="nahveTasarofs"></p-dropdown>&ndash;&gt;-->
+    <!--&lt;!&ndash;      </div>&ndash;&gt;-->
+    <!--      <div class="p-field p-col">-->
+    <!--      </div>-->
+    <!--    </div>-->
+    <!--    <div class="p-fluid p-formgrid p-grid app-col-px-2r">-->
+    <!--      <div class="p-field p-col">-->
+    <!--        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"-->
+    <!--                            formControlName="startDate"       placeholder="تاریخ شروع"></p-persian-calendar>-->
+    <!--      </div>-->
+    <!--      <div class="p-field p-col">-->
+    <!--        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"-->
+    <!--                            placeholder="تاریخ پایان"  formControlName="endDate"></p-persian-calendar>-->
+    <!--      </div>-->
+    <!--      <div class="p-field p-col">-->
+    <!--      </div>-->
+    <!--      <div class="p-field p-col">-->
+    <!--      </div>-->
+    <!--    </div>-->
+  </div>
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
+    <button label="تایید" pButton (click)="Confirmation()"></button>
+    <button label="انصراف" pButton (click)="onClose()"></button>
+  </div>
+</p-card>

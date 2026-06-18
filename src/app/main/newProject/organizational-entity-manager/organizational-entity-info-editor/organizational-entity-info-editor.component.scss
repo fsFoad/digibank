@@ -1,0 +1,11 @@
+.app-children-flex-1 {
+  gap: 1em;
+}
+
+.app-flex-1 {
+  flex: 1;
+}
+
+.app-children-flex-1 > * {
+  flex: 1;
+}

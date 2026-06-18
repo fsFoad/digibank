@@ -1,0 +1,8 @@
+<ng-container *ngIf="visible">
+    <p-custom-dialog [modal]="true" [baseZIndex]="10000" [(visible)]="visible"
+                     [draggable]="false" [resizable]="false" [closable]="false"
+                     [contentStyleClass]="'contentClass'" [showHeader]="false">
+        <p-progressSpinner></p-progressSpinner>
+    </p-custom-dialog>
+
+</ng-container>

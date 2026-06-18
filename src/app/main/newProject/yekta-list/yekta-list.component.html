@@ -1,0 +1,129 @@
+<p-panel header="لیست کد تراکنش یکتا" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کاربر ایجاد کننده</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label"></p-dropdown>
+        <label>سرفصل در آمدی</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد تراکنش یکتا</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره حساب</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                       [minFractionDigits]="0"></p-inputNumber>
+        <label>مبلغ</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" class="p-dropdown-w100" optionValue="value"
+                      [options]="listDrop" optionLabel="label"></p-dropdown>
+        <label>نوع الگوریتم</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد پیوست</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد اقتصادی / کد ملی</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" class="p-dropdown-w100" optionValue="value"
+                      optionLabel="label"></p-dropdown>
+        <label>واحد مربوطه</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+      <p-persian-calendar yearRange="1300:1410"
+                          class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ انقضا</label>
+      </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+        </p-persian-calendar>
+        <label>از تاریخ</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تا تاریخ</label>
+      </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+  </div>
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>کد یکتا</th>
+          <th translate>تاریخ ایجاد</th>
+          <th translate>کاربر ایجاد کننده</th>
+          <th translate>واحد ایجاد کننده</th>
+          <th translate>نوع الگوریتم</th>
+          <th translate>مبلغ</th>
+          <th translate>تاریخ انقضا</th>
+          <th translate>کد مبنا</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-yektaList>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{yektaList.accountNumber}}</td>
+          <td>{{yektaList.yektaCode}}</td>
+          <td>{{yektaList.history}}</td>
+          <td>{{yektaList.creatorUser}}</td>
+          <td>{{yektaList.creatingUnit}}</td>
+          <td>{{yektaList.algorithmType}}</td>
+          <td>{{yektaList.amount|addCommaSeparator}}</td>
+          <td>1400/06/01</td>
+          <td>{{yektaList.baseCode}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

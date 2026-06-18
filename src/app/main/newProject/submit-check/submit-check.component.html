@@ -1,0 +1,93 @@
+<p-panel header="تاییدیه الکترونیکی چک" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره حساب</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>مبلغ</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تاریخ سررسید</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label"></p-dropdown>
+        <label>واحد مربوطه</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText disabled>
+          <label>مانده حساب</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>مانده دفتری</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>جمع چک های پاس نشده</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText disabled>
+        <label>مانده حساب پشتیبان</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>در وجه</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>بابت</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره 16 رقمی صیاد</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+        <p-fileUpload
+          mode="basic" [auto]="true" [customUpload]="true"
+          [showCancelButton]="false" [showUploadButton]="false"
+          accept=".xlsx" chooseLabel="پیوست تصویر چک" [multiple]="false">
+        </p-fileUpload>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+      <button id="btnRegister" class=" p-button-outlined p-button-success" pButton label="چاپ چک"></button>&nbsp;
+      <button id="4" class="btn-mr p-button-outlined p-button-secondary" pButton label="تاییدیه چک"></button>&nbsp;
+      <button id="3" class="btn-mr p-button-outlined" pButton label="استعلام وضعیت چک"></button>
+      <button id="f2" class="btn-mr p-button-outlined p-button-warning" pButton label="ابطال موقت"></button>&nbsp;
+      <button id="5" class="btn-mr  p-button-outlined p-button-danger" pButton label="ابطال کامل"></button>&nbsp;
+      <label>توضیحات</label>
+    </div>
+</p-panel>

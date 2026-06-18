@@ -1,0 +1,103 @@
+<p-panel header="شناسه گذاری تراکنش ها" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+          </p-persian-calendar>
+          <label>از تاریخ</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
+      </div>
+
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="organizationalUnit">
+          </p-dropdown>
+          <label>واحد سازمانی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [editable]="true" [autoDisplayFirst]="false"
+                      [options]="acItems"></p-dropdown>
+          <label>شماره حساب</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+  </div>
+  <div class="p-mt-3" *ngIf=tableFlag>
+    <p-card>
+      <p-table [columns]="cols" [value]="bills">
+        <ng-template pTemplate="header" let-columns>
+          <tr>
+            <th >ردیف</th>
+            <th *ngFor="let col of columns">
+              {{col.header}}
+            </th>
+            <th >عملیات</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-i="rowIndex" let-rowData let-columns="columns">
+          <tr>
+            <td>{{i + 1}}</td>
+            <td *ngFor="let col of columns" >
+              {{rowData[col.field]}}
+            </td>
+            <td>
+              <button pButton icon="pi pi-chevron-circle-right" (click)="selectRow(rowData)"></button>&nbsp;
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+</p-panel>
+<p-dialog class="dialog" header="افزودن اطلاعات تراکنش" [(visible)]="display"
+          [modal]="true">
+  <div class="app-mx-20r" [style]="{width: '50vw',height:'20vw'}"  [formGroup]="form">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-my-6 ">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown formControlName="operationType" [autoDisplayFirst]="false" [options]="operationType">
+          </p-dropdown>
+          <label>نوع عملیات</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input formControlName="desTransaction" class="input-w-100" pInputText>
+          <label>شرح دوم تراکنش</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-my-6">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown formControlName="priority" [autoDisplayFirst]="false" [options]="priority">
+          </p-dropdown>
+          <label>اولویت تراکنش</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown formControlName="financialHeading" [autoDisplayFirst]="false" [options]="financialHeading">
+          </p-dropdown>
+          <label>کد سرفصل مالی</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+      <button  class="p-button-info" pButton label="ثبت" (click)="submit()"></button>&nbsp;
+    </div>
+  </div>
+</p-dialog>

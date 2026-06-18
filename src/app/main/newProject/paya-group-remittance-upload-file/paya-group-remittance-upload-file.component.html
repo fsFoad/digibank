@@ -1,0 +1,171 @@
+<p-panel header="بارگذاری فایل حواله گروهی پایا">
+  <ng-container *ngIf="!agreementConfirmed">
+    <div class="app-mx-5r">
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col">
+          <ul>
+            <li>
+              مشتری با تائید این دستور پرداخت به بانک اجازه می‌دهد تا وجه مورد انتقال را در تاریخ انجام حواله (تاریخ
+              مؤثر) همراه با
+              کارمزدهای مربوطه از حساب وی برداشت نموده و به حساب ذینفع منتقل نماید
+            </li>
+            <li>
+              درخواست حواله صادر شده پس از پذیرش آن توسط بانک، جزو تعهدات بانک مبدأ بوده و پس از ارسال در تاریخ انجام
+              حواله (تاریخ مؤثر)،
+              قطعی و غیر قابل بازگشت محسوب می‌شود
+            </li>
+            <li>
+              استرداد وجه مورد انتقال پس از پذیرش درخواست حواله توسط بانک به هیچ وجه امکان‌پذیر نمی‌باشد
+            </li>
+            <li>
+              بانک پذیرنده متعهد است در تاریخ مورد درخواست از سوی مشتری (تاریخ مؤثر)، وجه آن را از طریق سامانه بانک
+              مرکزی به بانک مقصد ارسال نماید
+            </li>
+            <li>
+              مسئولیت واریز وجه انتقال داده شده به حساب ذینفع (مقصد) پس از ارسال توسط این بانک،
+              بر عهده بانک ذینفع (مقصد) بوده و لذا مسئولیتی در این خصوص متوجه بانک پذیرنده نمی‌باشد
+            </li>
+            <li>
+              مبنای تبادل وجوه از طریق پایا، صرفا شناسه حساب بانکی ایران (شبا-IBAN) می‌باشد
+              لذا مسئولیتی از نظر تطابق شبای ذکر شده با سایر مشخصات ذینفع، متوجه بانک مبدا و مقصد نمی‌باشد
+            </li>
+            <li>
+              در صورتی که تاریخ انجام حواله (تاریخ مؤثر)، به نحوی از انحاء تعطیل شود
+              یا به دلیل مشکلات مربوط به بستر ارتباطی سامانه پایا، حواله در تاریخ مؤثر ارسال نشود،
+              این بانک به شرط اعطای مجوز ارسال مجدد توسط مشتری،
+              انتقال را در اولین روز کاری بعد از تعطیلی انجام می‌دهد
+            </li>
+            <li>
+              مسئولیت عواقب ناشی از هر گونه خطا یا اشتباه در مندرجات فرم درخواست حواله بر عهده درخواست کننده آن می‌باشد
+            </li>
+            <li>
+              در صورتی که به هر دلیل (بسته بودن حساب، اشتباه در درج شبا (IBAN) و نظایر آن)
+              امکان واریز وجه به حساب ذینفع ذکر شده در متن دستور پرداخت وجود نداشته باشد،
+              بانک اصل وجه مورد انتقال را پس از دریافت از بانک مقصد،
+              حداکثر تا پایان روز کاری بعد به حساب درخواست کننده برمی‌گرداند
+              در این صورت نیز کارمزد دستور پرداخت قابل استرداد نیست
+            </li>
+            <li>
+              <strong>
+                اگر در روز کاری پس از ساعت ۱۳:۳۵ و همچنین در روزهای تعطیل (خارج از سیکل پایا)، اقدام به ثبت حواله گروهی
+                گردد:
+                <br>
+                در صورتی که بانک مقصد حداقل یک ردیف از حواله گروهی بارگذاری شده، این بانک باشد، مجموع مبلغ
+                حواله گروهی از حساب برداشت و ارسال حواله به مقصد این بانک در همان روز و حواله به مقصد سایر بانک‌ها در
+                اولین
+                سیکل پایا در روز کاری بعد انجام خواهد شد.
+                در غیر اینصورت (بانک مقصد همه ردیف‌ها سایر بانک‌ها باشد)
+                از ثبت حواله گروهی خارج از سیکل جلوگیری می‌گردد.
+              </strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col">
+          <p-checkbox [binary] name="userConfirmCheckbox" value="confirmed"
+                      [(ngModel)]="agreementConfirmationCheckboxValue"
+                      label="موارد فوق مورد تائید اینجانب رضا یعقوبی می‌باشد">
+          </p-checkbox>
+        </div>
+      </div>
+    </div>
+    <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
+      <button pButton label="تائید" (click)="agreementConfirmed = true"
+              [disabled]="!agreementConfirmationCheckboxValue"></button>
+    </div>
+  </ng-container>
+
+  <div class="p-d-flex p-flex-column app-gap-2r" *ngIf="agreementConfirmed">
+    <p-card class="p-d-block app-mx-5r">
+      <div>
+        <span class="pi pi-folder-open"></span>
+        <a href="#" (click)="false">
+          دریافت برنامه ایجاد فایل استعلام کد شبا و حواله گروهی پایا
+        </a>
+        <br>
+        جمع مبالغ حواله‌های روز جاری:
+      </div>
+    </p-card>
+    <p-card class="p-d-block app-mx-5r">
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-col"></div>
+        <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" [options]="acItems"></p-dropdown>
+            <label>انتقال از</label>
+          </span>
+        </div>
+        <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-persian-calendar  yearRange="1300:1410" class="app-persian-calendar-style">
+            </p-persian-calendar>
+            <label>تاریخ موثر</label>
+          </span>
+        </div>
+        <div class="p-col"></div>
+      </div>
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-col"></div>
+        <div class="p-field p-col">
+          <span class="p-float-label">
+            <input pInputText >
+            <label>نام فایل</label>
+          </span>
+        </div>
+        <div class="p-field p-col">
+          <p-fileUpload mode="basic" [auto]="true" [customUpload]="true" [showCancelButton]="false"
+                        [showUploadButton]="false" accept=".xlsx" chooseLabel="مسیر فایل" [multiple]="false">
+          </p-fileUpload>
+        </div>
+        <div class="p-col"></div>
+      </div>
+      <div class="p-fluid p-formgrid p-grid">
+        <div class="p-col"></div>
+        <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-inputNumber ></p-inputNumber>
+            <label>تعداد کل ردیف‌های واریز</label>
+          </span>
+        </div>
+        <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0" 
+                           ></p-inputNumber>
+            <label>جمع کل مبالغ واریز</label>
+          </span>
+        </div>
+        <div class="p-col"></div>
+      </div>
+    </p-card>
+
+    <div class="p-d-flex p-jc-center app-child-px-6r app-gap-1r">
+      <button pButton label="بارگذاری" (click)="showConfirmation()"></button>
+      <button pButton label="فایل پاسخ" disabled></button>
+      <button pButton label="بازگشت"></button>
+    </div>
+
+    <div style="color: #8f0000">
+      *** مطابق ابلاغیه بانک مرکزی نحوه محاسبه کارمزد حواله گروهی پایا به ازای هر ردیف حواله، مبلغ
+      ۱٬۰۰۰ ریال
+      می‌باشد که با تائید نهایی از حساب مبدأ برداشت خواهد شد.
+      <br>
+      *** امکان صدور حواله پایا غیر این‌بانکی به تاریخ موثر در روز جاری حداکثر تا ساعت ۱۳:۳۵ میسر می‌باشد.
+      <br>
+      *** اگر در روز کاری پس از ساعت ۱۳:۳۵ و همچنین در روزهای تعطیل (خارج از سیکل پایا)، اقدام به ثبت حواله گروهی پایا
+      گردد:
+      <br>
+      *** اطلاعات حواله‌های پایای غیر این‌بانکی روزانه ۳ بار در ساعات ۰۳:۳۵، ۱۰:۳۵، ۱۳:۳۵ جهت واریز به بانک مقصد ارسال
+      می‌شود.
+      <br>
+      در صورتی که بانک مقصد حداقل یک ردیف از حواله گروهی بارگذاری شده، این بانک باشد، مجموع حواله گروهی از حساب برداشت و
+      ارسال حواله به مقصد این بانک در همان روز
+      و حواله به مقصد سایر بانک‌ها در اولین سیکل پایا در روز کاری بعد انجام خواهد شد.
+      در غیر اینصورت (بانک مقصد همه ردیف‌ها سایر بانک‌ها باشد)
+      از ثبت حواله گروهی خارج از سیکل جلوگیری می‌گردد.
+    </div>
+  </div>
+</p-panel>
+
+<p-confirmDialog header="مشترک گرامی؛" acceptLabel="تایید" [rejectVisible]="false" [closable]="false">
+</p-confirmDialog>

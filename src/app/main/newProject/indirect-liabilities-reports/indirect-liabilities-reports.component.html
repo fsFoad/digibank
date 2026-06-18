@@ -1,0 +1,32 @@
+<p-panel header="گزارشات تعهدات غیر مستقیم">
+  <p-card>
+    <p-table [value]="tableRows">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>شماره قرارداد</th>
+          <th translate>صاحب تسهیلات</th>
+          <th translate>نوع عقد</th>
+          <th translate>مانده بدهی بابت سود (ریال)</th>
+          <th translate>اصل مانده بدهی</th>
+          <th translate>وجه التزام مانده بدهی</th>
+          <th translate>وجه التزام مانده بدهی</th>
+          <th translate>وضعیت تسهیلات</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-row>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{row.contracNumber}}</td>
+          <td>{{row.facilityOwner}}</td>
+          <td>{{row.contractType}}</td>
+          <td>{{row.debitBalanceForInterest|addCommaSeparator}}</td>
+          <td>{{row.debitBalance|addCommaSeparator}}</td>
+          <td>{{row.penaltyClause|addCommaSeparator}}</td>
+          <td>{{row.penaltyClause2|addCommaSeparator}}</td>
+          <td>{{row.facilityStatus}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

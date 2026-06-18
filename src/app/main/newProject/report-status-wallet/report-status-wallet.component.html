@@ -1,0 +1,63 @@
+<p-panel header='وضعیت کیف پول' [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [editable]="true" [autoDisplayFirst]="false" class="p-dropdown-w100"
+                      [options]="acItems"></p-dropdown>
+          <label>شماره حساب متصل</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره آیدی کیف پول</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره موبایل</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>ذینفع کیف پول</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnReport" class="p-button" pButton label="بازیابی گزارش" (click)="tableFlag=true;"></button>&nbsp;
+  </div>
+
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>ذینفع کیف پول</th>
+          <th translate>شماره آیدی کیف پول</th>
+          <th translate>شماره موبایل</th>
+          <th translate>تاریخ ایجاد</th>
+          <th translate>وضعیت</th>
+          <th translate>مانده کیف</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-reportWallet>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{reportWallet.accountNumber}}</td>
+          <td>{{reportWallet.personal}}</td>
+          <td>{{reportWallet.walletId}}</td>
+          <td>{{reportWallet.mobile}}</td>
+          <td>{{reportWallet.history}}</td>
+          <td>{{reportWallet.status}}</td>
+          <td>{{reportWallet.amounts|addCommaSeparator}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

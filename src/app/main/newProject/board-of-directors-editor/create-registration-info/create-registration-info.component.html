@@ -1,0 +1,76 @@
+<div class="app-mx-5r"  [formGroup]="form">
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+       <span class="p-float-label">
+      <input pInputText formControlName="erjaCode">
+       <label>کد ارجاع مشتری</label>
+       </span>
+    </div>
+    <div class="p-field p-col-3">
+       <span class="p-float-label">
+      <input pInputText formControlName="nationalCode">
+       <label>شناسه ملی</label>
+       </span>
+    </div>
+    <div class="p-field p-col-6">
+       <span class="p-float-label">
+      <input required pInputText formControlName="title">
+       <label>عنوان</label>
+       </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+       <span class="p-float-label">
+      <input pInputText formControlName="erjaCodeZinaf">
+       <label>کد ارجاع ذینفع شخصی</label>
+       </span>
+    </div>
+    <div class="p-field p-col">
+       <span class="p-float-label">
+      <input pInputText formControlName="nationalCodeAtba">
+       <label>کد ملی / کد اتباع / شناسه ملی</label>
+       </span>
+    </div>
+    <div class="p-field p-col">
+       <span class="p-float-label">
+      <p-dropdown [autoDisplayFirst]="false" formControlName="postType"
+                  [options]="postOrganization"></p-dropdown>
+       <label>نوع سمت</label>
+       </span>
+    </div>
+    <div class="p-field p-col">
+       <span class="p-float-label">
+      <input pInputText formControlName="LimitsAuthority">
+       <label>حدود اختیارات</label>
+       </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+       <span class="p-float-label">
+      <p-persian-calendar formControlName="startDate" yearRange="1300:1410"
+                          class="app-persian-calendar-style"></p-persian-calendar>
+       <label>تاریخ شروع</label>
+       </span>
+      <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
+    </div>
+    <div class="p-field p-col-3">
+       <span class="p-float-label">
+      <p-persian-calendar formControlName="endDate"yearRange="1300:1410"
+                          class="app-persian-calendar-style"></p-persian-calendar>
+       <label>تاریخ پایان</label>
+       </span>
+      <!-- <small>ورودی به صورت تاریخ می‌باشد</small> -->
+    </div>
+   <div class="p-field p-col-3"></div>
+   <div class="p-field p-col-3"></div>
+
+  </div>
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
+    <button label="تایید" pButton (click)="Confirmation()"></button>
+    <button label="انصراف" pButton (click)="onClose()"></button>
+  </div>
+</div>

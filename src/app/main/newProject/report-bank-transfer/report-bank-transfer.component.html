@@ -1,0 +1,103 @@
+<p-panel header="گزارش حواله های اینترنتی " [ngStyle]="{'width':'100%'}">
+  <div class="p-fluid p-formgrid p-grid app-mx-10r  ">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar  yearRange="1300:1410" class="app-persian-calendar-style"
+        ></p-persian-calendar>
+        <label>از تاریخ</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar  yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تا تاریخ</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [editable]="true" 
+                    [options]="acItems"></p-dropdown>
+        <label>شماره حساب</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="HavaleInternetiStatus" class="p-dropdown-w100"
+                    ></p-dropdown>
+        <label>وضعیت حواله</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="referralType" class="p-dropdown-w100"
+                     optionValue="value" optionLabel="label"></p-dropdown>
+        <label>نوع حواله</label>
+      </span>
+    </div>
+    <br>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+                       ></p-inputNumber>
+        <label>مبلغ حواله از (ریال)</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0"
+                       ></p-inputNumber>
+        <label>مبلغ حواله تا (ریال)</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input class="input-w-100"  pInputText>
+        <label>کدملی / شناسه ملی</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input class="input-w-100"  pInputText>
+        <label>شماره حواله</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3"></div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+  </div>
+
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>شماره حساب</th>
+          <th translate>نوع حواله</th>
+          <th translate>وضعیت حواله</th>
+          <th translate>تاریخ ثبت</th>
+          <th translate>تاریخ سر رسید</th>
+          <th translate>ذینفع</th>
+          <th translate>کدملی/شناسه ملی</th>
+          <th translate>شماره حواله</th>
+          <th translate>مبلغ</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-reportTransfer>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{reportTransfer.accountNumber}}</td>
+          <td>{{reportTransfer.typeTranslate}}</td>
+          <td>{{reportTransfer.statusTranslate}}</td>
+          <td>{{reportTransfer.dateRegistration}}</td>
+          <td>{{reportTransfer.dateDue}}</td>
+          <td>{{reportTransfer.beneficiary}}</td>
+          <td>{{reportTransfer.nationalCode}}</td>
+          <td>{{reportTransfer.numberTranslate}}</td>
+          <td>{{reportTransfer.amount|addCommaSeparator}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

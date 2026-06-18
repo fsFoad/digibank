@@ -1,0 +1,83 @@
+<p-panel header="ثبت دستور بانک پرداخت شارژ سیم کارت" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText>
+            <label>شماره موبایل</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-dropdown class="p-dropdown-w100" optionValue="value"
+                        [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+            <label>نوع شرکت</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-dropdown class="p-dropdown-w100" optionValue="value"
+                        [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+            <label>نوع دوره پرداخت</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                           [minFractionDigits]="0" placeholder=""></p-inputNumber>
+            <label>سقف مبلغ شارژ</label>
+          </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText>
+            <label>کد شتابی بانکی</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText/>
+            <label>کد پیوست</label>
+          </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText/>
+            <label>شرح / توضیحات</label>
+          </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تاریخ شروع</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تاریخ انقضا</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+        <p-checkbox name="check" id="ny " value="val1"></p-checkbox>
+        <label class="p-mt-1"> بدون تاریخ امضا </label>
+      </div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+      <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
+      <button id="btnBatchRegister" class="p-button-info" pButton label="ثبت گروهی"></button>&nbsp;
+    </div>
+    <div class="p-field p-col"></div>
+  </div>
+</p-panel>

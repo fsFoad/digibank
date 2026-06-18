@@ -1,0 +1,131 @@
+<p-panel header="اسناد واگذاری" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [editable]="true"
+                    [options]="acItems"></p-dropdown>
+        <label>شماره حساب</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList"></p-dropdown>
+        <label>بانک متعهد</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد شعبه متعهد</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>سری عددی</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>سری حرفی</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>سریال</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره حساب سند</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>مبلغ</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" optionValue="value"
+                    optionLabel="label"></p-dropdown>
+        <label>نوع سند</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>صاحب حساب سند</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد ملی</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>موبایل</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ صدور سند</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ واگذاری</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>کد تراکنش</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>اطلاعات پیوست مشتریان</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>توضیحات</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+        <p-fileUpload mode="basic"
+                      [auto]="true" [customUpload]="true"
+                      [showCancelButton]="false" [showUploadButton]="false"
+                      accept=".xlsx" chooseLabel="پیوست تصویر چک" [multiple]="false">
+        </p-fileUpload>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnAssignment" class="p-button-info" pButton label="واگذاری"></button>&nbsp;
+    <button id="btnInquirySida" class="p-button-info" pButton label="استعلام سامانه صیاد"></button>&nbsp;
+  </div>
+</p-panel>

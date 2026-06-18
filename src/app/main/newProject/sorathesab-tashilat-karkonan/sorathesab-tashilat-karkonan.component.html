@@ -1,0 +1,62 @@
+<p-panel header="صورتحساب تسهیلات کارکنان" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-20r p-mt-5">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w100" optionValue="value"
+                    [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+        <label>واحد مربوطه</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ دریافت</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410"
+                            class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ تسویه</label>
+      </span>
+    </div>
+  </div>
+  </div>
+
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnBatchRegister" class="p-button-info" (click)="tableFlag=true" pButton label="گزارش"></button>&nbsp;&nbsp;
+  </div>
+
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">واحد مربوطه</th>
+          <th translate>شعبه</th>
+          <th translate>نوع تسهیلات</th>
+          <th translate>مبلغ اعطا شده</th>
+          <th translate>جمع اقساط پرداختی</th>
+          <th translate>تجمع وجه التزام پرداختی</th>
+          <th translate>شماره پرونده</th>
+          <th translate>مانده بدهی</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-service>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{service.relevantUnit}}</td>
+          <td>{{service.branch}}</td>
+          <td>{{service.tashilatType}}</td>
+          <td>{{service.amount|addCommaSeparator}}</td>
+          <td>{{service.installmentsPaid|addCommaSeparator}}</td>
+          <td>{{service.accumulationPaymentObligation|addCommaSeparator}}</td>
+          <td>{{service.fileNumber}}</td>
+          <td>{{service.remaining|addCommaSeparator}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

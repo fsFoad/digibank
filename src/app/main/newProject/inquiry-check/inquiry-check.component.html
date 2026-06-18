@@ -1,0 +1,167 @@
+<p-panel header="استعلام وضعیت چک" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [editable]="true" [autoDisplayFirst]="false" [options]="acItems">
+        </p-dropdown>
+        <label>شماره حساب</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>مبلغ</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+        </p-persian-calendar>
+        <label>تاریخ سررسید</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>واحد مربوطه</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>ذینفع چک</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>سریال چک</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>سری حرفی</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input class="input-w-100" pInputText>
+            <label>سری عددی</label>
+          </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+            <label>وضعیت چک</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+            <label>سرفصل حسابداری</label>
+          </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تاییدیه از</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تا تاریخ</label>
+          </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>برداشت از</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-persian-calendar yearRange="1300:1410"
+                                class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تا تاریخ</label>
+          </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input class="input-w-95" pInputText>
+            <label>در وجه</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input class="input-w-95" pInputText>
+            <label>بابت</label>
+          </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnReport" class=" p-button-info" pButton label="گزارش" (click)="tableFlag=true;"></button>&nbsp;
+  </div>
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>نام شعبه</th>
+          <th translate>تاریخ اعمال</th>
+          <th translate>واریز کننده</th>
+          <th translate>کد یکتای تراکنش</th>
+          <th translate>چک / حواله</th>
+          <th translate>سند</th>
+          <th translate>بدهکار</th>
+          <th translate>بستانکار</th>
+          <th translate>مانده</th>
+          <th translate>تاریخ انجام</th>
+          <th translate>کد نوع خدمات</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-service>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{service.accountNumber}}</td>
+          <td>{{service.branchName}}</td>
+          <td>{{service.history}}</td>
+          <td>{{service.depositor}}</td>
+          <td>{{service.yektaCode}}</td>
+          <td>{{service.check}}</td>
+          <td>{{service.doc}}</td>
+          <td>0</td>
+          <td>{{service.creditor|addCommaSeparator}}</td>
+          <td>{{service.amount|addCommaSeparator}}</td>
+          <td>1400/06/01</td>
+          <td>170</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

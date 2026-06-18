@@ -1,0 +1,29 @@
+<p-panel header="ثبت قبوض گروهی">
+  <div class="app-mx-30r">
+    <div class="p-fluid p-formgrid p-grid p-jc-center">
+      <div class="p-field p-col" dir="ltr">
+        <p-fileUpload
+          mode="basic" [auto]="true" [customUpload]="true"
+          [showCancelButton]="false" [showUploadButton]="false"
+          accept=".xlsx" chooseLabel="فایل گروهی قبوض" [multiple]="false">
+        </p-fileUpload>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [editable]="true" class="p-dropdown-w100" placeholder=""
+                    [options]="acItems"></p-dropdown>
+        <label>شماره حساب</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+      <span class="p-float-label">
+        <input class="input-w-100" placeholder="" pInputText>
+        <label>شرح / توضیحات</label>
+      </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnBatchRegister" class="p-button-info" pButton label="ثبت گروهی"></button>&nbsp;&nbsp;
+  </div>
+</p-panel>

@@ -1,0 +1,54 @@
+<p-panel header="اطلاعات شارژ کیف پول به تفکیک واحد های تابعه">
+  <div class="app-mx-20r p-jc-center">
+    <div class="p-fluid p-formgrid p-grid">
+      <div class="p-field p-col-2"></div>
+      <div class="p-field p-col-4">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره آیدی کیف پول</label>
+      </span>
+      </div>
+      <div class="p-field p-col-4">
+      <span class="p-float-label">
+        <input class="input-w-100" pInputText>
+        <label>شماره موبایل</label>
+      </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnRecovery" class="p-button" pButton label="بازیابی گزارش" (click)="tableFlag=true;"></button>&nbsp;
+  </div>
+  <p-card *ngIf=tableFlag>
+    <p-table [value]="fsList">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate id="thAccountNumber">شماره حساب</th>
+          <th translate>نام شعبه</th>
+          <th translate>شماره آیدی کیف</th>
+          <th translate>تاریخ</th>
+          <th translate>نوع تراکنش</th>
+          <th translate>شرح تراکنش</th>
+          <th translate>شماره سند</th>
+          <th translate>مبلغ</th>
+          <th translate>مانده کیف</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-walletTransaction>
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{walletTransaction.accountNumber}}</td>
+          <td>{{walletTransaction.branchName}}</td>
+          <td>{{walletTransaction.walletId}}</td>
+          <td>{{walletTransaction.history}}</td>
+          <td>{{walletTransaction.transactionType}}</td>
+          <td>{{walletTransaction.transactionDes}}</td>
+          <td>{{walletTransaction.docNumber}}</td>
+          <td>{{walletTransaction.amount|addCommaSeparator}}</td>
+          <td>{{walletTransaction.remaining|addCommaSeparator}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</p-panel>

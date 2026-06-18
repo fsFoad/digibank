@@ -1,0 +1,47 @@
+<p-panel header="انسداد بن کارت" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label">
+          </p-dropdown>
+          <label>شماره کارت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText disabled>
+          <label>صاحب کارت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText disabled>
+          <label>مبلغ موجودی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>مبلغ انسداد</label>
+        </span>
+      </div>
+      <div class="p-field p-col-12">
+        <span class="p-float-label">
+          <input class="input-w-92" pInputText/>
+          <label>شرح / توضیحات</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-1">
+    <button id="btnBlockAmount" class="p-button-info" pButton label="انسداد مبلغ"
+            (click)="confirmDlg.visible = true"></button>&nbsp;
+    <button id="btnBlockCard" class="p-button-info" pButton label="انسداد کامل کارت"
+            (click)="confirmDlg.visible = true"></button>&nbsp;
+  </div>
+</p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد"
+                 [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>

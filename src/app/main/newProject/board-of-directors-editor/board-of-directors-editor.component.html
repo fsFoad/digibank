@@ -1,0 +1,37 @@
+<!-- <p-divider class="app-divider-h">اطلاعات ثبتی</p-divider> -->
+<div *ngIf="!createRegistrationInfoFlag" class="p-mb-3">
+  <button pButton label="ایجاد اطلاعات ثبتی +" class="p-button-info" (click)="createRegistrationInfo()"></button>
+</div>
+<p-card  header="اطلاعات ثبتی" *ngIf="!createRegistrationInfoFlag">
+  <p-table [value]="TBListRegistrationInfo">
+    <ng-template pTemplate="header">
+      <tr>
+        <th translate>ردیف</th>
+        <th translate>عنوان</th>
+        <th translate>نوع سمت</th>
+        <th translate>کد ملی</th>
+        <th translate>حدود اختیارات</th>
+        <th translate>کد ارجاع ذینفع شخصی</th>
+        <th translate>تاریخ شروع</th>
+        <th translate>تاریخ پایان</th>
+        <th translate>عملیات</th>
+      </tr>
+    </ng-template>
+    <ng-template let-i="rowIndex" pTemplate="body" let-row>
+      <tr>
+        <td>{{i + 1}}</td>
+        <td>{{row.title}}</td>
+        <td>{{row.postType|paramTitle :postOrganization:'value':'label'}}</td>
+        <td>{{row.nationalCode}}</td>
+        <td>{{row.LimitsAuthority}}</td>
+        <td>{{row.erjaCodeZinaf}}</td>
+        <td>{{row.startDate|castToDate}}</td>
+        <td>{{row.endDate|castToDate}}</td>
+        <td>
+          <p-button class="p-button-danger" icon="pi pi-trash" title="حذف" (click)="removeRow(row)"></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</p-card>
+<app-create-registration-info  (close)="onClose()"  *ngIf="createRegistrationInfoFlag" (myListRegistrationInfo)="AddItemRegistrationInfo($event)"></app-create-registration-info>

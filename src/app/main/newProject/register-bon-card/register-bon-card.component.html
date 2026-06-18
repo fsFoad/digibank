@@ -1,0 +1,85 @@
+<p-panel header="صدور بن کارت" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [editable]="true" class="p-dropdown-w100"
+                      [options]="acItems"></p-dropdown>
+          <label>شماره حساب متصل به کارت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نام نام خانوادگی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره موبایل</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال"
+                         [minFractionDigits]="0"></p-inputNumber>
+          <label>مبلغ شارژ اولیه</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>کد ملی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+           <p-persian-calendar yearRange="1300:1410"
+                               class="app-persian-calendar-style"></p-persian-calendar>
+          <label>تاریخ تولد</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نام پدر</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره شناسنامه</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>کد شعبه</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>نام شعبه</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w100" optionValue="value"
+                      [options]="listDrop" [autoDisplayFirst]="false" optionLabel="label"></p-dropdown>
+          <label>نوع خدمات</label>
+        </span>
+      </div>
+      <div class="p-field p-col"></div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5">
+    <button id="btnRegister" class="p-button-info" pButton label="صدور"></button>&nbsp;
+    <button id="btnCertificationBonCard" class="p-button-info" pButton label="انصراف"></button>&nbsp;
+  </div>
+</p-panel>

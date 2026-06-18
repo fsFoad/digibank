@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(/assets/images/backgrounds/back1.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+:host ::ng-deep .p-panel .p-panel-content {
+    background: rgba(255, 255, 255, 0.65);
+}
+
+input,
+p-dropdown {
+    width: 190px;
+}

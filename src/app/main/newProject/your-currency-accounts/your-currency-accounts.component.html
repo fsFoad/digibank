@@ -1,0 +1,73 @@
+<p-panel header="حساب‌های ارزی شما" class="w-100-p">
+  <p-card class="account app-mx-5r p-d-block" header="جاری اشخاص حقوقی">
+    <table class="account w-100-p">
+      <tbody class="account">
+      <tr>
+        <td class="p-text-right">شماره حساب:</td>
+        <td  class="widthAccountNumber p-text-right">340-1000000145-65</td>
+
+        <td class="p-text-right">مانده حساب:</td>
+        <td class="p-text-right">1,004,061,000</td>
+
+        <td class="p-text-right">نوع ارز:</td>
+        <td class="p-text-right">دلار</td>
+        <img src="https://static.thenounproject.com/png/1652733-200.png">
+
+        <td class="p-text-left">
+          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info" (click)="confirmDlg.visible = true"></button>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-text-right ">کد شعبه افتتاح کننده:</td>
+        <td class="p-text-right">1446</td>
+
+        <td class="p-text-right">نام شعبه افتتاح کننده:</td>
+        <td class="p-text-right">تجریش</td>
+
+        <td class="p-text-right">تاریخ آخرین گردش:</td>
+        <td class="p-text-right">1400/08/04</td>
+
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </p-card>
+
+  <div style="height: 2em;"></div>
+
+  <p-card class="account app-mx-5r p-d-block" header="قرض الحسنه اشخاص حقوقی">
+    <table class="account w-100-p">
+      <tbody class="account">
+      <tr>
+        <td class="p-text-right">شماره حساب:</td>
+        <td  class="widthAccountNumber p-text-right">240-1000000589-25</td>
+
+        <td class="p-text-right">مانده حساب:</td>
+        <td class="p-text-right">120,000</td>
+
+        <td class="p-text-right">نوع ارز:</td>
+        <td class="p-text-right">درهم امارات</td>
+        <img src="https://static.thenounproject.com/png/495441-200.png" class="p-text-right" >
+        <td class="p-text-left">
+          <button pButton icon="pi pi-refresh" label="بروز رسانی مانده" class="p-button-info" (click)="confirmDlg.visible = true"></button>
+        </td>
+      </tr>
+      <tr>
+        <td class="p-text-right">کد شعبه افتتاح کننده:</td>
+        <td class="p-text-right">1446</td>
+
+        <td class="p-text-right">نام شعبه افتتاح کننده:</td>
+        <td class="p-text-right">تجریش</td>
+
+        <td class="p-text-right">تاریخ آخرین گردش:</td>
+        <td class="p-text-right">1400/09/05</td>
+
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+  </p-card>
+</p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد" [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>

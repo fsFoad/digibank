@@ -1,0 +1,70 @@
+<p-panel header="مشاهده و ویرایش اطلاعات">
+  <p-card>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="radibt">
+        <p-radioButton name="A" value="s" [(ngModel)]="temp" inputId="temp1"></p-radioButton>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input   class="input-w-100" pInputText>
+          <label>دوره</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar   yearRange="1300:1410"
+                              class="app-persian-calendar-style"></p-persian-calendar>
+          <label>مهلت پرداخت از</label>
+        </span>
+      </div>
+      <div class="p-field p-col app-ml-20r">
+         <span class="p-float-label">
+           <p-persian-calendar   yearRange="1300:1410"
+                               class="app-persian-calendar-style"></p-persian-calendar>
+           <label>مهلت پرداخت تا</label>
+        </span>
+      </div>
+    </div>
+    <hr>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="radibt">
+        <p-radioButton name="A" value="e" [(ngModel)]="temp" inputId="temp2"></p-radioButton>
+      </div>
+      <div class="p-field p-col app-ml-50r">
+        <span class="p-float-label">
+          <input   class="input-w-100" pInputText>
+          <label>نام واریز کننده</label>
+        </span>
+      </div>
+    </div>
+    <hr>
+    <div class="p-fluid p-formgrid p-grid ">
+      <div class="radibt">
+        <p-radioButton name="A" value="L" [(ngModel)]="temp" inputId="temp3"></p-radioButton>
+      </div>
+      <div class="p-field p-col ">
+        <span class="p-float-label">
+          <input   class="input-w-100" pInputText>
+          <label>شناسه واریز کننده</label>
+        </span>
+      </div>
+      <div class="p-field p-col ">
+        <span class="p-float-label">
+          <input   class="input-w-100" pInputText>
+          <label>ردیف شناسه</label>
+        </span>
+      </div>
+      <div class="p-field p-col app-ml-20r">
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w100"   optionValue="value"
+                    optionLabel="label"></p-dropdown>
+          <label>گروه</label>
+        </span>
+      </div>
+    </div>
+  </p-card>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button pButton class="p-button-info  btn-ml" label="جستجو"></button>
+    <button pButton class="p-button-info " label="پاک کردن فرم"></button>
+  </div>
+</p-panel>

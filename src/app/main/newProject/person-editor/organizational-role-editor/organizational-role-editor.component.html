@@ -1,0 +1,35 @@
+<div class="app-mx-5r">
+<!--  <div class="p-fluid p-formgrid p-grid app-col-px-2r">-->
+<!--    <div class="p-field p-col-3">-->
+<!--&lt;!&ndash;      <span class="p-float-label">&ndash;&gt;-->
+<!--        <input placeholder="کد ارجاع مشتری" pInputText>-->
+<!--&lt;!&ndash;        <label>کد ارجاع مشتری</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </span>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="p-field p-col-3">-->
+<!--&lt;!&ndash;      <span class="p-float-label">&ndash;&gt;-->
+<!--        <input placeholder="شناسه ملی" pInputText>-->
+<!--&lt;!&ndash;      <label>شناسه ملی</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </span>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="p-field p-col-6">-->
+<!--&lt;!&ndash;      <span class="p-float-label">&ndash;&gt;-->
+<!--        <input placeholder="*عنوان" pInputText required>-->
+<!--&lt;!&ndash;        <label>عنوان</label>&ndash;&gt;-->
+<!--&lt;!&ndash;      </span>&ndash;&gt;-->
+<!--      &lt;!&ndash; <small>متن کمکی</small> &ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
+  
+  <div class="p-fluid p-formgrid p-grid">
+    <div class="p-col-2"></div>
+    <div class="p-col mt-20">
+      <p-pickList [source]="availableRoles" [target]="selectedRoles" [showSourceControls]="false"
+        [showTargetControls]="false" class="app-mirror-transfer-icons app-custom-picklist-header" sourceHeader="نقش‌های معتبر سازمان"
+        targetHeader="نقش ذینفع در سازمان">
+        <ng-template let-row pTemplate="item">{{row.label}}</ng-template>
+      </p-pickList>
+    </div>
+    <div class="p-col-2"></div>
+  </div>
+</div>

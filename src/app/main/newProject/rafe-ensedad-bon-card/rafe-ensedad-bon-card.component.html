@@ -1,0 +1,55 @@
+<p-panel header="رفع انسداد بن کارت" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" optionValue="value" optionLabel="label"></p-dropdown>
+          <label>شماره کارت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText disabled>
+          <label>صاحب کارت</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0">
+          </p-inputNumber>
+          <label>مبلغ موجودی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-inputNumber [required]="true" mode="decimal" [useGrouping]="true" suffix=" ریال" [minFractionDigits]="0">
+          </p-inputNumber>
+          <label>مبلغ انسداد</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-100" pInputText>
+          <label>شماره انسداد</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input class="input-w-96" pInputText/>
+          <label>شرح / توضیحات</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-1">
+    <button id="btnUnblocking" class="p-button-info" pButton label="رفع انسداد" (click)="confirmDlg.visible = true">
+    </button>&nbsp;
+    <button id="btnUnblockingAll" class="p-button-info" pButton label="ابطال کلیه انسداد های کارت انتخابی"
+            (click)="confirmDlg.visible = true"></button>&nbsp;
+  </div>
+</p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد"
+                 [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle"></p-confirmDialog>

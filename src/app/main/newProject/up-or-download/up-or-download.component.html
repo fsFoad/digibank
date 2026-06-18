@@ -1,0 +1,48 @@
+<p-card header="دانلود مستندات">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="row1 p-fluid p-formgrid p-grid app-col-px-2r">
+          <p-table [value]="fsList">
+            <ng-template pTemplate="header">
+              <tr>
+                <th translate>ردیف</th>
+                <th translate id="thAccountNumber">نوع سند</th>
+                <th translate>واحد عامل</th>
+                <th translate>تاریخ دانلود</th>
+                <th translate>توضیحات</th>
+                <th translate>تصویر</th>
+              </tr>
+            </ng-template>
+            <ng-template let-i="rowIndex" pTemplate="body" let-service>
+              <tr>
+                <td>{{i + 1}}</td>
+                <td>{{service.docType}}</td>
+                <td>{{service.operatingUnit}}</td>
+                <td>{{service.downloadDate|castToDate}}</td>
+                <td>{{service.des}}</td>
+                <td>{{service.picture}}</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+      <div class="p-col p-d-flex p-flex-column">
+        <div class="p-d-flex p-jc-center p-ai-center">
+          <div style="width: 200px; height: 200px; background: gray; border: 1px solid black;">
+            تصویر
+          </div>
+        </div>
+        <div class="app-button-bar p-jc-center p-mt-2">
+          <button pButton label="خواندن از پرونده"></button>
+          <button pButton label="اسکن تصویر"></button>
+          <button pButton label="تصویر بعدی"></button>
+          <button pButton label="تصویر قبلی"></button>
+          <br>
+          <button pButton label="چاپ"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</p-card>
+

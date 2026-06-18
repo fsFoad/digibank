@@ -1,0 +1,99 @@
+<p-panel header="ثبت دستور پرداخت" [ngStyle]="{'width':'100%'}">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input placeholder="" class="input-w-100" pInputText disabled>
+          <label>کد مشتری ویژه ثبت نشده است</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input placeholder="" class="input-w-100" pInputText disabled>
+          <label>عنوان مشتری ویژه ثبت نشده است</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input placeholder="" class="input-w-100" pInputText>
+          <label>کد شعبه متعهد</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input placeholder="" class="input-w-100" pInputText disabled>
+          <label>نام شعبه متعهد</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" placeholder="" optionValue="value"
+                        optionLabel="label"></p-dropdown>
+            <label>نوع مشتری</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input placeholder="" class="input-w-100" pInputText>
+            <label>دریافت کننده</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input placeholder="" class="input-w-100" pInputText>
+            <label>موبایل</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input placeholder="" class="input-w-100" pInputText>
+            <label>کد ملی / کد اقتصادی</label>
+          </span>
+      </div>
+    </div>
+
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input placeholder="" class="input-w-100" pInputText>
+            <label>شماره حواله</label>
+          </span>
+      </div>
+      <div class="p-field p-col">
+          <span class="p-float-label">
+            <input placeholder="" class="input-w-100" pInputText>
+            <label>کد پیوست</label>
+          </span>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r p-mt-1">
+      <div class="p-field p-col">
+            <span class="p-float-label">
+              <p-persian-calendar placeholder="" yearRange="1300:1410"
+                                  class="app-persian-calendar-style"></p-persian-calendar>
+              <label>تاریخ شروع</label>
+            </span>
+      </div>
+      <div class="p-field p-col">
+            <span class="p-float-label">
+              <p-persian-calendar placeholder="" yearRange="1300:1410"
+                                  class="app-persian-calendar-style"></p-persian-calendar>
+              <label>تاریخ انقضا</label>
+            </span>
+      </div>
+      <div class="p-field p-col">
+        <p-checkbox name="check" id="ny " value="val1"></p-checkbox>
+        <label> بدون تاریخ امضا </label>
+      </div>
+      <div class="p-field p-col"></div>
+    </div>
+  </div>
+  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
+    <button id="btnRegister" class="p-button-info" pButton label="ثبت در خواست"></button>&nbsp;
+    <button id="btnSent" class="p-button-info" pButton label="ارسال اطلاعات حواله توسط پیامک"></button>&nbsp;
+  </div>
+</p-panel>

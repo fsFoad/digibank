@@ -1,0 +1,33 @@
+<p-panel header="درخواست حواله گروهی پایا">
+  <div class="app-mx-5r">
+    <div class="p-fluid p-formgrid p-grid app-mx-45r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown placeholder="" [options]="searchTypeList" [autoDisplayFirst]="false"></p-dropdown>
+          <label>جستجو بر اساس</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-mx-30r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style"
+          ></p-persian-calendar>
+          <label>از تاریخ</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-persian-calendar placeholder="" yearRange="1300:1410" class="app-persian-calendar-style"
+          ></p-persian-calendar>
+          <label>تا تاریخ</label>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-d-flex p-jc-center p-mt-5">
+    <button pButton pRipple type="button" label="تایید" style="width:10rem" class="p-mr-2 p-mb-2"></button>
+  </div>
+
+</p-panel>

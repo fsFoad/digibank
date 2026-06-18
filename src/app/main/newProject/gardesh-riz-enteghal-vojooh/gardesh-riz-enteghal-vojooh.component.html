@@ -1,0 +1,65 @@
+<p-panel header="گردش ریز انتقال وجوه">
+  <div class="app-mx-10r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col p-d-flex app-gap-2r">
+        <span>بازیابی بر اساس:</span>
+        <p-radioButton name="accountType" [(ngModel)]="accountType" value="sourceAccount" label="حساب مبدا">
+
+        </p-radioButton>
+        <p-radioButton name="accountType" [(ngModel)]="accountType" value="destinationAccount" label="حساب مقصد">
+
+        </p-radioButton>
+      </div>
+      <div class="p-field p-col p-d-flex app-gap-2r">
+        <span>درگاه انجام حواله:</span>
+        <p-radioButton name="remittancePortal" [(ngModel)]="remittancePortal" value="normal" label="حواله عادی">
+
+        </p-radioButton>
+        <p-radioButton name="remittancePortal" [(ngModel)]="remittancePortal" value="organizational"
+                       label="مدیریت وجوه سازمانها"></p-radioButton>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+        <p-dropdown [editable]="true" [autoDisplayFirst]="false"
+                    [options]="acItems"></p-dropdown>
+          <label>شماره حساب مبدا</label>
+      </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+        <p-dropdown [editable]="true" [autoDisplayFirst]="false"
+                    [options]="acItems"></p-dropdown>
+          <label>شماره حساب مقصد</label>
+      </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+        </p-persian-calendar>
+          <label>از تاریخ</label>
+      </span>
+      </div>
+      <div class="p-col"></div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style">
+        </p-persian-calendar>
+          <label>تا تاریخ</label>
+      </span>
+      </div>
+      <div class="p-col"></div>
+    </div>
+  </div>
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
+    <button label="بازیابی" pButton (click)="confirmDlg.visible = true"></button>
+    <button label="بازگشت" pButton (click)="goToHome()"></button>
+  </div>
+</p-panel>
+
+<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد"
+                 [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
+</p-confirmDialog>

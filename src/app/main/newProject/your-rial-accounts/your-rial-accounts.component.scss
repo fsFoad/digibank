@@ -1,0 +1,22 @@
+:host {
+  width: 100%;
+}
+
+tbody.account > tr > td {
+  // background-color: #ffd;
+  padding-inline-start: 1em;
+}
+
+tbody.account > tr.account-type > td {
+  // background-color: #ddd;
+}
+
+tbody.account > tr > td {
+  padding-inline-start: .5em;
+  padding-inline-end: 1em;
+}
+
+tbody.account > tr > td.p-text-left {
+  padding-inline-start: 1em;
+  padding-inline-end: .5em;
+}
