@@ -83,6 +83,7 @@ import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/ex
 import { AccountTransactionsComponent } from './account-transactions/account-transactions.component';
 import {OrganizationalEntityListComponent} from './organizational-entity-list/organizational-entity-list.component';
 import {IdentificationTransactionComponent} from './identification-transaction/identification-transaction.component';
+import {RialAccountByBankComponent} from './rial-account-by-bank/rial-account-by-bank.component';
 
 
 const routes: Routes = [
@@ -402,6 +403,10 @@ const routes: Routes = [
       {
         path: 'identificationTransaction',
         component: IdentificationTransactionComponent,
+      },
+      {
+        path: 'rialAccountByBank',
+        component: RialAccountByBankComponent,
       },
 
       // add new components above
