@@ -42,7 +42,7 @@
         <p-table [value]="level1Rows" [loading]="level1Loading" dataKey="code">
           <ng-template pTemplate="header">
             <tr>
-              <th></th>
+              <th style="width:70px"></th>
               <th translate style="width: 2%;">ردیف</th>
               <th translate class="app-w-10pc">کد سر فصل</th>
               <th translate class="p-text-right">عنوان سر فصل</th>
@@ -50,7 +50,16 @@
           </ng-template>
           <ng-template let-i="rowIndex" pTemplate="body" let-row let-expanded="expanded">
             <tr>
-              <td><button type="button" pButton pRipple [pRowToggler]="row" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-left'"></button></td>
+              <td>
+                <button
+                  type="button"
+                  pButton
+                  pRipple
+                  [pRowToggler]="row"
+                  class="expand-btn"
+                  [label]="expanded ? '−' : '+'">
+                </button>
+              </td>
               <td>{{i + 1}}</td>
               <td>{{row.code}}</td>
               <td class="p-text-right">{{row.title}}</td>
@@ -63,14 +72,23 @@
                   <p-table [value]="row.rows" dataKey="code">
                     <ng-template pTemplate="header">
                       <tr>
-                        <th></th>
+                        <th style="width:70px"></th>
                         <th class="p-text-right app-w-10pc">کد</th>
                         <th class="p-text-right">عنوان</th>
                       </tr>
                     </ng-template>
                     <ng-template pTemplate="body" let-row let-expanded="expanded">
                       <tr>
-                        <td><button type="button" pButton pRipple [pRowToggler]="row" class="p-button-text p-button-rounded p-button-plain" [icon]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-left'"></button></td>
+                        <td>
+                          <button
+                            type="button"
+                            pButton
+                            pRipple
+                            [pRowToggler]="row"
+                            class="expand-btn level-2"
+                            [label]="expanded ? '−' : '+'">
+                          </button>
+                        </td>
                         <td class="p-text-right">{{row.code}}</td>
                         <td class="p-text-right">{{row.title}}</td>
                       </tr>

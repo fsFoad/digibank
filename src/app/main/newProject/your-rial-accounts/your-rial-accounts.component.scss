@@ -19,4 +19,175 @@ tbody.account > tr > td {
 tbody.account > tr > td.p-text-left {
   padding-inline-start: 1em;
   padding-inline-end: .5em;
+}:host ::ng-deep {
+
+   /* ==========================
+       LEVEL 1 - سرفصل
+   ========================== */
+
+   .app-nested-level-1 .p-datatable-thead > tr > th {
+     background: linear-gradient(
+         135deg,
+         #0b3c6d,
+         #145ea8
+     ) !important;
+
+     color: #fff !important;
+     border: none !important;
+     font-weight: 700;
+   }
+
+   /* ==========================
+       LEVEL 2 - کل
+   ========================== */
+
+   .app-nested-level-2 .p-datatable-thead > tr > th {
+     background: linear-gradient(
+         135deg,
+         #1565c0,
+         #1e88e5
+     ) !important;
+
+     color: #fff !important;
+     border: none !important;
+     font-weight: 600;
+   }
+   .expand-btn .p-button-label {
+     color: inherit !important;
+     font-weight: 700;
+     font-size: 18px;
+     line-height: 1;
+   }
+
+   .app-nested-level-2 .expand-btn,
+   .app-nested-level-2 .expand-btn .p-button-label {
+     color: #1565c0 !important;
+   }
+
+   .app-nested-level-2 .expand-btn:hover,
+   .app-nested-level-2 .expand-btn:hover .p-button-label {
+     color: #fff !important;
+   }
+
+   .app-nested-level-3 .expand-btn,
+   .app-nested-level-3 .expand-btn .p-button-label {
+     color: #00897b !important;
+   }
+
+   .app-nested-level-3 .expand-btn:hover,
+   .app-nested-level-3 .expand-btn:hover .p-button-label {
+     color: #fff !important;
+   }
+   /* ==========================
+       LEVEL 3 - معین
+   ========================== */
+
+   .app-nested-level-3 .p-datatable-thead > tr > th {
+     background: linear-gradient(
+         135deg,
+         #26a69a,
+         #4db6ac
+     ) !important;
+
+     color: #fff !important;
+     border: none !important;
+     font-weight: 600;
+   }
+
+ }
+.app-nested-level-1 {
+  border-right: 5px solid #0B3C6D;
+}
+
+.app-nested-level-2 {
+  border-right: 5px solid #1565C0;
+}
+
+.app-nested-level-3 {
+  border-right: 5px solid #00897B;
+}
+.expand-btn {
+  background: #0B3C6D !important;
+}
+
+.app-nested-level-2 .expand-btn {
+  background: #1565C0 !important;
+}
+
+.app-nested-level-3 .expand-btn {
+  background: #00897B !important;
+}
+/* ستون دکمه */
+.p-datatable-tbody > tr > td:first-child {
+  width: 60px;
+  padding-left: 16px !important;
+  padding-right: 12px !important;
+}
+
+/* دکمه باز و بسته */
+.expand-btn {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+
+  border-radius: 10px !important;
+  border: 1px solid rgba(11, 60, 109, .15) !important;
+
+  background: #ffffff !important;
+  color: #0b3c6d !important;
+
+  font-size: 18px !important;
+  font-weight: 700 !important;
+
+  box-shadow: 0 2px 8px rgba(11, 60, 109, .08);
+  transition: all .25s ease;
+}
+
+/* Hover */
+.expand-btn:hover {
+  background: #0b3c6d !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 60, 109, .2);
+}
+
+/* سطح دوم */
+.app-nested-level-2 .expand-btn {
+  color: #1565c0 !important;
+  border-color: rgba(21, 101, 192, .15) !important;
+}
+
+.app-nested-level-2 .expand-btn:hover {
+  background: #1565c0 !important;
+  color: white !important;
+}
+
+/* سطح سوم */
+.app-nested-level-3 .expand-btn {
+  color: #00897b !important;
+  border-color: rgba(0, 137, 123, .15) !important;
+}
+
+.app-nested-level-3 .expand-btn:hover {
+  background: #00897b !important;
+  color: white !important;
+}
+.p-datatable-tbody > tr > td:nth-child(2) {
+  padding-right: 20px !important;
+}
+:host ::ng-deep .expand-btn .p-button-label {
+  color: inherit !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+}
+
+:host ::ng-deep .expand-btn.level-2 {
+  color: #1565c0 !important;
+}
+
+:host ::ng-deep .expand-btn.level-2 .p-button-label {
+  color: #fff !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
 }

@@ -1,4 +1,90 @@
 <p-panel header="حساب‌های ریالی شما" class="w-100-p">
+  <p-card>
+    <div class="app-nested-level-1">
+      <p-table [value]="level1Rows" [loading]="level1Loading" dataKey="code">
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width:70px"></th>
+            <th translate style="width: 2%;">ردیف</th>
+            <th translate class="app-w-10pc">کد سر فصل</th>
+            <th translate class="p-text-right">عنوان سر فصل</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row let-expanded="expanded">
+          <tr>
+            <td>
+              <button
+                type="button"
+                pButton
+                pRipple
+                [pRowToggler]="row"
+                class="expand-btn"
+                [label]="expanded ? '−' : '+'">
+              </button>
+            </td>
+            <td>{{i + 1}}</td>
+            <td>{{row.code}}</td>
+            <td class="p-text-right">{{row.title}}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="rowexpansion" let-row>
+          <tr>
+            <td colspan="4">
+              <div class="p-p-3 app-nested-level-2">
+                <p-table [value]="row.rows" dataKey="code">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th style="width:70px"></th>
+                      <th class="p-text-right app-w-10pc">کد</th>
+                      <th class="p-text-right">عنوان</th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-row let-expanded="expanded">
+                    <tr>
+                      <td>
+                        <button
+                          type="button"
+                          pButton
+                          pRipple
+                          [pRowToggler]="row"
+                          class="expand-btn level-2"
+                          [label]="expanded ? '−' : '+'">
+                        </button>
+                      </td>
+                      <td class="p-text-right">{{row.code}}</td>
+                      <td class="p-text-right">{{row.title}}</td>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="rowexpansion" let-row>
+                    <tr>
+                      <td colspan="3">
+                        <div class="p-p-3 app-nested-level-3">
+                          <p-table [value]="row.rows" dataKey="code">
+                            <ng-template pTemplate="header">
+                              <tr>
+                                <th class="p-text-right app-w-10pc">کد</th>
+                                <th class="p-text-right">عنوان</th>
+                              </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-row>
+                              <tr>
+                                <td class="p-text-right">{{row.code}}</td>
+                                <td class="p-text-right">{{row.title}}</td>
+                              </tr>
+                            </ng-template>
+                          </p-table>
+                        </div>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </p-card>
   <div class="p-d-flex p-flex-column app-gap-2r">
     <app-account-summary-card *ngFor="let account of accounts" [account]="account" (update)="confirmDlg.visible = true"></app-account-summary-card>
   </div>
