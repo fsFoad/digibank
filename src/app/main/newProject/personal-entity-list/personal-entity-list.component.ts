@@ -24,7 +24,7 @@ export class PersonalEntityListComponent implements OnInit {
   }
 
   loadList(): void {
-    this.datasetService.load('personal-entities').then(data => this.fsList = data);
+    this.datasetService.load('personal-entities').then(data => this.fsList = data.slice());
   }
 
   onClose(event: any) {

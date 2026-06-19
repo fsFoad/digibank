@@ -31,7 +31,7 @@
     </p-card>
   </div>
   <div [appViewMode]="viewMode">
-    <app-update-organizational-entity-manager *ngIf="detailsFlag" [inputParam]="fsList"
+    <app-update-organizational-entity-manager *ngIf="detailsFlag" [inputParam]="selectedRow"
                          (close)="onClose($event)"></app-update-organizational-entity-manager>
   </div>
 </p-panel>

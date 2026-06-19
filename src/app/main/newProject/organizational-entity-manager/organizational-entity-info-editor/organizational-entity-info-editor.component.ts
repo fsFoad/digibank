@@ -38,6 +38,9 @@ export class OrganizationalEntityInfoEditorComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (!this.inputIdentity) {
+      return;
+    }
     this.form.controls['nationalCode'].patchValue(this.inputIdentity.nationalCode)
     this.form.controls['availableRoles'].patchValue(this.inputIdentity.organizationalRole)
     this.form.controls['organizationalCode'].patchValue(this.inputIdentity.personalCode)
