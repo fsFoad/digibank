@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Constants} from '../../../shared/constants/Constants';
 
 @Component({
   selector: 'app-organizational-entity-documents-editor',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./organizational-entity-documents-editor.component.scss']
 })
 export class OrganizationalEntityDocumentsEditorComponent implements OnInit {
+  documentType=Constants.documentType;
 
   constructor() { }
 
