@@ -19,6 +19,13 @@ export class YourRialAccountsComponent implements OnInit {
       this.level1Loading = false;
     }, 1000);
   }
+  accountDialogVisible = false;
+  selectedAccount: any;
+
+  showAccount(account: any): void {
+    this.selectedAccount = account;
+    this.accountDialogVisible = true;
+  }
   confirm(): void {
 
   }
@@ -28,6 +35,7 @@ function createSampleL1Rows(): L1Row[] {
     ['11', 'حساب های بانک ملت'],
     ['12', 'حساب های بانک ملی'],
     ['21', 'حساب های بانک سامان'],
+    ['22', 'حساب های بانک پاسارگاد'],
   ].map(bank => ({
     code: bank[0],
     title: bank[1],
@@ -38,18 +46,8 @@ function createSampleL1Rows(): L1Row[] {
         title: 'حساب های درآمدی',
 
         rows: [
-          {
-            code: `${bank[0]}0101`,
-            title: 'کارمزد خدمات بانکی'
-          },
-          {
-            code: `${bank[0]}0102`,
-            title: 'درآمد تسهیلات'
-          },
-          {
-            code: `${bank[0]}0103`,
-            title: 'درآمد صدور ضمانت نامه'
-          }
+          Constants.acSummaries[0],
+          Constants.acSummaries[1]
         ]
       },
 
@@ -58,26 +56,26 @@ function createSampleL1Rows(): L1Row[] {
         title: 'حساب های هزینه ای',
 
         rows: [
-          {
-            code: `${bank[0]}0201`,
-            title: 'هزینه حقوق و دستمزد'
-          },
-          {
-            code: `${bank[0]}0202`,
-            title: 'هزینه اجاره شعب'
-          },
-          {
-            code: `${bank[0]}0203`,
-            title: 'هزینه نگهداری سامانه ها'
-          }
+          Constants.acSummaries[2],
+          Constants.acSummaries[3]
         ]
       }
     ]
   }));
+
 }
 
 
 interface L1Row {
   code: string;
   title: string;
+}
+interface AccountRow {
+  title: string;
+  accountNumber: string;
+  balance: number;
+  blockedAmount: number;
+  dateOfLastTurnover: number;
+  openingBranch: string;
+  openingDate: number;
 }
