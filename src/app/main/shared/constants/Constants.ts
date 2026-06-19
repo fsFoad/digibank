@@ -73,7 +73,7 @@ export class Constants {
     'میدان آرژانتین',
     'میرداماد',
   ];
-  static operationType=[
+  static operationType = [
     {value: ' ', label: '-'},
     {value: 'واریز', label: 'واریز'},
     {value: 'برداشت', label: 'برداشت'},
@@ -81,20 +81,26 @@ export class Constants {
     {value: 'پرداخت قبوض', label: 'پرداخت قبوض'},
     {value: 'ساتنا', label: 'ساتنا'},
     {value: 'پایا', label: 'پایا'},
-  ]
-  static documentType=[
+  ];
+  static banklist = [
+    {value: '0', label: 'ملی'},
+    {value: '1', label: 'ملت'},
+    {value: '2', label: 'پاسارگاد'},
+    {value: '3', label: 'سامان'}
+  ];
+  static documentType = [
     {value: '0', label: 'کارت ملی'},
     {value: '1', label: 'شناسنامه'},
     {value: '2', label: 'گذرنامه'},
     {value: '3', label: 'مدرک تحصیلی'}
-  ]
-  static priority=[
+  ];
+  static priority = [
     {value: ' ', label: '-'},
     {value: 'بالا', label: 'بالا'},
     {value: 'پایین', label: 'پایین'},
     {value: 'معمولی', label: 'معمولی'},
 
-  ]
+  ];
 
   static acItems = [
     {value: '000', label: '-'},
