@@ -154,6 +154,7 @@ import { UpdateOrganizationalEntityManagerComponent } from './update-organizatio
 import { OrganizationalEntityListComponent } from './organizational-entity-list/organizational-entity-list.component';
 import { CreateRegistrationInfoComponent } from './board-of-directors-editor/create-registration-info/create-registration-info.component';
 import { IdentificationTransactionComponent } from './identification-transaction/identification-transaction.component';
+import { ActivityFieldComponent } from './person-editor/activity-field/activity-field.component';
 
 @NgModule({
   providers: [
@@ -277,6 +278,7 @@ import { IdentificationTransactionComponent } from './identification-transaction
     OrganizationalEntityListComponent,
     CreateRegistrationInfoComponent,
     IdentificationTransactionComponent,
+    ActivityFieldComponent,
   ],
   imports: [
     CommonModule,

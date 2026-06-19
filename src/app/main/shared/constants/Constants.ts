@@ -82,6 +82,12 @@ export class Constants {
     {value: 'ساتنا', label: 'ساتنا'},
     {value: 'پایا', label: 'پایا'},
   ]
+  static documentType=[
+    {value: '0', label: 'کارت ملی'},
+    {value: '1', label: 'شناسنامه'},
+    {value: '2', label: 'گذرنامه'},
+    {value: '3', label: 'مدرک تحصیلی'}
+  ]
   static priority=[
     {value: ' ', label: '-'},
     {value: 'بالا', label: 'بالا'},
@@ -216,6 +222,13 @@ export class Constants {
     {value: '2', label: '2-مشتری'},
     {value: '3', label: '3-نمایندگی کارگزاری'},
     {value: '4', label: '4-تامین کننده'},
+  ];
+  static activityFieldOptions = [
+    {value: '1', label: 'تولید'},
+    {value: '2', label: 'فروش/خرده فروشی'},
+    {value: '3', label: 'حمل و نقل'},
+    {value: '4', label: 'فنآوری اطلاعات'},
+    {value: '5', label: 'آموزش'},
   ];
   static codeHoze = [
     {value: '0', label: '-'},
