@@ -20,11 +20,18 @@ export class PersonalEntityListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    debugger
     this.loadList();
   }
 
   loadList(): void {
-    this.datasetService.load('personal-entities').then(data => this.fsList = data.slice());
+    debugger
+    this.datasetService.load('personal-entities').then(data =>{
+      debugger
+      this.fsList = data.slice()
+      this.fsList=[...this.fsList]
+      debugger
+    } );
   }
 
   onClose(event: any) {

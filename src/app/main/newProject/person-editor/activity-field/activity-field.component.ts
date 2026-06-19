@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Constants} from '../../../shared/constants/Constants';
 
 @Component({
@@ -8,10 +8,11 @@ import {Constants} from '../../../shared/constants/Constants';
 })
 export class ActivityFieldComponent implements OnInit {
 
-  availableField=Constants.activityFieldOptions;
-  selectedField = [
-  ];
-  constructor() { }
+  availableField = Constants.activityFieldOptions;
+  selectedField = [];
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
