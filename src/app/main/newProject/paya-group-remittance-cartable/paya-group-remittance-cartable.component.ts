@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-paya-group-remittance-cartable',
   templateUrl: './paya-group-remittance-cartable.component.html',
@@ -84,4 +85,7 @@ function createSampleRows(): GroupPayaRow[] {
       registrationDate: 1400_06_31,
     },
   ]
+
+
 }
+

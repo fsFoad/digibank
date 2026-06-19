@@ -8,8 +8,8 @@ import {Constants} from '../../shared/constants/Constants';
 })
 export class BillComponent implements OnInit {
     upOrDownloadFlag=false;
-  acItems = Constants.acItems;
-  bankNameList = Constants.bankNameList;
+    acItems = Constants.acItems;
+    bankNameList = Constants.bankNameList;
     organList: { label: string, value: number }[] = [];
     representationList: { label: string, value: number }[] = [];
     operationList: { label: string, value: number }[] = [];

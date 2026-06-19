@@ -75,6 +75,7 @@ export class Bill2Component implements OnInit {
   }
 
   ngOnInit(): void {
+
   }
 
 }

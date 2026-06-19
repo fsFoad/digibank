@@ -55,7 +55,7 @@
         <tr>
           <td>{{i + 1}}</td>
           <td>{{service.recipientRemittance}}</td>
-          <td >{{service.ibonRecipient}}</td>
+          <td>{{service.ibonRecipient}}</td>
           <td>{{service.bank}}</td>
           <td>{{service.depositorID}}</td>
           <td>{{service.amount|addCommaSeparator}}</td>
@@ -90,14 +90,15 @@
           <td>{{service.verificationStatus}}</td>
           <td>{{service.history|castToDate}}</td>
           <td>{{service.des}}</td>
-       </tr>
+        </tr>
       </ng-template>
     </p-table>
   </p-card>
   <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
     <button id="btnConfirmation" class="p-button-info" pButton label="تایید" (click)="confirm()"></button>&nbsp;
-    <button id="btnCancel" class="p-button-info" pButton label="عدم تایید" (click)="onClose()" ></button>&nbsp;
-    <button id="btnBack" class="p-button-info" pButton label="انصراف"  (click)="onClose()" ></button>&nbsp;
+    <button id="btnCancel" class="p-button-info" pButton label="عدم تایید" (click)="onClose()"></button>&nbsp;
+    <button id="btnBack" class="p-button-info" pButton label="انصراف" (click)="onClose()"></button>&nbsp;
   </div>
 </p-card>
-<p-confirmDialog header="مشترک گرامی به اطلاع می رساند:" acceptLabel="تایید" [rejectVisible]="false" [closable]="false"></p-confirmDialog>
+<p-confirmDialog header="مشترک گرامی به اطلاع می رساند:" acceptLabel="تایید" [rejectVisible]="false"
+                 [closable]="false"></p-confirmDialog>
