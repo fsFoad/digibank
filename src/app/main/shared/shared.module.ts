@@ -20,47 +20,47 @@ import {AddCaracterPipe} from "./pipes/add-caracter.pipe";
 
 
 @NgModule({
-  declarations: [
-    MainAccountPipe,
-    PurchaseTypePipe,
-    ChargeTypePipe,
-    SegmentTypePipe,
-    StatusPipe,
-    TimePipe,
-    CastToDatePipe,
-    ParameterTitlePipe,
-    statusReportOrganizationPipe,
-    AddCommaDirective,
-    NumberOnlyDirective,
-    ViewModeDirective,
-    AddCommaPipe,
-    RialCurrencyPipe,
-    RestrictionTypePipe,
-    AddCaracterPipe
-  ],
-  exports: [
-    MainAccountPipe,
-    PurchaseTypePipe,
-    ChargeTypePipe,
-    SegmentTypePipe,
-    StatusPipe,
-    TimePipe,
-    CastToDatePipe,
-    ParameterTitlePipe,
-    AddCaracterPipe,
-    statusReportOrganizationPipe,
-    AddCommaDirective,
-    NumberOnlyDirective,
-    ViewModeDirective,
-    AddCommaPipe,
-    RialCurrencyPipe,
-    RestrictionTypePipe,
-    CustomComponentsModule
-  ],
-  imports: [
-    CommonModule,
-    CustomComponentsModule
-  ]
+    declarations: [
+        MainAccountPipe,
+        PurchaseTypePipe,
+        ChargeTypePipe,
+        SegmentTypePipe,
+        StatusPipe,
+        TimePipe,
+        CastToDatePipe,
+        ParameterTitlePipe,
+        statusReportOrganizationPipe,
+        AddCommaDirective,
+        NumberOnlyDirective,
+        ViewModeDirective,
+        AddCommaPipe,
+        RialCurrencyPipe,
+        RestrictionTypePipe,
+        AddCaracterPipe
+    ],
+    exports: [
+        MainAccountPipe,
+        PurchaseTypePipe,
+        ChargeTypePipe,
+        SegmentTypePipe,
+        StatusPipe,
+        TimePipe,
+        CastToDatePipe,
+        ParameterTitlePipe,
+        AddCaracterPipe,
+        statusReportOrganizationPipe,
+        AddCommaDirective,
+        NumberOnlyDirective,
+        ViewModeDirective,
+        AddCommaPipe,
+        RialCurrencyPipe,
+        RestrictionTypePipe,
+        CustomComponentsModule
+    ],
+    imports: [
+        CommonModule,
+        CustomComponentsModule
+    ]
 })
 
 export class SharedModule {

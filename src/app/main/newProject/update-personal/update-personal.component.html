@@ -1,26 +1,26 @@
-<p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
-  <p-tabPanel header="اطلاعات هویتی" [disabled]="true">
-    <app-update-person-identity-info-editor [inputIdentity]="inputParam"></app-update-person-identity-info-editor>
-  </p-tabPanel>
-  <p-tabPanel header="امضاء" [disabled]="true"  >
-    <app-update-party-signature-editor ></app-update-party-signature-editor>
-  </p-tabPanel>
-  <p-tabPanel header="نقش سازمانی"  [disabled]="true" >
-    <app-update-organizational-role-editor></app-update-organizational-role-editor>
-  </p-tabPanel>
-  <p-tabPanel header="اطلاعات تماس"  [disabled]="true" >
-    <app-update-organizational-contact-info-editor [inputIdentity]="inputParam"></app-update-organizational-contact-info-editor>
-  </p-tabPanel>
-  <p-tabPanel header="اطلاعات تکمیلی"  [disabled]="true" >
-    <app-update-person-supplementary-info-editor  [inputIdentity]="inputParam"></app-update-person-supplementary-info-editor>
-  </p-tabPanel>
-  <p-tabPanel header=" زمینه فعالیت" [disabled]="true"  >
-    زمینه فعالیت
-  </p-tabPanel>
-  <p-tabPanel header="مستندات" [disabled]="true"  >
-    <app-update-organizational-entity-documents-editor></app-update-organizational-entity-documents-editor>
-  </p-tabPanel>
-</p-tabView>
+  <p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
+    <p-tabPanel header="اطلاعات هویتی" [disabled]="true">
+      <app-update-person-identity-info-editor [inputIdentity]="inputParam"></app-update-person-identity-info-editor>
+    </p-tabPanel>
+    <p-tabPanel header="امضاء" [disabled]="true"  >
+      <app-update-party-signature-editor ></app-update-party-signature-editor>
+    </p-tabPanel>
+    <p-tabPanel header="نقش سازمانی"  [disabled]="true" >
+      <app-update-organizational-role-editor></app-update-organizational-role-editor>
+    </p-tabPanel>
+    <p-tabPanel header="اطلاعات تماس"  [disabled]="true" >
+      <app-update-organizational-contact-info-editor [inputIdentity]="inputParam"></app-update-organizational-contact-info-editor>
+    </p-tabPanel>
+    <p-tabPanel header="اطلاعات تکمیلی"  [disabled]="true" >
+      <app-update-person-supplementary-info-editor  [inputIdentity]="inputParam"></app-update-person-supplementary-info-editor>
+    </p-tabPanel>
+    <p-tabPanel header=" زمینه فعالیت" [disabled]="true"  >
+      زمینه فعالیت
+    </p-tabPanel>
+    <p-tabPanel header="مستندات" [disabled]="true"  >
+      <app-update-organizational-entity-documents-editor></app-update-organizational-entity-documents-editor>
+    </p-tabPanel>
+  </p-tabView>
 
 <div class="bottom-buttons  p-shadow-3 section view-mode-keep">
   <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
