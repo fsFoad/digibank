@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-update-organizational-entity-manager',
@@ -8,9 +9,13 @@ import {Component, Input, OnInit} from '@angular/core';
 export class UpdateOrganizationalEntityManagerComponent implements OnInit {
   @Input() inputParam
   activeTab = 0;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 
   nextTab(): void {

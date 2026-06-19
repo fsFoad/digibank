@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 export class PersonalEntityListComponent implements OnInit {
 
   detailsFlag = false;
+  viewMode = false;
   person;
 
   fsList: {
@@ -218,11 +219,13 @@ export class PersonalEntityListComponent implements OnInit {
   onClose(event: any) {
     if (event === 'close') {
       this.detailsFlag = false;
+      this.viewMode = false;
     }
   }
 
-  selectRow(servise): void {
+  selectRow(servise, mode: 'edit' | 'view' = 'edit'): void {
     this.fsList = servise;
+    this.viewMode = mode === 'view';
     this.detailsFlag = true;
   }
 }

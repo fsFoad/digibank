@@ -1,4 +1,4 @@
-<p-panel header="اصلاح ذینفع شخصی">
+<p-panel [header]="viewMode ? 'نمایش ذینفع شخصی' : 'اصلاح ذینفع شخصی'">
   <div class="app-mx-5r" *ngIf="!detailsFlag">
     <p-card>
       <p-table [value]="fsList">
@@ -22,13 +22,16 @@
             <td>{{row.customerType}}</td>
             <td>{{row.relationshipType}}</td>
             <td>
-              <button pButton icon="pi pi-chevron-circle-right" (click)="selectRow(row)"></button>&nbsp;
+              <button pButton icon="pi pi-eye" title="نمایش" class="p-button-secondary" (click)="selectRow(row, 'view')"></button>&nbsp;
+              <button pButton icon="pi pi-chevron-circle-right" title="ویرایش" (click)="selectRow(row, 'edit')"></button>&nbsp;
             </td>
           </tr>
         </ng-template>
       </p-table>
     </p-card>
   </div>
-  <app-update-personal *ngIf="detailsFlag" [inputParam]="fsList"
-                       (close)="onClose($event)"></app-update-personal>
+  <div [appViewMode]="viewMode">
+    <app-update-personal *ngIf="detailsFlag" [inputParam]="fsList"
+                         (close)="onClose($event)"></app-update-personal>
+  </div>
 </p-panel>

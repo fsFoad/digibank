@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-person-editor',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonEditorComponent implements OnInit {
   activeTab = 0;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 
   nextTab(): void {

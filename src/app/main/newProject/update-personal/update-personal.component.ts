@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-update-personal',
@@ -8,10 +9,14 @@ import {Component, Input, OnInit} from '@angular/core';
 export class UpdatePersonalComponent implements OnInit {
   @Input() inputParam
   activeTab = 0;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     console.log(this.inputParam)
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 
   nextTab(): void {

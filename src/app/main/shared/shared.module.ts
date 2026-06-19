@@ -11,6 +11,7 @@ import {ParameterTitlePipe} from "./pipes/param-title-pipe";
 import {statusReportOrganizationPipe} from './pipes/status-report-organization.pipe';
 import {AddCommaDirective} from './directives/add-comma.directive';
 import {NumberOnlyDirective} from './directives/number-only.directive';
+import {ViewModeDirective} from './directives/view-mode.directive';
 import {AddCommaPipe} from './pipes/add-comma.pipe';
 import {RialCurrencyPipe} from './pipes/rial-currency.pipe';
 import {CustomComponentsModule} from "../../../walletlibs/custom-components.module";
@@ -19,45 +20,47 @@ import {AddCaracterPipe} from "./pipes/add-caracter.pipe";
 
 
 @NgModule({
-    declarations: [
-        MainAccountPipe,
-        PurchaseTypePipe,
-        ChargeTypePipe,
-        SegmentTypePipe,
-        StatusPipe,
-        TimePipe,
-        CastToDatePipe,
-        ParameterTitlePipe,
-        statusReportOrganizationPipe,
-        AddCommaDirective,
-        NumberOnlyDirective,
-        AddCommaPipe,
-        RialCurrencyPipe,
-        RestrictionTypePipe,
-        AddCaracterPipe
-    ],
-    exports: [
-        MainAccountPipe,
-        PurchaseTypePipe,
-        ChargeTypePipe,
-        SegmentTypePipe,
-        StatusPipe,
-        TimePipe,
-        CastToDatePipe,
-        ParameterTitlePipe,
-        AddCaracterPipe,
-        statusReportOrganizationPipe,
-        AddCommaDirective,
-        NumberOnlyDirective,
-        AddCommaPipe,
-        RialCurrencyPipe,
-        RestrictionTypePipe,
-        CustomComponentsModule
-    ],
-    imports: [
-        CommonModule,
-        CustomComponentsModule
-    ]
+  declarations: [
+    MainAccountPipe,
+    PurchaseTypePipe,
+    ChargeTypePipe,
+    SegmentTypePipe,
+    StatusPipe,
+    TimePipe,
+    CastToDatePipe,
+    ParameterTitlePipe,
+    statusReportOrganizationPipe,
+    AddCommaDirective,
+    NumberOnlyDirective,
+    ViewModeDirective,
+    AddCommaPipe,
+    RialCurrencyPipe,
+    RestrictionTypePipe,
+    AddCaracterPipe
+  ],
+  exports: [
+    MainAccountPipe,
+    PurchaseTypePipe,
+    ChargeTypePipe,
+    SegmentTypePipe,
+    StatusPipe,
+    TimePipe,
+    CastToDatePipe,
+    ParameterTitlePipe,
+    AddCaracterPipe,
+    statusReportOrganizationPipe,
+    AddCommaDirective,
+    NumberOnlyDirective,
+    ViewModeDirective,
+    AddCommaPipe,
+    RialCurrencyPipe,
+    RestrictionTypePipe,
+    CustomComponentsModule
+  ],
+  imports: [
+    CommonModule,
+    CustomComponentsModule
+  ]
 })
 
 export class SharedModule {

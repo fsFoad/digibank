@@ -26,5 +26,6 @@
   <div class="bottom-buttons  p-shadow-3 section">
     <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
     <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="activeTab >= 6"></button>
+    <button pButton label="ثبت" class="p-button-danger" (click)="goHome()" [hidden]="activeTab < 6"></button>
   </div>
 </p-panel>
