@@ -31,7 +31,7 @@
     </p-card>
   </div>
   <div [appViewMode]="viewMode">
-    <app-update-personal *ngIf="detailsFlag" [inputParam]="fsList"
+    <app-update-personal *ngIf="detailsFlag" [inputParam]="selectedRow"
                          (close)="onClose($event)"></app-update-personal>
   </div>
 </p-panel>
