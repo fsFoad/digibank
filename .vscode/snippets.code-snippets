@@ -1,0 +1,105 @@
+{
+    // Place your DigiBankUI workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+    // Placeholders with the same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"scope": "javascript,typescript",
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "PrimeNG fluid form grid": {
+        "scope": "html",
+        "prefix": "primeng-fluid-form-grid",
+        "body": [
+            "<div class=\"p-fluid p-formgrid p-grid\">",
+            "\t$0",
+            "</div>",
+        ]
+    },
+    "PrimeNG float label input": {
+        "scope": "html",
+        "prefix": "primeng-float-label-input",
+        "body": [
+            "<div class=\"p-field p-col$0\">",
+            "\t<span class=\"p-float-label\">",
+            "\t\t<input pInputText>",
+            "\t\t<label>$1</label>",
+            "\t</span>",
+            "</div>",
+        ]
+    },
+    "PrimeNG float label drop down": {
+        "scope": "html",
+        "prefix": "primeng-float-label-drop-down",
+        "body": [
+            "<div class=\"p-field p-col$0\">",
+            "\t<span class=\"p-float-label\">",
+            "\t\t<p-dropdown></p-dropdown>",
+            "\t\t<label>$1</label>",
+            "\t</span>",
+            "</div>",
+        ]
+    },
+    "PrimeNG static label input": {
+        "scope": "html",
+        "prefix": "primeng-static-label-input",
+        "body": [
+            "<div class=\"p-field p-col$0\">",
+            "\t<input pInputText placeholder=\"$1\">",
+            "</div>",
+        ]
+    },
+    "PrimeNG static label drop down": {
+        "scope": "html",
+        "prefix": "primeng-static-label-drop-down",
+        "body": [
+            "<div class=\"p-field p-col$0\">",
+            "\t<p-dropdown placeholder=\"$1\"></p-dropdown>",
+            "</div>",
+        ]
+    },
+    "PrimeNG page panel": {
+        "scope": "html",
+        "prefix": "primeng-page-panel",
+        "body": [
+            "<p-panel header=\"$1\">",
+            "\t<div class=\"app-mx-5r\">",
+            "\t\t<div class=\"p-fluid p-formgrid p-grid app-col-px-2r\">",
+            "\t\t\t$0" ,
+            "\t\t</div>",
+            "\t</div>",
+            "</p-panel>"
+        ]
+    },
+    "Persian Calendar": {
+        "scope": "html",
+        "prefix": "persian-calendar",
+        "body": [
+            "<p-persian-calendar placeholder=\"$0تاریخ\" yearRange=\"1300:1410\" class=\"app-persian-calendar-style\"></p-persian-calendar>"
+        ]
+    },
+    "Rial Input": {
+        "scope": "html",
+        "prefix": "rial-input",
+        "body": [
+            "<p-inputNumber mode=\"decimal\" [useGrouping]=\"true\" suffix=\" ریال\" [minFractionDigits]=\"0\" placeholder=\"مبلغ$0\"></p-inputNumber>"
+        ]
+    },
+    "Button Bar": {
+        "scope": "html",
+        "prefix": "button-bar",
+        "body": [
+            "<div class=\"p-d-flex p-jc-center app-child-px-6r app-gap-1r\">",
+            "\t<button pButton label=\"تائید$0\"></button>",
+            "</div>",
+        ]
+    },
+}

@@ -16,7 +16,8 @@
 *.launch
 .settings/
 *.sublime-workspace
-
+*.zip
+*.rar
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json

@@ -1,6 +1,6 @@
   <p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
     <p-tabPanel header="اطلاعات هویتی" [disabled]="true">
-      <app-update-person-identity-info-editor [inputIdentity]="inputParam"></app-update-person-identity-info-editor>
+      <app-update-person-identity-info-editor #identity [inputIdentity]="inputParam"></app-update-person-identity-info-editor>
     </p-tabPanel>
     <p-tabPanel header="امضاء" [disabled]="true"  >
       <app-update-party-signature-editor ></app-update-party-signature-editor>
@@ -9,10 +9,10 @@
       <app-update-organizational-role-editor></app-update-organizational-role-editor>
     </p-tabPanel>
     <p-tabPanel header="اطلاعات تماس"  [disabled]="true" >
-      <app-update-organizational-contact-info-editor [inputIdentity]="inputParam"></app-update-organizational-contact-info-editor>
+      <app-update-organizational-contact-info-editor #contact [inputIdentity]="inputParam"></app-update-organizational-contact-info-editor>
     </p-tabPanel>
     <p-tabPanel header="اطلاعات تکمیلی"  [disabled]="true" >
-      <app-update-person-supplementary-info-editor  [inputIdentity]="inputParam"></app-update-person-supplementary-info-editor>
+      <app-update-person-supplementary-info-editor #supp [inputIdentity]="inputParam"></app-update-person-supplementary-info-editor>
     </p-tabPanel>
     <p-tabPanel header=" زمینه فعالیت" [disabled]="true"  >
       زمینه فعالیت
@@ -23,6 +23,8 @@
   </p-tabView>
 
   <div class="bottom-buttons  p-shadow-3 section">
-    <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
-    <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="activeTab >= 6"></button>
+    <button pButton label="مرحله قبل" class="p-button-info view-mode-keep" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
+    <button pButton label="ادامه" class="p-button-info view-mode-keep" (click)="nextTab()" [hidden]="activeTab >= 6"></button>
+    <button pButton label="ثبت تغییرات" class="p-button-success" (click)="save()"></button>
+    <button pButton label="خروج" class="p-button-danger view-mode-keep" (click)="goHome()" [hidden]="activeTab < 6"></button>
   </div>

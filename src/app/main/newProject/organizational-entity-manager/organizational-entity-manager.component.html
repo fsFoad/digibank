@@ -1,7 +1,7 @@
 <p-panel header="ذینفع سازمانی"> 
   <p-tabView class="tab-view  p-shadow-3 section" [(activeIndex)]="activeTab">
     <p-tabPanel header="اطلاعات سازمانی" [disabled]="true" >
-      <app-organizational-entity-info-editor></app-organizational-entity-info-editor>
+      <app-organizational-entity-info-editor #info></app-organizational-entity-info-editor>
     </p-tabPanel>
     <p-tabPanel header="اطلاعات هیئت مدیره و سهامداران" [disabled]="true" >
       <app-board-of-directors-editor></app-board-of-directors-editor>
@@ -23,5 +23,7 @@
   <div class="bottom-buttons  p-shadow-3 section">
     <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
     <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="activeTab >= 5"></button>
+    <button pButton label="ثبت" class="p-button-success" (click)="save()"></button>
+    <button pButton label="خروج" class="p-button-danger" (click)="goHome()" [hidden]="activeTab < 5"></button>
   </div>
 </p-panel>

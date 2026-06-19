@@ -11,6 +11,7 @@ import {ParameterTitlePipe} from "./pipes/param-title-pipe";
 import {statusReportOrganizationPipe} from './pipes/status-report-organization.pipe';
 import {AddCommaDirective} from './directives/add-comma.directive';
 import {NumberOnlyDirective} from './directives/number-only.directive';
+import {ViewModeDirective} from './directives/view-mode.directive';
 import {AddCommaPipe} from './pipes/add-comma.pipe';
 import {RialCurrencyPipe} from './pipes/rial-currency.pipe';
 import {CustomComponentsModule} from "../../../walletlibs/custom-components.module";
@@ -31,6 +32,7 @@ import {AddCaracterPipe} from "./pipes/add-caracter.pipe";
         statusReportOrganizationPipe,
         AddCommaDirective,
         NumberOnlyDirective,
+        ViewModeDirective,
         AddCommaPipe,
         RialCurrencyPipe,
         RestrictionTypePipe,
@@ -49,6 +51,7 @@ import {AddCaracterPipe} from "./pipes/add-caracter.pipe";
         statusReportOrganizationPipe,
         AddCommaDirective,
         NumberOnlyDirective,
+        ViewModeDirective,
         AddCommaPipe,
         RialCurrencyPipe,
         RestrictionTypePipe,
