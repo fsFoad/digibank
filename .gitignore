@@ -4,8 +4,7 @@
 /dist
 /tmp
 /out-tsc
-*.zip
-*.rar
+
 # dependencies
 /node_modules
 
@@ -17,7 +16,8 @@
 *.launch
 .settings/
 *.sublime-workspace
-
+*.zip
+*.rar
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
