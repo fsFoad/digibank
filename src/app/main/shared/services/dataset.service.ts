@@ -20,25 +20,8 @@ export class DatasetService {
 
   /** دیتاست را برمی‌گرداند: اول از localStorage، اگر نبود از فایل JSON. */
   load(name: string): Promise<any[]> {
-    if (this.cache[name]) {
-      return Promise.resolve(this.cache[name]);
-    }
-    const stored = localStorage.getItem(this.storagePrefix + name);
-    if (stored) {
-      this.cache[name] = JSON.parse(stored);
-      return Promise.resolve(this.cache[name]);
-    }
     return this.http.get<any[]>(`assets/data/${name}.json`).toPromise()
-      .then(data => {
-        this.cache[name] = Array.isArray(data) ? data : [];
-        this.persist(name);
-        return this.cache[name];
-      })
-      .catch(() => {
-        // اگر فایل وجود نداشت، با دیتاست خالی شروع می‌کنیم.
-        this.cache[name] = [];
-        return this.cache[name];
-      });
+      .then(data => Array.isArray(data) ? data : []);
   }
 
   /** نسخه‌ی درون‌حافظه‌ای (بعد از load). */
