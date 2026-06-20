@@ -1,0 +1,52 @@
+<p-panel header="ویرایش ذینفع سازمانی">
+  <!-- لیست -->
+  <div class="oe-wrap" *ngIf="!editing">
+    <div class="oe-toolbar">
+      <span class="oe-heading">فهرست ذینفعان سازمانی</span>
+      <span class="oe-count">{{ entities.length }} مورد</span>
+    </div>
+
+    <p-table #dt [value]="entities" class="oe-table"
+             [globalFilterFields]="['customerName','contactNumber','relationshipType']">
+      <ng-template pTemplate="caption">
+        <span class="oe-search p-input-icon-right">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" placeholder="جستجو…"
+                 (input)="dt.filterGlobal($any($event.target).value, 'contains')">
+        </span>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th class="oe-th-index">ردیف</th>
+          <th>نام ذینفع</th>
+          <th>شماره تماس</th>
+          <th>نوع رابطه</th>
+          <th class="oe-th-actions">عملیات</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-row let-i="rowIndex">
+        <tr>
+          <td class="oe-index">{{ i + 1 }}</td>
+          <td class="oe-name">{{ row.customerName }}</td>
+          <td class="oe-mono">{{ row.contactNumber }}</td>
+          <td><span class="oe-badge">{{ row.relationshipType }}</span></td>
+          <td>
+            <button pButton icon="pi pi-pencil" title="ویرایش"
+                    class="oe-btn p-button-rounded p-button-text" (click)="edit(row)"></button>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="5">
+            <div class="oe-empty"><i class="pi pi-inbox"></i><span>ذینفعی برای نمایش وجود ندارد</span></div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <!-- ویرایشِ inline -->
+  <app-organizational-entity-form *ngIf="editing" [mode]="editMode" [entity]="selected"
+                                  (done)="onDone()"></app-organizational-entity-form>
+</p-panel>

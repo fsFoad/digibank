@@ -1,0 +1,61 @@
+:host {
+  display: block;
+  width: 100%;
+  --oe-accent: #0077B3;
+  --oe-accent-soft: rgba(0, 119, 179, 0.10);
+  --oe-text: #2d323e;
+  --oe-muted: #7d818c;
+  --oe-border: #e7e9ee;
+  --oe-surface-2: #f7f8fa;
+}
+
+.oe-toolbar {
+  display: flex; align-items: center; gap: 0.6rem;
+  margin-bottom: 1rem; padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--oe-border);
+}
+.oe-heading { font-weight: 700; color: var(--oe-text); font-size: 1.05rem; }
+.oe-count {
+  font-size: 0.78rem; font-weight: 600;
+  color: var(--oe-accent); background: var(--oe-accent-soft);
+  padding: 0.18rem 0.6rem; border-radius: 999px;
+}
+.oe-search input {
+  border-radius: 10px; border: 1px solid var(--oe-border); padding: 0.5rem 0.9rem;
+}
+.oe-search input:focus { border-color: var(--oe-accent); box-shadow: 0 0 0 3px var(--oe-accent-soft); outline: none; }
+
+:host ::ng-deep .oe-table .p-datatable-thead > tr > th {
+  background: var(--oe-surface-2); color: var(--oe-text); font-weight: 700;
+  border: none; border-bottom: 2px solid var(--oe-accent); padding: 0.85rem 0.9rem;
+}
+:host ::ng-deep .oe-table .p-datatable-tbody > tr > td {
+  border: none; border-bottom: 1px solid #eef0f3; padding: 0.7rem 0.9rem;
+}
+:host ::ng-deep .oe-table .p-datatable-tbody > tr:hover { background: var(--oe-accent-soft); }
+
+.oe-th-index { width: 64px; text-align: center; }
+.oe-th-actions { width: 100px; text-align: center; }
+.oe-index { text-align: center; color: var(--oe-muted); font-weight: 600; }
+.oe-name { font-weight: 600; color: var(--oe-text); }
+.oe-mono { font-variant-numeric: tabular-nums; letter-spacing: 0.3px; }
+.oe-badge {
+  display: inline-block; font-size: 0.76rem; font-weight: 600;
+  padding: 0.2rem 0.7rem; border-radius: 999px;
+  background: var(--oe-accent-soft); color: var(--oe-accent);
+}
+:host ::ng-deep .oe-btn.p-button { color: var(--oe-accent); }
+:host ::ng-deep .oe-btn.p-button:hover { background: var(--oe-accent-soft); }
+
+.oe-empty {
+  display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
+  padding: 2.5rem 1rem; color: var(--oe-muted);
+}
+.oe-empty i { font-size: 2.2rem; opacity: 0.5; }
+
+:host ::ng-deep .p-panel > .p-panel-header {
+  background: var(--oe-accent); border: none;
+}
+:host ::ng-deep .p-panel > .p-panel-header,
+:host ::ng-deep .p-panel > .p-panel-header .p-panel-title,
+:host ::ng-deep .p-panel > .p-panel-header span { color: #fff; font-weight: 700; }

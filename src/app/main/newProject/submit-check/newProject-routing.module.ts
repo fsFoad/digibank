@@ -36,8 +36,6 @@ import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
 import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
 import { OrganizationalEntityFormComponent } from './organizational-entity/containers/organizational-entity-form/organizational-entity-form.component';
 import { OrganizationalEntityManageComponent } from './organizational-entity/containers/organizational-entity-manage/organizational-entity-manage.component';
-import { PersonalEntityFormComponent } from './personal-entity/containers/personal-entity-form/personal-entity-form.component';
-import { PersonalEntityManageComponent } from './personal-entity/containers/personal-entity-manage/personal-entity-manage.component';
 import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { CardBoardComponent } from './card-board/card-board.component';
 import { CardBoardPayaComponent } from './card-board-paya/card-board-paya.component';
@@ -237,15 +235,6 @@ const routes: Routes = [
       {
         path: 'organizational-entity-edit',
         component: OrganizationalEntityManageComponent,
-      },
-      {
-        path: 'personal-entity-add',
-        component: PersonalEntityFormComponent,
-        data: { mode: 'create' },
-      },
-      {
-        path: 'personal-entity-edit',
-        component: PersonalEntityManageComponent,
       },
       {
         path: 'person-editor',

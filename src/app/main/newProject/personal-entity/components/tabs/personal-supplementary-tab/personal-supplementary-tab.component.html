@@ -1,0 +1,122 @@
+<div [formGroup]="form">
+  <p-card header="اطلاعات تحصیلی" class="p-d-block p-my-5">
+    <div class="app-mx-10r">
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" [options]="eduMaghta" formControlName="eduMaghta"></p-dropdown>
+            <label>مقطع تحصیلی</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown [options]="eduReshte" formControlName="eduReshte" [autoDisplayFirst]="false"></p-dropdown>
+            <label>رشته تحصیلی</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown [options]="eduGraesh" formControlName="eduGraesh" [autoDisplayFirst]="false"></p-dropdown>
+            <label>گرایش تحصیلی</label>
+          </span>
+        </div>
+      </div>
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown [options]="countryList" formControlName="eduCountry" [autoDisplayFirst]="false"></p-dropdown>
+            <label>کشور محل تحصیل</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <input formControlName="eduMoaseseType" pInputText>
+            <label>نوع موسسه آموزشی</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <input formControlName="eduMoaseseName" pInputText>
+            <label>نام موسسه آموزشی</label>
+          </span>
+        </div>
+      </div>
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-persian-calendar formControlName="startDate" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تاریخ شروع</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-persian-calendar formControlName="endDate" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+            <label>تاریخ پایان</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown [options]="cityList" formControlName="eduCity"></p-dropdown>
+            <label>شهر محل تحصیل</label>
+          </span>
+        </div>
+      </div>
+    </div>
+  </p-card>
+
+  <p-card header="اطلاعات استخدامی" class="p-d-block p-my-5">
+    <div class="app-mx-10r">
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown [options]="recruitmentType" formControlName="recruitmentType" [autoDisplayFirst]="false"></p-dropdown>
+            <label>نوع استخدام</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown [options]="vahed" formControlName="vahed" [autoDisplayFirst]="false"></p-dropdown>
+            <label>واحد سازمانی در حال خدمت</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-dropdown formControlName="post" [options]="post" [autoDisplayFirst]="false"></p-dropdown>
+            <label>پست سازمانی</label>
+          </span>
+        </div>
+      </div>
+    </div>
+  </p-card>
+
+  <p-card header="اطلاعات تکمیلی" class="p-d-block p-my-5">
+    <div class="app-mx-10r">
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r p-jc-between">
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <input formControlName="sahmie" pInputText>
+            <label>نوع سهمیه</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-inputNumber formControlName="tedadFamily"></p-inputNumber>
+            <label>تعداد افراد خانواده</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-inputNumber formControlName="tedadChild"></p-inputNumber>
+            <label>تعداد فرزندان</label>
+          </span>
+        </div>
+        <div class="p-field p-col-12 p-md-3">
+          <span class="p-float-label">
+            <p-inputNumber formControlName="tedadKefalat"></p-inputNumber>
+            <label>تعداد افراد تحت تکفل</label>
+          </span>
+        </div>
+      </div>
+    </div>
+  </p-card>
+</div>

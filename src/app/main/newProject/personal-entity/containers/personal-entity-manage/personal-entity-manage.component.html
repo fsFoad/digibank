@@ -1,0 +1,56 @@
+<p-panel header="ویرایش ذینفع شخصی">
+  <!-- لیست -->
+  <div class="pe-wrap" *ngIf="!editing">
+    <div class="pe-toolbar">
+      <span class="pe-heading">فهرست ذینفعان شخصی</span>
+      <span class="pe-count">{{ entities.length }} مورد</span>
+    </div>
+
+    <p-table #dt [value]="entities" class="pe-table"
+             [globalFilterFields]="['customerName','contactNumber','relationshipType']">
+      <ng-template pTemplate="caption">
+        <span class="pe-search p-input-icon-right">
+          <i class="pi pi-search"></i>
+          <input pInputText type="text" placeholder="جستجو…"
+                 (input)="dt.filterGlobal($any($event.target).value, 'contains')">
+        </span>
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th class="pe-th-index">ردیف</th>
+          <th>نام ذینفع</th>
+          <th>تاریخ تعریف</th>
+          <th>شماره تماس</th>
+          <th>نوع ذینفع</th>
+          <th>نوع رابطه</th>
+          <th class="pe-th-actions">عملیات</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-row let-i="rowIndex">
+        <tr>
+          <td class="pe-index">{{ i + 1 }}</td>
+          <td class="pe-name">{{ row.customerName }}</td>
+          <td class="pe-muted">{{ row.registrationDate | castToDate }}</td>
+          <td class="pe-mono">{{ row.contactNumber }}</td>
+          <td><span class="pe-badge">{{ row.customerType }}</span></td>
+          <td><span class="pe-badge pe-badge--alt">{{ row.relationshipType }}</span></td>
+          <td>
+            <button pButton icon="pi pi-pencil" title="ویرایش"
+                    class="pe-btn p-button-rounded p-button-text" (click)="edit(row)"></button>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="7">
+            <div class="pe-empty"><i class="pi pi-inbox"></i><span>ذینفعی برای نمایش وجود ندارد</span></div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <!-- ویرایشِ inline -->
+  <app-personal-entity-form *ngIf="editing" [mode]="editMode" [entity]="selected"
+                            (done)="onDone()"></app-personal-entity-form>
+</p-panel>

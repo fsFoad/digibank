@@ -1,0 +1,50 @@
+<div class="app-mx-5r" [formGroup]="form">
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-col p-d-flex p-flex-column">
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col-6">
+          <span class="p-float-label">
+            <p-dropdown [autoDisplayFirst]="false" [options]="documentType" formControlName="documentType"></p-dropdown>
+            <label>نوع سند</label>
+          </span>
+        </div>
+      </div>
+
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col-6">
+          <span class="p-float-label"><input formControlName="metadata1" pInputText><label>متا دیتا ۱ سند</label></span>
+          <small>متن کمکی</small>
+        </div>
+        <div class="p-field p-col-6">
+          <span class="p-float-label"><input formControlName="metadata2" pInputText><label>متا دیتا ۲ سند</label></span>
+        </div>
+      </div>
+
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col-6">
+          <span class="p-float-label"><input formControlName="readFromFile" pInputText><label>خواندن از پرونده</label></span>
+        </div>
+      </div>
+
+      <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+        <div class="p-field p-col">
+          <span class="p-float-label"><input formControlName="footer" pInputText><label>پاورقی</label></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-col p-d-flex p-flex-column">
+      <div class="p-d-flex p-jc-center p-ai-center">
+        <div style="width: 200px; height: 200px; background: #eceef1; border: 1px solid #d4d8de; border-radius: 8px; display:flex; align-items:center; justify-content:center; color:#7d818c;">
+          تصویر
+        </div>
+      </div>
+      <div class="app-button-bar p-jc-center p-mt-2">
+        <button pButton label="خواندن از پرونده"></button>
+        <button pButton label="اسکن تصویر"></button>
+        <button pButton label="تصویر بعدی"></button>
+        <button pButton label="تصویر قبلی"></button>
+      </div>
+    </div>
+  </div>
+</div>

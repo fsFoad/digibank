@@ -1,0 +1,193 @@
+<div class="app-mx-5r" [formGroup]="form">
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input formControlName="nationalCode" pInputText (keyup.enter)="onNationalCodeEnterKey()">
+        <label>کد ملی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input formControlName="personeliCode" pInputText>
+        <label>کد پرسنلی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [options]="genderTypes" [autoDisplayFirst]="false" formControlName="genderId"></p-dropdown>
+        <label>جنسیت</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown class="p-dropdown-w100" formControlName="bankId" [autoDisplayFirst]="false" [options]="bankName"></p-dropdown>
+        <label>بانک</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="firstName" pInputText>
+        <label>نام</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="lastName" pInputText>
+        <label>نام خانوادگی</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="fatherName" pInputText>
+        <label>نام پدر</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" formControlName="shenasnameNumber" [useGrouping]="false"></p-inputNumber>
+        <label>شماره شناسنامه</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar yearRange="1300:1410" class="app-persian-calendar-style" formControlName="shenasnameIssueDate"></p-persian-calendar>
+        <label>تاریخ صدور شناسنامه</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input pInputText formControlName="shenasnameSeriesLetter">
+        <label style="font-size: 80%">حرف سری شناسنامه</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" formControlName="shenasnameSeriesNumber" [useGrouping]="false"></p-inputNumber>
+        <label>عدد سری شناسنامه</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" formControlName="shenasnameSerial" [useGrouping]="false"></p-inputNumber>
+        <label>سریال شناسنامه</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-inputNumber mode="decimal" formControlName="cartMelliSerial" [useGrouping]="false"></p-inputNumber>
+        <label>سریال کارت ملی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameTypeId" [options]="shenasnameType"></p-dropdown>
+        <label>نوع شناسنامه</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="shenasnameIssueCityId"></p-dropdown>
+        <label>شهر محل صدور شناسنامه</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" formControlName="shenasnameHozeCodeId" [options]="codeHoze"></p-dropdown>
+        <label>کد حوزه شناسنامه</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar formControlName="birthDate" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ تولد</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-calendar formControlName="birthDateGregorian"></p-calendar>
+        <label>تاریخ تولد به میلادی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="cityList" formControlName="birthCityId"></p-dropdown>
+        <label>شهر محل تولد</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="countryList" formControlName="birthCountryId"></p-dropdown>
+        <label>کشور محل تولد</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="religion" formControlName="religionId"></p-dropdown>
+        <label>دین</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="sect" formControlName="faithId"></p-dropdown>
+        <label>مذهب</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" [options]="residenceTypes" formControlName="eghamatStatusId"></p-dropdown>
+        <label>وضعیت اقامت</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="firstNameLatin" pInputText>
+        <label>نام انگلیسی</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="lastNameLatin" pInputText>
+        <label>نام خانوادگی انگلیسی</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="enFatherName" pInputText>
+        <label>نام پدر انگلیسی</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="contactNumber" pInputText>
+        <label>شماره تماس</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="relationshipType" pInputText>
+        <label>نوع رابطه</label>
+      </span>
+    </div>
+  </div>
+</div>

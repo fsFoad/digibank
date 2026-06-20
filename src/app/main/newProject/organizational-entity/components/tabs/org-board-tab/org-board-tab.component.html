@@ -1,0 +1,115 @@
+<!-- لیست اعضا -->
+<div *ngIf="!showForm">
+  <div class="p-mb-3">
+    <button pButton label="ایجاد اطلاعات ثبتی +" class="p-button-info" (click)="openForm()"></button>
+  </div>
+
+  <p-card header="اطلاعات ثبتی">
+    <p-table [value]="members">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>عنوان</th>
+          <th translate>نوع سمت</th>
+          <th translate>کد ملی</th>
+          <th translate>حدود اختیارات</th>
+          <th translate>کد ارجاع ذینفع شخصی</th>
+          <th translate>تاریخ شروع</th>
+          <th translate>تاریخ پایان</th>
+          <th translate>عملیات</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-row>
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ row.title }}</td>
+          <td>{{ row.postType | paramTitle : postOrganization : 'value' : 'label' }}</td>
+          <td>{{ row.nationalCode }}</td>
+          <td>{{ row.LimitsAuthority }}</td>
+          <td>{{ row.erjaCodeZinaf }}</td>
+          <td>{{ row.startDate | castToDate }}</td>
+          <td>{{ row.endDate | castToDate }}</td>
+          <td>
+            <p-button styleClass="p-button-danger" icon="pi pi-trash" title="حذف" (click)="remove(row)"></p-button>
+          </td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr><td colspan="9" class="p-text-center p-py-4">موردی ثبت نشده است</td></tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</div>
+
+<!-- فرم افزودن (inline، عیناً مطابق create-registration-info قدیمی) -->
+<div *ngIf="showForm" [formGroup]="form" class="app-mx-5r">
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input pInputText formControlName="erjaCode">
+        <label>کد ارجاع مشتری</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input pInputText formControlName="nationalCode">
+        <label>شناسه ملی</label>
+      </span>
+    </div>
+    <div class="p-field p-col-6">
+      <span class="p-float-label">
+        <input required pInputText formControlName="title">
+        <label>عنوان</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText formControlName="erjaCodeZinaf">
+        <label>کد ارجاع ذینفع شخصی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText formControlName="nationalCodeAtba">
+        <label>کد ملی / کد اتباع / شناسه ملی</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" formControlName="postType" [options]="postOrganization"></p-dropdown>
+        <label>نوع سمت</label>
+      </span>
+    </div>
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <input pInputText formControlName="LimitsAuthority">
+        <label>حدود اختیارات</label>
+      </span>
+    </div>
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar formControlName="startDate" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ شروع</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <p-persian-calendar formControlName="endDate" yearRange="1300:1410" class="app-persian-calendar-style"></p-persian-calendar>
+        <label>تاریخ پایان</label>
+      </span>
+    </div>
+    <div class="p-field p-col-3"></div>
+    <div class="p-field p-col-3"></div>
+  </div>
+
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
+    <button label="تایید" pButton (click)="confirm()"></button>
+    <button label="انصراف" pButton (click)="cancel()"></button>
+  </div>
+</div>

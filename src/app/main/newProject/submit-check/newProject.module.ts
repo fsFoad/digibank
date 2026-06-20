@@ -10,15 +10,6 @@ import { OrgSignatureTabComponent } from './organizational-entity/components/tab
 import { OrgRoleTabComponent } from './organizational-entity/components/tabs/org-role-tab/org-role-tab.component';
 import { OrgContactTabComponent } from './organizational-entity/components/tabs/org-contact-tab/org-contact-tab.component';
 import { OrgDocumentsTabComponent } from './organizational-entity/components/tabs/org-documents-tab/org-documents-tab.component';
-import { PersonalIdentityFormComponent } from './personal-entity/components/personal-identity-form/personal-identity-form.component';
-import { PersonalEntityFormComponent } from './personal-entity/containers/personal-entity-form/personal-entity-form.component';
-import { PersonalEntityManageComponent } from './personal-entity/containers/personal-entity-manage/personal-entity-manage.component';
-import { PersonalSignatureTabComponent } from './personal-entity/components/tabs/personal-signature-tab/personal-signature-tab.component';
-import { PersonalRoleTabComponent } from './personal-entity/components/tabs/personal-role-tab/personal-role-tab.component';
-import { PersonalContactTabComponent } from './personal-entity/components/tabs/personal-contact-tab/personal-contact-tab.component';
-import { PersonalSupplementaryTabComponent } from './personal-entity/components/tabs/personal-supplementary-tab/personal-supplementary-tab.component';
-import { PersonalActivityFieldTabComponent } from './personal-entity/components/tabs/personal-activity-field-tab/personal-activity-field-tab.component';
-import { PersonalDocumentsTabComponent } from './personal-entity/components/tabs/personal-documents-tab/personal-documents-tab.component';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { CardModule } from 'primeng/card';
@@ -192,15 +183,6 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
     OrgRoleTabComponent,
     OrgContactTabComponent,
     OrgDocumentsTabComponent,
-    PersonalIdentityFormComponent,
-    PersonalEntityFormComponent,
-    PersonalEntityManageComponent,
-    PersonalSignatureTabComponent,
-    PersonalRoleTabComponent,
-    PersonalContactTabComponent,
-    PersonalSupplementaryTabComponent,
-    PersonalActivityFieldTabComponent,
-    PersonalDocumentsTabComponent,
     ReportBankTransferComponent,
     PayaTakTransferComponent,
     SantaRegisterTransferComponent,

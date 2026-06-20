@@ -1,0 +1,141 @@
+<!-- لیست تماس‌ها و نشانی‌ها -->
+<div *ngIf="panel === 'list'">
+  <div>
+    <button pButton label="ایجاد اطلاعات تماس +" class="p-button-info" (click)="openContact()"></button>
+  </div>
+  <p-card header="اطلاعات تماس" class="p-d-flex p-my-5">
+    <p-table [value]="contacts">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>گروه نوع تماس</th>
+          <th translate>نوع تماس</th>
+          <th translate>شماره تماس</th>
+          <th translate>پیش فرض</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-row>
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ row.contactTypeGroups | paramTitle : contactTypeGroups : 'value' : 'label' }}</td>
+          <td>{{ row.discContact }}</td>
+          <td>{{ row.discContact }}</td>
+          <td><p-inputSwitch></p-inputSwitch></td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr><td colspan="5" class="p-text-center p-py-4">موردی ثبت نشده است</td></tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+
+  <div>
+    <button pButton label="ایجاد اطلاعات نشانی +" class="p-button-info" (click)="openAddress()"></button>
+  </div>
+  <p-card header="اطلاعات نشانی" class="p-d-flex p-my-5">
+    <p-table [value]="addresses">
+      <ng-template pTemplate="header">
+        <tr>
+          <th translate>ردیف</th>
+          <th translate>نوع نشانی</th>
+          <th translate>استان</th>
+          <th translate>شهر</th>
+          <th translate>منطقه</th>
+          <th translate style="width:35%;">شرح نشانی</th>
+          <th translate>کد پستی</th>
+        </tr>
+      </ng-template>
+      <ng-template let-i="rowIndex" pTemplate="body" let-row>
+        <tr>
+          <td>{{ i + 1 }}</td>
+          <td>{{ row.contactTypes | paramTitle : contactTypes : 'value' : 'label' }}</td>
+          <td>{{ row.province | paramTitle : provinceList : 'value' : 'label' }}</td>
+          <td>{{ row.city | paramTitle : cityList : 'value' : 'label' }}</td>
+          <td>{{ row.mantaghe | paramTitle : mantaghe : 'value' : 'label' }}</td>
+          <td>{{ row.desAddress }}</td>
+          <td>{{ row.postalCode }}</td>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="emptymessage">
+        <tr><td colspan="7" class="p-text-center p-py-4">موردی ثبت نشده است</td></tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+</div>
+
+<!-- فرم افزودن تماس -->
+<p-card *ngIf="panel === 'contact'" header="ایجاد اطلاعات تماس" [formGroup]="contactForm">
+  <div class="p-fluid p-formgrid p-grid p-jc-center app-mx-20r">
+    <div class="p-field p-col-4">
+      <span class="p-float-label">
+        <p-dropdown formControlName="contactTypeGroups" [options]="contactTypeGroups" [autoDisplayFirst]="false"></p-dropdown>
+        <label>گروه نوع تماس</label>
+      </span>
+    </div>
+    <div class="p-field p-col-6">
+      <span class="p-float-label">
+        <input class="input-w-100" formControlName="discContact" pInputText>
+        <label>شرح تماس</label>
+      </span>
+    </div>
+  </div>
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
+    <button label="تایید" pButton (click)="confirmContact()"></button>
+    <button label="انصراف" pButton (click)="back()"></button>
+  </div>
+</p-card>
+
+<!-- فرم افزودن نشانی -->
+<p-card *ngIf="panel === 'address'" header="ایجاد اطلاعات نشانی" [formGroup]="addressForm">
+  <div class="app-mx-20r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [options]="contactTypes" formControlName="contactTypes" [autoDisplayFirst]="false"></p-dropdown>
+          <label>نوع نشانی</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [options]="provinceList" formControlName="province" [autoDisplayFirst]="false"></p-dropdown>
+          <label>استان</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [options]="cityList" formControlName="city" [autoDisplayFirst]="false"></p-dropdown>
+          <label>شهر</label>
+        </span>
+      </div>
+    </div>
+
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown class="p-dropdown-w100" formControlName="mantaghe" [autoDisplayFirst]="false" [options]="mantaghe"></p-dropdown>
+          <label>منطقه</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <input formControlName="postalCode" pInputText>
+          <label>کدپستی</label>
+        </span>
+      </div>
+      <div class="p-field p-col"></div>
+    </div>
+
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <textarea rows="2" cols="50" formControlName="desAddress" pInputTextarea></textarea>
+          <label>شرح نشانی</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
+    <button label="تایید" pButton (click)="confirmAddress()"></button>
+    <button label="انصراف" pButton (click)="back()"></button>
+  </div>
+</p-card>

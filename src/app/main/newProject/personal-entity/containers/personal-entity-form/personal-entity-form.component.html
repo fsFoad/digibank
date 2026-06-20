@@ -1,0 +1,32 @@
+<p-panel [header]="title">
+  <p-tabView class="tab-view p-shadow-3 section" [(activeIndex)]="activeTab">
+    <p-tabPanel header="اطلاعات هویتی" [disabled]="true">
+      <app-personal-identity-form [form]="form"></app-personal-identity-form>
+    </p-tabPanel>
+    <p-tabPanel header="امضاء" [disabled]="true">
+      <app-personal-signature-tab></app-personal-signature-tab>
+    </p-tabPanel>
+    <p-tabPanel header="نقش سازمانی" [disabled]="true">
+      <app-personal-role-tab></app-personal-role-tab>
+    </p-tabPanel>
+    <p-tabPanel header="اطلاعات تماس" [disabled]="true">
+      <app-personal-contact-tab [entity]="entity"></app-personal-contact-tab>
+    </p-tabPanel>
+    <p-tabPanel header="اطلاعات تکمیلی" [disabled]="true">
+      <app-personal-supplementary-tab></app-personal-supplementary-tab>
+    </p-tabPanel>
+    <p-tabPanel header="زمینه فعالیت" [disabled]="true">
+      <app-personal-activity-field-tab></app-personal-activity-field-tab>
+    </p-tabPanel>
+    <p-tabPanel header="مستندات" [disabled]="true">
+      <app-personal-documents-tab></app-personal-documents-tab>
+    </p-tabPanel>
+  </p-tabView>
+
+  <div class="bottom-buttons p-shadow-3 section">
+    <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
+    <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="isLastTab"></button>
+    <button pButton [label]="isEdit ? 'ثبت تغییرات' : 'ثبت'" class="p-button-success" (click)="save()" [hidden]="!isLastTab"></button>
+    <button pButton label="خروج" class="p-button-danger" (click)="exit()"></button>
+  </div>
+</p-panel>

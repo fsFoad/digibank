@@ -96,6 +96,22 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 icon: 'account_balance_wallet',
                 routerLink: '/personalEntityList',
               },
+              {
+                id: 'personalEntityAdd',
+                label: 'افزودن ذی نفع شخصی',
+                translate: 'افزودن ذی نفع شخصی',
+                type: 'item',
+                icon: 'account_balance_wallet',
+                routerLink: '/personal-entity-add',
+              },
+              {
+                id: 'personalEntityEdit',
+                label: 'ویرایش ذینفع شخصی',
+                translate: 'ویرایش ذینفع شخصی',
+                type: 'item',
+                icon: 'account_balance_wallet',
+                routerLink: '/personal-entity-edit',
+              },
             ]
           }, {
             id: 'issuepersonalwallet2',
@@ -119,6 +135,22 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/organizationalEntityList',
+              },
+              {
+                id: 'organizationalEntityAdd',
+                label: 'افزودن ذی نفع',
+                translate: 'افزودن ذی نفع',
+                type: 'item',
+                icon: 'account_balance_wallet',
+                routerLink: '/organizational-entity-add',
+              },
+              {
+                id: 'organizationalEntityEdit',
+                label: 'ویرایش ذینفع',
+                translate: 'ویرایش ذینفع',
+                type: 'item',
+                icon: 'account_balance_wallet',
+                routerLink: '/organizational-entity-edit',
               },
             ]
           },
