@@ -14,11 +14,7 @@ export class InternetRemittanceReportComponent implements OnInit {
   //   { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
   //   { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
   // ]
-  statusItems = [
-    { value: '1', label: 'وضعیت یک' },
-    { value: '2', label: 'وضعیت دو' },
-    { value: '3', label: 'وضعیت سه' },
-  ]
+  statusItems = Constants.internetRemittanceReport_statusItems
   createReportFile = false;
   format: 'html' | 'csv' | 'pdf' = 'html';
   constructor() { }

@@ -1,0 +1,70 @@
+{
+  "walletInfo": {
+    "targetName": "حسن مرادی",
+    "targetProductCode": 1400,
+    "targetProductTitle": "کیف پول مشتریان رسالت",
+    "accountId": 47,
+    "accountNo": "0015968471190",
+    "createDate": 13991213,
+    "nationalCode": "0015968471",
+    "firstName": "حسن",
+    "lastName": "مرادی",
+    "walletType": 1
+  },
+  "segmentTypeInfoDtoList": [
+    {
+      "segmentTypeId": 1,
+      "segmentTypeName": "جیب عمومی رسالت",
+      "accountNo": "0056765738191",
+      "accountId": 39
+    },
+    {
+      "segmentTypeId": 2,
+      "segmentTypeName": "جیب فرهنگی رسالت ",
+      "accountNo": "0056765738192",
+      "accountId": 40
+    },
+    {
+      "segmentTypeId": 3,
+      "segmentTypeName": "جیب ورزشی رسالت",
+      "accountNo": "0056765738193",
+      "accountId": 41
+    },
+    {
+      "segmentTypeId": 4,
+      "segmentTypeName": "جیب سلامت رسالت",
+      "accountNo": "0056765738194",
+      "accountId": 42
+    },
+    {
+      "segmentTypeId": 5,
+      "segmentTypeName": "جیب ارزاق رسالت",
+      "accountNo": "0056765738195",
+      "accountId": 43
+    },
+    {
+      "segmentTypeId": 6,
+      "segmentTypeName": "جیب پوشاک رسالت",
+      "accountNo": "0056765738196",
+      "accountId": 44
+    },
+    {
+      "segmentTypeId": 15,
+      "segmentTypeName": "جیب پوشاک وزارت بهداشت",
+      "accountNo": "00567657381915",
+      "accountId": 45
+    },
+    {
+      "segmentTypeId": 22,
+      "segmentTypeName": "جیب سازمانی رسالت",
+      "accountNo": "00567657381922",
+      "accountId": 46
+    },
+    {
+      "segmentTypeId": 0,
+      "segmentTypeName": "جیب اصلی",
+      "accountNo": "0056765738190",
+      "accountId": 47
+    }
+  ]
+}

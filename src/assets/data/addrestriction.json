@@ -1,0 +1,11 @@
+{
+  "restrictionId": 41,
+  "productId": 0,
+  "serviceId": 0,
+  "hostId": 1,
+  "restrictionType": 0,
+  "minAmount": 1000,
+  "maxAmount": 5000,
+  "description": "تست",
+  "status": 1
+}

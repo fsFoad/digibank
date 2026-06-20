@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Constants } from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-create-yekta',
@@ -6,24 +7,14 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./create-yekta.component.scss']
 })
 export class CreateYektaComponent implements OnInit {
-    listDrop: { label: string, value: number }[] = [];
-    listDrop2: { label: string, value: number }[] = [];
+    listDrop: { label: string, value: number }[] = Constants.createYekta_listDrop;
+    listDrop2: { label: string, value: number }[] = Constants.createYekta_listDrop2;
 
     constructor() {
     }
 
     ngOnInit(): void {
-        this.listDrop = [
-            {label: 'با تاریخ انقضا ', value: 1},
-            {label: 'حساس به مبلغ', value: 2},
-            {label: 'حساس به حساب', value: 3},
-
-        ];
-        this.listDrop2 = [
-            {label: 'الگوریتم نوع اول ', value: 1},
-            {label: 'الگوریتم نوع دوم', value: 2},
-            {label: 'الگوریتم نوع سوم', value: 3},
-
-        ];
+        this.listDrop = Constants.createYekta_listDrop_x;
+        this.listDrop2 = Constants.createYekta_listDrop2_x;
     }
 }

@@ -1,0 +1,50 @@
+[
+  {
+    "enable": true,
+    "restrictionId": 24,
+    "productId": 1100,
+    "serviceId": 1100,
+    "hostId": 1,
+    "restrictionType": 0,
+    "minAmount": 0,
+    "maxAmount": 4999,
+    "description": "شارژ کیف پول شخصی سطح 1 ، حداقل باید مبلغ 5000 ریال باشد",
+    "status": 2
+  },
+  {
+    "enable": true,
+    "restrictionId": 25,
+    "productId": 1100,
+    "serviceId": 1000,
+    "hostId": 2,
+    "restrictionType": 0,
+    "minAmount": 1000,
+    "maxAmount": 2000000,
+    "description": "خرید توسط کیف پول شخصی سطح 1، از 1000 تا 2000000 ریال مجاز می باشد",
+    "status": 1
+  },
+  {
+    "enable": true,
+    "restrictionId": 22,
+    "productId": 1300,
+    "serviceId": 1100,
+    "hostId": 1,
+    "restrictionType": 0,
+    "minAmount": 5000,
+    "maxAmount": 2000000,
+    "description": "شارژ کیف پول شخصی سطح 1، بین 5000 تا 2000000 ریال مجاز می باشد",
+    "status": 1
+  },
+  {
+    "enable": true,
+    "restrictionId": 23,
+    "productId": 1100,
+    "serviceId": 1000,
+    "hostId": 1,
+    "restrictionType": 1,
+    "minAmount": 0,
+    "maxAmount": 999,
+    "description": "خرید توسط کیف پول شخصی سطح 1 ، باید بیش از مبلغ 999 ریال باشد",
+    "status": 1
+  }
+]

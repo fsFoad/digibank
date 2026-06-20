@@ -1,0 +1,46 @@
+[
+  {
+    "enable": true,
+    "limitId": 2,
+    "productId": 1100,
+    "serviceId": 1000,
+    "hostId": 2,
+    "maxAmount": 2000000,
+    "minAmount": 1,
+    "status": 1,
+    "description": "سقف خرید کیف پول شخصی سطح 1، 2 میلیون ریال می باشد"
+  },
+  {
+    "enable": true,
+    "limitId": 3,
+    "productId": 1100,
+    "serviceId": 1100,
+    "hostId": 1,
+    "maxAmount": 2000000,
+    "minAmount": 1,
+    "status": 1,
+    "description": "سقف شارژ کیف پول شخصی سطح 1، 2 میلیون ریال می باشد"
+  },
+  {
+    "enable": true,
+    "limitId": 4,
+    "productId": 1200,
+    "serviceId": 1100,
+    "hostId": 1,
+    "maxAmount": 5000000,
+    "minAmount": 1,
+    "status": 1,
+    "description": "سقف شارژ کیف پول شخصی سطح 2، 5 میلیون ریال می باشد"
+  },
+  {
+    "enable": true,
+    "limitId": 1,
+    "productId": 1200,
+    "serviceId": 1000,
+    "hostId": 2,
+    "maxAmount": 5000000,
+    "minAmount": 1,
+    "status": 1,
+    "description": "سقف خرید کیف پول شخصی سطح 2، 5 میلیون ریال می باشد"
+  }
+]

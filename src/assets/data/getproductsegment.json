@@ -1,0 +1,66 @@
+[
+  {
+    "productId": 1400,
+    "segmentTypeId": 22,
+    "priority": 2,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب سازمانی رسالت"
+  },
+  {
+    "productId": 1400,
+    "segmentTypeId": 1,
+    "priority": 1,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب عمومی رسالت"
+  },
+  {
+    "productId": 1400,
+    "segmentTypeId": 4,
+    "priority": 2,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب سلامت رسالت"
+  },
+  {
+    "productId": 1400,
+    "segmentTypeId": 3,
+    "priority": 2,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب ورزشی رسالت"
+  },
+  {
+    "productId": 1400,
+    "segmentTypeId": 6,
+    "priority": 3,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب پوشاک رسالت"
+  },
+  {
+    "productId": 1400,
+    "segmentTypeId": 5,
+    "priority": 0,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب ارزاق رسالت"
+  },
+  {
+    "productId": 1400,
+    "segmentTypeId": 2,
+    "priority": 0,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب فرهنگی رسالت "
+  },
+  {
+    "productId": 1400,
+    "segmentTypeId": 15,
+    "priority": 0,
+    "status": 1,
+    "productName": "کیف پول مشتریان رسالت",
+    "segmentTypeName": "جیب پوشاک وزارت بهداشت"
+  }
+]

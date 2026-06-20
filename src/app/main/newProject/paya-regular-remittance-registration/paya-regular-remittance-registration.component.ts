@@ -23,11 +23,7 @@ export class PayaRegularRemittanceRegistrationComponent implements OnInit {
   //   { value: '2', label: 'بابت دو' },
   //   { value: '3', label: 'بابت سه' },
   // ]
-  periodItems = [
-    { value: '1', label: 'دوره یک' },
-    { value: '2', label: 'دوره دو' },
-    { value: '3', label: 'دوره سه' },
-  ]
+  periodItems = Constants.payaRegularRemittanceRegistration_periodItems
   constructor(private confirmationService: ConfirmationService) { }
 
   ngOnInit(): void {

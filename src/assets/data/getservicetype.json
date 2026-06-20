@@ -1,0 +1,44 @@
+[
+  {
+    "serviceId": 1600,
+    "name": "سرویس تسویه حساب",
+    "nameEn": "Settlement",
+    "status": 1
+  },
+  {
+    "serviceId": 1000,
+    "name": "سرویس خرید",
+    "nameEn": "PurchaseCredit",
+    "status": 1
+  },
+  {
+    "serviceId": 1100,
+    "name": "سرویس شارژ کیف پول",
+    "nameEn": "ChargeWallet",
+    "status": 1
+  },
+  {
+    "serviceId": 1200,
+    "name": "سرویس دشارژ کیف پول",
+    "nameEn": "DechargeWallet",
+    "status": 1
+  },
+  {
+    "serviceId": 1300,
+    "name": "سرویس مانده کیف پول",
+    "nameEn": "GetBalance",
+    "status": 1
+  },
+  {
+    "serviceId": 1400,
+    "name": "سرویس صدور کیف پول",
+    "nameEn": "IssueWallet",
+    "status": 1
+  },
+  {
+    "serviceId": 1500,
+    "name": "سرویس صورتحساب کیف پول",
+    "nameEn": "BillingWallet",
+    "status": 1
+  }
+]

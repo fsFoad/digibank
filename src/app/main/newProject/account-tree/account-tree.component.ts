@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MenuItem, TreeNode } from 'primeng/api';
 import { Subject } from 'rxjs';
+import { Constants } from '../../shared/constants/Constants';
 
 interface AccData {
   level: 1 | 2 | 3;
@@ -28,9 +29,7 @@ export class AccountTreeComponent implements OnInit {
   form: FormGroup;
   selectedNode: TreeNode<AccData>;
   ngDestroy$ = new Subject<void>();
-  contextMenuItems: MenuItem[] = [
-    { label: 'افزودن', icon: 'pi pi-plus', command: (e) => this.addNode(e) }
-  ];
+  contextMenuItems: MenuItem[] = Constants.accountTree_contextMenuItems;
   constructor(private fb: FormBuilder) {
     this.form = fb.group({
       level: [0],

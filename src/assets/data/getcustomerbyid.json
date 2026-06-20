@@ -1,0 +1,20 @@
+{
+  "iuserid": "admin",
+  "uuserid": "admin",
+  "enable": true,
+  "customerId": 38,
+  "customerType": 1,
+  "citizenshipType": 1,
+  "gender": 0,
+  "birthDate": 14000204,
+  "residence": 0,
+  "residenceType": 0,
+  "nationalCode": "0056703600",
+  "firstName": "سینا",
+  "lastName": "سینا",
+  "fatherName": "سینا",
+  "mobileNo": "09175365042",
+  "isCardHolder": 0,
+  "isMerchant": 0,
+  "createDate": 0
+}

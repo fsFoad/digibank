@@ -1,0 +1,1679 @@
+{
+  "branchNames": [
+    "تجریش",
+    "بازار",
+    "دولت",
+    "گاندی",
+    "شوش",
+    "نلسون ماندلا",
+    "سعدی",
+    "سئول",
+    "صادقیه",
+    "توحید",
+    "میدان آرژانتین",
+    "میرداماد"
+  ],
+  "operationType": [
+    {
+      "value": " ",
+      "label": "-"
+    },
+    {
+      "value": "واریز",
+      "label": "واریز"
+    },
+    {
+      "value": "برداشت",
+      "label": "برداشت"
+    },
+    {
+      "value": "پرداخت اقساط",
+      "label": "پرداخت اقساط"
+    },
+    {
+      "value": "پرداخت قبوض",
+      "label": "پرداخت قبوض"
+    },
+    {
+      "value": "ساتنا",
+      "label": "ساتنا"
+    },
+    {
+      "value": "پایا",
+      "label": "پایا"
+    }
+  ],
+  "banklist": [
+    {
+      "value": "0",
+      "label": "ملی"
+    },
+    {
+      "value": "1",
+      "label": "ملت"
+    },
+    {
+      "value": "2",
+      "label": "پاسارگاد"
+    },
+    {
+      "value": "3",
+      "label": "سامان"
+    }
+  ],
+  "documentType": [
+    {
+      "value": "0",
+      "label": "کارت ملی"
+    },
+    {
+      "value": "1",
+      "label": "شناسنامه"
+    },
+    {
+      "value": "2",
+      "label": "گذرنامه"
+    },
+    {
+      "value": "3",
+      "label": "مدرک تحصیلی"
+    }
+  ],
+  "priority": [
+    {
+      "value": " ",
+      "label": "-"
+    },
+    {
+      "value": "بالا",
+      "label": "بالا"
+    },
+    {
+      "value": "پایین",
+      "label": "پایین"
+    },
+    {
+      "value": "معمولی",
+      "label": "معمولی"
+    }
+  ],
+  "acItems": [
+    {
+      "value": "000",
+      "label": "-"
+    },
+    {
+      "value": "111",
+      "label": "حساب قرض‌الحسنه 25-1000000589-240"
+    },
+    {
+      "value": "222",
+      "label": "حساب جاری 65-1000000145-340"
+    },
+    {
+      "value": "444",
+      "label": "حساب جاری 25-1000500148-340"
+    },
+    {
+      "value": "333",
+      "label": "حساب کوتاه‌مدت 01-1006580523-440"
+    }
+  ],
+  "organizationalUnit": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "شرکت هلدینگ"
+    },
+    {
+      "value": "2",
+      "label": "شرکت تابعه ۱"
+    },
+    {
+      "value": "3",
+      "label": "شرکت تابعه ۲"
+    },
+    {
+      "value": "4",
+      "label": "شرکت تابعه ۳"
+    }
+  ],
+  "shenasnameType": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "المثنی"
+    }
+  ],
+  "signType": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "نمونه امضاء"
+    },
+    {
+      "value": "2",
+      "label": "اثر انگشت"
+    },
+    {
+      "value": "3",
+      "label": "مهر"
+    }
+  ],
+  "postOrganization": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "2",
+      "label": "مدیر عامل"
+    },
+    {
+      "value": "1",
+      "label": "رئیس هیئت مدیره"
+    },
+    {
+      "value": "3",
+      "label": "نایب رئیس هیات مدیره"
+    }
+  ],
+  "contactTypes": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "محل کار"
+    },
+    {
+      "value": "2",
+      "label": "محل سکونت"
+    }
+  ],
+  "statusZinaf": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "فعال"
+    },
+    {
+      "value": "2",
+      "label": "غیر فعال"
+    }
+  ],
+  "noMalekiat": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "خصوصی"
+    }
+  ],
+  "bankNameList": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "ملی",
+      "value": "1"
+    },
+    {
+      "label": "ملت",
+      "value": "2"
+    },
+    {
+      "label": "صادرات",
+      "value": "3"
+    },
+    {
+      "label": "پاسارگاد",
+      "value": "4"
+    },
+    {
+      "label": "تجارت",
+      "value": "5"
+    }
+  ],
+  "financialHeading": [
+    {
+      "label": "-",
+      "value": " "
+    },
+    {
+      "label": "دارایی‌های جاری",
+      "value": "دارایی‌های جاری"
+    },
+    {
+      "label": "دارایی‌های غیر جاری",
+      "value": "دارایی‌های غیر جاری"
+    },
+    {
+      "label": "بدهی‌های جاری",
+      "value": "بدهی‌های جاری"
+    },
+    {
+      "label": "بدهی‌های غیر جاری",
+      "value": "بدهی‌های غیر جاری"
+    },
+    {
+      "label": "حقوق صاحبان سهام",
+      "value": "حقوق صاحبان سهام"
+    },
+    {
+      "label": "فروش و درآمدها",
+      "value": "فروش و درآمدها"
+    },
+    {
+      "label": "بهای تمام شده کالای فروش رفته",
+      "value": "بهای تمام شده کالای فروش رفته"
+    },
+    {
+      "label": "هزینه‌های فعالیت",
+      "value": "8"
+    },
+    {
+      "label": "سایر هزینه‌ها و درآمدهای غیر عملیاتی",
+      "value": "سایر هزینه‌ها و درآمدهای غیر عملیاتی"
+    },
+    {
+      "label": "حساب‌های انتظامی",
+      "value": "حساب‌های انتظامی"
+    }
+  ],
+  "availableRoles": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "1-کارمند"
+    },
+    {
+      "value": "2",
+      "label": "2-مشتری"
+    },
+    {
+      "value": "3",
+      "label": "3-نمایندگی کارگزاری"
+    },
+    {
+      "value": "4",
+      "label": "4-تامین کننده"
+    }
+  ],
+  "availableRolespickList": [
+    {
+      "value": "1",
+      "label": "1-کارمند"
+    },
+    {
+      "value": "2",
+      "label": "2-مشتری"
+    },
+    {
+      "value": "3",
+      "label": "3-نمایندگی کارگزاری"
+    },
+    {
+      "value": "4",
+      "label": "4-تامین کننده"
+    }
+  ],
+  "activityFieldOptions": [
+    {
+      "value": "1",
+      "label": "تولید"
+    },
+    {
+      "value": "2",
+      "label": "فروش/خرده فروشی"
+    },
+    {
+      "value": "3",
+      "label": "حمل و نقل"
+    },
+    {
+      "value": "4",
+      "label": "فنآوری اطلاعات"
+    },
+    {
+      "value": "5",
+      "label": "آموزش"
+    }
+  ],
+  "codeHoze": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "142"
+    },
+    {
+      "value": "2",
+      "label": "703"
+    }
+  ],
+  "HavaleInternetiStatus": [
+    {
+      "value": "000",
+      "label": "-"
+    },
+    {
+      "value": "111",
+      "label": "ثبت اولیه"
+    },
+    {
+      "value": "222",
+      "label": "در انتظار تایید"
+    },
+    {
+      "value": "333",
+      "label": "ارسال شده به بانک"
+    },
+    {
+      "value": "444",
+      "label": "تایید نهایی"
+    },
+    {
+      "value": "555",
+      "label": "خطا دار"
+    },
+    {
+      "value": "666",
+      "label": "لغو شده"
+    }
+  ],
+  "referralType": [
+    {
+      "value": "000",
+      "label": "-"
+    },
+    {
+      "value": "111",
+      "label": "عادی"
+    },
+    {
+      "value": "222",
+      "label": "دستور پرداخت"
+    }
+  ],
+  "forItems": [
+    {
+      "value": "000",
+      "label": "-"
+    },
+    {
+      "value": "111",
+      "label": "حقوق"
+    },
+    {
+      "value": "222",
+      "label": "تسویه حساب مالی"
+    },
+    {
+      "value": "333",
+      "label": "پرداخت ویزه"
+    },
+    {
+      "value": "444",
+      "label": "سایر پرداخت ها"
+    }
+  ],
+  "licenseInfoList": [
+    {
+      "label": "-",
+      "value": null
+    },
+    {
+      "label": "جوازکسب",
+      "value": 1
+    },
+    {
+      "label": "جوازتاسیس",
+      "value": 2
+    },
+    {
+      "label": "جوازآموزشی",
+      "value": 3
+    },
+    {
+      "label": "پروانه تاسیس",
+      "value": 4
+    },
+    {
+      "label": "مجوز بسته بندی,توزیع,پخش و تولید",
+      "value": 5
+    }
+  ],
+  "customerTypes": [
+    {
+      "label": "حقیقی",
+      "value": "1"
+    },
+    {
+      "label": "حقوقی",
+      "value": "2"
+    }
+  ],
+  "citizenshipTypes": [
+    {
+      "label": "ایرانی",
+      "value": "1"
+    },
+    {
+      "label": "غیرایرانی",
+      "value": "2"
+    }
+  ],
+  "genderTypes": [
+    {
+      "label": "-",
+      "value": null
+    },
+    {
+      "label": "مرد",
+      "value": "1"
+    },
+    {
+      "label": "زن",
+      "value": "2"
+    }
+  ],
+  "contactTypeGroups": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "تلفن ثابت محل کار",
+      "value": "1"
+    },
+    {
+      "label": "تلفن ثابت محل سکونت",
+      "value": "2"
+    },
+    {
+      "label": "تلفن همراه",
+      "value": "3"
+    },
+    {
+      "label": "دورنگار",
+      "value": "4"
+    },
+    {
+      "label": "پست الکترونیک",
+      "value": "5"
+    },
+    {
+      "label": "صندوق پستی",
+      "value": "6"
+    },
+    {
+      "label": "آدرس وب سایت",
+      "value": "7"
+    },
+    {
+      "label": "آدرس شبکه اجتماعی تلگرام",
+      "value": "8"
+    },
+    {
+      "label": "آدرس شبکه اجتماعی واتس اپ",
+      "value": "9"
+    },
+    {
+      "label": "آدرس شبکه اجتماعی اینستاگرام",
+      "value": "10"
+    },
+    {
+      "label": "آدرس شبکه اجتماعی لینکدین",
+      "value": "11"
+    },
+    {
+      "label": "آدرس شبکه اجتماعی سایر",
+      "value": "12"
+    }
+  ],
+  "mantaghe": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "منطقه1",
+      "value": "1"
+    },
+    {
+      "label": "منطقه2",
+      "value": "2"
+    },
+    {
+      "label": "منطقه3",
+      "value": "3"
+    },
+    {
+      "label": "منطقه4",
+      "value": "4"
+    },
+    {
+      "label": "منطقه5",
+      "value": "5"
+    },
+    {
+      "label": "منطقه6",
+      "value": "6"
+    },
+    {
+      "label": "منطقه7",
+      "value": "7"
+    },
+    {
+      "label": "منطقه8",
+      "value": "8"
+    },
+    {
+      "label": "منطقه9",
+      "value": "9"
+    }
+  ],
+  "countryList": [
+    {
+      "label": "-",
+      "value": null
+    },
+    {
+      "label": "ایران",
+      "value": "1"
+    }
+  ],
+  "provinceList": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "تهران",
+      "value": "1",
+      "countryvalue": "1"
+    },
+    {
+      "label": "اصفهان",
+      "value": "2",
+      "countryvalue": "1"
+    },
+    {
+      "label": "فارس",
+      "value": "3",
+      "countryvalue": "1"
+    },
+    {
+      "label": "خراسان رضوی",
+      "value": "4",
+      "countryvalue": "1"
+    },
+    {
+      "label": "قم",
+      "value": "5",
+      "countryvalue": "1"
+    },
+    {
+      "label": "کرمان",
+      "value": "6",
+      "countryvalue": "1"
+    }
+  ],
+  "cityList": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "تهران",
+      "value": "1",
+      "provincevalue": "1"
+    },
+    {
+      "label": "قم",
+      "value": "2",
+      "provincevalue": "5"
+    },
+    {
+      "label": "اصفهان",
+      "value": "3",
+      "provincevalue": "2"
+    },
+    {
+      "label": "شیراز",
+      "value": "4",
+      "provincevalue": "3"
+    },
+    {
+      "label": "مشهد",
+      "value": "5",
+      "provincevalue": "4"
+    },
+    {
+      "label": "کرمان",
+      "value": "6",
+      "provincevalue": "6"
+    },
+    {
+      "label": "سیرجان",
+      "value": "7",
+      "provincevalue": "6"
+    },
+    {
+      "label": "رفسنجان",
+      "value": "8",
+      "provincevalue": "6"
+    },
+    {
+      "label": "جیرفت",
+      "value": "9",
+      "provincevalue": "6"
+    },
+    {
+      "label": "بم",
+      "value": "10",
+      "provincevalue": "6"
+    }
+  ],
+  "residenceTypes": [
+    {
+      "label": "-",
+      "value": null
+    },
+    {
+      "label": "مقیم",
+      "value": "1"
+    },
+    {
+      "label": "غیرمقیم",
+      "value": "2"
+    }
+  ],
+  "religion": [
+    {
+      "label": "-",
+      "value": null
+    },
+    {
+      "label": "اسلام",
+      "value": "1"
+    },
+    {
+      "label": "مسیح",
+      "value": "2"
+    },
+    {
+      "label": "یهود",
+      "value": "3"
+    }
+  ],
+  "nahveTasarofs": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "ملکی",
+      "value": "1"
+    },
+    {
+      "label": "استیجاری",
+      "value": "2"
+    },
+    {
+      "label": "وقفی",
+      "value": "3"
+    }
+  ],
+  "eduMaghta": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "دکتری",
+      "value": "1"
+    },
+    {
+      "label": "کارشناسی ارشد",
+      "value": "2"
+    },
+    {
+      "label": "کارشناسی",
+      "value": "3"
+    },
+    {
+      "label": "کاردانی",
+      "value": "4"
+    },
+    {
+      "label": "دیپلم",
+      "value": "5"
+    },
+    {
+      "label": "سیکل",
+      "value": "6"
+    }
+  ],
+  "eduReshte": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "کامپیوتر"
+    },
+    {
+      "value": "2",
+      "label": "مدیریت"
+    }
+  ],
+  "recruitmentType": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "دائم"
+    },
+    {
+      "value": "2",
+      "label": "آزمایشی"
+    }
+  ],
+  "vahed": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "مدیریت"
+    },
+    {
+      "value": "2",
+      "label": "فناوری"
+    }
+  ],
+  "post": [
+    {
+      "value": "0",
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "مدیر عامل"
+    },
+    {
+      "value": "2",
+      "label": "معمار سیستم"
+    }
+  ],
+  "eduGraesh": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "سخت افزار",
+      "value": "1"
+    },
+    {
+      "label": "کار آفرینی",
+      "value": "2"
+    }
+  ],
+  "eduMoaseseType": [
+    {
+      "label": "-",
+      "value": "0"
+    },
+    {
+      "label": "دولتی",
+      "value": "1"
+    },
+    {
+      "label": "آزاد",
+      "value": "2"
+    },
+    {
+      "label": "غیر انتفاعی",
+      "value": "3"
+    },
+    {
+      "label": "پیام نور",
+      "value": "4"
+    },
+    {
+      "label": "کارو دانش",
+      "value": "5"
+    }
+  ],
+  "sect": [
+    {
+      "label": "-",
+      "value": null
+    },
+    {
+      "label": "شیعه",
+      "value": "1"
+    },
+    {
+      "label": "سنی",
+      "value": "2"
+    }
+  ],
+  "howResidence": [
+    {
+      "label": "-",
+      "value": null
+    },
+    {
+      "label": "دائم",
+      "value": "1"
+    },
+    {
+      "label": "موقت",
+      "value": "2"
+    }
+  ],
+  "terminalTypesList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": "1",
+      "label": "پایانه فروش متصل به خط تلفن"
+    },
+    {
+      "value": "2",
+      "label": "پایانه متصل به خط شبکه"
+    },
+    {
+      "value": "3",
+      "label": "پایانه متصل به صندوق فروشگاهی"
+    },
+    {
+      "value": "4",
+      "label": "پایانه فروش سیار"
+    },
+    {
+      "value": "5",
+      "label": "درگاه پرداخت اینترنتی"
+    }
+  ],
+  "segmentTypeList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": 1,
+      "label": "نقدی"
+    },
+    {
+      "value": 2,
+      "label": "تسهیلات"
+    },
+    {
+      "value": 3,
+      "label": "اعتبار"
+    }
+  ],
+  "purchaseTypeList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": 1,
+      "label": "خرید فقط از جیب "
+    },
+    {
+      "value": 2,
+      "label": "خرید ترکیبی"
+    }
+  ],
+  "chargeTypeList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": 1,
+      "label": "شارژ افزایشی"
+    },
+    {
+      "value": 2,
+      "label": "شارژ ثابت"
+    }
+  ],
+  "statusList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": 1,
+      "label": "فعال"
+    },
+    {
+      "value": 2,
+      "label": "غیرفعال"
+    }
+  ],
+  "currencyList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": "IRR",
+      "label": "IRR"
+    }
+  ],
+  "priorityList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": 1,
+      "label": "اولویت اول"
+    },
+    {
+      "value": 2,
+      "label": "اولویت دوم"
+    },
+    {
+      "value": 3,
+      "label": "اولویت سوم"
+    },
+    {
+      "value": 4,
+      "label": "اولویت چهارم"
+    },
+    {
+      "value": 5,
+      "label": "اولویت پنجم"
+    },
+    {
+      "value": 6,
+      "label": "اولویت ششم"
+    },
+    {
+      "value": 7,
+      "label": "اولویت هفتم"
+    },
+    {
+      "value": 8,
+      "label": "اولویت هشتم"
+    },
+    {
+      "value": 9,
+      "label": "اولویت نهم"
+    },
+    {
+      "value": 10,
+      "label": "اولویت دهم"
+    }
+  ],
+  "organizationList": [
+    {
+      "value": null,
+      "label": "-"
+    },
+    {
+      "value": 1,
+      "label": "بانک رسالت"
+    },
+    {
+      "value": 2,
+      "label": "سازمان توانیر"
+    },
+    {
+      "value": 3,
+      "label": "وزارت بهداشت،درمان و آموزش پزشکی"
+    },
+    {
+      "value": 4,
+      "label": "وزارت صنعت، معدن وتجارت"
+    }
+  ],
+  "acSummaries": [
+    {
+      "title": "قرض الحسنه اشخاص حقوقی",
+      "accountNumber": "240-1000000589-25",
+      "balance": 350000000,
+      "blockedAmount": 41000,
+      "dateOfLastTurnover": 140400205,
+      "openingBranch": "ونک",
+      "openingDate": 14000715
+    },
+    {
+      "title": "جاری اشخاص حقوقی",
+      "accountNumber": "340-1000000145-65",
+      "balance": 1435000000,
+      "blockedAmount": 1000500000,
+      "dateOfLastTurnover": 14040501,
+      "openingBranch": "استانبول",
+      "openingDate": 14000713
+    },
+    {
+      "title": "جاری اشخاص حقوقی",
+      "accountNumber": "340-1000000189-26",
+      "balance": 58020000,
+      "blockedAmount": 0,
+      "dateOfLastTurnover": 14040703,
+      "openingBranch": "بازار",
+      "openingDate": 14000712
+    },
+    {
+      "title": "کوتاه مدت اشخاص حقوقی",
+      "accountNumber": "440-1006580523-01",
+      "balance": 140400000,
+      "blockedAmount": 0,
+      "dateOfLastTurnover": 14040905,
+      "openingBranch": "تجریش",
+      "openingDate": 14000716
+    }
+  ],
+  "tashilats": [
+    {
+      "remaining": 8465215749,
+      "relevantUnit": "شرکت هولدینگ",
+      "branch": "بازار",
+      "tashilatType": "مضاربه",
+      "fileNumber": "139932-621",
+      "amount": 750000000,
+      "date": 13980116,
+      "accumulationPaymentObligation": 220000,
+      "installmentsPaid": 1000000000
+    },
+    {
+      "remaining": 5100000,
+      "relevantUnit": "شرکت تابعه1",
+      "branch": "دولت",
+      "tashilatType": "فروش اقساطی",
+      "fileNumber": "139911-760",
+      "amount": 500000000,
+      "date": 13990424,
+      "accumulationPaymentObligation": 1000000,
+      "installmentsPaid": 5000000
+    },
+    {
+      "remaining": 1548254962,
+      "relevantUnit": "شرکت تابعه2",
+      "branch": "میدان آرژانتین",
+      "tashilatType": "خرید دین",
+      "fileNumber": "139910-220",
+      "amount": 2700000000,
+      "date": 13990217,
+      "accumulationPaymentObligation": 0,
+      "installmentsPaid": 1400000000
+    },
+    {
+      "remaining": 643700000,
+      "relevantUnit": "شرکت تابعه3",
+      "branch": "میرداماد",
+      "tashilatType": "خرید دین",
+      "fileNumber": "139908-129",
+      "amount": 4000000000,
+      "date": 14000828,
+      "accumulationPaymentObligation": 0,
+      "installmentsPaid": 2000000000
+    }
+  ],
+  "bill_organList": [],
+  "bill_representationList": [],
+  "bill_operationList": [],
+  "creatWallet_listDrop": [],
+  "createYekta_listDrop": [],
+  "createYekta_listDrop2": [],
+  "internetRemittanceReport_statusItems": [
+    {
+      "value": "1",
+      "label": "وضعیت یک"
+    },
+    {
+      "value": "2",
+      "label": "وضعیت دو"
+    },
+    {
+      "value": "3",
+      "label": "وضعیت سه"
+    }
+  ],
+  "payaGroupRemittanceUploadFile_acItems": [
+    {
+      "value": "111",
+      "label": "قرض‌الحسنه ۱۰۰۰۰۲۳۵"
+    },
+    {
+      "value": "222",
+      "label": "جاری ۱۰۰۰۰۴۰۰"
+    },
+    {
+      "value": "333",
+      "label": "کوتاه‌مدت ۱۰۰۰۰۵۹۸"
+    },
+    {
+      "value": "444",
+      "label": "بلندمدت ۱۰۰۰۰۹۷۴"
+    }
+  ],
+  "payaRegularRemittanceRegistration_periodItems": [
+    {
+      "value": "1",
+      "label": "دوره یک"
+    },
+    {
+      "value": "2",
+      "label": "دوره دو"
+    },
+    {
+      "value": "3",
+      "label": "دوره سه"
+    }
+  ],
+  "registerBonCard_listDrop": [],
+  "regularPayaRegisterTransfer_listDrop": [],
+  "reliableRemittanceReport_reportTypeList": [],
+  "reportBankTransfer_numberTranslate": [
+    {
+      "accountNumber": "240-1000000589-58",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "ثبت اولیه",
+      "dateRegistration": "1399/01/10",
+      "dateDue": "1399/07/03",
+      "beneficiary": "کریم حسنی",
+      "nationalCode": 1324135454,
+      "numberTranslate": 2225543,
+      "boxTranslate": 10000,
+      "amount": 4000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "240-1000000589-25",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "تایید نهایی",
+      "dateRegistration": "1399/01/13",
+      "dateDue": "1399/07/09",
+      "beneficiary": "حبیب حسینی",
+      "nationalCode": 5851542358,
+      "numberTranslate": 2225544,
+      "boxTranslate": 10000,
+      "amount": 15000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "340-1000000145-44",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "تایید نهایی",
+      "dateRegistration": "1399/02/15",
+      "dateDue": "1399/07/27",
+      "beneficiary": "نوین سازان",
+      "nationalCode": 4452153584,
+      "numberTranslate": 2225545,
+      "boxTranslate": 10000,
+      "amount": 2000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "340-1000152145-67",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "در انتظار تایید",
+      "dateRegistration": "1399/03/09",
+      "dateDue": "1399/08/03",
+      "beneficiary": "عرفان حشمتی",
+      "nationalCode": 6659243574,
+      "numberTranslate": 2225546,
+      "boxTranslate": 10000,
+      "amount": 6000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "340-1014500145-47",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "تایید نهایی",
+      "dateRegistration": "1399/05/02",
+      "dateDue": "1399/08/16",
+      "beneficiary": "علی اسدی",
+      "nationalCode": 6524851675,
+      "numberTranslate": 2225547,
+      "boxTranslate": 10000,
+      "amount": 10000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "340-1084630145-14",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "تایید نهایی",
+      "dateRegistration": "1399/05/21",
+      "dateDue": "1399/08/22",
+      "beneficiary": "پیشروپلاس",
+      "nationalCode": 9981542547,
+      "numberTranslate": 2225548,
+      "boxTranslate": 10000,
+      "amount": 2000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "340-1008546214-94",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "خطا دار",
+      "dateRegistration": "1399/06/01",
+      "dateDue": "1399/09/07",
+      "beneficiary": "کامیار کاظمی",
+      "nationalCode": 3568425147,
+      "numberTranslate": 2225549,
+      "boxTranslate": 10000,
+      "amount": 1000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "340-1006250145-26",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "تایید نهایی",
+      "dateRegistration": "1399/06/08",
+      "dateDue": "1399/09/10",
+      "beneficiary": "فرید ترابی",
+      "nationalCode": 6522671532,
+      "numberTranslate": 2225550,
+      "boxTranslate": 10000,
+      "amount": 5000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "240-1000254985-58",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "تایید نهایی",
+      "dateRegistration": "1399/06/25",
+      "dateDue": "1399/09/11",
+      "beneficiary": "عماد همتی",
+      "nationalCode": 1452485321,
+      "numberTranslate": 2225551,
+      "boxTranslate": 10000,
+      "amount": 8000000,
+      "ErrDes": "ندارد"
+    },
+    {
+      "accountNumber": "340-1000157359-35",
+      "typeTranslate": "حواله اینترنتی",
+      "statusTranslate": "لغو شده",
+      "dateRegistration": "1399/06/30",
+      "dateDue": "1399/09/20",
+      "beneficiary": "سامان کاشانی",
+      "nationalCode": 6593521452,
+      "numberTranslate": 2225552,
+      "boxTranslate": 10000,
+      "amount": 2000000,
+      "ErrDes": "ندارد"
+    }
+  ],
+  "reportGroupRemittance_searchTypeList": [],
+  "satnaRemittanceRegistration_receiverItems": [
+    {
+      "value": "1",
+      "label": "حقیقی"
+    },
+    {
+      "value": "2",
+      "label": "حقوقی"
+    }
+  ],
+  "submitInformationPymentMnagement_dropList": [],
+  "yektaList_listDrop": [],
+  "accountTree_contextMenuItems": [
+    {
+      "label": "افزودن",
+      "icon": "pi pi-plus"
+    }
+  ],
+  "bill_organList_x": [
+    {
+      "label": "-",
+      "value": 0
+    },
+    {
+      "label": "هلدینگ 1",
+      "value": 1
+    },
+    {
+      "label": "هلدینگ 2",
+      "value": 2
+    },
+    {
+      "label": "هلدینگ 3",
+      "value": 3
+    }
+  ],
+  "bill_representationList_x": [
+    {
+      "label": "-",
+      "value": 0
+    },
+    {
+      "label": "نمایندگی 10001",
+      "value": 1
+    },
+    {
+      "label": "نمایندگی 10002",
+      "value": 2
+    },
+    {
+      "label": "نمایندگی 10003",
+      "value": 3
+    },
+    {
+      "label": "نمایندگی 10004",
+      "value": 4
+    }
+  ],
+  "bill_operationList_x": [
+    {
+      "label": "-",
+      "value": 0
+    },
+    {
+      "label": "واریز",
+      "value": 1
+    },
+    {
+      "label": "برداشت",
+      "value": 2
+    }
+  ],
+  "bill_tableList": [
+    {
+      "bankId": 1,
+      "bankName": "بانک ملت",
+      "accountInfo": [
+        {
+          "transactionNumber": 1009200361,
+          "accountNumber": 100001223344,
+          "branchName": "بازار",
+          "transactionDate": "1400/05/02",
+          "yektaTransactionID": 333300001111,
+          "docNumber": 1112,
+          "typeOperation": "واریز",
+          "amount": 1000000,
+          "remaining": 21000000,
+          "desTransaction": "بابت ثبت نام حمید حمیدی",
+          "transactionInfo": [
+            {
+              "organNumber": 140000000078,
+              "transactionAgent": "پوز",
+              "terminalNumber": 333300001111,
+              "dateAccounting": "1400/05/10",
+              "accountingHeading": "تسویه اقلام باز- 5001",
+              "desOrganTransaction": "ثبت دفتر کل"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "creatWallet_listDrop_x": [
+    {
+      "label": "دریافت رمز پویا ",
+      "value": 1
+    },
+    {
+      "label": "خرید پایانه فروشگاهی",
+      "value": 2
+    },
+    {
+      "label": "خرید اینترنتی",
+      "value": 3
+    }
+  ],
+  "createYekta_listDrop_x": [
+    {
+      "label": "با تاریخ انقضا ",
+      "value": 1
+    },
+    {
+      "label": "حساس به مبلغ",
+      "value": 2
+    },
+    {
+      "label": "حساس به حساب",
+      "value": 3
+    }
+  ],
+  "createYekta_listDrop2_x": [
+    {
+      "label": "الگوریتم نوع اول ",
+      "value": 1
+    },
+    {
+      "label": "الگوریتم نوع دوم",
+      "value": 2
+    },
+    {
+      "label": "الگوریتم نوع سوم",
+      "value": 3
+    }
+  ],
+  "detailsReliableRemittanceRequest_table1List": [
+    {
+      "recipientRemittance": "علی کمالی",
+      "ibonRecipient": "IR370610000000100842541368",
+      "bank": "ملی",
+      "depositorID": 1225,
+      "amount": 100000,
+      "nationalCode": 2358426589,
+      "About": "امور سرمایه گذاری و بورس",
+      "postalCode": 5445435565,
+      "shahabCode": "",
+      "des": "ghg",
+      "resubmitLicense": "دارد"
+    }
+  ],
+  "detailsReliableRemittanceRequest_table1List_2": [
+    {
+      "recipientRemittance": "محمد حسینی",
+      "ibonRecipient": "IR956412000000100845246851",
+      "bank": "صادرات",
+      "depositorID": 1563,
+      "amount": 20000000,
+      "nationalCode": 5832540245,
+      "About": "",
+      "postalCode": 5445435565,
+      "shahabCode": "",
+      "des": "",
+      "resubmitLicense": "ندارد"
+    }
+  ],
+  "detailsReliableRemittanceRequest_table1List_3": [
+    {
+      "recipientRemittance": "عباس همایونی",
+      "ibonRecipient": "IR956286000000195745286421",
+      "bank": "پاسارگاد",
+      "depositorID": 1854,
+      "amount": 500000,
+      "nationalCode": 6682542152,
+      "About": "",
+      "postalCode": 884565454,
+      "shahabCode": "",
+      "des": "",
+      "resubmitLicense": "ندارد"
+    }
+  ],
+  "detailsReliableRemittanceRequest_table2List": [
+    {
+      "fullName": "حسین بهجتی",
+      "verificationType": "اختیاری",
+      "verificationStatus": "بررسی نشده",
+      "history": null,
+      "des": ""
+    }
+  ],
+  "detailsReliableRemittanceRequest_table2List_2": [
+    {
+      "fullName": "ایرج خداپرست",
+      "verificationType": "اختیاری",
+      "verificationStatus": "بررسی نشده",
+      "history": null,
+      "des": ""
+    }
+  ],
+  "detailsReliableRemittanceRequest_table2List_3": [
+    {
+      "fullName": "سیاوش راسخی",
+      "verificationType": "اختیاری",
+      "verificationStatus": "بررسی نشده",
+      "history": null,
+      "des": ""
+    }
+  ],
+  "registerBonCard_listDrop_x": [
+    {
+      "label": "دریافت رمز پویا ",
+      "value": 1
+    },
+    {
+      "label": "خرید پایانه فروشگاهی",
+      "value": 2
+    },
+    {
+      "label": "برداشت نقدی",
+      "value": 3
+    }
+  ],
+  "regularPayaRegisterTransfer_listDrop_x": [
+    {
+      "label": "روزانه",
+      "value": 1
+    },
+    {
+      "label": "هفتگی",
+      "value": 2
+    },
+    {
+      "label": "ماهانه",
+      "value": 3
+    },
+    {
+      "label": "فصلی",
+      "value": 4
+    },
+    {
+      "label": "سالانه",
+      "value": 5
+    }
+  ],
+  "reliableRemittanceReport_reportTypeList_x": [
+    {
+      "label": "-",
+      "value": 1
+    },
+    {
+      "label": "صادره",
+      "value": 2
+    },
+    {
+      "label": "وارده",
+      "value": 3
+    }
+  ],
+  "reportGroupRemittance_searchTypeList_x": [
+    {
+      "label": "-",
+      "value": 1
+    },
+    {
+      "label": "وضعیت فایل",
+      "value": 2
+    },
+    {
+      "label": "نام فایل",
+      "value": 3
+    }
+  ],
+  "requestGhoboz_table1List": [
+    {
+      "recipientRemittance": "علی کمالی",
+      "ghabzTypeRecipient": "IR370610000000100842541368",
+      "bank": "ملی",
+      "depositorID": 1225,
+      "amount": 100000,
+      "nationalCode": 2358426589,
+      "About": "امور سرمایه گذاری و بورس",
+      "postalCode": 5445435565,
+      "shahabCode": "",
+      "des": "ghg",
+      "resubmitLicense": "دارد"
+    }
+  ],
+  "requestGhoboz_table1List_2": [
+    {
+      "recipientRemittance": "محمد حسینی",
+      "ghabzTypeRecipient": "IR956412000000100845246851",
+      "bank": "صادرات",
+      "depositorID": 1563,
+      "amount": 20000000,
+      "nationalCode": 5832540245,
+      "About": "",
+      "postalCode": 5445435565,
+      "shahabCode": "",
+      "des": "",
+      "resubmitLicense": "ندارد"
+    }
+  ],
+  "requestGhoboz_table1List_3": [
+    {
+      "recipientRemittance": "عباس همایونی",
+      "ghabzTypeRecipient": "IR956286000000195745286421",
+      "bank": "پاسارگاد",
+      "depositorID": 1854,
+      "amount": 500000,
+      "nationalCode": 6682542152,
+      "About": "",
+      "postalCode": 884565454,
+      "shahabCode": "",
+      "des": "",
+      "resubmitLicense": "ندارد"
+    }
+  ],
+  "submitInformationPymentMnagement_dropList_x": [
+    {
+      "label": "-",
+      "value": 1
+    },
+    {
+      "label": "حقیقی",
+      "value": 2
+    },
+    {
+      "label": "حقوقی",
+      "value": 3
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 import { RegularPayaRow } from '../paya-regular-remittance-cartable/paya-regular-remittance-cartable.component';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 @Component({
   selector: 'app-paya-regular-remittance-cartable-details',
@@ -11,20 +12,15 @@ import { RegularPayaRow } from '../paya-regular-remittance-cartable/paya-regular
 export class PayaRegularRemittanceCartableDetailsComponent implements OnInit {
   @Input() regularPayaRow: RegularPayaRow | null = null;
   @Output() confirm = new EventEmitter<boolean>();
-  table1Rows: Table1Row[] = [{
-    about: 'امور سرمایه‌گذاری و بورس',
-    amount: 1,
-    description: 'ghg',
-    allowResubmit: 'دارد'
-  }];
-  table2Rows: Table2Row[] = [1, 2, 3, 4].map(x => ({
-    fullName: ['شهاب گودرزی', 'علی حسنی', 'پژمان صباحی', 'سارا تقدمی'][x - 1],
-    confirmationStatus: 'بررسی نشده',
-    confirmationType: 'اختیاری',
-  }));
-  constructor(private confirmationService: ConfirmationService) { }
+  table1Rows: Table1Row[] = [];
+  table2Rows: Table2Row[] = [];
+  constructor(private confirmationService: ConfirmationService, private datasetService: DatasetService) { }
 
   ngOnInit(): void {
+    this.datasetService.loadRaw('paya-regular-cartable-details').then(d => {
+      this.table1Rows = d.table1Rows;
+      this.table2Rows = d.table2Rows;
+    });
   }
 
   showConfirmation() {

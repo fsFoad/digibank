@@ -1,0 +1,14 @@
+{
+  "responseCode": "0",
+  "responseMessage": "عملیات با موفقیت انجام شد",
+  "responseDateTime": 1615852650867,
+  "feeAmount": 0,
+  "token": "567657389",
+  "balanceInfo": [
+    {
+      "availablebalance": 26000,
+      "actualbalance": 26000,
+      "holdBalance": 0
+    }
+  ]
+}

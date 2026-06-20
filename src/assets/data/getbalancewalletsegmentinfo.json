@@ -1,0 +1,27 @@
+{
+  "walletInfo": {
+    "targetName": "حسن مرادی",
+    "targetProductCode": 1100,
+    "targetProductTitle": "کیف پول شخصی سطح 1",
+    "accountId": 1,
+    "accountNo": "25599695131145",
+    "createDate": 13991211,
+    "nationalCode": "2559969513",
+    "firstName": "حسن",
+    "lastName": "مرادی",
+    "walletType": 1
+  },
+  "balanceInfoDtoList": [
+    {
+      "availablebalance": 219009,
+      "actualbalance": 219009,
+      "holdBalance": 0,
+      "segmentTypeName": "جیب اصلی",
+      "accountId": 1,
+      "accountNo": "25599695131145"
+    }
+  ],
+  "sumAvailablebalance": 219009,
+  "sumActualbalance": 219009,
+  "sumHoldBalance": 0
+}
