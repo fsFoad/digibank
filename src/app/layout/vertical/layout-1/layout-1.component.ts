@@ -243,8 +243,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
           // },
           {
             id: 'identificationTransaction',
-            label: 'شناسه گذاری تراکنش ها',
-            translate: 'شناسه گذاری تراکنش ها',
+            label: 'تگ گذاری تراکنش ها',
+            translate: 'تگ گذاری تراکنش ها',
             type: 'item',
             routerLink: '/identificationTransaction',
           },
@@ -279,17 +279,17 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             type: 'item',
             routerLink: '/oldBill',
           },*/
-          {
+        /*  {
             id: 'real',
             label: 'گزارش حسابهای ذینعان',
             translate: 'گزارش حسابهای ذینعان',
             type: 'item',
             icon: 'account_balance_wallet',
-          },
+          },*/
           {
             id: 'bills',
-            label: 'صورت حساب چند بانکی',
-            translate: 'صورت حساب چند بانکی',
+            label: 'ریز صورتحساب ذینفعان',
+            translate: 'ریز صورتحساب ذینفعان',
             type: 'item',
             routerLink: '/bills',
           },
