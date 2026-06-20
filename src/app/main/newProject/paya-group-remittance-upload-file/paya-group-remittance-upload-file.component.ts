@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
+import { Constants } from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-paya-group-remittance-upload-file',
@@ -10,12 +11,7 @@ import { ConfirmationService } from 'primeng/api';
 export class PayaGroupRemittanceUploadFileComponent implements OnInit {
   agreementConfirmationCheckboxValue = false;
   agreementConfirmed = false;
-  acItems = [
-    { value: '111', label: 'قرض‌الحسنه ۱۰۰۰۰۲۳۵' },
-    { value: '222', label: 'جاری ۱۰۰۰۰۴۰۰' },
-    { value: '333', label: 'کوتاه‌مدت ۱۰۰۰۰۵۹۸' },
-    { value: '444', label: 'بلندمدت ۱۰۰۰۰۹۷۴' },
-  ]
+  acItems = Constants.payaGroupRemittanceUploadFile_acItems
   constructor(private confirmationService: ConfirmationService) { }
 
   ngOnInit(): void {

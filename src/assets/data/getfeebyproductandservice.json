@@ -1,0 +1,32 @@
+[
+  {
+    "feeId": 2,
+    "productId": 1200,
+    "serviceId": 1700,
+    "hostId": 4,
+    "feeAffectedType": 0,
+    "walletAffectedId": null,
+    "status": 1,
+    "description": null,
+    "lastDate": 14000420,
+    "lastTime": "16:32:33",
+    "walletAffectedNo": null,
+    "iuserId": "admin",
+    "uuserId": "admin"
+  },
+  {
+    "feeId": 2,
+    "productId": 1100,
+    "serviceId": 1900,
+    "hostId": 2,
+    "feeAffectedType": 0,
+    "walletAffectedId": null,
+    "status": 1,
+    "description": null,
+    "lastDate": 14000420,
+    "lastTime": "16:39:03",
+    "walletAffectedNo": null,
+    "iuserId": "admin",
+    "uuserId": "admin"
+  }
+]

@@ -23,7 +23,7 @@
   <div class="bottom-buttons  p-shadow-3 section">
     <button pButton label="مرحله قبل" class="p-button-info view-mode-keep" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
     <button pButton label="ادامه" class="p-button-info view-mode-keep" (click)="nextTab()" [hidden]="activeTab >= 5"></button>
-    <button pButton label="ثبت تغییرات" class="p-button-success" (click)="save()"></button>
-    <button pButton label="خروج" class="p-button-danger view-mode-keep" (click)="goHome()" [hidden]="activeTab < 5"></button>
+    <button pButton label="ثبت تغییرات" class="p-button-success" (click)="save()" [hidden]="activeTab < 5"></button>
+
   </div>
 

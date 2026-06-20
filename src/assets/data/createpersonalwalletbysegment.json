@@ -1,0 +1,59 @@
+{
+  "responseCode": "0",
+  "responseMessage": "عملیات با موفقیت انجام شد",
+  "responseDateTime": 1615851117288,
+  "feeAmount": 0,
+  "token": "010894580434142",
+  "firstName": "علی",
+  "lastName": "مرادی حسن آبادی",
+  "accountSegmentInfoDtoList": [
+    {
+      "accountNo": "01089458041340",
+      "segmentTypeId": 0,
+      "segmentTypeName": "جیب عمومی",
+      "accountId": 152
+    },
+    {
+      "accountNo": "01089458041340",
+      "segmentTypeId": 0,
+      "segmentTypeName": "جیب عمومی",
+      "accountId": 153
+    },
+    {
+      "accountNo": "01089458041347",
+      "segmentTypeId": 7,
+      "segmentTypeName": "جیب عمومی توانیر",
+      "accountId": 151
+    },
+    {
+      "accountNo": "01089458041348",
+      "segmentTypeId": 8,
+      "segmentTypeName": "جیب ارزاق توانیر",
+      "accountId": 147
+    },
+    {
+      "accountNo": "01089458041349",
+      "segmentTypeId": 9,
+      "segmentTypeName": "جیب سلامت توانیر",
+      "accountId": 148
+    },
+    {
+      "accountNo": "010894580413410",
+      "segmentTypeId": 10,
+      "segmentTypeName": "جیب فرهنگی توانیر",
+      "accountId": 149
+    },
+    {
+      "accountNo": "010894580413411",
+      "segmentTypeId": 11,
+      "segmentTypeName": "جیب ورزشی توانیر",
+      "accountId": 150
+    },
+    {
+      "accountNo": "010894580413422",
+      "segmentTypeId": 22,
+      "segmentTypeName": "جیب سازمانی رسالت",
+      "accountId": 146
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "productId": 1100,
+    "name": "کیف پول شخصی سطح 1",
+    "customerType": 1,
+    "productType": 1,
+    "minBalance": 0,
+    "maxBalance": 2000000,
+    "maxQuarterBalance": 10000000,
+    "expireDuration": 1,
+    "nameEn": "PersonalLevel1",
+    "description": "کیف پول شخصی سطح 1",
+    "status": 1,
+    "authenticationStatus": 1,
+    "currency": "IRR"
+  }
+]

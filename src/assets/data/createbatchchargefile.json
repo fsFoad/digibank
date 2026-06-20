@@ -1,0 +1,91 @@
+{
+  "chargeHeaderDto": {
+    "batchId": 30,
+    "fileName": "Batch_Charge6 - Copy.xlsx",
+    "insertDate": 13991225,
+    "organizationId": 3,
+    "segmentId": 5,
+    "fileType": 1,
+    "rowCount": 7,
+    "processCount": 0
+  },
+  "chargeDetailDtoList": [
+    {
+      "batchId": 30,
+      "rowNo": 1,
+      "insertDate": 13991225,
+      "nationalCode": "0056765738",
+      "tokenNo": "00567657389",
+      "amount": 5000,
+      "organizationId": 3,
+      "segmentTypeId": 5,
+      "status": 0
+    },
+    {
+      "batchId": 30,
+      "rowNo": 2,
+      "insertDate": 13991225,
+      "nationalCode": "0056765738",
+      "tokenNo": "00567657389",
+      "amount": 5000,
+      "organizationId": 3,
+      "segmentTypeId": 5,
+      "status": 7
+    },
+    {
+      "batchId": 30,
+      "rowNo": 3,
+      "insertDate": 13991225,
+      "nationalCode": "2559969513",
+      "tokenNo": "2559969513145",
+      "amount": 150000,
+      "organizationId": 3,
+      "segmentTypeId": 5,
+      "status": 5
+    },
+    {
+      "batchId": 30,
+      "rowNo": 4,
+      "insertDate": 13991225,
+      "nationalCode": "2559969513",
+      "tokenNo": "2559969513145",
+      "amount": 200000,
+      "organizationId": 3,
+      "segmentTypeId": 5,
+      "status": 7
+    },
+    {
+      "batchId": 30,
+      "rowNo": 5,
+      "insertDate": 13991225,
+      "nationalCode": "2550082087",
+      "tokenNo": "2550082087246",
+      "amount": 100000,
+      "organizationId": 3,
+      "segmentTypeId": 5,
+      "status": 5
+    },
+    {
+      "batchId": 30,
+      "rowNo": 6,
+      "insertDate": 13991225,
+      "nationalCode": "0320113337",
+      "tokenNo": "3201133375",
+      "amount": 50000,
+      "organizationId": 3,
+      "segmentTypeId": 5,
+      "status": 0
+    },
+    {
+      "batchId": 30,
+      "rowNo": 7,
+      "insertDate": 13991225,
+      "nationalCode": "2559968797",
+      "tokenNo": "25599687973",
+      "amount": 10000000,
+      "organizationId": 3,
+      "segmentTypeId": 5,
+      "status": 6
+    }
+  ]
+}

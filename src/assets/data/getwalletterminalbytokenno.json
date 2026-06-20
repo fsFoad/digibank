@@ -1,0 +1,34 @@
+{
+  "walletInfo": {
+    "targetName": "حسن مرادی",
+    "targetProductCode": 1300,
+    "targetProductTitle": "کیف پول تجاری",
+    "accountId": 24,
+    "accountNo": "25599695131161",
+    "createDate": 13991213,
+    "nationalCode": "2559969513",
+    "firstName": "حسن",
+    "lastName": "مرادی",
+    "walletType": 2
+  },
+  "walletTerminalInfoList": [
+    {
+      "terminalName": "پایانه فروش یک ",
+      "terminalId": 1,
+      "terminalNo": 1,
+      "terminalType": 3
+    },
+    {
+      "terminalName": "پایانه فروش دو",
+      "terminalId": 2,
+      "terminalNo": 3,
+      "terminalType": 3
+    },
+    {
+      "terminalName": "پایانه فروش سه ",
+      "terminalId": 3,
+      "terminalNo": 2,
+      "terminalType": 3
+    }
+  ]
+}

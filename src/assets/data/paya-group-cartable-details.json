@@ -1,0 +1,18 @@
+{
+  "table1Rows": [
+    {
+      "sourceShaba": "IR81CBKU0000000000001234560101",
+      "totalAmountOfTheRemittance": 2625002,
+      "numberOfRemittanceRows": 3,
+      "effectiveDate": 14000705,
+      "registrar": "نسرین دریادل",
+      "registrationDate": 14000701
+    }
+  ],
+  "table2Rows": [
+    { "fullName": "شهاب گودرزی", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" },
+    { "fullName": "جمشید داریوشیان", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" },
+    { "fullName": "پژمان صباحی", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" },
+    { "fullName": "سارا تقدمی", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "table1Rows": [
+    {
+      "about": "امور سرمایه‌گذاری و بورس",
+      "amount": 1,
+      "description": "ghg",
+      "allowResubmit": "دارد"
+    }
+  ],
+  "table2Rows": [
+    { "fullName": "شهاب گودرزی", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" },
+    { "fullName": "علی حسنی", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" },
+    { "fullName": "پژمان صباحی", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" },
+    { "fullName": "سارا تقدمی", "confirmationStatus": "بررسی نشده", "confirmationType": "اختیاری" }
+  ]
+}

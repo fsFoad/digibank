@@ -22,10 +22,7 @@ export class SatnaRemittanceRegistrationComponent implements OnInit {
   //   { value: '3', label: 'بابت سه' },
   // ]
   
-  receiverItems = [
-    { value: '1', label: 'حقیقی' },
-    { value: '2', label: 'حقوقی' },
-  ]
+  receiverItems = Constants.satnaRemittanceRegistration_receiverItems
   showConfirmationComponent = false;
 
   constructor() { }

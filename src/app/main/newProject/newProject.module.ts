@@ -157,6 +157,7 @@ import { IdentificationTransactionComponent } from './identification-transaction
 import { ActivityFieldComponent } from './person-editor/activity-field/activity-field.component';
 import { RialAccountByBankComponent } from './rial-account-by-bank/rial-account-by-bank.component';
 import { HoldingsBillComponent } from './holdings-bill/holdings-bill.component';
+import { UpdateActivityFieldComponent } from './update-personal/update-activity-field/update-activity-field.component';
 
 @NgModule({
   providers: [
@@ -283,6 +284,7 @@ import { HoldingsBillComponent } from './holdings-bill/holdings-bill.component';
     ActivityFieldComponent,
     RialAccountByBankComponent,
     HoldingsBillComponent,
+    UpdateActivityFieldComponent
   ],
   imports: [
     CommonModule,

@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActivityFieldComponent } from './activity-field.component';
 
-describe('ActivityFieldComponent', () => {
+describe('UpdateActivityFieldComponent', () => {
   let component: ActivityFieldComponent;
   let fixture: ComponentFixture<ActivityFieldComponent>;
 

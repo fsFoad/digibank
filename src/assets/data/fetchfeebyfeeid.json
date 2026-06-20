@@ -1,0 +1,85 @@
+{
+  "feeId": 1001,
+  "productId": 2100,
+  "serviceId": 1600,
+  "hostId": 2,
+  "feeAffectedType": 1,
+  "walletAffectedNo": "1193696739606",
+  "status": 1,
+  "description": "شش",
+  "feeWalletList": [
+    {
+      "feeId": 1001,
+      "rowNo": 1,
+      "feeAffectedType": 1,
+      "feeAffectedId": 76,
+      "feePercentAgeSharing": 100,
+      "status": 2,
+      "lastDate": 14000426,
+      "lastTime": "17:42:46",
+      "feeAffectedNo": "1032073027758761",
+      "uuserId": "admin",
+      "iuserId": "admin"
+    },
+    {
+      "feeId": 1001,
+      "rowNo": 2,
+      "feeAffectedType": 1,
+      "feeAffectedId": 78,
+      "feePercentAgeSharing": 50,
+      "status": 1,
+      "lastDate": 14000426,
+      "lastTime": "17:42:46",
+      "feeAffectedNo": "1400398547960763",
+      "uuserId": "admin",
+      "iuserId": "admin"
+    },
+    {
+      "feeId": 1001,
+      "rowNo": 3,
+      "feeAffectedType": 1,
+      "feeAffectedId": 77,
+      "feePercentAgeSharing": 50,
+      "status": 1,
+      "lastDate": 14000426,
+      "lastTime": "17:42:46",
+      "feeAffectedNo": "1400765091259762",
+      "uuserId": "admin",
+      "iuserId": "admin"
+    }
+  ],
+  "feeDetailList": [
+    {
+      "feeId": 1001,
+      "rowNo": 1,
+      "feeType": 2,
+      "fixAmount": 0,
+      "percentAge": 50,
+      "minAmount": 10000,
+      "maxAmount": 15000,
+      "fromAmount": 20000,
+      "toAmount": 30000,
+      "status": 1,
+      "lastDate": 14000426,
+      "lastTime": "17:42:46",
+      "uuserId": "admin",
+      "iuserId": "admin"
+    },
+    {
+      "feeId": 1001,
+      "rowNo": 2,
+      "feeType": 1,
+      "fixAmount": 10000,
+      "percentAge": 0,
+      "minAmount": 10000,
+      "maxAmount": 10000,
+      "fromAmount": 0,
+      "toAmount": 0,
+      "status": 1,
+      "lastDate": 14000426,
+      "lastTime": "17:42:46",
+      "uuserId": "admin",
+      "iuserId": "admin"
+    }
+  ]
+}

@@ -7,16 +7,12 @@ import {Constants} from '../../shared/constants/Constants';
   styleUrls: ['./reliable-remittance-report.component.scss']
 })
 export class ReliableRemittanceReportComponent implements OnInit {
-reportTypeList:{ label: string, value: number }[] = [];
+reportTypeList:{ label: string, value: number }[] = Constants.reliableRemittanceReport_reportTypeList;
 bankNameList=Constants.bankNameList;
   constructor() { }
 
   ngOnInit(): void {
-    this.reportTypeList = [
-      {label: '-', value: 1},
-      {label: 'صادره', value: 2},
-      {label: 'وارده', value: 3},
-    ];
+    this.reportTypeList = Constants.reliableRemittanceReport_reportTypeList_x;
   }
 
 }

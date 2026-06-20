@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {ConfirmationService} from "primeng/api";
+import { Constants } from '../../shared/constants/Constants';
 
 @Component({
   selector: 'app-request-ghoboz',
@@ -52,83 +53,29 @@ export class RequestGhobozComponent implements OnInit {
 
     switch (this.registrar) {
       case 'علی محمدی': {
-        this.table1List = [{
-          recipientRemittance: "علی کمالی",
-          ghabzTypeRecipient: 'IR370610000000100842541368',
-          bank: 'ملی',
-          depositorID: 1225,
-          amount: 100000,
-          nationalCode: 2358426589,
-          About: 'امور سرمایه گذاری و بورس',
-          postalCode: 5445435565,
-          shahabCode: '',
-          des: 'ghg',
-          resubmitLicense: 'دارد',
-        }];
+        this.table1List = Constants.requestGhoboz_table1List;
         break;
       }
       case 'محمد سروری': {
-        this.table1List = [{
-          recipientRemittance: "محمد حسینی",
-          ghabzTypeRecipient: 'IR956412000000100845246851',
-          bank: 'صادرات',
-          depositorID: 1563,
-          amount: 20000000,
-          nationalCode: 5832540245,
-          About: '',
-          postalCode: 5445435565,
-          shahabCode: '',
-          des: '',
-          resubmitLicense: 'ندارد',
-        }];
+        this.table1List = Constants.requestGhoboz_table1List_2;
         break;
       }
       case 'فرهاد کشوری': {
-        this.table1List = [{
-          recipientRemittance: 'عباس همایونی',
-          ghabzTypeRecipient: 'IR956286000000195745286421',
-          bank: 'پاسارگاد',
-          depositorID: 1854,
-          amount: 500000,
-          nationalCode: 6682542152,
-          About: '',
-          postalCode: 884565454,
-          shahabCode: '',
-          des: '',
-          resubmitLicense: 'ندارد',
-        }];
+        this.table1List = Constants.requestGhoboz_table1List_3;
         break;
       }
     }
     switch (this.registrar) {
       case 'علی محمدی': {
-        this.table2List = [{
-          fullName: 'حسین بهجتی',
-          verificationType: 'اختیاری',
-          verificationStatus: 'بررسی نشده',
-          history: null,
-          des: '',
-        }];
+        this.table2List = Constants.detailsReliableRemittanceRequest_table2List;
         break;
       }
       case 'محمد سروری': {
-        this.table2List = [{
-          fullName: 'ایرج خداپرست',
-          verificationType: 'اختیاری',
-          verificationStatus: 'بررسی نشده',
-          history: null,
-          des: '',
-        }];
+        this.table2List = Constants.detailsReliableRemittanceRequest_table2List_2;
         break;
       }
       case 'فرهاد کشوری': {
-        this.table2List = [{
-          fullName: 'سیاوش راسخی',
-          verificationType: 'اختیاری',
-          verificationStatus: 'بررسی نشده',
-          history: null,
-          des: '',
-        }];
+        this.table2List = Constants.detailsReliableRemittanceRequest_table2List_3;
         break;
       }
     }

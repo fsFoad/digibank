@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Constants } from '../../shared/constants/Constants';
 
 @Component({
     selector: 'app-regular-paya-register-transfer',
@@ -7,19 +8,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RegularPayaRegisterTransferComponent implements OnInit {
     ibon = 'IR';
-    listDrop: { label: string, value: number }[] = [];
+    listDrop: { label: string, value: number }[] = Constants.regularPayaRegisterTransfer_listDrop;
 
     constructor() {
     }
 
     ngOnInit(): void {
-        this.listDrop = [
-            {label: 'روزانه', value: 1},
-            {label: 'هفتگی', value: 2},
-            {label: 'ماهانه', value: 3},
-            {label: 'فصلی', value: 4},
-            {label: 'سالانه', value: 5},
-        ];
+        this.listDrop = Constants.regularPayaRegisterTransfer_listDrop_x;
     }
 
 }

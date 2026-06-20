@@ -1,0 +1,19 @@
+{
+  "regDate": null,
+  "userId": null,
+  "unitId": null,
+  "unitCode": null,
+  "iuserid": null,
+  "uuserid": null,
+  "segmentTypeId": 23,
+  "name": "111",
+  "nameEn": "111",
+  "segmentType": 1,
+  "purchaseType": 1,
+  "chargeType": 1,
+  "isMain": 1,
+  "minAmount": 1111,
+  "maxAmount": 1111,
+  "status": 1,
+  "currency": "irr"
+}

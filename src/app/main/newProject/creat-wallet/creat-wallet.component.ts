@@ -10,7 +10,7 @@ import {MessageService, NotifierService} from '../../shared/notifier/notifier.mo
   providers:[MessageService]
 })
 export class CreatWalletComponent implements OnInit {
-  listDrop: { label: string, value: number }[] = [];
+  listDrop: { label: string, value: number }[] = Constants.creatWallet_listDrop;
   acItems = Constants.acItems;
   display = false;
   displayValidation = false;
@@ -30,12 +30,7 @@ export class CreatWalletComponent implements OnInit {
   ngOnInit(): void {
     this.walletForm.controls['mobile'].disable();
     this.walletForm.controls['fullName'].disable();
-    this.listDrop = [
-      {label: 'دریافت رمز پویا ', value: 1},
-      {label: 'خرید پایانه فروشگاهی', value: 2},
-      {label: 'خرید اینترنتی', value: 3},
-
-    ];
+    this.listDrop = Constants.creatWallet_listDrop_x;
   }
 
   search() {
