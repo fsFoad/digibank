@@ -84,8 +84,8 @@ export class Constants {
   static RTLDirectionForForDiv = 'rtl';
   static APPDirection = 'rtl';
   static IsFontIran = false;
-  static AppFontClass: string = 'isFontIran';
-  static AppWrapperInitializer: boolean = true;
+  static AppFontClass = 'isFontIran';
+  static AppWrapperInitializer = true;
   static notifiSuccess = 'عملیات با موفقیت انجام شد';
   static licenseInfoList = (lookups as any).licenseInfoList;
   static customerTypes = (lookups as any).customerTypes;

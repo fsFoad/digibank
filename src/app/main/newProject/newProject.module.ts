@@ -156,6 +156,7 @@ import { CreateRegistrationInfoComponent } from './board-of-directors-editor/cre
 import { IdentificationTransactionComponent } from './identification-transaction/identification-transaction.component';
 import { ActivityFieldComponent } from './person-editor/activity-field/activity-field.component';
 import { RialAccountByBankComponent } from './rial-account-by-bank/rial-account-by-bank.component';
+import { UpdateActivityFieldComponent } from './update-personal/update-activity-field/update-activity-field.component';
 
 @NgModule({
   providers: [
@@ -281,6 +282,7 @@ import { RialAccountByBankComponent } from './rial-account-by-bank/rial-account-
     IdentificationTransactionComponent,
     ActivityFieldComponent,
     RialAccountByBankComponent,
+    UpdateActivityFieldComponent
   ],
   imports: [
     CommonModule,
