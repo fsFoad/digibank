@@ -61,6 +61,7 @@
       "label": "سامان"
     }
   ],
+
   "documentType": [
     {
       "value": "0",
@@ -77,6 +78,20 @@
     {
       "value": "3",
       "label": "مدرک تحصیلی"
+    }
+  ],
+  "documentTypeOrganization": [
+    {
+      "value": "0",
+      "label": "اسناد روزنامه رسمی"
+    },
+    {
+      "value": "1",
+      "label": "اسناد صورت های مالی"
+    },
+    {
+      "value": "2",
+      "label": "سایر اسناد"
     }
   ],
   "priority": [
@@ -143,7 +158,7 @@
   ,
     {
       "value": "5",
-      "label": "شرکت همکار (هولدینگ)"
+      "label": "شرکت همکار (هلدینگ)"
     }
   ],
   "shenasnameType": [
@@ -330,29 +345,29 @@
     },
     {
       "value": "5",
-      "label": "5-شرکت عضو گروه (هولدینگ)"
+      "label": "5-شرکت عضو گروه (هلدینگ)"
     }
   ],
   "availableRolespickList": [
     {
       "value": "1",
-      "label": "1-کارمند"
+      "label": "کارمند"
     },
     {
       "value": "2",
-      "label": "2-مشتری"
+      "label": "مشتری"
     },
     {
       "value": "3",
-      "label": "3-نمایندگی کارگزاری"
+      "label": "نمایندگی کارگزاری"
     },
     {
       "value": "4",
-      "label": "4-تامین کننده"
+      "label": "تامین کننده"
     },
     {
       "value": "5",
-      "label": "5-شرکت عضو گروه (هولدینگ)"
+      "label": "شرکت عضو گروه (هلدینگ)"
     }
   ],
   "activityFieldOptions": [
@@ -1124,7 +1139,7 @@
   "tashilats": [
     {
       "remaining": 8465215749,
-      "relevantUnit": "شرکت هولدینگ",
+      "relevantUnit": "شرکت هلدینگ",
       "branch": "بازار",
       "tashilatType": "مضاربه",
       "fileNumber": "139932-621",

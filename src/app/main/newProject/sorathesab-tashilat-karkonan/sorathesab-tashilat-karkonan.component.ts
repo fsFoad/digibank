@@ -34,7 +34,7 @@ export class SorathesabTashilatKarkonanComponent implements OnInit {
     },
     {
       'remaining': 8465215749,
-      'relevantUnit': 'شرکت هولدینگ',
+      'relevantUnit': 'شرکت هلدینگ',
       'branch': 'بازار',
       'tashilatType': 'مضاربه',
       'fileNumber': '139932-621',

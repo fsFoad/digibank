@@ -27,6 +27,7 @@ export class Constants {
   static operationType = (lookups as any).operationType;
   static banklist = (lookups as any).banklist;
   static documentType = (lookups as any).documentType;
+  static documentTypeOrganization = (lookups as any).documentTypeOrganization;
   static priority = (lookups as any).priority;
 
   static acItems = (lookups as any).acItems;

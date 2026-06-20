@@ -264,8 +264,8 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
               },
               {
                 id: 'holdingsBill',
-                label: 'صورت حساب هولدینگ',
-                translate: 'صورت حساب هولدینگ',
+                label: 'صورت حساب هلدینگ',
+                translate: 'صورت حساب هلدینگ',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: 'holdingsBill'
