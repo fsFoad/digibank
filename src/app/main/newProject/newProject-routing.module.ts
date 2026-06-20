@@ -84,6 +84,7 @@ import { AccountTransactionsComponent } from './account-transactions/account-tra
 import {OrganizationalEntityListComponent} from './organizational-entity-list/organizational-entity-list.component';
 import {IdentificationTransactionComponent} from './identification-transaction/identification-transaction.component';
 import {RialAccountByBankComponent} from './rial-account-by-bank/rial-account-by-bank.component';
+import {HoldingsBillComponent} from './holdings-bill/holdings-bill.component';
 
 
 const routes: Routes = [
@@ -407,6 +408,10 @@ const routes: Routes = [
       {
         path: 'rialAccountByBank',
         component: RialAccountByBankComponent,
+      },
+      {
+        path: 'holdingsBill',
+        component: HoldingsBillComponent,
       },
 
       // add new components above

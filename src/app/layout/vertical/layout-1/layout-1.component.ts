@@ -249,12 +249,36 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             routerLink: '/identificationTransaction',
           },
           {
+            id: 'real',
+            label: 'صورت حساب',
+            translate: 'صورت حساب',
+            type: 'collapsable',
+            items: [
+              {
+                id: 'oldBill',
+                label: 'صورت حساب شرکت ها',
+                translate: 'صورت حساب شرکت ها',
+                type: 'item',
+                icon: 'account_balance_wallet',
+                routerLink: 'oldBill'
+              },
+              {
+                id: 'holdingsBill',
+                label: 'صورت حساب هولدینگ',
+                translate: 'صورت حساب هولدینگ',
+                type: 'item',
+                icon: 'account_balance_wallet',
+                routerLink: 'holdingsBill'
+              }
+            ]
+          },
+        /*  {
             id: 'oldBill',
-            label: 'صورت حساب ',
+            label: 'صورت حساب شرکت ها',
             translate: 'صورت حساب ',
             type: 'item',
             routerLink: '/oldBill',
-          },
+          },*/
           {
             id: 'real',
             label: 'گزارش حسابهای ذینعان',
