@@ -140,6 +140,11 @@
       "value": "4",
       "label": "شرکت تابعه ۳"
     }
+  ,
+    {
+      "value": "5",
+      "label": "شرکت همکار (هولدینگ)"
+    }
   ],
   "shenasnameType": [
     {
@@ -223,6 +228,11 @@
     {
       "value": "1",
       "label": "خصوصی"
+    }
+  ,
+    {
+      "value": "1",
+      "label": "دولتی"
     }
   ],
   "bankNameList": [
