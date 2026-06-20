@@ -40,10 +40,12 @@ export class UpdateOrganizationalEntityManagerComponent implements OnInit {
       changes.shahabCode = f.shahabCode;
       changes.noMalekiat = f.noMalekiat;
       changes.title = f.title;
+      changes.customerName = f.title;
       changes.enTitle = f.enTitle;
       changes.numberSubmit = f.numberSubmit;
       changes.numberNewspaperOfficial = f.numberNewspaperOfficial;
       changes.areaRegistration = f.areaRegistration;
+      changes.placeRegistration = f.placeRegistration;
       changes.dateRegistration = f.dateRegistration;
     }
 

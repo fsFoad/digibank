@@ -46,14 +46,15 @@ export class OrganizationalEntityInfoEditorComponent implements OnInit {
     this.form.controls['organizationalCode'].patchValue(this.inputIdentity.personalCode)
     this.form.controls['bankNameList'].patchValue(this.inputIdentity.bank)
     this.form.controls['organizationalUnit'].patchValue(this.inputIdentity.zinafType)
-    this.form.controls['statusZinaf'].patchValue(this.inputIdentity.zinafType)
+    this.form.controls['statusZinaf'].patchValue(this.inputIdentity.statusZinaf)
     this.form.controls['shahabCode'].patchValue(this.inputIdentity.shahabCode)
     this.form.controls['noMalekiat'].patchValue(this.inputIdentity.noMalekiat)
-    this.form.controls['title'].patchValue(this.inputIdentity.title)
+    this.form.controls['title'].patchValue(this.inputIdentity.customerName || this.inputIdentity.title)
     this.form.controls['enTitle'].patchValue(this.inputIdentity.enTitle)
     this.form.controls['numberSubmit'].patchValue(this.inputIdentity.numberSubmit)
     this.form.controls['numberNewspaperOfficial'].patchValue(this.inputIdentity.numberNewspaperOfficial)
     this.form.controls['areaRegistration'].patchValue(this.inputIdentity.areaRegistration)
+    this.form.controls['placeRegistration'].patchValue(this.inputIdentity.placeRegistration)
     this.form.controls['dateRegistration'].patchValue(this.inputIdentity.dateRegistration)
   }
 

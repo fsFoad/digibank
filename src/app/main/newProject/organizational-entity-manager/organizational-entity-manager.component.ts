@@ -41,6 +41,7 @@ export class OrganizationalEntityManagerComponent implements OnInit {
       record.numberSubmit = f.numberSubmit;
       record.numberNewspaperOfficial = f.numberNewspaperOfficial;
       record.areaRegistration = f.areaRegistration;
+      record.placeRegistration = f.placeRegistration;
       record.dateRegistration = f.dateRegistration;
     }
 
