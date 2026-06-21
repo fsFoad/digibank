@@ -39,14 +39,20 @@
           <td><span class="oe-badge">{{row.customerType}}</span></td>
           <td>{{ row.relationshipType }}</td>
           <td>
-            <button pButton icon="pi pi-pencil" title="ویرایش"
-                    class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
+            <div class="oe-actions">
+              <button pButton icon="pi pi-eye" title="نمایش"
+                      class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="view(row)"></button>
+              <button pButton icon="pi pi-pencil" title="ویرایش"
+                      class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
+              <button pButton icon="pi pi-trash" title="حذف"
+                      class="pe-btn pe-btn--danger p-button-rounded p-button-text p-button-outlined" (click)="remove(row)"></button>
+            </div>
           </td>
         </tr>
       </ng-template>
       <ng-template pTemplate="emptymessage">
         <tr>
-          <td colspan="5">
+          <td colspan="7">
             <div class="oe-empty"><i class="pi pi-inbox"></i><span>ذینفعی برای نمایش وجود ندارد</span></div>
           </td>
         </tr>
@@ -57,5 +63,6 @@
   <!-- ویرایشِ inline -->
 
 </p-panel>
-<app-organizational-entity-add *ngIf="editing" [mode]="editMode" [entity]="selected"
+<app-organizational-entity-add *ngIf="editing" [mode]="mode" [entity]="selected"
                                 (done)="onDone()"></app-organizational-entity-add>
+<p-confirmDialog [closable]="false"></p-confirmDialog>

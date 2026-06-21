@@ -48,8 +48,8 @@ export interface OrganizationalInfoForm {
   relationshipType: string;
 }
 
-/** حالت کانتینر: افزودن یا ویرایش. */
-export type EntityFormMode = 'create' | 'edit';
+/** حالت کانتینر: افزودن، ویرایش، یا فقط نمایش (read-only). */
+export type EntityFormMode = 'create' | 'edit' | 'view';
 
 /** نام دیتاست مرتبط با این فیچر. */
 export const ORGANIZATIONAL_ENTITY_DATASET = 'organizational-entities';

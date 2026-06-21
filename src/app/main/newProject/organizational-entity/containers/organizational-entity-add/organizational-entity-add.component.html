@@ -7,30 +7,35 @@
     </div>
   </ng-template>
 
-  <p-tabView class="tab-view p-shadow-3 section" [(activeIndex)]="activeTab">
-    <p-tabPanel header="اطلاعات سازمانی" [disabled]="true">
-      <app-organizational-info-form [form]="form"></app-organizational-info-form>
-    </p-tabPanel>
-    <p-tabPanel header="اطلاعات هیئت مدیره و سهامداران" [disabled]="true">
-      <app-org-board-tab></app-org-board-tab>
-    </p-tabPanel>
-    <p-tabPanel header="امضاء" [disabled]="true">
-      <app-org-signature-tab></app-org-signature-tab>
-    </p-tabPanel>
-    <p-tabPanel header="نقش سازمانی" [disabled]="true">
-      <app-org-role-tab></app-org-role-tab>
-    </p-tabPanel>
-    <p-tabPanel header="اطلاعات تماس" [disabled]="true">
-      <app-org-contact-tab></app-org-contact-tab>
-    </p-tabPanel>
-    <p-tabPanel header="مستندات" [disabled]="true">
-      <app-org-documents-tab></app-org-documents-tab>
-    </p-tabPanel>
-  </p-tabView>
+  <div [appViewMode]="isView">
+    <p-tabView class="tab-view p-shadow-3 section" [(activeIndex)]="activeTab">
+      <p-tabPanel header="اطلاعات سازمانی" [disabled]="true">
+        <app-organizational-info-form [form]="form"></app-organizational-info-form>
+      </p-tabPanel>
+      <p-tabPanel header="اطلاعات هیئت مدیره و سهامداران" [disabled]="true">
+        <app-org-board-tab></app-org-board-tab>
+      </p-tabPanel>
+      <p-tabPanel header="امضاء" [disabled]="true">
+        <app-org-signature-tab></app-org-signature-tab>
+      </p-tabPanel>
+      <p-tabPanel header="نقش سازمانی" [disabled]="true">
+        <app-org-role-tab></app-org-role-tab>
+      </p-tabPanel>
+      <p-tabPanel header="اطلاعات تماس" [disabled]="true">
+        <app-org-contact-tab></app-org-contact-tab>
+      </p-tabPanel>
+      <p-tabPanel header="مستندات" [disabled]="true">
+        <app-org-documents-tab></app-org-documents-tab>
+      </p-tabPanel>
+    </p-tabView>
+  </div>
 
-  <div class="bottom-buttons p-shadow-3 section">
-    <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
-    <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="isLastTab"></button>
-    <button pButton [label]="isEdit ? 'ثبت تغییرات' : 'ثبت'" class="p-button-success" (click)="save()" [hidden]="!isLastTab"></button>
+  <div class="bottom-buttons   ">
+    <button pButton label="مرحله قبل" icon="pi pi-arrow-right" class="p-button-outlined p-button-info oef-nav-btn"
+            (click)="prevTab()" [hidden]="activeTab <= 0"></button>
+    <button pButton label="ادامه" icon="pi pi-arrow-left" iconPos="right" class="p-button-info oef-nav-btn"
+            (click)="nextTab()" [hidden]="isLastTab"></button>
+    <button pButton [label]="isEdit ? 'ثبت تغییرات' : 'ثبت'" icon="pi pi-check" class="p-button-success oef-nav-btn"
+            (click)="save()" [hidden]="!isLastTab || isView"></button>
   </div>
 </p-panel>

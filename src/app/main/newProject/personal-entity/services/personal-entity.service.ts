@@ -27,4 +27,9 @@ export class PersonalEntityService {
   update(id: number | string, changes: Partial<PersonalEntity>): Promise<void> {
     return this.getAll().then(() => this.datasetService.update(this.dataset, id, changes));
   }
+
+  /** حذف ذینفع شخصی از دیتاست. */
+  remove(id: number | string): Promise<void> {
+    return this.getAll().then(() => this.datasetService.remove(this.dataset, id));
+  }
 }

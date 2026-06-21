@@ -32,4 +32,9 @@ export class OrganizationalEntityService {
   update(id: number | string, changes: Partial<OrganizationalEntity>): Promise<void> {
     return this.getAll().then(() => this.datasetService.update(this.dataset, id, changes));
   }
+
+  /** حذف ذینفع سازمانی از دیتاست. */
+  remove(id: number | string): Promise<void> {
+    return this.getAll().then(() => this.datasetService.remove(this.dataset, id));
+  }
 }

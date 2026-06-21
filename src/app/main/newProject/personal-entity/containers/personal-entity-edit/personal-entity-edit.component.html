@@ -35,8 +35,14 @@
           <td><span class="pe-badge">{{ row.customerType }}</span></td>
           <td><span >{{ row.relationshipType }}</span></td>
           <td>
-            <button pButton icon="pi pi-pencil" title="ویرایش"
-                    class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
+            <div class="pe-actions">
+              <button pButton icon="pi pi-eye" title="نمایش"
+                      class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="view(row)"></button>
+              <button pButton icon="pi pi-pencil" title="ویرایش"
+                      class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
+              <button pButton icon="pi pi-trash" title="حذف"
+                      class="pe-btn pe-btn--danger p-button-rounded p-button-text p-button-outlined" (click)="remove(row)"></button>
+            </div>
           </td>
         </tr>
       </ng-template>
@@ -53,5 +59,6 @@
   <!-- ویرایشِ inline -->
 
 </p-panel>
-<app-personal-entity-add *ngIf="editing" [mode]="editMode" [entity]="selected"
+<app-personal-entity-add *ngIf="editing" [mode]="mode" [entity]="selected"
                          (done)="onDone()"></app-personal-entity-add>
+<p-confirmDialog [closable]="false"></p-confirmDialog>

@@ -44,7 +44,7 @@ export class OrganizationalEntityAddComponent implements OnInit {
       this.mode = routeMode;
     }
     this.form = this.formService.build();
-    if (this.mode === 'edit' && this.entity) {
+    if ((this.mode === 'edit' || this.mode === 'view') && this.entity) {
       this.form.patchValue(this.formService.toFormValue(this.entity));
     }
   }
@@ -52,7 +52,13 @@ export class OrganizationalEntityAddComponent implements OnInit {
   get isEdit(): boolean {
     return this.mode === 'edit';
   }
+  get isView(): boolean {
+    return this.mode === 'view';
+  }
   get title(): string {
+    if (this.isView) {
+      return 'نمایش ذینفع سازمانی';
+    }
     return this.isEdit ? 'ویرایش ذینفع سازمانی' : 'افزودن ذینفع سازمانی';
   }
   get isLastTab(): boolean {
