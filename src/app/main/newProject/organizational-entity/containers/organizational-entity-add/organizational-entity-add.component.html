@@ -13,24 +13,24 @@
         <app-organizational-info-form [form]="form"></app-organizational-info-form>
       </p-tabPanel>
       <p-tabPanel header="اطلاعات هیئت مدیره و سهامداران" [disabled]="true">
-        <app-org-board-tab></app-org-board-tab>
+        <app-org-board-tab #boardTab></app-org-board-tab>
       </p-tabPanel>
       <p-tabPanel header="امضاء" [disabled]="true">
-        <app-org-signature-tab></app-org-signature-tab>
+        <app-org-signature-tab #signatureTab></app-org-signature-tab>
       </p-tabPanel>
       <p-tabPanel header="نقش سازمانی" [disabled]="true">
-        <app-org-role-tab></app-org-role-tab>
+        <app-org-role-tab #roleTab></app-org-role-tab>
       </p-tabPanel>
       <p-tabPanel header="اطلاعات تماس" [disabled]="true">
-        <app-org-contact-tab></app-org-contact-tab>
+        <app-org-contact-tab #contactTab></app-org-contact-tab>
       </p-tabPanel>
       <p-tabPanel header="مستندات" [disabled]="true">
-        <app-org-documents-tab></app-org-documents-tab>
+        <app-org-documents-tab #documentsTab></app-org-documents-tab>
       </p-tabPanel>
     </p-tabView>
   </div>
 
-  <div class="bottom-buttons   ">
+  <div class="bottom-buttons view-mode-keep">
     <button pButton label="مرحله قبل" icon="pi pi-arrow-right" class="p-button-outlined p-button-info oef-nav-btn"
             (click)="prevTab()" [hidden]="activeTab <= 0"></button>
     <button pButton label="ادامه" icon="pi pi-arrow-left" iconPos="right" class="p-button-info oef-nav-btn"

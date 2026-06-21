@@ -61,4 +61,14 @@ export class OrgBoardTabComponent {
   remove(member: BoardMember): void {
     this.members = this.members.filter(m => m !== member);
   }
+
+  getValue(): any {
+    return { boardMembers: this.members };
+  }
+
+  patchValue(data: any): void {
+    if (data && Array.isArray(data.boardMembers)) {
+      this.members = data.boardMembers;
+    }
+  }
 }

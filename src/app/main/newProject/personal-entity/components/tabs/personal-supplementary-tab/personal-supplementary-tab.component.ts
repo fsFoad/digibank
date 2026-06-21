@@ -44,4 +44,14 @@ export class PersonalSupplementaryTabComponent {
       tedadKefalat: [''],
     });
   }
+
+  getValue(): any {
+    return this.form.value;
+  }
+
+  patchValue(data: any): void {
+    if (data) {
+      this.form.patchValue(data);
+    }
+  }
 }

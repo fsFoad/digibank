@@ -95,4 +95,19 @@ export class PersonalContactTabComponent implements OnChanges {
     this.addresses = [...this.addresses, this.addressForm.value];
     this.panel = 'list';
   }
+
+  getValue(): any {
+    return { contacts: this.contacts, addresses: this.addresses };
+  }
+
+  patchValue(data: any): void {
+    if (data) {
+      if (Array.isArray(data.contacts)) {
+        this.contacts = data.contacts;
+      }
+      if (Array.isArray(data.addresses)) {
+        this.addresses = data.addresses;
+      }
+    }
+  }
 }

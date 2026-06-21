@@ -13,27 +13,27 @@
         <app-personal-identity-form [form]="form"></app-personal-identity-form>
       </p-tabPanel>
       <p-tabPanel header="امضاء" [disabled]="true">
-        <app-personal-signature-tab></app-personal-signature-tab>
+        <app-personal-signature-tab #signatureTab></app-personal-signature-tab>
       </p-tabPanel>
       <p-tabPanel header="نقش سازمانی" [disabled]="true">
-        <app-personal-role-tab></app-personal-role-tab>
+        <app-personal-role-tab #roleTab></app-personal-role-tab>
       </p-tabPanel>
       <p-tabPanel header="اطلاعات تماس" [disabled]="true">
-        <app-personal-contact-tab [entity]="entity"></app-personal-contact-tab>
+        <app-personal-contact-tab #contactTab [entity]="entity"></app-personal-contact-tab>
       </p-tabPanel>
       <p-tabPanel header="اطلاعات تکمیلی" [disabled]="true">
-        <app-personal-supplementary-tab></app-personal-supplementary-tab>
+        <app-personal-supplementary-tab #supplementaryTab></app-personal-supplementary-tab>
       </p-tabPanel>
       <p-tabPanel header="زمینه فعالیت" [disabled]="true">
-        <app-personal-activity-field-tab></app-personal-activity-field-tab>
+        <app-personal-activity-field-tab #activityFieldTab></app-personal-activity-field-tab>
       </p-tabPanel>
       <p-tabPanel header="مستندات" [disabled]="true">
-        <app-personal-documents-tab></app-personal-documents-tab>
+        <app-personal-documents-tab #documentsTab></app-personal-documents-tab>
       </p-tabPanel>
     </p-tabView>
   </div>
 
-  <div class="bottom-buttons">
+  <div class="bottom-buttons view-mode-keep">
     <button pButton label="مرحله قبل" icon="pi pi-arrow-right" class="p-button-outlined p-button-info pef-nav-btn"
             (click)="prevTab()" [hidden]="activeTab <= 0"></button>
     <button pButton label="ادامه" icon="pi pi-arrow-left" iconPos="right" class="p-button-info pef-nav-btn"
