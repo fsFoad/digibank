@@ -1,3 +1,194 @@
 :host {
   width: 100%;
 }
+/*
+
+:host ::ng-deep .app-nested-level-1 {
+  border-right: 5px solid #0B3C6D;
+}
+:host ::ng-deep .app-nested-level-2 {
+  border-right: 5px solid #1565C0;
+}
+
+:host ::ng-deep .app-nested-level-1 .p-datatable-thead > tr > th {
+  background: linear-gradient(135deg, #0b3c6d, #145ea8) !important;
+  color: #fff !important;
+}
+:host ::ng-deep .app-nested-level-2 .p-datatable-thead > tr > th {
+  background: linear-gradient(135deg, #1565c0, #1e88e5) !important;
+  color: #fff !important;
+}
+
+:host ::ng-deep .expand-btn {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(11, 60, 109, .15) !important;
+  background: transparent;
+  color: #0b3c6d !important;
+}
+:host ::ng-deep .expand-btn .p-button-label {
+  color: inherit !important;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+:host ::ng-deep .expand-btn:hover {
+  background: #0b3c6d !important;
+  color: #fff !important;
+}
+.app-nested-level-2 {
+  border-right: 5px solid #1565C0;
+}
+
+.app-nested-level-3 {
+  border-right: 5px solid #00897B;
+}
+*/
+:host ::ng-deep {
+
+  /* ==========================
+      LEVEL 1
+  ========================== */
+
+  .app-nested-level-1 {
+    border-right: 5px solid #0B3C6D;
+  }
+
+  .app-nested-level-1 .p-datatable-thead > tr > th {
+    background: linear-gradient(
+      135deg,
+      #0b3c6d,
+      #145ea8
+    ) !important;
+
+    color: #fff !important;
+    border: none !important;
+    font-weight: 700;
+  }
+
+  /* ==========================
+      LEVEL 2
+  ========================== */
+
+  .app-nested-level-2 {
+    border-right: 5px solid #1565C0;
+  }
+
+  .app-nested-level-2 .p-datatable-thead > tr > th {
+    background: linear-gradient(
+      135deg,
+      #1565c0,
+      #1e88e5
+    ) !important;
+
+    color: #fff !important;
+    border: none !important;
+    font-weight: 600;
+  }
+
+  /* ==========================
+      TABLE BODY
+  ========================== */
+
+  .p-datatable-tbody > tr > td {
+    padding: .75rem 1rem;
+    vertical-align: middle;
+  }
+
+  .p-datatable-tbody > tr:hover {
+    background: #f7faff;
+  }
+
+  /* ==========================
+      EXPAND BUTTON
+  ========================== */
+
+  .expand-btn {
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+
+    border-radius: 10px !important;
+    border: 1px solid rgba(11, 60, 109, .15) !important;
+
+    background: #ffffff !important;
+    color: #0b3c6d !important;
+
+    font-size: 18px !important;
+    font-weight: 700 !important;
+
+    box-shadow: 0 2px 8px rgba(11, 60, 109, .08);
+    transition: all .25s ease;
+  }
+
+  .expand-btn:hover {
+    background: #0b3c6d !important;
+    color: #fff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(11, 60, 109, .2);
+  }
+
+  .expand-btn .p-button-label {
+    color: inherit !important;
+    font-weight: 700 !important;
+    font-size: 18px !important;
+    line-height: 1;
+  }
+
+  /* ==========================
+      COLUMN SIZING
+  ========================== */
+
+  .p-datatable-tbody > tr > td:first-child {
+    width: 60px;
+    padding-left: 16px !important;
+    padding-right: 12px !important;
+  }
+
+  .p-datatable-tbody > tr > td:nth-child(2) {
+    padding-right: 20px !important;
+  }
+
+  /* ==========================
+      ACCOUNT TABLE
+  ========================== */
+
+  .app-nested-level-2 .p-datatable-wrapper {
+  /*  border-radius: 12px;*/
+    overflow: hidden;
+  }
+
+  .app-nested-level-2 .p-datatable-tbody > tr > td {
+    padding: .75rem 1rem;
+  }
+/*  :host ::ng-deep .p-card {
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,.06);
+  }*/
+  /* ==========================
+      EMPTY MESSAGE
+  ========================== */
+
+  .p-datatable-emptymessage td {
+    color: #6b7280;
+    font-size: 14px;
+    padding: 2rem !important;
+  }
+}
+
+/* ==========================
+    ACCOUNT DIALOG
+========================== */
+
+tbody.account > tr > td {
+  padding-inline-start: .5em;
+  padding-inline-end: 1em;
+}
+
+tbody.account > tr > td.p-text-left {
+  padding-inline-start: 1em;
+  padding-inline-end: .5em;
+}
+

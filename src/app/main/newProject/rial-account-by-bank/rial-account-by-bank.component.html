@@ -2,27 +2,103 @@
   <div class="app-mx-5r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
-      <span class="p-float-label">
-          <p-dropdown [autoDisplayFirst]="false" [options]="banklistConstants">
-          </p-dropdown>
-
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="banklistConstants" [(ngModel)]="selectedBank"></p-dropdown>
           <label>نام بانک</label>
-   <button id="btnRecovery" class="p-button-info" pButton label="مشاهده"></button>&nbsp;
-
         </span>
       </div>
-      <div class="p-field p-col">
-
+      <div class="p-field p-col p-d-flex p-ai-center">
+        <button id="btnRecovery" class="p-button-info " pButton icon="pi pi-eye" label="مشاهده" style="width: 85px"
+                [disabled]="!selectedBank" (click)="view()"></button>
       </div>
-
-      <div class="p-field p-col">
-
-      </div>
-      <div class="p-field p-col">
-
-      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
     </div>
   </div>
-  <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
-  </div>
+
+  <p-card *ngIf="searched">
+    <div class="app-nested-level-1">
+      <p-table [value]="levelRows" [loading]="loading" dataKey="code">
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="width:70px"></th>
+            <th translate style="width: 4%;">ردیف</th>
+            <th translate class="app-w-10pc">کد سر فصل</th>
+            <th translate class="p-text-right">عنوان سر فصل</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-row let-expanded="expanded">
+          <tr>
+            <td>
+              <button type="button" pButton pRipple [pRowToggler]="row" class="expand-btn"
+                      [label]="expanded ? '−' : '+'"></button>
+            </td>
+            <td>{{ i + 1 }}</td>
+            <td>{{ row.code }}</td>
+            <td class="p-text-right">{{ row.title }}</td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="rowexpansion" let-row>
+          <tr>
+            <td colspan="4">
+              <div class="p-p-3 app-nested-level-2">
+                <p-table [value]="row.rows">
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th translate class="app-w-10pc">عنوان حساب</th>
+                      <th translate class="app-w-5pc">شماره حساب</th>
+                      <th translate class="app-w-5pc"></th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-account>
+                    <tr>
+                      <td>{{ account.title }}</td>
+                      <td>{{ account.accountNumber }}</td>
+                      <td>
+                        <button pButton type="button" label="نمایش" icon="pi pi-eye"
+                                class="p-button-sm p-button-info" (click)="showAccount(account)"></button>
+                      </td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+              </div>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="4" class="p-text-center p-py-4">حساب ریالی برای این بانک ثبت نشده است</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+  </p-card>
 </p-panel>
+
+<p-dialog header="جزئیات حساب" [(visible)]="accountDialogVisible" [modal]="true" [style]="{width:'900px'}">
+  <table class="account w-100-p" *ngIf="selectedAccount">
+    <tbody>
+    <tr>
+      <td class="p-text-left">شماره حساب:</td>
+      <td>{{ selectedAccount.accountNumber }}</td>
+
+      <td class="p-text-left">مانده حساب:</td>
+      <td>{{ selectedAccount.balance | addCommaSeparator }}</td>
+
+      <td class="p-text-left">مبلغ مسدودی:</td>
+      <td>{{ selectedAccount.blockedAmount | addCommaSeparator }}</td>
+    </tr>
+
+    <tr>
+      <td class="p-text-left">تاریخ افتتاح:</td>
+      <td>{{ selectedAccount.openingDate | castToDate }}</td>
+
+      <td class="p-text-left">شعبه افتتاح:</td>
+      <td>{{ selectedAccount.openingBranch }}</td>
+
+      <td class="p-text-left">آخرین گردش:</td>
+      <td>{{ selectedAccount.dateOfLastTurnover | castToDate }}</td>
+    </tr>
+    </tbody>
+  </table>
+</p-dialog>

@@ -22,7 +22,7 @@ export class OrganizationalEntityAddComponent implements OnInit {
   @Input() mode: EntityFormMode = 'create';
   /** رکوردی که در حالت ویرایش باید فرم با آن پر شود. */
   @Input() entity: OrganizationalEntity | null = null;
-  /** بعد از ذخیره/خروج، برای استفاده‌ی inline (مثلاً داخل لیست) منتشر می‌شود. */
+  /** بعد از ذخیره، برای استفاده‌ی inline (مثلاً داخل لیست) منتشر می‌شود. */
   @Output() done = new EventEmitter<boolean>();
 
   private static readonly LAST_TAB = 5;
@@ -69,24 +69,20 @@ export class OrganizationalEntityAddComponent implements OnInit {
   save(): void {
     const payload = this.formService.toEntity(this.form.value);
     if (this.isEdit && this.entity && this.entity.id != null) {
-      this.entityService.update(this.entity.id, payload).then(() => this.finish());
+      this.entityService.update(this.entity.id, payload).then(() => this.goToList());
     } else {
       // تاریخ تعریف رکورد به‌صورت خودکار همان لحظه‌ی ثبت است؛ از کاربر گرفته نمی‌شود
       payload.registrationDate = Number(DateUtil.persianDateNow());
-      this.entityService.create(payload as OrganizationalEntity).then(() => this.finish());
+      this.entityService.create(payload as OrganizationalEntity).then(() => this.goToList());
     }
   }
 
-  exit(): void {
-    this.finish();
-  }
-
-  private finish(): void {
-    // اگر inline استفاده شده، به والد خبر بده؛ در غیر این صورت به خانه برگرد
+  /** برگشت به لیستِ ذینفعان سازمانی (هم پس از ثبت، هم با دکمه‌ی برگشتِ هدر). */
+  goToList(): void {
     if (this.done.observers.length > 0) {
       this.done.emit(true);
     } else {
-      this.router.navigate(['/']);
+      this.router.navigate(['/organizational-entity-edit']);
     }
   }
 }

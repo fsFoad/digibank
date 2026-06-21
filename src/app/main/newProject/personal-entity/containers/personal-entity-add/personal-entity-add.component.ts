@@ -21,7 +21,7 @@ export class PersonalEntityAddComponent implements OnInit {
   @Input() mode: EntityFormMode = 'create';
   /** رکوردی که در حالت ویرایش باید فرم با آن پر شود. */
   @Input() entity: PersonalEntity | null = null;
-  /** بعد از ذخیره/خروج، برای استفاده‌ی inline (مثلاً داخل لیست) منتشر می‌شود. */
+  /** بعد از ذخیره، برای استفاده‌ی inline (مثلاً داخل لیست) منتشر می‌شود. */
   @Output() done = new EventEmitter<boolean>();
 
   private static readonly LAST_TAB = 6;

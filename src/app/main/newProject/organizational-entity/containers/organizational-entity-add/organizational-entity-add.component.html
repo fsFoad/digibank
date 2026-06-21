@@ -1,4 +1,12 @@
-<p-panel [header]="title">
+<p-panel>
+  <ng-template pTemplate="header">
+    <div class="pef-panel-header">
+      <span class="pef-panel-title">{{ title }}</span>
+      <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text pef-back-btn"
+              (click)="goToList()"></button>
+    </div>
+  </ng-template>
+
   <p-tabView class="tab-view p-shadow-3 section" [(activeIndex)]="activeTab">
     <p-tabPanel header="اطلاعات سازمانی" [disabled]="true">
       <app-organizational-info-form [form]="form"></app-organizational-info-form>
@@ -24,6 +32,5 @@
     <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
     <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="isLastTab"></button>
     <button pButton [label]="isEdit ? 'ثبت تغییرات' : 'ثبت'" class="p-button-success" (click)="save()" [hidden]="!isLastTab"></button>
-    <button pButton label="خروج" class="p-button-danger" (click)="exit()"></button>
   </div>
 </p-panel>
