@@ -8,12 +8,12 @@ import { Constants } from '../../../../../shared/constants/Constants';
   templateUrl: './org-documents-tab.component.html',
 })
 export class OrgDocumentsTabComponent {
-  readonly documentType = Constants.documentType;
+  readonly documentTypeOrganization = Constants.documentTypeOrganization;
   form: FormGroup;
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({
-      documentType: [''],
+      documentTypeOrganization: [''],
       metadata1: [''],
       metadata2: [''],
       readFromFile: [''],
