@@ -7,7 +7,7 @@ import {Constants} from '../../../shared/constants/Constants';
   styleUrls: ['./organizational-entity-documents-editor.component.scss']
 })
 export class OrganizationalEntityDocumentsEditorComponent implements OnInit {
-  documentType=Constants.documentType;
+  documentTypeOrganization=Constants.documentTypeOrganization;
 
   constructor() { }
 
