@@ -80,34 +80,34 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             type: 'collapsable',
             icon: 'account_balance_wallet',
             items: [
-              {
+          /*    {
                 id: 'person-editor',
                 label: 'تعریف ذینفع شخصی',
                 translate: 'تعریف ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/person-editor',
-              },
-              {
+              },*/
+             /* {
                 id: 'personalEntityList',
                 label: 'اصلاح ذینفع شخصی',
                 translate: 'اصلاح ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/personalEntityList',
-              },
+              },*/
               {
                 id: 'personalEntityAdd',
-                label: 'افزودن ذی نفع شخصی',
-                translate: 'افزودن ذی نفع شخصی',
+                label: 'تعریف ذینفع شخصی',
+                translate: 'تعریف ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/personal-entity-add',
               },
               {
                 id: 'personalEntityEdit',
-                label: 'ویرایش ذینفع شخصی',
-                translate: 'ویرایش ذینفع شخصی',
+                label: 'اصلاح ذینفع شخصی',
+                translate: 'اصلاح ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/personal-entity-edit',
@@ -120,7 +120,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             type: 'collapsable',
             icon: 'account_balance_wallet',
             items: [
-              {
+       /*       {
                 id: 'real',
                 label: 'تعریف ذینفع سازمانی',
                 translate: 'تعریف ذینفع سازمانی',
@@ -135,19 +135,19 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/organizationalEntityList',
-              },
+              },*/
               {
                 id: 'organizationalEntityAdd',
-                label: 'افزودن ذی نفع',
-                translate: 'افزودن ذی نفع',
+                label: 'تعریف ذینفع سازمانی',
+                translate: 'تعریف ذینفع سازمانی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/organizational-entity-add',
               },
               {
                 id: 'organizationalEntityEdit',
-                label: 'ویرایش ذینفع',
-                translate: 'ویرایش ذینفع',
+                label: 'اصلاح ذینفع سازمانی',
+                translate: 'اصلاح ذینفع سازمانی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/organizational-entity-edit',

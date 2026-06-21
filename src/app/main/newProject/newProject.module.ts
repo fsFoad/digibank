@@ -4,7 +4,7 @@ import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-
 import { NewProjectRoutingModule } from './newProject-routing.module';
 import { OrganizationalInfoFormComponent } from './organizational-entity/components/organizational-info-form/organizational-info-form.component';
 import { OrganizationalEntityFormComponent } from './organizational-entity/containers/organizational-entity-form/organizational-entity-form.component';
-import { OrganizationalEntityManageComponent } from './organizational-entity/containers/organizational-entity-manage/organizational-entity-manage.component';
+import { OrganizationalEntityEditComponent } from './organizational-entity/containers/organizational-entity-edit/organizational-entity-edit.component';
 import { OrgBoardTabComponent } from './organizational-entity/components/tabs/org-board-tab/org-board-tab.component';
 import { OrgSignatureTabComponent } from './organizational-entity/components/tabs/org-signature-tab/org-signature-tab.component';
 import { OrgRoleTabComponent } from './organizational-entity/components/tabs/org-role-tab/org-role-tab.component';
@@ -186,7 +186,7 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
   declarations: [
     OrganizationalInfoFormComponent,
     OrganizationalEntityFormComponent,
-    OrganizationalEntityManageComponent,
+    OrganizationalEntityEditComponent,
     OrgBoardTabComponent,
     OrgSignatureTabComponent,
     OrgRoleTabComponent,

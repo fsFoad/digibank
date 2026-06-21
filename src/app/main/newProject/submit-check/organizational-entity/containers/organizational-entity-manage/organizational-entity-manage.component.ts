@@ -7,7 +7,7 @@ import { EntityFormMode, OrganizationalEntity } from '../../models/organizationa
  * انتخاب یک ردیف، کانتینرِ فرم را در حالت ویرایش به‌صورت inline نمایش می‌دهد.
  */
 @Component({
-  selector: 'app-organizational-entity-manage',
+  selector: 'app-organizational-entity-edit',
   templateUrl: './organizational-entity-manage.component.html',
   styleUrls: ['./organizational-entity-manage.component.scss'],
 })

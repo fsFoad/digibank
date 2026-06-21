@@ -35,7 +35,7 @@ import { SubmitCheckComponent } from './submit-check/submit-check.component';
 import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
 import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
 import { OrganizationalEntityFormComponent } from './organizational-entity/containers/organizational-entity-form/organizational-entity-form.component';
-import { OrganizationalEntityManageComponent } from './organizational-entity/containers/organizational-entity-manage/organizational-entity-manage.component';
+import { OrganizationalEntityEditComponent } from './organizational-entity/containers/organizational-entity-edit/organizational-entity-edit.component';
 import { PersonalEntityAddComponent } from './personal-entity/containers/personal-entity-add/personal-entity-add.component';
 import { PersonalEntityEditComponent } from './personal-entity/containers/personal-entity-edit/personal-entity-edit.component';
 import { PersonEditorComponent } from './person-editor/person-editor.component';
@@ -236,7 +236,7 @@ const routes: Routes = [
       },
       {
         path: 'organizational-entity-edit',
-        component: OrganizationalEntityManageComponent,
+        component: OrganizationalEntityEditComponent,
       },
       {
         path: 'personal-entity-add',

@@ -33,7 +33,7 @@
           <td class="pe-muted">{{ row.registrationDate | castToDate }}</td>
           <td class="pe-mono">{{ row.contactNumber }}</td>
           <td><span class="pe-badge">{{ row.customerType }}</span></td>
-          <td><span class="pe-badge pe-badge--alt">{{ row.relationshipType }}</span></td>
+          <td><span >{{ row.relationshipType }}</span></td>
           <td>
             <button pButton icon="pi pi-pencil" title="ویرایش"
                     class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
