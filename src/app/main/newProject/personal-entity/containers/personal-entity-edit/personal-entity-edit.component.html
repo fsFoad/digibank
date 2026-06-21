@@ -1,6 +1,6 @@
-<p-panel header="ویرایش ذینفع شخصی">
+<p-panel header="اطلاعات ذینفع شخصی" *ngIf="!editing">
   <!-- لیست -->
-  <div class="pe-wrap" *ngIf="!editing">
+  <div class="pe-wrap" >
     <div class="pe-toolbar">
       <span class="pe-heading">فهرست ذینفعان شخصی</span>
       <span class="pe-count">{{ entities.length }} مورد</span>
@@ -8,13 +8,13 @@
 
     <p-table #dt [value]="entities" class="pe-table"
              [globalFilterFields]="['customerName','contactNumber','relationshipType']">
-      <ng-template pTemplate="caption">
+   <!--   <ng-template pTemplate="caption">
         <span class="pe-search p-input-icon-right">
           <i class="pi pi-search"></i>
           <input pInputText type="text" placeholder="جستجو…"
                  (input)="dt.filterGlobal($any($event.target).value, 'contains')">
         </span>
-      </ng-template>
+      </ng-template>-->
       <ng-template pTemplate="header">
         <tr>
           <th class="pe-th-index">ردیف</th>
@@ -36,7 +36,7 @@
           <td><span class="pe-badge pe-badge--alt">{{ row.relationshipType }}</span></td>
           <td>
             <button pButton icon="pi pi-pencil" title="ویرایش"
-                    class="pe-btn p-button-rounded p-button-text" (click)="edit(row)"></button>
+                    class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
           </td>
         </tr>
       </ng-template>
@@ -51,6 +51,7 @@
   </div>
 
   <!-- ویرایشِ inline -->
-  <app-personal-entity-form *ngIf="editing" [mode]="editMode" [entity]="selected"
-                            (done)="onDone()"></app-personal-entity-form>
+
 </p-panel>
+<app-personal-entity-add *ngIf="editing" [mode]="editMode" [entity]="selected"
+                         (done)="onDone()"></app-personal-entity-add>

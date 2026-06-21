@@ -27,6 +27,5 @@
     <button pButton label="مرحله قبل" class="p-button-info" (click)="prevTab()" [hidden]="activeTab <= 0"></button>
     <button pButton label="ادامه" class="p-button-info" (click)="nextTab()" [hidden]="isLastTab"></button>
     <button pButton [label]="isEdit ? 'ثبت تغییرات' : 'ثبت'" class="p-button-success" (click)="save()" [hidden]="!isLastTab"></button>
-    <button pButton label="خروج" class="p-button-danger" (click)="exit()"></button>
   </div>
 </p-panel>

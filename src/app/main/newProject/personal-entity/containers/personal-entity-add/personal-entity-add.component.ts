@@ -12,11 +12,11 @@ import { DateUtil } from '../../../../shared/util/DateUtil';
  * - منطق فرم به FormService و دسترسی داده به EntityService واگذار شده است.
  */
 @Component({
-  selector: 'app-personal-entity-form',
-  templateUrl: './personal-entity-form.component.html',
-  styleUrls: ['./personal-entity-form.component.scss'],
+  selector: 'app-personal-entity-add',
+  templateUrl: './personal-entity-add.component.html',
+  styleUrls: ['./personal-entity-add.component.scss'],
 })
-export class PersonalEntityFormComponent implements OnInit {
+export class PersonalEntityAddComponent implements OnInit {
   /** 'create' برای افزودن، 'edit' برای ویرایش. */
   @Input() mode: EntityFormMode = 'create';
   /** رکوردی که در حالت ویرایش باید فرم با آن پر شود. */
@@ -54,11 +54,11 @@ export class PersonalEntityFormComponent implements OnInit {
     return this.isEdit ? 'ویرایش ذینفع شخصی' : 'افزودن ذینفع شخصی';
   }
   get isLastTab(): boolean {
-    return this.activeTab >= PersonalEntityFormComponent.LAST_TAB;
+    return this.activeTab >= PersonalEntityAddComponent.LAST_TAB;
   }
 
   nextTab(): void {
-    this.activeTab = Math.min(PersonalEntityFormComponent.LAST_TAB, this.activeTab + 1);
+    this.activeTab = Math.min(PersonalEntityAddComponent.LAST_TAB, this.activeTab + 1);
   }
   prevTab(): void {
     this.activeTab = Math.max(0, this.activeTab - 1);

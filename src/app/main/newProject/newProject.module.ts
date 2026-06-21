@@ -11,7 +11,7 @@ import { OrgRoleTabComponent } from './organizational-entity/components/tabs/org
 import { OrgContactTabComponent } from './organizational-entity/components/tabs/org-contact-tab/org-contact-tab.component';
 import { OrgDocumentsTabComponent } from './organizational-entity/components/tabs/org-documents-tab/org-documents-tab.component';
 import { PersonalIdentityFormComponent } from './personal-entity/components/personal-identity-form/personal-identity-form.component';
-import { PersonalEntityFormComponent } from './personal-entity/containers/personal-entity-form/personal-entity-form.component';
+import { PersonalEntityAddComponent } from './personal-entity/containers/personal-entity-add/personal-entity-add.component';
 import { PersonalEntityEditComponent } from './personal-entity/containers/personal-entity-edit/personal-entity-edit.component';
 import { PersonalSignatureTabComponent } from './personal-entity/components/tabs/personal-signature-tab/personal-signature-tab.component';
 import { PersonalRoleTabComponent } from './personal-entity/components/tabs/personal-role-tab/personal-role-tab.component';
@@ -193,7 +193,7 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
     OrgContactTabComponent,
     OrgDocumentsTabComponent,
     PersonalIdentityFormComponent,
-    PersonalEntityFormComponent,
+    PersonalEntityAddComponent,
     PersonalEntityEditComponent,
     PersonalSignatureTabComponent,
     PersonalRoleTabComponent,

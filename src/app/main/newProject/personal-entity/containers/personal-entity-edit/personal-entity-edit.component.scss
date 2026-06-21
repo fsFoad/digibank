@@ -45,9 +45,11 @@
   padding: 0.2rem 0.7rem; border-radius: 999px;
   background: var(--pe-accent-soft); color: var(--pe-accent);
 }
+/*
 .pe-badge--alt { background: rgba(60,66,82,0.07); color: #3c4252; }
 :host ::ng-deep .pe-btn.p-button { color: var(--pe-accent); }
 :host ::ng-deep .pe-btn.p-button:hover { background: var(--pe-accent-soft); }
+*/
 
 .pe-empty {
   display: flex; flex-direction: column; align-items: center; gap: 0.6rem;
