@@ -2,9 +2,9 @@
   "table1Rows": [
     {
       "sourceShaba": "IR81CBKU0000000000001234560101",
-      "totalAmountOfTheRemittance": 2625002,
+      "totalAmountOfTheRemittance": 2625002000,
       "numberOfRemittanceRows": 3,
-      "effectiveDate": 14000705,
+      "effectiveDate": 14040705,
       "registrar": "نسرین دریادل",
       "registrationDate": 14000701
     }
