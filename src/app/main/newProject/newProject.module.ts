@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ReportBankTransferComponent } from './report-bank-transfer/report-bank-transfer.component';
 import { NewProjectRoutingModule } from './newProject-routing.module';
 import { OrganizationalInfoFormComponent } from './organizational-entity/components/organizational-info-form/organizational-info-form.component';
-import { OrganizationalEntityFormComponent } from './organizational-entity/containers/organizational-entity-form/organizational-entity-form.component';
+import { OrganizationalEntityAddComponent } from './organizational-entity/containers/organizational-entity-add/organizational-entity-add.component';
 import { OrganizationalEntityEditComponent } from './organizational-entity/containers/organizational-entity-edit/organizational-entity-edit.component';
 import { OrgBoardTabComponent } from './organizational-entity/components/tabs/org-board-tab/org-board-tab.component';
 import { OrgSignatureTabComponent } from './organizational-entity/components/tabs/org-signature-tab/org-signature-tab.component';
@@ -72,8 +72,6 @@ import { UpOrDownloadComponent } from './up-or-download/up-or-download.component
 import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 
-import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
-import { OrganizationalEntityInfoEditorComponent } from './organizational-entity-manager/organizational-entity-info-editor/organizational-entity-info-editor.component';
 import { TabViewModule } from 'primeng/tabview';
 import { PasswordModule } from 'primeng/password';
 import { AutoCompleteModule } from 'primeng/autocomplete';
@@ -86,7 +84,6 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { PaginatorModule } from 'primeng/paginator';
 import { ChartModule } from 'primeng/chart';
-import { OrganizationalEntityInfoViewerComponent } from './organizational-entity-manager/organizational-entity-info-viewer/organizational-entity-info-viewer.component';
 import { EditViewOtpProcessComponent } from './edit-view-otp-process/edit-view-otp-process.component';
 import { BoardOfDirectorsEditorComponent } from './board-of-directors-editor/board-of-directors-editor.component';
 import { PartySignatureEditorComponent } from './person-editor/party-signature-editor/party-signature-editor.component';
@@ -185,7 +182,7 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
   ],
   declarations: [
     OrganizationalInfoFormComponent,
-    OrganizationalEntityFormComponent,
+    OrganizationalEntityAddComponent,
     OrganizationalEntityEditComponent,
     OrgBoardTabComponent,
     OrgSignatureTabComponent,
@@ -235,9 +232,6 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
     UpOrDownloadComponent,
     TashilatListComponent,
 
-    OrganizationalEntityManagerComponent,
-    OrganizationalEntityInfoEditorComponent,
-    OrganizationalEntityInfoViewerComponent,
     EditViewOtpProcessComponent,
     BoardOfDirectorsEditorComponent,
     PartySignatureEditorComponent,

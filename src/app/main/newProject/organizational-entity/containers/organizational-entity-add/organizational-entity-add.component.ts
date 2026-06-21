@@ -13,11 +13,11 @@ import { DateUtil } from '../../../../shared/util/DateUtil';
  * - تبِ «اطلاعات سازمانی» presentational است؛ بقیه‌ی تب‌ها همان کامپوننت‌های موجودند.
  */
 @Component({
-  selector: 'app-organizational-entity-form',
-  templateUrl: './organizational-entity-form.component.html',
-  styleUrls: ['./organizational-entity-form.component.scss'],
+  selector: 'app-organizational-entity-add',
+  templateUrl: './organizational-entity-add.component.html',
+  styleUrls: ['./organizational-entity-add.component.scss'],
 })
-export class OrganizationalEntityFormComponent implements OnInit {
+export class OrganizationalEntityAddComponent implements OnInit {
   /** 'create' برای افزودن، 'edit' برای ویرایش. */
   @Input() mode: EntityFormMode = 'create';
   /** رکوردی که در حالت ویرایش باید فرم با آن پر شود. */
@@ -56,11 +56,11 @@ export class OrganizationalEntityFormComponent implements OnInit {
     return this.isEdit ? 'ویرایش ذینفع سازمانی' : 'افزودن ذینفع سازمانی';
   }
   get isLastTab(): boolean {
-    return this.activeTab >= OrganizationalEntityFormComponent.LAST_TAB;
+    return this.activeTab >= OrganizationalEntityAddComponent.LAST_TAB;
   }
 
   nextTab(): void {
-    this.activeTab = Math.min(OrganizationalEntityFormComponent.LAST_TAB, this.activeTab + 1);
+    this.activeTab = Math.min(OrganizationalEntityAddComponent.LAST_TAB, this.activeTab + 1);
   }
   prevTab(): void {
     this.activeTab = Math.max(0, this.activeTab - 1);

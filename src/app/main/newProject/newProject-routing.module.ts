@@ -33,8 +33,6 @@ import { ReportStatusWalletComponent } from './report-status-wallet/report-statu
 import { SubmitClearComponent } from './submit-clear/submit-clear.component';
 import { SubmitCheckComponent } from './submit-check/submit-check.component';
 import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
-import { OrganizationalEntityManagerComponent } from './organizational-entity-manager/organizational-entity-manager.component';
-import { OrganizationalEntityFormComponent } from './organizational-entity/containers/organizational-entity-form/organizational-entity-form.component';
 import { OrganizationalEntityEditComponent } from './organizational-entity/containers/organizational-entity-edit/organizational-entity-edit.component';
 import { PersonalEntityAddComponent } from './personal-entity/containers/personal-entity-add/personal-entity-add.component';
 import { PersonalEntityEditComponent } from './personal-entity/containers/personal-entity-edit/personal-entity-edit.component';
@@ -89,6 +87,9 @@ import {OrganizationalEntityListComponent} from './organizational-entity-list/or
 import {IdentificationTransactionComponent} from './identification-transaction/identification-transaction.component';
 import {RialAccountByBankComponent} from './rial-account-by-bank/rial-account-by-bank.component';
 import {HoldingsBillComponent} from './holdings-bill/holdings-bill.component';
+import {
+  OrganizationalEntityAddComponent
+} from "./organizational-entity/containers/organizational-entity-add/organizational-entity-add.component";
 
 
 const routes: Routes = [
@@ -225,13 +226,10 @@ const routes: Routes = [
         path: 'tashilatList',
         component: TashilatListComponent,
       },
-      {
-        path: 'organizational-entity-manager',
-        component: OrganizationalEntityManagerComponent,
-      },
+
       {
         path: 'organizational-entity-add',
-        component: OrganizationalEntityFormComponent,
+        component: OrganizationalEntityAddComponent,
         data: { mode: 'create' },
       },
       {

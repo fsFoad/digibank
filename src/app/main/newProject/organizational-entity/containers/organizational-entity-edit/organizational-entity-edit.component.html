@@ -1,6 +1,6 @@
-<p-panel header="ویرایش ذینفع سازمانی">
+<p-panel header="ویرایش ذینفع سازمانی"  *ngIf="!editing">
   <!-- لیست -->
-  <div class="oe-wrap" *ngIf="!editing">
+  <div class="oe-wrap">
     <div class="oe-toolbar">
       <span class="oe-heading">فهرست ذینفعان سازمانی</span>
       <span class="oe-count">{{ entities.length }} مورد</span>
@@ -55,6 +55,7 @@
   </div>
 
   <!-- ویرایشِ inline -->
-  <app-organizational-entity-form *ngIf="editing" [mode]="editMode" [entity]="selected"
-                                  (done)="onDone()"></app-organizational-entity-form>
+
 </p-panel>
+<app-organizational-entity-add *ngIf="editing" [mode]="editMode" [entity]="selected"
+                                (done)="onDone()"></app-organizational-entity-add>

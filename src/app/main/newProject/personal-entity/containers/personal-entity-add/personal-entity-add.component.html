@@ -1,4 +1,12 @@
-<p-panel [header]="title">
+<p-panel>
+  <ng-template pTemplate="header">
+    <div class="pef-panel-header">
+      <span class="pef-panel-title">{{ title }}</span>
+      <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text pef-back-btn"
+              (click)="goToList()"></button>
+    </div>
+  </ng-template>
+
   <p-tabView class="tab-view p-shadow-3 section" [(activeIndex)]="activeTab">
     <p-tabPanel header="اطلاعات هویتی" [disabled]="true">
       <app-personal-identity-form [form]="form"></app-personal-identity-form>

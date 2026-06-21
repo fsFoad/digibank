@@ -12,7 +12,7 @@ import { EntityFormMode, OrganizationalEntity } from '../../models/organizationa
  * - تبِ «اطلاعات سازمانی» presentational است؛ بقیه‌ی تب‌ها همان کامپوننت‌های موجودند.
  */
 @Component({
-  selector: 'app-organizational-entity-form',
+  selector: 'app-organizational-entity-add',
   templateUrl: './organizational-entity-form.component.html',
   styleUrls: ['./organizational-entity-form.component.scss'],
 })
