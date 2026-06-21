@@ -83,7 +83,7 @@ function createSampleRows(): GroupPayaRow[] {
       status: 'بررسی نشده',
       registrar: 'ارژنگ دستان',
       registrationDate: 1404_06_31,
-    },
+    }
   ]
 
 
