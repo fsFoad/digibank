@@ -37,7 +37,7 @@ import { OrganizationalEntityManagerComponent } from './organizational-entity-ma
 import { OrganizationalEntityFormComponent } from './organizational-entity/containers/organizational-entity-form/organizational-entity-form.component';
 import { OrganizationalEntityManageComponent } from './organizational-entity/containers/organizational-entity-manage/organizational-entity-manage.component';
 import { PersonalEntityFormComponent } from './personal-entity/containers/personal-entity-form/personal-entity-form.component';
-import { PersonalEntityManageComponent } from './personal-entity/containers/personal-entity-manage/personal-entity-manage.component';
+import { PersonalEntityEditComponent } from './personal-entity/containers/personal-entity-edit/personal-entity-edit.component';
 import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { CardBoardComponent } from './card-board/card-board.component';
 import { CardBoardPayaComponent } from './card-board-paya/card-board-paya.component';
@@ -245,7 +245,7 @@ const routes: Routes = [
       },
       {
         path: 'personal-entity-edit',
-        component: PersonalEntityManageComponent,
+        component: PersonalEntityEditComponent,
       },
       {
         path: 'person-editor',

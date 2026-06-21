@@ -7,11 +7,11 @@ import { EntityFormMode, PersonalEntity } from '../../models/personal-entity.mod
  * انتخاب یک ردیف، کانتینرِ فرم را در حالت ویرایش به‌صورت inline نمایش می‌دهد.
  */
 @Component({
-  selector: 'app-personal-entity-manage',
-  templateUrl: './personal-entity-manage.component.html',
-  styleUrls: ['./personal-entity-manage.component.scss'],
+  selector: 'app-personal-entity-edit',
+  templateUrl: './personal-entity-edit.component.html',
+  styleUrls: ['./personal-entity-edit.component.scss'],
 })
-export class PersonalEntityManageComponent implements OnInit {
+export class PersonalEntityEditComponent implements OnInit {
   readonly editMode: EntityFormMode = 'edit';
   entities: PersonalEntity[] = [];
   selected: PersonalEntity | null = null;
