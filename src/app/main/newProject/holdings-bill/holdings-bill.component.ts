@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Constants} from '../../shared/constants/Constants';
 import { Router } from '@angular/router';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 @Component({
   selector: 'app-holdings-bill',
@@ -43,7 +44,7 @@ export class HoldingsBillComponent implements OnInit {
   }[]=[];
   tableFlag = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private datasetService: DatasetService) { }
 
   ngOnInit(): void {
     this.organList = [
@@ -74,32 +75,9 @@ export class HoldingsBillComponent implements OnInit {
     //
     // ];
 
-    this.tableList =  [{
-      bankId: 1,
-      bankName: "بانک ملت",
-      accountInfo:[ {
-        transactionNumber: 1009200361,
-        accountNumber: 100001223344,
-        branchName: 'بازار',
-        transactionDate: "1400/05/02",
-        yektaTransactionID: 333300001111,
-        docNumber: 1112,
-        typeOperation: "واریز",
-        amount: 1000000,
-        remaining: 21000000,
-        desTransaction: "بابت ثبت نام حمید حمیدی",
-        transactionInfo: [{
-          organNumber: 140000000078,
-          transactionAgent: "پوز",
-          terminalNumber: 333300001111,
-          dateAccounting: "1400/05/10",
-          accountingHeading: "تسویه اقلام باز- 5001",
-          desOrganTransaction: "ثبت دفتر کل",
-
-        }]
-      }]
-    }];
-
+    this.datasetService.loadRaw('holdings-bill-transactions', []).then((data: any[]) => {
+      this.tableList = data;
+    });
 
   }
   onUpOrDownload(upBill){
