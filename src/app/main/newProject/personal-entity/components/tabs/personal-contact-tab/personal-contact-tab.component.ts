@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Constants } from '../../../../../shared/constants/Constants';
 import { PersonalEntity } from '../../../models/personal-entity.model';
@@ -21,14 +21,16 @@ type Panel = 'list' | 'contact' | 'address';
 
 /**
  * تبِ «اطلاعات تماس».
- * در حالت ویرایش، ردیفِ نمایشی از روی entity ساخته می‌شود (مطابق رفتار نسخه‌ی مرجع)؛
- * افزودنِ مورد جدید با فرمِ inline انجام می‌شود.
+ * منبعِ اصلیِ دیتا، آرایه‌های contacts/addresses هستند که با getValue/patchValue
+ * توسط کانتینر مدیریت می‌شوند (مانند بقیه‌ی تب‌ها). در صورتی‌که برای رکوردی هنوز
+ * هیچ contacts/addresses ذخیره نشده باشد (رکوردهای قدیمی‌تر)، به‌عنوان fallback
+ * یک ردیف از فیلدهای پراکنده‌ی قدیمیِ entity ساخته می‌شود.
  */
 @Component({
   selector: 'app-personal-contact-tab',
   templateUrl: './personal-contact-tab.component.html',
 })
-export class PersonalContactTabComponent implements OnChanges {
+export class PersonalContactTabComponent {
   @Input() entity: PersonalEntity | null = null;
 
   readonly contactTypeGroups = Constants.contactTypeGroups;
@@ -47,30 +49,6 @@ export class PersonalContactTabComponent implements OnChanges {
   constructor(private fb: FormBuilder) {
     this.contactForm = this.buildContactForm();
     this.addressForm = this.buildAddressForm();
-  }
-
-  ngOnChanges(): void {
-    if (!this.entity) {
-      return;
-    }
-    // پیش‌نمایشِ ردیفِ موجود از روی فیلدهای entity، مطابق رفتار نسخه‌ی مرجع
-    this.contacts = [
-      {
-        contactTypeGroups: this.entity.contactTypeGroups,
-        contactTypes: this.entity.contactTypes,
-        discContact: this.entity.phoneNumber,
-      },
-    ];
-    this.addresses = [
-      {
-        contactTypes: this.entity.contactTypes,
-        province: this.entity.contactProvince,
-        city: this.entity.contactCity,
-        mantaghe: this.entity.mantaghe,
-        postalCode: this.entity.postalCode,
-        desAddress: this.entity.addressDescription,
-      },
-    ];
   }
 
   private buildContactForm(): FormGroup {
@@ -100,14 +78,39 @@ export class PersonalContactTabComponent implements OnChanges {
     return { contacts: this.contacts, addresses: this.addresses };
   }
 
-  patchValue(data: any): void {
-    if (data) {
-      if (Array.isArray(data.contacts)) {
-        this.contacts = data.contacts;
-      }
-      if (Array.isArray(data.addresses)) {
-        this.addresses = data.addresses;
-      }
+  /**
+   * پاتچ از روی رکورد. اگر contacts/addresses قبلاً ذخیره شده باشند، همان استفاده می‌شود؛
+   * در غیر این صورت (رکورد قدیمی بدون این فیلدها)، یک ردیف از فیلدهای پراکنده‌ی قدیمی ساخته می‌شود.
+   */
+  patchValue(data: PersonalEntity): void {
+    if (!data) {
+      return;
+    }
+    if (Array.isArray(data.contacts) && data.contacts.length) {
+      this.contacts = data.contacts;
+    } else if (data.contactTypeGroups || data.phoneNumber) {
+      this.contacts = [
+        {
+          contactTypeGroups: data.contactTypeGroups,
+          contactTypes: data.contactTypes,
+          discContact: data.phoneNumber,
+        } as ContactRow,
+      ];
+    }
+
+    if (Array.isArray(data.addresses) && data.addresses.length) {
+      this.addresses = data.addresses;
+    } else if (data.contactProvince || data.contactCity || data.postalCode) {
+      this.addresses = [
+        {
+          contactTypes: data.contactTypes,
+          province: data.contactProvince,
+          city: data.contactCity,
+          mantaghe: data.mantaghe,
+          postalCode: data.postalCode,
+          desAddress: data.addressDescription,
+        } as AddressRow,
+      ];
     }
   }
 }
