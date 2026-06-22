@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 @Component({
   selector: 'app-chart-test',
@@ -6,27 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chart-test.component.scss']
 })
 export class ChartTestComponent implements OnInit {
-  data = {
-    labels: ['A', 'B', 'C'],
-    datasets: [
-      {
-        data: [300, 50, 100],
-        backgroundColor: [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ],
-        hoverBackgroundColor: [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56"
-        ]
-      }]
-  };
-  
-  constructor() { }
+  data: any = { labels: [], datasets: [] };
+
+  constructor(private datasetService: DatasetService) { }
 
   ngOnInit(): void {
+    this.datasetService.loadRaw('chart-test', { labels: [], datasets: [] }).then((data: any) => {
+      this.data = data;
+    });
   }
 
 }
