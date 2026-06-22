@@ -14,28 +14,28 @@ export class WalletTransactionComponent implements OnInit {
         remaining: string, amount: string
     }[] = [
         {
-            'accountNumber': '240-1000000589-25', 'history': '1400/03/01',
+            'accountNumber': '240-1000000589-25', 'history': '1404/03/10',
             branchName: '', 'walletId': '32233345',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1001',
-            'remaining': ' 0', 'amount': '20000000'
+            'remaining': ' 0', 'amount': '20000000000'
         },
         {
-            'accountNumber': '340-1000000145-65', 'history': '1400/04/12'
+            'accountNumber': '340-1000000145-65', 'history': '1404/04/12'
             , branchName: '', 'walletId': '35454545',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1002',
-            'remaining': '0', 'amount': '50000000'
+            'remaining': '0', 'amount': '50000000000'
         },
         {
-            'accountNumber': '340-1000000189-26', 'history': '1400/05/30'
+            'accountNumber': '340-1000000189-26', 'history': '1404/05/30'
             , branchName: '', 'walletId': '35747545',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1003',
-            'remaining': '0', 'amount': '65000000'
+            'remaining': '0', 'amount': '65000000000'
         },
         {
-            'accountNumber': '440-1006580523-01', 'history': '1400/07/28'
+            'accountNumber': '440-1006580523-01', 'history': '1404/07/28'
             , branchName: '', 'walletId': '35874145',
             'transactionType': '', 'transactionDes': ' ', 'docNumber': '1004',
-            'remaining': ' 0', 'amount': '89000000'
+            'remaining': ' 0', 'amount': '89000000000'
         },
         // {
         //     'accountNumber': 8465215749, 'history': '1400/05/01'
