@@ -76,10 +76,10 @@ export class PersonalEntityAddComponent implements OnInit, AfterViewInit {
     }
     this.signatureTab?.patchValue(e);
     this.roleTab?.patchValue(e);
+    this.contactTab?.patchValue(e);
     this.supplementaryTab?.patchValue(e);
     this.activityFieldTab?.patchValue(e);
     this.documentsTab?.patchValue(e);
-    // contactTab خودش از طریق @Input entity + ngOnChanges پر می‌شود
   }
 
   get isEdit(): boolean {

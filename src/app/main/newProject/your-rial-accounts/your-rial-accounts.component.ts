@@ -17,7 +17,7 @@ export class YourRialAccountsComponent implements OnInit {
     setTimeout(() => {
       this.level1Rows = createSampleL1Rows();
       this.level1Loading = false;
-    }, 1000);
+    }, 500);
   }
   accountDialogVisible = false;
   selectedAccount: any;
