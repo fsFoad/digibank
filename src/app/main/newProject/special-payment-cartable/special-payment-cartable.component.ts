@@ -47,11 +47,11 @@ function createSampleRows(): SpecialPaymentRow[] {
   return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(x => Math.random()).map(r => ({
     temporaryRequestNumber: 13000 + Math.floor(1000 * r),
     requestType: ['ثبت رکوردی پرداخت ویژه', 'ویرایش پرداخت ویژه'][Math.floor(2 * r)],
-    paymentPeriodCode: r * 14001229,
+    paymentPeriodCode: r * 14041229,
     status: 'بررسی نشده',
     specialCustomer: 'کامران سینایی',
     amount: (Math.floor(1000 * r) + (Math.floor(2 * r) * 0.5)) * 10000,
-    registrationDate: 1400_00_00 + (100 * Math.floor(13 * r)) + Math.floor(29 * r),
+    registrationDate: 1404_00_00 + (100 * Math.floor(13 * r)) + Math.floor(29 * r),
     amountOfCommission: 0,
     paymentType: 'پرداخت سود',
     commissionAccountNumber: Math.floor(10_000_000 * r),
