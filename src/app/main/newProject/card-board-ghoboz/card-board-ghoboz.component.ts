@@ -15,16 +15,16 @@ export class CardBoardGhobozComponent implements OnInit {
   }[] = [
     {
       'temporaryApplicationNumber': 968615, 'companyName': 'نوین سازان'
-      , 'amounts': 1000, 'dateSubmit': 13990812, 'ghabzType': 'عمومی', 'registrar': 'علی محمدی',
+      , 'amounts': 1000000, 'dateSubmit': 14040812, 'ghabzType': 'عمومی', 'registrar': 'علی محمدی',
      accountnNumberdeterminesAmount:2556625400, applicationType:'پرداخت قبض گروهی'
     },
     {
       'temporaryApplicationNumber': 964213, 'companyName': 'دیاموند'
-      , 'amounts': 28000, 'dateSubmit': 14000205, 'ghabzType': 'آب', 'registrar': 'محمد سروری',
+      , 'amounts': 28000000, 'dateSubmit': 14040205, 'ghabzType': 'آب', 'registrar': 'محمد سروری',
      accountnNumberdeterminesAmount:8556264500, applicationType:'پرداخت قبض گروهی'
     }, {
       'temporaryApplicationNumber': 968425, 'companyName': 'زرین',
-      'amounts': 1000, 'dateSubmit': 14000501, 'ghabzType': 'سایر قرار دادی', 'registrar': 'فرهاد کشوری',
+      'amounts': 1000000, 'dateSubmit': 14040501, 'ghabzType': 'سایر قرار دادی', 'registrar': 'فرهاد کشوری',
       accountnNumberdeterminesAmount:5535941870, applicationType:'پرداخت قبض گروهی'
 
     },
