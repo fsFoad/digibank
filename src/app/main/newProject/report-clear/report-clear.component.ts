@@ -19,37 +19,37 @@ export class ReportClearComponent implements OnInit {
     }[] = [
         {
             'accountNumber': 7548621548,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'عرفان حشمتی',
             branchName: '',
             'yektaCode': '3587545',
             'status': '',
             'docNumber': '312',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '120000000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 120000000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
         {
             'accountNumber': 1548254962,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'رستم حبیبی',
             branchName: '',
             'yektaCode': '3587445',
             'status': '',
             'docNumber': '313',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '35400000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 35400000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
         {
             'accountNumber': 8465215749,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'حبیب حسینی'
             ,
             branchName: '',
@@ -57,15 +57,15 @@ export class ReportClearComponent implements OnInit {
             'status': '',
             'docNumber': '314',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '66000000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 66000000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
         {
             'accountNumber': 3256157895,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'کامیار کاظمی'
             ,
             branchName: '',
@@ -73,15 +73,15 @@ export class ReportClearComponent implements OnInit {
             'status': '',
             'docNumber': '315',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '10000000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 10000000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
         {
             'accountNumber': 7416581213,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'فرید ترابی'
             ,
             branchName: '',
@@ -89,15 +89,15 @@ export class ReportClearComponent implements OnInit {
             'status': '',
             'docNumber': '316',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '54200000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 54200000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
         {
             'accountNumber': 8742154565,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'عماد همتی'
             ,
             branchName: '',
@@ -105,15 +105,15 @@ export class ReportClearComponent implements OnInit {
             'status': '',
             'docNumber': '317',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '31200000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 31200000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
         {
             'accountNumber': 1525844572,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'سامان کاشانی'
             ,
             branchName: '',
@@ -121,15 +121,15 @@ export class ReportClearComponent implements OnInit {
             'status': '',
             'docNumber': '318',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '22000000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 22000000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
         {
             'accountNumber': 8754788621,
-            'history': '1400/05/01',
+            'history': '1404/05/01',
             'personal': 'سینا کریمی'
             ,
             branchName: '',
@@ -137,9 +137,9 @@ export class ReportClearComponent implements OnInit {
             'status': '',
             'docNumber': '319',
             'check': '2222589',
-            'amounts': '100000 ',
+            'amounts': '12000000 ',
             'committedBank': ' ',
-            'amount': 10000,
+            'amount': 12000000,
             'committedBranchCode': ' ',
             'docAccountNumber': 7548621548
         },
