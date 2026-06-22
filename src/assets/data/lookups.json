@@ -1142,8 +1142,8 @@
       "branch": "بازار",
       "tashilatType": "مضاربه",
       "fileNumber": "139932-621",
-      "amount": 750000000,
-      "date": 13980116,
+      "amount": 750000000000,
+      "date": 14040116,
       "accumulationPaymentObligation": 220000,
       "installmentsPaid": 1000000000
     },
@@ -1153,8 +1153,8 @@
       "branch": "میرداماد",
       "tashilatType": "خرید دین",
       "fileNumber": "139908-129",
-      "amount": 4000000000,
-      "date": 14000828,
+      "amount": 4000000000000,
+      "date": 14040828,
       "accumulationPaymentObligation": 0,
       "installmentsPaid": 2000000000
     },
@@ -1164,8 +1164,8 @@
       "branch": "میرداماد",
       "tashilatType": "خرید دین",
       "fileNumber": "139908-129",
-      "amount": 4000000000,
-      "date": 14000828,
+      "amount": 4000000000000,
+      "date": 14040828,
       "accumulationPaymentObligation": 0,
       "installmentsPaid": 2000000000
     },
@@ -1175,8 +1175,8 @@
       "branch": "دولت",
       "tashilatType": "فروش اقساطی",
       "fileNumber": "139911-760",
-      "amount": 500000000,
-      "date": 13990424,
+      "amount": 500000000000,
+      "date": 14040424,
       "accumulationPaymentObligation": 1000000,
       "installmentsPaid": 5000000
     },
@@ -1186,8 +1186,8 @@
       "branch": "میدان آرژانتین",
       "tashilatType": "خرید دین",
       "fileNumber": "139910-220",
-      "amount": 2700000000,
-      "date": 13990217,
+      "amount": 2700000000000,
+      "date": 14040217,
       "accumulationPaymentObligation": 0,
       "installmentsPaid": 1400000000
     },
@@ -1197,8 +1197,8 @@
       "branch": "میرداماد",
       "tashilatType": "خرید دین",
       "fileNumber": "139908-129",
-      "amount": 4000000000,
-      "date": 14000828,
+      "amount": 4000000000000,
+      "date": 14040828,
       "accumulationPaymentObligation": 0,
       "installmentsPaid": 2000000000
     }
