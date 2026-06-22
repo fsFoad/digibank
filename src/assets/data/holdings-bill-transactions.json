@@ -7,7 +7,7 @@
         "transactionNumber": 1009200361,
         "accountNumber": 100001223344,
         "branchName": "بازار",
-        "transactionDate": "1400/05/02",
+        "transactionDate": "1404/05/02",
         "yektaTransactionID": 333300001111,
         "docNumber": 1112,
         "typeOperation": "واریز",
@@ -19,7 +19,7 @@
             "organNumber": 140000000078,
             "transactionAgent": "پوز",
             "terminalNumber": 333300001111,
-            "dateAccounting": "1400/05/10",
+            "dateAccounting": "1404/05/10",
             "accountingHeading": "تسویه اقلام باز- 5001",
             "desOrganTransaction": "ثبت دفتر کل"
           }
