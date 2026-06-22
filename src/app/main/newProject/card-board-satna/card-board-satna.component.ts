@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 @Component({
   selector: 'app-card-board-satna',
@@ -13,7 +14,7 @@ export class CardBoardSatnaComponent implements OnInit {
   satnaRows: SatnaRow[] = [];
   selectedRow: SatnaRow | null = null;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private datasetService: DatasetService) { }
 
   selectRow(row: SatnaRow) {
     this.selectedRow = row;
@@ -29,7 +30,9 @@ export class CardBoardSatnaComponent implements OnInit {
   }
 
   getSatnaRows(): void {
-    this.satnaRows = createSampleSatnaRows();
+    this.datasetService.loadRaw('card-board-satna', []).then((data: SatnaRow[]) => {
+      this.satnaRows = data;
+    });
   }
 
   goHome(): void {
@@ -56,31 +59,5 @@ export interface SatnaRow {
   shahab: number;
   ibonDestination: string;
   postalCode: number;
-}
-
-function createSampleSatnaRows(): SatnaRow[] {
-  return [
-    {
-      id: 1, temporaryTransferNumber: 325615, sourceAccountNumber: 2513350448275, registrar: 'رامین کوهی',
-      amounts: 2500000000, des: '', status: 'بررسی نشده', remittanceRecipientName: 'علی رضا رضایی',
-      registrationDate: 14040812, ibonOrigin: 'IR830120000000000055771565', verificationCode: 4872, remittancesNumber: '1',
-      nationalCode: 2251548256, accountTypeOrigin: 'جاری', accountTypeDestination: 'قرض الحسنه',
-      shahab: 1000000090280541, ibonDestination: 'IR860250000000000051532855', postalCode: 4561238525
-    },
-    {
-      id: 2, temporaryTransferNumber: 326213, sourceAccountNumber: 8506321596425, registrar: 'شهاب شکوری',
-      amounts: 200000000, des: '', status: 'بررسی نشده', remittanceRecipientName: 'محمد سروستانی',
-      registrationDate: 14040205, ibonOrigin: 'IR895870000000000055662389', verificationCode: 6924, remittancesNumber: '5',
-      nationalCode: 8854245215, accountTypeOrigin: 'قرض الحسنه', accountTypeDestination: 'قرض الحسنه',
-      shahab: 1000000020890487, ibonDestination: 'IR485690000000000052698855', postalCode: 4561954865
-    },
-    {
-      id: 3, temporaryTransferNumber: 302425, sourceAccountNumber: 1106354796009, registrar: 'مهدی آل منصور',
-      amounts: 1000000000, des: '', status: 'بررسی نشده', remittanceRecipientName: 'مصطفی کاویانی',
-      registrationDate: 14040501, ibonOrigin: 'IR895870000000000058566589', verificationCode: 5485, remittancesNumber: '3',
-      nationalCode: 2254814528, accountTypeOrigin: 'سپرده کوتاه مدت', accountTypeDestination: 'قرض الحسنه',
-      shahab: 1000000070450277, ibonDestination: 'IR854690000000000052624535', postalCode: 4567645825
-    },
-  ];
 }
 

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MenuItem, TreeNode } from 'primeng/api';
 import { Subject } from 'rxjs';
 import { Constants } from '../../shared/constants/Constants';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 interface AccData {
   level: 1 | 2 | 3;
@@ -25,12 +26,12 @@ interface TreeNodeSelectEvent<TData> {
 export class AccountTreeComponent implements OnInit {
   active = false;
   nature: 'debtor' | 'creditor' | 'not-important' = 'not-important';
-  accounts: TreeNode[] = createSampleAccounts();
+  accounts: TreeNode[] = [];
   form: FormGroup;
   selectedNode: TreeNode<AccData>;
   ngDestroy$ = new Subject<void>();
   contextMenuItems: MenuItem[] = Constants.accountTree_contextMenuItems;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private datasetService: DatasetService) {
     this.form = fb.group({
       level: [0],
       code: ['0'],
@@ -41,6 +42,9 @@ export class AccountTreeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.datasetService.loadRaw('account-tree-base-accounts', []).then((baseAccounts: [string, string][]) => {
+      this.accounts = createAccountsFromBase(baseAccounts);
+    });
   }
 
   onNodeSelect(e: TreeNodeSelectEvent<AccData>): void {
@@ -104,33 +108,21 @@ function createDefaultData(): AccData {
   };
 }
 
-function createSampleAccounts(): TreeNode<AccData>[] {
+function createAccountsFromBase(baseAccounts: [string, string][]): TreeNode<AccData>[] {
   const root: TreeNode<AccData> = {
     label: 'حسابها',
     expanded: true,
   };
-  root.children =
-    [
-      ['11', 'دارایی‌های جاری'],
-      ['12', 'دارایی‌های غیر جاری'],
-      ['21', 'بدهی‌های جاری'],
-      ['22', 'بدهی‌های غیر جاری'],
-      ['31', 'حقوق صاحبان سهام'],
-      ['41', 'فروش و درآمدها'],
-      ['51', 'بهای تمام شده کالای فروش رفته'],
-      ['61', 'هزینه‌های فعالیت'],
-      ['62', 'سایر هزینه‌ها و درآمدهای غیر عملیاتی'],
-      ['91', 'حساب‌های انتظامی'],
-    ].map(x => {
-      const node = createNode(x[0], x[1], 1, root);
-      node.children = [createNode(
-        '1000',
-        'آزمایشی',
-        2,
-        node
-      )];
-      return node;
-    });
+  root.children = baseAccounts.map(x => {
+    const node = createNode(x[0], x[1], 1, root);
+    node.children = [createNode(
+      '1000',
+      'آزمایشی',
+      2,
+      node
+    )];
+    return node;
+  });
   return [root];
 }
 

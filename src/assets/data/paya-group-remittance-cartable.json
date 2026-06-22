@@ -1,0 +1,47 @@
+[
+  {
+    "temporaryRemittanceNumber": 245405,
+    "sourceAccountNumber": "IR81CBKU0000000000001234560101",
+    "totalAmount": 2625002000,
+    "effectiveDate": 14040705,
+    "status": "بررسی نشده",
+    "registrar": "ارژنگ دستان",
+    "registrationDate": 14040701
+  },
+  {
+    "temporaryRemittanceNumber": 245404,
+    "sourceAccountNumber": "IR81CBKU0000000000001234560101",
+    "totalAmount": 2625002000,
+    "effectiveDate": 14040704,
+    "status": "بررسی نشده",
+    "registrar": "ارژنگ دستان",
+    "registrationDate": 14040701
+  },
+  {
+    "temporaryRemittanceNumber": 245403,
+    "sourceAccountNumber": "IR81CBKU0000000000001234560101",
+    "totalAmount": 2625002000,
+    "effectiveDate": 14040703,
+    "status": "بررسی نشده",
+    "registrar": "ارژنگ دستان",
+    "registrationDate": 14040701
+  },
+  {
+    "temporaryRemittanceNumber": 245386,
+    "sourceAccountNumber": "IR81CBKU0000000000001234560101",
+    "totalAmount": 4000000,
+    "effectiveDate": 14040631,
+    "status": "بررسی نشده",
+    "registrar": "ارژنگ دستان",
+    "registrationDate": 14040631
+  },
+  {
+    "temporaryRemittanceNumber": 245130,
+    "sourceAccountNumber": "IR81CBKU0000000000001234560101",
+    "totalAmount": 2625002000,
+    "effectiveDate": 14040601,
+    "status": "بررسی نشده",
+    "registrar": "ارژنگ دستان",
+    "registrationDate": 14040631
+  }
+]

@@ -153,8 +153,7 @@
     {
       "value": "4",
       "label": "شرکت تابعه ۳"
-    }
-  ,
+    },
     {
       "value": "5",
       "label": "شرکت همکار"
@@ -242,8 +241,7 @@
     {
       "value": "1",
       "label": "خصوصی"
-    }
-  ,
+    },
     {
       "value": "1",
       "label": "دولتی"
@@ -1202,7 +1200,6 @@
       "accumulationPaymentObligation": 0,
       "installmentsPaid": 2000000000
     }
-
   ],
   "bill_organList": [],
   "bill_representationList": [],
@@ -1459,7 +1456,6 @@
       "label": "واریز",
       "value": 1
     },
-
     {
       "label": "برداشت",
       "value": 2
@@ -1472,7 +1468,6 @@
       "label": "بازگشت برداشت",
       "value": 4
     }
-
   ],
   "bill_tableList": [
     {
@@ -1740,5 +1735,23 @@
       "label": "حقوقی",
       "value": 3
     }
+  ],
+  "yourRialAccounts_bankGroups": [
+    [
+      "11",
+      "حساب های بانک ملت"
+    ],
+    [
+      "12",
+      "حساب های بانک ملی"
+    ],
+    [
+      "21",
+      "حساب های بانک سامان"
+    ],
+    [
+      "22",
+      "حساب های بانک پاسارگاد"
+    ]
   ]
 }

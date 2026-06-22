@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 interface L1Row {
   code: string;
@@ -15,7 +16,7 @@ export class AccountTransactionsComponent implements OnInit {
   level1Rows: L1Row[] = [];
   level1Loading = false;
   form: FormGroup;
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private datasetService: DatasetService) {
     this.form = fb.group({
       billingPeriod: ['customRange'],
       fromDate: [''],
@@ -30,25 +31,14 @@ export class AccountTransactionsComponent implements OnInit {
 
   confirm(): void {
     this.level1Loading = true;
-    setTimeout(() => {
-      this.level1Rows = createSampleL1Rows();
+    this.datasetService.loadRaw('account-tree-base-accounts', []).then((baseAccounts: [string, string][]) => {
+      this.level1Rows = createL1RowsFromBase(baseAccounts);
       this.level1Loading = false;
-    }, 1000);
+    });
   }
 }
-function createSampleL1Rows(): L1Row[] {
-  return [
-    ['11', 'دارایی‌های جاری'],
-    ['12', 'دارایی‌های غیر جاری'],
-    ['21', 'بدهی‌های جاری'],
-    ['22', 'بدهی‌های غیر جاری'],
-    ['31', 'حقوق صاحبان سهام'],
-    ['41', 'فروش و درآمدها'],
-    ['51', 'بهای تمام شده کالای فروش رفته'],
-    ['61', 'هزینه‌های فعالیت'],
-    ['62', 'سایر هزینه‌ها و درآمدهای غیر عملیاتی'],
-    ['91', 'حساب‌های انتظامی'],
-  ].map(x => ({
+function createL1RowsFromBase(baseAccounts: [string, string][]): L1Row[] {
+  return baseAccounts.map(x => ({
     code: x[0],
     title: x[1],
     rows: [0, 1, 2].map(y => ({
@@ -59,6 +49,6 @@ function createSampleL1Rows(): L1Row[] {
         title: `sub sub title ${z + 1}`,
       })),
     })),
-  }));
+  })) as any;
 }
 

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ConfirmationService } from "primeng/api";
 import { SatnaRow } from '../card-board-satna/card-board-satna.component';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 interface SatnaApprover {
   id: number;
@@ -23,8 +24,8 @@ interface SatnaApproverRelation {
   providers: [ConfirmationService]
 })
 export class SpecificationsRequestSatnaComponent implements OnInit {
-  allApprovers = createSampleSatnaApprovers()
-  satnaToApproverRelations = createSampleSatnaToApproverRelations()
+  allApprovers: SatnaApprover[] = [];
+  satnaToApproverRelations: SatnaApproverRelation[] = [];
   approversList: SatnaApprover[];
   @Output() close = new EventEmitter<string>();
 
@@ -34,17 +35,33 @@ export class SpecificationsRequestSatnaComponent implements OnInit {
   };
   set satnaRow(value: SatnaRow) {
     this._satnaRow = value;
-    this.approversList = this.satnaToApproverRelations
-      .filter(x => x.satnaId == value.id)
-      .map(x => this.allApprovers.find(a => a.id == x.approverId))
+    this.refreshApproversList();
   }
 
   constructor(
     private confirmationService: ConfirmationService,
+    private datasetService: DatasetService,
   ) {
   }
 
   ngOnInit(): void {
+    Promise.all([
+      this.datasetService.loadRaw('satna-approvers', []),
+      this.datasetService.loadRaw('satna-approver-relations', []),
+    ]).then(([approvers, relations]: [SatnaApprover[], SatnaApproverRelation[]]) => {
+      this.allApprovers = approvers;
+      this.satnaToApproverRelations = relations;
+      this.refreshApproversList();
+    });
+  }
+
+  private refreshApproversList(): void {
+    if (!this._satnaRow) {
+      return;
+    }
+    this.approversList = this.satnaToApproverRelations
+      .filter(x => x.satnaId == this._satnaRow.id)
+      .map(x => this.allApprovers.find(a => a.id == x.approverId));
   }
 
   onClose() {
@@ -58,42 +75,4 @@ export class SpecificationsRequestSatnaComponent implements OnInit {
       accept: () => this.onClose()
     });
   }
-}
-
-
-function createSampleSatnaApprovers(): SatnaApprover[] {
-  return [
-    {
-      id: 1,
-      fullName: 'حسین بهجتی',
-      verificationType: 'اختیاری',
-      verificationStatus: 'بررسی نشده',
-      history: null,
-      des: '',
-    },
-    {
-      id: 2,
-      fullName: 'ایرج خداپرست',
-      verificationType: 'اختیاری',
-      verificationStatus: 'بررسی نشده',
-      history: null,
-      des: '',
-    },
-    {
-      id: 3,
-      fullName: 'سیاوش راسخی',
-      verificationType: 'اختیاری',
-      verificationStatus: 'بررسی نشده',
-      history: null,
-      des: '',
-    }
-  ];
-}
-
-function createSampleSatnaToApproverRelations(): SatnaApproverRelation[] {
-  return [
-    { satnaId: 1, approverId: 1 },
-    { satnaId: 2, approverId: 2 },
-    { satnaId: 3, approverId: 3 },
-  ]
 }

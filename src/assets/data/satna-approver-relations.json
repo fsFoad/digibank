@@ -1,0 +1,14 @@
+[
+  {
+    "satnaId": 1,
+    "approverId": 1
+  },
+  {
+    "satnaId": 2,
+    "approverId": 2
+  },
+  {
+    "satnaId": 3,
+    "approverId": 3
+  }
+]

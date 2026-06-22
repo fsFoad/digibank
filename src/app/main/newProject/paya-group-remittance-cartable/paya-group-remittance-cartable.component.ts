@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 
 @Component({
@@ -9,12 +10,15 @@ import { Router } from '@angular/router';
 })
 export class PayaGroupRemittanceCartableComponent implements OnInit {
   showTable = true;
-  tableData: GroupPayaRow[] = createSampleRows();
+  tableData: GroupPayaRow[] = [];
   showDetailsComponent = false;
   selectedRow: GroupPayaRow | null = null;
-  constructor(private router: Router) { }
+  constructor(private router: Router, private datasetService: DatasetService) { }
 
   ngOnInit(): void {
+    this.datasetService.loadRaw('paya-group-remittance-cartable', []).then((data: GroupPayaRow[]) => {
+      this.tableData = data;
+    });
   }
 
   selectRow(row: GroupPayaRow): void {
@@ -40,57 +44,5 @@ export interface GroupPayaRow {
   status?
   registrar?
   registrationDate?
-}
-
-function createSampleRows(): GroupPayaRow[] {
-  return [
-    {
-      temporaryRemittanceNumber: 245405,
-      sourceAccountNumber: 'IR81CBKU0000000000001234560101',
-      totalAmount: 2_625_002_000,
-      effectiveDate: 1404_07_05,
-      status: 'بررسی نشده',
-      registrar: 'ارژنگ دستان',
-      registrationDate: 1404_07_01,
-    },
-    {
-      temporaryRemittanceNumber: 245404,
-      sourceAccountNumber: 'IR81CBKU0000000000001234560101',
-      totalAmount: 2_625_002_000,
-      effectiveDate: 1404_07_04,
-      status: 'بررسی نشده',
-      registrar: 'ارژنگ دستان',
-      registrationDate: 1404_07_01,
-    },
-    {
-      temporaryRemittanceNumber: 245403,
-      sourceAccountNumber: 'IR81CBKU0000000000001234560101',
-      totalAmount: 2_625_002_000,
-      effectiveDate: 1404_07_03,
-      status: 'بررسی نشده',
-      registrar: 'ارژنگ دستان',
-      registrationDate: 1404_07_01,
-    },
-    {
-      temporaryRemittanceNumber: 245386,
-      sourceAccountNumber: 'IR81CBKU0000000000001234560101',
-      totalAmount: 4_000_000,
-      effectiveDate: 1404_06_31,
-      status: 'بررسی نشده',
-      registrar: 'ارژنگ دستان',
-      registrationDate: 1404_06_31,
-    },
-    {
-      temporaryRemittanceNumber: 245130,
-      sourceAccountNumber: 'IR81CBKU0000000000001234560101',
-      totalAmount: 2_625_002_000,
-      effectiveDate: 1404_06_01,
-      status: 'بررسی نشده',
-      registrar: 'ارژنگ دستان',
-      registrationDate: 1404_06_31,
-    }
-  ]
-
-
 }
 

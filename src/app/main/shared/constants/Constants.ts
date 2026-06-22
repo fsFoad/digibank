@@ -164,4 +164,5 @@ export class Constants {
   static requestGhoboz_table1List_2 = (lookups as any).requestGhoboz_table1List_2;
   static requestGhoboz_table1List_3 = (lookups as any).requestGhoboz_table1List_3;
   static submitInformationPymentMnagement_dropList_x = (lookups as any).submitInformationPymentMnagement_dropList_x;
+  static yourRialAccounts_bankGroups = (lookups as any).yourRialAccounts_bankGroups;
 }

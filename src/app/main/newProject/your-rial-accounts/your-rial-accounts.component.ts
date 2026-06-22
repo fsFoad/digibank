@@ -36,12 +36,7 @@ export class YourRialAccountsComponent implements OnInit {
   }
 }
 function createSampleL1Rows(): L1Row[] {
-  return [
-    ['11', 'حساب های بانک ملت'],
-    ['12', 'حساب های بانک ملی'],
-    ['21', 'حساب های بانک سامان'],
-    ['22', 'حساب های بانک پاسارگاد'],
-  ].map(bank => ({
+  return Constants.yourRialAccounts_bankGroups.map(bank => ({
     code: bank[0],
     title: bank[1],
 
