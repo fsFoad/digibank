@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paya-regular-remittance-cartable',
@@ -10,7 +11,7 @@ export class PayaRegularRemittanceCartableComponent implements OnInit {
   tableData: RegularPayaRow[] = createSampleRows();
   showDetailsComponent = false;
   selectedRow: RegularPayaRow | null = null;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,10 @@ export class PayaRegularRemittanceCartableComponent implements OnInit {
 
   confirm(confirm: boolean): void {
     this.showDetailsComponent = false;
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 }
 

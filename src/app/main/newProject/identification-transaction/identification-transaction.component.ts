@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Constants} from '../../shared/constants/Constants';
 import {Bills} from '../models/DigiBankModel';
 import {FormBuilder, FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-identification-transaction',
@@ -93,7 +94,7 @@ export class IdentificationTransactionComponent implements OnInit {
 
   public form: FormGroup;
 
-  constructor(fb: FormBuilder) {
+  constructor(fb: FormBuilder, private router: Router) {
     this.form = fb.group({
       operationType: [''],
       desTransaction: [''],
@@ -159,5 +160,9 @@ export class IdentificationTransactionComponent implements OnInit {
       debugger
     });
     this.form.reset();
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 }

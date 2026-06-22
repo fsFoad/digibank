@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-board-satna',
@@ -12,10 +13,7 @@ export class CardBoardSatnaComponent implements OnInit {
   satnaRows: SatnaRow[] = [];
   selectedRow: SatnaRow | null = null;
 
-  constructor(
-  ) {
-
-  }
+  constructor(private router: Router) { }
 
   selectRow(row: SatnaRow) {
     this.selectedRow = row;
@@ -32,6 +30,10 @@ export class CardBoardSatnaComponent implements OnInit {
 
   getSatnaRows(): void {
     this.satnaRows = createSampleSatnaRows();
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 }
 

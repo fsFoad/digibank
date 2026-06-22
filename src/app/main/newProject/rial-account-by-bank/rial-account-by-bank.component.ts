@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Constants } from '../../shared/constants/Constants';
 import { DatasetService } from '../../shared/services/dataset.service';
+import { Router } from '@angular/router';
 
 interface AccountRow {
   title: string;
@@ -41,7 +42,7 @@ export class RialAccountByBankComponent implements OnInit {
   accountDialogVisible = false;
   selectedAccount: AccountRow | null = null;
 
-  constructor(private datasetService: DatasetService) {}
+  constructor(private datasetService: DatasetService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -60,5 +61,9 @@ export class RialAccountByBankComponent implements OnInit {
   showAccount(account: AccountRow): void {
     this.selectedAccount = account;
     this.accountDialogVisible = true;
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 }

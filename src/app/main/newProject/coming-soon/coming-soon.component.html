@@ -1,0 +1,64 @@
+<div class="cs-page">
+  <!-- ===== لایه‌های پسزمینه: ستاره‌ها و گرادیانِ متحرک ===== -->
+  <div class="cs-aurora"></div>
+  <div class="cs-stars"></div>
+  <div class="cs-orb cs-orb--1"></div>
+  <div class="cs-orb cs-orb--2"></div>
+  <div class="cs-orb cs-orb--3"></div>
+
+  <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text cs-back-btn"
+          (click)="goHome()"></button>
+
+  <!-- ===== شمارش‌معکوسِ تمام‌صفحه (تاریخِ هدف در کد ثابت است) ===== -->
+  <div class="cs-card">
+    <div class="cs-orbit-wrap" *ngIf="!expired">
+      <div class="cs-orbit-ring cs-orbit-ring--1"></div>
+      <div class="cs-orbit-ring cs-orbit-ring--2"></div>
+      <i class="pi pi-cog cs-orbit-icon"></i>
+    </div>
+    <div class="cs-rocket-wrap" *ngIf="expired">
+      <i class="pi pi-check-circle cs-success-icon"></i>
+    </div>
+
+    <h1 class="cs-title" *ngIf="!expired">به‌زودی توسعه داده می شود!</h1>
+    <h1 class="cs-title" *ngIf="expired">رونمایی شد!</h1>
+    <p class="cs-subtitle" *ngIf="!expired">ما در حال طراحیِ نسخه‌ی جدید هستیم. کمی صبر کنید.</p>
+    <p class="cs-subtitle" *ngIf="expired">زمانِ موعود رسید — می‌توانید ادامه دهید.</p>
+
+    <div class="cs-timer" *ngIf="!expired">
+      <div class="cs-unit cs-unit--pulse">
+        <span class="cs-num">{{ countdown.seconds }}</span>
+        <span class="cs-label">ثانیه</span>
+      </div>
+      <span class="cs-sep">:</span>
+      <div class="cs-unit">
+        <span class="cs-num">{{ countdown.minutes }}</span>
+        <span class="cs-label">دقیقه</span>
+      </div>
+      <span class="cs-sep">:</span>
+      <div class="cs-unit">
+        <span class="cs-num">{{ countdown.hours }}</span>
+        <span class="cs-label">ساعت</span>
+      </div>
+      <span class="cs-sep">:</span>
+      <div class="cs-unit">
+        <span class="cs-num">{{ countdown.days }}</span>
+        <span class="cs-label">روز</span>
+      </div>
+    </div>
+
+    <!-- فرمِ ایمیلِ یادآوری -->
+<!--    <div class="cs-subscribe" *ngIf="!expired">
+      <ng-container *ngIf="!subscribed">
+        <div class="cs-email-wrap">
+          <i class="pi pi-envelope"></i>
+          <input type="email" [(ngModel)]="email" placeholder="ایمیل شما برای اطلاع‌رسانی" class="cs-email-input">
+        </div>
+        <button pButton label="یادآوری به من" icon="pi pi-bell" class="cs-subscribe-btn" (click)="subscribe()"></button>
+      </ng-container>
+      <span class="cs-subscribed-msg" *ngIf="subscribed">
+        <i class="pi pi-check-circle"></i> ثبت شد؛ هنگامِ راه‌اندازی به شما اطلاع می‌دهیم.
+      </span>
+    </div>-->
+  </div>
+</div>

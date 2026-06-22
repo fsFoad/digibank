@@ -192,3 +192,29 @@ tbody.account > tr > td.p-text-left {
   padding-inline-end: .5em;
 }
 
+
+:host ::ng-deep .p-panel > .p-panel-header {
+  background: #0077B3;
+  border: none;
+  padding: 0;
+}
+.bf-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.85rem 1rem;
+}
+.bf-panel-title {
+  color: #fff;
+  font-weight: 700;
+}
+:host ::ng-deep .bf-back-btn.p-button {
+  color: #fff;
+  width: 32px;
+  height: 32px;
+}
+:host ::ng-deep .bf-back-btn.p-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+

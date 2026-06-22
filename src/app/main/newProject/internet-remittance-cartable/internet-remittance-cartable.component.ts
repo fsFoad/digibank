@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
+import { Router } from '@angular/router';
 
 interface Page {
   page: number;
@@ -18,7 +19,7 @@ export class InternetRemittanceCartableComponent implements OnInit {
   rows: InternetRemittanceRow[] = [];
   showDetailsComponent = false;
   selectedRow: InternetRemittanceRow;
-  constructor(private confirmationService: ConfirmationService) {
+  constructor(private confirmationService: ConfirmationService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -47,6 +48,10 @@ export class InternetRemittanceCartableComponent implements OnInit {
     this.selectedRow.status = getConfirmationStatusByFlag(value);
   }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }
 
 function getConfirmationStatusByFlag(value: boolean | null): string {

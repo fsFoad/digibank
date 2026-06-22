@@ -11,6 +11,7 @@ import { OrgRoleTabComponent } from './organizational-entity/components/tabs/org
 import { OrgContactTabComponent } from './organizational-entity/components/tabs/org-contact-tab/org-contact-tab.component';
 import { OrgDocumentsTabComponent } from './organizational-entity/components/tabs/org-documents-tab/org-documents-tab.component';
 import { PersonalIdentityFormComponent } from './personal-entity/components/personal-identity-form/personal-identity-form.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { PersonalEntityAddComponent } from './personal-entity/containers/personal-entity-add/personal-entity-add.component';
 import { PersonalEntityEditComponent } from './personal-entity/containers/personal-entity-edit/personal-entity-edit.component';
 import { PersonalSignatureTabComponent } from './personal-entity/components/tabs/personal-signature-tab/personal-signature-tab.component';
@@ -144,7 +145,6 @@ import { AccountSummaryCardComponent } from './account-summary-card/account-summ
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
 import { InternetRemittanceCartableDetailsComponent } from './internet-remittance-cartable-details/internet-remittance-cartable-details.component';
 import { ConfirmationService, MessageService } from 'primeng/api';
-import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
 import { UpdatePersonalComponent } from './update-personal/update-personal.component';
 import { UpdatePersonIdentityInfoEditorComponent } from './update-personal/update-person-identity-info-editor/update-person-identity-info-editor.component';
 import { UpdatePartySignatureEditorComponent } from './update-personal/update-party-signature-editor/update-party-signature-editor.component';
@@ -164,8 +164,6 @@ import { AccountTransactionsComponent } from './account-transactions/account-tra
 import { NotifierService, MessageService as MessageService2 } from '../shared/notifier/notifier.module';
 import { UpdateAddressComponent } from './update-personal/update-organizational-contact-info-editor/update-address/update-address.component';
 import { UpdateContactComponent } from './update-personal/update-organizational-contact-info-editor/update-contact/update-contact.component';
-import { UpdateOrganizationalEntityManagerComponent } from './update-organizational-entity-manager/update-organizational-entity-manager.component';
-import { OrganizationalEntityListComponent } from './organizational-entity-list/organizational-entity-list.component';
 import { CreateRegistrationInfoComponent } from './board-of-directors-editor/create-registration-info/create-registration-info.component';
 import { IdentificationTransactionComponent } from './identification-transaction/identification-transaction.component';
 import { ActivityFieldComponent } from './person-editor/activity-field/activity-field.component';
@@ -190,6 +188,7 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
     OrgContactTabComponent,
     OrgDocumentsTabComponent,
     PersonalIdentityFormComponent,
+    ComingSoonComponent,
     PersonalEntityAddComponent,
     PersonalEntityEditComponent,
     PersonalSignatureTabComponent,
@@ -289,7 +288,6 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
     AccountSummaryCardComponent,
     DepositSourcesReportComponent,
     InternetRemittanceCartableDetailsComponent,
-    PersonalEntityListComponent,
     UpdatePersonalComponent,
     UpdatePersonIdentityInfoEditorComponent,
     UpdatePartySignatureEditorComponent,
@@ -305,8 +303,6 @@ import { UpdateActivityFieldComponent } from './update-personal/update-activity-
     AccountTransactionsComponent,
     UpdateAddressComponent,
     UpdateContactComponent,
-    UpdateOrganizationalEntityManagerComponent,
-    OrganizationalEntityListComponent,
     CreateRegistrationInfoComponent,
     IdentificationTransactionComponent,
     ActivityFieldComponent,

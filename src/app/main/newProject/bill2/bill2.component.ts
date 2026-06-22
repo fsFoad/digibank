@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Constants } from '../../shared/constants/Constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bill2',
@@ -71,11 +72,14 @@ export class Bill2Component implements OnInit {
     },
   ].map((x, i) => ({ ...x, branchName: Constants.branchNames[i] }));
 
-  constructor() {
-  }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
 
   }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

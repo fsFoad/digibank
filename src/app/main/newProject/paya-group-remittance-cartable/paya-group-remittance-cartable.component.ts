@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class PayaGroupRemittanceCartableComponent implements OnInit {
   tableData: GroupPayaRow[] = createSampleRows();
   showDetailsComponent = false;
   selectedRow: GroupPayaRow | null = null;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -23,6 +24,10 @@ export class PayaGroupRemittanceCartableComponent implements OnInit {
 
   confirm(confirm: boolean): void {
     this.showDetailsComponent = false;
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 }
 

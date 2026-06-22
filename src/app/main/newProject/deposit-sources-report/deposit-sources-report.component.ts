@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Constants } from 'app/main/shared/constants/Constants';
 import { AddCommaPipe } from 'app/main/shared/pipes/add-comma.pipe';
 import * as Chart from 'chart.js';
+import { Router } from '@angular/router';
 
 export const rlm = '\u200f';
 export const lrm = '\u200e';
@@ -38,13 +39,17 @@ export class DepositSourcesReportComponent implements OnInit {
 
   data = getChartDataForDepositSources();
   chartOptions: Chart.ChartOptions = getChartOptionsForDepositSources()
-  constructor() {
+  constructor(private router: Router) {
     setChartFont();
   }
 
   ngOnInit(): void {
   }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }
 
 export function getChartOptionsForDepositSources(): Chart.ChartOptions {

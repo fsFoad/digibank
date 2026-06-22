@@ -1,4 +1,11 @@
-<p-panel header="حساب‌های ارزی شما" class="w-100-p">
+<p-panel class="w-100-p">
+  <ng-template pTemplate="header">
+    <div class="bf-panel-header">
+      <span class="bf-panel-title">حساب‌های ارزی شما</span>
+      <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text bf-back-btn"
+              (click)="goHome()"></button>
+    </div>
+  </ng-template>
   <p-card class="account app-mx-5r p-d-block" header="جاری اشخاص حقوقی">
     <table class="account w-100-p">
       <tbody class="account">

@@ -160,6 +160,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
             translate: 'گزارشات',
             type: 'item',
             icon: 'account_balance_wallet',
+            routerLink: '/coming-soon',
           },
         ]
       },

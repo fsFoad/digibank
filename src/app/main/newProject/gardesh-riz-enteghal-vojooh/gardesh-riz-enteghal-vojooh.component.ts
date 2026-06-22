@@ -24,4 +24,8 @@ export class GardeshRizEnteghalVojoohComponent implements OnInit {
   goToHome(){
     this.router.navigate(['']);
   }
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

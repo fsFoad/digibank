@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService } from "primeng/api";
 import {Constants} from '../../shared/constants/Constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paya-regular-remittance-registration',
@@ -24,7 +25,7 @@ export class PayaRegularRemittanceRegistrationComponent implements OnInit {
   //   { value: '3', label: 'بابت سه' },
   // ]
   periodItems = Constants.payaRegularRemittanceRegistration_periodItems
-  constructor(private confirmationService: ConfirmationService) { }
+  constructor(private confirmationService: ConfirmationService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -48,4 +49,8 @@ export class PayaRegularRemittanceRegistrationComponent implements OnInit {
     }
   }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

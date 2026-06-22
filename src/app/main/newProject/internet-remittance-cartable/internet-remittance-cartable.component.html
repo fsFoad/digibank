@@ -1,4 +1,11 @@
-<p-panel header="کارتابل تائید حواله اینترنتی" *ngIf="!showDetailsComponent">
+<p-panel *ngIf="!showDetailsComponent">
+  <ng-template pTemplate="header">
+    <div class="bf-panel-header">
+      <span class="bf-panel-title">کارتابل تائید حواله اینترنتی</span>
+      <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text bf-back-btn"
+              (click)="goHome()"></button>
+    </div>
+  </ng-template>
   <div class="app-mx-5r p-mb-4">
   </div>
   <p-card>

@@ -36,6 +36,7 @@ import { TashilatListComponent } from './tashilat-list/tashilat-list.component';
 import { OrganizationalEntityEditComponent } from './organizational-entity/containers/organizational-entity-edit/organizational-entity-edit.component';
 import { PersonalEntityAddComponent } from './personal-entity/containers/personal-entity-add/personal-entity-add.component';
 import { PersonalEntityEditComponent } from './personal-entity/containers/personal-entity-edit/personal-entity-edit.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { PersonEditorComponent } from './person-editor/person-editor.component';
 import { CardBoardComponent } from './card-board/card-board.component';
 import { CardBoardPayaComponent } from './card-board-paya/card-board-paya.component';
@@ -77,13 +78,11 @@ import { ChartTestComponent } from './chart-test/chart-test.component';
 import { LoginGuard } from '../../auth/guard/login.guard';
 import { LoginComponent } from 'app/auth/login/login.component';
 import { DepositSourcesReportComponent } from './deposit-sources-report/deposit-sources-report.component';
-import { PersonalEntityListComponent } from './personal-entity-list/personal-entity-list.component';
 import { UpdatePersonalComponent } from './update-personal/update-personal.component';
 import { AccountTreeComponent } from './account-tree/account-tree.component';
 import { ChartOfFacilitiesReceivedComponent } from './chart-of-facilities-received/chart-of-facilities-received.component';
 import { ExpendituresAndRevenuesComponent } from './expenditures-and-revenues/expenditures-and-revenues.component';
 import { AccountTransactionsComponent } from './account-transactions/account-transactions.component';
-import {OrganizationalEntityListComponent} from './organizational-entity-list/organizational-entity-list.component';
 import {IdentificationTransactionComponent} from './identification-transaction/identification-transaction.component';
 import {RialAccountByBankComponent} from './rial-account-by-bank/rial-account-by-bank.component';
 import {HoldingsBillComponent} from './holdings-bill/holdings-bill.component';
@@ -246,6 +245,10 @@ const routes: Routes = [
         component: PersonalEntityEditComponent,
       },
       {
+        path: 'coming-soon',
+        component: ComingSoonComponent,
+      },
+      {
         path: 'person-editor',
         component: PersonEditorComponent,
       },
@@ -393,10 +396,7 @@ const routes: Routes = [
         path: 'depositSourcesReport',
         component: DepositSourcesReportComponent,
       },
-      {
-        path: 'personalEntityList',
-        component: PersonalEntityListComponent,
-      },
+
       {
         path: 'updatePersonal',
         component: UpdatePersonalComponent,
@@ -416,10 +416,6 @@ const routes: Routes = [
       {
         path: 'accountTransactions',
         component: AccountTransactionsComponent,
-      },
-      {
-        path: 'organizationalEntityList',
-        component: OrganizationalEntityListComponent,
       },
       {
         path: 'identificationTransaction',

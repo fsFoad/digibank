@@ -1,4 +1,11 @@
-<p-panel header="دریافت فایل صورتحساب">
+<p-panel>
+  <ng-template pTemplate="header">
+    <div class="bf-panel-header">
+      <span class="bf-panel-title">دریافت فایل صورتحساب</span>
+      <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text bf-back-btn"
+              (click)="goHome()"></button>
+    </div>
+  </ng-template>
   <div class="app-mx-40r">
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col-6">

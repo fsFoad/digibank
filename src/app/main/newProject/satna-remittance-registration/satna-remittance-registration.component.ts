@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Constants} from '../../shared/constants/Constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-satna-remittance-registration',
@@ -25,7 +26,7 @@ export class SatnaRemittanceRegistrationComponent implements OnInit {
   receiverItems = Constants.satnaRemittanceRegistration_receiverItems
   showConfirmationComponent = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -36,5 +37,9 @@ export class SatnaRemittanceRegistrationComponent implements OnInit {
 
   closeConfirmation(): void {
     this.showConfirmationComponent = false;
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 }

@@ -17,4 +17,8 @@ export class InternetRemittanceRegisterationComponent implements OnInit {
   onClose(){
     this.router.navigate(['']);
   }
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

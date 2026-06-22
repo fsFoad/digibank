@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Constants } from 'app/main/shared/constants/Constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-your-rial-accounts',
@@ -10,7 +11,7 @@ export class YourRialAccountsComponent implements OnInit {
   accounts = Constants.acSummaries;
   level1Rows: L1Row[] = [];
   level1Loading = false;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.level1Loading = true;
@@ -28,6 +29,10 @@ export class YourRialAccountsComponent implements OnInit {
   }
   confirm(): void {
 
+  }
+
+  goHome(): void {
+    this.router.navigate(['/']);
   }
 }
 function createSampleL1Rows(): L1Row[] {

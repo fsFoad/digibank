@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {numericIndexGetter} from '@swimlane/ngx-datatable';
 import {coerceNumberProperty} from '@angular/cdk/coercion';
 import {Constants} from '../../shared/constants/Constants';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-report-bank-transfer',
@@ -16,10 +17,13 @@ export class ReportBankTransferComponent implements OnInit {
     fsList: { accountNumber: string, typeTranslate: string,statusTranslate:string ,
         dateRegistration:string,dateDue:string,beneficiary:string,nationalCode:number,
         numberTranslate:number, boxTranslate:number,amount:number,ErrDes:string}[] = Constants.reportBankTransfer_numberTranslate;
-    constructor() {
-    }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
     }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

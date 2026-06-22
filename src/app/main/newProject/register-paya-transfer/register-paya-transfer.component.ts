@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-register-paya-transfer',
@@ -8,10 +9,13 @@ import {Component, OnInit} from '@angular/core';
 export class RegisterPayaTransferComponent implements OnInit {
     ibon = 'IR';
 
-    constructor() {
-    }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
     }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

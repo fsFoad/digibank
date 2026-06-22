@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Constants} from '../../shared/constants/Constants';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-bill',
@@ -42,8 +43,7 @@ export class BillComponent implements OnInit {
     }[]=[];
     tableFlag = false;
 
-    constructor() {
-    }
+    constructor(private router: Router) { }
 
     ngOnInit(): void {
         this.organList = Constants.bill_organList_x;
@@ -64,4 +64,8 @@ export class BillComponent implements OnInit {
         this.upOrDownloadFlag = true;
     }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }

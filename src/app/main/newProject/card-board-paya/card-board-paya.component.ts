@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-board-paya',
@@ -37,8 +38,7 @@ export class CardBoardPayaComponent implements OnInit {
     },
   ];
 person;
-  constructor() {
-  }
+  constructor(private router: Router) { }
 
   editServiceRow(servise) {
     this.person = {
@@ -64,4 +64,8 @@ person;
   ngOnInit(): void {
   }
 
+
+  goHome(): void {
+    this.router.navigate(['/']);
+  }
 }
