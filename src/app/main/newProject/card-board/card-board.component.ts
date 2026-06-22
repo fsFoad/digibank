@@ -13,15 +13,15 @@ export class CardBoardComponent implements OnInit {
   }[] = [
     {
       'applicationNumber': 10000026, 'operationType': 'حواله سانتا',
-      'amount': 1000000000, 'result': '*درانتظار تایید', 'time': 102000
+      'amount': 1000000000000, 'result': 'درانتظار تایید', 'time': 102000
     },
     {
       'applicationNumber': 10000027, 'operationType': 'انتقال وجه داخل بانک'
-      , 'amount': 150000000, 'result': '*انجام موفق', 'time': 112400
+      , 'amount': 150000000000, 'result': 'انجام موفق', 'time': 112400
     },
     {
       'applicationNumber': 10000028, 'operationType': 'پرداخت قبض'
-      , 'amount': 120000000, 'result': '*انجام ناموفق', 'time': null
+      , 'amount': 120000000000, 'result': 'انجام ناموفق', 'time': null
     }
   ];
 

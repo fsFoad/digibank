@@ -1,4 +1,10 @@
-:host {
+td .p-button {
+  margin-left: 8px;
+}
+
+td .p-button:last-child {
+  margin-left: 0;
+}:host {
   display: block;
   width: 100%;
   --pe-accent: #0077B3;
@@ -26,7 +32,7 @@
 .pe-search input:focus { border-color: var(--pe-accent); box-shadow: 0 0 0 3px var(--pe-accent-soft); outline: none; }
 
 :host ::ng-deep .pe-table .p-datatable-thead > tr > th {
-  background: var(--pe-surface-2); color: var(--pe-text); font-weight: 700;
+  background: var(--pe-surface-2); color: var(--pe-text); font-weight: 700; width:50px;
   border: none; border-bottom: 2px solid var(--pe-accent); padding: 0.85rem 0.9rem;
 }
 :host ::ng-deep .pe-table .p-datatable-tbody > tr > td {

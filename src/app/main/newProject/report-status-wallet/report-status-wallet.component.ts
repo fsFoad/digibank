@@ -16,28 +16,28 @@ export class ReportStatusWalletComponent implements OnInit {
         amounts: string, boxTranslate: string, amount: number, ErrDes: string
     }[] = [
         {
-            'accountNumber': '240-1000000589-25', 'history': '1400/03/11', 'personal': 'عرفان حشمتی'
+            'accountNumber': '240-1000000589-25', 'history': '1404/03/11', 'personal': 'عرفان حشمتی'
             , 'mobile': ' 09196425578', 'yektaCode': '3587545',
             'walletId': '33413353', 'beneficiary': '312', 'status': ' ',
-            'amounts': '25000000', 'boxTranslate': ' ', 'amount': 10000, 'ErrDes': 'ندارد'
+            'amounts': '2500000000', 'boxTranslate': ' ', 'amount': 10000000, 'ErrDes': 'ندارد'
         },
         {
-            'accountNumber': '340-1000000145-65', 'history': '1400/05/06', 'personal': 'رستم حبیبی'
+            'accountNumber': '340-1000000145-65', 'history': '1404/05/06', 'personal': 'رستم حبیبی'
             , 'mobile': ' 09123528456', 'yektaCode': '3587445',
             'walletId': '15845785', 'beneficiary': '313', 'status': ' ',
-            'amounts': '87000000', 'boxTranslate': ' ', 'amount': 10000, 'ErrDes': 'ندارد'
+            'amounts': '87000000000', 'boxTranslate': ' ', 'amount': 10000000, 'ErrDes': 'ندارد'
         },
         {
-            'accountNumber': '340-1000000189-26', 'history': '1400/07/25', 'personal': 'حبیب حسینی'
+            'accountNumber': '340-1000000189-26', 'history': '1404/07/25', 'personal': 'حبیب حسینی'
             , 'mobile': ' 09383531555', 'yektaCode': '352345',
             'walletId': '65148514', 'beneficiary': '314', 'status': ' ',
-            'amounts': '50000000 ', 'boxTranslate': ' ', 'amount': 10000, 'ErrDes': 'ندارد'
+            'amounts': '50000000000 ', 'boxTranslate': ' ', 'amount': 10000000, 'ErrDes': 'ندارد'
         },
         {
-            'accountNumber': '440-1006580523-01', 'history': '1400/08/01', 'personal': 'کامیار کاظمی'
+            'accountNumber': '440-1006580523-01', 'history': '1404/08/01', 'personal': 'کامیار کاظمی'
             , 'mobile': ' 09373535574', 'yektaCode': '343315',
             'walletId': '65541658', 'beneficiary': '315', 'status': ' ',
-            'amounts': '10000000 ', 'boxTranslate': ' ', 'amount': 10000, 'ErrDes': 'ندارد'
+            'amounts': '10000000000 ', 'boxTranslate': ' ', 'amount': 10000000, 'ErrDes': 'ندارد'
         },
         // {
         //     'accountNumber': 7416581213, 'history': '1400/05/01', 'personal': 'فرید ترابی'
