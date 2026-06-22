@@ -40,17 +40,17 @@ function createSampleRows(): Row[] {
     'سررسید گذشته',
   ];
   const debitBalances = [
-    0, 500_000, 0, 793_236, 2_000_986, 2_500_000, 1_900_000,
+    0, 500_000_000, 0, 793_236_000, 2_000_986, 2_500_000, 1_900_000,
   ];
   const penaltyClauses = [
-    0, 26_576, 0, 116_764, 55_002, 336_667, 74_160,
+    0, 26_576_000, 0, 116_764_000, 55_002_000, 336_667_000, 74_160_000,
   ];
   return [0, 1, 2, 3, 4, 5, 6].map(i => ({
     contractType: contractTypes[i],
     facilityStatus: facilityStatuses[i === 6 ? 1 : 0],
     debitBalance: debitBalances[i],
     penaltyClause: penaltyClauses[i],
-    penaltyClause2: i === 6 ? 19_048 : 0,
+    penaltyClause2: i === 6 ? 19_048_000 : 0,
     contracNumber: Math.floor(10_000_000 * Math.random()),
     debitBalanceForInterest: Math.floor(10_000 * Math.random()) * 1_000,
     facilityOwner: 'پرویز خسروی',

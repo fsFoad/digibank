@@ -20,14 +20,14 @@ export class CardBoardPayaComponent implements OnInit {
 
     {
       'TemporaryTransferNumber': 958615, 'SourceAccountNumber': 2513350448275
-      , 'amounts': 2625000, 'dateEffective': 13990812, 'status': 'امضا شده', 'registrar': 'علی محمدی',
-      'registrationDate': 13990812,ibon:'IR830120000000000055771565',verificationCode:4872,remittancesNumber:'1',
+      , 'amounts': 2625000000, 'dateEffective': 14040812, 'status': 'امضا شده', 'registrar': 'علی محمدی',
+      'registrationDate': 14040812,ibon:'IR830120000000000055771565',verificationCode:4872,remittancesNumber:'1',
       table1RecipientRemittance:'سروش محسنی'
     },
     {
       'TemporaryTransferNumber': 954213, 'SourceAccountNumber': 8506321596425
       , 'amounts': 100, 'dateEffective': 14000205, 'status': 'بررسی نشده', 'registrar': 'محمد سروری',
-      'registrationDate': 14000205,ibon:'IR895870000000000055662389',verificationCode:6924,remittancesNumber:'5',
+      'registrationDate': 14040205,ibon:'IR895870000000000055662389',verificationCode:6924,remittancesNumber:'5',
       table1RecipientRemittance:'حمید تقی زاده'
     }, {
       'TemporaryTransferNumber': 958425, 'SourceAccountNumber': 1106354796009,
