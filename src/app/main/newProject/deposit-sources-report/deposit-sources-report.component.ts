@@ -98,7 +98,9 @@ export function getChartOptionsForDepositSources(): Chart.ChartOptions {
   };
 }
 
-export function getChartDataForDepositSources(rows: DepositSource[]) {
+export function getChartDataForDepositSources(
+  rows: DepositSource[] = []
+) {
   return {
     labels: rows.map(x => `${x.title} (${ltre}${faDigits(x.accountNumber)}${popd}${rlm})`),
     datasets: [

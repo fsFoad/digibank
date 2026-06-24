@@ -1,7 +1,7 @@
 <p-panel [ngStyle]="{'width':'100%'}">
   <ng-template pTemplate="header">
     <div class="bf-panel-header">
-      <span class="bf-panel-title">گزارش حواله های اینترنتی </span>
+      <span class="bf-panel-title">گزارش حواله های بانکی</span>
       <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text bf-back-btn"
               (click)="goHome()"></button>
     </div>
@@ -80,8 +80,9 @@
       <ng-template pTemplate="header">
         <tr>
           <th translate>ردیف</th>
+          <th translate>نام بانک</th>
           <th translate>شماره حساب</th>
-          <th translate>نوع حواله</th>
+
           <th translate>وضعیت حواله</th>
           <th translate>تاریخ ثبت</th>
           <th translate>تاریخ سر رسید</th>
@@ -94,8 +95,9 @@
       <ng-template let-i="rowIndex" pTemplate="body" let-reportTransfer>
         <tr>
           <td>{{i + 1}}</td>
-          <td>{{reportTransfer.accountNumber}}</td>
           <td>{{reportTransfer.typeTranslate}}</td>
+          <td>{{reportTransfer.accountNumber}}</td>
+
           <td>{{reportTransfer.statusTranslate}}</td>
           <td>{{reportTransfer.dateRegistration}}</td>
           <td>{{reportTransfer.dateDue}}</td>

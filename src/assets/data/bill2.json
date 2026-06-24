@@ -12,7 +12,9 @@
     "creditor": "10000000",
     "branchName": "تجریش",
     "debtor": 0,
-    "dueDateDisplay": "1404/01/06"
+    "dueDateDisplay": "1404/01/06",
+    "serviceTypeCode": 170,
+    "operationTypeCode": 250
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -27,7 +29,9 @@
     "creditor": "30000000",
     "branchName": "بازار",
     "debtor": 0,
-    "dueDateDisplay": "1404/02/17"
+    "dueDateDisplay": "1404/02/17",
+    "serviceTypeCode": 171,
+    "operationTypeCode": 251
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -42,7 +46,9 @@
     "creditor": "15000000",
     "branchName": "دولت",
     "debtor": 0,
-    "dueDateDisplay": "1404/02/28"
+    "dueDateDisplay": "1404/02/28",
+    "serviceTypeCode": 172,
+    "operationTypeCode": 255
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -57,7 +63,9 @@
     "creditor": "55000000",
     "branchName": "گاندی",
     "debtor": 0,
-    "dueDateDisplay": "1404/04/13"
+    "dueDateDisplay": "1404/04/13",
+    "serviceTypeCode": 175,
+    "operationTypeCode": 250
   },
   {
     "accountNumber": "440-1006580523-01",
@@ -72,7 +80,9 @@
     "creditor": "60000000",
     "branchName": "شوش",
     "debtor": 0,
-    "dueDateDisplay": "1404/05/06"
+    "dueDateDisplay": "1404/05/06",
+    "serviceTypeCode": 180,
+    "operationTypeCode": 260
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -87,7 +97,9 @@
     "creditor": "25000000",
     "branchName": "نلسون ماندلا",
     "debtor": 0,
-    "dueDateDisplay": "1404/05/17"
+    "dueDateDisplay": "1404/05/17",
+    "serviceTypeCode": 170,
+    "operationTypeCode": 252
   },
   {
     "accountNumber": "440-1006580523-01",
@@ -102,7 +114,9 @@
     "creditor": "15000000",
     "branchName": "سعدی",
     "debtor": 0,
-    "dueDateDisplay": "1404/05/28"
+    "dueDateDisplay": "1404/05/28",
+    "serviceTypeCode": 173,
+    "operationTypeCode": 250
   },
   {
     "accountNumber": "440-1006580523-01",
@@ -117,7 +131,9 @@
     "creditor": "85000000",
     "branchName": "سئول",
     "debtor": 0,
-    "dueDateDisplay": "1404/05/31"
+    "dueDateDisplay": "1404/05/31",
+    "serviceTypeCode": 170,
+    "operationTypeCode": 258
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -132,6 +148,8 @@
     "creditor": "65000000",
     "branchName": "صادقیه",
     "debtor": 0,
-    "dueDateDisplay": "1404/06/03"
+    "dueDateDisplay": "1404/06/03",
+    "serviceTypeCode": 176,
+    "operationTypeCode": 250
   }
 ]

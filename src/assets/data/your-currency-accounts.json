@@ -1,0 +1,22 @@
+[
+  {
+    "title": "جاری اشخاص حقوقی",
+    "accountNumber": "340-1000000145-65",
+    "balance": 1004061000000,
+    "currencyType": "دلار",
+    "currencyIcon": "https://static.thenounproject.com/png/1652733-200.png",
+    "openingBranchCode": "1446",
+    "openingBranchName": "تجریش",
+    "dateOfLastTurnover": "1404/08/04"
+  },
+  {
+    "title": "قرض الحسنه اشخاص حقوقی",
+    "accountNumber": "240-1000000589-25",
+    "balance": 120000000000,
+    "currencyType": "درهم امارات",
+    "currencyIcon": "https://static.thenounproject.com/png/495441-200.png",
+    "openingBranchCode": "1446",
+    "openingBranchName": "تجریش",
+    "dateOfLastTurnover": "1404/09/05"
+  }
+]

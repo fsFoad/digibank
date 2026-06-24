@@ -11,7 +11,11 @@
       "creditor": "10000000",
       "amount": 250000000,
       "dueDate": "1404/01/06",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255,
+      "serviceTypeCode": 172,
+      "operationTypeCode": 255
     },
     {
       "sourceAccountNumber": "010-1000000145-65",
@@ -24,7 +28,9 @@
       "creditor": "15000000",
       "amount": 180000000,
       "dueDate": "1404/02/11",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+      "operationTypeCode": 255
     }
   ],
   "1": [
@@ -39,7 +45,9 @@
       "creditor": "25000000",
       "amount": 540000000,
       "dueDate": "1404/01/13",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255
     },
     {
       "sourceAccountNumber": "020-1100000145-65",
@@ -52,7 +60,9 @@
       "creditor": "30000000",
       "amount": 320000000,
       "dueDate": "1404/03/03",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255
     }
   ],
   "2": [
@@ -67,7 +77,9 @@
       "creditor": "12000000",
       "amount": 95000000,
       "dueDate": "1404/02/02",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255
     }
   ],
   "3": [
@@ -82,7 +94,9 @@
       "creditor": "8000000",
       "amount": 410000000,
       "dueDate": "1404/03/16",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255
     },
     {
       "sourceAccountNumber": "040-1300000145-65",
@@ -95,7 +109,9 @@
       "creditor": "5000000",
       "amount": 76000000,
       "dueDate": "1404/04/03",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255
     }
   ],
   "4": [
@@ -110,7 +126,9 @@
       "creditor": "18000000",
       "amount": 215000000,
       "dueDate": "1404/01/21",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255
     }
   ],
   "5": [
@@ -125,7 +143,9 @@
       "creditor": "9000000",
       "amount": 132000000,
       "dueDate": "1404/02/19",
-      "debtor": 0
+        "debtor": 0,
+"serviceTypeCode": 172,
+    "operationTypeCode": 255
     }
   ]
 }

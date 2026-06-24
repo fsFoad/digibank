@@ -17,6 +17,8 @@ interface BillRow {
   creditor: string;
   debtor: number;
   dueDateDisplay: string;
+  serviceTypeCode: number;
+  operationTypeCode: number;
 }
 
 @Component({

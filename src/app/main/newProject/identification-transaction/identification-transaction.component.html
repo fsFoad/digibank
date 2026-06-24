@@ -23,11 +23,21 @@
         </span>
       </div>
 
+
+
       <div class="p-field p-col">
         <span class="p-float-label">
           <p-dropdown [autoDisplayFirst]="false" [options]="organizationalUnit">
           </p-dropdown>
           <label>واحد سازمانی</label>
+        </span>
+      </div>
+
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank">
+          </p-dropdown>
+          <label>نام بانک</label>
         </span>
       </div>
       <div class="p-field p-col">
@@ -40,7 +50,8 @@
     </div>
   </div>
   <div class="p-d-flex p-jc-center p-mt-5 p-mb-5">
-    <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" (click)="tableFlag=true;"></button>&nbsp;
+    <button id="btnRecovery" class="p-button-info" pButton label="بازیابی" [disabled]="!selectedBank"
+            (click)="recover()"></button>&nbsp;
   </div>
   <div class="p-mt-3" *ngIf=tableFlag>
     <p-card>

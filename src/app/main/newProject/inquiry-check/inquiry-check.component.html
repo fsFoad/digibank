@@ -155,11 +155,11 @@
           <td>{{service.yektaCode}}</td>
           <td>{{service.check}}</td>
           <td>{{service.doc}}</td>
-          <td>0</td>
+          <td>{{service.debtor|addCommaSeparator}}</td>
           <td>{{service.creditor|addCommaSeparator}}</td>
           <td>{{service.amount|addCommaSeparator}}</td>
-          <td>1404/06/01</td>
-          <td>170</td>
+          <td>{{service.dueDateDisplay}}</td>
+          <td>{{service.serviceTypeCode}}</td>
         </tr>
       </ng-template>
     </p-table>

@@ -86,7 +86,7 @@ const randomNdigit = (n: number) => randomRange(Math.pow(10, n - 1), Math.pow(10
 function createSampleRows(): InternetRemittanceRow[] {
   return [1, 2, 3].map(x => ({
     temporaryTransferNumber: randomNdigit(7),
-    remittanceType: 'حواله اینترنتی',
+    remittanceType: 'حواله',
     remittanceRecipient: randomName(),
     status: 'بررسی نشده',
     sourceAccountNumber: `${choose(['020', '030', '040'])}-${randomNdigit(10)}-${randomNdigit(3)}`,

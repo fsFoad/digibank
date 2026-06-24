@@ -29,10 +29,22 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
         <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"></p-dropdown>
+          <label>نام بانک مبدا</label>
+        </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
         <p-dropdown [editable]="true" [autoDisplayFirst]="false"
                     [options]="acItems"></p-dropdown>
           <label>شماره حساب مبدا</label>
       </span>
+      </div>
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"></p-dropdown>
+          <label>نام بانک مقصد</label>
+        </span>
       </div>
       <div class="p-field p-col">
         <span class="p-float-label">
@@ -61,15 +73,11 @@
       <div class="p-col"></div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-      <div class="p-field p-col">
-        <span class="p-float-label">
-          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"></p-dropdown>
-          <label>نام بانک</label>
-        </span>
-      </div>
+
       <div class="p-col"></div>
       <div class="p-col"></div>
       <div class="p-col"></div>
+
     </div>
   </div>
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
@@ -94,6 +102,8 @@
             <th translate>بستانکار</th>
             <th translate>مبلغ</th>
             <th translate>تاریخ انجام</th>
+            <th translate>کد نوع خدمات</th>
+            <th translate>کد نوع عملیات</th>
           </tr>
         </ng-template>
         <ng-template let-i="rowIndex" pTemplate="body" let-service>
@@ -110,6 +120,8 @@
             <td>{{service.creditor|addCommaSeparator}}</td>
             <td>{{service.amount|addCommaSeparator}}</td>
             <td>{{service.dueDate}}</td>
+            <td>{{service.serviceTypeCode}}</td>
+            <td>{{service.operationTypeCode}}</td>
           </tr>
         </ng-template>
       </p-table>
