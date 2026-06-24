@@ -16,6 +16,8 @@ export class AccountTransactionsComponent implements OnInit {
   level1Rows: L1Row[] = [];
   level1Loading = false;
   form: FormGroup;
+  accountDialogVisible = false;
+  selectedAccount: any = null;
   constructor(fb: FormBuilder, private datasetService: DatasetService) {
     this.form = fb.group({
       billingPeriod: ['customRange'],
@@ -31,24 +33,15 @@ export class AccountTransactionsComponent implements OnInit {
 
   confirm(): void {
     this.level1Loading = true;
-    this.datasetService.loadRaw('account-tree-base-accounts', []).then((baseAccounts: [string, string][]) => {
-      this.level1Rows = createL1RowsFromBase(baseAccounts);
+    this.datasetService.loadRaw('account-transactions', []).then((rows: L1Row[]) => {
+      this.level1Rows = rows;
       this.level1Loading = false;
     });
   }
-}
-function createL1RowsFromBase(baseAccounts: [string, string][]): L1Row[] {
-  return baseAccounts.map(x => ({
-    code: x[0],
-    title: x[1],
-    rows: [0, 1, 2].map(y => ({
-      code: `${x[0]}${1000 + y}`,
-      title: `sub title ${y + 1}`,
-      rows: [0, 1, 2].map(z => ({
-        code: `${x[0]}${1000 + y}${1000 + z}`,
-        title: `sub sub title ${z + 1}`,
-      })),
-    })),
-  })) as any;
+
+  showAccount(account: any): void {
+    this.selectedAccount = account;
+    this.accountDialogVisible = true;
+  }
 }
 

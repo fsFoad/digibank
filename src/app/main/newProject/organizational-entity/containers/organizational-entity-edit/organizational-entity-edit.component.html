@@ -6,7 +6,7 @@
       <span class="oe-count">{{ entities.length }} مورد</span>
     </div>
 
-    <p-table #dt [value]="entities" class="pe-table"
+    <p-table #dt [value]="entities" class="oe-table"
              [globalFilterFields]="['customerName','contactNumber','relationshipType']">
      <!-- <ng-template pTemplate="caption">
         <span class="oe-search p-input-icon-right">
@@ -41,11 +41,11 @@
           <td>
             <div class="oe-actions">
               <button pButton icon="pi pi-eye" title="نمایش"
-                      class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="view(row)"></button>
+                      class="oe-btn p-button-rounded p-button-text p-button-outlined" (click)="view(row)"></button>
               <button pButton icon="pi pi-pencil" title="ویرایش"
-                      class="pe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
+                      class="oe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
               <button pButton icon="pi pi-trash" title="حذف"
-                      class="pe-btn pe-btn--danger p-button-rounded p-button-text p-button-outlined" (click)="remove(row)"></button>
+                      class="oe-btn oe-btn--danger p-button-rounded p-button-text p-button-outlined" (click)="remove(row)"></button>
             </div>
           </td>
         </tr>

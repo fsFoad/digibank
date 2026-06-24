@@ -170,3 +170,10 @@
   visibility: visible !important;
   display: block !important;
 }
+/* عنوان حساب: عریض و بدون شکست خط */
+:host ::ng-deep .at-title-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}

@@ -43,9 +43,8 @@
           <ng-template pTemplate="header">
             <tr>
               <th style="width:70px"></th>
-              <th translate style="width: 2%;">ردیف</th>
-              <th translate class="app-w-10pc">کد سر فصل</th>
-              <th translate class="p-text-right">عنوان سر فصل</th>
+              <th translate style="width: 6%;">ردیف</th>
+              <th translate class="p-text-right">عنوان حساب</th>
             </tr>
           </ng-template>
           <ng-template let-i="rowIndex" pTemplate="body" let-row let-expanded="expanded">
@@ -61,23 +60,22 @@
                 </button>
               </td>
               <td>{{i + 1}}</td>
-              <td>{{row.code}}</td>
-              <td class="p-text-right">{{row.title}}</td>
+              <td class="p-text-right at-title-cell">{{row.title}}</td>
             </tr>
           </ng-template>
           <ng-template pTemplate="rowexpansion" let-row>
             <tr>
-              <td colspan="4">
+              <td colspan="3">
                 <div class="p-p-3 app-nested-level-2">
                   <p-table [value]="row.rows" dataKey="code">
                     <ng-template pTemplate="header">
                       <tr>
                         <th style="width:70px"></th>
-                        <th class="p-text-right app-w-10pc">کد</th>
-                        <th class="p-text-right">عنوان</th>
+                        <th style="width: 6%;">ردیف</th>
+                        <th class="p-text-right">عنوان حساب</th>
                       </tr>
                     </ng-template>
-                    <ng-template pTemplate="body" let-row let-expanded="expanded">
+                    <ng-template pTemplate="body" let-row let-expanded="expanded" let-j="rowIndex">
                       <tr>
                         <td>
                           <button
@@ -89,25 +87,32 @@
                             [label]="expanded ? '−' : '+'">
                           </button>
                         </td>
-                        <td class="p-text-right">{{row.code}}</td>
-                        <td class="p-text-right">{{row.title}}</td>
+                        <td>{{j + 1}}</td>
+                        <td class="p-text-right at-title-cell">{{row.title}}</td>
                       </tr>
                     </ng-template>
                     <ng-template pTemplate="rowexpansion" let-row>
                       <tr>
                         <td colspan="3">
                           <div class="p-p-3 app-nested-level-3">
-                            <p-table [value]="row.rows" dataKey="code">
+                            <p-table [value]="row.rows">
                               <ng-template pTemplate="header">
                                 <tr>
-                                  <th class="p-text-right app-w-10pc">کد</th>
-                                  <th class="p-text-right">عنوان</th>
+                                  <th style="width: 6%;">ردیف</th>
+                                  <th style="min-width: 220px" class="p-text-right">عنوان حساب</th>
+                                  <th class="p-text-right">شماره حساب</th>
+                                  <th style="width:120px"></th>
                                 </tr>
                               </ng-template>
-                              <ng-template pTemplate="body" let-row>
+                              <ng-template pTemplate="body" let-account let-k="rowIndex">
                                 <tr>
-                                  <td class="p-text-right">{{row.code}}</td>
-                                  <td class="p-text-right">{{row.title}}</td>
+                                  <td>{{k + 1}}</td>
+                                  <td class="p-text-right at-title-cell">{{account.title}}</td>
+                                  <td class="p-text-right">{{account.accountNumber}}</td>
+                                  <td>
+                                    <button pButton type="button" label="نمایش" icon="pi pi-eye"
+                                            class="p-button-sm p-button-info" (click)="showAccount(account)"></button>
+                                  </td>
                                 </tr>
                               </ng-template>
                             </p-table>
@@ -125,3 +130,31 @@
     </p-card>
   </div>
 </p-panel>
+
+<p-dialog header="جزئیات حساب" [(visible)]="accountDialogVisible" [modal]="true" [style]="{width:'900px'}">
+  <table class="account w-100-p" *ngIf="selectedAccount">
+    <tbody>
+    <tr>
+      <td class="p-text-left">شماره حساب:</td>
+      <td>{{ selectedAccount.accountNumber }}</td>
+
+      <td class="p-text-left">مانده حساب:</td>
+      <td>{{ selectedAccount.balance | addCommaSeparator }}</td>
+
+      <td class="p-text-left">مبلغ مسدودی:</td>
+      <td>{{ selectedAccount.blockedAmount | addCommaSeparator }}</td>
+    </tr>
+
+    <tr>
+      <td class="p-text-left">تاریخ افتتاح:</td>
+      <td>{{ selectedAccount.openingDate | castToDate }}</td>
+
+      <td class="p-text-left">شعبه افتتاح:</td>
+      <td>{{ selectedAccount.openingBranch }}</td>
+
+      <td class="p-text-left">آخرین گردش:</td>
+      <td>{{ selectedAccount.dateOfLastTurnover | castToDate }}</td>
+    </tr>
+    </tbody>
+  </table>
+</p-dialog>
