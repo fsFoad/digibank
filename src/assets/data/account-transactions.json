@@ -1,0 +1,782 @@
+[
+  {
+    "code": "11",
+    "title": "دارایی‌های جاری",
+    "rows": [
+      {
+        "code": "111000",
+        "title": "موجودی نقد و بانک",
+        "rows": [
+          {
+            "code": "1110001000",
+            "title": "صندوق مرکزی",
+            "accountNumber": "110-001000002-10",
+            "balance": 1470200000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040503,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980002
+          },
+          {
+            "code": "1110001001",
+            "title": "حساب جاری بانک ملی",
+            "accountNumber": "110-001000003-11",
+            "balance": 2205300000,
+            "blockedAmount": 339000,
+            "dateOfLastTurnover": 14040504,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980003
+          },
+          {
+            "code": "1110001002",
+            "title": "حساب جاری بانک ملت",
+            "accountNumber": "110-001000004-12",
+            "balance": 2940400000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040505,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980004
+          }
+        ]
+      },
+      {
+        "code": "111001",
+        "title": "حساب‌های دریافتنی تجاری",
+        "rows": [
+          {
+            "code": "1110011000",
+            "title": "اسناد دریافتنی تجاری",
+            "accountNumber": "110-001000005-10",
+            "balance": 3675500000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040506,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980005
+          },
+          {
+            "code": "1110011001",
+            "title": "حساب‌های دریافتنی مشتریان",
+            "accountNumber": "110-001000006-11",
+            "balance": 4410600000,
+            "blockedAmount": 678000,
+            "dateOfLastTurnover": 14040507,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980006
+          },
+          {
+            "code": "1110011002",
+            "title": "پیش‌پرداخت مشتریان",
+            "accountNumber": "110-001000007-12",
+            "balance": 5145700000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040508,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980007
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "12",
+    "title": "دارایی‌های غیر جاری",
+    "rows": [
+      {
+        "code": "121000",
+        "title": "دارایی‌های ثابت مشهود",
+        "rows": [
+          {
+            "code": "1210001000",
+            "title": "ساختمان و تجهیزات",
+            "accountNumber": "120-001000008-10",
+            "balance": 5880800000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040509,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980008
+          },
+          {
+            "code": "1210001001",
+            "title": "ماشین‌آلات و ابزار",
+            "accountNumber": "120-001000009-11",
+            "balance": 6615900000,
+            "blockedAmount": 1017000,
+            "dateOfLastTurnover": 14040510,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980009
+          },
+          {
+            "code": "1210001002",
+            "title": "وسایل نقلیه",
+            "accountNumber": "120-001000010-12",
+            "balance": 7351000000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040511,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980010
+          }
+        ]
+      },
+      {
+        "code": "121001",
+        "title": "سرمایه‌گذاری‌های بلندمدت",
+        "rows": [
+          {
+            "code": "1210011000",
+            "title": "سرمایه‌گذاری در سهام",
+            "accountNumber": "120-001000011-10",
+            "balance": 8086100000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040512,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980011
+          },
+          {
+            "code": "1210011001",
+            "title": "سپرده بلندمدت بانکی",
+            "accountNumber": "120-001000012-11",
+            "balance": 8821200000,
+            "blockedAmount": 1356000,
+            "dateOfLastTurnover": 14040513,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980012
+          },
+          {
+            "code": "1210011002",
+            "title": "اوراق مشارکت",
+            "accountNumber": "120-001000013-12",
+            "balance": 9556300000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040514,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980013
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "21",
+    "title": "بدهی‌های جاری",
+    "rows": [
+      {
+        "code": "211000",
+        "title": "حساب‌های پرداختنی تجاری",
+        "rows": [
+          {
+            "code": "2110001000",
+            "title": "حساب‌های پرداختنی تامین‌کنندگان",
+            "accountNumber": "210-001000014-10",
+            "balance": 10291400000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040515,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980014
+          },
+          {
+            "code": "2110001001",
+            "title": "اسناد پرداختنی تجاری",
+            "accountNumber": "210-001000015-11",
+            "balance": 11026500000,
+            "blockedAmount": 1695000,
+            "dateOfLastTurnover": 14040516,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980015
+          },
+          {
+            "code": "2110001002",
+            "title": "پیش‌دریافت از مشتریان",
+            "accountNumber": "210-001000016-12",
+            "balance": 11761600000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040517,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980016
+          }
+        ]
+      },
+      {
+        "code": "211001",
+        "title": "تسهیلات مالی دریافتی کوتاه‌مدت",
+        "rows": [
+          {
+            "code": "2110011000",
+            "title": "تسهیلات بانک ملی",
+            "accountNumber": "210-001000017-10",
+            "balance": 12496700000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040518,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980017
+          },
+          {
+            "code": "2110011001",
+            "title": "تسهیلات بانک ملت",
+            "accountNumber": "210-001000018-11",
+            "balance": 13231800000,
+            "blockedAmount": 2034000,
+            "dateOfLastTurnover": 14040519,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980018
+          },
+          {
+            "code": "2110011002",
+            "title": "اضافه برداشت بانکی",
+            "accountNumber": "210-001000019-12",
+            "balance": 13966900000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040520,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980019
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "22",
+    "title": "بدهی‌های غیر جاری",
+    "rows": [
+      {
+        "code": "221000",
+        "title": "تسهیلات مالی دریافتی بلندمدت",
+        "rows": [
+          {
+            "code": "2210001000",
+            "title": "وام بلندمدت بانک سامان",
+            "accountNumber": "220-001000020-10",
+            "balance": 14702000000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040521,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980020
+          },
+          {
+            "code": "2210001001",
+            "title": "اوراق مشارکت پرداختنی",
+            "accountNumber": "220-001000021-11",
+            "balance": 15437100000,
+            "blockedAmount": 2373000,
+            "dateOfLastTurnover": 14040522,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980021
+          },
+          {
+            "code": "2210001002",
+            "title": "تسهیلات صندوق توسعه",
+            "accountNumber": "220-001000022-12",
+            "balance": 16172200000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040523,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980022
+          }
+        ]
+      },
+      {
+        "code": "221001",
+        "title": "ذخیره مزایای پایان خدمت",
+        "rows": [
+          {
+            "code": "2210011000",
+            "title": "ذخیره سنوات کارکنان",
+            "accountNumber": "220-001000023-10",
+            "balance": 16907300000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040524,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980023
+          },
+          {
+            "code": "2210011001",
+            "title": "ذخیره مزایای بازنشستگی",
+            "accountNumber": "220-001000024-11",
+            "balance": 17642400000,
+            "blockedAmount": 2712000,
+            "dateOfLastTurnover": 14040525,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980024
+          },
+          {
+            "code": "2210011002",
+            "title": "ذخیره پاداش پایان کار",
+            "accountNumber": "220-001000025-12",
+            "balance": 18377500000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040526,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980025
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "31",
+    "title": "حقوق صاحبان سهام",
+    "rows": [
+      {
+        "code": "311000",
+        "title": "سرمایه ثبت‌شده",
+        "rows": [
+          {
+            "code": "3110001000",
+            "title": "سرمایه پرداخت‌شده",
+            "accountNumber": "310-001000026-10",
+            "balance": 19112600000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040527,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980026
+          },
+          {
+            "code": "3110001001",
+            "title": "افزایش سرمایه در جریان ثبت",
+            "accountNumber": "310-001000027-11",
+            "balance": 19847700000,
+            "blockedAmount": 3051000,
+            "dateOfLastTurnover": 14040528,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980027
+          },
+          {
+            "code": "3110001002",
+            "title": "صرف سهام",
+            "accountNumber": "310-001000028-12",
+            "balance": 20582800000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040501,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980028
+          }
+        ]
+      },
+      {
+        "code": "311001",
+        "title": "سود (زیان) انباشته",
+        "rows": [
+          {
+            "code": "3110011000",
+            "title": "سود انباشته سال جاری",
+            "accountNumber": "310-001000029-10",
+            "balance": 21317900000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040502,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980029
+          },
+          {
+            "code": "3110011001",
+            "title": "سود انباشته سال‌های قبل",
+            "accountNumber": "310-001000030-11",
+            "balance": 22053000000,
+            "blockedAmount": 3390000,
+            "dateOfLastTurnover": 14040503,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980030
+          },
+          {
+            "code": "3110011002",
+            "title": "اندوخته قانونی",
+            "accountNumber": "310-001000031-12",
+            "balance": 22788100000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040504,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980031
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "41",
+    "title": "فروش و درآمدها",
+    "rows": [
+      {
+        "code": "411000",
+        "title": "فروش کالا",
+        "rows": [
+          {
+            "code": "4110001000",
+            "title": "فروش داخلی",
+            "accountNumber": "410-001000032-10",
+            "balance": 23523200000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040505,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980032
+          },
+          {
+            "code": "4110001001",
+            "title": "فروش صادراتی",
+            "accountNumber": "410-001000033-11",
+            "balance": 24258300000,
+            "blockedAmount": 3729000,
+            "dateOfLastTurnover": 14040506,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980033
+          },
+          {
+            "code": "4110001002",
+            "title": "برگشت از فروش",
+            "accountNumber": "410-001000034-12",
+            "balance": 24993400000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040507,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980034
+          }
+        ]
+      },
+      {
+        "code": "411001",
+        "title": "درآمد ارائه خدمات",
+        "rows": [
+          {
+            "code": "4110011000",
+            "title": "درآمد خدمات مشاوره",
+            "accountNumber": "410-001000035-10",
+            "balance": 25728500000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040508,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980035
+          },
+          {
+            "code": "4110011001",
+            "title": "درآمد خدمات نصب و راه‌اندازی",
+            "accountNumber": "410-001000036-11",
+            "balance": 26463600000,
+            "blockedAmount": 4068000,
+            "dateOfLastTurnover": 14040509,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980036
+          },
+          {
+            "code": "4110011002",
+            "title": "درآمد خدمات پس از فروش",
+            "accountNumber": "410-001000037-12",
+            "balance": 27198700000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040510,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980037
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "51",
+    "title": "بهای تمام شده کالای فروش رفته",
+    "rows": [
+      {
+        "code": "511000",
+        "title": "بهای تمام‌شده کالای فروخته‌شده",
+        "rows": [
+          {
+            "code": "5110001000",
+            "title": "بهای مواد مستقیم",
+            "accountNumber": "510-001000038-10",
+            "balance": 27933800000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040511,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980038
+          },
+          {
+            "code": "5110001001",
+            "title": "دستمزد مستقیم تولید",
+            "accountNumber": "510-001000039-11",
+            "balance": 28668900000,
+            "blockedAmount": 4407000,
+            "dateOfLastTurnover": 14040512,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980039
+          },
+          {
+            "code": "5110001002",
+            "title": "سربار ساخت",
+            "accountNumber": "510-001000040-12",
+            "balance": 29404000000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040513,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980040
+          }
+        ]
+      },
+      {
+        "code": "511001",
+        "title": "تخفیفات و برگشت از فروش",
+        "rows": [
+          {
+            "code": "5110011000",
+            "title": "تخفیفات نقدی فروش",
+            "accountNumber": "510-001000041-10",
+            "balance": 30139100000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040514,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980041
+          },
+          {
+            "code": "5110011001",
+            "title": "برگشت از فروش کالا",
+            "accountNumber": "510-001000042-11",
+            "balance": 30874200000,
+            "blockedAmount": 4746000,
+            "dateOfLastTurnover": 14040515,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980042
+          },
+          {
+            "code": "5110011002",
+            "title": "تخفیفات تجاری",
+            "accountNumber": "510-001000043-12",
+            "balance": 31609300000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040516,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980043
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "61",
+    "title": "هزینه‌های فعالیت",
+    "rows": [
+      {
+        "code": "611000",
+        "title": "هزینه‌های توزیع و فروش",
+        "rows": [
+          {
+            "code": "6110001000",
+            "title": "حقوق و دستمزد فروش",
+            "accountNumber": "610-001000044-10",
+            "balance": 32344400000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040517,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980044
+          },
+          {
+            "code": "6110001001",
+            "title": "هزینه تبلیغات",
+            "accountNumber": "610-001000045-11",
+            "balance": 33079500000,
+            "blockedAmount": 5085000,
+            "dateOfLastTurnover": 14040518,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980045
+          },
+          {
+            "code": "6110001002",
+            "title": "هزینه حمل و نقل فروش",
+            "accountNumber": "610-001000046-12",
+            "balance": 33814600000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040519,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980046
+          }
+        ]
+      },
+      {
+        "code": "611001",
+        "title": "هزینه‌های اداری و عمومی",
+        "rows": [
+          {
+            "code": "6110011000",
+            "title": "حقوق و دستمزد اداری",
+            "accountNumber": "610-001000047-10",
+            "balance": 34549700000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040520,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980047
+          },
+          {
+            "code": "6110011001",
+            "title": "هزینه اجاره دفتر مرکزی",
+            "accountNumber": "610-001000048-11",
+            "balance": 35284800000,
+            "blockedAmount": 5424000,
+            "dateOfLastTurnover": 14040521,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980048
+          },
+          {
+            "code": "6110011002",
+            "title": "هزینه استهلاک تجهیزات اداری",
+            "accountNumber": "610-001000049-12",
+            "balance": 36019900000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040522,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980049
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "62",
+    "title": "سایر هزینه‌ها و درآمدهای غیر عملیاتی",
+    "rows": [
+      {
+        "code": "621000",
+        "title": "درآمدهای متفرقه",
+        "rows": [
+          {
+            "code": "6210001000",
+            "title": "درآمد حاصل از سرمایه‌گذاری",
+            "accountNumber": "620-001000050-10",
+            "balance": 36755000000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040523,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980050
+          },
+          {
+            "code": "6210001001",
+            "title": "سود تسعیر ارز",
+            "accountNumber": "620-001000051-11",
+            "balance": 37490100000,
+            "blockedAmount": 5763000,
+            "dateOfLastTurnover": 14040524,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980051
+          },
+          {
+            "code": "6210001002",
+            "title": "درآمد فروش ضایعات",
+            "accountNumber": "620-001000052-12",
+            "balance": 38225200000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040525,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980052
+          }
+        ]
+      },
+      {
+        "code": "621001",
+        "title": "هزینه‌های متفرقه",
+        "rows": [
+          {
+            "code": "6210011000",
+            "title": "زیان تسعیر ارز",
+            "accountNumber": "620-001000053-10",
+            "balance": 38960300000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040526,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980053
+          },
+          {
+            "code": "6210011001",
+            "title": "هزینه‌های متفرقه عملیاتی",
+            "accountNumber": "620-001000054-11",
+            "balance": 39695400000,
+            "blockedAmount": 6102000,
+            "dateOfLastTurnover": 14040527,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980054
+          },
+          {
+            "code": "6210011002",
+            "title": "جرایم و خسارات",
+            "accountNumber": "620-001000055-12",
+            "balance": 40430500000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040528,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980055
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "code": "91",
+    "title": "حساب‌های انتظامی",
+    "rows": [
+      {
+        "code": "911000",
+        "title": "تعهدات و ضمانت‌نامه‌ها",
+        "rows": [
+          {
+            "code": "9110001000",
+            "title": "ضمانت‌نامه شرکت در مزایده",
+            "accountNumber": "910-001000056-10",
+            "balance": 41165600000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040501,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980056
+          },
+          {
+            "code": "9110001001",
+            "title": "ضمانت‌نامه حسن انجام کار",
+            "accountNumber": "910-001000057-11",
+            "balance": 41900700000,
+            "blockedAmount": 6441000,
+            "dateOfLastTurnover": 14040502,
+            "openingBranch": "شعبه میرداماد",
+            "openingDate": 13980057
+          },
+          {
+            "code": "9110001002",
+            "title": "ضمانت‌نامه پیش‌پرداخت",
+            "accountNumber": "910-001000058-12",
+            "balance": 42635800000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040503,
+            "openingBranch": "شعبه ونک",
+            "openingDate": 13980058
+          }
+        ]
+      },
+      {
+        "code": "911001",
+        "title": "اقلام انتظامی سایر",
+        "rows": [
+          {
+            "code": "9110011000",
+            "title": "اوراق و اسناد امانی",
+            "accountNumber": "910-001000059-10",
+            "balance": 43370900000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040504,
+            "openingBranch": "شعبه سعادت‌آباد",
+            "openingDate": 13980059
+          },
+          {
+            "code": "9110011001",
+            "title": "وثایق دریافتی از مشتریان",
+            "accountNumber": "910-001000060-11",
+            "balance": 44106000000,
+            "blockedAmount": 6780000,
+            "dateOfLastTurnover": 14040505,
+            "openingBranch": "شعبه مرکزی",
+            "openingDate": 13980060
+          },
+          {
+            "code": "9110011002",
+            "title": "سایر اقلام انتظامی",
+            "accountNumber": "910-001000061-12",
+            "balance": 44841100000,
+            "blockedAmount": 0,
+            "dateOfLastTurnover": 14040506,
+            "openingBranch": "شعبه ولیعصر",
+            "openingDate": 13980061
+          }
+        ]
+      }
+    ]
+  }
+]

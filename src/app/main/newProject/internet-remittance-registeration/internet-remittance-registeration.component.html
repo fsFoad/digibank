@@ -1,7 +1,7 @@
 <p-panel>
   <ng-template pTemplate="header">
     <div class="bf-panel-header">
-      <span class="bf-panel-title">ثبت حواله اینترنتی</span>
+      <span class="bf-panel-title">ثبت حواله</span>
       <button pButton icon="pi pi-arrow-right" title="بازگشت" class="p-button-rounded p-button-text bf-back-btn"
               (click)="goHome()"></button>
     </div>
@@ -16,8 +16,17 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col-4">
         <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"
+                      (onChange)="onBankChange()"></p-dropdown>
+          <label>نام بانک</label>
+        </span>
+      </div>
+    </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col-4">
+        <span class="p-float-label">
         <p-dropdown [autoDisplayFirst]="false" [required]="true"  [options]="acItems"
-                    [editable]="true"></p-dropdown>
+                    [editable]="true" [disabled]="!selectedBank"></p-dropdown>
           <label>انتقال از</label>
         </span>
       </div>

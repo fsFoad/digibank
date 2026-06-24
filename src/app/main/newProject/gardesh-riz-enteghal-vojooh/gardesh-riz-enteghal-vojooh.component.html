@@ -60,13 +60,59 @@
       </div>
       <div class="p-col"></div>
     </div>
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"></p-dropdown>
+          <label>نام بانک</label>
+        </span>
+      </div>
+      <div class="p-col"></div>
+      <div class="p-col"></div>
+      <div class="p-col"></div>
+    </div>
   </div>
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
-    <button label="بازیابی" pButton (click)="confirmDlg.visible = true"></button>
+    <button label="بازیابی" pButton [disabled]="!selectedBank" (click)="recover()"></button>
     <button label="بازگشت" pButton (click)="goToHome()"></button>
   </div>
-</p-panel>
 
-<p-confirmDialog #confirmDlg header="توجه" acceptLabel="تایید" message="عملیات با موفقیت انجام شد"
-                 [rejectVisible]="false" [closable]="false" icon="pi pi-info-circle">
-</p-confirmDialog>
+  <div class="p-mt-3" *ngIf="tableFlag">
+    <p-card>
+      <p-table [value]="fsList">
+        <ng-template pTemplate="header">
+          <tr>
+            <th translate>ردیف</th>
+            <th translate>شماره حساب مبدا</th>
+            <th translate>شماره حساب مقصد</th>
+            <th translate>نام شعبه</th>
+            <th translate>تاریخ اعمال</th>
+            <th translate>واریز کننده</th>
+            <th translate>کد یکتای تراکنش</th>
+            <th translate>شماره سند/چک / حواله</th>
+            <th translate>بدهکار</th>
+            <th translate>بستانکار</th>
+            <th translate>مبلغ</th>
+            <th translate>تاریخ انجام</th>
+          </tr>
+        </ng-template>
+        <ng-template let-i="rowIndex" pTemplate="body" let-service>
+          <tr>
+            <td>{{i + 1}}</td>
+            <td>{{service.sourceAccountNumber}}</td>
+            <td>{{service.destinationAccountNumber}}</td>
+            <td>{{service.branchName}}</td>
+            <td>{{service.history}}</td>
+            <td>{{service.depositor}}</td>
+            <td>{{service.yektaCode}}</td>
+            <td>{{service.check}}</td>
+            <td>{{service.debtor|addCommaSeparator}}</td>
+            <td>{{service.creditor|addCommaSeparator}}</td>
+            <td>{{service.amount|addCommaSeparator}}</td>
+            <td>{{service.dueDate}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-card>
+  </div>
+</p-panel>

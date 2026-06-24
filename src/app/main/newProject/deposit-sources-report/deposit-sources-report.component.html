@@ -6,7 +6,25 @@
               (click)="goHome()"></button>
     </div>
   </ng-template>
-  <div class="p-d-flex p-jc-center">
+
+  <div class="app-mx-10r">
+    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+      <div class="p-field p-col">
+        <span class="p-float-label">
+          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"></p-dropdown>
+          <label>نام بانک</label>
+        </span>
+      </div>
+      <div class="p-field p-col p-d-flex p-ai-center">
+        <button id="btnView" class="p-button-info" pButton icon="pi pi-eye" label="مشاهده" style="width: 85px"
+                [disabled]="!selectedBank" (click)="view()"></button>
+      </div>
+      <div class="p-field p-col"></div>
+      <div class="p-field p-col"></div>
+    </div>
+  </div>
+
+  <div class="p-d-flex p-jc-center" *ngIf="chartFlag">
     <p-chart type="pie" [data]="data" [options]="chartOptions"></p-chart>
   </div>
 </p-panel>

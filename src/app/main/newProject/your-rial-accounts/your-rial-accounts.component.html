@@ -40,10 +40,11 @@
                   <ng-template pTemplate="header">
                     <tr>
                       <th style="width:70px"></th>
+                      <th style="width: 6%;">ردیف</th>
                       <th class="p-text-right">عنوان حساب</th>
                     </tr>
                   </ng-template>
-                  <ng-template pTemplate="body" let-row let-expanded="expanded">
+                  <ng-template pTemplate="body" let-row let-expanded="expanded" let-j="rowIndex">
                     <tr>
                       <td>
                         <button
@@ -55,12 +56,13 @@
                           [label]="expanded ? '−' : '+'">
                         </button>
                       </td>
+                      <td>{{j + 1}}</td>
                       <td class="p-text-right yra-title-cell">{{row.title}}</td>
                     </tr>
                   </ng-template>
                   <ng-template pTemplate="rowexpansion" let-row>
                     <tr>
-                      <td colspan="2">
+                      <td colspan="3">
                         <div class="p-p-3 app-nested-level-3">
                           <p-table [value]="row.rows">
                             <ng-template pTemplate="header">

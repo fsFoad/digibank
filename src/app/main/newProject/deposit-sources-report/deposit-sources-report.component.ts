@@ -1,9 +1,9 @@
-import { CurrencyPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Constants } from 'app/main/shared/constants/Constants';
 import { AddCommaPipe } from 'app/main/shared/pipes/add-comma.pipe';
 import * as Chart from 'chart.js';
 import { Router } from '@angular/router';
+import { DatasetService } from '../../shared/services/dataset.service';
 
 export const rlm = '\u200f';
 export const lrm = '\u200e';
@@ -30,22 +30,43 @@ export function faDigits(s: string): string {
   ;
 }
 
+interface DepositSource {
+  title: string;
+  accountNumber: string;
+  balance: number;
+}
+
 @Component({
   selector: 'app-deposit-sources-report',
   templateUrl: './deposit-sources-report.component.html',
   styleUrls: ['./deposit-sources-report.component.scss']
 })
 export class DepositSourcesReportComponent implements OnInit {
+  readonly dataset = 'deposit-sources-report';
+  bankNameList = Constants.bankNameList;
+  selectedBank: string | null = null;
 
-  data = getChartDataForDepositSources();
-  chartOptions: Chart.ChartOptions = getChartOptionsForDepositSources()
-  constructor(private router: Router) {
+  chartFlag = false;
+  data: any = null;
+  chartOptions: Chart.ChartOptions = getChartOptionsForDepositSources();
+
+  constructor(private router: Router, private datasetService: DatasetService) {
     setChartFont();
   }
 
   ngOnInit(): void {
   }
 
+  view(): void {
+    if (!this.selectedBank) {
+      return;
+    }
+    this.datasetService.loadRaw(this.dataset, {}).then((all: Record<string, DepositSource[]>) => {
+      const rows = (all && all[this.selectedBank]) || [];
+      this.data = getChartDataForDepositSources(rows);
+      this.chartFlag = true;
+    });
+  }
 
   goHome(): void {
     this.router.navigate(['/']);
@@ -77,12 +98,12 @@ export function getChartOptionsForDepositSources(): Chart.ChartOptions {
   };
 }
 
-export function getChartDataForDepositSources() {
+export function getChartDataForDepositSources(rows: DepositSource[]) {
   return {
-    labels: Constants.acSummaries.map(x => `${x.title} (${ltre}${faDigits(x.accountNumber)}${popd}${rlm})`),
+    labels: rows.map(x => `${x.title} (${ltre}${faDigits(x.accountNumber)}${popd}${rlm})`),
     datasets: [
       {
-        data: Constants.acSummaries.map(x => x.balance),
+        data: rows.map(x => x.balance),
         backgroundColor: [
           "hsl(347, 100%, 70%)",
           "hsl(204, 82%, 57%)",
@@ -103,4 +124,3 @@ export function getChartDataForDepositSources() {
 export  function setChartFont() {
   Chart.defaults.global.defaultFontFamily = 'iranyekan';
 }
-
