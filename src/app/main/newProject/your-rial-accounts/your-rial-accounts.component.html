@@ -13,8 +13,7 @@
           <tr>
             <th style="width: 4%"></th>
             <th translate style="width: 4%;">ردیف</th>
-            <th translate class="app-w-10pc">کد سر فصل</th>
-            <th translate class="p-text-right">عنوان سر فصل</th>
+            <th translate class="p-text-right">عنوان حساب</th>
           </tr>
         </ng-template>
         <ng-template let-i="rowIndex" pTemplate="body" let-row let-expanded="expanded">
@@ -30,20 +29,18 @@
               </button>
             </td>
             <td>{{i + 1}}</td>
-            <td>{{row.code}}</td>
-            <td class="p-text-right">{{row.title}}</td>
+            <td class="p-text-right yra-title-cell">{{row.title}}</td>
           </tr>
         </ng-template>
         <ng-template pTemplate="rowexpansion" let-row>
           <tr>
-            <td colspan="4">
+            <td colspan="3">
               <div class="p-p-3 app-nested-level-2">
                 <p-table [value]="row.rows" dataKey="code">
                   <ng-template pTemplate="header">
                     <tr>
                       <th style="width:70px"></th>
-                      <th class="p-text-right app-w-10pc">کد</th>
-                      <th class="p-text-right">عنوان</th>
+                      <th class="p-text-right">عنوان حساب</th>
                     </tr>
                   </ng-template>
                   <ng-template pTemplate="body" let-row let-expanded="expanded">
@@ -58,26 +55,27 @@
                           [label]="expanded ? '−' : '+'">
                         </button>
                       </td>
-                      <td class="p-text-right">{{row.code}}</td>
-                      <td class="p-text-right">{{row.title}}</td>
+                      <td class="p-text-right yra-title-cell">{{row.title}}</td>
                     </tr>
                   </ng-template>
                   <ng-template pTemplate="rowexpansion" let-row>
                     <tr>
-                      <td colspan="3">
+                      <td colspan="2">
                         <div class="p-p-3 app-nested-level-3">
                           <p-table [value]="row.rows">
                             <ng-template pTemplate="header">
                               <tr>
-                                <th style="min-width: 50px">عنوان حساب</th>
+                                <th style="width: 5%;">ردیف</th>
+                                <th style="min-width: 220px">عنوان حساب</th>
                                 <th>شماره حساب</th>
                                 <th style="width:120px"></th>
                               </tr>
                             </ng-template>
 
-                            <ng-template pTemplate="body" let-account>
+                            <ng-template pTemplate="body" let-account let-j="rowIndex">
                               <tr>
-                                <td>{{account.title}}</td>
+                                <td>{{j + 1}}</td>
+                                <td class="yra-title-cell">{{account.title}}</td>
                                 <td>{{account.accountNumber}}</td>
 
                                 <td>

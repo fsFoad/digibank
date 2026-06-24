@@ -176,6 +176,17 @@
     font-size: 14px;
     padding: 2rem !important;
   }
+
+  /* ==========================
+      عنوان حساب: عریض و بدون شکست خط
+  ========================== */
+
+  .rab-title-cell {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 320px;
+  }
 }
 
 /* ==========================

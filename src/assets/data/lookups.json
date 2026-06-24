@@ -59,6 +59,14 @@
     {
       "value": "3",
       "label": "سامان"
+    },
+    {
+      "value": "4",
+      "label": "پارسیان"
+    },
+    {
+      "value": "5",
+      "label": "صادرات"
     }
   ],
   "documentType": [
@@ -271,6 +279,14 @@
     {
       "label": "تجارت",
       "value": "5"
+    },
+    {
+      "label": "پارسیان",
+      "value": "6"
+    },
+    {
+      "label": "صادرات",
+      "value": "7"
     }
   ],
   "financialHeading": [

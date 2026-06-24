@@ -229,3 +229,10 @@ tbody.account > tr > td.p-text-left {
   background: rgba(255, 255, 255, 0.15);
 }
 
+/* عنوان حساب: عریض و بدون شکست خط */
+:host ::ng-deep .yra-title-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 320px;
+}
