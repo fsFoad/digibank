@@ -29,30 +29,35 @@
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
         <span class="p-float-label">
-          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"></p-dropdown>
-          <label>نام بانک مبدا</label>
-        </span>
+    <p-dropdown
+      [options]="bankNameList"
+      [(ngModel)]="selectedBank"
+      [autoDisplayFirst]="false">
+    </p-dropdown>
+    <label>
+      {{ accountType === 'sourceAccount'
+      ? 'نام بانک مبدا'
+      : 'نام بانک مقصد' }}
+    </label>
+  </span>
       </div>
-      <div class="p-field p-col">
+      <div class="p-col"></div>
+
+        <div class="p-field p-col">
         <span class="p-float-label">
-        <p-dropdown [editable]="true" [autoDisplayFirst]="false"
-                    [options]="acItems"></p-dropdown>
-          <label>شماره حساب مبدا</label>
-      </span>
-      </div>
-      <div class="p-field p-col">
-        <span class="p-float-label">
-          <p-dropdown [autoDisplayFirst]="false" [options]="bankNameList" [(ngModel)]="selectedBank"></p-dropdown>
-          <label>نام بانک مقصد</label>
-        </span>
-      </div>
-      <div class="p-field p-col">
-        <span class="p-float-label">
-        <p-dropdown [editable]="true" [autoDisplayFirst]="false"
-                    [options]="acItems"></p-dropdown>
-          <label>شماره حساب مقصد</label>
-      </span>
-      </div>
+    <p-dropdown
+      [editable]="true"
+      [options]="acItems"
+      [autoDisplayFirst]="false">
+    </p-dropdown>
+    <label>
+      {{ accountType === 'sourceAccount'
+      ? 'شماره حساب مبدا'
+      : 'شماره حساب مقصد' }}
+    </label>
+  </span>
+    </div>
+      <div class="p-col"></div>
     </div>
     <div class="p-fluid p-formgrid p-grid app-col-px-2r">
       <div class="p-field p-col">
@@ -72,13 +77,7 @@
       </div>
       <div class="p-col"></div>
     </div>
-    <div class="p-fluid p-formgrid p-grid app-col-px-2r">
 
-      <div class="p-col"></div>
-      <div class="p-col"></div>
-      <div class="p-col"></div>
-
-    </div>
   </div>
   <div class="p-d-flex app-gap-1r app-child-px-3r p-jc-center p-mt-6">
     <button label="بازیابی" pButton [disabled]="!selectedBank" (click)="recover()"></button>
@@ -91,8 +90,11 @@
         <ng-template pTemplate="header">
           <tr>
             <th translate>ردیف</th>
-            <th translate>شماره حساب مبدا</th>
-            <th translate>شماره حساب مقصد</th>
+            <th>
+              {{ accountType === 'sourceAccount'
+              ? 'شماره حساب مبدا'
+              : 'شماره حساب مقصد' }}
+            </th>
             <th translate>نام شعبه</th>
             <th translate>تاریخ اعمال</th>
             <th translate>واریز کننده</th>
@@ -109,8 +111,13 @@
         <ng-template let-i="rowIndex" pTemplate="body" let-service>
           <tr>
             <td>{{i + 1}}</td>
-            <td>{{service.sourceAccountNumber}}</td>
-            <td>{{service.destinationAccountNumber}}</td>
+            <td>
+              {{
+                accountType === 'sourceAccount'
+                  ? service.sourceAccountNumber
+                  : service.destinationAccountNumber
+              }}
+            </td>
             <td>{{service.branchName}}</td>
             <td>{{service.history}}</td>
             <td>{{service.depositor}}</td>
