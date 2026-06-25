@@ -4,6 +4,8 @@
     <div class="pe-toolbar">
       <span class="pe-heading">فهرست ذینفعان شخصی</span>
       <span class="pe-count">{{ entities.length }} مورد</span>
+      <button pButton icon="pi pi-plus" label="افزودن" class="p-button-success pe-add-btn"
+              (click)="add()"></button>
     </div>
 
     <p-table #dt [value]="entities" class="pe-table"

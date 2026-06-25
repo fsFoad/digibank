@@ -14,6 +14,7 @@
   margin-bottom: 1rem; padding-bottom: 0.9rem;
   border-bottom: 1px solid var(--oe-border);
 }
+.oe-add-btn { margin-inline-start: auto; }
 .oe-heading { font-weight: 700; color: var(--oe-text); font-size: 1.05rem; }
 .oe-count {
   font-size: 0.78rem; font-weight: 600;
@@ -44,7 +45,9 @@
   padding: 0.2rem 0.7rem; border-radius: 999px;
   background: var(--oe-accent-soft); color: var(--oe-accent);
 }
+/*
 :host ::ng-deep .oe-btn.p-button { color: var(--oe-accent); }
+*/
 :host ::ng-deep .oe-btn.p-button:hover { background: var(--oe-accent-soft); }
 
 .oe-actions {

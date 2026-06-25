@@ -6,21 +6,13 @@
         <label>شناسه ملی</label>
       </span>
     </div>
+
     <div class="p-field p-col">
       <span class="p-float-label">
         <input formControlName="organizationalCode" pInputText>
         <label>کد سازمانی</label>
       </span>
     </div>
-    <div class="p-field p-col">
-      <span class="p-float-label">
-        <p-dropdown [autoDisplayFirst]="false" formControlName="bankNameList" [options]="bankNameList"></p-dropdown>
-        <label>بانک</label>
-      </span>
-    </div>
-  </div>
-
-  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
     <div class="p-field p-col">
       <span class="p-float-label">
         <p-dropdown formControlName="organizationalUnit" [autoDisplayFirst]="false" [options]="organizationalUnit"></p-dropdown>
@@ -31,6 +23,17 @@
       <span class="p-float-label">
         <p-dropdown [autoDisplayFirst]="false" formControlName="statusZinaf" [options]="statusZinaf"></p-dropdown>
         <label>وضعیت ذینفع سازمانی</label>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="p-fluid p-formgrid p-grid app-col-px-2r">
+
+    <div class="p-field p-col">
+      <span class="p-float-label">
+        <p-dropdown [autoDisplayFirst]="false" formControlName="bankNameList" [options]="bankNameList"></p-dropdown>
+        <label>بانک</label>
       </span>
     </div>
     <div class="p-field p-col">
@@ -45,10 +48,17 @@
         <label>نوع مالکیت</label>
       </span>
     </div>
+    <div class="p-field p-col-3">
+      <span class="p-float-label">
+        <input formControlName="relationshipType" pInputText>
+        <label>نوع رابطه</label>
+      </span>
+    </div>
+
   </div>
 
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
-    <div class="p-field p-col-6">
+    <div class="p-field p-col-9">
       <span class="p-float-label">
         <input formControlName="title" pInputText>
         <label>عنوان</label>
@@ -60,12 +70,8 @@
         <label>شماره تماس</label>
       </span>
     </div>
-    <div class="p-field p-col-3">
-      <span class="p-float-label">
-        <input formControlName="relationshipType" pInputText>
-        <label>نوع رابطه</label>
-      </span>
-    </div>
+    <div class="p-field p-col-3"></div>
+    <div class="p-field p-col-3"></div>
   </div>
 
   <div class="p-fluid p-formgrid p-grid app-col-px-2r">
@@ -75,6 +81,9 @@
         <label>عنوان انگلیسی</label>
       </span>
     </div>
+    <div class="p-field p-col-3"></div>
+    <div class="p-field p-col-3"></div>
+    <div class="p-field p-col-3"></div>
   </div>
 
   <p-card header="اطلاعات ثبتی">

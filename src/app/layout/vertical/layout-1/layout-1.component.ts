@@ -73,29 +73,29 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
         translate: 'مدیریت ذینفعان',
         type: 'collapsable',
         items: [
-          {
+       /*   {
             id: 'issuepersonalwallet2',
             label: 'ذینفع شخصی',
             translate: 'ذینفع شخصی',
             type: 'collapsable',
             icon: 'account_balance_wallet',
             items: [
-          /*    {
+          /!*    {
                 id: 'person-editor',
                 label: 'تعریف ذینفع شخصی',
                 translate: 'تعریف ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/person-editor',
-              },*/
-             /* {
+              },*!/
+             /!* {
                 id: 'personalEntityList',
                 label: 'اصلاح ذینفع شخصی',
                 translate: 'اصلاح ذینفع شخصی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/personalEntityList',
-              },*/
+              },*!/
               {
                 id: 'personalEntityAdd',
                 label: 'تعریف ذینفع شخصی',
@@ -104,23 +104,33 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 icon: 'account_balance_wallet',
                 routerLink: '/personal-entity-add',
               },
-              {
-                id: 'personalEntityEdit',
-                label: 'اصلاح ذینفع شخصی',
-                translate: 'اصلاح ذینفع شخصی',
-                type: 'item',
-                icon: 'account_balance_wallet',
-                routerLink: '/personal-entity-edit',
-              },
+            ,
             ]
-          }, {
+          },*/
+          {
+            id: 'personalEntityEdit',
+            label: 'اصلاح ذینفع شخصی',
+            translate: 'اصلاح ذینفع شخصی',
+            type: 'item',
+            icon: 'account_balance_wallet',
+            routerLink: '/personal-entity-edit',
+          },
+          {
+            id: 'organizationalEntityEdit',
+            label: 'ذینفع سازمانی',
+            translate: 'ذینفع سازمانی',
+            type: 'item',
+            icon: 'account_balance_wallet',
+            routerLink: '/organizational-entity-edit',
+          },
+         /* {
             id: 'issuepersonalwallet2',
             label: 'ذینفع سازمانی',
             translate: 'ذینفع سازمانی',
             type: 'collapsable',
             icon: 'account_balance_wallet',
             items: [
-       /*       {
+       /!*       {
                 id: 'real',
                 label: 'تعریف ذینفع سازمانی',
                 translate: 'تعریف ذینفع سازمانی',
@@ -135,25 +145,18 @@ export class VerticalLayout1Component implements OnInit, OnDestroy {
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/organizationalEntityList',
-              },*/
-              {
+              },*!/
+            /!*  {
                 id: 'organizationalEntityAdd',
                 label: 'تعریف ذینفع سازمانی',
                 translate: 'تعریف ذینفع سازمانی',
                 type: 'item',
                 icon: 'account_balance_wallet',
                 routerLink: '/organizational-entity-add',
-              },
-              {
-                id: 'organizationalEntityEdit',
-                label: 'اصلاح ذینفع سازمانی',
-                translate: 'اصلاح ذینفع سازمانی',
-                type: 'item',
-                icon: 'account_balance_wallet',
-                routerLink: '/organizational-entity-edit',
-              },
+              },*!/
+          ,
             ]
-          },
+          },*/
           {
             id: 'real',
             label: 'گزارشات',

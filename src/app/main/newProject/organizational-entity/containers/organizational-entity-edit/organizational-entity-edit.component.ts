@@ -34,6 +34,12 @@ export class OrganizationalEntityEditComponent implements OnInit {
     this.entityService.getAll().then(list => (this.entities = list.slice()));
   }
 
+  add(): void {
+    this.selected = null;
+    this.mode = 'create';
+    this.editing = true;
+  }
+
   edit(entity: OrganizationalEntity): void {
     this.selected = entity;
     this.mode = 'edit';

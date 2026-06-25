@@ -1,9 +1,11 @@
-<p-panel header="ویرایش ذینفع سازمانی"  *ngIf="!editing">
+<p-panel header="اطلاعات ذینفع سازمانی"  *ngIf="!editing">
   <!-- لیست -->
   <div class="oe-wrap">
     <div class="oe-toolbar">
       <span class="oe-heading">فهرست ذینفعان سازمانی</span>
       <span class="oe-count">{{ entities.length }} مورد</span>
+      <button pButton icon="pi pi-plus" label="افزودن" class="p-button-success oe-add-btn"
+              (click)="add()"></button>
     </div>
 
     <p-table #dt [value]="entities" class="oe-table"
@@ -41,11 +43,11 @@
           <td>
             <div class="oe-actions">
               <button pButton icon="pi pi-eye" title="نمایش"
-                      class="oe-btn p-button-rounded p-button-text p-button-outlined" (click)="view(row)"></button>
+                      class="oe-btn p-button-rounded  p-button-outlined" (click)="view(row)"></button>
               <button pButton icon="pi pi-pencil" title="ویرایش"
-                      class="oe-btn p-button-rounded p-button-text p-button-outlined" (click)="edit(row)"></button>
+                      class="oe-btn p-button-rounded  p-button-outlined" (click)="edit(row)"></button>
               <button pButton icon="pi pi-trash" title="حذف"
-                      class="oe-btn  p-button-rounded p-button-text p-button-outlined" (click)="remove(row)"></button>
+                      class="oe-btn  p-button-rounded  p-button-outlined" (click)="remove(row)"></button>
             </div>
           </td>
         </tr>

@@ -4936,3 +4936,7 @@ p-togglebutton.ng-dirty.ng-invalid > .p-togglebutton.p-button {
 .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider:before {
   transform: translateX(2rem);
 }
+.app-picklist-equal-height .p-picklist-list {
+  min-height: 350px;
+  height: 350px;
+}
