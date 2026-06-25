@@ -14,10 +14,11 @@
         <tr>
           <th translate>ردیف</th>
           <th translate>شماره حواله</th>
-          <th translate>نوع حواله</th>
           <th translate>گیرنده حواله</th>
           <th translate>وضعیت</th>
+          <th translate>نام بانک مبدا</th>
           <th translate style="width: 15%">شماره حساب مبدا</th>
+          <th translate>نام بانک مقصد</th>
           <th translate style="width: 15%">شماره حساب مقصد</th>
           <th translate>مبلغ</th>
           <th translate>ثبت کننده</th>
@@ -29,10 +30,11 @@
         <tr>
           <td>{{i + 1}}</td>
           <td>{{row.temporaryTransferNumber}}</td>
-          <td>{{row.remittanceType}}</td>
           <td>{{row.remittanceRecipient}}</td>
           <td>{{row.status}}</td>
+          <td>{{row.sourceBankName}}</td>
           <td>{{row.sourceAccountNumber}}</td>
+          <td>{{row.destinationBankName}}</td>
           <td>{{row.destinationAccountNumber}}</td>
           <td>{{row.amount|addCommaSeparator}}</td>
           <td>{{row.registrar}}</td>

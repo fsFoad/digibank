@@ -15,6 +15,7 @@ interface TransferRow {
   creditor: string;
   amount: number;
   dueDate: string;
+  bankName: string;
 }
 
 @Component({

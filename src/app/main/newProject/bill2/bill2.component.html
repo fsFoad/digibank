@@ -48,6 +48,7 @@
         <ng-template pTemplate="header">
           <tr>
             <th translate>ردیف</th>
+            <th translate>نام بانک</th>
             <th translate id="thAccountNumber">شماره حساب</th>
             <th translate>نام شعبه</th>
             <th translate>تاریخ اعمال</th>
@@ -65,6 +66,7 @@
         <ng-template let-i="rowIndex" pTemplate="body" let-service>
           <tr>
             <td>{{i + 1}}</td>
+            <td>{{service.bankName}}</td>
             <td>{{service.accountNumber}}</td>
             <td>{{service.branchName}}</td>
             <td>{{service.history}}</td>

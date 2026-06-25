@@ -90,6 +90,7 @@
         <ng-template pTemplate="header">
           <tr>
             <th translate>ردیف</th>
+            <th translate>نام بانک</th>
             <th>
               {{ accountType === 'sourceAccount'
               ? 'شماره حساب مبدا'
@@ -111,6 +112,7 @@
         <ng-template let-i="rowIndex" pTemplate="body" let-service>
           <tr>
             <td>{{i + 1}}</td>
+            <td>{{service.bankName}}</td>
             <td>
               {{
                 accountType === 'sourceAccount'

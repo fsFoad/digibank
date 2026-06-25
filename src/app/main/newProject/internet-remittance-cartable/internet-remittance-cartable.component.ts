@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConfirmationService } from 'primeng/api';
 import { Router } from '@angular/router';
+import { Constants } from '../../shared/constants/Constants';
 
 interface Page {
   page: number;
@@ -66,11 +67,12 @@ function getConfirmationStatusByFlag(value: boolean | null): string {
 }
 export interface InternetRemittanceRow {
   temporaryTransferNumber: number;
-  remittanceType: string;
   remittanceRecipient: string;
   status: string;
   sourceAccountNumber: string;
+  sourceBankName: string;
   destinationAccountNumber: string;
+  destinationBankName: string;
   amount: number;
   registrar: string;
   registrationDate: number;
@@ -78,6 +80,7 @@ export interface InternetRemittanceRow {
 
 const firstNames = ['علی رضا', 'محمد', 'مصطفی', 'رامین', 'شهاب', 'مهدی', 'حسین', 'ایرج', 'سیاوش'];
 const lastNames = ['رضایی', 'سروستانی', 'کاویانی', 'کوهی', 'شکوری', 'آل منصور', 'بهجتی', 'خداپرست', 'راسخی'];
+const bankNames = Constants.bankNameList.filter(b => b.value !== '0').map(b => b.label);
 const choose = <T>(items: T[]) => items[Math.floor(Math.random() * items.length)];
 const randomName = () => choose(firstNames) + ' ' + choose(lastNames);
 const randomRange = (a: number, b: number) => a + Math.floor((b - a) * Math.random());
@@ -86,13 +89,14 @@ const randomNdigit = (n: number) => randomRange(Math.pow(10, n - 1), Math.pow(10
 function createSampleRows(): InternetRemittanceRow[] {
   return [1, 2, 3].map(x => ({
     temporaryTransferNumber: randomNdigit(7),
-    remittanceType: 'حواله',
     remittanceRecipient: randomName(),
     status: 'بررسی نشده',
     sourceAccountNumber: `${choose(['020', '030', '040'])}-${randomNdigit(10)}-${randomNdigit(3)}`,
+    sourceBankName: choose(bankNames),
     destinationAccountNumber: `${choose(['020', '030', '040'])}-${randomNdigit(10)}-${randomNdigit(3)}`,
+    destinationBankName: choose(bankNames),
     amount: randomNdigit(3) * (10 ** randomRange(4, 6)),
     registrar: randomName(),
-    registrationDate: 14000900 + randomRange(1, 30),
+    registrationDate: 14040900 + randomRange(1, 30),
   }));
 }

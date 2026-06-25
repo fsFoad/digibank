@@ -14,7 +14,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/01/06",
     "serviceTypeCode": 170,
-    "operationTypeCode": 250
+    "operationTypeCode": 250,
+    "bankName": "ملی"
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -31,7 +32,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/02/17",
     "serviceTypeCode": 171,
-    "operationTypeCode": 251
+    "operationTypeCode": 251,
+    "bankName": "ملت"
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -48,7 +50,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/02/28",
     "serviceTypeCode": 172,
-    "operationTypeCode": 255
+    "operationTypeCode": 255,
+    "bankName": "سامان"
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -65,7 +68,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/04/13",
     "serviceTypeCode": 175,
-    "operationTypeCode": 250
+    "operationTypeCode": 250,
+    "bankName": "پاسارگاد"
   },
   {
     "accountNumber": "440-1006580523-01",
@@ -82,7 +86,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/05/06",
     "serviceTypeCode": 180,
-    "operationTypeCode": 260
+    "operationTypeCode": 260,
+    "bankName": "تجارت"
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -99,7 +104,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/05/17",
     "serviceTypeCode": 170,
-    "operationTypeCode": 252
+    "operationTypeCode": 252,
+    "bankName": "پارسیان"
   },
   {
     "accountNumber": "440-1006580523-01",
@@ -116,7 +122,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/05/28",
     "serviceTypeCode": 173,
-    "operationTypeCode": 250
+    "operationTypeCode": 250,
+    "bankName": "صادرات"
   },
   {
     "accountNumber": "440-1006580523-01",
@@ -133,7 +140,8 @@
     "debtor": 0,
     "dueDateDisplay": "1404/05/31",
     "serviceTypeCode": 170,
-    "operationTypeCode": 258
+    "operationTypeCode": 258,
+    "bankName": "ملی"
   },
   {
     "accountNumber": "340-1000000145-65",
@@ -150,6 +158,7 @@
     "debtor": 0,
     "dueDateDisplay": "1404/06/03",
     "serviceTypeCode": 176,
-    "operationTypeCode": 250
+    "operationTypeCode": 250,
+    "bankName": "ملت"
   }
 ]

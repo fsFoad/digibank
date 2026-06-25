@@ -17,6 +17,9 @@ interface BillRow {
   creditor: string;
   debtor: number;
   dueDateDisplay: string;
+  serviceTypeCode: number;
+  operationTypeCode: number;
+  bankName: string;
 }
 
 @Component({
@@ -42,8 +45,9 @@ export class DaryaftFileSoorathesabComponent implements OnInit {
   }
 
   confirm(): void {
+    const bankLabel = (this.bankNameList.find(b => b.value === this.selectedBank) || {} as any).label;
     this.datasetService.loadRaw('bill2', []).then((data: BillRow[]) => {
-      this.fsList = data;
+      this.fsList = data.filter(x => x.bankName === bankLabel);
       this.tableFlag = true;
     });
   }
@@ -51,6 +55,7 @@ export class DaryaftFileSoorathesabComponent implements OnInit {
   downloadExcel(): void {
     const exportRows = this.fsList.map((x, i) => ({
       'ردیف': i + 1,
+      'نام بانک': x.bankName,
       'شماره حساب': x.accountNumber,
       'نام شعبه': x.branchName,
       'تاریخ اعمال': x.history,
@@ -61,6 +66,8 @@ export class DaryaftFileSoorathesabComponent implements OnInit {
       'بستانکار': x.creditor,
       'مانده': x.amount,
       'تاریخ انجام': x.dueDateDisplay,
+      'کد نوع خدمات': x.serviceTypeCode,
+      'کد نوع عملیات': x.operationTypeCode,
     }));
     const worksheet = XLSX.utils.json_to_sheet(exportRows);
     const workbook = XLSX.utils.book_new();
