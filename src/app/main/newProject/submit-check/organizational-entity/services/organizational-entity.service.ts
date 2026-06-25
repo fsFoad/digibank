@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DatasetService } from '../../../shared/services/dataset.service';
+import { DatasetService } from '../../../../shared/services/dataset.service';
 import { OrganizationalEntity, ORGANIZATIONAL_ENTITY_DATASET } from '../models/organizational-entity.model';
 
 /**
