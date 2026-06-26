@@ -968,7 +968,7 @@ export class SettleList {
             settleList.walletSettleIban=a.walletSettleIban;
             //todo : مقدار تستی که خانم کرونی گفتن
             settleList.transId=158;
-            settleList.transDate=14000527;
+            settleList.transDate=14040527;
             settleList.walletId=a.walletId;
             settleList.totalAmount=a.totalAmount;
             settleList.settleDesc=a.settleDesc;
