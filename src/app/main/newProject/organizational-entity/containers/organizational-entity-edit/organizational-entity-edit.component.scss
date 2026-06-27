@@ -8,6 +8,14 @@
   --oe-border: #e7e9ee;
   --oe-surface-2: #f7f8fa;
 }
+:host ::ng-deep .pe-table .p-datatable-thead > tr > th {
+  background: var(--pe-surface-2); color: var(--pe-text); font-weight: 700; width:50px;
+  border: none; border-bottom: 2px solid var(--pe-accent); padding: 0.85rem 0.9rem;
+}
+:host ::ng-deep .pe-table .p-datatable-tbody > tr > td {
+  border: none; border-bottom: 1px solid #eef0f3; padding: 0.7rem 0.9rem;
+}
+:host ::ng-deep .pe-table .p-datatable-tbody > tr:hover { background: var(--pe-accent-soft); }
 
 .oe-toolbar {
   display: flex; align-items: center; gap: 0.6rem;
